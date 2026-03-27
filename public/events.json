@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-03-27T18:27:21.229985+09:00",
-  "count": 9,
+  "generated_at": "2026-03-28T07:01:16.698713+09:00",
+  "count": 17,
   "events": [
-    {
-      "id": "3eff51ac0032d518",
-      "title": "銀座蔦屋書店 ななつ星 特別展示イベント",
-      "date": "2026-03-27",
-      "location": "",
-      "description": "JR九州は、特別展示イベント「美しき『ななつ星 in 九州』の世界」を開催。開催日時は、2026年3月27日（金）12:00～21:00、28日（土）10:30～19:00。開催場所は、GINZA SIX 6階 銀座蔦屋書店 GINZA A",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/59406/",
-      "fetched_at": "2026-03-27T18:27:21.229914+09:00"
-    },
     {
       "id": "fe39c5d7cadfa28f",
       "title": "特急 きくがわ号 運転",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/58903/",
-      "fetched_at": "2026-03-27T18:27:21.229931+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698640+09:00"
     },
     {
       "id": "2d70d51feade80cd",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59097/",
-      "fetched_at": "2026-03-27T18:27:21.229938+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698650+09:00"
     },
     {
       "id": "bb7dccd93d1c91fc",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59143/",
-      "fetched_at": "2026-03-27T18:27:21.229945+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698656+09:00"
     },
     {
       "id": "718952a8803d85d3",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59492/",
-      "fetched_at": "2026-03-27T18:27:21.229951+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698660+09:00"
     },
     {
       "id": "b5620a750f93d225",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59488/",
-      "fetched_at": "2026-03-27T18:27:21.229957+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698663+09:00"
     },
     {
       "id": "4813f065851f163f",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59098/",
-      "fetched_at": "2026-03-27T18:27:21.229963+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698667+09:00"
     },
     {
       "id": "ea5a5544905021dc",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59137/",
-      "fetched_at": "2026-03-27T18:27:21.229974+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698670+09:00"
     },
     {
       "id": "05913b8099c98d9d",
@@ -117,7 +104,124 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/58812/",
-      "fetched_at": "2026-03-27T18:27:21.229981+09:00"
+      "fetched_at": "2026-03-28T07:01:16.698678+09:00"
+    },
+    {
+      "id": "73f436432efa3fdf",
+      "title": "埼玉高速鉄道 開業25周年記念乗車券 発売",
+      "date": "2026-03-28",
+      "location": "",
+      "description": "埼玉高速鉄道は、「開業25周年記念乗車券」を発売。「Thanks25 Train」をデザインした台紙つき記念乗車券で、発売額は2,500円。発売期間は、2026年3月28日（土）～5月31日（日）。発売箇所は、埼玉高速鉄道線各駅（赤羽岩淵駅",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.s-rail.co.jp/news/2026/pr20260224-25fes.php",
+      "fetched_at": "2026-03-28T07:01:16.698683+09:00"
+    },
+    {
+      "id": "387edfa200cf4ee7",
+      "title": "伊豆箱根鉄道 修善寺駅 スプリングフェスタ",
+      "date": "2026-03-28",
+      "location": "修善寺駅",
+      "description": "伊豆箱根鉄道は、「いずっぱこスプリングフェスタ 春が来た！いこうよ修善寺駅!!」を開催。開催日時は、2026年3月28日（土）9:00～14:30。開催場所は、修善寺駅。ミニ電車の運転、ステージイベント、グッズ販売などのほか、子ども向けイベ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010814_d/fil/railway_news_20260304.pdf",
+      "fetched_at": "2026-03-28T07:01:16.698687+09:00"
+    },
+    {
+      "id": "41ae4a8c97f3651e",
+      "title": "鉄道博物館 親子向け 東武10030型車両紹介イベント",
+      "date": "2026-03-28",
+      "location": "鉄道博物館",
+      "description": "鉄道博物館は、東武10030型11267編成の展示にあわせ、車両紹介イベントを開催。開催日は、2026年3月28日（土）、29日（日）、4月4日（土）、5日（日）。各日5回開催。11267編成にて、車両紹介、車内見学、運転台での記念撮影など",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/20260304073309C1jk7QKaf5CousWtNz3qOg.pdf",
+      "fetched_at": "2026-03-28T07:01:16.698690+09:00"
+    },
+    {
+      "id": "74650faa2f7cc7d7",
+      "title": "ゆめが丘ソラトス 泉区交通フェスタ2026",
+      "date": "2026-03-28",
+      "location": "",
+      "description": "ゆめが丘ソラトスは、同施設で「泉区交通フェスタ2026」を開催。開催日時は、2026年3月28日（土）10:00～16:00。相模鉄道グループ、神奈川中央交通、横浜市交通局などが出展。制服撮影会、ステージイベント、連節バス・Eバス展示、相鉄",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.kanachu.co.jp/dia/news/detail?tbl=2&tid=4922",
+      "fetched_at": "2026-03-28T07:01:16.698694+09:00"
+    },
+    {
+      "id": "bd7ec1a0bee9bda2",
+      "title": "名鉄 せと弁イベント列車 乗車ツアー",
+      "date": "2026-03-28",
+      "location": "",
+      "description": "名古屋鉄道は、事前申込制企画として、「せと弁イベント列車」の乗車イベントを開催。開催日は、2026年3月28日（土）。3300系による団体臨時列車に乗車。乗車区間は、栄町（9:55発）～喜多山～尾張瀬戸（11:14着）、尾張瀬戸（13:33",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.meitetsu.co.jp/profile/news/2025/__icsFiles/afieldfile/2026/03/11/26-03-11setobenevent.pdf",
+      "fetched_at": "2026-03-28T07:01:16.698697+09:00"
+    },
+    {
+      "id": "254ca47b563c3f52",
+      "title": "名鉄 瀬戸線開業120周年記念 タイルマグネットつき乗車券 発売",
+      "date": "2026-03-28",
+      "location": "",
+      "description": "名古屋鉄道は、瀬戸線開業120周年記念商品として、「タイルマグネット付き記念乗車券セット」を発売。片道普通乗車券2枚とタイルマグネットのセットで、発売額は3,000円。発売日時と発売箇所は、2026年3月28日（土）13:30～15:00が",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.meitetsu.co.jp/plan/event/detail/1287917_8032.html",
+      "fetched_at": "2026-03-28T07:01:16.698701+09:00"
+    },
+    {
+      "id": "3df34cb1fc544e93",
+      "title": "名鉄 若林駅高架化記念乗車券 発売",
+      "date": "2026-03-28",
+      "location": "若林駅",
+      "description": "名古屋鉄道は、「三河線 若林駅付近 鉄道高架化記念乗車券」を発売。若林→知立・豊田市間の大人片道乗車券各1枚と台紙のセットで、発売額は600円。発売日時は、2026年3月28日（土）8:30～10:00。発売箇所は、若林駅特設販売所。残数が",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.meitetsu.co.jp/plan/event/detail/1287945_8032.html",
+      "fetched_at": "2026-03-28T07:01:16.698704+09:00"
+    },
+    {
+      "id": "4374b15db4b25431",
+      "title": "明知鉄道 飯高観音御開帳記念切符 発売",
+      "date": "2026-03-28",
+      "location": "",
+      "description": "明知鉄道は、「飯高観音御開帳記念切符」を発売。硬券きっぷで、1日フリーきっぷ（大人1,380円、子ども700円）、花白温泉駅入場券（大人200円）、花白温泉→極楽間片道乗車券（大人220円、子ども110円）の3種類。発売開始日は、2026年",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.aketetsu.co.jp/news/%e9%a3%af%e9%ab%98%e8%a6%b3%e9%9f%b3%e5%be%a1%e9%96%8b%e5%b8%b3%e8%a8%98%e5%bf%b5%e5%88%87%e7%ac%a6%e7%99%ba%e5%a3%b2%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+      "fetched_at": "2026-03-28T07:01:16.698707+09:00"
+    },
+    {
+      "id": "1ee75e63aba435be",
+      "title": "近鉄 どこかの鉄道会社コラボ 行先ミステリー列車ツアー",
+      "date": "2026-03-29",
+      "location": "",
+      "description": "近畿日本鉄道は、「どこかの鉄道会社コラボ企画」として、「行先ミステリー列車」ツアーを開催。旅行日は、2026年3月29日（日）の日帰り。集合場所（時間）は、大阪上本町駅（8:40頃）。大阪上本町9:00頃発の臨時貸切列車に乗車。「どこかの鉄",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260329002.pdf",
+      "fetched_at": "2026-03-28T07:01:16.698711+09:00"
     }
   ]
 }
