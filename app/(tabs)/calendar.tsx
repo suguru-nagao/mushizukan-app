@@ -286,12 +286,29 @@ export default function CalendarScreen() {
 function EventCard({ event }: { event: EventItem }) {
   const theme = getThemeDef(event.themeId);
 
-  async function handlePress() {
-    // GeminiのURLはハルシネーションが多いため、常にGoogle検索を使用
-    const query = `${event.title} ${event.location} ${event.date.slice(0, 7)}`;
-    const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+  // バッチ収集データ（いこーよ/鉄道コム等）は実在URLなので直接開く
+  // Gemini生成データはURLが架空の可能性があるためGoogle検索にフォールバック
+  const hasRealUrl = Boolean(
+    event.url &&
+    event.url.startsWith('http') &&
+    !event.url.includes('generativelanguage') // Gemini由来は除外
+  );
+
+  async function handleOpenOfficial() {
+    if (!event.url) return;
     try {
-      await Linking.openURL(searchUrl);
+      await Linking.openURL(event.url);
+    } catch {
+      // 直接開けない場合はGoogle検索にフォールバック
+      const query = `${event.title} ${event.date.slice(0, 7)}`;
+      await Linking.openURL(`https://www.google.com/search?q=${encodeURIComponent(query)}`).catch(() => {});
+    }
+  }
+
+  async function handleSearchGoogle() {
+    const query = `${event.title} ${event.location} ${event.date.slice(0, 7)}`;
+    try {
+      await Linking.openURL(`https://www.google.com/search?q=${encodeURIComponent(query)}`);
     } catch {
       Alert.alert('ブラウザを開けませんでした');
     }
@@ -300,7 +317,7 @@ function EventCard({ event }: { event: EventItem }) {
   return (
     <TouchableOpacity
       style={[styles.eventCard, { borderLeftColor: theme.color, borderLeftWidth: 4 }]}
-      onPress={handlePress}
+      onPress={hasRealUrl ? handleOpenOfficial : handleSearchGoogle}
       activeOpacity={0.75}
     >
       {/* 日付バッジ */}
@@ -317,14 +334,14 @@ function EventCard({ event }: { event: EventItem }) {
           </Text>
         </View>
         <Text style={styles.eventTitle}>{event.title}</Text>
-        <Text style={styles.eventLocation}>📍 {event.location}</Text>
+        <Text style={styles.eventLocation}>📍 {event.location || '開催地未定'}</Text>
         <Text style={styles.eventDesc}>{event.description}</Text>
         {event.source && (
           <Text style={styles.eventSource}>出典: {event.source}</Text>
         )}
         <View style={[styles.eventLinkBadge, { backgroundColor: theme.lightBg ?? '#eff6ff' }]}>
           <Text style={[styles.eventLinkText, { color: theme.color }]}>
-            🔍 詳細を検索 →
+            {hasRealUrl ? '🔗 公式サイトを見る →' : '🔍 詳細を検索 →'}
           </Text>
         </View>
       </View>

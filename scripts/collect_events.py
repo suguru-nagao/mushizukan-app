@@ -509,6 +509,22 @@ def _fetch_tetsudo_event(url: str, fallback_title: str) -> Optional[dict]:
     if not location_raw:
         location_raw = " ".join(filter(None, [pref, city]))
 
+    # ── 公式URL（「公式情報：」ラベルの直後リンクを優先）─────────
+    official_url = url  # デフォルトは鉄道コムページ
+    SKIP_DOMAINS = {
+        "aiasahi.jp", "twitter.com", "facebook.com", "x.com",
+        "4x-corp.com", "cnet.com", "zdnet.com", "uchubiz.com",
+    }
+    official_label = soup.find(string=re.compile(r"公式情報[：:]?"))
+    if official_label:
+        for a in official_label.parent.find_all_next("a", limit=5):
+            href = a.get("href", "")
+            if (href.startswith("http")
+                    and "tetsudo.com" not in href
+                    and not any(d in href for d in SKIP_DOMAINS)):
+                official_url = href
+                break
+
     return {
         "title": title,
         "description": desc,
@@ -517,7 +533,7 @@ def _fetch_tetsudo_event(url: str, fallback_title: str) -> Optional[dict]:
         "city": city,
         "date_start": date_start,
         "source": "鉄道コム",
-        "source_url": url,
+        "source_url": official_url,  # 公式サイトURL（取得できた場合）
     }
 
 
