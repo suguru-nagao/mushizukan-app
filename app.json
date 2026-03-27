@@ -1,28 +1,43 @@
 {
   "expo": {
-    "name": "mushizukan-app",
+    "name": "むし図鑑",
     "slug": "mushizukan-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "scheme": "mushizukan",
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f0fdf4"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.mushizukan.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "お住まいの地域の虫イベントを表示するために位置情報を使用します。",
+        "NSCameraUsageDescription": "虫の写真を撮影するためにカメラを使用します。",
+        "NSPhotoLibraryUsageDescription": "撮影した虫の写真を保存・参照するために使用します。"
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#f0fdf4",
+        "foregroundImage": "./assets/android-icon-foreground.png"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
+    "plugins": [
+      "expo-router",
+      "expo-location",
+      "expo-image-picker"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }

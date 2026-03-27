@@ -1,0 +1,69 @@
+name: Collect Kid Events
+
+on:
+  # 毎日 06:00 JST (= 21:00 UTC 前日)
+  schedule:
+    - cron: '0 21 * * *'
+  # 手動実行も可能
+  workflow_dispatch:
+    inputs:
+      themes:
+        description: '対象テーマ（カンマ区切り: train,creature,pokemon,car）'
+        required: false
+        default: 'train,creature,pokemon,car'
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # events.json をコミット・プッシュするため
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # pip キャッシュ
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('scripts/requirements.txt') }}
+          restore-keys: ${{ runner.os }}-pip-
+
+      # SQLite DB キャッシュ（差分取得のため実行間で保持）
+      - name: Restore events DB
+        uses: actions/cache@v4
+        with:
+          path: events.db
+          key: events-db-${{ github.run_id }}
+          restore-keys: events-db-
+
+      - name: Install Python dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run event collector
+        env:
+          EXPO_PUBLIC_GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EVENTBRITE_API_KEY: ${{ secrets.EVENTBRITE_API_KEY }}
+          OUTPUT_PATH: public/events.json
+          DB_PATH: events.db
+          MAX_LLM_CALLS: '20'
+          ACTIVE_THEMES: ${{ github.event.inputs.themes || 'train,creature,pokemon,car' }}
+        run: python scripts/collect_events.py
+
+      # events.json に変更があればコミット
+      - name: Commit updated events.json
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/events.json
+          git diff --cached --quiet \
+            && echo "No changes to events.json" \
+            || (git commit -m "chore: update events.json [skip ci]" && git push)
