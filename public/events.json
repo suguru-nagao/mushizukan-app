@@ -1,59 +1,7 @@
 {
-  "generated_at": "2026-03-29T06:56:18.093759+09:00",
-  "count": 7,
+  "generated_at": "2026-03-30T07:03:03.084302+09:00",
+  "count": 6,
   "events": [
-    {
-      "id": "1ee75e63aba435be",
-      "title": "近鉄 どこかの鉄道会社コラボ 行先ミステリー列車ツアー",
-      "date": "2026-03-29",
-      "location": "",
-      "description": "近畿日本鉄道は、「どこかの鉄道会社コラボ企画」として、「行先ミステリー列車」ツアーを開催。旅行日は、2026年3月29日（日）の日帰り。集合場所（時間）は、大阪上本町駅（8:40頃）。大阪上本町9:00頃発の臨時貸切列車に乗車。「どこかの鉄",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260329002.pdf",
-      "fetched_at": "2026-03-29T06:56:18.093709+09:00"
-    },
-    {
-      "id": "1e3bbb9fc301dac2",
-      "title": "ほっとパーク鉾田 思い出の鹿島鉄道展",
-      "date": "2026-03-29",
-      "location": "",
-      "description": "鹿島鉄道保存会、鉾田駅保存会は、「思い出の鹿島鉄道展」を開催。開催日時は、 2026年3月29日（日）10:00～15:00。開催場所は、ほっとパーク鉾田。同施設隣「ともえ荘」2階にて、鹿島鉄道記念館出張展示、施設内の鹿島鉄道車両展示線にて",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kantetsu.co.jp/cms/wp-content/uploads/2026/03/20260329info_kashitetsu_tenji.pdf",
-      "fetched_at": "2026-03-29T06:56:18.093720+09:00"
-    },
-    {
-      "id": "3a4b9952a8219b58",
-      "title": "京王 親子向け 7000系運転体験・DAX車内見学イベント",
-      "date": "2026-03-29",
-      "location": "",
-      "description": "京王電鉄は、事前申込制企画として、「京王7000系 運転体験会」を開催。開催日は2026年3月29日（日）で、午前の部（9:30～12:30）、午後の部（13:30～16:30）の2回開催。開催場所は、高幡不動車両基地。鉄道教習所講師による",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keio.co.jp/news/update/news_release/news_release2025/pdf/nr20260306_untentaiken.pdf",
-      "fetched_at": "2026-03-29T06:56:18.093727+09:00"
-    },
-    {
-      "id": "e91410433be3794c",
-      "title": "えちぜん鉄道 子ども向け 運転体験・恐竜列車乗車ツアー",
-      "date": "2026-03-29",
-      "location": "",
-      "description": "日本旅行は、親子向けツアー「春休みにおすすめ！えちぜん鉄道運転体験と恐竜列車でGO！化石発掘ツアー」を開催。旅行日は、2026年3月29日（日）、30日（月）の各日日帰り。集合場所（時間）は、えちぜん鉄道 福井口駅（9:30）。えちぜん鉄道",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202601_kyoryu.htm",
-      "fetched_at": "2026-03-29T06:56:18.093735+09:00"
-    },
     {
       "id": "ad6618f373e6857f",
       "title": "北総鉄道 都心直通35周年記念乗車券 発売",
@@ -65,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66696",
-      "fetched_at": "2026-03-29T06:56:18.093741+09:00"
+      "fetched_at": "2026-03-30T07:03:03.084255+09:00"
     },
     {
       "id": "7fa3e4ba595246ae",
@@ -78,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260316_2026lions.pdf",
-      "fetched_at": "2026-03-29T06:56:18.093746+09:00"
+      "fetched_at": "2026-03-30T07:03:03.084271+09:00"
     },
     {
       "id": "2fcb181e119ae2af",
@@ -91,7 +39,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/a77be2ecd9074e3684e1264e341ec4e1/oshirase_260213-0310.pdf",
-      "fetched_at": "2026-03-29T06:56:18.093753+09:00"
+      "fetched_at": "2026-03-30T07:03:03.084279+09:00"
+    },
+    {
+      "id": "312abb6279241236",
+      "title": "神奈川県内鉄道12社局 推しまくれ 鉄道キャラクターエキタグ選挙",
+      "date": "2026-04-01",
+      "location": "神奈川県",
+      "description": "JR東日本など、神奈川県の鉄道12社局は、「推しまくれ！神奈川県の鉄道キャラクターエキタグ選挙2026」を開催。開催期間は、2026年4月1日（水）0:00～6月30日（火）23:59。「エキタグ」アプリによるデジタルスタンプラリー。12社",
+      "prefecture": "神奈川県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://jr-central.co.jp/news/release/_pdf/000044934.pdf",
+      "fetched_at": "2026-03-30T07:03:03.084286+09:00"
+    },
+    {
+      "id": "bb75e0cb473f7f55",
+      "title": "東葉高速鉄道 村上とよか デビュー記念乗車券・入場券セット 発売",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "東葉高速鉄道は、同社の鉄道むすめ「村上とよか」デビューを記念して、記念乗車券・入場券セットを発売。記念乗車券、記念入場券各2枚、台紙のセットで、発売額は1,000円。発売・有効期間は、2026年4月1日（水）～12月31日（木）。発売箇所は",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.toyokosoku.co.jp/events/30th_anniversary/tetsudou-musume",
+      "fetched_at": "2026-03-30T07:03:03.084293+09:00"
+    },
+    {
+      "id": "9f3af1c7eb439481",
+      "title": "ひたちなか海浜鉄道 キハ100形 運転開始記念乗車券 発売",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "ひたちなか海浜鉄道は、「ひたちなか海浜鉄道湊線キハ100運転開始記念乗車券」を発売。発売額は1,200円で、発売開始日時は2026年4月1日（水）8:30。発売箇所は、那珂湊駅窓口。6日（月）以降は、ネットショップでも発売。発売数は420セ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.hitachinaka-rail.co.jp/blog/2026/03/26/9661.html",
+      "fetched_at": "2026-03-30T07:03:03.084299+09:00"
     }
   ]
 }
