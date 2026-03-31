@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-03-31T08:00:47.773664+09:00",
-  "count": 6,
+  "generated_at": "2026-04-01T07:54:37.800028+09:00",
+  "count": 10,
   "events": [
-    {
-      "id": "ad6618f373e6857f",
-      "title": "北総鉄道 都心直通35周年記念乗車券 発売",
-      "date": "2026-03-31",
-      "location": "",
-      "description": "北総鉄道は、「北総線都心直通35周年記念乗車券」を発売。乗車券2枚が一体の台紙2枚（乗車券計4枚）のセットで、発売額は1,000円。発売開始日は、2026年3月31日（火）。発売箇所は、新柴又、東松戸、新鎌ヶ谷、千葉ニュータウン中央の各駅な",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/topics/detail/66696",
-      "fetched_at": "2026-03-31T08:00:47.773618+09:00"
-    },
-    {
-      "id": "7fa3e4ba595246ae",
-      "title": "西武 ライオンズ2026シーズン開幕記念乗車券 発売",
-      "date": "2026-03-31",
-      "location": "",
-      "description": "西武鉄道と西武ライオンズは、「埼玉西武ライオンズ2026シーズン応援！西武線1日フリー乗車券」を発売。大人用の西武線1日フリーきっぷ2枚と台紙のセットで、発売額は3,000円。発売日は、2026年3月31日（火）～4月5日（日）。発売箇所は",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260316_2026lions.pdf",
-      "fetched_at": "2026-03-31T08:00:47.773634+09:00"
-    },
     {
       "id": "2fcb181e119ae2af",
       "title": "近鉄 ひのとり 近鉄名古屋～賢島間",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/a77be2ecd9074e3684e1264e341ec4e1/oshirase_260213-0310.pdf",
-      "fetched_at": "2026-03-31T08:00:47.773641+09:00"
+      "fetched_at": "2026-04-01T07:54:37.799965+09:00"
     },
     {
       "id": "312abb6279241236",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000044934.pdf",
-      "fetched_at": "2026-03-31T08:00:47.773649+09:00"
+      "fetched_at": "2026-04-01T07:54:37.799979+09:00"
     },
     {
       "id": "bb75e0cb473f7f55",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/events/30th_anniversary/tetsudou-musume",
-      "fetched_at": "2026-03-31T08:00:47.773655+09:00"
+      "fetched_at": "2026-04-01T07:54:37.799989+09:00"
     },
     {
       "id": "9f3af1c7eb439481",
@@ -78,7 +52,85 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.hitachinaka-rail.co.jp/blog/2026/03/26/9661.html",
-      "fetched_at": "2026-03-31T08:00:47.773660+09:00"
+      "fetched_at": "2026-04-01T07:54:37.799996+09:00"
+    },
+    {
+      "id": "03e996697624c7a4",
+      "title": "ICOCAでGO 鉄道版ビワイチパス 発売",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "JR西日本は、「（ICOCAでGO）鉄道版ビワイチパス」を発売。JR在来線自由周遊区間（東海道本線・北陸本線京都～敦賀間、湖西線山科～近江塩津間、草津線草津～貴生川間）の普通列車が、連続2日間実質乗り放題。近江鉄道全線2日フリー乗車券、近江",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260319_keihan-railway01.pdf",
+      "fetched_at": "2026-04-01T07:54:37.800001+09:00"
+    },
+    {
+      "id": "c2eb289816a93357",
+      "title": "京阪 免許自主返納者向け 大津線 湖都古都1日乗車券 発売",
+      "date": "2026-04-01",
+      "location": "。滋賀県",
+      "description": "京阪電気鉄道は、「京阪電車『免許自主返納』応援！大津線 湖都古都1日乗車券」を発売。滋賀県在住者かつ運転免許証の自主返納者が対象の乗車券で、大津線全線が1日乗り放題。発売額は650円で、発売期間は2026年4月1日（水）～2027年3月31",
+      "prefecture": "。滋賀県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/traffic/valueticket/detail/kotokoto1day-hennou.html",
+      "fetched_at": "2026-04-01T07:54:37.800005+09:00"
+    },
+    {
+      "id": "ed22ed52711e31f3",
+      "title": "東武 SL大樹など 記念乗車証 新デザイン 配布",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "東武鉄道は、「SL大樹」「SL大樹ふたら」「DL大樹」の記念乗車証デザインを変更。新デザインの配布開始日は、2026年4月1日（水）。デザインは全12種類。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260324104010FKL11_ipWNttjDX-N0Xgpw.pdf",
+      "fetched_at": "2026-04-01T07:54:37.800009+09:00"
+    },
+    {
+      "id": "84cabbdf761b0fd4",
+      "title": "豊橋鉄道 市内線開業100周年記念フリー乗車券セット 第4期デザイン 発売",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "豊橋鉄道は、「市内線開業100周年記念 平日昼間・土休日フリー乗車券セット」の第4期デザインを発売。平日9:00～16:00と土休日に利用可能な「平日昼間・土休日フリー乗車券」2枚と台紙のセットで、発売額は1,000円。発売・有効期間は、2",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.toyotetsu.com/news/000637.html",
+      "fetched_at": "2026-04-01T07:54:37.800018+09:00"
+    },
+    {
+      "id": "cd435d15e7865223",
+      "title": "豊橋鉄道 市内線開業100周年記念 押し電ビンゴラリー",
+      "date": "2026-04-01",
+      "location": "",
+      "description": "豊橋鉄道は、「市内開業100周年記念第4弾企画『押し（推し）電ビンゴラリー ～色とりどりの車両を集めよう！～』」を開催。開催期間は、2026年4月1日（水）～6月30日（火）。対象乗車券の購入時にビンゴカードを配布。ミッションに応じた車両に",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.toyotetsu.com/news/000637.html",
+      "fetched_at": "2026-04-01T07:54:37.800022+09:00"
+    },
+    {
+      "id": "f21a30317dd0eb42",
+      "title": "南福岡車両区 501系・415系 車両見学会",
+      "date": "2026-04-26",
+      "location": "",
+      "description": "JR九州は、事前申込制企画として、501系、415系の車両見学会を開催。開催日は2026年4月26日（日）で、10:00～11:30、13:30～15:00の2回開催。開催場所は、南福岡車両区。501系HM-1編成、415系（Fo-1501",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
+      "fetched_at": "2026-04-01T07:54:37.800026+09:00"
     }
   ]
 }
