@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-02T08:03:50.845256+09:00",
-  "count": 14,
+  "generated_at": "2026-04-03T07:53:59.449014+09:00",
+  "count": 16,
   "events": [
     {
       "id": "5475ac125386095b",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/items/260312_00_press_kyototeppaku_tenji_1.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845166+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448910+09:00"
     },
     {
       "id": "1e41a38441e5d645",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/items/260312_00_press_kyototeppaku_tenji_1.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845181+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448924+09:00"
     },
     {
       "id": "1d2d6c0e5d9e9b81",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mm21railway.co.jp/info/news/uploads/press_release_20260326.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845190+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448931+09:00"
     },
     {
       "id": "41975699ebe8871d",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026springtrainfes_flag/index.html",
-      "fetched_at": "2026-04-02T08:03:50.845194+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448937+09:00"
     },
     {
       "id": "899431d2b96db112",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0025",
-      "fetched_at": "2026-04-02T08:03:50.845198+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448943+09:00"
     },
     {
       "id": "826b21644093cdbc",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2507",
-      "fetched_at": "2026-04-02T08:03:50.845201+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448949+09:00"
     },
     {
       "id": "0e0d7acbe4472558",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/newsrelease/detail/65325",
-      "fetched_at": "2026-04-02T08:03:50.845205+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448955+09:00"
     },
     {
       "id": "6e18cc72d287af60",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260404001.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845213+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448966+09:00"
     },
     {
       "id": "6f1a705f3c953c6c",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.usuitouge.com/bunkamura/events/2734/",
-      "fetched_at": "2026-04-02T08:03:50.845218+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448973+09:00"
     },
     {
       "id": "449f3b6bfef84832",
@@ -130,7 +130,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0058",
-      "fetched_at": "2026-04-02T08:03:50.845222+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448979+09:00"
+    },
+    {
+      "id": "7a44013aad6905b6",
+      "title": "一畑電車 WEST EXPRESS 銀河デザイン1日フリー乗車券 発売",
+      "date": "2026-04-04",
+      "location": "",
+      "description": "一畑電車は、「WEST EXPRESS銀河×一畑電車 コラボ1日フリー乗車券」を発売。発売当日に限り、一畑電車全線が乗り放題。大人用のみの発売で、発売額は1,800円。発売期間は、2026年4月4日（土）～7月1日（水）。発売箇所は、電鉄出",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://railway.ichibata.co.jp/news/m_news/2026westexpressginga/",
+      "fetched_at": "2026-04-03T07:53:59.448986+09:00"
     },
     {
       "id": "99b6861033858d80",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/hachioji/20260318_hc01.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845233+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448992+09:00"
     },
     {
       "id": "5e130e6a1100fa9e",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-02T08:03:50.845240+09:00"
+      "fetched_at": "2026-04-03T07:53:59.448999+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -169,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-02T08:03:50.845246+09:00"
+      "fetched_at": "2026-04-03T07:53:59.449004+09:00"
+    },
+    {
+      "id": "1f5ad780824c8e66",
+      "title": "長電バス 分社30周年ファイナルイベント",
+      "date": "2026-04-25",
+      "location": "",
+      "description": "長電バスは、分社30周年ファイナルイベントを開催。イベント開催日時は、2026年4月25日（土）10:00～15:00。開催場所は、長野営業所。2階建てバス「エアロキング」乗車体験（有料）、観光バスなどの展示、バスグッズ・部品販売、洗車機く",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
+      "fetched_at": "2026-04-03T07:53:59.449008+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -182,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-02T08:03:50.845252+09:00"
+      "fetched_at": "2026-04-03T07:53:59.449012+09:00"
     }
   ]
 }
