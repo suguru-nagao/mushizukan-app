@@ -1,46 +1,7 @@
 {
-  "generated_at": "2026-04-03T07:53:59.449014+09:00",
-  "count": 16,
+  "generated_at": "2026-04-04T07:02:30.327486+09:00",
+  "count": 13,
   "events": [
-    {
-      "id": "5475ac125386095b",
-      "title": "京都鉄道博物館 DE10形1161号機など 特別展示",
-      "date": "2026-04-03",
-      "location": "京都鉄道博物館",
-      "description": "京都鉄道博物館は、DE10形を特別展示。展示期間は、2026年4月3日（金）～7日（火）。展示場所は、本館1階「車両のしくみ／車両工場」エリア。DE10形1161号機（おろち色）のほか、1118号機、D50形140号機を展示。関連イベントと",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/items/260312_00_press_kyototeppaku_tenji_1.pdf",
-      "fetched_at": "2026-04-03T07:53:59.448910+09:00"
-    },
-    {
-      "id": "1e41a38441e5d645",
-      "title": "京都鉄道博物館 DE10形1161号機グッズ 販売",
-      "date": "2026-04-03",
-      "location": "京都鉄道博物館",
-      "description": "京都鉄道博物館は、DE10形1161号機などの特別展示にあわせ、DE10形グッズ3品目を販売。販売品目（価格）は、アクリルキーホルダー（1,100円）、A4クリアファイル（550円）、ダイカットステッカー（500円）。販売開始日は、2026",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/items/260312_00_press_kyototeppaku_tenji_1.pdf",
-      "fetched_at": "2026-04-03T07:53:59.448924+09:00"
-    },
-    {
-      "id": "1d2d6c0e5d9e9b81",
-      "title": "横浜高速鉄道 日向坂46 ひな誕祭記念1日乗車券 発売",
-      "date": "2026-04-03",
-      "location": "",
-      "description": "横浜高速鉄道は、日向坂46のライブイベント「7回目のひな誕祭」とのコラボレーション企画として、記念台紙つきの「みなとみらい線一日乗車券」を発売。大人用のみの発売で、発売額は1,000円。発売期間は、2026年4月3日（金）～12日（日）。発",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mm21railway.co.jp/info/news/uploads/press_release_20260326.pdf",
-      "fetched_at": "2026-04-03T07:53:59.448931+09:00"
-    },
     {
       "id": "41975699ebe8871d",
       "title": "高松琴平電気鉄道 春の電車まつり",
@@ -52,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026springtrainfes_flag/index.html",
-      "fetched_at": "2026-04-03T07:53:59.448937+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327427+09:00"
     },
     {
       "id": "899431d2b96db112",
@@ -65,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0025",
-      "fetched_at": "2026-04-03T07:53:59.448943+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327440+09:00"
     },
     {
       "id": "826b21644093cdbc",
@@ -78,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2507",
-      "fetched_at": "2026-04-03T07:53:59.448949+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327445+09:00"
     },
     {
       "id": "0e0d7acbe4472558",
@@ -91,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/newsrelease/detail/65325",
-      "fetched_at": "2026-04-03T07:53:59.448955+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327449+09:00"
     },
     {
       "id": "6e18cc72d287af60",
@@ -104,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260404001.pdf",
-      "fetched_at": "2026-04-03T07:53:59.448966+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327452+09:00"
     },
     {
       "id": "6f1a705f3c953c6c",
@@ -117,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.usuitouge.com/bunkamura/events/2734/",
-      "fetched_at": "2026-04-03T07:53:59.448973+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327456+09:00"
     },
     {
       "id": "449f3b6bfef84832",
@@ -130,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0058",
-      "fetched_at": "2026-04-03T07:53:59.448979+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327459+09:00"
     },
     {
       "id": "7a44013aad6905b6",
@@ -143,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://railway.ichibata.co.jp/news/m_news/2026westexpressginga/",
-      "fetched_at": "2026-04-03T07:53:59.448986+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327467+09:00"
     },
     {
       "id": "99b6861033858d80",
@@ -156,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/hachioji/20260318_hc01.pdf",
-      "fetched_at": "2026-04-03T07:53:59.448992+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327471+09:00"
     },
     {
       "id": "5e130e6a1100fa9e",
@@ -169,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-03T07:53:59.448999+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327475+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -182,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-03T07:53:59.449004+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327478+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -195,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-03T07:53:59.449008+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327481+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -208,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-03T07:53:59.449012+09:00"
+      "fetched_at": "2026-04-04T07:02:30.327485+09:00"
     }
   ]
 }
