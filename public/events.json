@@ -1,111 +1,7 @@
 {
-  "generated_at": "2026-04-04T07:02:30.327486+09:00",
+  "generated_at": "2026-04-05T06:58:43.842210+09:00",
   "count": 13,
   "events": [
-    {
-      "id": "41975699ebe8871d",
-      "title": "高松琴平電気鉄道 春の電車まつり",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "高松琴平電気鉄道は、「第8回ことでん春の電車まつり」を開催。開催日時は、2026年4月4日（土）10:00～15:30。開催場所は、瓦町FLAG屋上「カワラパーク」（瓦町駅直結）。ミニ電車運転、鉄道各社などのグッズ販売、方向幕操作体験、マス",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026springtrainfes_flag/index.html",
-      "fetched_at": "2026-04-04T07:02:30.327427+09:00"
-    },
-    {
-      "id": "899431d2b96db112",
-      "title": "E655系 上野～相馬間 なごみ浜通り号",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、E655系「なごみ（和）」による団体臨時列車の乗車ツアーを開催。E655系の運転日は、2026年4月4日（土）。運転区間は、上野（8:00～8:30発）～相馬。乗車には、旅行商品の申込が必要。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0025",
-      "fetched_at": "2026-04-04T07:02:30.327440+09:00"
-    },
-    {
-      "id": "826b21644093cdbc",
-      "title": "福喜多るSATONO号",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、ふくしまディスティネーションキャンペーンのオープニング企画として、団体臨時列車「福喜多るSATONO号～オープニングSATONO～」の乗車ツアーを開催。団体臨時列車の運転日は、2026年4月4日（土）",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2507",
-      "fetched_at": "2026-04-04T07:02:30.327445+09:00"
-    },
-    {
-      "id": "0e0d7acbe4472558",
-      "title": "北総鉄道 7300形撮影会イベント",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "北総鉄道は、事前申込制イベント「7300形車両撮影会」を開催。開催日時は、2026年4月4日（土）10:00～12:00頃。開催場所は、印旛車両基地。集合・解散場所は、印西牧の原駅。車両基地にて、7300形2本を展示し、撮影会を実施。行先表",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/newsrelease/detail/65325",
-      "fetched_at": "2026-04-04T07:02:30.327449+09:00"
-    },
-    {
-      "id": "6e18cc72d287af60",
-      "title": "近鉄 けいはんな線 異経路ノリ乗りツアー",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "近畿日本鉄道は、「けいはんな線 開業20周年 異経路ノリ乗りツアー」を開催。旅行日は、2026年4月4日（土）の日帰り。7020系による団体臨時列車に乗車。生駒駅発着で、コース1（9:50頃発～11:45頃着）、コース2（13:30頃発～1",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260404001.pdf",
-      "fetched_at": "2026-04-04T07:02:30.327452+09:00"
-    },
-    {
-      "id": "6f1a705f3c953c6c",
-      "title": "碓氷峠鉄道文化むら 鉄道ファン感謝DAYイベント",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "碓氷峠鉄道文化むらは、「鉄道ファン感謝DAY」を開催。開催日時は、2026年4月4日（土）9:00～20:00（最終入園は19:30）。鉄道・バスグッズ販売、子ども制服着用体験、園内ガイドツアー（要整理券）、「あさま」車内公開、展示車両ヘッ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.usuitouge.com/bunkamura/events/2734/",
-      "fetched_at": "2026-04-04T07:02:30.327456+09:00"
-    },
-    {
-      "id": "449f3b6bfef84832",
-      "title": "福島臨海鉄道 見学ツアー",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、ツアー企画「ふくしまDC特別企画！～鉄道探訪ふくりん常磐の旅～」を開催。旅行日は、2026年4月4日（土）の日帰り。福島臨海鉄道の小名浜駅にて、同社の機関車、動力車検修庫、荷役作業、運転室の見学、機関",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0058",
-      "fetched_at": "2026-04-04T07:02:30.327459+09:00"
-    },
-    {
-      "id": "7a44013aad6905b6",
-      "title": "一畑電車 WEST EXPRESS 銀河デザイン1日フリー乗車券 発売",
-      "date": "2026-04-04",
-      "location": "",
-      "description": "一畑電車は、「WEST EXPRESS銀河×一畑電車 コラボ1日フリー乗車券」を発売。発売当日に限り、一畑電車全線が乗り放題。大人用のみの発売で、発売額は1,800円。発売期間は、2026年4月4日（土）～7月1日（水）。発売箇所は、電鉄出",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://railway.ichibata.co.jp/news/m_news/2026westexpressginga/",
-      "fetched_at": "2026-04-04T07:02:30.327467+09:00"
-    },
     {
       "id": "99b6861033858d80",
       "title": "勝沼ぶどう郷駅 EF64形 内部見学会",
@@ -117,7 +13,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/hachioji/20260318_hc01.pdf",
-      "fetched_at": "2026-04-04T07:02:30.327471+09:00"
+      "fetched_at": "2026-04-05T06:58:43.842106+09:00"
+    },
+    {
+      "id": "d85355cb2e0098b0",
+      "title": "地下鉄博物館 のりもの絵本・絵ハガキ展 開催",
+      "date": "2026-04-07",
+      "location": "地下鉄博物館",
+      "description": "地下鉄博物館は、特別展「地下鉄の黎明期に描かれたのりもの絵本と絵ハガキ展～関田克孝コレクションを中心に～」を開催。開催期間は、2026年4月7日（火）～5月10日（日）。同館企画展示コーナーにて、関田克孝氏のコレクションを中心に、のりもの絵",
+      "prefecture": "",
+      "city": "",
+      "themeId": "creature",
+      "source": "鉄道コム",
+      "url": "https://www.chikahaku.jp/event/2026/special-2026_0317_0510.html",
+      "fetched_at": "2026-04-05T06:58:43.842121+09:00"
     },
     {
       "id": "5e130e6a1100fa9e",
@@ -130,7 +39,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-04T07:02:30.327475+09:00"
+      "fetched_at": "2026-04-05T06:58:43.842130+09:00"
+    },
+    {
+      "id": "4234c559bf3c5675",
+      "title": "大宮支社 親子向け 信号通信設備 体験イベント",
+      "date": "2026-04-11",
+      "location": "",
+      "description": "JR東日本大宮支社は、事前申込制企画として、親子向けの信号通信設備体験学習イベントを開催。開催日は2026年4月11日（土）で、第1回（10:00～13:00）、第2回（14:00～17:00）の2回開催。開催場所は、大宮支社 信通保線技術",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
+      "fetched_at": "2026-04-05T06:58:43.842138+09:00"
+    },
+    {
+      "id": "7a9d38dba50d86cc",
+      "title": "小田急 町田駅 改称・百貨店開店50周年記念乗車券 発売",
+      "date": "2026-04-11",
+      "location": "町田駅",
+      "description": "小田急電鉄と小田急百貨店は、町田駅の改称と小田急百貨店町田店開店50周年の記念乗車券を発売。硬券乗車券8枚、復刻版入場券・特急券各1枚（使用不可）、記念台紙のセットで、発売額は2,000円。発売・有効期間は、2026年4月11日（土）～29",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
+      "fetched_at": "2026-04-05T06:58:43.842144+09:00"
+    },
+    {
+      "id": "08f8e3912e23da1e",
+      "title": "相鉄 いずみ野線開業50周年記念イベント",
+      "date": "2026-04-11",
+      "location": "",
+      "description": "相模鉄道は、いずみ野線開業50周年記念イベントを開催。開催日時は、2026年4月11日（土）10:00～16:00。開催場所は、ゆめが丘ソラトス。湘南台管区考案のオリジナルグッズ販売、鉄道部品販売、なりきり駅長撮影会、ジオラマ展示などを実施",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
+      "fetched_at": "2026-04-05T06:58:43.842153+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -143,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-04T07:02:30.327478+09:00"
+      "fetched_at": "2026-04-05T06:58:43.842160+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -156,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-04T07:02:30.327481+09:00"
+      "fetched_at": "2026-04-05T06:58:43.842172+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -169,7 +117,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-04T07:02:30.327485+09:00"
+      "fetched_at": "2026-04-05T06:58:43.842180+09:00"
+    },
+    {
+      "id": "b6e8d66030fe1559",
+      "title": "能勢電鉄 レールウェイフェスティバル2026",
+      "date": "2026-04-29",
+      "location": "10:00～回が日生中央駅",
+      "description": "能勢電鉄は、「のせでんレールウェイフェスティバル2026」を開催。開催日時は、2026年4月29日（水・祝）10:00～15:00。開催場所は、平野車庫。入場無料。洗車体験、模擬運転台の展示、ミニ電車の運転、鉄道部品の展示、グッズ販売などを",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
+      "fetched_at": "2026-04-05T06:58:43.842187+09:00"
+    },
+    {
+      "id": "4fcd2b70998aab90",
+      "title": "伊賀鉄道 伊賀線まつり2026",
+      "date": "2026-05-03",
+      "location": "",
+      "description": "伊賀鉄道、伊賀鉄道友の会は、「伊賀線まつり2026」を開催。開催日時は、2026年5月3日（日・祝）10:00～15:30（最終入場は15:00）。開催場所は、上野市車庫。入場無料。洗車体験、電路作業体験、車両撮影会、ジオラマ展示、三重交通",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.igatetsu.co.jp/?p=3155",
+      "fetched_at": "2026-04-05T06:58:43.842191+09:00"
+    },
+    {
+      "id": "50b949f559aa0480",
+      "title": "静岡鉄道 小中校生・大学生向け 電車教室",
+      "date": "2026-05-03",
+      "location": "",
+      "description": "静岡鉄道は、事前申込制イベント「現役運転士企画！静鉄電車教室」を開催。開催日時は、2026年5月3日（日・祝）11:50～17:00。集合・解散は、新静岡駅。長沼営業所にて、出庫点検解説、車内放送・ドア開閉体験、現役運転士との座談会などを実",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
+      "fetched_at": "2026-04-05T06:58:43.842200+09:00"
+    },
+    {
+      "id": "e0573609a6529196",
+      "title": "伊賀鉄道 伊賀線電化100周年記念入場券セット 発売",
+      "date": "2026-05-03",
+      "location": "",
+      "description": "伊賀鉄道は、「伊賀線電化100周年記念入場券セット」を発売。硬券入場券5枚と台紙のセットで、発売額は1,100円。2026年5月3日（日・祝）に上野市車庫で開催の「伊賀線まつり2026」にて発売。発売数は300セット限定。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.igatetsu.co.jp/?p=3155",
+      "fetched_at": "2026-04-05T06:58:43.842206+09:00"
     }
   ]
 }
