@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-04-05T06:58:43.842210+09:00",
+  "generated_at": "2026-04-06T06:58:53.703324+09:00",
   "count": 13,
   "events": [
-    {
-      "id": "99b6861033858d80",
-      "title": "勝沼ぶどう郷駅 EF64形 内部見学会",
-      "date": "2026-04-05",
-      "location": "勝沼ぶどう郷駅",
-      "description": "JR東日本八王子支社は、「勝沼さくらマルシェ」を開催。開催日時は、2026年3月29日（日）、4月5日（日）の各日10:00～17:00。開催場所は、勝沼ぶどう郷駅、同駅前公園。地元店舗などが出店。4月5日10:00～15:30には、鉄道イ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/hachioji/20260318_hc01.pdf",
-      "fetched_at": "2026-04-05T06:58:43.842106+09:00"
-    },
     {
       "id": "d85355cb2e0098b0",
       "title": "地下鉄博物館 のりもの絵本・絵ハガキ展 開催",
@@ -26,7 +13,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.chikahaku.jp/event/2026/special-2026_0317_0510.html",
-      "fetched_at": "2026-04-05T06:58:43.842121+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703218+09:00"
     },
     {
       "id": "5e130e6a1100fa9e",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-05T06:58:43.842130+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703234+09:00"
     },
     {
       "id": "4234c559bf3c5675",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
-      "fetched_at": "2026-04-05T06:58:43.842138+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703243+09:00"
     },
     {
       "id": "7a9d38dba50d86cc",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
-      "fetched_at": "2026-04-05T06:58:43.842144+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703250+09:00"
     },
     {
       "id": "08f8e3912e23da1e",
@@ -78,7 +65,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-05T06:58:43.842153+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703256+09:00"
+    },
+    {
+      "id": "fbb8e286e2813d38",
+      "title": "横浜シーサイドラインフェスタ2026",
+      "date": "2026-04-11",
+      "location": "",
+      "description": "横浜シーサイドラインは、「シーサイドラインフェスタ2026」を開催。開催日時は、2026年4月11日（土）10:00～15:00。開催場所は、横浜シーサイドライン車両基地。入場無料。ステージイベント、グッズ販売、鉄道模型展示などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seasideline.co.jp/topics/26022415342578.html",
+      "fetched_at": "2026-04-06T06:58:53.703264+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-05T06:58:43.842160+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703270+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-05T06:58:43.842172+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703283+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-05T06:58:43.842180+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703294+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-05T06:58:43.842187+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703301+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-05T06:58:43.842191+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703307+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-05T06:58:43.842200+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703314+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-05T06:58:43.842206+09:00"
+      "fetched_at": "2026-04-06T06:58:53.703320+09:00"
     }
   ]
 }
