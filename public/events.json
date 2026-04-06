@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-06T06:58:53.703324+09:00",
-  "count": 13,
+  "generated_at": "2026-04-07T07:05:57.475363+09:00",
+  "count": 15,
   "events": [
     {
       "id": "d85355cb2e0098b0",
@@ -13,7 +13,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.chikahaku.jp/event/2026/special-2026_0317_0510.html",
-      "fetched_at": "2026-04-06T06:58:53.703218+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475292+09:00"
     },
     {
       "id": "5e130e6a1100fa9e",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-06T06:58:53.703234+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475308+09:00"
     },
     {
       "id": "4234c559bf3c5675",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
-      "fetched_at": "2026-04-06T06:58:53.703243+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475313+09:00"
     },
     {
       "id": "7a9d38dba50d86cc",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
-      "fetched_at": "2026-04-06T06:58:53.703250+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475318+09:00"
     },
     {
       "id": "08f8e3912e23da1e",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-06T06:58:53.703256+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475321+09:00"
     },
     {
       "id": "fbb8e286e2813d38",
@@ -78,7 +78,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seasideline.co.jp/topics/26022415342578.html",
-      "fetched_at": "2026-04-06T06:58:53.703264+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475324+09:00"
+    },
+    {
+      "id": "e8193b5e24eda58d",
+      "title": "東葉高速鉄道 開業30周年記念1日乗車券 発売",
+      "date": "2026-04-18",
+      "location": "",
+      "description": "東葉高速鉄道は、「東葉高速線 開業30周年記念1日乗車券」を発売。発売日に限り、東葉高速線全線が1日乗り放題。発売額は、大人800円、小児100円。発売日は、2026年4月18日（土）～5月10日（日）の土休日と、同線開業記念日の4月27日",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.toyokosoku.co.jp/information/otoku/16143.html",
+      "fetched_at": "2026-04-07T07:05:57.475328+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-06T06:58:53.703270+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475336+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -104,7 +117,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-06T06:58:53.703283+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475341+09:00"
+    },
+    {
+      "id": "bed7708fb671c0d4",
+      "title": "JR九州 こどもぼうけんきっぷ利用者向け トレーディングカード 配布",
+      "date": "2026-04-25",
+      "location": "",
+      "description": "JR九州大分支社は、「こどもぼうけんきっぷ」利用者向けに、オリジナル記念カード「のって！あつめて！ぼうけんトレカ」を配布。配布期間は、2026年4月25日（土）～5月6日（水・祝）。配布箇所は、中津、別府、大分、佐伯、由布院、豊後竹田の各駅",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrkyushu.co.jp/byarea/ooita/info/__icsFiles/afieldfile/2026/04/03/20260406.pdf",
+      "fetched_at": "2026-04-07T07:05:57.475345+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -117,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-06T06:58:53.703294+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475348+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -130,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-06T06:58:53.703301+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475352+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -143,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-06T06:58:53.703307+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475355+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -156,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-06T06:58:53.703314+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475358+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-06T06:58:53.703320+09:00"
+      "fetched_at": "2026-04-07T07:05:57.475361+09:00"
     }
   ]
 }
