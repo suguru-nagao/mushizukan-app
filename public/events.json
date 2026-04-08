@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-04-08T08:06:39.334431+09:00",
-  "count": 14,
+  "generated_at": "2026-04-09T08:10:16.902806+09:00",
+  "count": 15,
   "events": [
-    {
-      "id": "5e130e6a1100fa9e",
-      "title": "相鉄 いずみ野線開業50周年記念スタンプラリー",
-      "date": "2026-04-08",
-      "location": "",
-      "description": "相模鉄道は、いずみ野線開業50周年記念イベントの一環として、スタンプラリーを開催。開催期間は、2026年4月8日（水）10:00～5月10日（日）20:00。南万騎が原、緑園都市、弥生台、いずみ野の各駅でスタンプ帳を入手しスタート。同4駅お",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-08T08:06:39.334349+09:00"
-    },
     {
       "id": "4234c559bf3c5675",
       "title": "大宮支社 親子向け 信号通信設備 体験イベント",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
-      "fetched_at": "2026-04-08T08:06:39.334367+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902730+09:00"
     },
     {
       "id": "7a9d38dba50d86cc",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
-      "fetched_at": "2026-04-08T08:06:39.334375+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902741+09:00"
     },
     {
       "id": "08f8e3912e23da1e",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-08T08:06:39.334383+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902746+09:00"
     },
     {
       "id": "fbb8e286e2813d38",
@@ -65,7 +52,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seasideline.co.jp/topics/26022415342578.html",
-      "fetched_at": "2026-04-08T08:06:39.334390+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902751+09:00"
+    },
+    {
+      "id": "c73d5eaf7b9db9ec",
+      "title": "若桜鉄道 若桜駅 SL・DL 運転体験ツアー",
+      "date": "2026-04-12",
+      "location": "若桜駅",
+      "description": "日本旅行は、「若桜鉄道SL＆DL2つの車両を1日で体験運転！と若桜駅見学ツアー」を開催。旅行日は、2026年4月12日（日）の日帰り。集合場所は若桜駅改札前で、10:40集合。同駅構内見学ガイドツアーの後、C12形167号機とDD16形7号",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202602_wakatetsu.htm",
+      "fetched_at": "2026-04-09T08:10:16.902754+09:00"
     },
     {
       "id": "e8193b5e24eda58d",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16143.html",
-      "fetched_at": "2026-04-08T08:06:39.334395+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902766+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-08T08:06:39.334399+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902770+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-08T08:06:39.334407+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902779+09:00"
     },
     {
       "id": "bed7708fb671c0d4",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/ooita/info/__icsFiles/afieldfile/2026/04/03/20260406.pdf",
-      "fetched_at": "2026-04-08T08:06:39.334412+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902784+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-08T08:06:39.334416+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902788+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-08T08:06:39.334419+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902791+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-08T08:06:39.334423+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902795+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-08T08:06:39.334426+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902798+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -182,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-08T08:06:39.334429+09:00"
+      "fetched_at": "2026-04-09T08:10:16.902801+09:00"
+    },
+    {
+      "id": "0fd1db3a71348ae5",
+      "title": "東青森駅 親子向け EH500形見学・レールスター乗車体験イベント",
+      "date": "2026-05-05",
+      "location": "東青森駅",
+      "description": "JR貨物東北支社、JR東日本盛岡支社は、事前申込制イベント「心じゃわめぐ AOMORI RAIL FES ver.2026」の一環として、「会社およびお仕事体験の部」を開催。開催日は、2026年5月5日（火・祝）。開催場所は、東青森駅。10",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
+      "fetched_at": "2026-04-09T08:10:16.902804+09:00"
     }
   ]
 }
