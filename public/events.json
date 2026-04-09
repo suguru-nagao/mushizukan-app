@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-09T08:10:16.902806+09:00",
-  "count": 15,
+  "generated_at": "2026-04-10T08:12:17.255557+09:00",
+  "count": 16,
   "events": [
     {
       "id": "4234c559bf3c5675",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902730+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255449+09:00"
     },
     {
       "id": "7a9d38dba50d86cc",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902741+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255465+09:00"
     },
     {
       "id": "08f8e3912e23da1e",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-09T08:10:16.902746+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255471+09:00"
     },
     {
       "id": "fbb8e286e2813d38",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seasideline.co.jp/topics/26022415342578.html",
-      "fetched_at": "2026-04-09T08:10:16.902751+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255476+09:00"
     },
     {
       "id": "c73d5eaf7b9db9ec",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202602_wakatetsu.htm",
-      "fetched_at": "2026-04-09T08:10:16.902754+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255481+09:00"
     },
     {
       "id": "e8193b5e24eda58d",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16143.html",
-      "fetched_at": "2026-04-09T08:10:16.902766+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255487+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902770+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255493+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-09T08:10:16.902779+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255503+09:00"
     },
     {
       "id": "bed7708fb671c0d4",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/ooita/info/__icsFiles/afieldfile/2026/04/03/20260406.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902784+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255510+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-09T08:10:16.902788+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255522+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902791+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255529+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-09T08:10:16.902795+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255534+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-09T08:10:16.902798+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255539+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-09T08:10:16.902801+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255544+09:00"
     },
     {
       "id": "0fd1db3a71348ae5",
@@ -195,7 +195,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
-      "fetched_at": "2026-04-09T08:10:16.902804+09:00"
+      "fetched_at": "2026-04-10T08:12:17.255549+09:00"
+    },
+    {
+      "id": "d9713ae4dab66587",
+      "title": "新浜レオンと行く 佐原の町並みスペシャルトレインツアー",
+      "date": "2026-05-10",
+      "location": "",
+      "description": "JR東日本千葉支社は、事前申込制企画「新浜レオンと行く『佐原の町並み』スペシャルトレイン2026」を開催。新浜レオンさんと、209系による貸切列車に乗車する企画。開催日は、2026年5月10日（日）。貸切列車の運転区間は、成田（10:50頃",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
+      "fetched_at": "2026-04-10T08:12:17.255553+09:00"
     }
   ]
 }
