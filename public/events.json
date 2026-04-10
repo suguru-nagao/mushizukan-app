@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-10T08:12:17.255557+09:00",
-  "count": 16,
+  "generated_at": "2026-04-11T08:00:34.149002+09:00",
+  "count": 18,
   "events": [
     {
       "id": "4234c559bf3c5675",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/omiya/20260305_o01.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255449+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148844+09:00"
     },
     {
       "id": "7a9d38dba50d86cc",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000066fx-att/ho5toc00000066g4.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255465+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148872+09:00"
     },
     {
       "id": "08f8e3912e23da1e",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sotetsu.co.jp/news/train/info-train-2026-03-19/",
-      "fetched_at": "2026-04-10T08:12:17.255471+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148882+09:00"
     },
     {
       "id": "fbb8e286e2813d38",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seasideline.co.jp/topics/26022415342578.html",
-      "fetched_at": "2026-04-10T08:12:17.255476+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148889+09:00"
     },
     {
       "id": "c73d5eaf7b9db9ec",
@@ -65,7 +65,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202602_wakatetsu.htm",
-      "fetched_at": "2026-04-10T08:12:17.255481+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148900+09:00"
+    },
+    {
+      "id": "ad83f42021b26513",
+      "title": "西武 ラブライブ蓮ノ空女学院スクールアイドルクラブ ラッピングトレイン 運転",
+      "date": "2026-04-13",
+      "location": "",
+      "description": "西武鉄道は、「ラブライブ！蓮ノ空女学院スクールアイドルクラブ×西武鉄道 #映画蓮ノ空 公開！ 6thライブツアー開催！ 記念キャンペーン」のラッピングトレインを運転。運転期間は、2026年4月13日（月）～7月20日（月・祝）。対象車両は、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260407_lovelive.pdf",
+      "fetched_at": "2026-04-11T08:00:34.148904+09:00"
     },
     {
       "id": "e8193b5e24eda58d",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16143.html",
-      "fetched_at": "2026-04-10T08:12:17.255487+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148922+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255493+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148935+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-10T08:12:17.255503+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148943+09:00"
     },
     {
       "id": "bed7708fb671c0d4",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/ooita/info/__icsFiles/afieldfile/2026/04/03/20260406.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255510+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148949+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-10T08:12:17.255522+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148952+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255529+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148956+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-10T08:12:17.255534+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148959+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-10T08:12:17.255539+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148975+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-10T08:12:17.255544+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148983+09:00"
     },
     {
       "id": "0fd1db3a71348ae5",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255549+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148989+09:00"
     },
     {
       "id": "d9713ae4dab66587",
@@ -208,7 +221,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
-      "fetched_at": "2026-04-10T08:12:17.255553+09:00"
+      "fetched_at": "2026-04-11T08:00:34.148995+09:00"
+    },
+    {
+      "id": "11c699a557716292",
+      "title": "211系 大月夜行",
+      "date": "2026-05-10",
+      "location": "国分寺駅",
+      "description": "JR東日本八王子支社は、事前申込制企画として、「211系大月夜行（新宿経由）」乗車体験イベントを開催。開催日時は、2026年5月10日（日）0:30～4:45。集合場所は国分寺駅みどりの窓口付近で、0:30～1:05に受付。211系6両編成",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/hachioji/20260409_hc01.pdf",
+      "fetched_at": "2026-04-11T08:00:34.149000+09:00"
     }
   ]
 }
