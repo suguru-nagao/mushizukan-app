@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-14T08:30:09.736621+09:00",
-  "count": 23,
+  "generated_at": "2026-04-15T08:30:02.335011+09:00",
+  "count": 24,
   "events": [
     {
       "id": "eea8a03b4d7488f8",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nankai.co.jp/lib/company/news/pdf/260410.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736531+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334917+09:00"
     },
     {
       "id": "e8193b5e24eda58d",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16143.html",
-      "fetched_at": "2026-04-14T08:30:09.736541+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334928+09:00"
     },
     {
       "id": "2021d29c5e949f0d",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/hachioji/20260325_hc01.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736547+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334934+09:00"
     },
     {
       "id": "ea210da0f25912b7",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202604_souya/",
-      "fetched_at": "2026-04-14T08:30:09.736551+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334939+09:00"
     },
     {
       "id": "385662a2a81bad88",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/nighttour_museum.html",
-      "fetched_at": "2026-04-14T08:30:09.736555+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334944+09:00"
     },
     {
       "id": "bcd5576189ef1d4c",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sibatetu.co.jp/news/2026/04/3600.html",
-      "fetched_at": "2026-04-14T08:30:09.736559+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334947+09:00"
     },
     {
       "id": "2fdc535b24243eef",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/67773",
-      "fetched_at": "2026-04-14T08:30:09.736563+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334951+09:00"
     },
     {
       "id": "0c4976f0d0f34ea0",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyu.co.jp/company/information/detail/60556.html",
-      "fetched_at": "2026-04-14T08:30:09.736571+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334959+09:00"
     },
     {
       "id": "e14eb6a0c2a308fd",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260401_hc01.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736575+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334963+09:00"
     },
     {
       "id": "1f5ad780824c8e66",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.nagadenbus.co.jp/news/2026/04/30425.php",
-      "fetched_at": "2026-04-14T08:30:09.736579+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334967+09:00"
     },
     {
       "id": "bed7708fb671c0d4",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/ooita/info/__icsFiles/afieldfile/2026/04/03/20260406.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736582+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334970+09:00"
     },
     {
       "id": "f21a30317dd0eb42",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1181313",
-      "fetched_at": "2026-04-14T08:30:09.736586+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334973+09:00"
     },
     {
       "id": "b6e8d66030fe1559",
@@ -169,7 +169,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736589+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334976+09:00"
+    },
+    {
+      "id": "eee8d7e3013b2354",
+      "title": "養老鉄道 小児無料キャンペーン",
+      "date": "2026-04-29",
+      "location": "",
+      "description": "養老鉄道は、「ようてつ キッズフリーキャンペーン」を開催。開催日は、2026年4月29日（水・祝）、5月5日（火・祝）。大人同伴の場合、小学生運賃が無料。対象路線は、養老鉄道全線。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.yororailway.co.jp/news/3219/",
+      "fetched_at": "2026-04-15T08:30:02.334979+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-14T08:30:09.736592+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334982+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-14T08:30:09.736595+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334985+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-14T08:30:09.736598+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334988+09:00"
     },
     {
       "id": "8eb1654702993ab6",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://mikasa-railway.com/2026/04/10/%e4%b8%89%e7%ac%a0%e9%89%84%e9%81%93%e6%9d%91%e6%98%a5%e7%a5%ad%e3%82%8a%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/",
-      "fetched_at": "2026-04-14T08:30:09.736601+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334991+09:00"
     },
     {
       "id": "6d18ca7426b91dec",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2565",
-      "fetched_at": "2026-04-14T08:30:09.736605+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334995+09:00"
     },
     {
       "id": "0fd1db3a71348ae5",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736608+09:00"
+      "fetched_at": "2026-04-15T08:30:02.334998+09:00"
     },
     {
       "id": "8bec094d1e129c1e",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wakatetsu.co.jp/archives/news/%e8%8b%a5%e6%a1%9c%e9%89%84%e9%81%93%e3%81%93%e3%81%a9%e3%82%82%e3%81%ae%e6%97%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b-3",
-      "fetched_at": "2026-04-14T08:30:09.736611+09:00"
+      "fetched_at": "2026-04-15T08:30:02.335001+09:00"
     },
     {
       "id": "8d0145746de9d2e7",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.yar.co.jp/imgdata/202604101454083.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736613+09:00"
+      "fetched_at": "2026-04-15T08:30:02.335003+09:00"
     },
     {
       "id": "d9713ae4dab66587",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736616+09:00"
+      "fetched_at": "2026-04-15T08:30:02.335006+09:00"
     },
     {
       "id": "11c699a557716292",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260409_hc01.pdf",
-      "fetched_at": "2026-04-14T08:30:09.736619+09:00"
+      "fetched_at": "2026-04-15T08:30:02.335009+09:00"
     }
   ]
 }
