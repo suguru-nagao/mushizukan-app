@@ -1,137 +1,7 @@
 {
-  "generated_at": "2026-04-29T06:52:29.682164+09:00",
-  "count": 27,
+  "generated_at": "2026-04-30T06:55:28.886904+09:00",
+  "count": 22,
   "events": [
-    {
-      "id": "b6e8d66030fe1559",
-      "title": "能勢電鉄 レールウェイフェスティバル2026",
-      "date": "2026-04-29",
-      "location": "10:00～回が日生中央駅",
-      "description": "能勢電鉄は、「のせでんレールウェイフェスティバル2026」を開催。開催日時は、2026年4月29日（水・祝）10:00～15:00。開催場所は、平野車庫。入場無料。洗車体験、模擬運転台の展示、ミニ電車の運転、鉄道部品の展示、グッズ販売などを",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202604031.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682059+09:00"
-    },
-    {
-      "id": "eee8d7e3013b2354",
-      "title": "養老鉄道 小児無料キャンペーン",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "養老鉄道は、「ようてつ キッズフリーキャンペーン」を開催。開催日は、2026年4月29日（水・祝）、5月5日（火・祝）。大人同伴の場合、小学生運賃が無料。対象路線は、養老鉄道全線。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.yororailway.co.jp/news/3219/",
-      "fetched_at": "2026-04-29T06:52:29.682069+09:00"
-    },
-    {
-      "id": "3d0e5c02491962a3",
-      "title": "名鉄 ウマ娘シンデレラグレイ・笠松競馬場 コラボ記念乗車券 発売",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "名古屋鉄道は、アニメ「ウマ娘 シンデレラグレイ」と笠松競馬場のコラボイベント開催にあわせ、記念乗車券を発売。大人用片道乗車券枚とオリジナル封筒のセットで、発売額は820円。発売日時は、2026年4月29日（水・祝）10:00～18:00。発",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.meitetsu.co.jp/plan/event/detail/1285584_8032.html",
-      "fetched_at": "2026-04-29T06:52:29.682073+09:00"
-    },
-    {
-      "id": "d48347e28ef1d773",
-      "title": "東急 こどもの国線 8500系など 臨時列車 運転",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "東急電鉄は、ゴールデンウィークにあわせ、こどもの国線で臨時列車を運転。運転日は、2026年4月29日（水・祝）～5月6日（水・祝）の土休日。運転時間帯は、長津田駅8:18発～17:03発、こどもの国駅8:30発～17:14発。4月29日は2",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tokyu.co.jp/company/information/detail/60911.html",
-      "fetched_at": "2026-04-29T06:52:29.682077+09:00"
-    },
-    {
-      "id": "28ec3ecafce96d38",
-      "title": "さわやかウォーキング 名古屋車両区 公開イベント",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "JR東海とJR貨物は、「さわやかウォーキング」の「名古屋駅開業140周年記念 会いにいこう、安全をつくる車両たちに」コースを開催。開催日は、2026年4月29日（水・祝）。スタート・ゴールは名古屋駅で、スタート受付時間は8:30～12:00",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000044966.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682079+09:00"
-    },
-    {
-      "id": "ede0369c9de49cd0",
-      "title": "府中本町駅 ふるさと納税 子ども向け 駅員体験イベント",
-      "date": "2026-04-29",
-      "location": "府中本町駅",
-      "description": "JR東日本八王子支社は、府中市のふるさと納税返礼品として、「子供向け！府中本町駅員さんのお仕事体験」を開催。開催日は2026年4月29日（水・祝）で、第1回（9:30～11:30）、第2回（13:00～15:00）の2回開催。開催場所は、府",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/hachioji/20260316_hc02.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682082+09:00"
-    },
-    {
-      "id": "c8c453f528358469",
-      "title": "JR東 小千谷発電所 公開イベント",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "JR東日本は、「信濃川河岸段丘ウォーク」の開催にあわせ、小千谷発電所の一般公開イベントを開催。開催日時は、2026年4月29日（水・祝）10:00～15:00（最終入場は14:30）。発電所設備の公開、メンテナンス車両の乗車体験、ミニ新幹線",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/20260324_ho01.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682085+09:00"
-    },
-    {
-      "id": "d21555b3e09aec1f",
-      "title": "九州鉄道記念館 ゴールデンウィークイベント",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "九州鉄道記念館は、ゴールデンウィークイベントを開催。開催日と開催内容は、Nゲージ運転体験・鉄道グッズ販売が2026年4月29日（水・祝）、5月2日（土）～6日（水・祝）の各日、ミニ新幹線運転が5月2日、3日、鉄道本などの「鉄道コレクション」",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.k-rhm.jp/news/detail.php?id=340",
-      "fetched_at": "2026-04-29T06:52:29.682092+09:00"
-    },
-    {
-      "id": "2a0d61ac900d3bdf",
-      "title": "北総鉄道 がんばれパンチ応援乗車券 発売",
-      "date": "2026-04-29",
-      "location": "など",
-      "description": "北総鉄道は、市川市動植物園とのコラボイベント開催を記念して、「#がんばれパンチ 応援乗車券」を発売。台紙一体型の片道乗車券2枚セットで、発売額は1,000円。発売開始日は、2026年4月29日（水・祝）。発売箇所は、北総線各駅（京成高砂駅を",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/station/oomachi/detail/68316",
-      "fetched_at": "2026-04-29T06:52:29.682095+09:00"
-    },
-    {
-      "id": "1b38b359d10c7c23",
-      "title": "2026年4月29日の鉄道イベント",
-      "date": "2026-04-29",
-      "location": "",
-      "description": "銀座線の車両が丸ノ内線を走る！「夢の冒険列車 ルート銀丸」、5月30日に乗車ツアー開催",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/calendar/20260429/",
-      "fetched_at": "2026-04-29T06:52:29.682098+09:00"
-    },
     {
       "id": "fb9679b1e7301c37",
       "title": "2026年4月30日の鉄道イベント",
@@ -143,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20260430/",
-      "fetched_at": "2026-04-29T06:52:29.682102+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886810+09:00"
     },
     {
       "id": "f3d8ec5653ea6637",
@@ -156,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc00000087wm-att/ho5toc00000087wt.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682105+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886822+09:00"
     },
     {
       "id": "13a300840da26eb3",
@@ -169,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/ufile/newsrelease/39_file.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682107+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886828+09:00"
     },
     {
       "id": "a5b336d12534ed38",
@@ -182,7 +52,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260423_KO_mothers-day.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682114+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886832+09:00"
+    },
+    {
+      "id": "2b986b479ae9a455",
+      "title": "神戸建築祭2026 兵庫駅・神戸駅 駅舎見学ツアー",
+      "date": "2026-05-02",
+      "location": "兵庫駅",
+      "description": "日本旅行は、事前申込制ツアー「神戸建築祭 2026 専門ガイドとめぐる神戸の建築美 ～鉄道のスペシャリストが案内するモダン駅舎めぐり～」を開催。開催日は、2026年5月2日（土）。10:00～12:00、13:00～15:00の2回開催。集",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202603_kobekenchikusai_1.htm",
+      "fetched_at": "2026-04-30T06:55:28.886836+09:00"
+    },
+    {
+      "id": "61a549432b9c2404",
+      "title": "E655系 上野～日光間",
+      "date": "2026-05-02",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、E655系「なごみ（和）」による団体臨時列車の乗車ツアーを開催。E655系の運転日は、2026年5月2日（土）。運転区間は、上野（9:25頃発）～日光の片道。乗車には、旅行商品の申込が必要。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0055",
+      "fetched_at": "2026-04-30T06:55:28.886840+09:00"
+    },
+    {
+      "id": "02daa4f7e44cd7a5",
+      "title": "えちごトキめき鉄道 直江津D51レールパーク5周年感謝イベント",
+      "date": "2026-05-02",
+      "location": "",
+      "description": "えちごトキめき鉄道は、「直江津D51レールパーク5周年感謝イベント」を開催。開催日時は、2026年5月2日（土）9:45～15:30。開催場所は、直江津D51レールパーク。高所作業車乗車体験（小学3年生以上）、投排雪保守用車展示、子ども縁日",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2567",
+      "fetched_at": "2026-04-30T06:55:28.886844+09:00"
+    },
+    {
+      "id": "d513397335267e45",
+      "title": "モレラ岐阜 バスフェスタ2026",
+      "date": "2026-05-02",
+      "location": "",
+      "description": "モレラ岐阜と岐阜乗合自動車は、「バスフェスタ2026 inモレラ岐阜」を開催。開催日時は、2026年5月2日（土）10:00～15:00。開催場所は、モレラ岐阜 オレンジゲート東入口前特設会場。バス車両展示、グッズ販売などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "car",
+      "source": "鉄道コム",
+      "url": "https://www.gifubus.co.jp/info/event/post820",
+      "fetched_at": "2026-04-30T06:55:28.886852+09:00"
     },
     {
       "id": "4fcd2b70998aab90",
@@ -195,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-29T06:52:29.682118+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886857+09:00"
     },
     {
       "id": "50b949f559aa0480",
@@ -208,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-04-29T06:52:29.682121+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886861+09:00"
     },
     {
       "id": "e0573609a6529196",
@@ -221,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-04-29T06:52:29.682125+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886864+09:00"
     },
     {
       "id": "8eb1654702993ab6",
@@ -234,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://mikasa-railway.com/2026/04/10/%e4%b8%89%e7%ac%a0%e9%89%84%e9%81%93%e6%9d%91%e6%98%a5%e7%a5%ad%e3%82%8a%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/",
-      "fetched_at": "2026-04-29T06:52:29.682129+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886868+09:00"
     },
     {
       "id": "6d18ca7426b91dec",
@@ -247,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2565",
-      "fetched_at": "2026-04-29T06:52:29.682132+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886872+09:00"
     },
     {
       "id": "97e04d5c6d3d6e24",
@@ -260,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kumamotodentetsu.co.jp/news/202604172440.html",
-      "fetched_at": "2026-04-29T06:52:29.682135+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886875+09:00"
     },
     {
       "id": "0fd1db3a71348ae5",
@@ -273,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682139+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886878+09:00"
     },
     {
       "id": "8bec094d1e129c1e",
@@ -286,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wakatetsu.co.jp/archives/news/%e8%8b%a5%e6%a1%9c%e9%89%84%e9%81%93%e3%81%93%e3%81%a9%e3%82%82%e3%81%ae%e6%97%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b-3",
-      "fetched_at": "2026-04-29T06:52:29.682143+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886881+09:00"
     },
     {
       "id": "8d0145746de9d2e7",
@@ -299,7 +221,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.yar.co.jp/imgdata/202604101454083.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682146+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886884+09:00"
+    },
+    {
+      "id": "9cd8b2e7c84842ae",
+      "title": "埼玉高速鉄道 鳩ヶ谷駅など こどもの日フェスタ2026",
+      "date": "2026-05-05",
+      "location": "19:30まで",
+      "description": "埼玉高速鉄道は、「こどもの日フェスタ2026」を開催。開催日時は、2026年5月5日（火・祝）10:00～15:00（一部会場は19:30まで）。開催場所は、鳩ヶ谷駅、地蔵院、THE BYRD'S STAND。入場無料。ちびっこビンゴ大会、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.s-rail.co.jp/area/event/354.html",
+      "fetched_at": "2026-04-30T06:55:28.886887+09:00"
     },
     {
       "id": "d9713ae4dab66587",
@@ -312,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682150+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886890+09:00"
     },
     {
       "id": "11c699a557716292",
@@ -325,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260409_hc01.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682154+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886897+09:00"
     },
     {
       "id": "55e679485822c456",
@@ -338,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/aaf80c9da2724ea6b4132bff44818174/oshirase_260424-0507_2.pdf",
-      "fetched_at": "2026-04-29T06:52:29.682157+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886899+09:00"
     },
     {
       "id": "d79c2300dcdd1944",
@@ -351,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-04-29T06:52:29.682162+09:00"
+      "fetched_at": "2026-04-30T06:55:28.886902+09:00"
     }
   ]
 }
