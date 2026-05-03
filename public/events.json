@@ -1,137 +1,7 @@
 {
-  "generated_at": "2026-05-03T06:34:26.436700+09:00",
-  "count": 30,
+  "generated_at": "2026-05-04T06:36:39.810879+09:00",
+  "count": 23,
   "events": [
-    {
-      "id": "4fcd2b70998aab90",
-      "title": "伊賀鉄道 伊賀線まつり2026",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "伊賀鉄道、伊賀鉄道友の会は、「伊賀線まつり2026」を開催。開催日時は、2026年5月3日（日・祝）10:00～15:30（最終入場は15:00）。開催場所は、上野市車庫。入場無料。洗車体験、電路作業体験、車両撮影会、ジオラマ展示、三重交通",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-05-03T06:34:26.436539+09:00"
-    },
-    {
-      "id": "50b949f559aa0480",
-      "title": "静岡鉄道 小中校生・大学生向け 電車教室",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "静岡鉄道は、事前申込制イベント「現役運転士企画！静鉄電車教室」を開催。開催日時は、2026年5月3日（日・祝）11:50～17:00。集合・解散は、新静岡駅。長沼営業所にて、出庫点検解説、車内放送・ドア開閉体験、現役運転士との座談会などを実",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-05-03T06:34:26.436550+09:00"
-    },
-    {
-      "id": "e0573609a6529196",
-      "title": "伊賀鉄道 伊賀線電化100周年記念入場券セット 発売",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "伊賀鉄道は、「伊賀線電化100周年記念入場券セット」を発売。硬券入場券5枚と台紙のセットで、発売額は1,100円。2026年5月3日（日・祝）に上野市車庫で開催の「伊賀線まつり2026」にて発売。発売数は300セット限定。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.igatetsu.co.jp/?p=3155",
-      "fetched_at": "2026-05-03T06:34:26.436556+09:00"
-    },
-    {
-      "id": "8eb1654702993ab6",
-      "title": "三笠鉄道村 春祭り",
-      "date": "2026-05-03",
-      "location": "北海道",
-      "description": "三笠鉄道村は、「春の三笠鉄道村まつり」を開催。開催日時は、2026年5月3日（日・祝）～5日（火・祝）の各日9:00～16:00。SL「S-304号」運転席乗車体験（1組3,000円、各日12組限定）、同機けん引による客車の乗車体験（1人3",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://mikasa-railway.com/2026/04/10/%e4%b8%89%e7%ac%a0%e9%89%84%e9%81%93%e6%9d%91%e6%98%a5%e7%a5%ad%e3%82%8a%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/",
-      "fetched_at": "2026-05-03T06:34:26.436561+09:00"
-    },
-    {
-      "id": "6d18ca7426b91dec",
-      "title": "えちごトキめき鉄道 455系・413系新北陸色 夜行列車ツアー",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "えちごトキめき鉄道は、事前申込制企画として、455系・413系による夜行臨時列車の乗車ツアーを運転。出発日は、2026年5月3日（日・祝）。運転区間は、直江津（22:00発）～妙高高原～直江津（翌0:31着、1:20発）～市振～直江津（同4",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2565",
-      "fetched_at": "2026-05-03T06:34:26.436565+09:00"
-    },
-    {
-      "id": "97e04d5c6d3d6e24",
-      "title": "熊本電気鉄道 ゴールデンウィークイベント2026",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "熊本電気鉄道は、「ゴールデンウィークイベント2026」を開催。開催日時は、2026年5月3日（日・祝）9:00～11:30。開催場所は、北熊本駅。入場料は500円（特典つき）。未就学児は無料。入場特典として、オリジナルステッカーをプレゼント",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kumamotodentetsu.co.jp/news/202604172440.html",
-      "fetched_at": "2026-05-03T06:34:26.436568+09:00"
-    },
-    {
-      "id": "f492775b9c8ccfdd",
-      "title": "近鉄 ミッドナイトひのとり",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "近畿日本鉄道は、ツアー企画「ミッドナイトひのとり」を開催。80000系「ひのとり」による団体臨時列車に乗車。ツアー出発日は、2026年5月3日（日・祝）、4日（月・祝）。運転区間は、近鉄名古屋（3日23:30頃発）～大阪難波（4日7:05頃",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/5f4b2cf9567b4e5c8ca52125dd3b8e28/20260313%20midnight-hinotori.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436572+09:00"
-    },
-    {
-      "id": "55c80a44cf61ed05",
-      "title": "郡山駅・郡山貨物ターミナル駅 入換乗車体験・リサーチキャビンなど見学ツアー",
-      "date": "2026-05-03",
-      "location": "郡山駅",
-      "description": "JR東日本、JR貨物、JR東日本びゅうツーリズム＆セールスは、事前申込制企画「JR東日本×JR貨物 郡山鉄道まるごとDAY！」を開催。開催日は2026年5月3日（日・祝）で、9:00頃集合～12:40頃解散、13:15頃集合～17:30頃解",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/sendai/20260330_s01.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436580+09:00"
-    },
-    {
-      "id": "58724c523fb4d67e",
-      "title": "小田急 MSE4両編成 貸切乗車・開成車庫撮影会ツアー",
-      "date": "2026-05-03",
-      "location": "開成車庫",
-      "description": "小田急電鉄は、事前申込制企画として、MSE4両編成による貸切列車の乗車ツアーを開催。開催日は、2026年5月3日（日・祝）。片瀬江ノ島駅改札前にて、10:40に集合。60000形「MSE」4両編成による貸切列車に乗車。乗車区間は、片瀬江ノ島",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.odakyu-travel.co.jp/special/oer/2026goldenweek_mse.html",
-      "fetched_at": "2026-05-03T06:34:26.436585+09:00"
-    },
-    {
-      "id": "c74d9a1fe9bdee1f",
-      "title": "静岡鉄道 小中高生・大学生向け 電車教室 開催",
-      "date": "2026-05-03",
-      "location": "",
-      "description": "静岡鉄道は、事前申込制イベント「現役運転士企画！静鉄電車教室」を開催。開催日時は、2026年5月3日（日・祝）11:50～17:00。集合・解散は、新静岡駅。長沼営業所にて、出庫点検解説、車内放送・ドア開閉体験、現役運転士との座談会などを実",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://train.shizutetsu.co.jp/news/20260403/6346",
-      "fetched_at": "2026-05-03T06:34:26.436588+09:00"
-    },
     {
       "id": "7143535a48cf9b61",
       "title": "小田急 ロマンスカーミュージアム・もころん号 貸切ツアー",
@@ -143,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/2026goldenweek_mokoron01.html",
-      "fetched_at": "2026-05-03T06:34:26.436591+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810783+09:00"
     },
     {
       "id": "693abac64d879757",
@@ -156,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/natsuyasumi_oshigototaiken.html",
-      "fetched_at": "2026-05-03T06:34:26.436594+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810794+09:00"
     },
     {
       "id": "d349458665e9e28b",
@@ -169,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=585",
-      "fetched_at": "2026-05-03T06:34:26.436601+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810800+09:00"
     },
     {
       "id": "8d3430584c1b0c51",
@@ -182,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.aketetsu.co.jp/event/%e3%82%ad%e3%83%83%e3%82%ba%e9%81%8b%e8%bb%a2%e5%a3%ab%e4%bd%93%e9%a8%93%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/",
-      "fetched_at": "2026-05-03T06:34:26.436604+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810804+09:00"
     },
     {
       "id": "0fd1db3a71348ae5",
@@ -195,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260407_01.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436607+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810808+09:00"
     },
     {
       "id": "8bec094d1e129c1e",
@@ -208,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wakatetsu.co.jp/archives/news/%e8%8b%a5%e6%a1%9c%e9%89%84%e9%81%93%e3%81%93%e3%81%a9%e3%82%82%e3%81%ae%e6%97%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b-3",
-      "fetched_at": "2026-05-03T06:34:26.436609+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810812+09:00"
     },
     {
       "id": "8d0145746de9d2e7",
@@ -221,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.yar.co.jp/imgdata/202604101454083.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436612+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810816+09:00"
     },
     {
       "id": "9cd8b2e7c84842ae",
@@ -234,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.s-rail.co.jp/area/event/354.html",
-      "fetched_at": "2026-05-03T06:34:26.436615+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810824+09:00"
     },
     {
       "id": "897823ff7b914336",
@@ -247,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0090",
-      "fetched_at": "2026-05-03T06:34:26.436618+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810829+09:00"
     },
     {
       "id": "8489117e5e01c3d7",
@@ -260,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260505/",
-      "fetched_at": "2026-05-03T06:34:26.436621+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810832+09:00"
     },
     {
       "id": "b67ce6e3250b8987",
@@ -273,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shonan-monorail.co.jp/news/2026/04/20265555.html",
-      "fetched_at": "2026-05-03T06:34:26.436624+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810836+09:00"
     },
     {
       "id": "42d54e4aa8dc4a76",
@@ -286,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aizutetsudo.jp/news/5%e6%9c%885%e6%97%a5%ef%bc%88%e7%a5%9d%e3%83%bb%e7%81%ab%ef%bc%89%e3%80%8c%e3%81%93%e3%81%a9%e3%82%82%e3%81%ae%e6%97%a5%e5%89%b2%e5%bc%95%e3%80%8d%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/",
-      "fetched_at": "2026-05-03T06:34:26.436627+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810839+09:00"
     },
     {
       "id": "a0f8ed8c08134db8",
@@ -299,7 +169,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/sunzudaiyu/sunzudaiyu-info/p010216.html",
-      "fetched_at": "2026-05-03T06:34:26.436655+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810843+09:00"
+    },
+    {
+      "id": "b0ac9122b3c2b156",
+      "title": "伊豆急行 E257系 灯りの熱川列車旅",
+      "date": "2026-05-09",
+      "location": "",
+      "description": "伊豆急行は、ツアー企画「灯りの熱川列車旅」を開催。小田原～伊東～伊豆熱川間で、団体臨時列車を運転。旅行日は、2026年5月9日（土）の日帰り。E257系による団体臨時列車に乗車。運転区間は、小田原（15:54頃発）～伊豆熱川（17:25頃着",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=423116",
+      "fetched_at": "2026-05-04T06:36:39.810846+09:00"
+    },
+    {
+      "id": "dc39b30ca1ba9e92",
+      "title": "豊橋鉄道 3203号 復刻デザインラッピング 記念撮影会",
+      "date": "2026-05-09",
+      "location": "",
+      "description": "豊橋鉄道は、市内線3203号による復刻ラッピング車両の「記念撮影会」を開催。開催日時は、2026年5月9日（土）8:00～12:00。開催場所は、赤岩口車庫。入場には、「市内線開業100周年記念 平日昼間・土休日フリー乗車券セット」「市内線",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.toyotetsu.com/ufile/newsrelease/40_file.pdf",
+      "fetched_at": "2026-05-04T06:36:39.810850+09:00"
+    },
+    {
+      "id": "d0183f68fc762e44",
+      "title": "ひなび 新津～秋田間 SAKE TRIPツアー",
+      "date": "2026-05-09",
+      "location": "",
+      "description": "JR東日本秋田支社、JR東日本びゅうツーリズム＆セールスは、ツアー企画「観光列車『ひなび（陽旅）』でいくSAKE TRIP」を開催。旅行日は、2026年5月9日（土）の日帰り。「ひなび（陽旅）」による団体臨時列車に乗車。運転区間は、新津（1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2025/akita/20260303_a01.pdf",
+      "fetched_at": "2026-05-04T06:36:39.810853+09:00"
     },
     {
       "id": "d9713ae4dab66587",
@@ -312,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436663+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810856+09:00"
     },
     {
       "id": "11c699a557716292",
@@ -325,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260409_hc01.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436669+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810859+09:00"
     },
     {
       "id": "45ce893172653cd2",
@@ -338,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokutetsu.co.jp/news/news-11036/",
-      "fetched_at": "2026-05-03T06:34:26.436676+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810863+09:00"
     },
     {
       "id": "2cbee8e967b7bfd8",
@@ -351,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/27/items/260427_00_press_115keiGhensei_tenji.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436681+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810866+09:00"
     },
     {
       "id": "55e679485822c456",
@@ -364,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/aaf80c9da2724ea6b4132bff44818174/oshirase_260424-0507_2.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436688+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810870+09:00"
     },
     {
       "id": "d79c2300dcdd1944",
@@ -377,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-05-03T06:34:26.436694+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810873+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -390,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-03T06:34:26.436698+09:00"
+      "fetched_at": "2026-05-04T06:36:39.810877+09:00"
     }
   ]
 }
