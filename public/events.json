@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-05-10T06:37:49.210215+09:00",
+  "generated_at": "2026-05-11T06:41:41.677998+09:00",
   "count": 16,
   "events": [
-    {
-      "id": "d9713ae4dab66587",
-      "title": "新浜レオンと行く 佐原の町並みスペシャルトレインツアー",
-      "date": "2026-05-10",
-      "location": "",
-      "description": "JR東日本千葉支社は、事前申込制企画「新浜レオンと行く『佐原の町並み』スペシャルトレイン2026」を開催。新浜レオンさんと、209系による貸切列車に乗車する企画。開催日は、2026年5月10日（日）。貸切列車の運転区間は、成田（10:50頃",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/chiba/20260330_c01.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210145+09:00"
-    },
-    {
-      "id": "11c699a557716292",
-      "title": "211系 大月夜行",
-      "date": "2026-05-10",
-      "location": "国分寺駅",
-      "description": "JR東日本八王子支社は、事前申込制企画として、「211系大月夜行（新宿経由）」乗車体験イベントを開催。開催日時は、2026年5月10日（日）0:30～4:45。集合場所は国分寺駅みどりの窓口付近で、0:30～1:05に受付。211系6両編成",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/hachioji/20260409_hc01.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210156+09:00"
-    },
-    {
-      "id": "45ce893172653cd2",
-      "title": "北陸鉄道 あさでんまつり",
-      "date": "2026-05-10",
-      "location": "",
-      "description": "北陸鉄道は、「ほくてつあさでんまつり」を開催。開催日時は、2026年5月10日（日）10:30～14:30。開催場所は、浅野川線内灘駅構内。03系の展示、運転士なりきり体験、運転室乗車体験、電車線設備や電話機の展示、レール締結体験、レールス",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokutetsu.co.jp/news/news-11036/",
-      "fetched_at": "2026-05-10T06:37:49.210161+09:00"
-    },
-    {
-      "id": "39db77dfee4f589e",
-      "title": "山電 5000系5000号 リニューアル前撮影会",
-      "date": "2026-05-10",
-      "location": "",
-      "description": "日本旅行は、山陽電気鉄道5000系5000号のリニューアルを前に、事前申込制企画「『I’ll be back 5000』車庫見学ツアー in 東二見 日帰り」を開催。開催日は2026年5月10日（日）で、午前の部（9:30～11:30）、午",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/202604_sanyo5000/",
-      "fetched_at": "2026-05-10T06:37:49.210165+09:00"
-    },
-    {
-      "id": "8ab5b7b66e42bda8",
-      "title": "碓氷峠鉄道文化むら EF63形運転室など 乗車体験イベント",
-      "date": "2026-05-10",
-      "location": "",
-      "description": "碓氷峠鉄道文化むらは、事前申込制企画として、EF63形の運転室・車掌車乗車体験イベントを開催。開催日は2026年5月10日（日）で、開催時間は9:20開始から15:40開始まで、計17回開催。参加費（4歳以上同額、入館料別途）は、運転室乗車",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.usuitouge.com/bunkamura/events/2781/",
-      "fetched_at": "2026-05-10T06:37:49.210169+09:00"
-    },
-    {
-      "id": "b8f05262f925bc4e",
-      "title": "近鉄 東大阪市民ふれあい祭り記念入場券 発売",
-      "date": "2026-05-10",
-      "location": "",
-      "description": "近畿日本鉄道は、「第47回東大阪市民ふれあい祭り開催記念入場券」を発売。布施、河内永和、河内小阪、八戸ノ里の各駅入場券と台紙のセットで、発売額は720円。発売期間は、2026年5月10日（日）～31日（日）。発売箇所は、布施駅駅長室。10日",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/e6eeaffe381f426686a8f79f7d310a6a/oshirase_260503-0524.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210172+09:00"
-    },
     {
       "id": "2cbee8e967b7bfd8",
       "title": "京都鉄道博物館 115系G編成 特別展示",
@@ -91,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/27/items/260427_00_press_115keiGhensei_tenji.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210176+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677894+09:00"
     },
     {
       "id": "55e679485822c456",
@@ -104,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/aaf80c9da2724ea6b4132bff44818174/oshirase_260424-0507_2.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210185+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677908+09:00"
     },
     {
       "id": "b16fdcdde8e7b5de",
@@ -117,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0066",
-      "fetched_at": "2026-05-10T06:37:49.210190+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677917+09:00"
     },
     {
       "id": "c43afa6cfc5a1389",
@@ -130,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85166ain-b432.html",
-      "fetched_at": "2026-05-10T06:37:49.210194+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677923+09:00"
     },
     {
       "id": "fc541f6b2639b07c",
@@ -143,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260410_ni01.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210197+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677929+09:00"
     },
     {
       "id": "9e185f5af257efdc",
@@ -156,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/27/items/260427_00_press_115keiGhensei_tenji.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210200+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677935+09:00"
     },
     {
       "id": "d32e38aaca4b168f",
@@ -169,7 +91,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://minaterrace.jp/event/3339",
-      "fetched_at": "2026-05-10T06:37:49.210204+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677941+09:00"
+    },
+    {
+      "id": "b10063c459f10f54",
+      "title": "秩父鉄道 第2回 5000系装飾変更記念撮影会",
+      "date": "2026-05-16",
+      "location": "東京都",
+      "description": "秩父鉄道は、事前申込制イベント「第2回 5000系電車装飾変更記念撮影会」を開催。開催日は2026年5月16日（土）で、12:00～13:30、14:00～15:30の2回開催。開催場所は、広瀬川原車両基地。5000系5001号～5003号",
+      "prefecture": "東京都",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.chichibu-railway.co.jp/blog/news/ec5000_photo/",
+      "fetched_at": "2026-05-11T06:41:41.677952+09:00"
+    },
+    {
+      "id": "8f432cef94c80a4c",
+      "title": "湘南モノレール 全線走破・車両基地見学ツアー",
+      "date": "2026-05-16",
+      "location": "",
+      "description": "湘南モノレールとローソンエンタテインメントは、事前申込制ツアー企画「湘南モノレールの裏側へ大冒険！ 社員同行ランチと限定トーク×初の乗換体験×車両基地見学×車庫線特別乗車」を開催。旅行日は、2026年5月16日（土）の日帰り。集合場所（時間",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shonan-monorail.co.jp/news/2026/04/46-1200.html",
+      "fetched_at": "2026-05-11T06:41:41.677959+09:00"
     },
     {
       "id": "d79c2300dcdd1944",
@@ -182,7 +130,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-05-10T06:37:49.210207+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677967+09:00"
+    },
+    {
+      "id": "72c519bbe5dc3528",
+      "title": "E257系 品川～静岡間 グランシップトレンフェスタ号",
+      "date": "2026-05-17",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、団体臨時列車「グランシップトレンフェスタ号」の乗車ツアーを開催。旅行日は、2026年5月17日（日）の日帰り。団体臨時列車の運転区間は、品川（7:23発）～静岡（10:16着）、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0070",
+      "fetched_at": "2026-05-11T06:41:41.677974+09:00"
+    },
+    {
+      "id": "bca279e1a10f923b",
+      "title": "さわやかウォーキング 静岡車両区・静岡貨物駅 公開イベント",
+      "date": "2026-05-17",
+      "location": "静岡貨物駅",
+      "description": "JR東海は、「グランシップトレインフェスタ2026」開催にあわせ、さわやかウォーキング「鉄道とはたらくクルマの世界をめぐる満喫旅！」コースを開催。開催日は、2026年5月17日（日）。スタート・ゴールは東静岡駅。スタート受付時間は8:30～",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://walking.jr-central.co.jp/course/detail/2688.html",
+      "fetched_at": "2026-05-11T06:41:41.677981+09:00"
+    },
+    {
+      "id": "16e684174b5778ff",
+      "title": "近鉄 古市車庫 6A系 有料試乗会ツアー",
+      "date": "2026-05-17",
+      "location": "古市車庫",
+      "description": "近畿日本鉄道は、ツアー企画として、新型車両6A系の有料試乗会を開催。開催日は、2026年5月17日（日）。6A系の乗車区間は、Aコースが大阪阿部野橋（9:30発）～近鉄御所（10:16着）、Bコースが近鉄御所（10:46発）～大阪阿部野橋（",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85176a-9588.html",
+      "fetched_at": "2026-05-11T06:41:41.677986+09:00"
+    },
+    {
+      "id": "ac089a1aa40c26d4",
+      "title": "北総鉄道 市川市動植物園 コラボイベント",
+      "date": "2026-05-17",
+      "location": "",
+      "description": "北総鉄道は、「市川市動植物園×北総鉄道 コラボまつり」を開催。開催日時は、2026年5月17日（日）10:00～15:00。開催場所は、市川市動植物園。コラボスタンプラリー、グッズ販売、コラボ缶バッジ制作体験（先着300人）、駅長との制服撮",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokuso-railway.co.jp/station/oomachi/detail/53152",
+      "fetched_at": "2026-05-11T06:41:41.677990+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210210+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677993+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-10T06:37:49.210213+09:00"
+      "fetched_at": "2026-05-11T06:41:41.677996+09:00"
     }
   ]
 }
