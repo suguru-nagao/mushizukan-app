@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-15T07:04:27.202276+09:00",
-  "count": 17,
+  "generated_at": "2026-05-16T06:54:11.071678+09:00",
+  "count": 19,
   "events": [
     {
       "id": "55e679485822c456",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/aaf80c9da2724ea6b4132bff44818174/oshirase_260424-0507_2.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202198+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071597+09:00"
     },
     {
       "id": "b16fdcdde8e7b5de",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0066",
-      "fetched_at": "2026-05-15T07:04:27.202216+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071608+09:00"
     },
     {
       "id": "c43afa6cfc5a1389",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85166ain-b432.html",
-      "fetched_at": "2026-05-15T07:04:27.202222+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071613+09:00"
     },
     {
       "id": "fc541f6b2639b07c",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260410_ni01.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202226+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071618+09:00"
     },
     {
       "id": "9e185f5af257efdc",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/27/items/260427_00_press_115keiGhensei_tenji.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202230+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071622+09:00"
     },
     {
       "id": "d32e38aaca4b168f",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://minaterrace.jp/event/3339",
-      "fetched_at": "2026-05-15T07:04:27.202233+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071625+09:00"
     },
     {
       "id": "b10063c459f10f54",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/ec5000_photo/",
-      "fetched_at": "2026-05-15T07:04:27.202237+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071629+09:00"
     },
     {
       "id": "8f432cef94c80a4c",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shonan-monorail.co.jp/news/2026/04/46-1200.html",
-      "fetched_at": "2026-05-15T07:04:27.202245+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071638+09:00"
     },
     {
       "id": "d79c2300dcdd1944",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-05-15T07:04:27.202249+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071642+09:00"
     },
     {
       "id": "72c519bbe5dc3528",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0070",
-      "fetched_at": "2026-05-15T07:04:27.202253+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071647+09:00"
     },
     {
       "id": "bca279e1a10f923b",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://walking.jr-central.co.jp/course/detail/2688.html",
-      "fetched_at": "2026-05-15T07:04:27.202256+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071650+09:00"
     },
     {
       "id": "16e684174b5778ff",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85176a-9588.html",
-      "fetched_at": "2026-05-15T07:04:27.202259+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071653+09:00"
     },
     {
       "id": "ac089a1aa40c26d4",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/station/oomachi/detail/53152",
-      "fetched_at": "2026-05-15T07:04:27.202262+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071656+09:00"
     },
     {
       "id": "0b122ccca035e186",
@@ -182,7 +182,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/25fc2b61524f4122826dd797be961d88/oshirase_260402-0506.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202266+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071659+09:00"
+    },
+    {
+      "id": "410ec4d02f6e6b89",
+      "title": "崎陽軒 京急ファミリーフェスタ記念弁当 販売",
+      "date": "2026-05-17",
+      "location": "",
+      "description": "崎陽軒は、「京急ファミリー鉄道フェスタ2026記念弁当」を販売。「けいきゅん」や、京浜急行電鉄の電車をデザインした限定パッケージ。販売日は、2026年5月17日（日）。販売箇所は、「京急ファミリー鉄道フェスタ2026」会場、京急線の横浜、京",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tetsudo.com/event/59939/",
+      "fetched_at": "2026-05-16T06:54:11.071663+09:00"
+    },
+    {
+      "id": "3121b261fd6824f6",
+      "title": "道南いさりび鉄道 乗って食べて いさ鉄大感謝祭",
+      "date": "2026-05-23",
+      "location": "北海道",
+      "description": "道南いさりび鉄道は、「乗って！食べて！いさ鉄大感謝祭」を開催。開催日時は、2026年5月23日（土）10:00～16:00。自動バイ乗車体験（小学生以下限定、抽選制）、運転席乗車体験（抽選制）、鉄道制服撮影会、JR北海道函館支社の利用促進展",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
+      "fetched_at": "2026-05-16T06:54:11.071667+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -195,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202269+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071670+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -208,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202272+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071673+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -221,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-15T07:04:27.202274+09:00"
+      "fetched_at": "2026-05-16T06:54:11.071676+09:00"
     }
   ]
 }
