@@ -1,111 +1,7 @@
 {
-  "generated_at": "2026-05-16T06:54:11.071678+09:00",
-  "count": 19,
+  "generated_at": "2026-05-17T06:42:53.871467+09:00",
+  "count": 17,
   "events": [
-    {
-      "id": "55e679485822c456",
-      "title": "近鉄 古市駅 6A系運行開始記念入場券セット 発売",
-      "date": "2026-05-16",
-      "location": "古市駅",
-      "description": "近畿日本鉄道は、古市駅で、6A系運行開始記念商品として、記念入場券10駅セットを発売。発売額は1,800円。発売期間は、2026年5月16日（土）9:30～6月30日（火）。発売箇所は、古市駅特急券窓口。発売数は300セット限定。記念乗車券",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/aaf80c9da2724ea6b4132bff44818174/oshirase_260424-0507_2.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071597+09:00"
-    },
-    {
-      "id": "b16fdcdde8e7b5de",
-      "title": "まんぷくトレイン神奈川",
-      "date": "2026-05-16",
-      "location": "神奈川県",
-      "description": "JR東日本びゅうツーリズム＆セールスは、団体臨時列車「まんぷくトレイン神奈川」の乗車ツアーを開催。開催日は、2026年5月16日（土）。団体臨時列車の乗車区間は、大宮（9:20～9:50発）～東京～根府川～横浜（14:00～14:30着）。",
-      "prefecture": "神奈川県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0066",
-      "fetched_at": "2026-05-16T06:54:11.071608+09:00"
-    },
-    {
-      "id": "c43afa6cfc5a1389",
-      "title": "近鉄 古市車庫 6A系撮影会ツアー",
-      "date": "2026-05-16",
-      "location": "古市車庫",
-      "description": "近畿日本鉄道は、ツアー企画として、新型車両6A系の有料撮影会を開催。開催日は2026年5月16日（土）で、10:00～、12:30～、15:30～の3回開催。開催場所は、古市車庫。現地集合・解散撮影時間は約60分。旅行代金は、大阪阿部野橋駅",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85166ain-b432.html",
-      "fetched_at": "2026-05-16T06:54:11.071613+09:00"
-    },
-    {
-      "id": "fc541f6b2639b07c",
-      "title": "新津駅 SLばんえつ物語 入換作業体験乗車イベント",
-      "date": "2026-05-16",
-      "location": "新津駅",
-      "description": "JR東日本新潟支社は、事前申込制企画として、「SLばんえつ物語 入換作業見学会」を開催。開催日時は、2026年5月16日（土）、23日（土）、6月13日（土）の各8:00～9:40。開催場所は、新津駅構内。「SLばんえつ物語」車両1号車「オ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/niigata/20260410_ni01.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071618+09:00"
-    },
-    {
-      "id": "9e185f5af257efdc",
-      "title": "京都鉄道博物館 115系G編成 有料解説イベント",
-      "date": "2026-05-16",
-      "location": "京都鉄道博物館",
-      "description": "京都鉄道博物館は、115系G編成の特別展示にあわせ、事前申込制企画として、検修社員による有料解説イベントを開催。開催日は2026年5月16日（土）、17日（日）で、各日11:00～、14:00～の2回開催。参加には、専用の入館券の購入が必要",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/2026/04/27/items/260427_00_press_115keiGhensei_tenji.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071622+09:00"
-    },
-    {
-      "id": "d32e38aaca4b168f",
-      "title": "ミナテラスとちぎ 親子トレインワークショップ",
-      "date": "2026-05-16",
-      "location": "",
-      "description": "栃木トヨタ自動車は、「第2回 親子で愉しむ！ トレインワークショップ」を開催。開催日時は、2026年5月16日（土）、17日（日）の各日10:00-15:00。開催場所は、ミナテラスとちぎ。JR東日本グループ、東武鉄道、真岡鐵道、野岩鉄道、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://minaterrace.jp/event/3339",
-      "fetched_at": "2026-05-16T06:54:11.071625+09:00"
-    },
-    {
-      "id": "b10063c459f10f54",
-      "title": "秩父鉄道 第2回 5000系装飾変更記念撮影会",
-      "date": "2026-05-16",
-      "location": "東京都",
-      "description": "秩父鉄道は、事前申込制イベント「第2回 5000系電車装飾変更記念撮影会」を開催。開催日は2026年5月16日（土）で、12:00～13:30、14:00～15:30の2回開催。開催場所は、広瀬川原車両基地。5000系5001号～5003号",
-      "prefecture": "東京都",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.chichibu-railway.co.jp/blog/news/ec5000_photo/",
-      "fetched_at": "2026-05-16T06:54:11.071629+09:00"
-    },
-    {
-      "id": "8f432cef94c80a4c",
-      "title": "湘南モノレール 全線走破・車両基地見学ツアー",
-      "date": "2026-05-16",
-      "location": "",
-      "description": "湘南モノレールとローソンエンタテインメントは、事前申込制ツアー企画「湘南モノレールの裏側へ大冒険！ 社員同行ランチと限定トーク×初の乗換体験×車両基地見学×車庫線特別乗車」を開催。旅行日は、2026年5月16日（土）の日帰り。集合場所（時間",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.shonan-monorail.co.jp/news/2026/04/46-1200.html",
-      "fetched_at": "2026-05-16T06:54:11.071638+09:00"
-    },
     {
       "id": "d79c2300dcdd1944",
       "title": "京急 親子向け ファミリー鉄道フェスタ2026",
@@ -117,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-05-16T06:54:11.071642+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871391+09:00"
     },
     {
       "id": "72c519bbe5dc3528",
@@ -130,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0070",
-      "fetched_at": "2026-05-16T06:54:11.071647+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871403+09:00"
     },
     {
       "id": "bca279e1a10f923b",
@@ -143,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://walking.jr-central.co.jp/course/detail/2688.html",
-      "fetched_at": "2026-05-16T06:54:11.071650+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871408+09:00"
     },
     {
       "id": "16e684174b5778ff",
@@ -156,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85176a-9588.html",
-      "fetched_at": "2026-05-16T06:54:11.071653+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871412+09:00"
     },
     {
       "id": "ac089a1aa40c26d4",
@@ -169,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/station/oomachi/detail/53152",
-      "fetched_at": "2026-05-16T06:54:11.071656+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871416+09:00"
     },
     {
       "id": "0b122ccca035e186",
@@ -182,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/25fc2b61524f4122826dd797be961d88/oshirase_260402-0506.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071659+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871420+09:00"
     },
     {
       "id": "410ec4d02f6e6b89",
@@ -195,7 +91,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/59939/",
-      "fetched_at": "2026-05-16T06:54:11.071663+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871423+09:00"
+    },
+    {
+      "id": "950231ba72cfe56b",
+      "title": "新山口支所 SLやまぐち号 バックヤード見学・体験ツアー",
+      "date": "2026-05-22",
+      "location": "",
+      "description": "JR西日本は、事前申込制企画「SLやまぐち号 特別体験ツアー」を開催。開催日時は、2026年5月22日（金）、6月12日（金）、19日（金）。開催場所は、下関総合車両所新山口支所。車庫内での「SLやまぐち」号見学、汽笛体験（人数限定）、投炭",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.westjr.co.jp/press/article/2026/04/01/items/260401_00_press_slyamaguchigou.pdf",
+      "fetched_at": "2026-05-17T06:42:53.871432+09:00"
     },
     {
       "id": "3121b261fd6824f6",
@@ -208,7 +117,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071667+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871438+09:00"
+    },
+    {
+      "id": "a75a6d5912382e42",
+      "title": "WEST EXPRESS 銀河 大阪～城崎温泉間",
+      "date": "2026-05-23",
+      "location": "",
+      "description": "日本旅行は、事前申込制ツアーとして、「WEST EXPRESS 銀河で行く 城崎温泉」を開催。出発日は、2026年5月23日（土）。「WEST EXPRESS 銀河」による団体臨時列車に乗車。乗車区間は、大阪（11:30頃発）～城崎温泉（1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_kinoginga/",
+      "fetched_at": "2026-05-17T06:42:53.871442+09:00"
+    },
+    {
+      "id": "1bab5721a1452df6",
+      "title": "名鉄沿線ハイキング JR貨物愛知機関区 公開イベント",
+      "date": "2026-05-23",
+      "location": "国府宮駅",
+      "description": "名古屋鉄道は、「名鉄沿線ハイキング」の「JR貨物愛知機関区で機関車等を見学するコース」を開催。開催日は、2026年5月23日（土）。スタート受付場所は国府宮駅で、8:30～11:00に受付。国府宮神社、JR貨物の愛知機関区などをウォーキング",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.meitetsu.co.jp/hiking/railroad/detail/data1/1287431_8044.html",
+      "fetched_at": "2026-05-17T06:42:53.871445+09:00"
+    },
+    {
+      "id": "dd3c74b6a7b7781d",
+      "title": "御岳登山鉄道 ケーブルカーバックヤードツアー",
+      "date": "2026-05-23",
+      "location": "滝本駅",
+      "description": "御岳登山鉄道は、事前申込制企画「御岳山ケーブルカーバックヤードツアー」を開催。開催日は、2026年5月23日（土）。集合場所は滝本駅で、9:30集合。ケーブルカー巻上場・運転室見学、発車・到着風景見学、工事用臨時ケーブルカー乗車体験、ケーブ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.mitaketozan.co.jp/infomation/release_2026_03_31.pdf",
+      "fetched_at": "2026-05-17T06:42:53.871449+09:00"
+    },
+    {
+      "id": "9114d6193041c7a4",
+      "title": "京都鉄道博物館 保存車両・扇形車庫見学ツアー",
+      "date": "2026-05-23",
+      "location": "京都鉄道博物館",
+      "description": "日本旅行は、事前申込制ツアーとして、「京都鉄道博物館『学芸員の解説でめぐる保存車両と重要文化財・扇形車庫ツアー』」を開催。開催日は、2026年5月23日（土）、31日（日）の各日日帰り。集合場所は、京都鉄道博物館 エントランス団体ゲート。各",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202605_tetsuhaku.htm",
+      "fetched_at": "2026-05-17T06:42:53.871452+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -221,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071670+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871455+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -234,7 +195,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071673+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871459+09:00"
+    },
+    {
+      "id": "3070c32783e922a5",
+      "title": "鹿児島市 親子向け レトロ電車乗車ツアー",
+      "date": "2026-06-07",
+      "location": "",
+      "description": "鹿児島市交通局は、事前申込制企画として、「路面電車の日レトロ電車『かごでん』ツアー」を開催。開催日は2026年6月7日（日）で、10:30～12:30、14:30～16:30の2回開催。集合・解散場所は、鹿児島中央駅前停留場。「かごでん」の",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
+      "fetched_at": "2026-05-17T06:42:53.871462+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -247,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-16T06:54:11.071676+09:00"
+      "fetched_at": "2026-05-17T06:42:53.871465+09:00"
     }
   ]
 }
