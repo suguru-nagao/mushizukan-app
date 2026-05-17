@@ -1,98 +1,7 @@
 {
-  "generated_at": "2026-05-17T06:42:53.871467+09:00",
-  "count": 17,
+  "generated_at": "2026-05-18T06:48:38.536871+09:00",
+  "count": 12,
   "events": [
-    {
-      "id": "d79c2300dcdd1944",
-      "title": "京急 親子向け ファミリー鉄道フェスタ2026",
-      "date": "2026-05-17",
-      "location": "入場には",
-      "description": "京浜急行電鉄は、「京急ファミリー鉄道フェスタ2026」を開催。開催日時は、2026年5月17日（日）9:40～16:00。開催場所は、久里浜工場。入場無料。京成車を含む車両展示、旧1000形の展示、デ1形・デ51形の公開、バス車両、特殊車両",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keikyu.co.jp/company/news/2025/20260317HP_25203RK.html",
-      "fetched_at": "2026-05-17T06:42:53.871391+09:00"
-    },
-    {
-      "id": "72c519bbe5dc3528",
-      "title": "E257系 品川～静岡間 グランシップトレンフェスタ号",
-      "date": "2026-05-17",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、団体臨時列車「グランシップトレンフェスタ号」の乗車ツアーを開催。旅行日は、2026年5月17日（日）の日帰り。団体臨時列車の運転区間は、品川（7:23発）～静岡（10:16着）、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0070",
-      "fetched_at": "2026-05-17T06:42:53.871403+09:00"
-    },
-    {
-      "id": "bca279e1a10f923b",
-      "title": "さわやかウォーキング 静岡車両区・静岡貨物駅 公開イベント",
-      "date": "2026-05-17",
-      "location": "静岡貨物駅",
-      "description": "JR東海は、「グランシップトレインフェスタ2026」開催にあわせ、さわやかウォーキング「鉄道とはたらくクルマの世界をめぐる満喫旅！」コースを開催。開催日は、2026年5月17日（日）。スタート・ゴールは東静岡駅。スタート受付時間は8:30～",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://walking.jr-central.co.jp/course/detail/2688.html",
-      "fetched_at": "2026-05-17T06:42:53.871408+09:00"
-    },
-    {
-      "id": "16e684174b5778ff",
-      "title": "近鉄 古市車庫 6A系 有料試乗会ツアー",
-      "date": "2026-05-17",
-      "location": "古市車庫",
-      "description": "近畿日本鉄道は、ツアー企画として、新型車両6A系の有料試乗会を開催。開催日は、2026年5月17日（日）。6A系の乗車区間は、Aコースが大阪阿部野橋（9:30発）～近鉄御所（10:16着）、Bコースが近鉄御所（10:46発）～大阪阿部野橋（",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/2026/03/85176a-9588.html",
-      "fetched_at": "2026-05-17T06:42:53.871412+09:00"
-    },
-    {
-      "id": "ac089a1aa40c26d4",
-      "title": "北総鉄道 市川市動植物園 コラボイベント",
-      "date": "2026-05-17",
-      "location": "",
-      "description": "北総鉄道は、「市川市動植物園×北総鉄道 コラボまつり」を開催。開催日時は、2026年5月17日（日）10:00～15:00。開催場所は、市川市動植物園。コラボスタンプラリー、グッズ販売、コラボ缶バッジ制作体験（先着300人）、駅長との制服撮",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/station/oomachi/detail/53152",
-      "fetched_at": "2026-05-17T06:42:53.871416+09:00"
-    },
-    {
-      "id": "0b122ccca035e186",
-      "title": "近鉄 富吉車庫 L/Cカー3形式 撮影会ツアー",
-      "date": "2026-05-17",
-      "location": "富吉車庫",
-      "description": "近畿日本鉄道は、事前申込制ツアー企画として、富吉車庫の撮影会を開催。開催日は2026年5月17日（日）で、10:00～12:00、13:00～15:00の2回開催。開催場所は、富吉車庫。各回とも、富吉駅にて集合・解散。車庫内にて、5800系",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/25fc2b61524f4122826dd797be961d88/oshirase_260402-0506.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871420+09:00"
-    },
-    {
-      "id": "410ec4d02f6e6b89",
-      "title": "崎陽軒 京急ファミリーフェスタ記念弁当 販売",
-      "date": "2026-05-17",
-      "location": "",
-      "description": "崎陽軒は、「京急ファミリー鉄道フェスタ2026記念弁当」を販売。「けいきゅん」や、京浜急行電鉄の電車をデザインした限定パッケージ。販売日は、2026年5月17日（日）。販売箇所は、「京急ファミリー鉄道フェスタ2026」会場、京急線の横浜、京",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/59939/",
-      "fetched_at": "2026-05-17T06:42:53.871423+09:00"
-    },
     {
       "id": "950231ba72cfe56b",
       "title": "新山口支所 SLやまぐち号 バックヤード見学・体験ツアー",
@@ -104,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/01/items/260401_00_press_slyamaguchigou.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871432+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536768+09:00"
     },
     {
       "id": "3121b261fd6824f6",
@@ -117,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871438+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536783+09:00"
     },
     {
       "id": "a75a6d5912382e42",
@@ -130,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_kinoginga/",
-      "fetched_at": "2026-05-17T06:42:53.871442+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536791+09:00"
     },
     {
       "id": "1bab5721a1452df6",
@@ -143,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/hiking/railroad/detail/data1/1287431_8044.html",
-      "fetched_at": "2026-05-17T06:42:53.871445+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536797+09:00"
     },
     {
       "id": "dd3c74b6a7b7781d",
@@ -156,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mitaketozan.co.jp/infomation/release_2026_03_31.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871449+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536803+09:00"
     },
     {
       "id": "9114d6193041c7a4",
@@ -169,7 +78,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202605_tetsuhaku.htm",
-      "fetched_at": "2026-05-17T06:42:53.871452+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536827+09:00"
+    },
+    {
+      "id": "350a8ee56db0fe82",
+      "title": "福井鉄道 夜の撮影会イベント",
+      "date": "2026-05-23",
+      "location": "",
+      "description": "福井鉄道は、事前申込制企画「激アツツアー『福鉄夜の撮影会』」を開催。開催日時は、2026年5月23日（土）17:00～20:00頃。開催場所は、北府車両工場周辺。モハ203とデキ11を並べての撮影会、木造車両工場でのデキ11撮影会、デキ11",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://fukutetsu.jp/newsDetail.php?num=681",
+      "fetched_at": "2026-05-18T06:48:38.536833+09:00"
+    },
+    {
+      "id": "145524c663593ba7",
+      "title": "京阪 ファミリーレールフェア 2026",
+      "date": "2026-05-24",
+      "location": "",
+      "description": "京阪電気鉄道は、事前申込制イベント「ファミリーレールフェア 2026」を開催。開催日時は、2026年5月24日（日）9:30～15:30。開催場所は、寝屋川車両基地。洗車機通過体験「洗車でGO！」、制帽着用記念撮影、電車との綱引き大会、クレ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260325_keihan-holdings.pdf",
+      "fetched_at": "2026-05-18T06:48:38.536845+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -182,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871455+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536851+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -195,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871459+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536857+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -208,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-17T06:42:53.871462+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536863+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -221,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-17T06:42:53.871465+09:00"
+      "fetched_at": "2026-05-18T06:48:38.536868+09:00"
     }
   ]
 }
