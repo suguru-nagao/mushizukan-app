@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-18T06:48:38.536871+09:00",
-  "count": 12,
+  "generated_at": "2026-05-19T06:59:42.332153+09:00",
+  "count": 13,
   "events": [
     {
       "id": "950231ba72cfe56b",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/01/items/260401_00_press_slyamaguchigou.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536768+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332085+09:00"
     },
     {
       "id": "3121b261fd6824f6",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536783+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332099+09:00"
     },
     {
       "id": "a75a6d5912382e42",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_kinoginga/",
-      "fetched_at": "2026-05-18T06:48:38.536791+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332108+09:00"
     },
     {
       "id": "1bab5721a1452df6",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/hiking/railroad/detail/data1/1287431_8044.html",
-      "fetched_at": "2026-05-18T06:48:38.536797+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332114+09:00"
     },
     {
       "id": "dd3c74b6a7b7781d",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mitaketozan.co.jp/infomation/release_2026_03_31.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536803+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332118+09:00"
     },
     {
       "id": "9114d6193041c7a4",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202605_tetsuhaku.htm",
-      "fetched_at": "2026-05-18T06:48:38.536827+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332122+09:00"
     },
     {
       "id": "350a8ee56db0fe82",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=681",
-      "fetched_at": "2026-05-18T06:48:38.536833+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332125+09:00"
     },
     {
       "id": "145524c663593ba7",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260325_keihan-holdings.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536845+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332133+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536851+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332137+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536857+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332141+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-18T06:48:38.536863+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332144+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -156,7 +156,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-18T06:48:38.536868+09:00"
+      "fetched_at": "2026-05-19T06:59:42.332148+09:00"
+    },
+    {
+      "id": "08f08c388f282271",
+      "title": "広島電鉄 江波車庫 路面電車の日記念撮影会",
+      "date": "2026-06-14",
+      "location": "江波車庫",
+      "description": "広島電鉄は、「路面電車の日」を記念して、事前申込制の撮影会を開催。開催日時は2026年6月14日（日）で、10:30～、14:00～の2回開催。開催場所は、江波車庫。3003号、602号を展示。「路面電車の日」のPRヘッドマーク掲出、方向幕",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
+      "fetched_at": "2026-05-19T06:59:42.332151+09:00"
     }
   ]
 }
