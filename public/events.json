@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-20T07:10:55.372394+09:00",
-  "count": 13,
+  "generated_at": "2026-05-21T07:21:02.471339+09:00",
+  "count": 14,
   "events": [
     {
       "id": "950231ba72cfe56b",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/04/01/items/260401_00_press_slyamaguchigou.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372303+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471247+09:00"
     },
     {
       "id": "3121b261fd6824f6",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372320+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471262+09:00"
     },
     {
       "id": "a75a6d5912382e42",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_kinoginga/",
-      "fetched_at": "2026-05-20T07:10:55.372328+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471269+09:00"
     },
     {
       "id": "1bab5721a1452df6",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/hiking/railroad/detail/data1/1287431_8044.html",
-      "fetched_at": "2026-05-20T07:10:55.372334+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471274+09:00"
     },
     {
       "id": "dd3c74b6a7b7781d",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mitaketozan.co.jp/infomation/release_2026_03_31.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372339+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471280+09:00"
     },
     {
       "id": "9114d6193041c7a4",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202605_tetsuhaku.htm",
-      "fetched_at": "2026-05-20T07:10:55.372346+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471286+09:00"
     },
     {
       "id": "350a8ee56db0fe82",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=681",
-      "fetched_at": "2026-05-20T07:10:55.372352+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471292+09:00"
     },
     {
       "id": "145524c663593ba7",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260325_keihan-holdings.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372361+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471303+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372368+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471310+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372374+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471316+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-20T07:10:55.372379+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471321+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-20T07:10:55.372385+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471326+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -169,7 +169,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-20T07:10:55.372390+09:00"
+      "fetched_at": "2026-05-21T07:21:02.471331+09:00"
+    },
+    {
+      "id": "907d8c1ea40d00d7",
+      "title": "白山総合車両所 見学ツアー",
+      "date": "2026-06-20",
+      "location": "白山総合車両所",
+      "description": "日本旅行は、事前申込制ツアー「北陸新幹線 ヒミツ発見！貸切回送列車で潜入 白山総合車両所見学 日帰り」を開催。旅行日は、2026年6月20日（土）の日帰り。集合場所（時間）は金沢駅（12:00）。専用回送列車で移動し、白山総合車両所を見学。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
+      "fetched_at": "2026-05-21T07:21:02.471336+09:00"
     }
   ]
 }
