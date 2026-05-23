@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-05-23T07:03:17.306750+09:00",
-  "count": 14,
+  "generated_at": "2026-05-24T06:48:22.382600+09:00",
+  "count": 15,
   "events": [
-    {
-      "id": "3121b261fd6824f6",
-      "title": "道南いさりび鉄道 乗って食べて いさ鉄大感謝祭",
-      "date": "2026-05-23",
-      "location": "北海道",
-      "description": "道南いさりび鉄道は、「乗って！食べて！いさ鉄大感謝祭」を開催。開催日時は、2026年5月23日（土）10:00～16:00。自動バイ乗車体験（小学生以下限定、抽選制）、運転席乗車体験（抽選制）、鉄道制服撮影会、JR北海道函館支社の利用促進展",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.shr-isaribi.jp/wp-content/uploads/2026/04/2998c240f5c67a6d30ab0677a6a94d63.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306658+09:00"
-    },
-    {
-      "id": "a75a6d5912382e42",
-      "title": "WEST EXPRESS 銀河 大阪～城崎温泉間",
-      "date": "2026-05-23",
-      "location": "",
-      "description": "日本旅行は、事前申込制ツアーとして、「WEST EXPRESS 銀河で行く 城崎温泉」を開催。出発日は、2026年5月23日（土）。「WEST EXPRESS 銀河」による団体臨時列車に乗車。乗車区間は、大阪（11:30頃発）～城崎温泉（1",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_kinoginga/",
-      "fetched_at": "2026-05-23T07:03:17.306671+09:00"
-    },
-    {
-      "id": "1bab5721a1452df6",
-      "title": "名鉄沿線ハイキング JR貨物愛知機関区 公開イベント",
-      "date": "2026-05-23",
-      "location": "国府宮駅",
-      "description": "名古屋鉄道は、「名鉄沿線ハイキング」の「JR貨物愛知機関区で機関車等を見学するコース」を開催。開催日は、2026年5月23日（土）。スタート受付場所は国府宮駅で、8:30～11:00に受付。国府宮神社、JR貨物の愛知機関区などをウォーキング",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.meitetsu.co.jp/hiking/railroad/detail/data1/1287431_8044.html",
-      "fetched_at": "2026-05-23T07:03:17.306679+09:00"
-    },
-    {
-      "id": "dd3c74b6a7b7781d",
-      "title": "御岳登山鉄道 ケーブルカーバックヤードツアー",
-      "date": "2026-05-23",
-      "location": "滝本駅",
-      "description": "御岳登山鉄道は、事前申込制企画「御岳山ケーブルカーバックヤードツアー」を開催。開催日は、2026年5月23日（土）。集合場所は滝本駅で、9:30集合。ケーブルカー巻上場・運転室見学、発車・到着風景見学、工事用臨時ケーブルカー乗車体験、ケーブ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mitaketozan.co.jp/infomation/release_2026_03_31.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306687+09:00"
-    },
-    {
-      "id": "9114d6193041c7a4",
-      "title": "京都鉄道博物館 保存車両・扇形車庫見学ツアー",
-      "date": "2026-05-23",
-      "location": "京都鉄道博物館",
-      "description": "日本旅行は、事前申込制ツアーとして、「京都鉄道博物館『学芸員の解説でめぐる保存車両と重要文化財・扇形車庫ツアー』」を開催。開催日は、2026年5月23日（土）、31日（日）の各日日帰り。集合場所は、京都鉄道博物館 エントランス団体ゲート。各",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202605_tetsuhaku.htm",
-      "fetched_at": "2026-05-23T07:03:17.306693+09:00"
-    },
-    {
-      "id": "350a8ee56db0fe82",
-      "title": "福井鉄道 夜の撮影会イベント",
-      "date": "2026-05-23",
-      "location": "",
-      "description": "福井鉄道は、事前申込制企画「激アツツアー『福鉄夜の撮影会』」を開催。開催日時は、2026年5月23日（土）17:00～20:00頃。開催場所は、北府車両工場周辺。モハ203とデキ11を並べての撮影会、木造車両工場でのデキ11撮影会、デキ11",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://fukutetsu.jp/newsDetail.php?num=681",
-      "fetched_at": "2026-05-23T07:03:17.306698+09:00"
-    },
     {
       "id": "145524c663593ba7",
       "title": "京阪 ファミリーレールフェア 2026",
@@ -91,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260325_keihan-holdings.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306705+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382507+09:00"
     },
     {
       "id": "146b76c50fab387b",
@@ -104,7 +26,98 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260514114939yITdEufJ3b3PnnDrJRbgVA.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306717+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382521+09:00"
+    },
+    {
+      "id": "a1bc4a737eb35b52",
+      "title": "京葉臨海鉄道 East i-D 見学ツアー",
+      "date": "2026-05-28",
+      "location": "",
+      "description": "JR東日本千葉支社、京葉臨海鉄道、JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー「庫マニア East i-D 見学ツアー」を開催。開催日時は、2026年5月28日（木）9:45頃～15:00頃。集合・解散は浜野駅。貸切バスで移動。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2025/chiba/20260326_c02.pdf",
+      "fetched_at": "2026-05-24T06:48:22.382529+09:00"
+    },
+    {
+      "id": "d2c25fe750001087",
+      "title": "東京メトロ 銀座線・丸ノ内線 直通イベント列車ツアー",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "東京メトロは、東武トップツアーズとの共同企画として、イベント列車「夢の冒険列車 ルート銀丸」の乗車ツアーを開催。開催日は、2026年5月30日（土）。1000系特別仕様車による団体臨時列車に乗車。乗車区間は、「銀丸壱号」（9:00集合、13",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tokyometro.jp/news/images_h/metroNews260427_33.pdf",
+      "fetched_at": "2026-05-24T06:48:22.382534+09:00"
+    },
+    {
+      "id": "fbf58e7f1fd0f2f0",
+      "title": "JR東日本総合研修センター E991系撮影・シミュレーター体験ツアー",
+      "date": "2026-05-30",
+      "location": "新白河駅",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、JR東日本総合研修センターの見学・体験ツアーを開催。旅行日は、2026年5月30日（土）の日帰り。午前の部（8:00頃集合～12:00頃解散）、午後の部（12:20集合～17:1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2509",
+      "fetched_at": "2026-05-24T06:48:22.382539+09:00"
+    },
+    {
+      "id": "aff43af03b8dbf58",
+      "title": "E655系 福島→横浜DCリレー号",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、E655系「なごみ（和）」による団体臨時列車「福島→横浜DCリレー号」の乗車ツアーを開催。E655系の運転日は、2026年5月30日（土）。運転区間は、福島（10:30～11:30発）～横浜（15:3",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0116",
+      "fetched_at": "2026-05-24T06:48:22.382545+09:00"
+    },
+    {
+      "id": "0269d8efcafe0cb3",
+      "title": "東海道新幹線 ブルアカ新幹線",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "ジェイアール東海ツアーズは、事前申込制企画として、「ブルアカ新幹線」ツアーを開催。開催日は、2026年5月30日（土）。東海道新幹線の貸切車両に乗車するツアー。乗車区間は、東京（11:18発）～名古屋（12:54着）の片道。内装をゲーム「ブ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://form.jrtours.co.jp/form/pub/group/bluearchive260530?utm_source=twitter&utm_medium=social&utm_campaign=post_jtt_product&utm_content=260326_B&mid=6305333470298112&ad=2SDYDjzcLIG",
+      "fetched_at": "2026-05-24T06:48:22.382550+09:00"
+    },
+    {
+      "id": "2d0f21c65846922b",
+      "title": "新潟新幹線車両センター E3系シルバーカラーなど 撮影会・体験ツアー",
+      "date": "2026-05-30",
+      "location": "新潟新幹線車両センター",
+      "description": "JR東日本新潟支社などは、事前申込制ツアー「E3系×E7系撮影会 in 新潟新幹線車両センター」を開催。開催日は、2026年5月30日（土）。東京駅発、上野駅発、大宮駅発を設定。上越新幹線で新潟駅に移動し、同駅より回送列車で新潟新幹線車両セ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni01.pdf",
+      "fetched_at": "2026-05-24T06:48:22.382562+09:00"
+    },
+    {
+      "id": "bdfbb92330453ea6",
+      "title": "近鉄 楽 近鉄名古屋～鵜方間 貸切列車乗車ツアー",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "近畿日本鉄道は、20000系「楽」による貸切列車の乗車ツアーを開催。旅行日は、2026年5月30日（土）の日帰り。貸切列車の運転区間は、近鉄名古屋（8:37発）～鵜方（10:45着）の片道。参加には、事前申込が必要。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/bf41ff8d09684ca096ddb50f2c42c63e/oshirase_260417-0516.pdf",
+      "fetched_at": "2026-05-24T06:48:22.382568+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306728+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382574+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306734+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382579+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-23T07:03:17.306738+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382584+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-23T07:03:17.306741+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382588+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-23T07:03:17.306744+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382593+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-05-23T07:03:17.306748+09:00"
+      "fetched_at": "2026-05-24T06:48:22.382597+09:00"
     }
   ]
 }
