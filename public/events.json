@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-05-24T06:48:22.382600+09:00",
-  "count": 15,
+  "generated_at": "2026-05-25T06:50:54.979013+09:00",
+  "count": 17,
   "events": [
-    {
-      "id": "145524c663593ba7",
-      "title": "京阪 ファミリーレールフェア 2026",
-      "date": "2026-05-24",
-      "location": "",
-      "description": "京阪電気鉄道は、事前申込制イベント「ファミリーレールフェア 2026」を開催。開催日時は、2026年5月24日（日）9:30～15:30。開催場所は、寝屋川車両基地。洗車機通過体験「洗車でGO！」、制帽着用記念撮影、電車との綱引き大会、クレ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260325_keihan-holdings.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382507+09:00"
-    },
-    {
-      "id": "146b76c50fab387b",
-      "title": "東武 浅草駅開業95周年記念乗車券 発売",
-      "date": "2026-05-24",
-      "location": "浅草駅",
-      "description": "東武鉄道は、「浅草駅開業95周年記念乗車券」を発売。大人用硬券乗車券3枚と台紙のセットで、発売額は1,000円。発売期間は、2026年5月24日（日）～6月24日（水）。発売箇所は、浅草駅。5月25日（月）以降は、東武本線38駅、東上線17",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/news/20260514114939yITdEufJ3b3PnnDrJRbgVA.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382521+09:00"
-    },
     {
       "id": "a1bc4a737eb35b52",
       "title": "京葉臨海鉄道 East i-D 見学ツアー",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260326_c02.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382529+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978937+09:00"
     },
     {
       "id": "d2c25fe750001087",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/images_h/metroNews260427_33.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382534+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978948+09:00"
     },
     {
       "id": "fbf58e7f1fd0f2f0",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2509",
-      "fetched_at": "2026-05-24T06:48:22.382539+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978954+09:00"
     },
     {
       "id": "aff43af03b8dbf58",
@@ -78,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0116",
-      "fetched_at": "2026-05-24T06:48:22.382545+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978959+09:00"
     },
     {
       "id": "0269d8efcafe0cb3",
@@ -91,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://form.jrtours.co.jp/form/pub/group/bluearchive260530?utm_source=twitter&utm_medium=social&utm_campaign=post_jtt_product&utm_content=260326_B&mid=6305333470298112&ad=2SDYDjzcLIG",
-      "fetched_at": "2026-05-24T06:48:22.382550+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978962+09:00"
     },
     {
       "id": "2d0f21c65846922b",
@@ -104,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni01.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382562+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978966+09:00"
     },
     {
       "id": "bdfbb92330453ea6",
@@ -117,7 +91,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/bf41ff8d09684ca096ddb50f2c42c63e/oshirase_260417-0516.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382568+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978970+09:00"
+    },
+    {
+      "id": "8535939cf67be5f2",
+      "title": "京都鉄道博物館 斉藤雪乃さん案内 見学ツアー",
+      "date": "2026-05-30",
+      "location": "京都鉄道博物館",
+      "description": "日本旅行は、事前申込制ツアー「京都鉄道博物館開館10周年記念 おすすめ梅小路『出発進行』ツアー ～斉藤雪乃さんが京都鉄道博物館をご案内！～ 日帰り」を開催。旅行日は、2026年5月30日（土）  。集合場所（時間）は、浄土宗龍岸寺（9:30",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202604_umekoji.htm",
+      "fetched_at": "2026-05-25T06:50:54.978979+09:00"
+    },
+    {
+      "id": "de8ae34d57d1d8cc",
+      "title": "新潟駅など 子ども向け仕事体験イベント",
+      "date": "2026-05-30",
+      "location": "新潟駅",
+      "description": "万代シティ商店街振興組合、JR東日本新潟支社は、「KIDSおしごと体験 in 万代シテイ＆新潟駅2026」を開催。開催日時は、2026年5月30日（土）、31日（日）の各日10:00～16:00。開催場所は、万代シテイパーク、新潟駅CoCo",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni02.pdf",
+      "fetched_at": "2026-05-25T06:50:54.978983+09:00"
+    },
+    {
+      "id": "26a17a4872997fc5",
+      "title": "しなの鉄道 ファミリー向け 115系ファンミーティングイベント",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "しなの鉄道は、事前申込制イベントとして、「115系ファンミーティング」を開催。ファミリー向け回の開催日は、2026年5月30日（土）。9:30～12:00、14:00～16:30の2回開催。開催場所は、屋代駅駅舎内 屋代駅市民ギャラリー。社",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/news/2026/05/10877.php",
+      "fetched_at": "2026-05-25T06:50:54.978988+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -130,7 +143,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382574+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978992+09:00"
+    },
+    {
+      "id": "0e61449445629d66",
+      "title": "八王子支社 エキタグラリー2026",
+      "date": "2026-06-05",
+      "location": "",
+      "description": "JR東日本八王子支社は、「『駅のスタンプ』リニューアル記念 エキタグラリー2026」を開催。デジタル駅スタンプアプリ「エキタグ」によるスタンプラリーで、開催期間は2026年6月5日（金）～28日（日）。東所沢、三鷹、武蔵五日市の各駅と、指定",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/hachioji/20260520_hc01.pdf",
+      "fetched_at": "2026-05-25T06:50:54.978995+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -143,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382579+09:00"
+      "fetched_at": "2026-05-25T06:50:54.978998+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -156,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-24T06:48:22.382584+09:00"
+      "fetched_at": "2026-05-25T06:50:54.979001+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-24T06:48:22.382588+09:00"
+      "fetched_at": "2026-05-25T06:50:54.979004+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -182,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-24T06:48:22.382593+09:00"
+      "fetched_at": "2026-05-25T06:50:54.979008+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -195,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-05-24T06:48:22.382597+09:00"
+      "fetched_at": "2026-05-25T06:50:54.979011+09:00"
     }
   ]
 }
