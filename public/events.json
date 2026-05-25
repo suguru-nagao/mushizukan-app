@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-25T06:50:54.979013+09:00",
-  "count": 17,
+  "generated_at": "2026-05-26T07:04:22.199711+09:00",
+  "count": 18,
   "events": [
     {
       "id": "a1bc4a737eb35b52",
@@ -13,7 +13,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2025/chiba/20260326_c02.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978937+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199634+09:00"
+    },
+    {
+      "id": "10902f2b49b5a71c",
+      "title": "横浜高速鉄道 サンリオフェス2026記念一日乗車券 発売",
+      "date": "2026-05-29",
+      "location": "",
+      "description": "横浜高速鉄道は、「サンリオフェス 2026 in みなとみらい」とのコラボ企画として、オリジナルデザインの一日乗車券を発売。大人用乗車券2枚と台紙のセットで、発売額は1,000円。発売期間は、2026年5月29日（金）9:00～6月28日（",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.mm21railway.co.jp/info/news/uploads/press%20release_20260522.pdf",
+      "fetched_at": "2026-05-26T07:04:22.199646+09:00"
     },
     {
       "id": "d2c25fe750001087",
@@ -26,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/images_h/metroNews260427_33.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978948+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199651+09:00"
     },
     {
       "id": "fbf58e7f1fd0f2f0",
@@ -39,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2509",
-      "fetched_at": "2026-05-25T06:50:54.978954+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199655+09:00"
     },
     {
       "id": "aff43af03b8dbf58",
@@ -52,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0116",
-      "fetched_at": "2026-05-25T06:50:54.978959+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199659+09:00"
     },
     {
       "id": "0269d8efcafe0cb3",
@@ -65,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://form.jrtours.co.jp/form/pub/group/bluearchive260530?utm_source=twitter&utm_medium=social&utm_campaign=post_jtt_product&utm_content=260326_B&mid=6305333470298112&ad=2SDYDjzcLIG",
-      "fetched_at": "2026-05-25T06:50:54.978962+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199663+09:00"
     },
     {
       "id": "2d0f21c65846922b",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni01.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978966+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199667+09:00"
     },
     {
       "id": "bdfbb92330453ea6",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/bf41ff8d09684ca096ddb50f2c42c63e/oshirase_260417-0516.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978970+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199676+09:00"
     },
     {
       "id": "8535939cf67be5f2",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202604_umekoji.htm",
-      "fetched_at": "2026-05-25T06:50:54.978979+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199680+09:00"
     },
     {
       "id": "de8ae34d57d1d8cc",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni02.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978983+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199684+09:00"
     },
     {
       "id": "26a17a4872997fc5",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/05/10877.php",
-      "fetched_at": "2026-05-25T06:50:54.978988+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199687+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978992+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199690+09:00"
     },
     {
       "id": "0e61449445629d66",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260520_hc01.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978995+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199694+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-25T06:50:54.978998+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199697+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-25T06:50:54.979001+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199700+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-25T06:50:54.979004+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199703+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-25T06:50:54.979008+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199706+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-05-25T06:50:54.979011+09:00"
+      "fetched_at": "2026-05-26T07:04:22.199709+09:00"
     }
   ]
 }
