@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-05-28T07:28:05.547665+09:00",
-  "count": 19,
+  "generated_at": "2026-05-29T07:29:04.041236+09:00",
+  "count": 20,
   "events": [
-    {
-      "id": "a1bc4a737eb35b52",
-      "title": "京葉臨海鉄道 East i-D 見学ツアー",
-      "date": "2026-05-28",
-      "location": "",
-      "description": "JR東日本千葉支社、京葉臨海鉄道、JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー「庫マニア East i-D 見学ツアー」を開催。開催日時は、2026年5月28日（木）9:45頃～15:00頃。集合・解散は浜野駅。貸切バスで移動。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2025/chiba/20260326_c02.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547549+09:00"
-    },
     {
       "id": "10902f2b49b5a71c",
       "title": "横浜高速鉄道 サンリオフェス2026記念一日乗車券 発売",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mm21railway.co.jp/info/news/uploads/press%20release_20260522.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547563+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041111+09:00"
     },
     {
       "id": "d2c25fe750001087",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/images_h/metroNews260427_33.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547571+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041127+09:00"
     },
     {
       "id": "fbf58e7f1fd0f2f0",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2509",
-      "fetched_at": "2026-05-28T07:28:05.547576+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041136+09:00"
     },
     {
       "id": "aff43af03b8dbf58",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0116",
-      "fetched_at": "2026-05-28T07:28:05.547581+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041143+09:00"
     },
     {
       "id": "0269d8efcafe0cb3",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://form.jrtours.co.jp/form/pub/group/bluearchive260530?utm_source=twitter&utm_medium=social&utm_campaign=post_jtt_product&utm_content=260326_B&mid=6305333470298112&ad=2SDYDjzcLIG",
-      "fetched_at": "2026-05-28T07:28:05.547586+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041150+09:00"
     },
     {
       "id": "2d0f21c65846922b",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni01.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547592+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041157+09:00"
     },
     {
       "id": "bdfbb92330453ea6",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/bf41ff8d09684ca096ddb50f2c42c63e/oshirase_260417-0516.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547603+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041162+09:00"
     },
     {
       "id": "8535939cf67be5f2",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202604_umekoji.htm",
-      "fetched_at": "2026-05-28T07:28:05.547609+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041171+09:00"
     },
     {
       "id": "de8ae34d57d1d8cc",
@@ -130,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni02.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547615+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041179+09:00"
     },
     {
       "id": "26a17a4872997fc5",
@@ -143,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/05/10877.php",
-      "fetched_at": "2026-05-28T07:28:05.547621+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041186+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -156,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547627+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041193+09:00"
     },
     {
       "id": "0e61449445629d66",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260520_hc01.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547632+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041203+09:00"
     },
     {
       "id": "7765af43d5f5a82d",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=605",
-      "fetched_at": "2026-05-28T07:28:05.547637+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041210+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547641+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041215+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -208,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-28T07:28:05.547647+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041218+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -221,7 +208,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-28T07:28:05.547652+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041221+09:00"
+    },
+    {
+      "id": "f25d28dcfb354406",
+      "title": "JR東・東武 直通特急20周年記念 エキタグスタンプラリー",
+      "date": "2026-06-13",
+      "location": "",
+      "description": "JR東日本大宮支社、東武鉄道は、「JR・東武直通特急20周年記念エキタグスタンプラリー」を開催。 開催期間は、2026年6月13日（土）～8月31日（月）。「エキタグ」アプリを使用したデジタルスタンプラリー。新宿、池袋、浦和、大宮、下今市、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
+      "fetched_at": "2026-05-29T07:29:04.041224+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -234,7 +234,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-28T07:28:05.547657+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041228+09:00"
+    },
+    {
+      "id": "bdb6348e044a8d28",
+      "title": "隅田川駅・隅田川機関区 ふるさと納税 体験イベント",
+      "date": "2026-06-14",
+      "location": "隅田川駅",
+      "description": "JR貨物関東支社は、荒川区のふるさと納税返礼品として、隅田川駅・隅田川機関区での体験イベントを開催。開催日は2026年6月14日（日）で、午前の部、午後の部の2回開催。機関車・ヨ8000形の体験乗車、機関車運転台公開・撮影会、大型フォークリ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrfreight.co.jp/info/2026/files/20260528_01.pdf",
+      "fetched_at": "2026-05-29T07:29:04.041231+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-05-28T07:28:05.547662+09:00"
+      "fetched_at": "2026-05-29T07:29:04.041234+09:00"
     }
   ]
 }
