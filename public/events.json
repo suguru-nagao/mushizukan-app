@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-05-29T07:29:04.041236+09:00",
-  "count": 20,
+  "generated_at": "2026-05-30T07:25:06.026444+09:00",
+  "count": 22,
   "events": [
-    {
-      "id": "10902f2b49b5a71c",
-      "title": "横浜高速鉄道 サンリオフェス2026記念一日乗車券 発売",
-      "date": "2026-05-29",
-      "location": "",
-      "description": "横浜高速鉄道は、「サンリオフェス 2026 in みなとみらい」とのコラボ企画として、オリジナルデザインの一日乗車券を発売。大人用乗車券2枚と台紙のセットで、発売額は1,000円。発売期間は、2026年5月29日（金）9:00～6月28日（",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mm21railway.co.jp/info/news/uploads/press%20release_20260522.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041111+09:00"
-    },
     {
       "id": "d2c25fe750001087",
       "title": "東京メトロ 銀座線・丸ノ内線 直通イベント列車ツアー",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/images_h/metroNews260427_33.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041127+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026376+09:00"
     },
     {
       "id": "fbf58e7f1fd0f2f0",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2509",
-      "fetched_at": "2026-05-29T07:29:04.041136+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026385+09:00"
     },
     {
       "id": "aff43af03b8dbf58",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0116",
-      "fetched_at": "2026-05-29T07:29:04.041143+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026389+09:00"
     },
     {
       "id": "0269d8efcafe0cb3",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://form.jrtours.co.jp/form/pub/group/bluearchive260530?utm_source=twitter&utm_medium=social&utm_campaign=post_jtt_product&utm_content=260326_B&mid=6305333470298112&ad=2SDYDjzcLIG",
-      "fetched_at": "2026-05-29T07:29:04.041150+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026392+09:00"
     },
     {
       "id": "2d0f21c65846922b",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni01.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041157+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026395+09:00"
     },
     {
       "id": "bdfbb92330453ea6",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/bf41ff8d09684ca096ddb50f2c42c63e/oshirase_260417-0516.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041162+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026398+09:00"
     },
     {
       "id": "8535939cf67be5f2",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202604_umekoji.htm",
-      "fetched_at": "2026-05-29T07:29:04.041171+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026400+09:00"
     },
     {
       "id": "de8ae34d57d1d8cc",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/niigata/20260421_ni02.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041179+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026407+09:00"
     },
     {
       "id": "26a17a4872997fc5",
@@ -130,7 +117,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/05/10877.php",
-      "fetched_at": "2026-05-29T07:29:04.041186+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026411+09:00"
+    },
+    {
+      "id": "de79ada86a482561",
+      "title": "2026年5月30日の鉄道イベント",
+      "date": "2026-05-30",
+      "location": "",
+      "description": "夏休みに「超電導リニア」に乗れる⁉　JR東海が体験乗車イベントを募集　仕組み学習イベント「超電導リニアラボ」も初開催",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tetsudo.com/event/calendar/20260530/",
+      "fetched_at": "2026-05-30T07:25:06.026414+09:00"
     },
     {
       "id": "5d05205f890e8f9e",
@@ -143,7 +143,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/04/30/260430_1600.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041193+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026417+09:00"
+    },
+    {
+      "id": "6fa1fa72482cc8ef",
+      "title": "2026年5月31日の鉄道イベント",
+      "date": "2026-05-31",
+      "location": "",
+      "description": "夏休みに「超電導リニア」に乗れる⁉　JR東海が体験乗車イベントを募集　仕組み学習イベント「超電導リニアラボ」も初開催",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tetsudo.com/event/calendar/20260531/",
+      "fetched_at": "2026-05-30T07:25:06.026419+09:00"
+    },
+    {
+      "id": "b2c785fb818a1264",
+      "title": "近鉄 ひのとり 近鉄名古屋～賢島間 貸切列車乗車ツアー",
+      "date": "2026-06-01",
+      "location": "",
+      "description": "近畿日本鉄道は、80000系「ひのとり」による貸切列車の乗車ツアーを開催。旅行日は、2026年6月1日（月）、7月1日（水）の各日日帰り。貸切列車の運転区間は、近鉄名古屋（10:04発）～賢島（12:33着）、賢島（16:34発）～近鉄名古",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/b0b07a2b33504ce6b2b4de973bdb8948/oshirase_260417-0531.pdf",
+      "fetched_at": "2026-05-30T07:25:06.026421+09:00"
     },
     {
       "id": "0e61449445629d66",
@@ -156,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260520_hc01.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041203+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026424+09:00"
     },
     {
       "id": "7765af43d5f5a82d",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=605",
-      "fetched_at": "2026-05-29T07:29:04.041210+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026426+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -182,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041215+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026429+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -195,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-05-29T07:29:04.041218+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026431+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -208,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041221+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026433+09:00"
     },
     {
       "id": "f25d28dcfb354406",
@@ -221,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041224+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026436+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -234,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-05-29T07:29:04.041228+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026438+09:00"
     },
     {
       "id": "bdb6348e044a8d28",
@@ -247,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260528_01.pdf",
-      "fetched_at": "2026-05-29T07:29:04.041231+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026440+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -260,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-05-29T07:29:04.041234+09:00"
+      "fetched_at": "2026-05-30T07:25:06.026443+09:00"
     }
   ]
 }
