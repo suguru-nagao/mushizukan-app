@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-03T07:56:34.014669+09:00",
-  "count": 17,
+  "generated_at": "2026-06-04T08:00:21.374334+09:00",
+  "count": 18,
   "events": [
     {
       "id": "0e61449445629d66",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji/20260520_hc01.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014593+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374182+09:00"
     },
     {
       "id": "7765af43d5f5a82d",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=605",
-      "fetched_at": "2026-06-03T07:56:34.014608+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374209+09:00"
     },
     {
       "id": "64755e727939a432",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014614+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374217+09:00"
     },
     {
       "id": "788396a72d2bd6e6",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260407_TrainFes2026.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014618+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374223+09:00"
     },
     {
       "id": "bdc40c687ae8a533",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2521",
-      "fetched_at": "2026-06-03T07:56:34.014622+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374240+09:00"
     },
     {
       "id": "d6ac963d413b9bdd",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2518",
-      "fetched_at": "2026-06-03T07:56:34.014625+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374246+09:00"
     },
     {
       "id": "392c95e8b95bcb8d",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.tosaden.co.jp/info/dtl.php?ID=2468",
-      "fetched_at": "2026-06-03T07:56:34.014629+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374253+09:00"
     },
     {
       "id": "05b74b08faf61a25",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://mt-tsukuba.com/%e3%82%b1%e3%83%bc%e3%83%96%e3%83%ab%e3%82%ab%e3%83%bc%e3%81%ae%e3%81%8a%e4%bb%95%e4%ba%8b%e4%bd%93%e9%a8%93%e5%8f%82%e5%8a%a0%e8%80%85%e5%8b%9f%e9%9b%86%ef%bc%81%e3%80%906%e6%9c%88%e5%9c%9f%e6%97%a5/",
-      "fetched_at": "2026-06-03T07:56:34.014637+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374275+09:00"
     },
     {
       "id": "97ee4136902c69c9",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.uedadentetsu.com/news/post-9084.html",
-      "fetched_at": "2026-06-03T07:56:34.014641+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374281+09:00"
     },
     {
       "id": "6f58c3c64461bfd9",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260407_TrainFes2026.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014645+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374286+09:00"
     },
     {
       "id": "37c1d9c5e7c25a6d",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2519",
-      "fetched_at": "2026-06-03T07:56:34.014648+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374292+09:00"
     },
     {
       "id": "3070c32783e922a5",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-06-03T07:56:34.014652+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374297+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014655+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374302+09:00"
     },
     {
       "id": "f25d28dcfb354406",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014658+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374307+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-06-03T07:56:34.014661+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374313+09:00"
     },
     {
       "id": "bdb6348e044a8d28",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260528_01.pdf",
-      "fetched_at": "2026-06-03T07:56:34.014664+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374319+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -221,7 +221,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-03T07:56:34.014667+09:00"
+      "fetched_at": "2026-06-04T08:00:21.374325+09:00"
+    },
+    {
+      "id": "a0ee446a68e12625",
+      "title": "新鳥栖駅 サマーフェスタ",
+      "date": "2026-06-26",
+      "location": "新鳥栖駅",
+      "description": "JR九州は、「鳥栖サマーフェスタ2026」を開催。開催日時は、2026年6月26日（金）17:00～21:00（体験は20:00まで）。開催場所は、新鳥栖駅西口広場。雨天決行、荒天中止。フード・ドリンク販売のほか、有料体験イベントとして、射",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
+      "fetched_at": "2026-06-04T08:00:21.374330+09:00"
     }
   ]
 }
