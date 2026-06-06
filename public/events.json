@@ -1,124 +1,7 @@
 {
-  "generated_at": "2026-06-06T07:11:52.594319+09:00",
-  "count": 16,
+  "generated_at": "2026-06-07T06:59:27.493349+09:00",
+  "count": 17,
   "events": [
-    {
-      "id": "64755e727939a432",
-      "title": "阪堺電気軌道 路面電車まつりミステリーツアー",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "阪堺電気軌道は、「路面電車まつり」の特別企画として、事前申込制企画「路面電車まつりミステリーツアー」を開催。開催日は、2026年6月6日（土）。集合場所（時間）は、我孫子道車庫北門前（15:45）。我孫子道車庫を16:00～16:10頃に発",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hankai.co.jp/upload/information/attach/20260423_chindenmystery.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594248+09:00"
-    },
-    {
-      "id": "788396a72d2bd6e6",
-      "title": "西武 電車フェスタ2026 in 武蔵丘車検場",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "西武鉄道は、「西武・電車フェスタ2026 in 武蔵丘車両検修場」を開催。開催日時は、2026年6月6日（土）10:30～16:30（最終入場は15:00）。開催場所は、武蔵丘車両検修場。入場無料。トラバーサー乗車体験、「52席の至福」ブラ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260407_TrainFes2026.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594262+09:00"
-    },
-    {
-      "id": "bdc40c687ae8a533",
-      "title": "ひなび常磐線",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、団体臨時列車「ひなび常磐線」の乗車ツアーを開催。旅行日は、2026年6月6日（土）の日帰り。「ひなび常磐線」の運転区間は、仙台（10:05発）～富岡。参加には、事前申込が必要。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2521",
-      "fetched_at": "2026-06-06T07:11:52.594267+09:00"
-    },
-    {
-      "id": "d6ac963d413b9bdd",
-      "title": "E721系・阿武隈急行8100形 運転体験ツアー",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー企画「JR東日本『E721系』＆阿武隈急行『8100形』運転体験と山形新幹線シミュレータプラン 1泊2日」を開催。旅行日は、2026年6月6日（土）～7日（日）。1日目は、福島駅構内で",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2518",
-      "fetched_at": "2026-06-06T07:11:52.594271+09:00"
-    },
-    {
-      "id": "392c95e8b95bcb8d",
-      "title": "とさでん交通 桟橋車庫電車撮影会",
-      "date": "2026-06-06",
-      "location": "桟橋車庫",
-      "description": "とさでん交通は、事前申込制企画として、「桟橋車庫電車撮影会」を開催。開催日時は、2026年6月6日（土）11:00頃～12:00頃。開催場所は、桟橋車庫。外国電車や貨車などの撮影会、内部見学などを実施。募集対象・人数は、10歳以上25人程度",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.tosaden.co.jp/info/dtl.php?ID=2468",
-      "fetched_at": "2026-06-06T07:11:52.594275+09:00"
-    },
-    {
-      "id": "05b74b08faf61a25",
-      "title": "筑波観光鉄道 小学生向け ケーブルカー業務体験イベント",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "筑波観光鉄道は、事前申込制企画として、「ケーブルカーのお仕事体験」を開催。開催日は、2026年6月6日（土）～28日（日）の土休日。各日とも、10:00～13:00、13:30～16:40の2回開催（各回30分前より受付）。出札・改札体験、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://mt-tsukuba.com/%e3%82%b1%e3%83%bc%e3%83%96%e3%83%ab%e3%82%ab%e3%83%bc%e3%81%ae%e3%81%8a%e4%bb%95%e4%ba%8b%e4%bd%93%e9%a8%93%e5%8f%82%e5%8a%a0%e8%80%85%e5%8b%9f%e9%9b%86%ef%bc%81%e3%80%906%e6%9c%88%e5%9c%9f%e6%97%a5/",
-      "fetched_at": "2026-06-06T07:11:52.594278+09:00"
-    },
-    {
-      "id": "97ee4136902c69c9",
-      "title": "上田電鉄 まるまどまつり",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "上田電鉄は、「まるまどまつり2026」を開催。開催日時は、2026年6月6日（土）9:30～15:30。開催場所は、下之郷車庫。入場無料。5200系展示、鉄道各社グッズ販売会、Nゲージ走行展示、ジオラマワークショップなどを実施。また、下之郷",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.uedadentetsu.com/news/post-9084.html",
-      "fetched_at": "2026-06-06T07:11:52.594282+09:00"
-    },
-    {
-      "id": "6f58c3c64461bfd9",
-      "title": "西武 電車フェスタ2026 in 武蔵丘車両検修場",
-      "date": "2026-06-06",
-      "location": "",
-      "description": "西武鉄道は、「西武・電車フェスタ2026 in 武蔵丘車両検修場」を開催。開催日時は、2026年6月6日（土）10:30～16:30（最終入場は15:00）。開催場所は、武蔵丘車両検修場。入場無料。トラバーサー乗車体験、「52席の至福」ブラ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260407_TrainFes2026.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594291+09:00"
-    },
-    {
-      "id": "37c1d9c5e7c25a6d",
-      "title": "郡山総合車両センタートレインフェスタ・阿武隈急行車両基地 体験ツアー",
-      "date": "2026-06-06",
-      "location": "内では",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー企画「JR東日本＆阿武隈急行 ふくしまの車両を操る、触れる体験！」を開催。旅行日は、2026年6月6日（土）～7日（日）。1日目は、郡山駅にて9:30に集合後、郡山総合車両センターの「",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2519",
-      "fetched_at": "2026-06-06T07:11:52.594296+09:00"
-    },
     {
       "id": "3070c32783e922a5",
       "title": "鹿児島市 親子向け レトロ電車乗車ツアー",
@@ -130,7 +13,85 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-06-06T07:11:52.594299+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493058+09:00"
+    },
+    {
+      "id": "59ae678a254c1fbf",
+      "title": "近鉄 橿原神宮前駅 1A系・6A系・8A系 3編成撮影会ツアー",
+      "date": "2026-06-07",
+      "location": "橿原神宮前駅",
+      "description": "近畿日本鉄道は、ツアー企画として、1A系、6A系、8A系の有料撮影会を開催。開催日時は、2026年6月7日（日）、13日（土）の各日9:30～（約60分間）。開催場所は、橿原神宮前駅。各形式1本を展示。大和八木駅方向（晴天時逆光）から、各編",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260607.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493071+09:00"
+    },
+    {
+      "id": "6242eae2b62a5e4f",
+      "title": "ひなび 郡山～盛岡間 ロングラン乗車ツアー",
+      "date": "2026-06-07",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、HB-E300系「ひなび」による団体臨時列車の乗車ツアーを開催。旅行日は、2026年6月7日（日）の日帰り。「ひなび」の運転区間は、郡山（15:20発）～盛岡（20:36着）。旅",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2534",
+      "fetched_at": "2026-06-07T06:59:27.493079+09:00"
+    },
+    {
+      "id": "9b27de168c2aec34",
+      "title": "JRバス関東 M527-97305号車 引退ツアー",
+      "date": "2026-06-07",
+      "location": "",
+      "description": "ジェイアールバス関東長野原支店は、事前申込制企画として、M527-97305号車引退ツアー「白棚線廃線区間ウォーキングと白河支店見学の旅」を開催。旅行日は、2026年6月7日（日）の日帰り。M527-97305号車に乗車。乗車区間は、新白河",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrbuskanto.co.jp/jwp/bus_tour/20260519_m527-97305.html",
+      "fetched_at": "2026-06-07T06:59:27.493085+09:00"
+    },
+    {
+      "id": "d684ae4f29f9d27d",
+      "title": "黒部峡谷鉄道 内燃機関車編成乗車・途中下車ツアー",
+      "date": "2026-06-07",
+      "location": "",
+      "description": "黒部峡谷鉄道は、事前申込制ツアー「内燃機関車で行く途中下車の旅 ～森石・柳橋散策編～」を開催。旅行日は、2026年6月7日（日）、28日（日）の各日日帰り。集合場所（受付時間）は、黒部川電気記念館（10:00～10:20）。一般旅客列車で、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.kurotetu.co.jp/news-detail?post=601",
+      "fetched_at": "2026-06-07T06:59:27.493091+09:00"
+    },
+    {
+      "id": "e48292db85106993",
+      "title": "近鉄 サンリオキャラクターズマスコットキーホルダー 販売",
+      "date": "2026-06-07",
+      "location": "",
+      "description": "近畿日本鉄道は、「サンリオキャラクターズ マスコットキーホルダー」を販売。クロミ、ポムポムプリン、シナモロールの3種類で、販売額は各2,600円。2026年6月7日（日）に万博記念公園で開催の「第25回スルッとKANSAIバスまつり」など、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/b9047a4c610e40b78e55f197bd3c67f3/oshirase_260603-0930.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493097+09:00"
+    },
+    {
+      "id": "fd85033fe89ef0a8",
+      "title": "東武日光駅 253系新エクステリアデザイン車両 お披露目イベント",
+      "date": "2026-06-12",
+      "location": "入場には",
+      "description": "JR東日本大宮支社、東武鉄道は、253系新エクステリアデザイン車両のお披露目イベントを開催。開催日時は、2026年6月12日（金）13:00～15:15頃（13:00～13:15は団体臨時列車乗車ツアー参加者限定）。開催場所は、東武日光駅5",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493103+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -143,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594303+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493115+09:00"
     },
     {
       "id": "f25d28dcfb354406",
@@ -156,7 +117,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594306+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493123+09:00"
+    },
+    {
+      "id": "08a60d31a6017164",
+      "title": "701系 復刻浜通り号",
+      "date": "2026-06-13",
+      "location": "",
+      "description": "JR東日本水戸支社は、事前申込制企画「～復興の路を辿る～『復刻！701系浜通り号ツアー』」を開催。開催日は、2026年6月13日（土）。701系4両編成による団体臨時列車に乗車。乗車区間は、原ノ町（10:40発）～富岡（12:20着）、富岡",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/mito/20260427_mt01.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493127+09:00"
+    },
+    {
+      "id": "00a05d1305cb6f7a",
+      "title": "新幹線総合車両センター ふるさと納税 E5系撮影・運転台見学イベント",
+      "date": "2026-06-13",
+      "location": "、宮城県 利府町 新幹線総合車両センター",
+      "description": "JR東日本東北本部は、宮城県利府町のふるさと納税返礼品として、「15組限定！地上から見るE5系新幹線撮影会・運転台見学会」を開催。開催日時は、2026年6月13日（土）14:00～16:30。開催場所は、新幹線総合車両センター。E5系1～3",
+      "prefecture": "、宮城県",
+      "city": "利府町",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/sendai/20260430_s01.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493321+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-06-06T07:11:52.594309+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493328+09:00"
     },
     {
       "id": "bdb6348e044a8d28",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260528_01.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594312+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493332+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -195,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-06T07:11:52.594315+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493336+09:00"
+    },
+    {
+      "id": "214cf539da38d6dd",
+      "title": "京成 京急600形で巡る京成線ツアー",
+      "date": "2026-06-21",
+      "location": "",
+      "description": "コミュニティー京成は、事前申込制ツアーとして、「京急電鉄車両で巡る京成線ツアー」を開催。開催日は、2026年6月21日（日）。京急600形による貸切列車に乗車するツアー。乗車区間は、京成上野（9:00頃発）～東成田（10:15頃着）～宗吾車",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
+      "fetched_at": "2026-06-07T06:59:27.493340+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -208,7 +208,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-06T07:11:52.594318+09:00"
+      "fetched_at": "2026-06-07T06:59:27.493343+09:00"
+    },
+    {
+      "id": "00542baf043251cf",
+      "title": "南海 研修センター 子ども向け体験イベント",
+      "date": "2026-07-04",
+      "location": "研修センター",
+      "description": "南海電気鉄道は、事前申込制企画として、「鉄道学校」を開催。開催日時は、2026年7月4日（土）10:00～12:10。開催場所は、鉄道研修センター。駅員、車掌、保安装置の各体験などを実施。募集対象は、小学生と保護者のグループ。募集数は30組",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
+      "fetched_at": "2026-06-07T06:59:27.493346+09:00"
     }
   ]
 }
