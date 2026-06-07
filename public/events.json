@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-06-07T06:59:27.493349+09:00",
-  "count": 17,
+  "generated_at": "2026-06-08T06:59:47.935856+09:00",
+  "count": 16,
   "events": [
-    {
-      "id": "3070c32783e922a5",
-      "title": "鹿児島市 親子向け レトロ電車乗車ツアー",
-      "date": "2026-06-07",
-      "location": "",
-      "description": "鹿児島市交通局は、事前申込制企画として、「路面電車の日レトロ電車『かごでん』ツアー」を開催。開催日は2026年6月7日（日）で、10:30～12:30、14:30～16:30の2回開催。集合・解散場所は、鹿児島中央駅前停留場。「かごでん」の",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kotsu-city-kagoshima.jp/topics/71884/",
-      "fetched_at": "2026-06-07T06:59:27.493058+09:00"
-    },
-    {
-      "id": "59ae678a254c1fbf",
-      "title": "近鉄 橿原神宮前駅 1A系・6A系・8A系 3編成撮影会ツアー",
-      "date": "2026-06-07",
-      "location": "橿原神宮前駅",
-      "description": "近畿日本鉄道は、ツアー企画として、1A系、6A系、8A系の有料撮影会を開催。開催日時は、2026年6月7日（日）、13日（土）の各日9:30～（約60分間）。開催場所は、橿原神宮前駅。各形式1本を展示。大和八木駅方向（晴天時逆光）から、各編",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260607.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493071+09:00"
-    },
-    {
-      "id": "6242eae2b62a5e4f",
-      "title": "ひなび 郡山～盛岡間 ロングラン乗車ツアー",
-      "date": "2026-06-07",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、HB-E300系「ひなび」による団体臨時列車の乗車ツアーを開催。旅行日は、2026年6月7日（日）の日帰り。「ひなび」の運転区間は、郡山（15:20発）～盛岡（20:36着）。旅",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2534",
-      "fetched_at": "2026-06-07T06:59:27.493079+09:00"
-    },
-    {
-      "id": "9b27de168c2aec34",
-      "title": "JRバス関東 M527-97305号車 引退ツアー",
-      "date": "2026-06-07",
-      "location": "",
-      "description": "ジェイアールバス関東長野原支店は、事前申込制企画として、M527-97305号車引退ツアー「白棚線廃線区間ウォーキングと白河支店見学の旅」を開催。旅行日は、2026年6月7日（日）の日帰り。M527-97305号車に乗車。乗車区間は、新白河",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrbuskanto.co.jp/jwp/bus_tour/20260519_m527-97305.html",
-      "fetched_at": "2026-06-07T06:59:27.493085+09:00"
-    },
-    {
-      "id": "d684ae4f29f9d27d",
-      "title": "黒部峡谷鉄道 内燃機関車編成乗車・途中下車ツアー",
-      "date": "2026-06-07",
-      "location": "",
-      "description": "黒部峡谷鉄道は、事前申込制ツアー「内燃機関車で行く途中下車の旅 ～森石・柳橋散策編～」を開催。旅行日は、2026年6月7日（日）、28日（日）の各日日帰り。集合場所（受付時間）は、黒部川電気記念館（10:00～10:20）。一般旅客列車で、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.kurotetu.co.jp/news-detail?post=601",
-      "fetched_at": "2026-06-07T06:59:27.493091+09:00"
-    },
-    {
-      "id": "e48292db85106993",
-      "title": "近鉄 サンリオキャラクターズマスコットキーホルダー 販売",
-      "date": "2026-06-07",
-      "location": "",
-      "description": "近畿日本鉄道は、「サンリオキャラクターズ マスコットキーホルダー」を販売。クロミ、ポムポムプリン、シナモロールの3種類で、販売額は各2,600円。2026年6月7日（日）に万博記念公園で開催の「第25回スルッとKANSAIバスまつり」など、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/b9047a4c610e40b78e55f197bd3c67f3/oshirase_260603-0930.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493097+09:00"
-    },
     {
       "id": "fd85033fe89ef0a8",
       "title": "東武日光駅 253系新エクステリアデザイン車両 お披露目イベント",
@@ -91,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493103+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935545+09:00"
     },
     {
       "id": "a0ecf8d0239084a0",
@@ -104,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202605131805342WJxUP3s1ffyNZ8u_auleg.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493115+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935557+09:00"
     },
     {
       "id": "f25d28dcfb354406",
@@ -117,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260528_o01.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493123+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935562+09:00"
     },
     {
       "id": "08a60d31a6017164",
@@ -130,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/mito/20260427_mt01.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493127+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935566+09:00"
     },
     {
       "id": "00a05d1305cb6f7a",
@@ -143,7 +65,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260430_s01.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493321+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935798+09:00"
+    },
+    {
+      "id": "77848561ae71e5a3",
+      "title": "木古内駅 バックヤードなど見学イベント",
+      "date": "2026-06-13",
+      "location": "北海道 同駅新幹線改札口横で",
+      "description": "JR北海道は、事前申込制イベント「北海道新幹線と道南いさりび鉄道の裏側一気見ツアー in 木古内駅」を開催。開催日は2026年6月13日（土）で、10:00～12:30、13:30～16:00の2回開催。開催場所は、木古内駅。受付場所は同駅",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260422_KO_shinkansen-tour.pdf",
+      "fetched_at": "2026-06-08T06:59:47.935812+09:00"
+    },
+    {
+      "id": "96083aff1aac2671",
+      "title": "川越車両センター E233系運転体験イベント",
+      "date": "2026-06-13",
+      "location": "川越車両センター",
+      "description": "JR東日本大宮支社は、事前申込制イベント「川越車両センター E233系電車運転体験会」を開催。開催日時は、2026年6月13日（土）、14日（日）の各日10:00～12:30、13:40～16:10。開催場所は、川越車両センター。埼京線・川",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/omiya/20260521_o02.pdf",
+      "fetched_at": "2026-06-08T06:59:47.935817+09:00"
+    },
+    {
+      "id": "3138b3fb9a9e4109",
+      "title": "岡山電気軌道 第29回 岡山路面電車まつり",
+      "date": "2026-06-13",
+      "location": "",
+      "description": "岡山電気軌道、公共の交通ラクダ（RACDA）は、「第29回 岡山路面電車まつり」を開催。開催日時は、2026年6月13日（土）10:00～15:00。開催場所は、岡山電気軌道本社敷地内。「KURO×夢二」車両、岡電バスなどの車両展示、クイズ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://okayama-kido.co.jp/tram/event/post-3374/",
+      "fetched_at": "2026-06-08T06:59:47.935826+09:00"
     },
     {
       "id": "08f08c388f282271",
@@ -156,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hiroden.co.jp/topics/2026/0512-roden_event.html",
-      "fetched_at": "2026-06-07T06:59:27.493328+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935830+09:00"
     },
     {
       "id": "bdb6348e044a8d28",
@@ -169,7 +130,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrfreight.co.jp/info/2026/files/20260528_01.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493332+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935834+09:00"
+    },
+    {
+      "id": "7bd1708b563f0584",
+      "title": "磐越東線 スイーツごっつぉさん号",
+      "date": "2026-06-14",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、団体臨時列車「磐越東線スイーツごっつぉさん号」の乗車ツアーを開催。団体臨時列車の運転日は、2026年6月14日（日）。運転区間は、郡山（10:12発）～いわき（12:36着）、いわき（14:30発）～",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2529",
+      "fetched_at": "2026-06-08T06:59:47.935838+09:00"
+    },
+    {
+      "id": "356534f6ab1e5464",
+      "title": "JR東・神奈川臨海鉄道 根岸駅・横浜本牧駅 見学・SL撮影会イベント",
+      "date": "2026-06-14",
+      "location": "根岸駅",
+      "description": "JR東日本横浜支社、神奈川臨海鉄道は、事前申込制企画として、「貨物の裏側に潜入！根岸駅・横浜本牧駅の探検＆レアなSL機関車撮影会」を開催。開催日は2026年6月14日（日）で、9:00～12:10、11:00～14:10、12:40～15:",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/yokohama/20260521_y01.pdf",
+      "fetched_at": "2026-06-08T06:59:47.935841+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-07T06:59:27.493336+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935844+09:00"
     },
     {
       "id": "214cf539da38d6dd",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493340+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935847+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -208,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-07T06:59:27.493343+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935850+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -221,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-07T06:59:27.493346+09:00"
+      "fetched_at": "2026-06-08T06:59:47.935854+09:00"
     }
   ]
 }
