@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-15T07:04:18.657372+09:00",
-  "count": 18,
+  "generated_at": "2026-06-16T07:59:16.904284+09:00",
+  "count": 22,
   "events": [
     {
       "id": "fed0610e7b44bbf7",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/02/19/2026%2002%2019%2002.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657269+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904186+09:00"
     },
     {
       "id": "c19e2e4736c322f7",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/06/11/20260611_Childrens_Adventure_Ticket_Summer_Vacation_Special_Event.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657282+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904196+09:00"
     },
     {
       "id": "f36e6c1b2ec966f0",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260402_s01.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657289+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904202+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-15T07:04:18.657294+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904207+09:00"
     },
     {
       "id": "ff94e15b7fb2f67b",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288418_8032.html",
-      "fetched_at": "2026-06-15T07:04:18.657300+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904211+09:00"
     },
     {
       "id": "9a323a78cbc8ed7c",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0095",
-      "fetched_at": "2026-06-15T07:04:18.657305+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904215+09:00"
     },
     {
       "id": "a632a518d5ea3c87",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560786&p_course_no2=LE312&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-15T07:04:18.657310+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904219+09:00"
     },
     {
       "id": "057673d9656e48f5",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260417_s01.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657321+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904227+09:00"
     },
     {
       "id": "6b51c2d300bc872b",
@@ -117,7 +117,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260519_s01.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657327+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904232+09:00"
+    },
+    {
+      "id": "5f09e22371775765",
+      "title": "秩父鉄道 5000系装飾変更記念乗車券 第2弾 発売",
+      "date": "2026-06-20",
+      "location": "",
+      "description": "秩父鉄道は、「5000系電車装飾変更記念乗車券」の第2弾を発売。C型硬券片道乗車券3枚と台紙のセットで、発売額は1,500円。発売期間は、2026年6月20日（土）～8月31日（月）。発売箇所は、羽生、熊谷、寄居、長瀞、秩父、御花畑の各駅窓",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.chichibu-railway.co.jp/blog/news/ticket260620/",
+      "fetched_at": "2026-06-16T07:59:16.904236+09:00"
+    },
+    {
+      "id": "b1c3460f8f83f1f8",
+      "title": "東武 ダイヤ作成体験・スカイツリートレイン乗車イベント",
+      "date": "2026-06-20",
+      "location": "",
+      "description": "東武鉄道は、事前申込制イベント「プロの\"スジ屋\"が教える『ダイヤ作成体験教室』～作成したダイヤに実際に乗車して体験できる特典付！～」を開催。開催日時は、2026年6月20日（土）9:00～13:00頃。集合場所（時間）は、南栗橋駅（8:40",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://tobumall.jp/shop/g/gTT-260401/",
+      "fetched_at": "2026-06-16T07:59:16.904240+09:00"
     },
     {
       "id": "214cf539da38d6dd",
@@ -130,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657333+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904244+09:00"
     },
     {
       "id": "6eb16958fa5892f6",
@@ -143,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560866&p_course_no2=LE313&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-15T07:04:18.657338+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904247+09:00"
     },
     {
       "id": "b39681c5b8244ae9",
@@ -156,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=599",
-      "fetched_at": "2026-06-15T07:04:18.657343+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904251+09:00"
     },
     {
       "id": "3c8b46958eba5a53",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-15T07:04:18.657349+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904255+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -182,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657355+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904259+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -195,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-15T07:04:18.657360+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904263+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -208,7 +234,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-15T07:04:18.657364+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904267+09:00"
+    },
+    {
+      "id": "e2a2da1b2a8ed38e",
+      "title": "鹿島臨海鉄道・秩父鉄道・三岐鉄道・水島臨海鉄道 4社連絡スタンプラリー",
+      "date": "2026-07-01",
+      "location": "",
+      "description": "鹿島臨海鉄道、秩父鉄道、三岐鉄道、水島臨海鉄道は、「貨物・旅客 4社連絡スタンプラリー」を開催。開催期間は、2026年7月1日（水）～2027年1月31日（日）。スタンプスポットは、大洗駅売店、秩父、東藤原、倉敷市の各駅。各スポットのほか、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
+      "fetched_at": "2026-06-16T07:59:16.904271+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -221,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-15T07:04:18.657367+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904274+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -234,7 +273,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-15T07:04:18.657370+09:00"
+      "fetched_at": "2026-06-16T07:59:16.904278+09:00"
+    },
+    {
+      "id": "01dd5b6764758b4f",
+      "title": "福島交通 1000系 特別撮影会",
+      "date": "2026-07-04",
+      "location": "",
+      "description": "福島交通は、事前申込制イベントとして、1000系の特別撮影会を開催。開催日時は、2026年7月4日（土）15:00～18:00。開催場所は、桜水車両基地。1107編成（レトロデザイン車両）と通常車両を展示。通常不使用の方向幕、ヘッドマーク、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://ii-den.jp/news.php?id=152",
+      "fetched_at": "2026-06-16T07:59:16.904281+09:00"
     }
   ]
 }
