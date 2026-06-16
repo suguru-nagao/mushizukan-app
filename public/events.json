@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-16T07:59:16.904284+09:00",
-  "count": 22,
+  "generated_at": "2026-06-17T07:51:03.125943+09:00",
+  "count": 23,
   "events": [
     {
       "id": "fed0610e7b44bbf7",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/02/19/2026%2002%2019%2002.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904186+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125821+09:00"
     },
     {
       "id": "c19e2e4736c322f7",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/06/11/20260611_Childrens_Adventure_Ticket_Summer_Vacation_Special_Event.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904196+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125858+09:00"
     },
     {
       "id": "f36e6c1b2ec966f0",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260402_s01.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904202+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125868+09:00"
     },
     {
       "id": "907d8c1ea40d00d7",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-16T07:59:16.904207+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125872+09:00"
     },
     {
       "id": "ff94e15b7fb2f67b",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288418_8032.html",
-      "fetched_at": "2026-06-16T07:59:16.904211+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125875+09:00"
     },
     {
       "id": "9a323a78cbc8ed7c",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0095",
-      "fetched_at": "2026-06-16T07:59:16.904215+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125879+09:00"
     },
     {
       "id": "a632a518d5ea3c87",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560786&p_course_no2=LE312&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-16T07:59:16.904219+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125883+09:00"
     },
     {
       "id": "057673d9656e48f5",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260417_s01.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904227+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125891+09:00"
     },
     {
       "id": "6b51c2d300bc872b",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260519_s01.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904232+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125896+09:00"
     },
     {
       "id": "5f09e22371775765",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/ticket260620/",
-      "fetched_at": "2026-06-16T07:59:16.904236+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125900+09:00"
     },
     {
       "id": "b1c3460f8f83f1f8",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tobumall.jp/shop/g/gTT-260401/",
-      "fetched_at": "2026-06-16T07:59:16.904240+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125904+09:00"
     },
     {
       "id": "214cf539da38d6dd",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904244+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125907+09:00"
     },
     {
       "id": "6eb16958fa5892f6",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560866&p_course_no2=LE313&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-16T07:59:16.904247+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125910+09:00"
     },
     {
       "id": "b39681c5b8244ae9",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=599",
-      "fetched_at": "2026-06-16T07:59:16.904251+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125913+09:00"
     },
     {
       "id": "3c8b46958eba5a53",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-16T07:59:16.904255+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125916+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904259+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125920+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904263+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125923+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -234,7 +234,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-16T07:59:16.904267+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125926+09:00"
+    },
+    {
+      "id": "6b42146e21f475cd",
+      "title": "伊豆急行 8000系録音・撮影会ツアー",
+      "date": "2026-06-27",
+      "location": "伊豆高原駅",
+      "description": "伊豆急行は、事前申込制企画「伊豆急8000系録音ツアー／検査場内撮影会」を開催。開催日は、2026年6月27日（土）。集合場所は伊豆高原駅改札前で、9:00～10:00に受付。8000系TB-7編成による団体臨時列車に乗車。乗車区間は、伊豆",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
+      "fetched_at": "2026-06-17T07:51:03.125929+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-16T07:59:16.904271+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125932+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-16T07:59:16.904274+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125935+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-16T07:59:16.904278+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125938+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-16T07:59:16.904281+09:00"
+      "fetched_at": "2026-06-17T07:51:03.125941+09:00"
     }
   ]
 }
