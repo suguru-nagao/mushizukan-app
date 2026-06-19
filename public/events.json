@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-06-19T07:53:12.423835+09:00",
-  "count": 23,
+  "generated_at": "2026-06-20T06:59:59.736392+09:00",
+  "count": 22,
   "events": [
-    {
-      "id": "f36e6c1b2ec966f0",
-      "title": "ひなび 山形～寒河江間",
-      "date": "2026-06-19",
-      "location": "",
-      "description": "JR東日本東北本部、JR東日本びゅうツーリズム＆セールスは、HB-E300系「ひなび」による団体臨時列車の乗車ツアーを開催。旅行日は、2026年6月19日（金）の日帰り。「ひなび」の乗車区間は、山形（9:32頃発）～寒河江（10:20頃着）",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/sendai/20260402_s01.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423762+09:00"
-    },
     {
       "id": "907d8c1ea40d00d7",
       "title": "白山総合車両所 見学ツアー",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-19T07:53:12.423772+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736281+09:00"
     },
     {
       "id": "ff94e15b7fb2f67b",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288418_8032.html",
-      "fetched_at": "2026-06-19T07:53:12.423776+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736298+09:00"
     },
     {
       "id": "9a323a78cbc8ed7c",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0095",
-      "fetched_at": "2026-06-19T07:53:12.423779+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736305+09:00"
     },
     {
       "id": "a632a518d5ea3c87",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560786&p_course_no2=LE312&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-19T07:53:12.423782+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736311+09:00"
     },
     {
       "id": "057673d9656e48f5",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260417_s01.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423784+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736317+09:00"
     },
     {
       "id": "6b51c2d300bc872b",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/sendai/20260519_s01.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423788+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736323+09:00"
     },
     {
       "id": "5f09e22371775765",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/ticket260620/",
-      "fetched_at": "2026-06-19T07:53:12.423795+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736329+09:00"
     },
     {
       "id": "b1c3460f8f83f1f8",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tobumall.jp/shop/g/gTT-260401/",
-      "fetched_at": "2026-06-19T07:53:12.423799+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736340+09:00"
     },
     {
       "id": "214cf539da38d6dd",
@@ -130,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423802+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736346+09:00"
     },
     {
       "id": "6eb16958fa5892f6",
@@ -143,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560866&p_course_no2=LE313&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-19T07:53:12.423804+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736352+09:00"
     },
     {
       "id": "b39681c5b8244ae9",
@@ -156,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=599",
-      "fetched_at": "2026-06-19T07:53:12.423807+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736357+09:00"
     },
     {
       "id": "3c8b46958eba5a53",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-19T07:53:12.423809+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736360+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423811+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736363+09:00"
     },
     {
       "id": "94b7fc736323575c",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-19T07:53:12.423814+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736366+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -208,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423817+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736369+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -221,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-19T07:53:12.423819+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736372+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -234,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-19T07:53:12.423822+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736375+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -247,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423824+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736378+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -260,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-19T07:53:12.423826+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736381+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -273,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-19T07:53:12.423829+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736384+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -286,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-19T07:53:12.423831+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736387+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -299,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-19T07:53:12.423834+09:00"
+      "fetched_at": "2026-06-20T06:59:59.736390+09:00"
     }
   ]
 }
