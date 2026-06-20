@@ -1,111 +1,7 @@
 {
-  "generated_at": "2026-06-20T06:59:59.736392+09:00",
-  "count": 22,
+  "generated_at": "2026-06-21T07:01:45.947152+09:00",
+  "count": 18,
   "events": [
-    {
-      "id": "907d8c1ea40d00d7",
-      "title": "白山総合車両所 見学ツアー",
-      "date": "2026-06-20",
-      "location": "白山総合車両所",
-      "description": "日本旅行は、事前申込制ツアー「北陸新幹線 ヒミツ発見！貸切回送列車で潜入 白山総合車両所見学 日帰り」を開催。旅行日は、2026年6月20日（土）の日帰り。集合場所（時間）は金沢駅（12:00）。専用回送列車で移動し、白山総合車両所を見学。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_hakusan/",
-      "fetched_at": "2026-06-20T06:59:59.736281+09:00"
-    },
-    {
-      "id": "ff94e15b7fb2f67b",
-      "title": "名鉄 EL303号 さよなら撮影会イベント",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "名古屋鉄道は、事前申込制企画として、電気機関車さよなら記念撮影会「新旧牽引車展示会～さらばデキ、頼むぞ舞力～」を開催。開催日は2026年6月20日（土）で、9:40～11:20、12:40～14:20、14:50～16:30の3回開催。開催",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.meitetsu.co.jp/plan/event/detail/1288418_8032.html",
-      "fetched_at": "2026-06-20T06:59:59.736298+09:00"
-    },
-    {
-      "id": "9a323a78cbc8ed7c",
-      "title": "鶴見線 ナイトツアー",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制ツアーとして、「鶴見線ナイトツアー ―消灯運行で味わう工場風景と海芝浦の夜―」を開催。開催日は、2026年6月20日（土）。団体臨時列車「鶴見線ナイトツアー号」に乗車。乗車区間は、鶴見（17",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0095",
-      "fetched_at": "2026-06-20T06:59:59.736305+09:00"
-    },
-    {
-      "id": "a632a518d5ea3c87",
-      "title": "東武 10030型 近鉄風ラッピング電車 北千住～葛生・赤城間 乗車ツアー",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "クラブツーリズムは、事前申込制ツアー「東武10030型近鉄標準色風ラッピング電車2両編成で行く 葛生・赤城 日帰りの旅」を開催。旅行日は、2026年6月20日（土）の日帰り。東武10030型の近鉄標準色風ラッピング電車（11267編成）によ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://tour.club-t.com/tour/detail?p_course_no=1560786&p_course_no2=LE312&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-20T06:59:59.736311+09:00"
-    },
-    {
-      "id": "057673d9656e48f5",
-      "title": "令和版 急行いなわしろ号",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "JR東日本東北本部、JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、団体臨時列車「令和版 急行いなわしろ号」の乗車ツアーを開催。キハ110系2両編成による団体臨時列車の乗車ツアー。運転日と運転区間は、2026年6月20日（土）",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/sendai/20260417_s01.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736317+09:00"
-    },
-    {
-      "id": "6b51c2d300bc872b",
-      "title": "郡山駅 ナイトツアー",
-      "date": "2026-06-20",
-      "location": "郡山駅",
-      "description": "JR東日本東北本部、新幹線統括本部は、事前申込制イベント「こおりやまえきナイトツアー」を開催。開催日時は、2026年6月20日（土）23:00～翌4:30。開催場所は、郡山駅。新幹線の保線業務体験、線路上での新幹線車両撮影、新幹線鵜t年代・",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/sendai/20260519_s01.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736323+09:00"
-    },
-    {
-      "id": "5f09e22371775765",
-      "title": "秩父鉄道 5000系装飾変更記念乗車券 第2弾 発売",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "秩父鉄道は、「5000系電車装飾変更記念乗車券」の第2弾を発売。C型硬券片道乗車券3枚と台紙のセットで、発売額は1,500円。発売期間は、2026年6月20日（土）～8月31日（月）。発売箇所は、羽生、熊谷、寄居、長瀞、秩父、御花畑の各駅窓",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.chichibu-railway.co.jp/blog/news/ticket260620/",
-      "fetched_at": "2026-06-20T06:59:59.736329+09:00"
-    },
-    {
-      "id": "b1c3460f8f83f1f8",
-      "title": "東武 ダイヤ作成体験・スカイツリートレイン乗車イベント",
-      "date": "2026-06-20",
-      "location": "",
-      "description": "東武鉄道は、事前申込制イベント「プロの\"スジ屋\"が教える『ダイヤ作成体験教室』～作成したダイヤに実際に乗車して体験できる特典付！～」を開催。開催日時は、2026年6月20日（土）9:00～13:00頃。集合場所（時間）は、南栗橋駅（8:40",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://tobumall.jp/shop/g/gTT-260401/",
-      "fetched_at": "2026-06-20T06:59:59.736340+09:00"
-    },
     {
       "id": "214cf539da38d6dd",
       "title": "京成 京急600形で巡る京成線ツアー",
@@ -117,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736346+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947037+09:00"
     },
     {
       "id": "6eb16958fa5892f6",
@@ -130,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://tour.club-t.com/tour/detail?p_course_no=1560866&p_course_no2=LE313&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-20T06:59:59.736352+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947051+09:00"
     },
     {
       "id": "b39681c5b8244ae9",
@@ -143,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=599",
-      "fetched_at": "2026-06-20T06:59:59.736357+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947058+09:00"
     },
     {
       "id": "3c8b46958eba5a53",
@@ -156,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-20T06:59:59.736360+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947077+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -169,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736363+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947085+09:00"
     },
     {
       "id": "94b7fc736323575c",
@@ -182,7 +78,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-20T06:59:59.736366+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947093+09:00"
+    },
+    {
+      "id": "3e9fe84679e0584a",
+      "title": "西武 栗山巧選手ラストシーズン記念乗車券 第2弾 発売",
+      "date": "2026-06-26",
+      "location": "",
+      "description": "西武鉄道と西武ライオンズは、栗山巧選手のラストシーズン応援企画として、「栗山巧 Legend History 1DayPass」の第2弾「キャプテンの証」を発売。大人用の西武線1日フリーきっぷ2枚と台紙のセットで、発売額は3,000円。発売",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seiburailway.jp/file.jsp?id=27879",
+      "fetched_at": "2026-06-21T07:01:45.947098+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -195,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736369+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947115+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -208,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-20T06:59:59.736372+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947120+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -221,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-20T06:59:59.736375+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947124+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -234,7 +143,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736378+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947128+09:00"
+    },
+    {
+      "id": "fdd51929cad87f91",
+      "title": "いすみ鉄道 キハ52-125 撮影会",
+      "date": "2026-06-27",
+      "location": "",
+      "description": "いすみ鉄道は、キハ52-125の撮影会を開催。開催日時は、2026年6月27日（土）11:15～13:25。開催場所は、大多喜駅留置線。2010年開催の撮影会を再現し、外観・車内公開、方向幕設置、ヘッドマーク掲出などを実施。参加費は12,5",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://isumirail.co.jp/blog/archives/11236",
+      "fetched_at": "2026-06-21T07:01:45.947131+09:00"
+    },
+    {
+      "id": "0b3744f2b13de7ce",
+      "title": "大井川鐵道 夜行急行",
+      "date": "2026-06-27",
+      "location": "",
+      "description": "大井川鐵道は、事前申込制企画として、団体臨時列車「夜行急行」の乗車ツアーを開催。出発日は、2026年6月27日（土）。集合場所（受付時間）は、新金谷駅（17:00～18:00頃）。夜行列車の運転区間は、新金谷（18:15頃発）～家山（翌6:",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://daitetsu.jp/archives/313885",
+      "fetched_at": "2026-06-21T07:01:45.947134+09:00"
+    },
+    {
+      "id": "5fb9c7b4cf64c502",
+      "title": "えちぜん鉄道 初夏の撮影＆車庫見学ツアー",
+      "date": "2026-06-27",
+      "location": "福井駅",
+      "description": "えちぜん鉄道は、事前申込制企画として、「～第1回～ 初夏の撮影＆車庫見学ツアー」を開催。開催日は、2026年6月27日（土）。集合場所は福井駅で、9:00に集合。徒歩で日之出公園へ移動し、「恐竜列車」を撮影。終了後、新福井～福井口を電車で移",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
+      "fetched_at": "2026-06-21T07:01:45.947137+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -247,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-20T06:59:59.736381+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947140+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -260,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-20T06:59:59.736384+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947144+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -273,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-20T06:59:59.736387+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947147+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -286,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-20T06:59:59.736390+09:00"
+      "fetched_at": "2026-06-21T07:01:45.947150+09:00"
     }
   ]
 }
