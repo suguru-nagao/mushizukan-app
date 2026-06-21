@@ -1,46 +1,7 @@
 {
-  "generated_at": "2026-06-21T07:01:45.947152+09:00",
+  "generated_at": "2026-06-22T07:09:21.809158+09:00",
   "count": 18,
   "events": [
-    {
-      "id": "214cf539da38d6dd",
-      "title": "京成 京急600形で巡る京成線ツアー",
-      "date": "2026-06-21",
-      "location": "",
-      "description": "コミュニティー京成は、事前申込制ツアーとして、「京急電鉄車両で巡る京成線ツアー」を開催。開催日は、2026年6月21日（日）。京急600形による貸切列車に乗車するツアー。乗車区間は、京成上野（9:00頃発）～東成田（10:15頃着）～宗吾車",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/mc3Npam4.pdf",
-      "fetched_at": "2026-06-21T07:01:45.947037+09:00"
-    },
-    {
-      "id": "6eb16958fa5892f6",
-      "title": "東武 10030型 近鉄風ラッピング電車 北千住～葛生・伊勢崎間 乗車ツアー",
-      "date": "2026-06-21",
-      "location": "",
-      "description": "クラブツーリズムは、事前申込制ツアー「東武10030型近鉄標準色風ラッピング電車2両編成で行く 葛生・伊勢崎 日帰りの旅」を開催。旅行日は、2026年6月21日（日）の日帰り。東武10030型の近鉄標準色風ラッピング電車（11267編成）に",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://tour.club-t.com/tour/detail?p_course_no=1560866&p_course_no2=LE313&p_company_cd=1002000&p_from=800000",
-      "fetched_at": "2026-06-21T07:01:45.947051+09:00"
-    },
-    {
-      "id": "b39681c5b8244ae9",
-      "title": "黒部峡谷鉄道 凸型機関車 猫又駅・出平駅など 途中下車・撮影ツアー",
-      "date": "2026-06-21",
-      "location": "猫又駅",
-      "description": "黒部峡谷鉄道は、事前申込制ツアー「凸形機関車で行く途中下車の旅 ～ご自身が選ぶ撮影プラン編～」を開催。開催日は、2026年6月21日（日）。集合場所（受付時間）は、黒部川電気記念館（9:10～9:30）。一般旅客列車で猫又駅へ移動後、工事用",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.kurotetu.co.jp/news-detail?post=599",
-      "fetched_at": "2026-06-21T07:01:45.947058+09:00"
-    },
     {
       "id": "3c8b46958eba5a53",
       "title": "九州鉄道記念館 企画展 九州新幹線15周年企画展 開催",
@@ -52,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-21T07:01:45.947077+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809083+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -65,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-21T07:01:45.947085+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809094+09:00"
     },
     {
       "id": "94b7fc736323575c",
@@ -78,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-21T07:01:45.947093+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809100+09:00"
     },
     {
       "id": "3e9fe84679e0584a",
@@ -91,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=27879",
-      "fetched_at": "2026-06-21T07:01:45.947098+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809104+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -104,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-21T07:01:45.947115+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809107+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -117,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-21T07:01:45.947120+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809111+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -130,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-21T07:01:45.947124+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809114+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -143,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-21T07:01:45.947128+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809124+09:00"
     },
     {
       "id": "fdd51929cad87f91",
@@ -156,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-21T07:01:45.947131+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809129+09:00"
     },
     {
       "id": "0b3744f2b13de7ce",
@@ -169,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/313885",
-      "fetched_at": "2026-06-21T07:01:45.947134+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809132+09:00"
     },
     {
       "id": "5fb9c7b4cf64c502",
@@ -182,7 +143,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
-      "fetched_at": "2026-06-21T07:01:45.947137+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809135+09:00"
+    },
+    {
+      "id": "75561fd3df73a58d",
+      "title": "徳島駅 クレメントプラザ トレインフェスタ",
+      "date": "2026-06-27",
+      "location": "徳島駅",
+      "description": "JR四国は、3600系のデビューを記念して、「クレメントプラザ トレインフェスタ」を開催。開催日時は、2026年6月27日（土）10:00～17:00。開催場所は、徳島駅クレメントプラザ2階特設会場。鉄道グッズ・部品販売、駅弁販売、「すまい",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/16/20260616%2001.pdf",
+      "fetched_at": "2026-06-22T07:09:21.809138+09:00"
+    },
+    {
+      "id": "3557e51415c602c0",
+      "title": "小田急 相武台車庫 1000形アレグラ塗装など 撮影会",
+      "date": "2026-06-27",
+      "location": "相武台前駅",
+      "description": "小田急電鉄は、事前申込制企画として、相武台車庫での撮影会を開催。開催日は2026年6月27日（土）で、午前の部（11:00～12:00）、午後の部（13:30～14:30）の2回開催。集合場所は相武台前駅改札口前で、各回45分前集合。展示車",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu-travel.co.jp/special/oer/redblue_photo.html",
+      "fetched_at": "2026-06-22T07:09:21.809142+09:00"
+    },
+    {
+      "id": "d8a4e5231d87260b",
+      "title": "富士山麓電気鉄道 河口湖駅 電車運転・車掌体験イベント",
+      "date": "2026-06-27",
+      "location": "河口湖駅",
+      "description": "富士山麓電気鉄道は、事前申込制企画として、電車の運転・車掌体験イベントを開催。開催日は2026年6月27日（土）で、9:30～12:30頃、13:30～16:30頃の2回開催。開催場所は、河口湖駅。筆記試験（内容は子ども向け）、仕業点呼体験",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1153",
+      "fetched_at": "2026-06-22T07:09:21.809145+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-21T07:01:45.947140+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809147+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-21T07:01:45.947144+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809150+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-21T07:01:45.947147+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809153+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -234,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-21T07:01:45.947150+09:00"
+      "fetched_at": "2026-06-22T07:09:21.809156+09:00"
     }
   ]
 }
