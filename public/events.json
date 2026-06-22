@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-22T07:09:21.809158+09:00",
-  "count": 18,
+  "generated_at": "2026-06-23T07:43:42.697433+09:00",
+  "count": 20,
   "events": [
     {
       "id": "3c8b46958eba5a53",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-22T07:09:21.809083+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697350+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-22T07:09:21.809094+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697362+09:00"
     },
     {
       "id": "94b7fc736323575c",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-22T07:09:21.809100+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697367+09:00"
     },
     {
       "id": "3e9fe84679e0584a",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=27879",
-      "fetched_at": "2026-06-22T07:09:21.809104+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697371+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-22T07:09:21.809107+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697374+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-22T07:09:21.809111+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697378+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-22T07:09:21.809114+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697382+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-22T07:09:21.809124+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697391+09:00"
     },
     {
       "id": "fdd51929cad87f91",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-22T07:09:21.809129+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697396+09:00"
     },
     {
       "id": "0b3744f2b13de7ce",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/313885",
-      "fetched_at": "2026-06-22T07:09:21.809132+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697400+09:00"
     },
     {
       "id": "5fb9c7b4cf64c502",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
-      "fetched_at": "2026-06-22T07:09:21.809135+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697404+09:00"
     },
     {
       "id": "75561fd3df73a58d",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/16/20260616%2001.pdf",
-      "fetched_at": "2026-06-22T07:09:21.809138+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697407+09:00"
     },
     {
       "id": "3557e51415c602c0",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/redblue_photo.html",
-      "fetched_at": "2026-06-22T07:09:21.809142+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697410+09:00"
     },
     {
       "id": "d8a4e5231d87260b",
@@ -182,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1153",
-      "fetched_at": "2026-06-22T07:09:21.809145+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697413+09:00"
+    },
+    {
+      "id": "cafeaf84f79aabf9",
+      "title": "直方車両センター キハ40形・キハ147形 車両見学会",
+      "date": "2026-06-27",
+      "location": "直方車両センター",
+      "description": "JR九州は、事前申込制企画として、「直方車両センターキハ40形・キハ147形車両見学会」を開催。開催日は2026年6月27日（土）で、10:30～12:30、12:30～14:30の2回開催。開催場所は、直方車両センター。キハ40形・キハ1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1222415",
+      "fetched_at": "2026-06-23T07:43:42.697416+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-22T07:09:21.809147+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697419+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-22T07:09:21.809150+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697422+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-22T07:09:21.809153+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697425+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -234,7 +247,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-22T07:09:21.809156+09:00"
+      "fetched_at": "2026-06-23T07:43:42.697428+09:00"
+    },
+    {
+      "id": "f10fe4bd1e1e2368",
+      "title": "小田急 もころん号プラレール発売記念 団体臨時列車乗車ツアー",
+      "date": "2026-07-12",
+      "location": "唐木田駅",
+      "description": "小田急電鉄は、「もころん」3周年イベントの一環として、「もころん号」プラレール発売記念の団体臨時列車乗車ツアーを開催。開催日は、2026年7月12日（日）。集合場所は唐木田駅改札前で、受付時間は7:40～8:00。「もころん号」による団体臨",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
+      "fetched_at": "2026-06-23T07:43:42.697431+09:00"
     }
   ]
 }
