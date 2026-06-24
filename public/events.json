@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-06-24T07:09:04.006033+09:00",
-  "count": 21,
+  "generated_at": "2026-06-25T07:11:17.983423+09:00",
+  "count": 24,
   "events": [
     {
-      "id": "3c8b46958eba5a53",
-      "title": "九州鉄道記念館 企画展 九州新幹線15周年企画展 開催",
-      "date": "2026-06-24",
+      "id": "63a29eb59761bc19",
+      "title": "2026年6月25日の鉄道イベント",
+      "date": "2026-06-25",
       "location": "",
-      "description": "九州鉄道記念館は、企画展「九州新幹線15周年企画展」を開催。開催期間は、2026年6月24日（水）～8月20日（木）（最終日は14:00まで）。開催場所は、同館本館2階 企画展示場。九州新幹線（鹿児島ルート）開業から西九州新幹線開業までの軌",
+      "description": "検測運転中の「ドクターイエロー」に乗車できる特別ツアー、7月26日・27日に開催！ ただしお値段「55万円」",
       "prefecture": "",
       "city": "",
       "themeId": "train",
       "source": "鉄道コム",
-      "url": "http://www.k-rhm.jp/news/detail.php?id=341",
-      "fetched_at": "2026-06-24T07:09:04.005948+09:00"
+      "url": "https://www.tetsudo.com/event/calendar/20260625/",
+      "fetched_at": "2026-06-25T07:11:17.983296+09:00"
     },
     {
       "id": "a0ee446a68e12625",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-24T07:09:04.005959+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983311+09:00"
     },
     {
       "id": "94b7fc736323575c",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-24T07:09:04.005964+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983318+09:00"
     },
     {
       "id": "3e9fe84679e0584a",
@@ -52,7 +52,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=27879",
-      "fetched_at": "2026-06-24T07:09:04.005968+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983323+09:00"
+    },
+    {
+      "id": "08ce059bb2b9c52d",
+      "title": "2026年6月26日の鉄道イベント",
+      "date": "2026-06-26",
+      "location": "",
+      "description": "検測運転中の「ドクターイエロー」に乗車できる特別ツアー、7月26日・27日に開催！ ただしお値段「55万円」",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tetsudo.com/event/calendar/20260626/",
+      "fetched_at": "2026-06-25T07:11:17.983328+09:00"
     },
     {
       "id": "d2d9700d8e544af0",
@@ -65,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-24T07:09:04.005972+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983334+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-24T07:09:04.005976+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983340+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-24T07:09:04.005979+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983352+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-24T07:09:04.005987+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983359+09:00"
     },
     {
       "id": "fdd51929cad87f91",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-24T07:09:04.005992+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983365+09:00"
     },
     {
       "id": "0b3744f2b13de7ce",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/313885",
-      "fetched_at": "2026-06-24T07:09:04.005996+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983371+09:00"
     },
     {
       "id": "5fb9c7b4cf64c502",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
-      "fetched_at": "2026-06-24T07:09:04.005999+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983376+09:00"
     },
     {
       "id": "75561fd3df73a58d",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/16/20260616%2001.pdf",
-      "fetched_at": "2026-06-24T07:09:04.006002+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983382+09:00"
     },
     {
       "id": "3557e51415c602c0",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/redblue_photo.html",
-      "fetched_at": "2026-06-24T07:09:04.006006+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983387+09:00"
     },
     {
       "id": "d8a4e5231d87260b",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1153",
-      "fetched_at": "2026-06-24T07:09:04.006009+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983392+09:00"
     },
     {
       "id": "cafeaf84f79aabf9",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1222415",
-      "fetched_at": "2026-06-24T07:09:04.006012+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983397+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -208,7 +221,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-24T07:09:04.006015+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983400+09:00"
+    },
+    {
+      "id": "2ca3b9c1dea349d9",
+      "title": "JR東海 夏の乗り放題きっぷ 発売",
+      "date": "2026-07-03",
+      "location": "",
+      "description": "JR東海は、「JR東海☆夏の乗り放題きっぷ」を発売。JR東海の在来線全線が2日間乗り放題。新幹線、特急列車、急行列車は利用不可。発売額は、大人3,900円、子ども1,900円。新幹線予約サービス「EXサービス」で、熱海～米原間のいずれかの駅",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
+      "fetched_at": "2026-06-25T07:11:17.983403+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -221,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-24T07:09:04.006018+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983406+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -234,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-24T07:09:04.006021+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983409+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -247,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-24T07:09:04.006024+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983411+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -260,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-06-24T07:09:04.006027+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983414+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -273,7 +299,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-06-24T07:09:04.006031+09:00"
+      "fetched_at": "2026-06-25T07:11:17.983418+09:00"
+    },
+    {
+      "id": "68010f931493d6ab",
+      "title": "東武 スカイツリートレイン ケージレス宿泊ツアー",
+      "date": "2026-07-25",
+      "location": "",
+      "description": "東武トップツアーズは、「スカイツリートレインで行く！愛犬と日光・東武ワールドスクウェアの夏旅」を開催。旅行日は、2026年7月25日（土）～26日（日）。愛犬と乗車可能な団体臨時列車に乗車するツアー。団体臨時列車の運転区間は、25日がとうき",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
+      "fetched_at": "2026-06-25T07:11:17.983421+09:00"
     }
   ]
 }
