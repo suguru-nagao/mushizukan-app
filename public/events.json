@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-06-26T07:17:32.248038+09:00",
-  "count": 27,
+  "generated_at": "2026-06-27T07:06:33.143222+09:00",
+  "count": 26,
   "events": [
-    {
-      "id": "a0ee446a68e12625",
-      "title": "新鳥栖駅 サマーフェスタ",
-      "date": "2026-06-26",
-      "location": "新鳥栖駅",
-      "description": "JR九州は、「鳥栖サマーフェスタ2026」を開催。開催日時は、2026年6月26日（金）17:00～21:00（体験は20:00まで）。開催場所は、新鳥栖駅西口広場。雨天決行、荒天中止。フード・ドリンク販売のほか、有料体験イベントとして、射",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/06/03/20260603_shin_tosu_summer_festa.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247924+09:00"
-    },
-    {
-      "id": "94b7fc736323575c",
-      "title": "西武 サステナ車両7000系 デビュー記念乗車券 発売",
-      "date": "2026-06-26",
-      "location": "",
-      "description": "西武鉄道は、「サステナ車両7000系 デビュー記念乗車券」を発売。大人用西武線1日フリーきっぷと台紙のセットで、発売額は2,000円。発売期間は、2026年6月26日（金）～11月30日（月）。発売箇所は、小手指駅お客さまご案内カウンター。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/newsroom/news/20260618_7000kinen",
-      "fetched_at": "2026-06-26T07:17:32.247939+09:00"
-    },
-    {
-      "id": "3e9fe84679e0584a",
-      "title": "西武 栗山巧選手ラストシーズン記念乗車券 第2弾 発売",
-      "date": "2026-06-26",
-      "location": "",
-      "description": "西武鉄道と西武ライオンズは、栗山巧選手のラストシーズン応援企画として、「栗山巧 Legend History 1DayPass」の第2弾「キャプテンの証」を発売。大人用の西武線1日フリーきっぷ2枚と台紙のセットで、発売額は3,000円。発売",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/file.jsp?id=27879",
-      "fetched_at": "2026-06-26T07:17:32.247947+09:00"
-    },
-    {
-      "id": "08ce059bb2b9c52d",
-      "title": "2026年6月26日の鉄道イベント",
-      "date": "2026-06-26",
-      "location": "",
-      "description": "検測運転中の「ドクターイエロー」に乗車できる特別ツアー、7月26日・27日に開催！ ただしお値段「55万円」",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/calendar/20260626/",
-      "fetched_at": "2026-06-26T07:17:32.247955+09:00"
-    },
-    {
-      "id": "c732ccc16fa27f8a",
-      "title": "釧網線フリーパス 発売",
-      "date": "2026-06-26",
-      "location": "北海道",
-      "description": "JR北海道釧路支社は、電子チケット「釧網線フリーパス」を発売。釧路～網走間で、普通・快速列車の普通車自由席が、連続3日間乗り放題。発売額は、大人5,400円、子ども2,700円。発売期間は2026年6月26日（金）10:00～2027年2月",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260625_KO_senmohanasaki.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247960+09:00"
-    },
-    {
-      "id": "4fbf43c6e0cc41ac",
-      "title": "地域探索鉄道花咲線フリーパス 発売",
-      "date": "2026-06-26",
-      "location": "北海道",
-      "description": "JR北海道釧路支社は、電子チケット「地域探索鉄道花咲線フリーパス」を発売。釧路～根室間で、普通・快速列車の普通車自由席が、連続3日間乗り放題。発売額は、大人4,000円、子ども2,000円。発売期間は2026年6月26日（金）10:00～2",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260625_KO_senmohanasaki.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247965+09:00"
-    },
     {
       "id": "d2d9700d8e544af0",
       "title": "3600系 営業運転開始記念入場券 発売",
@@ -91,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247969+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142831+09:00"
     },
     {
       "id": "84556da4f9faaaa1",
@@ -104,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-26T07:17:32.247977+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142845+09:00"
     },
     {
       "id": "6b42146e21f475cd",
@@ -117,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-26T07:17:32.247981+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142852+09:00"
     },
     {
       "id": "9559a5dbdfbccd7f",
@@ -130,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247985+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142859+09:00"
     },
     {
       "id": "fdd51929cad87f91",
@@ -143,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-26T07:17:32.247988+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142865+09:00"
     },
     {
       "id": "0b3744f2b13de7ce",
@@ -156,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/313885",
-      "fetched_at": "2026-06-26T07:17:32.247992+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142872+09:00"
     },
     {
       "id": "5fb9c7b4cf64c502",
@@ -169,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
-      "fetched_at": "2026-06-26T07:17:32.247995+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142877+09:00"
     },
     {
       "id": "75561fd3df73a58d",
@@ -182,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/16/20260616%2001.pdf",
-      "fetched_at": "2026-06-26T07:17:32.247997+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142889+09:00"
     },
     {
       "id": "3557e51415c602c0",
@@ -195,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/redblue_photo.html",
-      "fetched_at": "2026-06-26T07:17:32.248000+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142897+09:00"
     },
     {
       "id": "d8a4e5231d87260b",
@@ -208,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1153",
-      "fetched_at": "2026-06-26T07:17:32.248003+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142903+09:00"
     },
     {
       "id": "cafeaf84f79aabf9",
@@ -221,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1222415",
-      "fetched_at": "2026-06-26T07:17:32.248006+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142908+09:00"
     },
     {
       "id": "11efa9625bb39ad1",
@@ -234,7 +156,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-26T07:17:32.248009+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142914+09:00"
+    },
+    {
+      "id": "136c3bd1bdb0e3d7",
+      "title": "関鉄観光バス 鹿島鉄道記念館 見学ツアー",
+      "date": "2026-06-28",
+      "location": "",
+      "description": "関鉄観光バスは、事前申込制企画として、鹿島鉄道記念館の見学ツアーを開催。旅行日は、2026年6月28日（日）の日帰り。集合場所（受付時間）は、石岡駅東口（10:00～）。かしてつBRT（路線バス）に小川駅まで乗車後、貸切バスで鹿島鉄道記念館",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://kantetsu-bustour.com/information/2026/article-2764/",
+      "fetched_at": "2026-06-27T07:06:33.142919+09:00"
+    },
+    {
+      "id": "3ff98fda02fe7730",
+      "title": "うつくしま、ふくしまSATONO号",
+      "date": "2026-06-28",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、HB-E300系「SATONO」の団体臨時列車乗車ツアー「うつくしま、ふくしまSATONO号～クロージングSATONO～」を開催。旅行日は、2026年6月28日（日）の日帰り。SATONOの乗車区間は",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2531",
+      "fetched_at": "2026-06-27T07:06:33.142924+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -247,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-26T07:17:32.248013+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142929+09:00"
     },
     {
       "id": "2ca3b9c1dea349d9",
@@ -260,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
-      "fetched_at": "2026-06-26T07:17:32.248016+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142935+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -273,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-26T07:17:32.248018+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142940+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -286,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-26T07:17:32.248021+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142945+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -299,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-26T07:17:32.248024+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142950+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -312,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-06-26T07:17:32.248027+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142955+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -325,7 +273,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-06-26T07:17:32.248030+09:00"
+      "fetched_at": "2026-06-27T07:06:33.142962+09:00"
+    },
+    {
+      "id": "7b63ca4900f6c728",
+      "title": "山梨実験センター 超電導リニア 体験乗車イベント",
+      "date": "2026-07-23",
+      "location": "山梨県 山梨実験センター",
+      "description": "JR東海は、事前申込制イベントとして、「2026年第2回『超電導リニア体験乗車』」を開催。開催日は、2026年7月23日（木）、24日（金）、30日（木）、31日（金）。集合時間は、23日～30日が各日10:15、11:15、13:15、1",
+      "prefecture": "山梨県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
+      "fetched_at": "2026-06-27T07:06:33.143202+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -338,7 +299,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-06-26T07:17:32.248033+09:00"
+      "fetched_at": "2026-06-27T07:06:33.143209+09:00"
+    },
+    {
+      "id": "5b75ec0fa0128e71",
+      "title": "福井鉄道 レトラム貸切乗車・車両工場など見学ツアー",
+      "date": "2026-07-25",
+      "location": "神明駅",
+      "description": "福井鉄道は、事前申込制企画として、貸切電車ツアー「なるほど！ザ・ふくてつツアー」を開催。開催日時は、2026年7月25日（土）10:30～12:00。集合場所は神明駅。「レトラム」による貸切列車に乗車し、北府駅に移動。同駅到着後、車両工場な",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://fukutetsu.jp/newsDetail.php?num=701",
+      "fetched_at": "2026-06-27T07:06:33.143213+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -351,7 +325,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-06-26T07:17:32.248036+09:00"
+      "fetched_at": "2026-06-27T07:06:33.143216+09:00"
+    },
+    {
+      "id": "7c3e6e39e6745450",
+      "title": "しなの鉄道・小諸市動物園 小学生向け 仕事体験イベント",
+      "date": "2026-07-26",
+      "location": "",
+      "description": "しなの鉄道、小諸市動物園は、事前申込制企画として、小学生向けの仕事体験会を開催。開催日時は、2026年7月26日（日）、31日（金）、8月4日（火）の各日9:00～16:30。小諸駅にて、構内放送体験、起床装置体験など、小諸市動物園にて、飼",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
+      "fetched_at": "2026-06-27T07:06:33.143220+09:00"
     }
   ]
 }
