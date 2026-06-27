@@ -1,163 +1,7 @@
 {
-  "generated_at": "2026-06-27T07:06:33.143222+09:00",
-  "count": 26,
+  "generated_at": "2026-06-28T06:58:11.200061+09:00",
+  "count": 19,
   "events": [
-    {
-      "id": "d2d9700d8e544af0",
-      "title": "3600系 営業運転開始記念入場券 発売",
-      "date": "2026-06-27",
-      "location": "",
-      "description": "JR四国は、「3600系営業運転開始記念入場券」を発売。台紙一体型の入場券4枚セットで、発売額760円。発売期間は、2026年6月27日（土）10:00～2027年3月31日（水）。発売箇所は、徳島、阿波池田、阿南の各駅、JR四国ツアー徳島",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/09/20260609.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142831+09:00"
-    },
-    {
-      "id": "84556da4f9faaaa1",
-      "title": "名鉄 5700・5300系デビュー40周年記念乗車券など 発売",
-      "date": "2026-06-27",
-      "location": "",
-      "description": "名古屋鉄道は、「5700・5300系デビュー40周年 記念乗車券セット」を発売。大人片道乗車券2枚、台紙、デジタルLED式速度計ステッカーのセットで、発売額は1,300円。発売日時と発売箇所は、2026年6月27日（土）10:00～14:0",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.meitetsu.co.jp/plan/event/detail/1288486_8032.html",
-      "fetched_at": "2026-06-27T07:06:33.142845+09:00"
-    },
-    {
-      "id": "6b42146e21f475cd",
-      "title": "伊豆急行 8000系録音・撮影会ツアー",
-      "date": "2026-06-27",
-      "location": "伊豆高原駅",
-      "description": "伊豆急行は、事前申込制企画「伊豆急8000系録音ツアー／検査場内撮影会」を開催。開催日は、2026年6月27日（土）。集合場所は伊豆高原駅改札前で、9:00～10:00に受付。8000系TB-7編成による団体臨時列車に乗車。乗車区間は、伊豆",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=428182",
-      "fetched_at": "2026-06-27T07:06:33.142852+09:00"
-    },
-    {
-      "id": "9559a5dbdfbccd7f",
-      "title": "東武 SL大樹土津運行記念乗車券 発売",
-      "date": "2026-06-27",
-      "location": "にて発売",
-      "description": "東武鉄道は、「SL大樹『土津』運行記念乗車券」を発売。乗車券4枚と台紙のセットで、発売額は1,000円。20262026年6月27日（土）、28日（日）に会津田島駅前で開催のマルシェ会場にて発売。28日～7月27日（月）には、東武本線の38",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/sl_topics/20260617111126JsS6R5hB6JG9Lrsb1LpgCA.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142859+09:00"
-    },
-    {
-      "id": "fdd51929cad87f91",
-      "title": "いすみ鉄道 キハ52-125 撮影会",
-      "date": "2026-06-27",
-      "location": "",
-      "description": "いすみ鉄道は、キハ52-125の撮影会を開催。開催日時は、2026年6月27日（土）11:15～13:25。開催場所は、大多喜駅留置線。2010年開催の撮影会を再現し、外観・車内公開、方向幕設置、ヘッドマーク掲出などを実施。参加費は12,5",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-27T07:06:33.142865+09:00"
-    },
-    {
-      "id": "0b3744f2b13de7ce",
-      "title": "大井川鐵道 夜行急行",
-      "date": "2026-06-27",
-      "location": "",
-      "description": "大井川鐵道は、事前申込制企画として、団体臨時列車「夜行急行」の乗車ツアーを開催。出発日は、2026年6月27日（土）。集合場所（受付時間）は、新金谷駅（17:00～18:00頃）。夜行列車の運転区間は、新金谷（18:15頃発）～家山（翌6:",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://daitetsu.jp/archives/313885",
-      "fetched_at": "2026-06-27T07:06:33.142872+09:00"
-    },
-    {
-      "id": "5fb9c7b4cf64c502",
-      "title": "えちぜん鉄道 初夏の撮影＆車庫見学ツアー",
-      "date": "2026-06-27",
-      "location": "福井駅",
-      "description": "えちぜん鉄道は、事前申込制企画として、「～第1回～ 初夏の撮影＆車庫見学ツアー」を開催。開催日は、2026年6月27日（土）。集合場所は福井駅で、9:00に集合。徒歩で日之出公園へ移動し、「恐竜列車」を撮影。終了後、新福井～福井口を電車で移",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.echizen-tetudo.co.jp/news/2026/05/3253394.html",
-      "fetched_at": "2026-06-27T07:06:33.142877+09:00"
-    },
-    {
-      "id": "75561fd3df73a58d",
-      "title": "徳島駅 クレメントプラザ トレインフェスタ",
-      "date": "2026-06-27",
-      "location": "徳島駅",
-      "description": "JR四国は、3600系のデビューを記念して、「クレメントプラザ トレインフェスタ」を開催。開催日時は、2026年6月27日（土）10:00～17:00。開催場所は、徳島駅クレメントプラザ2階特設会場。鉄道グッズ・部品販売、駅弁販売、「すまい",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/06/16/20260616%2001.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142889+09:00"
-    },
-    {
-      "id": "3557e51415c602c0",
-      "title": "小田急 相武台車庫 1000形アレグラ塗装など 撮影会",
-      "date": "2026-06-27",
-      "location": "相武台前駅",
-      "description": "小田急電鉄は、事前申込制企画として、相武台車庫での撮影会を開催。開催日は2026年6月27日（土）で、午前の部（11:00～12:00）、午後の部（13:30～14:30）の2回開催。集合場所は相武台前駅改札口前で、各回45分前集合。展示車",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.odakyu-travel.co.jp/special/oer/redblue_photo.html",
-      "fetched_at": "2026-06-27T07:06:33.142897+09:00"
-    },
-    {
-      "id": "d8a4e5231d87260b",
-      "title": "富士山麓電気鉄道 河口湖駅 電車運転・車掌体験イベント",
-      "date": "2026-06-27",
-      "location": "河口湖駅",
-      "description": "富士山麓電気鉄道は、事前申込制企画として、電車の運転・車掌体験イベントを開催。開催日は2026年6月27日（土）で、9:30～12:30頃、13:30～16:30頃の2回開催。開催場所は、河口湖駅。筆記試験（内容は子ども向け）、仕業点呼体験",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1153",
-      "fetched_at": "2026-06-27T07:06:33.142903+09:00"
-    },
-    {
-      "id": "cafeaf84f79aabf9",
-      "title": "直方車両センター キハ40形・キハ147形 車両見学会",
-      "date": "2026-06-27",
-      "location": "直方車両センター",
-      "description": "JR九州は、事前申込制企画として、「直方車両センターキハ40形・キハ147形車両見学会」を開催。開催日は2026年6月27日（土）で、10:30～12:30、12:30～14:30の2回開催。開催場所は、直方車両センター。キハ40形・キハ1",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1222415",
-      "fetched_at": "2026-06-27T07:06:33.142908+09:00"
-    },
-    {
-      "id": "11efa9625bb39ad1",
-      "title": "【中止】いすみ鉄道 キハ52-125 撮影会",
-      "date": "2026-06-27",
-      "location": "",
-      "description": "【本イベントは開催中止となりました】いすみ鉄道は、キハ52-125の撮影会を開催。開催日時は、2026年6月27日（土）11:15～13:25。開催場所は、大多喜駅留置線。2010年開催の撮影会を再現し、外観・車内公開、方向幕設置、ヘッドマ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://isumirail.co.jp/blog/archives/11236",
-      "fetched_at": "2026-06-27T07:06:33.142914+09:00"
-    },
     {
       "id": "136c3bd1bdb0e3d7",
       "title": "関鉄観光バス 鹿島鉄道記念館 見学ツアー",
@@ -169,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kantetsu-bustour.com/information/2026/article-2764/",
-      "fetched_at": "2026-06-27T07:06:33.142919+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199706+09:00"
     },
     {
       "id": "3ff98fda02fe7730",
@@ -182,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2531",
-      "fetched_at": "2026-06-27T07:06:33.142924+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199721+09:00"
     },
     {
       "id": "e2a2da1b2a8ed38e",
@@ -195,7 +39,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142929+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199727+09:00"
+    },
+    {
+      "id": "40de97e5af463e7c",
+      "title": "えちごトキめき鉄道 トキ鉄ツアーパス デジタル版 発売",
+      "date": "2026-07-01",
+      "location": "",
+      "description": "えちごトキめき鉄道は、「トキ鉄ツアーパス」のデジタル版を発売。スマートフォンアプリ「my route」上のデジタルチケット。妙高高原～直江津～市振間で、普通・快速・特急列車の普通車自由席が1日乗り放題。発売額は、大人2,400円、子ども1,",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2591",
+      "fetched_at": "2026-06-28T06:58:11.199733+09:00"
+    },
+    {
+      "id": "687a6a466fe6319b",
+      "title": "鹿島臨海鉄道・秩父鉄道・三岐鉄道・水島臨海鉄道 4社連絡スタンプラリーヘッドマーク 掲出",
+      "date": "2026-07-01",
+      "location": "",
+      "description": "鹿島臨海鉄道、秩父鉄道、三岐鉄道、水島臨海鉄道は、「貨物・旅客4社連絡スタンプラリー」開催にあわせ、ヘッドマークを掲出。掲出対象は、秩父鉄道が7800系1本、水島臨海鉄道がMRT304。秩父鉄道での掲出期間は、2026年7月1日（水）～20",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.chichibu-railway.co.jp/blog/news/4stamp/",
+      "fetched_at": "2026-06-28T06:58:11.199739+09:00"
+    },
+    {
+      "id": "28a3a88ab747c9af",
+      "title": "遠州鉄道 初音ミク マジカルミライ2026 デジタルスタンプラリー",
+      "date": "2026-07-01",
+      "location": "",
+      "description": "遠州鉄道は、浜松市での「初音ミク『マジカルミライ 2026』」開催にあわせ、デジタルスタンプラリーを開催。開催期間は、2026年7月1日（水）～9月30日（水）。スタンプポイントは、新浜松、八幡、西鹿島、天竜二俣（天竜浜名湖鉄道）の各駅、ア",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://akaden.lekumo.biz/information/2026/05/2026-89c7.html",
+      "fetched_at": "2026-06-28T06:58:11.199745+09:00"
+    },
+    {
+      "id": "17ff7ce457d8bf61",
+      "title": "伊豆箱根鉄道 Aqours旅助け リニューアルデザイン版 発売",
+      "date": "2026-07-01",
+      "location": "",
+      "description": "伊豆箱根鉄道は、アニメ作品「ラブライブ！サンシャイン!!」とコラボした、駿豆線1日乗り放題乗車券「Aqours旅助け」のデザインをリニューアルし発売。大人用のみの発売で、発売額は1,500円。オリジナルアクリルバッジが付属。発売開始日は、2",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010903_d/fil/railway_news_20260619.pdf",
+      "fetched_at": "2026-06-28T06:58:11.199752+09:00"
     },
     {
       "id": "2ca3b9c1dea349d9",
@@ -208,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142935+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199764+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -221,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-27T07:06:33.142940+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199772+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -234,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-27T07:06:33.142945+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199778+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -247,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-27T07:06:33.142950+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199783+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -260,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-06-27T07:06:33.142955+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199787+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -273,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-06-27T07:06:33.142962+09:00"
+      "fetched_at": "2026-06-28T06:58:11.199795+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -286,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-06-27T07:06:33.143202+09:00"
+      "fetched_at": "2026-06-28T06:58:11.200038+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -299,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-06-27T07:06:33.143209+09:00"
+      "fetched_at": "2026-06-28T06:58:11.200046+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -312,7 +208,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-06-27T07:06:33.143213+09:00"
+      "fetched_at": "2026-06-28T06:58:11.200049+09:00"
+    },
+    {
+      "id": "61ed207154e58ba7",
+      "title": "東海道新幹線 Supreme Class Cabin 体験乗車 開催",
+      "date": "2026-07-25",
+      "location": "",
+      "description": "JR東海は、事前申込制企画として、上級クラス「Supreme Class Cabin」の体験乗車を開催。開催日と対象列車は、2026年7月25日（土）が「のぞみ」354号（新大阪駅10:24発～東京駅12:54着）および403号（東京駅13",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
+      "fetched_at": "2026-06-28T06:58:11.200052+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -325,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-06-27T07:06:33.143216+09:00"
+      "fetched_at": "2026-06-28T06:58:11.200056+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -338,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-06-27T07:06:33.143220+09:00"
+      "fetched_at": "2026-06-28T06:58:11.200059+09:00"
     }
   ]
 }
