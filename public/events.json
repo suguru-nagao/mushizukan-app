@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-29T06:57:49.950999+09:00",
-  "count": 21,
+  "generated_at": "2026-06-30T07:06:04.169491+09:00",
+  "count": 23,
   "events": [
     {
       "id": "e2a2da1b2a8ed38e",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950674+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169069+09:00"
     },
     {
       "id": "40de97e5af463e7c",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2591",
-      "fetched_at": "2026-06-29T06:57:49.950687+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169081+09:00"
     },
     {
       "id": "687a6a466fe6319b",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/4stamp/",
-      "fetched_at": "2026-06-29T06:57:49.950695+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169092+09:00"
     },
     {
       "id": "28a3a88ab747c9af",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://akaden.lekumo.biz/information/2026/05/2026-89c7.html",
-      "fetched_at": "2026-06-29T06:57:49.950701+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169099+09:00"
     },
     {
       "id": "17ff7ce457d8bf61",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010903_d/fil/railway_news_20260619.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950707+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169106+09:00"
     },
     {
       "id": "1a97b781e5186a1c",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/06/3d57330f3685c3dde4a38cc8aa2503f1.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950713+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169113+09:00"
     },
     {
       "id": "2ca3b9c1dea349d9",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950719+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169120+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-06-29T06:57:49.950732+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169129+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-06-29T06:57:49.950739+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169139+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-06-29T06:57:49.950743+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169145+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-06-29T06:57:49.950746+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169151+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -156,7 +156,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950750+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169158+09:00"
+    },
+    {
+      "id": "679f3157e9ab4647",
+      "title": "安房鴨川駅 子ども向け B.B.BASE 鉄道体験イベント",
+      "date": "2026-07-18",
+      "location": "安房鴨川駅",
+      "description": "JR東日本は、事前申込制イベントとして、209系「B.B.BASE」編成による鉄道体験イベントを開催。開催日時は、2026年7月18日（土）11:40～14:40。開催場所は、安房鴨川駅電留線。運転台着席記念撮影、マジックハンド体験、模擬き",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/chiba/20260625_c01.pdf",
+      "fetched_at": "2026-06-30T07:06:04.169165+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950963+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169452+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950971+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169462+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-06-29T06:57:49.950975+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169466+09:00"
     },
     {
       "id": "61ed207154e58ba7",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950979+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169470+09:00"
     },
     {
       "id": "da19d19de9dfd8d9",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-06-29T06:57:49.950983+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169473+09:00"
     },
     {
       "id": "3711005eebe22318",
@@ -234,7 +247,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950986+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169477+09:00"
+    },
+    {
+      "id": "506af2a5d03eec36",
+      "title": "筑波観光鉄道 小学生向け ケーブルカー業務体験イベント",
+      "date": "2026-07-25",
+      "location": "",
+      "description": "筑波観光鉄道は、事前申込制の小学生向け職業体験型学習プログラム「京成きっずアカデミー2026」の一環として、筑波山ケーブルカーでの業務体験を開催。開催日時は、2026年7月25日（土）10:00～12:00。参加無料。ケーブルカー駅での出札",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
+      "fetched_at": "2026-06-30T07:06:04.169480+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -247,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950990+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169483+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -260,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-06-29T06:57:49.950993+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169487+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -273,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-06-29T06:57:49.950997+09:00"
+      "fetched_at": "2026-06-30T07:06:04.169490+09:00"
     }
   ]
 }
