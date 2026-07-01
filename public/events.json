@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-07-01T07:11:58.416428+09:00",
-  "count": 25,
+  "generated_at": "2026-07-02T07:14:53.417015+09:00",
+  "count": 24,
   "events": [
-    {
-      "id": "e2a2da1b2a8ed38e",
-      "title": "鹿島臨海鉄道・秩父鉄道・三岐鉄道・水島臨海鉄道 4社連絡スタンプラリー",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "鹿島臨海鉄道、秩父鉄道、三岐鉄道、水島臨海鉄道は、「貨物・旅客 4社連絡スタンプラリー」を開催。開催期間は、2026年7月1日（水）～2027年1月31日（日）。スタンプスポットは、大洗駅売店、秩父、東藤原、倉敷市の各駅。各スポットのほか、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.sangirail.co.jp/files/260615stamprally.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416084+09:00"
-    },
-    {
-      "id": "40de97e5af463e7c",
-      "title": "えちごトキめき鉄道 トキ鉄ツアーパス デジタル版 発売",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "えちごトキめき鉄道は、「トキ鉄ツアーパス」のデジタル版を発売。スマートフォンアプリ「my route」上のデジタルチケット。妙高高原～直江津～市振間で、普通・快速・特急列車の普通車自由席が1日乗り放題。発売額は、大人2,400円、子ども1,",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2591",
-      "fetched_at": "2026-07-01T07:11:58.416097+09:00"
-    },
-    {
-      "id": "687a6a466fe6319b",
-      "title": "鹿島臨海鉄道・秩父鉄道・三岐鉄道・水島臨海鉄道 4社連絡スタンプラリーヘッドマーク 掲出",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "鹿島臨海鉄道、秩父鉄道、三岐鉄道、水島臨海鉄道は、「貨物・旅客4社連絡スタンプラリー」開催にあわせ、ヘッドマークを掲出。掲出対象は、秩父鉄道が7800系1本、水島臨海鉄道がMRT304。秩父鉄道での掲出期間は、2026年7月1日（水）～20",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.chichibu-railway.co.jp/blog/news/4stamp/",
-      "fetched_at": "2026-07-01T07:11:58.416104+09:00"
-    },
-    {
-      "id": "28a3a88ab747c9af",
-      "title": "遠州鉄道 初音ミク マジカルミライ2026 デジタルスタンプラリー",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "遠州鉄道は、浜松市での「初音ミク『マジカルミライ 2026』」開催にあわせ、デジタルスタンプラリーを開催。開催期間は、2026年7月1日（水）～9月30日（水）。スタンプポイントは、新浜松、八幡、西鹿島、天竜二俣（天竜浜名湖鉄道）の各駅、ア",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://akaden.lekumo.biz/information/2026/05/2026-89c7.html",
-      "fetched_at": "2026-07-01T07:11:58.416111+09:00"
-    },
-    {
-      "id": "17ff7ce457d8bf61",
-      "title": "伊豆箱根鉄道 Aqours旅助け リニューアルデザイン版 発売",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "伊豆箱根鉄道は、アニメ作品「ラブライブ！サンシャイン!!」とコラボした、駿豆線1日乗り放題乗車券「Aqours旅助け」のデザインをリニューアルし発売。大人用のみの発売で、発売額は1,500円。オリジナルアクリルバッジが付属。発売開始日は、2",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010903_d/fil/railway_news_20260619.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416118+09:00"
-    },
-    {
-      "id": "1a97b781e5186a1c",
-      "title": "小田急箱根 箱根登山線乗り放題純金フリーきっぷ 受注生産 申込受付",
-      "date": "2026-07-01",
-      "location": "",
-      "description": "小田急箱根は、箱根登山電車100形引退記念企画の一環として、「箱根登山線乗り放題純金フリーきっぷ」を発売。小田原～強羅間が乗り放題。発売額は468,000円で、受注生産で発売。購入特典として、100形定期運航終了後の最終特別貸切列車招待もあ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/06/3d57330f3685c3dde4a38cc8aa2503f1.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416124+09:00"
-    },
     {
       "id": "2ca3b9c1dea349d9",
       "title": "JR東海 夏の乗り放題きっぷ 発売",
@@ -91,7 +13,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416128+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416682+09:00"
+    },
+    {
+      "id": "d681bd1bb3641b51",
+      "title": "熊本市・熊本電気鉄道など 子ども向け県内定期券 発売",
+      "date": "2026-07-03",
+      "location": "も向け県",
+      "description": "熊本市交通局、熊本電気鉄道などは、「夏休み子ども定期券『キッズパス』」を発売。小学生以下が対象の定期券で、熊本市電、熊本電気鉄道の全線と、熊本県内の路線バス（高速バスなどを除く）が利用可能。発売額は1,000円。発売開始日は2026年7月3",
+      "prefecture": "も向け県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.kumamoto-toshibus.co.jp/wp-toshibus/wp-content/uploads/e5bfc5a5978767342e92a33270f81e3a.pdf",
+      "fetched_at": "2026-07-02T07:14:53.416698+09:00"
     },
     {
       "id": "00542baf043251cf",
@@ -104,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-07-01T07:11:58.416137+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416705+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -117,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-07-01T07:11:58.416142+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416711+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -130,7 +65,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-07-01T07:11:58.416146+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416717+09:00"
+    },
+    {
+      "id": "49237d52ecbf902a",
+      "title": "こども四国フリーきっぷ 夏季用 発売",
+      "date": "2026-07-04",
+      "location": "",
+      "description": "JR四国は、「こども四国フリーきっぷ」を発売。JR四国全線（宇多津～児島間を含む）、土佐くろしお鉄道窪川～若井間で、特急・普通列車の普通車自由席が1日乗り放題。JR四国バスの大栃線、久万高原線も利用可（高速バスは利用不可）。6歳以上小学生以",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/02/19/2026%2002%2019%2003.pdf",
+      "fetched_at": "2026-07-02T07:14:53.416723+09:00"
+    },
+    {
+      "id": "97a81e0f3b3b7b99",
+      "title": "秋田総合車両センターふるさと納税 EF64形見学会",
+      "date": "2026-07-04",
+      "location": "秋田総合車両センター",
+      "description": "JR東日本秋田支社は、秋田市のふるさと納税返礼品として、「EF64形電気機関車“山男”見学会」を開催。開催日は2026年7月4日（土）、5日（日）で、各日とも第1部（10:00～11:55）、第2部（14:10～16:05）の2回開催。開催",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/akita/20260528_a02.pdf",
+      "fetched_at": "2026-07-02T07:14:53.416730+09:00"
+    },
+    {
+      "id": "8bdc8e17c1c53cb5",
+      "title": "HIGH RAIL 1375 知ってほ信州号",
+      "date": "2026-07-04",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー「のってたのしむ信州旅！味覚と絶景を楽しむ特別列車『知ってほ信州号』」を開催。旅行日は、2026年7月4日（土）の日帰り。「HIGH RAIL 1375」編成による団体臨時列車に乗車。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0170",
+      "fetched_at": "2026-07-02T07:14:53.416741+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -143,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-07-01T07:11:58.416150+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416746+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -156,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416154+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416751+09:00"
     },
     {
       "id": "679f3157e9ab4647",
@@ -169,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba/20260625_c01.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416157+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416755+09:00"
     },
     {
       "id": "af9474daaf9f7f11",
@@ -182,7 +156,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/06/ec6078b24debac8062f0718f2fbe54caf467c767.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416161+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416758+09:00"
+    },
+    {
+      "id": "989b5fb6b4f8aff6",
+      "title": "大宮総合車両センター 親子向け 仕事体験イベント",
+      "date": "2026-07-18",
+      "location": "大宮総合車両センター",
+      "description": "JR東日本は、事前申込制企画として、大宮総合車両センターでの仕事体験イベントを開催。開催日は2026年7月18日（土）、19日（日）で、各日とも8:450～12:40、12:40～16:35の2回開催。在来線車両の検査体験、台車・輪軸の構造",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/omiya/20260612_o03.pdf",
+      "fetched_at": "2026-07-02T07:14:53.416762+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416390+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416976+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -208,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416398+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416983+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -221,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-07-01T07:11:58.416402+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416988+09:00"
     },
     {
       "id": "61ed207154e58ba7",
@@ -234,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416406+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416991+09:00"
     },
     {
       "id": "da19d19de9dfd8d9",
@@ -247,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-07-01T07:11:58.416409+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416994+09:00"
     },
     {
       "id": "3711005eebe22318",
@@ -260,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416412+09:00"
+      "fetched_at": "2026-07-02T07:14:53.416998+09:00"
     },
     {
       "id": "506af2a5d03eec36",
@@ -273,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416415+09:00"
+      "fetched_at": "2026-07-02T07:14:53.417001+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -286,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416418+09:00"
+      "fetched_at": "2026-07-02T07:14:53.417004+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -299,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-07-01T07:11:58.416421+09:00"
+      "fetched_at": "2026-07-02T07:14:53.417007+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -312,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-01T07:11:58.416423+09:00"
+      "fetched_at": "2026-07-02T07:14:53.417010+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -325,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-01T07:11:58.416426+09:00"
+      "fetched_at": "2026-07-02T07:14:53.417013+09:00"
     }
   ]
 }
