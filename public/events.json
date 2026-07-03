@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-07-03T07:02:02.563632+09:00",
-  "count": 24,
+  "generated_at": "2026-07-04T07:00:12.979339+09:00",
+  "count": 26,
   "events": [
-    {
-      "id": "2ca3b9c1dea349d9",
-      "title": "JR東海 夏の乗り放題きっぷ 発売",
-      "date": "2026-07-03",
-      "location": "",
-      "description": "JR東海は、「JR東海☆夏の乗り放題きっぷ」を発売。JR東海の在来線全線が2日間乗り放題。新幹線、特急列車、急行列車は利用不可。発売額は、大人3,900円、子ども1,900円。新幹線予約サービス「EXサービス」で、熱海～米原間のいずれかの駅",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000045701.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563324+09:00"
-    },
-    {
-      "id": "d681bd1bb3641b51",
-      "title": "熊本市・熊本電気鉄道など 子ども向け県内定期券 発売",
-      "date": "2026-07-03",
-      "location": "も向け県",
-      "description": "熊本市交通局、熊本電気鉄道などは、「夏休み子ども定期券『キッズパス』」を発売。小学生以下が対象の定期券で、熊本市電、熊本電気鉄道の全線と、熊本県内の路線バス（高速バスなどを除く）が利用可能。発売額は1,000円。発売開始日は2026年7月3",
-      "prefecture": "も向け県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kumamoto-toshibus.co.jp/wp-toshibus/wp-content/uploads/e5bfc5a5978767342e92a33270f81e3a.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563339+09:00"
-    },
     {
       "id": "00542baf043251cf",
       "title": "南海 研修センター 子ども向け体験イベント",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kosodate.nankai-ensenkachi.com/event/tetsudougakkou_2026/",
-      "fetched_at": "2026-07-03T07:02:02.563344+09:00"
+      "fetched_at": "2026-07-04T07:00:12.978995+09:00"
     },
     {
       "id": "8e2b1cca0b203733",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260610_lovelive",
-      "fetched_at": "2026-07-03T07:02:02.563348+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979009+09:00"
     },
     {
       "id": "01dd5b6764758b4f",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ii-den.jp/news.php?id=152",
-      "fetched_at": "2026-07-03T07:02:02.563352+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979017+09:00"
     },
     {
       "id": "49237d52ecbf902a",
@@ -78,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/02/19/2026%2002%2019%2003.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563356+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979023+09:00"
     },
     {
       "id": "97a81e0f3b3b7b99",
@@ -91,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/akita/20260528_a02.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563360+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979029+09:00"
     },
     {
       "id": "8bdc8e17c1c53cb5",
@@ -104,7 +78,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0170",
-      "fetched_at": "2026-07-03T07:02:02.563368+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979036+09:00"
+    },
+    {
+      "id": "6e2cec1615ad3bf1",
+      "title": "えちごトキめき鉄道 413・455系電車 運行開始5周年イベント",
+      "date": "2026-07-04",
+      "location": "",
+      "description": "えちごトキめき鉄道は、「413・455系電車運行開始5周年イベント」を開催。開催日は、2026年7月4日（土）。直江津駅1・2番のりばでの出発合図、臨時売店営業（10:00～17:40）、車内中吊りの変更、車内での記念乗車証配布などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.echigo-tokimeki.co.jp/information/detail?id=2587",
+      "fetched_at": "2026-07-04T07:00:12.979044+09:00"
+    },
+    {
+      "id": "249895eb0d3e09a4",
+      "title": "富士山麓電気鉄道 富士山駅 子ども向け 駅員体験イベント",
+      "date": "2026-07-04",
+      "location": "富士山駅",
+      "description": "富士山麓電気鉄道は、富士山駅誕生15周年記念イベントの一環として、事前申込制企画「富士山駅1日駅長 キッズ駅員体験ツアー」を開催。開催日は2026年7月4日（土）で、10:00～16:00の間、1枠1時間で開催。開催場所は、富士山駅。駅長の",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1163",
+      "fetched_at": "2026-07-04T07:00:12.979053+09:00"
+    },
+    {
+      "id": "940469ebc56ecaba",
+      "title": "富士山麓電気鉄道 富士山駅 誕生15周年記念イベント",
+      "date": "2026-07-04",
+      "location": "富士山駅",
+      "description": "富士山麓電気鉄道は、富士山駅誕生15周年記念イベントを開催。開催日時は、2026年7月4日（土）10:00～16:00。開催場所は、富士山駅、Q-STA。富士山駅1番ホームにて、富士登山電車の特別展示（15:30まで、要入場券または乗車券類",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1163",
+      "fetched_at": "2026-07-04T07:00:12.979058+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-07-03T07:02:02.563373+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979062+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563377+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979066+09:00"
     },
     {
       "id": "679f3157e9ab4647",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba/20260625_c01.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563381+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979069+09:00"
     },
     {
       "id": "af9474daaf9f7f11",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/06/ec6078b24debac8062f0718f2fbe54caf467c767.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563385+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979072+09:00"
     },
     {
       "id": "989b5fb6b4f8aff6",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260612_o03.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563388+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979075+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563589+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979297+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563597+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979304+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-07-03T07:02:02.563602+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979309+09:00"
     },
     {
       "id": "61ed207154e58ba7",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563606+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979312+09:00"
     },
     {
       "id": "da19d19de9dfd8d9",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-07-03T07:02:02.563610+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979315+09:00"
     },
     {
       "id": "3711005eebe22318",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563613+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979319+09:00"
     },
     {
       "id": "506af2a5d03eec36",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563617+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979322+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563620+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979324+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-07-03T07:02:02.563624+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979328+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-03T07:02:02.563627+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979331+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -312,7 +325,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-03T07:02:02.563630+09:00"
+      "fetched_at": "2026-07-04T07:00:12.979334+09:00"
+    },
+    {
+      "id": "2aa75fe67107edf1",
+      "title": "浦和事業本部・南浦和駅 親子向け 乗務員・駅員業務体験イベント",
+      "date": "2026-08-02",
+      "location": "南浦和駅",
+      "description": "JR東日本浦和事業本部は、事前申込制企画として、京浜東北線の運転士・車掌・駅員体験イベントを開催。開催日は2026年8月2日（日）、3日（月）で、各日とも9:25～11:30、12:45～14:50、15:05～17:10の3回開催。開催場",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260703_o01.pdf",
+      "fetched_at": "2026-07-04T07:00:12.979337+09:00"
     }
   ]
 }
