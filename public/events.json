@@ -1,32 +1,45 @@
 {
-  "generated_at": "2026-07-05T06:52:30.483109+09:00",
-  "count": 24,
+  "generated_at": "2026-07-06T06:55:49.399555+09:00",
+  "count": 26,
   "events": [
     {
-      "id": "7f50a42e903adc99",
-      "title": "IGRいわて銀河鉄道 硬券収集ツアー",
-      "date": "2026-07-05",
+      "id": "759bfe608562c0fe",
+      "title": "千葉都市モノレール・山万ユーカリが丘線 貸切乗車・車両基地見学ツアー",
+      "date": "2026-07-11",
       "location": "",
-      "description": "アイジーアールいわて銀河鉄道は、事前申込制ツアーとして、「団体専用列車で巡る いわて銀河鉄道線『硬券』収集ツアー」を開催。旅行日は、2026年7月5日（日）の日帰り。団体臨時列車に乗車。乗車区間は、二戸（10:00～10:30発）～小鳥谷～",
+      "description": "ローソンエンタテインメントは、事前申込制企画「千葉都市モノレール × 新交通システム『山万ユーカリが丘線』2社コラボツアー！貸切列車乗車と車両基地見学」を開催。 旅行日は、2026年7月11日（土）の日帰り。集合場所（受付時間）は、千葉都市",
       "prefecture": "",
       "city": "",
       "themeId": "train",
       "source": "鉄道コム",
-      "url": "https://igr.jp/2026/06/04/tatehana/",
-      "fetched_at": "2026-07-05T06:52:30.482772+09:00"
+      "url": "https://town.yukarigaoka.jp/yukariline_post/yukariline_post-17203/",
+      "fetched_at": "2026-07-06T06:55:49.399195+09:00"
     },
     {
-      "id": "854f1df8b67eb844",
-      "title": "黒部峡谷鉄道 工事用列車乗車ツアー",
-      "date": "2026-07-05",
+      "id": "7a10d657a8370a48",
+      "title": "大井川鐵道 夜行急行ツアー 振替開催",
+      "date": "2026-07-11",
       "location": "",
-      "description": "黒部峡谷鉄道は、事前申込制ツアー「トロッコ電車で行く途中下車の旅 ～工事用列車満喫編～」を開催。旅行日は、2026年7月5日（日）、12日（日）、8月9日（日）、30日（日）の各日日帰り。集合場所（受付時間）は、黒部川電気記念館（9:00～",
+      "description": "大井川鐵道は、事前申込制企画として、団体臨時列車「夜行急行」の乗車ツアーを開催。2026年6月27日（土）開催予定分の振替開催。出発日は、7月11日（土）。受付場所（時間）は、新金谷駅（9:00～18:00）。夜行列車の運転区間は、新金谷（",
       "prefecture": "",
       "city": "",
       "themeId": "train",
       "source": "鉄道コム",
-      "url": "http://www.kurotetu.co.jp/news-detail?post=609",
-      "fetched_at": "2026-07-05T06:52:30.482784+09:00"
+      "url": "https://daitetsu.jp/archives/event/317635",
+      "fetched_at": "2026-07-06T06:55:49.399213+09:00"
+    },
+    {
+      "id": "373bbd2732d61a76",
+      "title": "酒田駅 海里 入換乗車体験イベント",
+      "date": "2026-07-11",
+      "location": "酒田駅",
+      "description": "JR東日本は、事前申込制企画として、HB-E300系4両「海里」編成による入換乗車イベントを開催。開催日は、2026年7月11日（土）、12日（日）。開催場所は、酒田駅。受付・集合は、13:10頃～。親子向けプラン、構内見学体験つきプランを",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/akita/20260528_a03.pdf",
+      "fetched_at": "2026-07-06T06:55:49.399221+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -39,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-07-05T06:52:30.482789+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399228+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -52,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-07-05T06:52:30.482795+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399235+09:00"
     },
     {
       "id": "679f3157e9ab4647",
@@ -65,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba/20260625_c01.pdf",
-      "fetched_at": "2026-07-05T06:52:30.482799+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399242+09:00"
     },
     {
       "id": "af9474daaf9f7f11",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/06/ec6078b24debac8062f0718f2fbe54caf467c767.pdf",
-      "fetched_at": "2026-07-05T06:52:30.482803+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399246+09:00"
     },
     {
       "id": "989b5fb6b4f8aff6",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260612_o03.pdf",
-      "fetched_at": "2026-07-05T06:52:30.482807+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399261+09:00"
     },
     {
       "id": "4b9600e90ffa6b5c",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu.city.sendai.jp/oyako_form26/",
-      "fetched_at": "2026-07-05T06:52:30.482816+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399268+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483051+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399498+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483059+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399505+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-07-05T06:52:30.483063+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399509+09:00"
     },
     {
       "id": "61ed207154e58ba7",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483066+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399513+09:00"
     },
     {
       "id": "da19d19de9dfd8d9",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-07-05T06:52:30.483070+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399516+09:00"
     },
     {
       "id": "3711005eebe22318",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483074+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399519+09:00"
     },
     {
       "id": "506af2a5d03eec36",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483078+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399522+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483082+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399526+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-07-05T06:52:30.483085+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399529+09:00"
     },
     {
       "id": "354d00316dc8dea4",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/sunzudaiyu/sunzu-recommendation-article/p010595.html",
-      "fetched_at": "2026-07-05T06:52:30.483088+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399532+09:00"
     },
     {
       "id": "5b698fa834b55148",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260702_o01.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483092+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399535+09:00"
     },
     {
       "id": "6a1ba62f23e266b8",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=608",
-      "fetched_at": "2026-07-05T06:52:30.483095+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399538+09:00"
     },
     {
       "id": "a0b48800f34f89c8",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260626HP_26036RK.html",
-      "fetched_at": "2026-07-05T06:52:30.483098+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399541+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483101+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399544+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -299,7 +312,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-05T06:52:30.483104+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399547+09:00"
+    },
+    {
+      "id": "7413744f90708b3f",
+      "title": "熊本電気鉄道 幸運の8並び記念乗車券 発売",
+      "date": "2026-08-01",
+      "location": "",
+      "description": "熊本電鉄は、令和8年8月8日を記念して、「幸運の8並び記念乗車券」を発売。B型硬券乗車券3枚と台紙のセットで、発売額は1,240円。発売開始日時は、2026年8月1日（土）9:00。発売箇所は、北熊本駅横「くまでんショップ」、オンラインショ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.kumamotodentetsu.co.jp/news/202607012450.html",
+      "fetched_at": "2026-07-06T06:55:49.399550+09:00"
     },
     {
       "id": "2aa75fe67107edf1",
@@ -312,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260703_o01.pdf",
-      "fetched_at": "2026-07-05T06:52:30.483107+09:00"
+      "fetched_at": "2026-07-06T06:55:49.399553+09:00"
     }
   ]
 }
