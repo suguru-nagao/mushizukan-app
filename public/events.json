@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-08T07:06:54.237516+09:00",
-  "count": 29,
+  "generated_at": "2026-07-09T07:01:05.907085+09:00",
+  "count": 30,
   "events": [
     {
       "id": "759bfe608562c0fe",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://town.yukarigaoka.jp/yukariline_post/yukariline_post-17203/",
-      "fetched_at": "2026-07-08T07:06:54.237193+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906665+09:00"
     },
     {
       "id": "7a10d657a8370a48",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/event/317635",
-      "fetched_at": "2026-07-08T07:06:54.237204+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906683+09:00"
     },
     {
       "id": "373bbd2732d61a76",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/akita/20260528_a03.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237209+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906687+09:00"
     },
     {
       "id": "fd1d1455fd1e3173",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://ainokaze.co.jp/23711",
-      "fetched_at": "2026-07-08T07:06:54.237213+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906690+09:00"
     },
     {
       "id": "f10fe4bd1e1e2368",
@@ -65,7 +65,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/mokoron_3rd01.html",
-      "fetched_at": "2026-07-08T07:06:54.237217+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906694+09:00"
+    },
+    {
+      "id": "8e9c35f670030cb7",
+      "title": "銚子電気鉄道 22000形撮影会",
+      "date": "2026-07-12",
+      "location": "",
+      "description": "銚子電気鉄道は、事前申込制イベント「第2回 22000形撮影会」を開催。開催日時は、2026年7月12日（日）、8月2日（日）、23日（日）の各日13:00～14:00。開催場所は、仲ノ町車庫。22000形2本を展示。22005編成の銚子方",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.choshi-dentetsu.jp/news/7936/",
+      "fetched_at": "2026-07-09T07:01:05.906697+09:00"
     },
     {
       "id": "78b51eba5eed276b",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/press/pdf/20260623_KO_atsumori.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237222+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906702+09:00"
     },
     {
       "id": "679f3157e9ab4647",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba/20260625_c01.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237226+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906712+09:00"
     },
     {
       "id": "af9474daaf9f7f11",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/06/ec6078b24debac8062f0718f2fbe54caf467c767.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237234+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906717+09:00"
     },
     {
       "id": "989b5fb6b4f8aff6",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya/20260612_o03.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237239+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906720+09:00"
     },
     {
       "id": "0e9d0b4d4d04c285",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16428.html",
-      "fetched_at": "2026-07-08T07:06:54.237243+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906724+09:00"
     },
     {
       "id": "4b9600e90ffa6b5c",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu.city.sendai.jp/oyako_form26/",
-      "fetched_at": "2026-07-08T07:06:54.237246+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906727+09:00"
     },
     {
       "id": "7b63ca4900f6c728",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045615.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237446+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906981+09:00"
     },
     {
       "id": "68010f931493d6ab",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237453+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906989+09:00"
     },
     {
       "id": "5b75ec0fa0128e71",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-07-08T07:06:54.237458+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906992+09:00"
     },
     {
       "id": "61ed207154e58ba7",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237461+09:00"
+      "fetched_at": "2026-07-09T07:01:05.906996+09:00"
     },
     {
       "id": "da19d19de9dfd8d9",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-07-08T07:06:54.237465+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907008+09:00"
     },
     {
       "id": "3711005eebe22318",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237476+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907011+09:00"
     },
     {
       "id": "506af2a5d03eec36",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237479+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907015+09:00"
     },
     {
       "id": "d62d81bfd0deb88e",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237482+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907018+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-07-08T07:06:54.237485+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907021+09:00"
     },
     {
       "id": "354d00316dc8dea4",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/sunzudaiyu/sunzu-recommendation-article/p010595.html",
-      "fetched_at": "2026-07-08T07:06:54.237488+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907023+09:00"
     },
     {
       "id": "5b698fa834b55148",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260702_o01.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237491+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907026+09:00"
     },
     {
       "id": "6a1ba62f23e266b8",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=608",
-      "fetched_at": "2026-07-08T07:06:54.237494+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907029+09:00"
     },
     {
       "id": "8e2711bfb4208aef",
@@ -312,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260707112230HZJOMI92NLxaceFsFjEwKA.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237497+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907032+09:00"
     },
     {
       "id": "a0b48800f34f89c8",
@@ -325,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260626HP_26036RK.html",
-      "fetched_at": "2026-07-08T07:06:54.237500+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907035+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -338,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237503+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907039+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -351,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-08T07:06:54.237508+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907042+09:00"
     },
     {
       "id": "7413744f90708b3f",
@@ -364,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kumamotodentetsu.co.jp/news/202607012450.html",
-      "fetched_at": "2026-07-08T07:06:54.237511+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907079+09:00"
     },
     {
       "id": "2aa75fe67107edf1",
@@ -377,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260703_o01.pdf",
-      "fetched_at": "2026-07-08T07:06:54.237514+09:00"
+      "fetched_at": "2026-07-09T07:01:05.907083+09:00"
     }
   ]
 }
