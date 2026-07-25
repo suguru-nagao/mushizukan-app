@@ -1,137 +1,7 @@
 {
-  "generated_at": "2026-07-25T06:59:38.724889+09:00",
-  "count": 40,
+  "generated_at": "2026-07-26T06:48:00.426156+09:00",
+  "count": 41,
   "events": [
-    {
-      "id": "68010f931493d6ab",
-      "title": "東武 スカイツリートレイン ケージレス宿泊ツアー",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "東武トップツアーズは、「スカイツリートレインで行く！愛犬と日光・東武ワールドスクウェアの夏旅」を開催。旅行日は、2026年7月25日（土）～26日（日）。愛犬と乗車可能な団体臨時列車に乗車するツアー。団体臨時列車の運転区間は、25日がとうき",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/releases/20260624130427wtAyVJP_p_yJCp1h856hhQ.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724745+09:00"
-    },
-    {
-      "id": "5b75ec0fa0128e71",
-      "title": "福井鉄道 レトラム貸切乗車・車両工場など見学ツアー",
-      "date": "2026-07-25",
-      "location": "神明駅",
-      "description": "福井鉄道は、事前申込制企画として、貸切電車ツアー「なるほど！ザ・ふくてつツアー」を開催。開催日時は、2026年7月25日（土）10:30～12:00。集合場所は神明駅。「レトラム」による貸切列車に乗車し、北府駅に移動。同駅到着後、車両工場な",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://fukutetsu.jp/newsDetail.php?num=701",
-      "fetched_at": "2026-07-25T06:59:38.724757+09:00"
-    },
-    {
-      "id": "61ed207154e58ba7",
-      "title": "東海道新幹線 Supreme Class Cabin 体験乗車 開催",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "JR東海は、事前申込制企画として、上級クラス「Supreme Class Cabin」の体験乗車を開催。開催日と対象列車は、2026年7月25日（土）が「のぞみ」354号（新大阪駅10:24発～東京駅12:54着）および403号（東京駅13",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/2026/06/17/items/260617_00_press_supremeclass.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724762+09:00"
-    },
-    {
-      "id": "da19d19de9dfd8d9",
-      "title": "北総鉄道 1日乗車券 夏季版 発売",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "北総鉄道は、「北総線1日乗車券」を発売。京成高砂～印旛日本医大間が1日乗り放題。発売額は、大人1,000円、小児500円。夏季版の発売日は、2026年7月25日（土）～8月23日（日）の土休日。発売当日限り有効。新柴又～印旛日本医大間の各駅",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/topics/detail/66691",
-      "fetched_at": "2026-07-25T06:59:38.724766+09:00"
-    },
-    {
-      "id": "3711005eebe22318",
-      "title": "北総鉄道 下町めぐりきっぷ 夏季版 発売",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "北総鉄道は、京成電鉄との企画乗車券として、「北総・下町めぐりきっぷ」を発売。北総線全線、京成本線の京成上野～江戸川間、金町線・押上線の全線が乗り放題。発売額は、大人1,420円、小児710円。夏季版の発売日は、2026年7月25日（土）～8",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/dijCacPY.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724769+09:00"
-    },
-    {
-      "id": "506af2a5d03eec36",
-      "title": "筑波観光鉄道 小学生向け ケーブルカー業務体験イベント",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "筑波観光鉄道は、事前申込制の小学生向け職業体験型学習プログラム「京成きっずアカデミー2026」の一環として、筑波山ケーブルカーでの業務体験を開催。開催日時は、2026年7月25日（土）10:00～12:00。参加無料。ケーブルカー駅での出札",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keisei.co.jp/cms/files/keisei/MASTER/0110/WKdlKbCN.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724773+09:00"
-    },
-    {
-      "id": "45ed134f83380f24",
-      "title": "和歌山電鐵 夏休みキッズ探検隊 開催",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "和歌山電鐵は、事前申込制イベント「貴志川線 夏休みキッズ探検隊」を開催。開催日は2026年7月25日（土）で、9:50～、12:50～の2回開催。集合場所は、伊太祈曽駅。伊太祈曽～和歌山間の臨時列車往復乗車、車掌アナウンス体験、洗車機通過体",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://wakayama-dentetsu.co.jp/event/16912/",
-      "fetched_at": "2026-07-25T06:59:38.724776+09:00"
-    },
-    {
-      "id": "981d9490fae66529",
-      "title": "福井鉄道 夏休みスタンプラリー2026",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "福井鉄道は、夏休み企画として、「福鉄スタンプラリー2026 いぶし銀の夏」を開催。開催期間は、2026年7月25日（土）～8月30日（日）。スタンプ設置駅で台紙を入手しスタート。スタンプ設置箇所は、たけふ新、神明、浅水、田原町の各駅窓口、シ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://fukutetsu.jp/newsDetail.php?num=709",
-      "fetched_at": "2026-07-25T06:59:38.724786+09:00"
-    },
-    {
-      "id": "a32fa75cda87decf",
-      "title": "京王聖蹟桜ヶ丘ショッピングセンター せいせきのりもの展",
-      "date": "2026-07-25",
-      "location": "王聖蹟桜ヶ丘ショッピングセンター",
-      "description": "京王聖蹟桜ヶ丘ショッピングセンターは、「せいせきのりもの展」を開催。開催日時は、2026年7月25日（土）～8月2日（日）の各日10:00～17:00（最終入場16:30）。A館6階アウラホールにて、電車の部品などの展示・操作体験、シミュレ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keio-sc.jp/special/?cd=000197",
-      "fetched_at": "2026-07-25T06:59:38.724791+09:00"
-    },
-    {
-      "id": "db3e1fc5a5876dc8",
-      "title": "千葉都市モノレール 累計6億人達成記念乗車券 発売",
-      "date": "2026-07-25",
-      "location": "",
-      "description": "千葉都市モノレールは、累計乗車6億人達成を記念して、記念乗車券を発売。丸型の片道乗車券で、裏面はヘッドマークと同デザイン。発売額は810円で、発売開始日は2026年7月25日（土）。発売箇所は、千葉、千葉みなと、都賀、千城台の各駅窓口。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://chiba-monorail.co.jp/index.php/post-71810/",
-      "fetched_at": "2026-07-25T06:59:38.724794+09:00"
-    },
     {
       "id": "d62d81bfd0deb88e",
       "title": "まちてらすMUKO 子ども向け 鉄道仕事体験イベント",
@@ -143,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/06/25/items/260625_00_press_kyotozutto.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724798+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426008+09:00"
     },
     {
       "id": "7c3e6e39e6745450",
@@ -156,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/06/10987.php",
-      "fetched_at": "2026-07-25T06:59:38.724801+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426019+09:00"
     },
     {
       "id": "354d00316dc8dea4",
@@ -169,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/sunzudaiyu/sunzu-recommendation-article/p010595.html",
-      "fetched_at": "2026-07-25T06:59:38.724805+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426024+09:00"
     },
     {
       "id": "5b698fa834b55148",
@@ -182,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260702_o01.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724808+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426028+09:00"
     },
     {
       "id": "6a1ba62f23e266b8",
@@ -195,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.kurotetu.co.jp/news-detail?post=608",
-      "fetched_at": "2026-07-25T06:59:38.724811+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426031+09:00"
     },
     {
       "id": "8e2711bfb4208aef",
@@ -208,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/releases/20260707112230HZJOMI92NLxaceFsFjEwKA.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724814+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426035+09:00"
     },
     {
       "id": "158dea547bcbe1be",
@@ -221,7 +91,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/items/260317_00_yonagoshi_furusatonouzei_2.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724817+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426039+09:00"
+    },
+    {
+      "id": "37219307fa80d668",
+      "title": "近鉄 親子向け 古市教習所 駅務機器操作体験ツアー",
+      "date": "2026-07-26",
+      "location": "",
+      "description": "近畿日本鉄道は、事前申込制企画「きんてつ駅務機器操作体験ツアー」を開催。開催日は2026年7月26日（日）で、9:00～、10:10～、11:20～、12:30～、13:40～、14:50～、16:00～の7回開催。開催場所は、古市教習所。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260726.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426048+09:00"
+    },
+    {
+      "id": "983400f5017423dc",
+      "title": "リゾートしらかみ青池編成 郡山～秋田間",
+      "date": "2026-07-27",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、HB-E300系「リゾートしらかみ『青池』」編成による郡山～秋田間の団体臨時列車乗車ツアーを開催。旅行日は、2026年7月27日（月）の日帰り。団体臨時列車の乗車区間は、郡山（1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2562",
+      "fetched_at": "2026-07-26T06:48:00.426054+09:00"
+    },
+    {
+      "id": "785cef711fe6a062",
+      "title": "阪神 石屋川車庫 子ども向け 車掌体験イベント",
+      "date": "2026-07-27",
+      "location": "石屋川車庫",
+      "description": "阪神電気鉄道は、「阪急阪神 ゆめ・まちチャレンジ隊2026」のプログラムとして、事前申込制イベント「阪神電車の石屋川車庫で車掌になりきってみよう！」を開催。開催日時は、2026年7月27日（月）9:30～11:30。開催場所は、阪神電車御影",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426058+09:00"
     },
     {
       "id": "a0b48800f34f89c8",
@@ -234,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260626HP_26036RK.html",
-      "fetched_at": "2026-07-25T06:59:38.724820+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426061+09:00"
     },
     {
       "id": "89aa078a051adadb",
@@ -247,7 +156,59 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1194",
-      "fetched_at": "2026-07-25T06:59:38.724824+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426066+09:00"
+    },
+    {
+      "id": "707cf3f9c40980ae",
+      "title": "御岳登山鉄道 親子向け 夏休み宿題お手伝いツアー",
+      "date": "2026-07-28",
+      "location": "",
+      "description": "御岳登山鉄道は、事前申込制企画として、「親子向け 御岳山で夏休みの宿題お手伝いツアー」を開催。開催日は、2026年7月28日（火）。集合場所（時間）は、滝本駅（8:50）。臨時ケーブルカーで御岳山駅へ移動し、同駅でケーブルカーの運転室・巻上",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.mitaketozan.co.jp/infomation/release_2026_05_19a.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426069+09:00"
+    },
+    {
+      "id": "c7a6f09fc1248b55",
+      "title": "小田急 経堂駅 親子向け 駅務機器見学・データ分析イベント",
+      "date": "2026-07-28",
+      "location": "経堂駅",
+      "description": "小田急電鉄は、「2026年 夏の親子体験イベント」の一環として、事前申込制企画「経堂駅の秘密とデータ分析」を開催。開催日時は、2026年7月28日（火）10:00～12:00。開催場所は、経堂駅構内。券売機や改札機などの見学後、改札データを",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu.jp/news/ho5toc0000009sr6-att/ho5toc0000009srd.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426072+09:00"
+    },
+    {
+      "id": "576fd2ec00f1cfcb",
+      "title": "信楽高原鐵道 軌道自転車 本線上乗車体験イベント",
+      "date": "2026-07-28",
+      "location": "",
+      "description": "信楽高原鐵道は、事前申込制イベントとして、「軌道自転車乗車体験2026」を開催。開催日は、2026年7月28日（火）、30日（木）、8月4日（火）、11日（火・祝）、16日（日）、18日（火）、22日（土）。集合場所（時間）は、信楽駅（各日",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://koka-skr.co.jp/news/archives/2876",
+      "fetched_at": "2026-07-26T06:48:00.426075+09:00"
+    },
+    {
+      "id": "b2073a5d0b1dd408",
+      "title": "旧新橋停車場 企画展 昭和の駅風景 開催",
+      "date": "2026-07-28",
+      "location": "昭和の駅",
+      "description": "旧新橋停車場 鉄道歴史展示室は、同館で第69回企画展「昭和100年記念 昭和の駅風景」を開催。開催期間は、2026年7月28日（火）～11月23日（月・祝）。かつての交通博物館の鉄道写真コンクール応募作品の一部や、証言資料などを展示。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.ejrcf.or.jp/shinbashi/",
+      "fetched_at": "2026-07-26T06:48:00.426078+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -260,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724827+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426081+09:00"
     },
     {
       "id": "2cebb0346ade9214",
@@ -273,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/07/11010.php",
-      "fetched_at": "2026-07-25T06:59:38.724830+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426084+09:00"
     },
     {
       "id": "bd147304680a3a60",
@@ -286,7 +247,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://okayama-kido.co.jp/tram/event/2026/",
-      "fetched_at": "2026-07-25T06:59:38.724833+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426087+09:00"
+    },
+    {
+      "id": "d77321cb17edf67e",
+      "title": "小田急 親子向け 鉄道教室イベント",
+      "date": "2026-07-29",
+      "location": "",
+      "description": "小田急電鉄は、「2026年 夏の親子体験イベント」の一環として、事前申込制企画「ファミリー鉄道教室」を開催。開催日時は、2026年7月29日（水）9:30～12:30。開催場所は、小田急研修センターおよび喜多見電車基地。運転士・車掌の仕事紹",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu.jp/news/ho5toc0000009sr6-att/ho5toc0000009srd.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426090+09:00"
+    },
+    {
+      "id": "2692030239e475af",
+      "title": "阪急 正雀車庫 子ども向け 見学イベント",
+      "date": "2026-07-29",
+      "location": "正雀車庫",
+      "description": "阪急電鉄は、「阪急阪神 ゆめ・まちチャレンジ隊2026」のプログラムとして、事前申込制イベント「阪急電車の正雀工場に潜入！」を開催。開催日時は、2026年7月29日（水）、8月17日（月）の各日13:00～15:00。開催場所は、正雀工場。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426094+09:00"
+    },
+    {
+      "id": "386c6e6d5e4fea58",
+      "title": "しなの鉄道 親子鉄道ふれあい教室 開催",
+      "date": "2026-07-29",
+      "location": "",
+      "description": "しなの鉄道は、事前申込制イベントとして、「親子鉄道ふれあい教室」を開催。開催日時は、2026年7月29日（水）9:30～13:45。開催場所は、戸倉駅構内車両基地。入換車両乗車体験、車掌体験、運転席記念撮影などを実施。募集対象は、中学生以下",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/news/2026/07/11010.php",
+      "fetched_at": "2026-07-26T06:48:00.426097+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -299,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-25T06:59:38.724836+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426100+09:00"
     },
     {
       "id": "68825826b3f2395c",
@@ -312,7 +312,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260716_natuyasumievent%20.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724839+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426103+09:00"
     },
     {
       "id": "398e3cbf653e326b",
@@ -325,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28074",
-      "fetched_at": "2026-07-25T06:59:38.724842+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426105+09:00"
     },
     {
       "id": "7413744f90708b3f",
@@ -338,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kumamotodentetsu.co.jp/news/202607012450.html",
-      "fetched_at": "2026-07-25T06:59:38.724845+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426109+09:00"
     },
     {
       "id": "2aa75fe67107edf1",
@@ -351,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260703_o01.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724848+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426112+09:00"
     },
     {
       "id": "760024706e7492d1",
@@ -364,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01872/link_v6ww0.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724851+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426115+09:00"
     },
     {
       "id": "81b5859b578928e3",
@@ -377,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202606241.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724854+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426118+09:00"
     },
     {
       "id": "0ad33fb250024fa8",
@@ -390,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://media.jreast.co.jp/articles/6335",
-      "fetched_at": "2026-07-25T06:59:38.724857+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426121+09:00"
     },
     {
       "id": "20ecccf68b91fadc",
@@ -403,7 +403,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nagaden-net.co.jp/news/20260717nagadenoyakodensyakyousitu",
-      "fetched_at": "2026-07-25T06:59:38.724860+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426124+09:00"
     },
     {
       "id": "87e9bc516958da0c",
@@ -416,7 +416,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1195",
-      "fetched_at": "2026-07-25T06:59:38.724863+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426127+09:00"
     },
     {
       "id": "b1bdd387a78845ff",
@@ -429,7 +429,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.ncnrm.com/event/20260808_hokuhokusen/",
-      "fetched_at": "2026-07-25T06:59:38.724866+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426130+09:00"
     },
     {
       "id": "1e6c1b724b1818d8",
@@ -442,7 +442,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010926_d/fil/railway_news_20260716.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724869+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426133+09:00"
     },
     {
       "id": "b896786ae802f00f",
@@ -455,7 +455,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724872+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426136+09:00"
     },
     {
       "id": "fe4775dbaca6ec22",
@@ -468,7 +468,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260714164655PZga6lBqTARl2RQpnoLlMA.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724875+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426139+09:00"
     },
     {
       "id": "90c0080f6985619b",
@@ -481,7 +481,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.osaka-monorail.co.jp/info/detail/889",
-      "fetched_at": "2026-07-25T06:59:38.724878+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426142+09:00"
     },
     {
       "id": "930bfc49141353d9",
@@ -494,7 +494,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.suitetsu.com/event/20260809natsuyasumikodomotaiken.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724881+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426145+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -507,7 +507,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724884+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426148+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -520,7 +520,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-07-25T06:59:38.724887+09:00"
+      "fetched_at": "2026-07-26T06:48:00.426151+09:00"
+    },
+    {
+      "id": "98a8cd35b8768cf5",
+      "title": "北越急行 HK100で行く新津鉄道資料館見学ツアー 海から山コース",
+      "date": "2026-08-23",
+      "location": "",
+      "description": "北越急行は、「HK100で行く新津鉄道資料館見学」 ツアーを開催。「海から山コース」の旅行日は、2026年8月23日（日）の日帰り。HK100形「ゆめぞら」（1両）による団体臨時列車に乗車。乗車区間は、六日町（10:30発）～犀潟（11:1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
+      "fetched_at": "2026-07-26T06:48:00.426154+09:00"
     }
   ]
 }
