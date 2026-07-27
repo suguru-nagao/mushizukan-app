@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-07-27T06:53:43.061338+09:00",
+  "generated_at": "2026-07-28T06:59:55.645286+09:00",
   "count": 35,
   "events": [
-    {
-      "id": "983400f5017423dc",
-      "title": "リゾートしらかみ青池編成 郡山～秋田間",
-      "date": "2026-07-27",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制企画として、HB-E300系「リゾートしらかみ『青池』」編成による郡山～秋田間の団体臨時列車乗車ツアーを開催。旅行日は、2026年7月27日（月）の日帰り。団体臨時列車の乗車区間は、郡山（1",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2562",
-      "fetched_at": "2026-07-27T06:53:43.061211+09:00"
-    },
-    {
-      "id": "785cef711fe6a062",
-      "title": "阪神 石屋川車庫 子ども向け 車掌体験イベント",
-      "date": "2026-07-27",
-      "location": "石屋川車庫",
-      "description": "阪神電気鉄道は、「阪急阪神 ゆめ・まちチャレンジ隊2026」のプログラムとして、事前申込制イベント「阪神電車の石屋川車庫で車掌になりきってみよう！」を開催。開催日時は、2026年7月27日（月）9:30～11:30。開催場所は、阪神電車御影",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061223+09:00"
-    },
     {
       "id": "a0b48800f34f89c8",
       "title": "京急 親子向け バリアフリー・ダイヤグラム作成教室 開催",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260626HP_26036RK.html",
-      "fetched_at": "2026-07-27T06:53:43.061229+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645097+09:00"
     },
     {
       "id": "89aa078a051adadb",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1194",
-      "fetched_at": "2026-07-27T06:53:43.061233+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645108+09:00"
     },
     {
       "id": "707cf3f9c40980ae",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mitaketozan.co.jp/infomation/release_2026_05_19a.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061237+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645114+09:00"
     },
     {
       "id": "c7a6f09fc1248b55",
@@ -78,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc0000009sr6-att/ho5toc0000009srd.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061240+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645119+09:00"
     },
     {
       "id": "576fd2ec00f1cfcb",
@@ -91,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://koka-skr.co.jp/news/archives/2876",
-      "fetched_at": "2026-07-27T06:53:43.061244+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645122+09:00"
     },
     {
       "id": "b2073a5d0b1dd408",
@@ -104,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ejrcf.or.jp/shinbashi/",
-      "fetched_at": "2026-07-27T06:53:43.061253+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645126+09:00"
     },
     {
       "id": "1cbf6c3d475bc74d",
@@ -117,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061258+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645130+09:00"
     },
     {
       "id": "2cebb0346ade9214",
@@ -130,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/07/11010.php",
-      "fetched_at": "2026-07-27T06:53:43.061262+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645138+09:00"
     },
     {
       "id": "bd147304680a3a60",
@@ -143,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://okayama-kido.co.jp/tram/event/2026/",
-      "fetched_at": "2026-07-27T06:53:43.061265+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645143+09:00"
     },
     {
       "id": "d77321cb17edf67e",
@@ -156,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/news/ho5toc0000009sr6-att/ho5toc0000009srd.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061268+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645146+09:00"
     },
     {
       "id": "2692030239e475af",
@@ -169,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061271+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645150+09:00"
     },
     {
       "id": "386c6e6d5e4fea58",
@@ -182,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/07/11010.php",
-      "fetched_at": "2026-07-27T06:53:43.061274+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645153+09:00"
     },
     {
       "id": "d730d453329c443e",
@@ -195,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202606_vyakou07/",
-      "fetched_at": "2026-07-27T06:53:43.061277+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645157+09:00"
     },
     {
       "id": "68825826b3f2395c",
@@ -208,7 +182,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260716_natuyasumievent%20.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061280+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645160+09:00"
     },
     {
       "id": "398e3cbf653e326b",
@@ -221,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28074",
-      "fetched_at": "2026-07-27T06:53:43.061283+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645163+09:00"
     },
     {
       "id": "1471fb0e70b34d76",
@@ -234,7 +208,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045619.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061287+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645166+09:00"
+    },
+    {
+      "id": "60fcb6d0aed598ad",
+      "title": "JR北海道・ANA 子ども向け 仕事体験ツアー",
+      "date": "2026-07-31",
+      "location": "北海道",
+      "description": "JR北海道、全日本空輸（ANA）札幌支店は、事前申込制ツアー企画「夏休み企画！潜入！ANA＆JR北海道 おしごと発見ツアー」を開催。開催日時は、2026年7月31日（金）8:45頃～17:50頃。JR北海道社員研修センターにて、乗務員訓練シ",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.anahd.co.jp/group/pr/202606/20260608.html",
+      "fetched_at": "2026-07-28T06:59:55.645170+09:00"
+    },
+    {
+      "id": "501b3a581639108c",
+      "title": "水島臨海鉄道 子ども向け 運転体験イベント",
+      "date": "2026-07-31",
+      "location": "倉敷市駅",
+      "description": "水島臨海鉄道は、事前申込制企画として、子ども向けの運転体験教室を開催。開催日時は、2026年7月31日（金）9:35～11:30。集合場所は倉敷市駅で、8:50までに受付。倉敷市駅9:01発の列車に乗車し移動。倉敷貨物ターミナル駅にて、旅客",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.mizurin.co.jp/event_detail/index/274.html",
+      "fetched_at": "2026-07-28T06:59:55.645232+09:00"
     },
     {
       "id": "7413744f90708b3f",
@@ -247,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kumamotodentetsu.co.jp/news/202607012450.html",
-      "fetched_at": "2026-07-27T06:53:43.061290+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645236+09:00"
     },
     {
       "id": "2aa75fe67107edf1",
@@ -260,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260703_o01.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061293+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645240+09:00"
     },
     {
       "id": "760024706e7492d1",
@@ -273,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01872/link_v6ww0.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061296+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645242+09:00"
     },
     {
       "id": "81b5859b578928e3",
@@ -286,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://noseden.hankyu.co.jp/upload_file/noseden/information/newsrelease202606241.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061298+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645245+09:00"
     },
     {
       "id": "0ad33fb250024fa8",
@@ -299,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://media.jreast.co.jp/articles/6335",
-      "fetched_at": "2026-07-27T06:53:43.061301+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645248+09:00"
     },
     {
       "id": "20ecccf68b91fadc",
@@ -312,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nagaden-net.co.jp/news/20260717nagadenoyakodensyakyousitu",
-      "fetched_at": "2026-07-27T06:53:43.061304+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645251+09:00"
     },
     {
       "id": "87e9bc516958da0c",
@@ -325,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1195",
-      "fetched_at": "2026-07-27T06:53:43.061307+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645254+09:00"
     },
     {
       "id": "b1bdd387a78845ff",
@@ -338,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.ncnrm.com/event/20260808_hokuhokusen/",
-      "fetched_at": "2026-07-27T06:53:43.061310+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645257+09:00"
     },
     {
       "id": "1e6c1b724b1818d8",
@@ -351,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010926_d/fil/railway_news_20260716.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061313+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645260+09:00"
     },
     {
       "id": "b896786ae802f00f",
@@ -364,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061316+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645264+09:00"
     },
     {
       "id": "fe4775dbaca6ec22",
@@ -377,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260714164655PZga6lBqTARl2RQpnoLlMA.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061319+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645267+09:00"
     },
     {
       "id": "90c0080f6985619b",
@@ -390,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.osaka-monorail.co.jp/info/detail/889",
-      "fetched_at": "2026-07-27T06:53:43.061322+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645270+09:00"
     },
     {
       "id": "094792903d1accdb",
@@ -403,7 +403,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/station/shinshibamata/detail/71647",
-      "fetched_at": "2026-07-27T06:53:43.061325+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645273+09:00"
     },
     {
       "id": "930bfc49141353d9",
@@ -416,7 +416,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.suitetsu.com/event/20260809natsuyasumikodomotaiken.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061328+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645275+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -429,7 +429,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061331+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645278+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -442,7 +442,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061334+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645281+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -455,7 +455,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-07-27T06:53:43.061337+09:00"
+      "fetched_at": "2026-07-28T06:59:55.645284+09:00"
     }
   ]
 }
