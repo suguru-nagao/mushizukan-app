@@ -1,46 +1,7 @@
 {
-  "generated_at": "2026-08-06T07:08:00.827888+09:00",
-  "count": 25,
+  "generated_at": "2026-08-07T10:00:32.962904+09:00",
+  "count": 26,
   "events": [
-    {
-      "id": "956f7c18fe427806",
-      "title": "THE ROYAL EXPRESS 道南入線ツアー",
-      "date": "2026-08-06",
-      "location": "北海道",
-      "description": "東急とJR北海道は、「HOKKAIDO ～NORTHERN COASTLINE～」の旅行商品を販売。「THE ROYAL EXPRESS」に乗車するツアー。出発日は、2026年8月6日（木）、13日（木）で、各4泊5日の行程。THE ROY",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827788+09:00"
-    },
-    {
-      "id": "0f144c32d866b3f1",
-      "title": "京王 若葉台工場 子ども向け見学イベント",
-      "date": "2026-08-06",
-      "location": "若葉台工場",
-      "description": "京王電鉄は、「京王キッズおしごと隊 ～ぼくの、わたしのお仕事体験～」のプログラムとして、事前申込制イベント「電車の整備のおしごとを知ろう！」を開催。開催日は2026年8月6日（木）で、午前、午後の2回開催。開催場所は、若葉台工場。募集対象は",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827799+09:00"
-    },
-    {
-      "id": "59cce97127f19354",
-      "title": "豊橋鉄道 小学生向け 市内線貸切電車乗車・運転体験ツアー",
-      "date": "2026-08-06",
-      "location": "",
-      "description": "豊橋鉄道は、事前申込制企画として、「豊橋鉄道 夏休み市内線こども電車 運転体験2026」を開催。開催日時は、2026年8月6日（木）9:15～12:45。集合場所（時間）は、市内線 駅前電停（9:00）。貸切電車に乗車。乗車区間は、駅前～赤",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.toyotetsu.com/news/000648.html",
-      "fetched_at": "2026-08-06T07:08:00.827804+09:00"
-    },
     {
       "id": "20ecccf68b91fadc",
       "title": "長野電鉄 親子向け 電車教室イベント",
@@ -52,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nagaden-net.co.jp/news/20260717nagadenoyakodensyakyousitu",
-      "fetched_at": "2026-08-06T07:08:00.827808+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962819+09:00"
     },
     {
       "id": "87e9bc516958da0c",
@@ -65,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1195",
-      "fetched_at": "2026-08-06T07:08:00.827812+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962835+09:00"
     },
     {
       "id": "426b12a6b27488e8",
@@ -78,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/07/28/20260728%2002.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827816+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962839+09:00"
     },
     {
       "id": "3459c4e0d80fd30c",
@@ -91,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1232702",
-      "fetched_at": "2026-08-06T07:08:00.827821+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962843+09:00"
     },
     {
       "id": "73cb1aaedd77cb12",
@@ -104,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827829+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962845+09:00"
     },
     {
       "id": "b1bdd387a78845ff",
@@ -117,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.ncnrm.com/event/20260808_hokuhokusen/",
-      "fetched_at": "2026-08-06T07:08:00.827834+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962848+09:00"
     },
     {
       "id": "1e6c1b724b1818d8",
@@ -130,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010926_d/fil/railway_news_20260716.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827838+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962851+09:00"
     },
     {
       "id": "b896786ae802f00f",
@@ -143,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827841+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962859+09:00"
     },
     {
       "id": "fe4775dbaca6ec22",
@@ -156,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260714164655PZga6lBqTARl2RQpnoLlMA.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827844+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962863+09:00"
     },
     {
       "id": "90c0080f6985619b",
@@ -169,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.osaka-monorail.co.jp/info/detail/889",
-      "fetched_at": "2026-08-06T07:08:00.827847+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962866+09:00"
     },
     {
       "id": "094792903d1accdb",
@@ -182,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/station/shinshibamata/detail/71647",
-      "fetched_at": "2026-08-06T07:08:00.827850+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962868+09:00"
     },
     {
       "id": "b7e7f3f33dce744a",
@@ -195,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/profile/news/2026/__icsFiles/afieldfile/2026/07/28/26-07-28888kinenzyousyaken.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827853+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962870+09:00"
     },
     {
       "id": "7813072468aabfda",
@@ -208,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nankai.co.jp/lib/traffic/information/pdf/260805.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827856+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962872+09:00"
     },
     {
       "id": "558d7524d2af5143",
@@ -221,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kantetsu.co.jp/cms/wp-content/uploads/2026/08/20260806_infojoso888.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827859+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962875+09:00"
     },
     {
       "id": "81e2d85e37e2fff0",
@@ -234,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.k-rhm.jp/news/detail.php?id=343",
-      "fetched_at": "2026-08-06T07:08:00.827865+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962877+09:00"
     },
     {
       "id": "4433c63193f85bc9",
@@ -247,7 +208,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mizurin.co.jp/event_detail/index/275.html",
-      "fetched_at": "2026-08-06T07:08:00.827868+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962880+09:00"
+    },
+    {
+      "id": "2a8a6be3916f222d",
+      "title": "のと鉄道 休日限定1日フリー乗車券 ポケモンデザイン 発売",
+      "date": "2026-08-08",
+      "location": "",
+      "description": "のと鉄道は、「休日限定1日フリー乗車券」のポケモンデザイン版を発売。発売額は、大人1,000円、子ども500円。発売開始日は、2026年8月8日（土）。発売箇所は、穴水駅（当日8:30～）、能登中島、田鶴浜、七尾の各駅（土休日など定休）、列",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://nototetsu.jp/uncategorized/%e4%bc%91%e6%97%a5%e9%99%90%e5%ae%9a%ef%bc%91%e6%97%a5%e3%83%95%e3%83%aa%e3%83%bc%e4%b9%97%e8%bb%8a%e5%88%b8%ef%bc%88%e3%83%9d%e3%82%b1%e3%83%a2%e3%83%b3%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%ef%bc%89/",
+      "fetched_at": "2026-08-07T10:00:32.962882+09:00"
+    },
+    {
+      "id": "8b49e3a394dcc4b8",
+      "title": "山形鉄道 YR-888号記念乗車券 発売",
+      "date": "2026-08-08",
+      "location": "",
+      "description": "山形鉄道は、YR-888号の運用終了を前に、「YR-888号記念乗車券」を発売。乗車券3枚と台紙のセットで、発売額は1,000円。発売開始日は、2026年8月8日（土）。発売箇所は、赤湯、宮内、長井、荒砥の各駅。有効期間は、12月31日（木",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://flower-liner.jp/info/yr-888%e5%8f%b7%e8%a8%98%e5%bf%b5%e4%b9%97%e8%bb%8a%e5%88%b8%e3%80%80%e7%99%ba%e5%a3%b2%ef%bc%81/",
+      "fetched_at": "2026-08-07T10:00:32.962884+09:00"
     },
     {
       "id": "930bfc49141353d9",
@@ -260,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.suitetsu.com/event/20260809natsuyasumikodomotaiken.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827871+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962886+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -273,7 +260,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827874+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962889+09:00"
+    },
+    {
+      "id": "a4654529e2f57ecc",
+      "title": "近鉄 親子向け 伊勢志摩お魚図鑑乗車・魚学習ツアー",
+      "date": "2026-08-21",
+      "location": "",
+      "description": "近畿日本鉄道、全国農協観光協会は、ツアー企画「“なつやすみ親子企画” おさかな先生と行く！『伊勢志摩お魚図鑑』でおさかなの旅ミニ体験」を開催。旅行日は、2026年8月21日（金）の日帰り。集合場所（時間）は、大阪上本町駅地上改札前コンコース",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
+      "fetched_at": "2026-08-07T10:00:32.962891+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -286,7 +286,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827877+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962893+09:00"
+    },
+    {
+      "id": "5225f7125f329f12",
+      "title": "大井川鐵道 子ども向け 夏休みSL自由研究ツアー",
+      "date": "2026-08-22",
+      "location": "",
+      "description": "大井川鐵道は、事前申込制企画として、夏休み自由研究ツアーを開催。開催日は、2026年8月22日（土）。集合場所（時間）は、新金谷駅前プラザロコ（10:15）。SL解説、整備士解説の後、車両基地見学、転車台見学を実施。昼休憩後、「きかんしゃト",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://daitetsu.jp/archives/321002",
+      "fetched_at": "2026-08-07T10:00:32.962895+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827880+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962897+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -312,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827883+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962900+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -325,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-06T07:08:00.827886+09:00"
+      "fetched_at": "2026-08-07T10:00:32.962903+09:00"
     }
   ]
 }
