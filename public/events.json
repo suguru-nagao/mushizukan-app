@@ -1,241 +1,7 @@
 {
-  "generated_at": "2026-08-08T06:32:50.809059+09:00",
-  "count": 26,
+  "generated_at": "2026-08-09T06:23:13.132265+09:00",
+  "count": 15,
   "events": [
-    {
-      "id": "b1bdd387a78845ff",
-      "title": "新津鉄道資料館 北越急行ほくほく線 これまでの歩み 特別展 開催",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "新津鉄道資料館は、特別展「北越急行ほくほく線-これまでの歩み-」を開催。開催期間は、2026年8月8日（土）～9月14日（月）。同館2階企画展示室にて、ほくほく線30年の歴史を振り返る展示を実施。9月5日（土）14:00～15:30には、新",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.ncnrm.com/event/20260808_hokuhokusen/",
-      "fetched_at": "2026-08-08T06:32:50.808896+09:00"
-    },
-    {
-      "id": "1e6c1b724b1818d8",
-      "title": "伊豆箱根鉄道 8並び記念乗車券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "伊豆箱根鉄道は、令和8年8月8日を記念して、「8並び記念券セット」を発売。乗車券、入場券各2枚と台紙のセットで、発売額は1,000円。発売開始日は、2026年8月8日（土）。発売箇所は、小田原、大雄山、三島、修善寺の各駅、オンラインショップ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.izuhakone.co.jp/izu-group/izu-news/p010926_d/fil/railway_news_20260716.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808910+09:00"
-    },
-    {
-      "id": "b896786ae802f00f",
-      "title": "東武 南栗橋・新栃木～会津田島間 DL夜行列車乗車ツアー",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "クラブツーリズムは、東武鉄道の「SL大樹」運転開始9周年を記念して、DL夜行団体臨時列車の乗車ツアーを開催。旅行日は、2026年8月8日（土）～9日（日）。団体臨時列車の運転区間は、8日が南栗橋（22:22発）～会津田島（翌5:39着）、9",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808917+09:00"
-    },
-    {
-      "id": "fe4775dbaca6ec22",
-      "title": "東武 スリーエイト記念乗車券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "東武鉄道は、「令和8年8月8日 スリーエイト記念乗車券」を発売。駅ナンバリングに8がつく駅（牛田、川俣、藤岡、豊春、東武練馬の各駅）発の硬券乗車券5枚と台紙のセットで、おみくじが付属。発売額は1,000円。発売・有効期間は、2026年8月8",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/news/20260714164655PZga6lBqTARl2RQpnoLlMA.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808924+09:00"
-    },
-    {
-      "id": "90c0080f6985619b",
-      "title": "大阪モノレール 運転シミュレーター・車両運転体験会",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "大阪モノレールは、事前申込制イベント「大阪モノレール運転体験会」を開催。開催日は2026年8月8日（土）で、午前の部（9:10～12:10頃）、午後の部（13:40～16:40頃）の2回開催。開催場所は、万博車両基地。机上講習（約30分）、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.osaka-monorail.co.jp/info/detail/889",
-      "fetched_at": "2026-08-08T06:32:50.808930+09:00"
-    },
-    {
-      "id": "094792903d1accdb",
-      "title": "北総鉄道 令和8年8月8日記念硬券セット 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "北総鉄道は、「北総鉄道8・8・8記念硬券セット」を発売。B型硬券乗車券4枚と台紙のセットで、発売額は1,000円。発売開始日は、2026年8月8日（土）。発売箇所は、新柴又、東松戸、新鎌ヶ谷、千葉ニュータウン中央の各駅。発売数は888セット",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuso-railway.co.jp/station/shinshibamata/detail/71647",
-      "fetched_at": "2026-08-08T06:32:50.808936+09:00"
-    },
-    {
-      "id": "b7e7f3f33dce744a",
-      "title": "名鉄 8・8・8記念乗車券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "名古屋鉄道は、令和8年8月8日の8並びを記念して、「『8・8・8』記念乗車券」を発売。台紙一体型の乗車券3枚セットで、発売額は880円。発売日時は、2026年8月8日（土）午前8時8分8秒。発売箇所は、名鉄名古屋駅サービスセンター前 特設会",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.meitetsu.co.jp/profile/news/2026/__icsFiles/afieldfile/2026/07/28/26-07-28888kinenzyousyaken.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808942+09:00"
-    },
-    {
-      "id": "7813072468aabfda",
-      "title": "南海 アンブレラマーカー・キッズクロス 販売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "南海電気鉄道は、新グッズ2品目を販売。販売品目（価格）は、アンブレラマーカー（5種類、各400円）、キッズクロス（2種類、各700円）。2026年8月8日（土）、9日（日）開催の「大和鉄道まつり2026」などで販売。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nankai.co.jp/lib/traffic/information/pdf/260805.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808953+09:00"
-    },
-    {
-      "id": "558d7524d2af5143",
-      "title": "関東鉄道 888記念券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "関東鉄道は、令和8年8月8日にあわせ、「常総線 888 記念券」を発売。キハ2308号デザインの乗車券、大宝駅の入場券、台紙のセットで、発売額は800円。で、発売開始日は、2026年8月8日（土）。発売箇所は、取手、守谷、水海道、下妻、下館",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kantetsu.co.jp/cms/wp-content/uploads/2026/08/20260806_infojoso888.pdf",
-      "fetched_at": "2026-08-08T06:32:50.808961+09:00"
-    },
-    {
-      "id": "81e2d85e37e2fff0",
-      "title": "九州鉄道記念館 夏の鉄道の祭典 開催",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "九州鉄道記念館は、「夏の鉄道の祭典」を開催。開催日は、2026年8月8日（土）、9日（日）。713系の特別展示撮影会、9600形59634号機、キハ07-41の客室公開、N700系ミニ新幹線の運転、Nゲージ模型の体験運転・工作教室、鉄道クイ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.k-rhm.jp/news/detail.php?id=343",
-      "fetched_at": "2026-08-08T06:32:50.808967+09:00"
-    },
-    {
-      "id": "4433c63193f85bc9",
-      "title": "水島臨海鉄道 8月8日 ゾロ目記念硬券入場券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "水島臨海鉄道は、令和8年8月8日を記念して、「ゾロ目記念硬券入場券」を発売。倉敷市駅の硬券入場券と台紙などのセットで、発売額は150円。ダッチングマシンでの日付押印体験が可能。発売日時は、2026年8月8日（土）7:00～17:00。発売箇",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mizurin.co.jp/event_detail/index/275.html",
-      "fetched_at": "2026-08-08T06:32:50.808972+09:00"
-    },
-    {
-      "id": "2a8a6be3916f222d",
-      "title": "のと鉄道 休日限定1日フリー乗車券 ポケモンデザイン 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "のと鉄道は、「休日限定1日フリー乗車券」のポケモンデザイン版を発売。発売額は、大人1,000円、子ども500円。発売開始日は、2026年8月8日（土）。発売箇所は、穴水駅（当日8:30～）、能登中島、田鶴浜、七尾の各駅（土休日など定休）、列",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://nototetsu.jp/uncategorized/%e4%bc%91%e6%97%a5%e9%99%90%e5%ae%9a%ef%bc%91%e6%97%a5%e3%83%95%e3%83%aa%e3%83%bc%e4%b9%97%e8%bb%8a%e5%88%b8%ef%bc%88%e3%83%9d%e3%82%b1%e3%83%a2%e3%83%b3%e3%83%87%e3%82%b6%e3%82%a4%e3%83%b3%ef%bc%89/",
-      "fetched_at": "2026-08-08T06:32:50.808978+09:00"
-    },
-    {
-      "id": "8b49e3a394dcc4b8",
-      "title": "山形鉄道 YR-888号記念乗車券 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "山形鉄道は、YR-888号の運用終了を前に、「YR-888号記念乗車券」を発売。乗車券3枚と台紙のセットで、発売額は1,000円。発売開始日は、2026年8月8日（土）。発売箇所は、赤湯、宮内、長井、荒砥の各駅。有効期間は、12月31日（木",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://flower-liner.jp/info/yr-888%e5%8f%b7%e8%a8%98%e5%bf%b5%e4%b9%97%e8%bb%8a%e5%88%b8%e3%80%80%e7%99%ba%e5%a3%b2%ef%bc%81/",
-      "fetched_at": "2026-08-08T06:32:50.808984+09:00"
-    },
-    {
-      "id": "6b82aec49329fedc",
-      "title": "いすみ鉄道 令和8年8月8日記念硬券セット 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "いすみ鉄道は、「令和8年8月8日記念硬券セット」を発売。Aセット（880円）、Bセット（660円）の2種類。いずれも硬券乗車券2枚と台紙のセット。発売開始日時は、2026年8月8日（土）。発売箇所は、大多喜駅、大原駅、同社オンラインショップ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://isumirail.co.jp/blog/archives/11623",
-      "fetched_at": "2026-08-08T06:32:50.808990+09:00"
-    },
-    {
-      "id": "5d31b516e3e3f4f3",
-      "title": "三笠鉄道村 夏祭り",
-      "date": "2026-08-08",
-      "location": "北海道",
-      "description": "三笠鉄道村は、「鉄道村夏まつり」を開催。開催日時は、2026年8月8日（土）、9日（日）の各日9:00～16:00。SL「S-304号」運転席乗車体験（1組3,000円、各日先着12組）、同機けん引による客車の乗車体験（1人300円）、汽笛",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://mikasa-railway.com/2026/07/26/%e9%89%84%e9%81%93%e6%9d%91%e5%a4%8f%e7%a5%ad%e3%82%8a%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/",
-      "fetched_at": "2026-08-08T06:32:50.808997+09:00"
-    },
-    {
-      "id": "1eb8083c64dbe761",
-      "title": "親子向け 碓氷峠廃線ウォークツアー",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "JR東日本びゅうツーリズム＆セールスは、親子向けツアー「フレテミーナ」として、「線路を歩く?!『碓氷峠 廃線ウォーク』とガイド付きで巡る『碓氷峠鉄道文化むら』夏の大冒険へ出発！」を開催。旅行日は、2026年8月8日（土）の日帰り。東京、上野",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0126",
-      "fetched_at": "2026-08-08T06:32:50.809002+09:00"
-    },
-    {
-      "id": "3abd67baf65a00a8",
-      "title": "京王 子ども向け 乗務員体験イベント",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "京王電鉄は、「京王キッズおしごと隊 ～ぼくの、わたしのお仕事体験～」のプログラムとして、事前申込制イベント「鉄道のおしごとを体験しよう！（駅員・乗務員編） 」を開催。開催日は2026年8月8日（土）で、午前、午後の2回開催。開催場所は、鉄道",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809008+09:00"
-    },
-    {
-      "id": "42f6ae17d84f92f2",
-      "title": "青い森鉄道 令和8年8月8日記念乗車券セット 発売",
-      "date": "2026-08-08",
-      "location": "",
-      "description": "青い森鉄道は、「令和8年8月8日記念乗車券セット」を発売。A型硬券乗車券2枚と台紙のセット。発売額は880円で、発売開始日は2026年8月8日（土）。発売箇所は、八戸、三沢、野辺地、小湊、浅虫温泉、青森の各駅窓口。発売数は500セット限定。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://aoimorirailway.com/wp/wp-content/uploads/2026/07/68ba90496236a8a9a6b29c670761ca87.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809013+09:00"
-    },
     {
       "id": "930bfc49141353d9",
       "title": "水間鉄道 子ども向け 電車運転体験会",
@@ -247,7 +13,98 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.suitetsu.com/event/20260809natsuyasumikodomotaiken.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809018+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132173+09:00"
+    },
+    {
+      "id": "c9ec86526a5d2406",
+      "title": "ムーンライトながら 三島～大垣間 復刻ツアー",
+      "date": "2026-08-09",
+      "location": "",
+      "description": "JR東海、ジェイアール東海ツアーズは、事前申込制企画「ムーンライトながら部分復刻 373系で行く『おおがき市場夏まつり』ツアー」を開催。旅行日は、2026年8月9日（日）。集合場所（時間）は、三島駅北口（0:00頃）。373系3両編成による",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://jr-central.co.jp/news/release/_pdf/000045727.pdf",
+      "fetched_at": "2026-08-09T06:23:13.132187+09:00"
+    },
+    {
+      "id": "a3f493e3a1558c9f",
+      "title": "東武 SL大樹9周年記念乗車券 発売",
+      "date": "2026-08-10",
+      "location": "",
+      "description": "東武鉄道は、「SL大樹運行開始9周年記念乗車券」を発売。下今市駅発1,000円区間の大人片道乗車券1枚と台紙のセット。発売額は1,000円。発売・有効期間は、2026年8月10日（月）～9月9日（水）。発売箇所は、栗橋、栃木、新栃木、新鹿沼",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
+      "fetched_at": "2026-08-09T06:23:13.132194+09:00"
+    },
+    {
+      "id": "549f8ea91a66de14",
+      "title": "小田急 MSE貸切乗車 全形式離合チャレンジツアー",
+      "date": "2026-08-11",
+      "location": "",
+      "description": "小田急電鉄は、事前申込制ツアー企画「鉄道BIG４南田裕介さんと行く ロマンスカー・MSEに乗って小田急線を走る全形式離合チャレンジ ～車内から小田急電車ウォッチング～」を開催。旅行日は、2026年8月1日（土）の日帰り。集合場所（時間）は、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu-travel.co.jp/special/oer/50th_mse.html",
+      "fetched_at": "2026-08-09T06:23:13.132200+09:00"
+    },
+    {
+      "id": "5ffae23a908d809f",
+      "title": "西武 正丸トンネル内 4000系撮影会ツアー",
+      "date": "2026-08-11",
+      "location": "",
+      "description": "西武鉄道は、事前申込制企画「『正丸トンネルで電車を撮ろう！』撮影会」を開催。開催日は、2026年8月11日（火・祝）～12日（水）。集合場所（受付時間）は、飯能駅改札口外（11日22:40～）。正丸トンネル信号場にて、4000系（白色）2本",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seiburailway.jp/newsroom/news/20260708_shomaru",
+      "fetched_at": "2026-08-09T06:23:13.132205+09:00"
+    },
+    {
+      "id": "4c556564f0576e31",
+      "title": "水島臨海鉄道 井原鉄道コラボヘッドマーク 撮影会",
+      "date": "2026-08-12",
+      "location": "倉敷市駅",
+      "description": "水島臨海鉄道は、井原鉄道とのコラボ企画の一環として、事前申込制の写真撮影会を開催。開催日は、2026年8月12日（水）。集合場所は倉敷市駅で、10:20までに受付。倉敷市駅10:33発の列車に乗車し移動。倉敷貨物ターミナル駅にて、両社のオリ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.mizurin.co.jp/event_detail/index/281.html",
+      "fetched_at": "2026-08-09T06:23:13.132211+09:00"
+    },
+    {
+      "id": "d404d936701a4619",
+      "title": "783系 博多～門司港間 花火大会鑑賞ツアー",
+      "date": "2026-08-13",
+      "location": "",
+      "description": "JR九州は、「783系専用列車で行く！第39回関門海峡花火大会観賞ツアー」を開催。旅行日は、2026年8月13日（木）の日帰り。雨天決行。783系による団体臨時列車に乗車。運転区間は、博多（13:56発）～門司港（15:18着）、門司港（2",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1240377",
+      "fetched_at": "2026-08-09T06:23:13.132216+09:00"
+    },
+    {
+      "id": "7b15285200d95c90",
+      "title": "京王 高幡不動車両基地 子ども向け体験イベント",
+      "date": "2026-08-13",
+      "location": "",
+      "description": "京王電鉄は、「京王キッズおしごと隊 ～ぼくの、わたしのお仕事体験～」のプログラムとして、事前申込制イベント「電車のしくみを知ろう！」を開催。開催日は2026年8月13日（木）で、午前、午後の2回開催。開催場所は、高幡不動車両基地。募集対象は",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
+      "fetched_at": "2026-08-09T06:23:13.132227+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -260,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809024+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132234+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -273,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809029+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132239+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -286,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809034+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132244+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -299,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-08T06:32:50.809039+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132248+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -312,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809045+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132253+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -325,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809050+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132258+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -338,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-08T06:32:50.809056+09:00"
+      "fetched_at": "2026-08-09T06:23:13.132262+09:00"
     }
   ]
 }
