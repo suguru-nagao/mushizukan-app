@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-08-09T06:23:13.132265+09:00",
+  "generated_at": "2026-08-10T06:24:53.021215+09:00",
   "count": 15,
   "events": [
-    {
-      "id": "930bfc49141353d9",
-      "title": "水間鉄道 子ども向け 電車運転体験会",
-      "date": "2026-08-09",
-      "location": "",
-      "description": "水間鉄道は、事前申込制イベント「夏休みこども電車運転体験」を開催。開催日は2026年8月9日（日）で、午前の部（10:00～）、午後の部（13:15～）の2回開催。集合場所は、水間観音駅。水間車庫にて、車両の運転体験（車庫線約100メートル",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.suitetsu.com/event/20260809natsuyasumikodomotaiken.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132173+09:00"
-    },
-    {
-      "id": "c9ec86526a5d2406",
-      "title": "ムーンライトながら 三島～大垣間 復刻ツアー",
-      "date": "2026-08-09",
-      "location": "",
-      "description": "JR東海、ジェイアール東海ツアーズは、事前申込制企画「ムーンライトながら部分復刻 373系で行く『おおがき市場夏まつり』ツアー」を開催。旅行日は、2026年8月9日（日）。集合場所（時間）は、三島駅北口（0:00頃）。373系3両編成による",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000045727.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132187+09:00"
-    },
     {
       "id": "a3f493e3a1558c9f",
       "title": "東武 SL大樹9周年記念乗車券 発売",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132194+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021107+09:00"
     },
     {
       "id": "549f8ea91a66de14",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/50th_mse.html",
-      "fetched_at": "2026-08-09T06:23:13.132200+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021122+09:00"
     },
     {
       "id": "5ffae23a908d809f",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260708_shomaru",
-      "fetched_at": "2026-08-09T06:23:13.132205+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021130+09:00"
     },
     {
       "id": "4c556564f0576e31",
@@ -78,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mizurin.co.jp/event_detail/index/281.html",
-      "fetched_at": "2026-08-09T06:23:13.132211+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021136+09:00"
     },
     {
       "id": "d404d936701a4619",
@@ -91,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1240377",
-      "fetched_at": "2026-08-09T06:23:13.132216+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021141+09:00"
     },
     {
       "id": "7b15285200d95c90",
@@ -104,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132227+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021148+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -117,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132234+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021154+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -130,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132239+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021166+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -143,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132244+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021175+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -156,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-09T06:23:13.132248+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021181+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -169,7 +143,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132253+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021188+09:00"
+    },
+    {
+      "id": "25fb0739ae7b3430",
+      "title": "松本駅 E131系 車両展示会",
+      "date": "2026-08-29",
+      "location": "松本駅",
+      "description": "JR東日本は、松本駅でE131系の車両展示会を開催。開催日時は、2026年8月29日（土）10:00～14:30（最終入場は14:00）。開催場所は、松本駅構内。有効な乗車券・入場券で見学可。子ども制服着用記念撮影なども実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
+      "fetched_at": "2026-08-10T06:24:53.021193+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132258+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021199+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -195,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-09T06:23:13.132262+09:00"
+      "fetched_at": "2026-08-10T06:24:53.021206+09:00"
+    },
+    {
+      "id": "149d11bb5d5605a9",
+      "title": "秩父鉄道 SL埼玉パナソニックワイルドナイツエクスプレス 運転",
+      "date": "2026-09-05",
+      "location": "",
+      "description": "秩父鉄道は、SLパレオエクスプレスを「SL埼玉パナソニックワイルドナイツエクスプレス」として運転。運転日は、2026年9月5日（土）、6日（日）。特別装飾（記念旗掲出、デフ装飾）を実施。5日は、熊谷駅ホームにて、選手との撮影会（9:40頃～",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
+      "fetched_at": "2026-08-10T06:24:53.021212+09:00"
     }
   ]
 }
