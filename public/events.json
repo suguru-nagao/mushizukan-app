@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-08-10T06:24:53.021215+09:00",
-  "count": 15,
+  "generated_at": "2026-08-11T06:34:50.682137+09:00",
+  "count": 16,
   "events": [
-    {
-      "id": "a3f493e3a1558c9f",
-      "title": "東武 SL大樹9周年記念乗車券 発売",
-      "date": "2026-08-10",
-      "location": "",
-      "description": "東武鉄道は、「SL大樹運行開始9周年記念乗車券」を発売。下今市駅発1,000円区間の大人片道乗車券1枚と台紙のセット。発売額は1,000円。発売・有効期間は、2026年8月10日（月）～9月9日（水）。発売箇所は、栗橋、栃木、新栃木、新鹿沼",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tobu.co.jp/cms-pdf/news/20260716181642ydtIl1fnObbdqWe6rhEkRw.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021107+09:00"
-    },
     {
       "id": "549f8ea91a66de14",
       "title": "小田急 MSE貸切乗車 全形式離合チャレンジツアー",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/50th_mse.html",
-      "fetched_at": "2026-08-10T06:24:53.021122+09:00"
+      "fetched_at": "2026-08-11T06:34:50.681867+09:00"
     },
     {
       "id": "5ffae23a908d809f",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260708_shomaru",
-      "fetched_at": "2026-08-10T06:24:53.021130+09:00"
+      "fetched_at": "2026-08-11T06:34:50.681877+09:00"
     },
     {
       "id": "4c556564f0576e31",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mizurin.co.jp/event_detail/index/281.html",
-      "fetched_at": "2026-08-10T06:24:53.021136+09:00"
+      "fetched_at": "2026-08-11T06:34:50.681882+09:00"
     },
     {
       "id": "d404d936701a4619",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1240377",
-      "fetched_at": "2026-08-10T06:24:53.021141+09:00"
+      "fetched_at": "2026-08-11T06:34:50.681886+09:00"
     },
     {
       "id": "7b15285200d95c90",
@@ -78,7 +65,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021148+09:00"
+      "fetched_at": "2026-08-11T06:34:50.681890+09:00"
+    },
+    {
+      "id": "5af9403f1516474c",
+      "title": "小田急 EXE就役30周年記念 夜通しツアー",
+      "date": "2026-08-15",
+      "location": "",
+      "description": "小田急電鉄は、事前申込制ツアー「EXE30000形就役30周年記念『新松田・向ヶ丘遊園停車特急再現 夜通しツアー！』 ～真夜中の“とある駅”でEXE未更新車の撮影タイム～」を開催。出発日は、2026年8月15日（土）。集合場所（時間）は、小",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu-travel.co.jp/special/oer/exe_mystery01.html",
+      "fetched_at": "2026-08-11T06:34:50.681893+09:00"
+    },
+    {
+      "id": "589093fa147c408b",
+      "title": "えちごトキめき鉄道 直江津駅 親子で体験 鉄道の歴史ミニフェスタ",
+      "date": "2026-08-15",
+      "location": "、新潟県 直江津駅",
+      "description": "えちごトキめき鉄道は、新潟県鉄道発祥140周年記念イベントの一環として、「親子で体験！鉄道の歴史ミニフェスタ」を開催。開催日は、2026年8月15日（土）。開催場所は、直江津駅。人力車体験乗車（11:00～12:00・13:00～15:00",
+      "prefecture": "、新潟県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2596",
+      "fetched_at": "2026-08-11T06:34:50.682097+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021154+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682108+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021166+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682113+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021175+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682117+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-10T06:24:53.021181+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682120+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021188+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682124+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021193+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682127+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021199+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682130+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-10T06:24:53.021206+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682133+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-10T06:24:53.021212+09:00"
+      "fetched_at": "2026-08-11T06:34:50.682135+09:00"
     }
   ]
 }
