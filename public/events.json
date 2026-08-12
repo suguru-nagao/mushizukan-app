@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-08-12T06:38:45.901238+09:00",
+  "generated_at": "2026-08-13T06:38:08.998992+09:00",
   "count": 14,
   "events": [
-    {
-      "id": "4c556564f0576e31",
-      "title": "水島臨海鉄道 井原鉄道コラボヘッドマーク 撮影会",
-      "date": "2026-08-12",
-      "location": "倉敷市駅",
-      "description": "水島臨海鉄道は、井原鉄道とのコラボ企画の一環として、事前申込制の写真撮影会を開催。開催日は、2026年8月12日（水）。集合場所は倉敷市駅で、10:20までに受付。倉敷市駅10:33発の列車に乗車し移動。倉敷貨物ターミナル駅にて、両社のオリ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mizurin.co.jp/event_detail/index/281.html",
-      "fetched_at": "2026-08-12T06:38:45.900941+09:00"
-    },
     {
       "id": "d404d936701a4619",
       "title": "783系 博多～門司港間 花火大会鑑賞ツアー",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1240377",
-      "fetched_at": "2026-08-12T06:38:45.900957+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998685+09:00"
     },
     {
       "id": "7b15285200d95c90",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-12T06:38:45.900964+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998697+09:00"
     },
     {
       "id": "5af9403f1516474c",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/exe_mystery01.html",
-      "fetched_at": "2026-08-12T06:38:45.900969+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998702+09:00"
     },
     {
       "id": "589093fa147c408b",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2596",
-      "fetched_at": "2026-08-12T06:38:45.901197+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998940+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901204+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998950+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901209+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998955+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901217+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998960+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -117,7 +104,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-12T06:38:45.901221+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998968+09:00"
+    },
+    {
+      "id": "81ffe3800cd2014f",
+      "title": "名鉄名古屋駅 開業85周年記念乗車券・入場券セット 発売",
+      "date": "2026-08-22",
+      "location": "名鉄名古屋駅",
+      "description": "名古屋鉄道は、名鉄名古屋駅開業85周年記念乗車券・入場券セットを発売。台紙一体型の乗車券2枚と入場券1枚のセットで、発売額は850円。発売日時は、2026年8月22日（土）8:05～10:00。発売箇所は、名鉄名古屋駅サービスセンター前特設",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.meitetsu.co.jp/plan/event/detail/1288813_8032.html",
+      "fetched_at": "2026-08-13T06:38:08.998973+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901225+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998977+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901228+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998981+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901231+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998984+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-12T06:38:45.901234+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998987+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-12T06:38:45.901237+09:00"
+      "fetched_at": "2026-08-13T06:38:08.998990+09:00"
     }
   ]
 }
