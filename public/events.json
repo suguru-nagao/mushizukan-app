@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-08-13T06:38:08.998992+09:00",
-  "count": 14,
+  "generated_at": "2026-08-14T06:38:22.336931+09:00",
+  "count": 13,
   "events": [
-    {
-      "id": "d404d936701a4619",
-      "title": "783系 博多～門司港間 花火大会鑑賞ツアー",
-      "date": "2026-08-13",
-      "location": "",
-      "description": "JR九州は、「783系専用列車で行く！第39回関門海峡花火大会観賞ツアー」を開催。旅行日は、2026年8月13日（木）の日帰り。雨天決行。783系による団体臨時列車に乗車。運転区間は、博多（13:56発）～門司港（15:18着）、門司港（2",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1240377",
-      "fetched_at": "2026-08-13T06:38:08.998685+09:00"
-    },
-    {
-      "id": "7b15285200d95c90",
-      "title": "京王 高幡不動車両基地 子ども向け体験イベント",
-      "date": "2026-08-13",
-      "location": "",
-      "description": "京王電鉄は、「京王キッズおしごと隊 ～ぼくの、わたしのお仕事体験～」のプログラムとして、事前申込制イベント「電車のしくみを知ろう！」を開催。開催日は2026年8月13日（木）で、午前、午後の2回開催。開催場所は、高幡不動車両基地。募集対象は",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20260527_kidsoshigoto.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998697+09:00"
-    },
     {
       "id": "5af9403f1516474c",
       "title": "小田急 EXE就役30周年記念 夜通しツアー",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/exe_mystery01.html",
-      "fetched_at": "2026-08-13T06:38:08.998702+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336598+09:00"
     },
     {
       "id": "589093fa147c408b",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2596",
-      "fetched_at": "2026-08-13T06:38:08.998940+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336886+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -65,7 +39,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998950+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336894+09:00"
+    },
+    {
+      "id": "ec068a2799293ae5",
+      "title": "札幌市 子ども交通教室 地下鉄編 開催",
+      "date": "2026-08-19",
+      "location": "北海道",
+      "description": "札幌市交通事業振興公社、札幌市交通局は、事前申込制企画「地下鉄・路面電車 子ども交通教室 2026 ～地下鉄編～」を開催。開催日時は、2026年8月19日（水）、20日（木）、21日（金）の各日9:30～13:00。開催場所は、西車両基地、",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.city.sapporo.jp/st/kyoshitsu2026.html",
+      "fetched_at": "2026-08-14T06:38:22.336898+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998955+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336901+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998960+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336905+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-13T06:38:08.998968+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336908+09:00"
     },
     {
       "id": "81ffe3800cd2014f",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288813_8032.html",
-      "fetched_at": "2026-08-13T06:38:08.998973+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336917+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -130,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998977+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336920+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -143,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998981+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336923+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -156,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998984+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336925+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-13T06:38:08.998987+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336928+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-13T06:38:08.998990+09:00"
+      "fetched_at": "2026-08-14T06:38:22.336930+09:00"
     }
   ]
 }
