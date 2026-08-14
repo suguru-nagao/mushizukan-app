@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-14T06:38:22.336931+09:00",
-  "count": 13,
+  "generated_at": "2026-08-15T06:19:16.426103+09:00",
+  "count": 19,
   "events": [
     {
       "id": "5af9403f1516474c",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/exe_mystery01.html",
-      "fetched_at": "2026-08-14T06:38:22.336598+09:00"
+      "fetched_at": "2026-08-15T06:19:16.425671+09:00"
     },
     {
       "id": "589093fa147c408b",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2596",
-      "fetched_at": "2026-08-14T06:38:22.336886+09:00"
+      "fetched_at": "2026-08-15T06:19:16.425989+09:00"
     },
     {
       "id": "c85bf9406cce6998",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336894+09:00"
+      "fetched_at": "2026-08-15T06:19:16.425997+09:00"
     },
     {
       "id": "ec068a2799293ae5",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.city.sapporo.jp/st/kyoshitsu2026.html",
-      "fetched_at": "2026-08-14T06:38:22.336898+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426002+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -65,7 +65,72 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336901+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426013+09:00"
+    },
+    {
+      "id": "1a761e11cfa566b4",
+      "title": "THE ROYAL EXPRESS 北海道クルーズツアー",
+      "date": "2026-08-21",
+      "location": "北海道",
+      "description": "東急とJR北海道は、「THE ROYAL EXPRESS～HOKKAIDO CRUISE TRAIN～」の旅行商品を販売。「THE ROYAL EXPRESS」に乗車するツアー。出発日は、2026年8月21日（金）、28日（金）、9月4日（",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
+      "fetched_at": "2026-08-15T06:19:16.426018+09:00"
+    },
+    {
+      "id": "cb4c8d1e0d500cec",
+      "title": "近鉄 つどい 異経路ツアー",
+      "date": "2026-08-21",
+      "location": "",
+      "description": "近畿日本鉄道は、事前申込制企画として、「つどいで集う異経路ツアー」を開催。旅行日は、2026年8月21日（金）の日帰り。「つどい」によるツアー列車に乗車。乗車区間は、新王寺（14:00頃発）～西田原本～大和西大寺～八戸ノ里～瓢箪山～東生駒～",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260821.pdf",
+      "fetched_at": "2026-08-15T06:19:16.426021+09:00"
+    },
+    {
+      "id": "626d875c7c47f86d",
+      "title": "阪神 尼崎車庫 子ども向け 見学・体験イベント",
+      "date": "2026-08-21",
+      "location": "尼崎車庫",
+      "description": "阪神電気鉄道は、「阪急阪神 ゆめ・まちチャレンジ隊2026」のプログラムとして、事前申込制イベント「阪神電車尼崎車庫に行こう！」を開催。開催日時は、2026年8月21日（金）9:30～11:30。開催場所は、尼崎車庫。工場内や車両の見学、パ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
+      "fetched_at": "2026-08-15T06:19:16.426030+09:00"
+    },
+    {
+      "id": "c998f14d22679aae",
+      "title": "京阪 フェルメール展記念乗車券 発売",
+      "date": "2026-08-21",
+      "location": "",
+      "description": "京阪電気鉄道は、大阪中之島美術館での「フェルメール《真珠の耳飾りの少女》展」開催にあわせ、記念乗車券を発売。京阪線全線（大津線除く）と石清水八幡宮参道ケーブルの1日乗車券2枚と台紙のセットで、発売額は4,000円。発売期間は、2026年8月",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260701_keihan-railway.pdf",
+      "fetched_at": "2026-08-15T06:19:16.426035+09:00"
+    },
+    {
+      "id": "8ce78e880c126a5f",
+      "title": "熊本総合車両所など 親子向け 博多駅発着見学ツアー",
+      "date": "2026-08-21",
+      "location": "博多駅",
+      "description": "JR九州は、事前申込制ツアー「博多駅長と行く！夏休みの九州新幹線大ぼうけんツアー」を開催。旅行日は、2026年8月21日（金）の日帰り。集合・解散は、博多駅。博多駅にて、バックヤード見学など、熊本総合車両所にて、くまモンラッピング新幹線の見",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1247671",
+      "fetched_at": "2026-08-15T06:19:16.426038+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -78,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336905+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426076+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -91,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-14T06:38:22.336908+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426081+09:00"
     },
     {
       "id": "81ffe3800cd2014f",
@@ -104,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288813_8032.html",
-      "fetched_at": "2026-08-14T06:38:22.336917+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426084+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -117,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336920+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426087+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -130,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336923+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426090+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -143,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336925+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426093+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -156,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-14T06:38:22.336928+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426096+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -169,7 +234,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-14T06:38:22.336930+09:00"
+      "fetched_at": "2026-08-15T06:19:16.426099+09:00"
+    },
+    {
+      "id": "ccdf1dac398811a2",
+      "title": "東武 2026 SLファンフェスタ",
+      "date": "2026-09-05",
+      "location": "",
+      "description": "東武鉄道は、「2026 SLファンフェスタ」を開催。開催日時は、2026年9月5日（土）10:00～15:00。開催場所は、下今市駅転車台広場、イマテラス。機関庫公開（13:00～15:00）、子ども制服着用体験、トークショー、グッズ販売、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
+      "fetched_at": "2026-08-15T06:19:16.426101+09:00"
     }
   ]
 }
