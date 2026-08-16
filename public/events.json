@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-16T06:14:55.640070+09:00",
-  "count": 20,
+  "generated_at": "2026-08-17T06:14:05.224472+09:00",
+  "count": 21,
   "events": [
     {
       "id": "c85bf9406cce6998",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20260715_h01.pdf",
-      "fetched_at": "2026-08-16T06:14:55.639989+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224347+09:00"
     },
     {
       "id": "ec068a2799293ae5",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.city.sapporo.jp/st/kyoshitsu2026.html",
-      "fetched_at": "2026-08-16T06:14:55.640001+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224363+09:00"
     },
     {
       "id": "a4654529e2f57ecc",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/2828e844a56d49c7baefec2a5c7303b9/20260806rw.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640006+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224371+09:00"
     },
     {
       "id": "1a761e11cfa566b4",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640010+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224377+09:00"
     },
     {
       "id": "cb4c8d1e0d500cec",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260821.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640014+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224383+09:00"
     },
     {
       "id": "626d875c7c47f86d",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/05/01504d82e2a261c79465383c8d338e591aa1a880.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640018+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224389+09:00"
     },
     {
       "id": "c998f14d22679aae",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260701_keihan-railway.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640021+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224395+09:00"
     },
     {
       "id": "8ce78e880c126a5f",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1247671",
-      "fetched_at": "2026-08-16T06:14:55.640029+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224405+09:00"
     },
     {
       "id": "d234bb2384011cff",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sanrikutetsudou.com/2026/08/05/%e4%b8%89%e9%89%84%e3%83%af%e3%83%b3%e3%82%b3%e3%82%a4%e3%83%b3%e3%83%95%e3%83%aa%e3%83%bc%e3%83%91%e3%82%b9%e7%99%ba%e5%a3%b2%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
-      "fetched_at": "2026-08-16T06:14:55.640033+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224412+09:00"
     },
     {
       "id": "1b50718f6f8e11d0",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260717_o01.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640037+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224417+09:00"
     },
     {
       "id": "5225f7125f329f12",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://daitetsu.jp/archives/321002",
-      "fetched_at": "2026-08-16T06:14:55.640041+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224422+09:00"
     },
     {
       "id": "81ffe3800cd2014f",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288813_8032.html",
-      "fetched_at": "2026-08-16T06:14:55.640044+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224427+09:00"
     },
     {
       "id": "e4f249d6c1195e5d",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nankai.co.jp/lib/company/news/pdf/260623.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640047+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224432+09:00"
     },
     {
       "id": "1d309bbab4c585d6",
@@ -182,7 +182,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wakatetsu.co.jp/archives/news/%e8%8b%a5%e6%a1%9c%e9%89%84%e9%81%93%e5%a4%8f%e4%bc%91%e3%81%bf%e5%a4%a7%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b-2",
-      "fetched_at": "2026-08-16T06:14:55.640050+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224437+09:00"
+    },
+    {
+      "id": "9e3677d2c9fcd12c",
+      "title": "京福電気鉄道 モボ301形・KYOTRAM 撮影会",
+      "date": "2026-08-22",
+      "location": "",
+      "description": "京福電気鉄道は、嵐電モボ301形55周年記念イベントとして、事前申込制企画「モボ301形撮影会 with KYOTRAM」を開催。開催日時は、2026年8月22日（土）10:00～。開催場所は、西院車庫。モボ301形とモボ1形「KYOTRA",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260731_keifuku.pdf",
+      "fetched_at": "2026-08-17T06:14:05.224442+09:00"
     },
     {
       "id": "98a8cd35b8768cf5",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640053+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224446+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640056+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224451+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640059+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224456+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640062+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224460+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-16T06:14:55.640065+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224465+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-08-16T06:14:55.640068+09:00"
+      "fetched_at": "2026-08-17T06:14:05.224469+09:00"
     }
   ]
 }
