@@ -1,85 +1,7 @@
 {
-  "generated_at": "2026-08-23T06:15:26.346061+09:00",
-  "count": 19,
+  "generated_at": "2026-08-24T06:15:15.902098+09:00",
+  "count": 16,
   "events": [
-    {
-      "id": "98a8cd35b8768cf5",
-      "title": "北越急行 HK100で行く新津鉄道資料館見学ツアー 海から山コース",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "北越急行は、「HK100で行く新津鉄道資料館見学」 ツアーを開催。「海から山コース」の旅行日は、2026年8月23日（日）の日帰り。HK100形「ゆめぞら」（1両）による団体臨時列車に乗車。乗車区間は、六日町（10:30発）～犀潟（11:1",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345949+09:00"
-    },
-    {
-      "id": "e4e10c29ace0de47",
-      "title": "小田急 もころんスタンプラリー",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "小田急電鉄は、「みんなでポーズ！もころんスタンプラリー」を開催。開催期間は、2026年8月23日（日）～10月31日（土）。小田急線各駅で台紙を入手しスタート。スタンプ設置駅は、エリア1が新宿、成城学園前、町田の各駅、エリア2が新百合ヶ丘、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.odakyu.jp/news/makhce0000000612-att/makhce0000000619.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345961+09:00"
-    },
-    {
-      "id": "cb1a8dec4aeb16b4",
-      "title": "近鉄 楽 夏物語ツアー",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "近畿日本鉄道は、ツアー企画「貸切列車『楽』で行く 夏物語2026」を開催。旅行日は、2026年8月23日（日）の日帰り。20000系「楽」による貸切列車に乗車。運転区間は、大阪上本町（6:50発）～賢島（9:47着）、賢島（16:24発）～",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260823001.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345970+09:00"
-    },
-    {
-      "id": "b8ec4689945897d1",
-      "title": "JR東海・岳南電車 夏休み応援 鉄道満喫ツアー",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "JR東海、クラブツーリズム、学研ホールディングスは、「夏休みの自由研究応援企画!!『JR東海×岳南電車 鉄道大満喫ツアー』」を開催。旅行日は、2026年8月23日（日）の日帰り。313系8000番台3両編成による団体臨時列車に乗車。乗車区間",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000045771.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345976+09:00"
-    },
-    {
-      "id": "0f9b75c4b763293c",
-      "title": "小田急 子ども向け ロマンスカーとびだすシールブック 配布",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "小田急電鉄は、「ロマンスカーとびだす！シールブック」を配布。配布開始日は、2026年8月23日（日）。特急ロマンスカー利用の子どもが対象。小田急線全駅で、窓口での特急券提示で配布。配布数は12,000部で、なくなり次第終了。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.odakyu.jp/news/makhce0000000612-att/makhce0000000619.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345982+09:00"
-    },
-    {
-      "id": "dc26ee9e1b9100ed",
-      "title": "近鉄 親子向け 古市教習所 駅務機器操作体験ツアー",
-      "date": "2026-08-23",
-      "location": "",
-      "description": "近畿日本鉄道は、事前申込制企画「きんてつ駅務機器操作体験ツアー」を開催。開催日は2026年8月23日（日）で、9:00～、10:10～、11:20～、12:30～、13:40～、14:50～、16:00～の7回開催。開催場所は、古市教習所。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20260823.pdf",
-      "fetched_at": "2026-08-23T06:15:26.345987+09:00"
-    },
     {
       "id": "e9f84e68381d336c",
       "title": "青い森鉄道 大学生向け 1日仕事体験 開催",
@@ -91,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48000",
-      "fetched_at": "2026-08-23T06:15:26.345993+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901828+09:00"
     },
     {
       "id": "29019ffb3cfb7a43",
@@ -104,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0143",
-      "fetched_at": "2026-08-23T06:15:26.346004+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901842+09:00"
     },
     {
       "id": "75d0e9660cfbdb8b",
@@ -117,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0173",
-      "fetched_at": "2026-08-23T06:15:26.346011+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901847+09:00"
     },
     {
       "id": "b59cdec2585b1f2f",
@@ -130,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260818_KuriyamaLegendHistory",
-      "fetched_at": "2026-08-23T06:15:26.346016+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901851+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -143,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-23T06:15:26.346021+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901855+09:00"
     },
     {
       "id": "35e70ad947151b4d",
@@ -156,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://chiba-monorail.co.jp/index.php/monochan_travel/20260829_32debut/",
-      "fetched_at": "2026-08-23T06:15:26.346026+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901859+09:00"
     },
     {
       "id": "62cafb983544f19a",
@@ -169,7 +91,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1203",
-      "fetched_at": "2026-08-23T06:15:26.346030+09:00"
+      "fetched_at": "2026-08-24T06:15:15.901862+09:00"
+    },
+    {
+      "id": "b52b6c19edec4c4e",
+      "title": "福井県内鉄道3社 就職希望者向け 会社見学バスツアー",
+      "date": "2026-08-29",
+      "location": "福井県 福井駅",
+      "description": "福井県鉄道協会は、「鉄道3社見学バスツアー」を開催。開催日時は、2026年8月29日（土）10:00～17:00頃。鉄道業界の就職希望者（高校生以上50歳以下）向け企画で、えちぜん鉄道、ハピラインふくい、福井鉄道の車両基地見学、就職説明会な",
+      "prefecture": "福井県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hapi-line.co.jp/news/archives/287",
+      "fetched_at": "2026-08-24T06:15:15.902065+09:00"
+    },
+    {
+      "id": "b4b30c87d55febb8",
+      "title": "京都鉄道博物館 鉄道模型トミックス50周年展 開催",
+      "date": "2026-08-29",
+      "location": "京都鉄道博物館",
+      "description": "京都鉄道博物館は、企画展「鉄道模型トミックス50周年展 in 京都鉄道博物館」 を開催。開催期間は、2026年8月29日（土）～9月23日（水・祝）。開催場所は、同館本館2階 企画展示室。Nゲージ大ジオラマ展示、新製品・ヒストリー展示、歴代",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01882/link_sMMjp.pdf",
+      "fetched_at": "2026-08-24T06:15:15.902073+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -182,7 +130,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-23T06:15:26.346035+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902077+09:00"
+    },
+    {
+      "id": "73d424c8dd015ac9",
+      "title": "500系 V4編成 ラストランツアー",
+      "date": "2026-08-30",
+      "location": "",
+      "description": "日本旅行は、事前申込制ツアー「ありがとう500系V4編成ラストラン 上り無待避運行！ 博多～新大阪往復乗車 日帰り」を開催。旅行日は、2026年8月30日（日）。500系V4編成による団体臨時列車に乗車。乗車区間は、博多（9:42頃発）～新",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/202608_v4last/",
+      "fetched_at": "2026-08-24T06:15:15.902081+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -195,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-23T06:15:26.346040+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902084+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -208,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-23T06:15:26.346045+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902088+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -221,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-08-23T06:15:26.346049+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902091+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -234,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-08-23T06:15:26.346054+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902094+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -247,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-08-23T06:15:26.346058+09:00"
+      "fetched_at": "2026-08-24T06:15:15.902097+09:00"
     }
   ]
 }
