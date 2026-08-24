@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T06:15:15.902098+09:00",
-  "count": 16,
+  "generated_at": "2026-08-25T06:22:23.736310+09:00",
+  "count": 19,
   "events": [
     {
       "id": "e9f84e68381d336c",
@@ -13,7 +13,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48000",
-      "fetched_at": "2026-08-24T06:15:15.901828+09:00"
+      "fetched_at": "2026-08-25T06:22:23.735999+09:00"
+    },
+    {
+      "id": "7798f40e90f9666c",
+      "title": "京阪 SANZEN-HIROBA 2200系・2400系・2600系 引退記念企画展",
+      "date": "2026-08-26",
+      "location": "",
+      "description": "京阪電気鉄道は、くずはモール内「SANZEN-HIROBA」にて、2200系・2400系・2600系引退記念企画展「昭和から令和を駆け抜けた京阪電車の通勤車両 ありがとう 2200系・2400系・2600系」を開催。開催期間は、2026年8",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
+      "fetched_at": "2026-08-25T06:22:23.736013+09:00"
     },
     {
       "id": "29019ffb3cfb7a43",
@@ -26,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0143",
-      "fetched_at": "2026-08-24T06:15:15.901842+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736020+09:00"
     },
     {
       "id": "75d0e9660cfbdb8b",
@@ -39,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0173",
-      "fetched_at": "2026-08-24T06:15:15.901847+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736027+09:00"
     },
     {
       "id": "b59cdec2585b1f2f",
@@ -52,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260818_KuriyamaLegendHistory",
-      "fetched_at": "2026-08-24T06:15:15.901851+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736033+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -65,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-24T06:15:15.901855+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736039+09:00"
     },
     {
       "id": "35e70ad947151b4d",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://chiba-monorail.co.jp/index.php/monochan_travel/20260829_32debut/",
-      "fetched_at": "2026-08-24T06:15:15.901859+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736045+09:00"
     },
     {
       "id": "62cafb983544f19a",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1203",
-      "fetched_at": "2026-08-24T06:15:15.901862+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736056+09:00"
     },
     {
       "id": "b52b6c19edec4c4e",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hapi-line.co.jp/news/archives/287",
-      "fetched_at": "2026-08-24T06:15:15.902065+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736270+09:00"
     },
     {
       "id": "b4b30c87d55febb8",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01882/link_sMMjp.pdf",
-      "fetched_at": "2026-08-24T06:15:15.902073+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736278+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-24T06:15:15.902077+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736283+09:00"
     },
     {
       "id": "73d424c8dd015ac9",
@@ -143,7 +156,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202608_v4last/",
-      "fetched_at": "2026-08-24T06:15:15.902081+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736286+09:00"
+    },
+    {
+      "id": "5e1fe954fa3b80e2",
+      "title": "西九州新幹線 GO NORI-HODAI Tシャツきっぷ 発売",
+      "date": "2026-09-03",
+      "location": "",
+      "description": "JR九州は、西九州新幹線開業4周年記念プロジェクト「GO WEST 4」の一環として、Tシャツきっぷ「GO NORI-HODAI」を発売。Tシャツの着用で、2026年10月3日（土）に限り、西九州新幹線の普通車自由席が乗り放題。サイズは、大",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
+      "fetched_at": "2026-08-25T06:22:23.736290+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -156,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-24T06:15:15.902084+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736293+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-24T06:15:15.902088+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736296+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -182,7 +208,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-08-24T06:15:15.902091+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736299+09:00"
+    },
+    {
+      "id": "30c6c7aca67ef94c",
+      "title": "京阪 2200系・2400系・2600系 引退記念撮影会",
+      "date": "2026-09-12",
+      "location": "",
+      "description": "京阪電気鉄道は、事前申込制イベントとして、「ありがとう2200系・2400系・2600系撮影会」を開催。開催日は2026年9月12日（土）で、10:20～11:40、13:20～14:40の2回開催。開催場所は、寝屋川車庫。2216-226",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
+      "fetched_at": "2026-08-25T06:22:23.736302+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -195,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-08-24T06:15:15.902094+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736305+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -208,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-08-24T06:15:15.902097+09:00"
+      "fetched_at": "2026-08-25T06:22:23.736308+09:00"
     }
   ]
 }
