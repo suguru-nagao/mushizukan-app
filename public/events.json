@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-25T06:22:23.736310+09:00",
-  "count": 19,
+  "generated_at": "2026-08-26T06:21:14.600145+09:00",
+  "count": 23,
   "events": [
     {
       "id": "e9f84e68381d336c",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48000",
-      "fetched_at": "2026-08-25T06:22:23.735999+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599822+09:00"
     },
     {
       "id": "7798f40e90f9666c",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736013+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599835+09:00"
     },
     {
       "id": "29019ffb3cfb7a43",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0143",
-      "fetched_at": "2026-08-25T06:22:23.736020+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599842+09:00"
     },
     {
       "id": "75d0e9660cfbdb8b",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0173",
-      "fetched_at": "2026-08-25T06:22:23.736027+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599847+09:00"
     },
     {
       "id": "b59cdec2585b1f2f",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260818_KuriyamaLegendHistory",
-      "fetched_at": "2026-08-25T06:22:23.736033+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599853+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736039+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599858+09:00"
     },
     {
       "id": "35e70ad947151b4d",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://chiba-monorail.co.jp/index.php/monochan_travel/20260829_32debut/",
-      "fetched_at": "2026-08-25T06:22:23.736045+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599864+09:00"
     },
     {
       "id": "62cafb983544f19a",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1203",
-      "fetched_at": "2026-08-25T06:22:23.736056+09:00"
+      "fetched_at": "2026-08-26T06:21:14.599875+09:00"
     },
     {
       "id": "b52b6c19edec4c4e",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hapi-line.co.jp/news/archives/287",
-      "fetched_at": "2026-08-25T06:22:23.736270+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600095+09:00"
     },
     {
       "id": "b4b30c87d55febb8",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01882/link_sMMjp.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736278+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600102+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736283+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600106+09:00"
     },
     {
       "id": "73d424c8dd015ac9",
@@ -156,7 +156,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202608_v4last/",
-      "fetched_at": "2026-08-25T06:22:23.736286+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600110+09:00"
+    },
+    {
+      "id": "2b93fd7e3a479cda",
+      "title": "北越急行 HK100で行く新津鉄道資料館見学ツアー 山から海コース",
+      "date": "2026-08-30",
+      "location": "",
+      "description": "北越急行は、「HK100で行く新津鉄道資料館見学」 ツアーを開催。「山から海」の旅行日は、2026年8月30日（日）の日帰り。HK100形「ゆめぞら」（1両）による団体臨時列車に乗車。乗車区間は、六日町（10:00発）～小出（10:15着、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
+      "fetched_at": "2026-08-26T06:21:14.600113+09:00"
+    },
+    {
+      "id": "687d9259c27ea873",
+      "title": "甲府駅 親子向け E131系試乗会イベント",
+      "date": "2026-08-30",
+      "location": "セレオ甲府4階特設会場で",
+      "description": "JR東日本、JR中央線コミュニティデザインは、「新型車両E131系おやこ試乗会」を開催。開催日は、2026年8月30日（日）。開催場所は、甲府駅。13:10に集合後、E131系に乗車し、車両紹介、鉄道マナー教室などを実施。14:10よりホー",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/yamanashi_j/20260728_y01.pdf",
+      "fetched_at": "2026-08-26T06:21:14.600117+09:00"
+    },
+    {
+      "id": "ad4a3cc309abfad7",
+      "title": "京福電気鉄道 モボ301形・モト1000形 撮影会",
+      "date": "2026-08-30",
+      "location": "",
+      "description": "京福電気鉄道は、嵐電モボ301形55周年記念イベントとして、事前申込制企画「モボ301形撮影会 with 貨車（モト1000形）」を開催。開催日は2026年8月30日（日）で、午前の部（10:00～）、午後の部（14:00～）の2回開催。開",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.keihan.co.jp/corporate/info/release/assets/260731_keifuku.pdf",
+      "fetched_at": "2026-08-26T06:21:14.600120+09:00"
     },
     {
       "id": "5e1fe954fa3b80e2",
@@ -169,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736290+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600123+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -182,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736293+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600126+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -195,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-25T06:22:23.736296+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600129+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -208,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736299+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600132+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -221,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736302+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600134+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -234,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-08-25T06:22:23.736305+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600137+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -247,7 +286,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-08-25T06:22:23.736308+09:00"
+      "fetched_at": "2026-08-26T06:21:14.600140+09:00"
+    },
+    {
+      "id": "8e4feb019ec7ab74",
+      "title": "青い森鉄道 三沢基地コラボ乗車券 発売",
+      "date": "2026-09-19",
+      "location": "",
+      "description": "青い森鉄道は、「八戸航空基地オータムフェスタ」と「三沢基地航空祭」の開催にあわせ、三沢基地とのコラボ乗車券を発売。「青い森ワンデーパス」（2,270円）、「八戸・三沢往復きっぷ」（1,360円）の2種類で、裏面に航空機をデザイン。いずれも大",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://aoimorirailway.com/archives/48651",
+      "fetched_at": "2026-08-26T06:21:14.600143+09:00"
     }
   ]
 }
