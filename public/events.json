@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-27T09:23:29.410564+09:00",
-  "count": 24,
+  "generated_at": "2026-08-28T14:03:47.928390+09:00",
+  "count": 26,
   "events": [
     {
       "id": "29019ffb3cfb7a43",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0143",
-      "fetched_at": "2026-08-27T09:23:29.410201+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928050+09:00"
     },
     {
       "id": "75d0e9660cfbdb8b",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0173",
-      "fetched_at": "2026-08-27T09:23:29.410214+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928061+09:00"
     },
     {
       "id": "b59cdec2585b1f2f",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/newsroom/news/20260818_KuriyamaLegendHistory",
-      "fetched_at": "2026-08-27T09:23:29.410221+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928101+09:00"
     },
     {
       "id": "25fb0739ae7b3430",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano_j/20260807_n01.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410228+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928106+09:00"
     },
     {
       "id": "35e70ad947151b4d",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://chiba-monorail.co.jp/index.php/monochan_travel/20260829_32debut/",
-      "fetched_at": "2026-08-27T09:23:29.410233+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928110+09:00"
     },
     {
       "id": "62cafb983544f19a",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1203",
-      "fetched_at": "2026-08-27T09:23:29.410238+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928114+09:00"
     },
     {
       "id": "b52b6c19edec4c4e",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hapi-line.co.jp/news/archives/287",
-      "fetched_at": "2026-08-27T09:23:29.410498+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928313+09:00"
     },
     {
       "id": "b4b30c87d55febb8",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01882/link_sMMjp.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410511+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928325+09:00"
     },
     {
       "id": "990517550cc2a033",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/71b363a903428ceb39625339dddaf61e.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410516+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928330+09:00"
     },
     {
       "id": "73d424c8dd015ac9",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202608_v4last/",
-      "fetched_at": "2026-08-27T09:23:29.410520+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928334+09:00"
     },
     {
       "id": "2b93fd7e3a479cda",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuhoku.co.jp/press/20260710.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410524+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928338+09:00"
     },
     {
       "id": "687d9259c27ea873",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/yamanashi_j/20260728_y01.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410527+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928341+09:00"
     },
     {
       "id": "ad4a3cc309abfad7",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260731_keifuku.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410530+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928345+09:00"
     },
     {
       "id": "fff7a294b337985d",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28241",
-      "fetched_at": "2026-08-27T09:23:29.410533+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928348+09:00"
     },
     {
       "id": "1d86e545dcf19421",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mm21railway.co.jp/info/news/uploads/press%20release_20260826%20.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410536+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928351+09:00"
     },
     {
       "id": "5e1fe954fa3b80e2",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410539+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928354+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410542+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928358+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -234,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-08-27T09:23:29.410545+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928361+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -247,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410548+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928365+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -260,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410551+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928368+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -273,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-08-27T09:23:29.410554+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928371+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -286,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-08-27T09:23:29.410556+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928375+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -299,7 +299,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-08-27T09:23:29.410559+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928378+09:00"
+    },
+    {
+      "id": "a5b16482eb17e8d5",
+      "title": "富士山麓電気鉄道 マッターホルン号 リニューアル記念撮影会・試乗会",
+      "date": "2026-09-19",
+      "location": "",
+      "description": "富士山麓電気鉄道は、事前申込制イベントとして、「『マッターホルン号』リニューアル記念撮影会・試乗会」を開催。開催日は2026年9月19日（土）。撮影会は、10:00～、11:00～、12:50～の3回開催。開催場所は、富士急行線電車修理工場",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
+      "fetched_at": "2026-08-28T14:03:47.928381+09:00"
+    },
+    {
+      "id": "ba9f8e1d5737129c",
+      "title": "富士山麓電気鉄道 MGB姉妹鉄道提携35周年記念入場券セット 発売",
+      "date": "2026-09-19",
+      "location": "",
+      "description": "富士山麓電気鉄道は、「マッターホルン号」の運転開始35周年を記念して、「MGB姉妹鉄道提携35周年記念入場券セット」を発売。スイスのブリーク・フィスプ・ツェルマット鉄道の乗車券レプリカと、富士急行線の入場券のセットで、発売額は1,300円。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
+      "fetched_at": "2026-08-28T14:03:47.928384+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -312,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-08-27T09:23:29.410562+09:00"
+      "fetched_at": "2026-08-28T14:03:47.928388+09:00"
     }
   ]
 }
