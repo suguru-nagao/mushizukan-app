@@ -1,33 +1,7 @@
 {
-  "generated_at": "2026-09-01T09:17:38.008915+09:00",
-  "count": 16,
+  "generated_at": "2026-09-02T07:55:52.802878+09:00",
+  "count": 17,
   "events": [
-    {
-      "id": "c5e3fff5c53ac91b",
-      "title": "京阪 響けユーフォニアム 大津線フリーチケット 発売",
-      "date": "2026-09-01",
-      "location": "",
-      "description": "京阪電気鉄道は、アニメ「響け！ユーフォニアム」とのコラボ企画「京阪電車×響け！ユーフォニアム 2026 秋」の一環として、同作デザインの「大津線フリーチケット」を発売。大津線、石山坂本線が乗り放題の1日乗車券2枚のセット。デザインは6種類で",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keihan.co.jp/euphonium/",
-      "fetched_at": "2026-09-01T09:17:38.008842+09:00"
-    },
-    {
-      "id": "5ca5c06f314ec38c",
-      "title": "山口ふくの国周遊パス 発売",
-      "date": "2026-09-01",
-      "location": "。山口県",
-      "description": "JR西日本は、山口デスティネーションキャンペーン開催にあわせ、「山口ふくの国周遊パス」を発売。山口県内のJR在来線全線、一部路線バスが、連続3日間乗り放題。観光施設入館券なども付属。発売額は、大人5,000円、子ども2,500円。発売期間は",
-      "prefecture": "。山口県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/2026/08/24/items/260824_00_press_yamaguchidc.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008857+09:00"
-    },
     {
       "id": "1d86e545dcf19421",
       "title": "横浜高速鉄道 カップヌードルミュージアムコラボ一日乗車券 発売",
@@ -39,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.mm21railway.co.jp/info/news/uploads/press%20release_20260826%20.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008862+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802805+09:00"
     },
     {
       "id": "5e1fe954fa3b80e2",
@@ -52,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008867+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802817+09:00"
     },
     {
       "id": "2863b7de21fa2b8b",
@@ -65,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260824_precure.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008870+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802822+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -78,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008874+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802826+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -91,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-09-01T09:17:38.008878+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802830+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -104,7 +78,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008886+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802833+09:00"
+    },
+    {
+      "id": "c55dd06680c9266f",
+      "title": "【中止】東武 2026 SLファンフェスタ",
+      "date": "2026-09-05",
+      "location": "",
+      "description": "【本イベントは開催中止となりました】東武鉄道は、「2026 SLファンフェスタ」を開催。開催日時は、2026年9月5日（土）10:00～15:00。開催場所は、下今市駅転車台広場、イマテラス。機関庫公開（13:00～15:00）、子ども制服",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
+      "fetched_at": "2026-09-02T07:55:52.802837+09:00"
+    },
+    {
+      "id": "c3ef4a7401dd5b85",
+      "title": "しなの鉄道 戸倉駅 115系入換乗車体験・撮影会",
+      "date": "2026-09-05",
+      "location": "戸倉駅",
+      "description": "しなの鉄道は、事前申込制イベントとして、「115入換乗車体験＆撮影会」を開催。開催日は2026年9月5日（土）で、昼の部（9:50～13:30頃）、夜の部（17:20～20:55頃）の2回開催（各回20分前より受付）。開催場所は、戸倉駅。同",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/news/2026/08/11069.php",
+      "fetched_at": "2026-09-02T07:55:52.802846+09:00"
+    },
+    {
+      "id": "bc9ffe1c9552117f",
+      "title": "鴻巣駅 第3回ノスまつり",
+      "date": "2026-09-05",
+      "location": "鴻巣駅",
+      "description": "JR東日本は、「第3回ノスまつり in 鴻巣駅」を開催。開催日時は、2026年9月5日（土）10:00～15:00。開催場所は、鴻巣駅構内・自由通路、エルミこうのす。JR東日本トレインシミュレータ体験（2,000円、先着15組）、鉄道くじ（",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/info/2026/omiya_j/20260820_o01.pdf",
+      "fetched_at": "2026-09-02T07:55:52.802850+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008891+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802854+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008894+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802858+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-01T09:17:38.008898+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802861+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-01T09:17:38.008901+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802865+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-01T09:17:38.008904+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802868+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-01T09:17:38.008907+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802871+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-01T09:17:38.008910+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802874+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-01T09:17:38.008913+09:00"
+      "fetched_at": "2026-09-02T07:55:52.802876+09:00"
     }
   ]
 }
