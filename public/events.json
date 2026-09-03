@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-09-03T07:56:23.225661+09:00",
+  "generated_at": "2026-09-04T07:55:39.090203+09:00",
   "count": 17,
   "events": [
-    {
-      "id": "5e1fe954fa3b80e2",
-      "title": "西九州新幹線 GO NORI-HODAI Tシャツきっぷ 発売",
-      "date": "2026-09-03",
-      "location": "",
-      "description": "JR九州は、西九州新幹線開業4周年記念プロジェクト「GO WEST 4」の一環として、Tシャツきっぷ「GO NORI-HODAI」を発売。Tシャツの着用で、2026年10月3日（土）に限り、西九州新幹線の普通車自由席が乗り放題。サイズは、大",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225568+09:00"
-    },
     {
       "id": "2863b7de21fa2b8b",
       "title": "西武 映画名探偵プリキュアスタンプラリー1日おでかけきっぷ 発売",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260824_precure.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225583+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090134+09:00"
     },
     {
       "id": "47658dd351d58af1",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/nagano/20260729_na02.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225589+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090146+09:00"
     },
     {
       "id": "149d11bb5d5605a9",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/sl260905/",
-      "fetched_at": "2026-09-03T07:56:23.225594+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090150+09:00"
     },
     {
       "id": "ccdf1dac398811a2",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225599+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090153+09:00"
     },
     {
       "id": "c55dd06680c9266f",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260814070047chM8xmvvkE8M0dt9LW0tZQ.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225603+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090157+09:00"
     },
     {
       "id": "c3ef4a7401dd5b85",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/2026/08/11069.php",
-      "fetched_at": "2026-09-03T07:56:23.225608+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090161+09:00"
     },
     {
       "id": "bc9ffe1c9552117f",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/info/2026/omiya_j/20260820_o01.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225619+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090164+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225625+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090172+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -130,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225630+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090176+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -143,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-03T07:56:23.225635+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090180+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -156,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-03T07:56:23.225639+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090183+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-03T07:56:23.225643+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090186+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-03T07:56:23.225647+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090189+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-03T07:56:23.225651+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090192+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -208,7 +195,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225655+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090195+09:00"
+    },
+    {
+      "id": "816d109e48fdc968",
+      "title": "JR東 千手発電所 一般公開イベント",
+      "date": "2026-09-26",
+      "location": "",
+      "description": "JR東日本は、千手発電所の一般公開イベントを開催。開催日時は、2026年9月26日（土）10:00～15:00（最終入場は14:30）。発電所設備の公開、ミニ新幹線運転、メンテナンス車両乗車体験、子ども駅長制服着用記念撮影などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
+      "fetched_at": "2026-09-04T07:55:39.090198+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-03T07:56:23.225659+09:00"
+      "fetched_at": "2026-09-04T07:55:39.090201+09:00"
     }
   ]
 }
