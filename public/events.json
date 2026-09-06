@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-06T07:33:35.333119+09:00",
-  "count": 19,
+  "generated_at": "2026-09-07T07:37:25.344100+09:00",
+  "count": 20,
   "events": [
     {
       "id": "ad66bdc618456034",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
-      "fetched_at": "2026-09-06T07:33:35.332699+09:00"
+      "fetched_at": "2026-09-07T07:37:25.343645+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-06T07:33:35.332712+09:00"
+      "fetched_at": "2026-09-07T07:37:25.343659+09:00"
     },
     {
       "id": "2e1ded527e238efc",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0167",
-      "fetched_at": "2026-09-06T07:33:35.332721+09:00"
+      "fetched_at": "2026-09-07T07:37:25.343667+09:00"
     },
     {
       "id": "06459a4d0791bf08",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tenhama.co.jp/wp-content/uploads/NEWSRELEASE.pdf",
-      "fetched_at": "2026-09-06T07:33:35.332728+09:00"
+      "fetched_at": "2026-09-07T07:37:25.343675+09:00"
     },
     {
       "id": "8da1302bdf27898a",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260728144604TpalHnvEoTa7xBDWD2JVbg.pdf",
-      "fetched_at": "2026-09-06T07:33:35.332736+09:00"
+      "fetched_at": "2026-09-07T07:37:25.343682+09:00"
     },
     {
       "id": "466d4766c3397666",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/news/pdf/20260912_KO_naebo.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333018+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344009+09:00"
     },
     {
       "id": "ff5160ac7f0e2ef0",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045843.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333032+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344021+09:00"
     },
     {
       "id": "a1080984b5fc1e32",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://kaihatsu-railway.co.jp/news/2026-08-07",
-      "fetched_at": "2026-09-06T07:33:35.333045+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344032+09:00"
     },
     {
       "id": "2ae7fa98a9ce9593",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333054+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344039+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -130,7 +130,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333061+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344045+09:00"
+    },
+    {
+      "id": "9a3bc5c30a13549b",
+      "title": "吉岡定点・北海道新幹線工事現場など 見学ツアー",
+      "date": "2026-09-13",
+      "location": "北海道",
+      "description": "JR東日本びゅうツーリズム＆セールスは、事前申込制ツアー「海面下149.5mへ―初公開『吉岡定点（旧吉岡海底駅）』と未成線遺構・建設最前線を巡る旅」を開催。旅行日は、2026年9月13日（日）、14日（月）。1日目は、福島町青函トンネル記念",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0163",
+      "fetched_at": "2026-09-07T07:37:25.344051+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-06T07:33:35.333067+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344057+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-06T07:33:35.333074+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344062+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-06T07:33:35.333080+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344067+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-06T07:33:35.333086+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344072+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-06T07:33:35.333092+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344077+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333098+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344082+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333104+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344087+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-06T07:33:35.333110+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344092+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-06T07:33:35.333116+09:00"
+      "fetched_at": "2026-09-07T07:37:25.344097+09:00"
     }
   ]
 }
