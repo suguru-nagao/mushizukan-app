@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-08T08:13:58.263024+09:00",
-  "count": 21,
+  "generated_at": "2026-09-09T08:06:17.773415+09:00",
+  "count": 25,
   "events": [
     {
       "id": "ad66bdc618456034",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262767+09:00"
+      "fetched_at": "2026-09-09T08:06:17.772930+09:00"
     },
     {
       "id": "30c6c7aca67ef94c",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262776+09:00"
+      "fetched_at": "2026-09-09T08:06:17.772943+09:00"
     },
     {
       "id": "2e1ded527e238efc",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0167",
-      "fetched_at": "2026-09-08T08:13:58.262781+09:00"
+      "fetched_at": "2026-09-09T08:06:17.772950+09:00"
     },
     {
       "id": "06459a4d0791bf08",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tenhama.co.jp/wp-content/uploads/NEWSRELEASE.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262784+09:00"
+      "fetched_at": "2026-09-09T08:06:17.772956+09:00"
     },
     {
       "id": "8da1302bdf27898a",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260728144604TpalHnvEoTa7xBDWD2JVbg.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262787+09:00"
+      "fetched_at": "2026-09-09T08:06:17.772961+09:00"
     },
     {
       "id": "466d4766c3397666",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/news/pdf/20260912_KO_naebo.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262975+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773297+09:00"
     },
     {
       "id": "ff5160ac7f0e2ef0",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045843.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262982+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773311+09:00"
     },
     {
       "id": "a1080984b5fc1e32",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://kaihatsu-railway.co.jp/news/2026-08-07",
-      "fetched_at": "2026-09-08T08:13:58.262989+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773324+09:00"
     },
     {
       "id": "2ae7fa98a9ce9593",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262993+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773331+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-09-08T08:13:58.262996+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773337+09:00"
     },
     {
       "id": "9a3bc5c30a13549b",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0163",
-      "fetched_at": "2026-09-08T08:13:58.262999+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773343+09:00"
     },
     {
       "id": "39c8accf67181176",
@@ -156,7 +156,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202609_wakatetsu.htm",
-      "fetched_at": "2026-09-08T08:13:58.263002+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773348+09:00"
+    },
+    {
+      "id": "44855025728741be",
+      "title": "頑張るぐんまの中小私鉄フェア2026",
+      "date": "2026-09-13",
+      "location": "",
+      "description": "中小私鉄等連携会議は、「頑張るぐんまの中小私鉄フェア2026」を開催。開催日時は、2026年9月13日（日）10:00～15:00。開催場所は、わたらせ渓谷鐵道大間々駅北側駐車場。入場無料。軌道自転車レールスター乗車体験、洗車機通過体験、モ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.watetsu.com/news/news_det.php?E=1984",
+      "fetched_at": "2026-09-09T08:06:17.773353+09:00"
+    },
+    {
+      "id": "a083cf4c652f3e76",
+      "title": "とっとり交通フェスタ",
+      "date": "2026-09-13",
+      "location": "（鳥取県",
+      "description": "鳥取バスフェスタ実行委員会は、鳥取市などとの共催で、「とっとり交通フェスタ」を開催。開催日時は、2026年9月13日（日）10:00～15:30。開催場所は、アイエム電子鳥取砂丘こどもの国（わんぱく広場、多目的ホール、こども広場）。JR西日",
+      "prefecture": "（鳥取県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tottori-bus.or.jp/images/festa2026.pdf",
+      "fetched_at": "2026-09-09T08:06:17.773358+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -169,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-08T08:13:58.263005+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773363+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -182,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-08T08:13:58.263007+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773368+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -195,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-08T08:13:58.263009+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773372+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -208,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-08T08:13:58.263012+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773377+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -221,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-08T08:13:58.263014+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773382+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -234,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-08T08:13:58.263016+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773387+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -247,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-08T08:13:58.263019+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773392+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -260,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-08T08:13:58.263021+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773397+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -273,7 +299,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-08T08:13:58.263023+09:00"
+      "fetched_at": "2026-09-09T08:06:17.773402+09:00"
+    },
+    {
+      "id": "0644c764c6714248",
+      "title": "しなの鉄道 うえだ鉄道まつり2026記念入場券など 発売",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "しなの鉄道は、「うえだ鉄道まつり 2026」開催にあわせ、軟券タイプの記念入場券、アクリルキーホルダーを発売。発売額は、入場券が190円、キーホルダーが600円。発売日時は、2026年10月3日（土）10:00～19:30。発売箇所は、上田",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
+      "fetched_at": "2026-09-09T08:06:17.773407+09:00"
+    },
+    {
+      "id": "2d403592ebe49810",
+      "title": "しなの鉄道 親子向け SR1系 乗務員体験イベント",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "しなの鉄道は、「うえだ鉄道まつり2026」の一環として、SR1系の親子向け乗務員体験イベントを開催。開催日は2026年10月3日（土）で、11:00～12:10、13:55～15:05の2回開催。集合場所は、しなの鉄道上田駅。入換体験、運転",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
+      "fetched_at": "2026-09-09T08:06:17.773412+09:00"
     }
   ]
 }
