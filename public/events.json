@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-09-11T07:53:10.591881+09:00",
-  "count": 28,
+  "generated_at": "2026-09-12T07:55:28.717769+09:00",
+  "count": 30,
   "events": [
-    {
-      "id": "ad66bdc618456034",
-      "title": "THE ROYAL EXPRESS 北海道日本最北端ツアー",
-      "date": "2026-09-11",
-      "location": "北海道",
-      "description": "東急とJR北海道は、「HOKKAIDO 日本最北端の旅」の旅行商品を販売。「THE ROYAL EXPRESS」に乗車するツアー。出発日は、2026年9月11日（金）、18日（金）、25日（金）で、各3泊4日の行程。THE ROYAL EX",
-      "prefecture": "北海道",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tokyu.co.jp/company/news/pdf/20260126_theroyalexpresshokkaido_t.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591627+09:00"
-    },
     {
       "id": "30c6c7aca67ef94c",
       "title": "京阪 2200系・2400系・2600系 引退記念撮影会",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591638+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717206+09:00"
     },
     {
       "id": "2e1ded527e238efc",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0167",
-      "fetched_at": "2026-09-11T07:53:10.591644+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717218+09:00"
     },
     {
       "id": "06459a4d0791bf08",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tenhama.co.jp/wp-content/uploads/NEWSRELEASE.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591648+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717225+09:00"
     },
     {
       "id": "8da1302bdf27898a",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20260728144604TpalHnvEoTa7xBDWD2JVbg.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591651+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717237+09:00"
     },
     {
       "id": "466d4766c3397666",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrhokkaido.co.jp/CM/Info/news/pdf/20260912_KO_naebo.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591817+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717573+09:00"
     },
     {
       "id": "ff5160ac7f0e2ef0",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045843.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591822+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717589+09:00"
     },
     {
       "id": "a1080984b5fc1e32",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://kaihatsu-railway.co.jp/news/2026-08-07",
-      "fetched_at": "2026-09-11T07:53:10.591829+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717599+09:00"
     },
     {
       "id": "2ae7fa98a9ce9593",
@@ -117,7 +104,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keihan.co.jp/corporate/info/release/assets/260824_keihan-railway.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591832+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717613+09:00"
+    },
+    {
+      "id": "c579c0fad0c0d733",
+      "title": "ODAKYU湘南GATE 小田急鉄道イベント",
+      "date": "2026-09-12",
+      "location": "",
+      "description": "ODAKYU 湘南 GATEは、「小田急鉄道イベント」を開催。開催日は、2026年9月12日（土）。開催場所は、同館5～7階。子ども駅長なりきり撮影会、ロマンスカーミュージアムワークショップ（有料）、グッズ販売などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.odakyu-sc.com/shonan-gate/eventcampaign/detail/238",
+      "fetched_at": "2026-09-12T07:55:28.717621+09:00"
+    },
+    {
+      "id": "edc5412f2319180d",
+      "title": "西武 飯能駅・西武秩父駅 サステナ車両7000系 デビュー記念乗車券 発売",
+      "date": "2026-09-12",
+      "location": "飯能駅",
+      "description": "西武鉄道は、「サステナ車両7000系 デビュー記念乗車券」の発売駅を追加。小手指駅に加え、飯能駅、西武秩父駅でも発売。大人用西武線1日フリーきっぷと台紙のセットで、発売額は2,000円。追加対象駅での発売期間は、2026年9月12日（土）～",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seiburailway.jp/file.jsp?id=28441",
+      "fetched_at": "2026-09-12T07:55:28.717629+09:00"
     },
     {
       "id": "7a54f4af18b9ac11",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/6ff0a45460e956d26d7d96812a62b3c4-1.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591835+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717637+09:00"
     },
     {
       "id": "9a3bc5c30a13549b",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0163",
-      "fetched_at": "2026-09-11T07:53:10.591838+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717644+09:00"
     },
     {
       "id": "39c8accf67181176",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/n/202609_wakatetsu.htm",
-      "fetched_at": "2026-09-11T07:53:10.591841+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717651+09:00"
     },
     {
       "id": "44855025728741be",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.watetsu.com/news/news_det.php?E=1984",
-      "fetched_at": "2026-09-11T07:53:10.591844+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717658+09:00"
     },
     {
       "id": "a083cf4c652f3e76",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tottori-bus.or.jp/images/festa2026.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591846+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717665+09:00"
     },
     {
       "id": "328af69c20416f57",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyu.co.jp/company/information/detail/61836.html",
-      "fetched_at": "2026-09-11T07:53:10.591848+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717671+09:00"
     },
     {
       "id": "05a5c5bf64431763",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://kumagawa-rail.com/2026/09/10/4815/",
-      "fetched_at": "2026-09-11T07:53:10.591851+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717678+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-11T07:53:10.591853+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717684+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-11T07:53:10.591856+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717690+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-11T07:53:10.591858+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717698+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -260,7 +273,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-11T07:53:10.591860+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717704+09:00"
+    },
+    {
+      "id": "19a3aea528515f7f",
+      "title": "東葉高速鉄道 開業30周年記念入場券 発売",
+      "date": "2026-09-19",
+      "location": "",
+      "description": "東葉高速鉄道は、「イオンモール八千代緑が丘リニューアルオープン記念1日乗車券」を発売。発売当日に限り、東海神～東葉勝田台間が1日乗り放題。発売額は、大人700円、小児100円。発売日は、2026年9月19日（土）、20日（日）。発売箇所は、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.toyokosoku.co.jp/information/otoku/16804.html",
+      "fetched_at": "2026-09-12T07:55:28.717711+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -273,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-11T07:53:10.591863+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717717+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -286,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591865+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717724+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -299,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591868+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717731+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -312,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591870+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717738+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -325,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-11T07:53:10.591872+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717745+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -338,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-09-11T07:53:10.591875+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717752+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -351,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-09-11T07:53:10.591877+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717758+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -364,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-09-11T07:53:10.591879+09:00"
+      "fetched_at": "2026-09-12T07:55:28.717765+09:00"
     }
   ]
 }
