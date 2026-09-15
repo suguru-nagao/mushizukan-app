@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-09-15T08:39:15.440110+09:00",
+  "generated_at": "2026-09-16T08:21:16.472280+09:00",
   "count": 21,
   "events": [
-    {
-      "id": "f4662272b9da85d9",
-      "title": "西鉄 創立記念日 電車・バス乗り放題チケット 発売",
-      "date": "2026-09-15",
-      "location": "",
-      "description": "西日本鉄道は、西鉄創立記念日にあわせ、「9/22限定！西鉄電車+バス乗り放題チケット」を発売。西鉄電車と、電車沿線の西鉄グループ一般路線バスが、2026年9月22日（火・祝）に限り乗り放題。西鉄電車全線および電車沿線の路線バスが乗り放題の「",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_2/main/0/link/26_041.pdf",
-      "fetched_at": "2026-09-15T08:39:15.439922+09:00"
-    },
     {
       "id": "89ee54cfe763e9bb",
       "title": "E655系 新宿～南小谷間",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0127",
-      "fetched_at": "2026-09-15T08:39:15.439936+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472209+09:00"
     },
     {
       "id": "5ec43742b82e5a8c",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260831_ho01.pdf",
-      "fetched_at": "2026-09-15T08:39:15.439941+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472221+09:00"
     },
     {
       "id": "1b7941093e4cb160",
@@ -52,7 +39,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288919_8032.html",
-      "fetched_at": "2026-09-15T08:39:15.440051+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472224+09:00"
+    },
+    {
+      "id": "184b8b7b4ef7f5cd",
+      "title": "西武 昭和レトロスタンプラリー",
+      "date": "2026-09-18",
+      "location": "",
+      "description": "西武鉄道は、「西武線沿線 昭和レトロスタンプラリー」を開催。開催日時は、2026年9月18日（金）～11月29日（日）の各日9:30～17:00。西武線各駅（一部除く）でパンフレットを入手しスタート。スタンプ設置駅は、東長崎、大泉学園、西武",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260915_ShowaRetro.pdf",
+      "fetched_at": "2026-09-16T08:21:16.472228+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-15T08:39:15.440055+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472231+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-15T08:39:15.440058+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472233+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-15T08:39:15.440062+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472237+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-15T08:39:15.440070+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472245+09:00"
     },
     {
       "id": "19a3aea528515f7f",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16804.html",
-      "fetched_at": "2026-09-15T08:39:15.440074+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472249+09:00"
     },
     {
       "id": "c597557c7d10a262",
@@ -130,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chitetsu.co.jp/?p=84168",
-      "fetched_at": "2026-09-15T08:39:15.440077+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472252+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-15T08:39:15.440080+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472254+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-15T08:39:15.440083+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472257+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -169,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-15T08:39:15.440086+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472259+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-15T08:39:15.440088+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472262+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-15T08:39:15.440091+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472264+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-09-15T08:39:15.440094+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472266+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-09-15T08:39:15.440097+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472269+09:00"
     },
     {
       "id": "6a6b53112b169f54",
@@ -234,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28420",
-      "fetched_at": "2026-09-15T08:39:15.440100+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472272+09:00"
     },
     {
       "id": "3bfd48a37c992d12",
@@ -247,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o02.pdf",
-      "fetched_at": "2026-09-15T08:39:15.440103+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472274+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -260,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-09-15T08:39:15.440106+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472277+09:00"
     },
     {
       "id": "73d976f114d06988",
@@ -273,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261013/",
-      "fetched_at": "2026-09-15T08:39:15.440108+09:00"
+      "fetched_at": "2026-09-16T08:21:16.472279+09:00"
     }
   ]
 }
