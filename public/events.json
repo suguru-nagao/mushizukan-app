@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-17T08:28:24.852346+09:00",
-  "count": 23,
+  "generated_at": "2026-09-18T08:18:39.872467+09:00",
+  "count": 26,
   "events": [
     {
       "id": "89ee54cfe763e9bb",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0127",
-      "fetched_at": "2026-09-17T08:28:24.852257+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872368+09:00"
     },
     {
       "id": "5ec43742b82e5a8c",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260831_ho01.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852268+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872386+09:00"
     },
     {
       "id": "1b7941093e4cb160",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1288919_8032.html",
-      "fetched_at": "2026-09-17T08:28:24.852273+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872389+09:00"
     },
     {
       "id": "184b8b7b4ef7f5cd",
@@ -52,7 +52,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?newsroom/news/file/20260915_ShowaRetro.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852277+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872392+09:00"
+    },
+    {
+      "id": "d12551836d6f069e",
+      "title": "IGRいわて銀河鉄道 金田一温泉郷開湯400周年記念硬券 販売",
+      "date": "2026-09-18",
+      "location": "",
+      "description": "アイジーアールいわて銀河鉄道は、「金田一温泉郷開湯400周年記念硬券（台紙付）」を販売。D型硬券と台紙のセット。入場券、乗車券等としては使用不可。販売額は400円。販売開始日は、2026年9月18日（金）。販売箇所は、二戸駅、同社公式オンラ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://igr.jp/2026/09/15/kikouken/",
+      "fetched_at": "2026-09-18T08:18:39.872395+09:00"
     },
     {
       "id": "8d77406461d08998",
@@ -65,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-17T08:28:24.852281+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872398+09:00"
     },
     {
       "id": "8e4feb019ec7ab74",
@@ -78,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-17T08:28:24.852285+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872402+09:00"
     },
     {
       "id": "a5b16482eb17e8d5",
@@ -91,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-17T08:28:24.852289+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872416+09:00"
     },
     {
       "id": "ba9f8e1d5737129c",
@@ -104,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-17T08:28:24.852297+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872421+09:00"
     },
     {
       "id": "19a3aea528515f7f",
@@ -117,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyokosoku.co.jp/information/otoku/16804.html",
-      "fetched_at": "2026-09-17T08:28:24.852301+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872424+09:00"
     },
     {
       "id": "c597557c7d10a262",
@@ -130,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chitetsu.co.jp/?p=84168",
-      "fetched_at": "2026-09-17T08:28:24.852305+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872427+09:00"
     },
     {
       "id": "cdf3b9e1e3b1ddfc",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.usuitouge.com/bunkamura/events/2971/",
-      "fetched_at": "2026-09-17T08:28:24.852308+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872430+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-17T08:28:24.852312+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872432+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852315+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872435+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852318+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872438+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852321+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872440+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-17T08:28:24.852324+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872443+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852326+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872445+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-09-17T08:28:24.852329+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872447+09:00"
     },
     {
       "id": "6a6b53112b169f54",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28420",
-      "fetched_at": "2026-09-17T08:28:24.852333+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872450+09:00"
     },
     {
       "id": "3bfd48a37c992d12",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o02.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852336+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872452+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-09-17T08:28:24.852339+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872454+09:00"
     },
     {
       "id": "73d976f114d06988",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261013/",
-      "fetched_at": "2026-09-17T08:28:24.852342+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872457+09:00"
     },
     {
       "id": "0f3b0e19aed81869",
@@ -299,7 +312,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba_j/20260910_c01.pdf",
-      "fetched_at": "2026-09-17T08:28:24.852344+09:00"
+      "fetched_at": "2026-09-18T08:18:39.872460+09:00"
+    },
+    {
+      "id": "9f65313d0ad3b0d5",
+      "title": "北総鉄道 第4弾 親子向け 9100形運転体験イベント",
+      "date": "2026-10-18",
+      "location": "",
+      "description": "北総鉄道は、事前申込制イベント「第4弾！C-Flyerを運転しよう！親子運転体験イベント」を開催。開催日は2026年10月18日（日）で、午前の部（8:30～12:45）、午後の部（13:05～17:20）の2回開催。受付場所は、印西牧の原",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokuso-railway.co.jp/event/detail/73732",
+      "fetched_at": "2026-09-18T08:18:39.872463+09:00"
+    },
+    {
+      "id": "e9f43307419fe665",
+      "title": "西鉄 電車まつり 会場直通列車乗車ツアー",
+      "date": "2026-10-18",
+      "location": "直通列車乗車ツアー",
+      "description": "西日本鉄道は、事前申込制企画として、「にしてつ電車まつり」会場直通列車を運転。運転日は、2026年10月18日（日）。運転区間は、西鉄福岡（天神）（8:21発）～筑紫車両基地（9:28着）。3000形6両編成で運転。参加費は、大人3,000",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
+      "fetched_at": "2026-09-18T08:18:39.872466+09:00"
     }
   ]
 }
