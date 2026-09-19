@@ -1,124 +1,7 @@
 {
-  "generated_at": "2026-09-19T07:57:21.880331+09:00",
-  "count": 25,
+  "generated_at": "2026-09-20T07:36:47.376823+09:00",
+  "count": 28,
   "events": [
-    {
-      "id": "8d77406461d08998",
-      "title": "西武 親子向け ダイヤ作成体験・秩父鉄道連絡線乗車ツアー",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "西武鉄道は、親子体験ツアー「横瀬駅で課外授業（家族ダイヤ教室）」を開催。開催日時は、2026年9月19日（土）9:30～13:00頃。開催場所は、横瀬駅、横瀬車両基地など。ダイヤ作成体験、「レールスター」乗車体験、制服着用記念撮影、横瀬～秩",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.seiburailway.jp/file.jsp?id=28278",
-      "fetched_at": "2026-09-19T07:57:21.880207+09:00"
-    },
-    {
-      "id": "8e4feb019ec7ab74",
-      "title": "青い森鉄道 三沢基地コラボ乗車券 発売",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "青い森鉄道は、「八戸航空基地オータムフェスタ」と「三沢基地航空祭」の開催にあわせ、三沢基地とのコラボ乗車券を発売。「青い森ワンデーパス」（2,270円）、「八戸・三沢往復きっぷ」（1,360円）の2種類で、裏面に航空機をデザイン。いずれも大",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://aoimorirailway.com/archives/48651",
-      "fetched_at": "2026-09-19T07:57:21.880220+09:00"
-    },
-    {
-      "id": "a5b16482eb17e8d5",
-      "title": "富士山麓電気鉄道 マッターホルン号 リニューアル記念撮影会・試乗会",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "富士山麓電気鉄道は、事前申込制イベントとして、「『マッターホルン号』リニューアル記念撮影会・試乗会」を開催。開催日は2026年9月19日（土）。撮影会は、10:00～、11:00～、12:50～の3回開催。開催場所は、富士急行線電車修理工場",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-19T07:57:21.880226+09:00"
-    },
-    {
-      "id": "ba9f8e1d5737129c",
-      "title": "富士山麓電気鉄道 MGB姉妹鉄道提携35周年記念入場券セット 発売",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "富士山麓電気鉄道は、「マッターホルン号」の運転開始35周年を記念して、「MGB姉妹鉄道提携35周年記念入場券セット」を発売。スイスのブリーク・フィスプ・ツェルマット鉄道の乗車券レプリカと、富士急行線の入場券のセットで、発売額は1,300円。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1203",
-      "fetched_at": "2026-09-19T07:57:21.880231+09:00"
-    },
-    {
-      "id": "19a3aea528515f7f",
-      "title": "東葉高速鉄道 開業30周年記念入場券 発売",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "東葉高速鉄道は、「イオンモール八千代緑が丘リニューアルオープン記念1日乗車券」を発売。発売当日に限り、東海神～東葉勝田台間が1日乗り放題。発売額は、大人700円、小児100円。発売日は、2026年9月19日（土）、20日（日）。発売箇所は、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.toyokosoku.co.jp/information/otoku/16804.html",
-      "fetched_at": "2026-09-19T07:57:21.880236+09:00"
-    },
-    {
-      "id": "c597557c7d10a262",
-      "title": "富山地方鉄道 夜行急行たてやま号",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "富山地方鉄道、富山地鉄サービスは、「臨時夜行急行たてやま号ツアー」を開催。出発日は、2026年9月19日（土）。「アルプスエキスプレス」による団体臨時列車に乗車。乗車区間は、電鉄富山（18:00頃発）～宇奈月温泉（2時間15分程度滞在、22",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.chitetsu.co.jp/?p=84168",
-      "fetched_at": "2026-09-19T07:57:21.880242+09:00"
-    },
-    {
-      "id": "cdf3b9e1e3b1ddfc",
-      "title": "碓氷峠鉄道文化むら キハ20 小湊鉄道ヘッドマーク 掲出",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "碓氷峠鉄道文化むらは、展示車両のキハ20形に、小湊鉄道のヘッドマークを掲出。掲出開始日は、2026年9月19日（土）。全4種で、2週間ごとに変更。9月20日（日）、21日（月・祝）は、同車両の車内公開も実施（雨天中止）。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.usuitouge.com/bunkamura/events/2971/",
-      "fetched_at": "2026-09-19T07:57:21.880246+09:00"
-    },
-    {
-      "id": "a910c6ab8075763d",
-      "title": "上毛電気鉄道 700形 運転体験ツアー",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "上毛電気鉄道は、事前申込制企画「電車運転体験ツアー」を開催。開催日は、2026年9月19日（土）。集合場所（時間）は、赤城駅改札前（9:45）。大胡電車庫にて、講習、昼食、シミュレーター体験の後、700形の運転体験（車庫3番線・洗い場線2往",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.jomorailway.com/tour.html#taiken4",
-      "fetched_at": "2026-09-19T07:57:21.880258+09:00"
-    },
-    {
-      "id": "c08e81a0e4ce7c6c",
-      "title": "豊橋鉄道 モ3200形製造70周年記念フリー乗車券セット 発売",
-      "date": "2026-09-19",
-      "location": "",
-      "description": "豊橋鉄道は、「豊橋鉄道 モ3200形製造70周年記念 市内線1日フリー乗車券セット」を発売。市内線1日フリー乗車券3枚と、名鉄時代からの軌跡やコラム、諸元表を収録した記念台紙のセットで、発売額は1,650円。発売開始日は、2026年9月19",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.toyotetsu.com/news/000663.html",
-      "fetched_at": "2026-09-19T07:57:21.880264+09:00"
-    },
     {
       "id": "7fc5869ce933c0c0",
       "title": "京王れーるランドなど シルバーウィークイベント",
@@ -130,7 +13,137 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/announce/announce2026/pdf/20260908_SW.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880269+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376508+09:00"
+    },
+    {
+      "id": "edc1ddc7c4e9d5e7",
+      "title": "佐賀駅バスセンターまつり",
+      "date": "2026-09-20",
+      "location": "佐賀県 佐賀駅",
+      "description": "佐賀県バス協会、佐賀市交通局などは、「第15回 佐賀駅バスセンターまつり」を開催。開催日時は、2026年9月20日（日）10:00～14:00。開催場所は、佐賀駅バスセンター（JR佐賀駅東側）。入場無料。車両展示、こども運転士体験、物品販売",
+      "prefecture": "佐賀県",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.bus.saga.saga.jp/info/2026basusenta-maturi.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376717+09:00"
+    },
+    {
+      "id": "90c92554d85f922a",
+      "title": "近鉄 ミッドナイトひのとり",
+      "date": "2026-09-21",
+      "location": "",
+      "description": "近畿日本鉄道は、ツアー企画「ミッドナイトひのとり」を開催。80000系「ひのとり」による団体臨時列車に乗車。ツアー出発日は、2026年9月21日（月・祝）、10月11日（日）、11月21日（土）。運転区間は、近鉄名古屋（1日目23:32発）",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/202607190815.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376726+09:00"
+    },
+    {
+      "id": "11464e2a19edded6",
+      "title": "井原鉄道 車庫見学会",
+      "date": "2026-09-21",
+      "location": "",
+      "description": "井原鉄道は、事前申込制の車庫見学会イベントを開催。開催日は、2026年9月21日（月・祝）～23日（水・祝）の各日。9:40～9:55に、早雲の里荏原駅2番線ホーム車両にて受付。10:10～10:45に、車庫内での検査中車両見学・解説、ジャ",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.ibara-railway.co.jp/wp-content/uploads/2026/09/facb569992782725a2873827684c244b.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376731+09:00"
+    },
+    {
+      "id": "5d7b0e19bc2c90cb",
+      "title": "東海道ルミエールエクスプレス",
+      "date": "2026-09-22",
+      "location": "",
+      "description": "JR東海、JR東海ツアーズは、特別列車「東海道ルミエールエクスプレス」の乗車ツアーを開催。出発日は、2026年9月22日（火・祝）。運転区間は、新大阪（22:03発）～東京（翌6:54）。24:00頃～6:00頃は、新富士駅で停車。新大阪→",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://jr-central.co.jp/news/release/_pdf/000045900.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376735+09:00"
+    },
+    {
+      "id": "dece41aa7a7df424",
+      "title": "SATONO あいづアフタヌーンティー・トレイン",
+      "date": "2026-09-22",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、団体臨時列車「あいづアフタヌーンティー・トレイン」の乗車ツアーを開催。旅行日は、2026年9月22日（火・祝）の日帰り。団体臨時列車の運転区間は、会津若松（9:12発）～只見（11:56着）、只見（1",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26H2561",
+      "fetched_at": "2026-09-20T07:36:47.376739+09:00"
+    },
+    {
+      "id": "fe290d7810cdfa44",
+      "title": "富士山麓電気鉄道 富士山ビュー特急 第2弾 10周年記念列車ツアー",
+      "date": "2026-09-22",
+      "location": "",
+      "description": "富士山麓電気鉄道は、事前申込制企画として、「富士山ビュー特急 10th Anniversary Train」第2弾を開催。「富士山ビュー特急」の特別列車に乗車する企画。開催日は、2026年9月22日（火・祝）。特別列車の運転区間は、河口湖（",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1201",
+      "fetched_at": "2026-09-20T07:36:47.376743+09:00"
+    },
+    {
+      "id": "39ae19f6f3ea81ae",
+      "title": "庄内交通 バスの日イベント",
+      "date": "2026-09-23",
+      "location": "",
+      "description": "庄内交通は、「庄内交通バスまつり2026」を開催。開催日時は、2026年9月23日（水・祝）10:00～14:00。開催場所は、エスモール正面駐車場など。バス車両展示、乗車体験、グッズ販売などを実施。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.shonaikotsu.jp/news/index.php?d=y81PSbVNySwuUEsrzUu2Tc0rKapUA5Pxefm2ZgbmagWJ6am2hgA=",
+      "fetched_at": "2026-09-20T07:36:47.376752+09:00"
+    },
+    {
+      "id": "36f5dfb99ca70f99",
+      "title": "岳南電車 親子向け 仕事体験・ワークショップイベント",
+      "date": "2026-09-23",
+      "location": "",
+      "description": "岳南電車は、事前申込制企画「駅員さんと運転士さんのお仕事体験＆オリジナル定期券づくりワークショップ」を開催。開催日は2026年9月23日（水・祝）で、10:00～、11:00～、13:00～、14:00～、15:00～の5回開催。開催場所は",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.gakutetsu.jp/event/oshigototaiken2026.html",
+      "fetched_at": "2026-09-20T07:36:47.376756+09:00"
+    },
+    {
+      "id": "6c3b6d0aa158053b",
+      "title": "E655系 新宿～長野間 夜行列車ツアー",
+      "date": "2026-09-25",
+      "location": "",
+      "description": "JR東日本びゅうツーリズム＆セールスは、E655系「なごみ（和）」による団体臨時列車の乗車ツアーを開催。E655系の運転日（出発日）は、2026年9月25日（金）。運転区間は、新宿（23:58発）～長野（翌朝着）。乗車には、旅行商品の申込が",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=96B0189",
+      "fetched_at": "2026-09-20T07:36:47.376760+09:00"
+    },
+    {
+      "id": "6b364a7899f89ca9",
+      "title": "東武 90000系就役記念乗車券 発売",
+      "date": "2026-09-25",
+      "location": "",
+      "description": "東武鉄道は、「90000系就役記念乗車券＆卓上カレンダー」を発売。卓上カレンダーで、表紙は乗車券4枚と一体。発売額は1,000円。発売期間は、2026年9月25日（金）～10月31日（土）。発売箇所は、池袋、下板橋、大山、上板橋、成増、和光",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376764+09:00"
     },
     {
       "id": "b15bc6347a23b2e5",
@@ -143,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/oyako/info/20467/",
-      "fetched_at": "2026-09-19T07:57:21.880274+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376767+09:00"
     },
     {
       "id": "ed86d9a4962db31f",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/202608200936470N7gPCGAGT_yCOVpD2LCxw.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880278+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376771+09:00"
     },
     {
       "id": "816d109e48fdc968",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/20260903_ho01.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880295+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376774+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880299+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376778+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-19T07:57:21.880302+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376781+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880304+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376785+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-09-19T07:57:21.880307+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376788+09:00"
     },
     {
       "id": "6a6b53112b169f54",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28420",
-      "fetched_at": "2026-09-19T07:57:21.880310+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376791+09:00"
     },
     {
       "id": "3bfd48a37c992d12",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o02.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880312+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376794+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -260,7 +273,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-09-19T07:57:21.880315+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376798+09:00"
+    },
+    {
+      "id": "f622e51602a4fe0f",
+      "title": "JR四国・とさでん交通・土佐くろしお鉄道 親子向け 車両基地見学会",
+      "date": "2026-10-11",
+      "location": "",
+      "description": "とさでん交通は、「鉄道の日」にあわせ、事前申込制イベント「親子で行く鉄道施設見学会」を開催。開催日は、2026年10月11日（日）。9:00～9:30にとさでん交通桟橋車庫にて受付後、同車庫を見学。桟橋車庫～高知駅前間で路面電車に乗車後、高",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://wwwtb.mlit.go.jp/shikoku/newsrelease/2017/2026-0910-1100-5.html",
+      "fetched_at": "2026-09-20T07:36:47.376801+09:00"
     },
     {
       "id": "73d976f114d06988",
@@ -273,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261013/",
-      "fetched_at": "2026-09-19T07:57:21.880318+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376804+09:00"
     },
     {
       "id": "0f3b0e19aed81869",
@@ -286,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba_j/20260910_c01.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880320+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376807+09:00"
     },
     {
       "id": "cbaa4545fb39f265",
@@ -299,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002307.000095753.html",
-      "fetched_at": "2026-09-19T07:57:21.880323+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376811+09:00"
     },
     {
       "id": "9f65313d0ad3b0d5",
@@ -312,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/event/detail/73732",
-      "fetched_at": "2026-09-19T07:57:21.880326+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376815+09:00"
     },
     {
       "id": "e9f43307419fe665",
@@ -325,7 +351,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
-      "fetched_at": "2026-09-19T07:57:21.880329+09:00"
+      "fetched_at": "2026-09-20T07:36:47.376818+09:00"
+    },
+    {
+      "id": "0537a0433511787d",
+      "title": "西鉄 にしてつ電車まつり",
+      "date": "2026-10-18",
+      "location": "間で無料送迎バスを運行",
+      "description": "西日本鉄道は、「にしてつ電車まつり」を開催。開催日時は、2026年10月18日（日）10:00～16:00（最終入場は15:30）。開催場所は、筑紫車両基地。入場無料。3000形3001編成および「旅人」の展示、工場内公開、はたらく車の展示",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
+      "fetched_at": "2026-09-20T07:36:47.376821+09:00"
     }
   ]
 }
