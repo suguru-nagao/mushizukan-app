@@ -1,59 +1,7 @@
 {
-  "generated_at": "2026-09-27T08:19:04.050778+09:00",
-  "count": 37,
+  "generated_at": "2026-09-28T08:32:20.987099+09:00",
+  "count": 34,
   "events": [
-    {
-      "id": "73f47b814839023c",
-      "title": "森の京都QRトレイン京都～和知間",
-      "date": "2026-09-27",
-      "location": "",
-      "description": "JR西日本、日本旅行、森の京都地域振興社は、ラッピング車両「森の京都QRトレイン」による団体臨時列車の乗車ツアーを開催。団体臨時列車の運転日は、2026年9月27日（日）。運転区間は、京都～和知間の片道。参加には、事前申込が必要。",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.westjr.co.jp/press/article/2026/07/08/items/260708_00_press_morinokyoto.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050404+09:00"
-    },
-    {
-      "id": "893261ee105b258c",
-      "title": "智頭急行 鉄道の運行を支える仕事体験イベント",
-      "date": "2026-09-27",
-      "location": "",
-      "description": "智頭急行は、事前申込制企画「鉄道の運行を支える仕事体験EX」を開催。開催日は、2026年9月27日（日）。集合場所（時間）は、大原駅（8:45）。大原車両基地、恋山形駅、智頭駅、運輸部を見学。運輸指令室見学、運転士免許の試験項目の一部体験、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.chizukyu.co.jp/chizukyu/event_application/g980/",
-      "fetched_at": "2026-09-27T08:19:04.050415+09:00"
-    },
-    {
-      "id": "43bdaab53e246e52",
-      "title": "小田急箱根グループ 強羅駅など のりものフェスタ",
-      "date": "2026-09-27",
-      "location": "強羅駅",
-      "description": "小田急箱根グループは、「おだきゅうはこね のりものフェスタ2026」を開催。開催日時は、2026年9月27日（日）10:00～15:00。強羅駅にて、クイズラリー、部品の重さ体験、鉄道模型展示、ATカート乗車体験（停車状態での実施）、「アレ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/08/7883610c302b7e1f94456035bd9bd5ba-1.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050420+09:00"
-    },
-    {
-      "id": "da7044031c9818d5",
-      "title": "2026年9月27日の鉄道イベント",
-      "date": "2026-09-27",
-      "location": "",
-      "description": "北総線の車両が「珍しい姿」でお披露目⁉ 10月24日に「すっぴん」撮影会を開催",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/calendar/20260927/",
-      "fetched_at": "2026-09-27T08:19:04.050425+09:00"
-    },
     {
       "id": "cacfe815fa6d8d75",
       "title": "2026年9月28日の鉄道イベント",
@@ -65,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20260928/",
-      "fetched_at": "2026-09-27T08:19:04.050429+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986751+09:00"
     },
     {
       "id": "5b92c6c53c67ebb8",
@@ -78,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20260929/",
-      "fetched_at": "2026-09-27T08:19:04.050433+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986761+09:00"
     },
     {
       "id": "b8ee487952aa1688",
@@ -91,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20260930/",
-      "fetched_at": "2026-09-27T08:19:04.050437+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986765+09:00"
     },
     {
       "id": "1370bdacb99a5bf2",
@@ -104,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jeki.co.jp/info/files/upload/20260914/%EF%BC%88HP%E7%94%A8%EF%BC%8920260914_1400_%E3%82%A8%E3%82%AD%E3%82%BF%E3%82%B0Suica%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%83%A9%E3%83%AA%E3%83%BC.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050445+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986768+09:00"
     },
     {
       "id": "413a7a4da05a1153",
@@ -117,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/files/2601001_hinotori_shima_gourmet.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050449+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986839+09:00"
     },
     {
       "id": "9f1ad395b05803d4",
@@ -130,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/08/26/20260826%2002.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050454+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986843+09:00"
     },
     {
       "id": "4f7376c9d39bcdec",
@@ -143,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.joshin-dentetsu.co.jp/wp/wp-content/uploads/2026/09/23ca2aebecb948d4b04b15aa52ff64f6.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050458+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986847+09:00"
     },
     {
       "id": "6ed29c31940fe1ca",
@@ -156,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o04.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050461+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986854+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -169,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050464+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986857+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -182,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-09-27T08:19:04.050467+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986860+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -195,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050470+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986862+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -208,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-09-27T08:19:04.050473+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986865+09:00"
     },
     {
       "id": "e683cdc9f04dc986",
@@ -221,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260925HP_26084RK.html",
-      "fetched_at": "2026-09-27T08:19:04.050476+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986867+09:00"
     },
     {
       "id": "6a6b53112b169f54",
@@ -234,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28420",
-      "fetched_at": "2026-09-27T08:19:04.050480+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986870+09:00"
     },
     {
       "id": "3bfd48a37c992d12",
@@ -247,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o02.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050483+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986872+09:00"
     },
     {
       "id": "879e35dcd40888ba",
@@ -260,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://konantetsudo.jp/2026/08/22/tetsudo-fes20261004/",
-      "fetched_at": "2026-09-27T08:19:04.050486+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986874+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -273,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-09-27T08:19:04.050489+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986877+09:00"
     },
     {
       "id": "9e65d06f894feed7",
@@ -286,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=734",
-      "fetched_at": "2026-09-27T08:19:04.050492+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986879+09:00"
     },
     {
       "id": "d5dc685fe48fa772",
@@ -299,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002280.000095753.html",
-      "fetched_at": "2026-09-27T08:19:04.050495+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986882+09:00"
     },
     {
       "id": "9953cd495133ecd8",
@@ -312,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002305.000095753.html",
-      "fetched_at": "2026-09-27T08:19:04.050498+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986885+09:00"
     },
     {
       "id": "f622e51602a4fe0f",
@@ -325,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/shikoku/newsrelease/2017/2026-0910-1100-5.html",
-      "fetched_at": "2026-09-27T08:19:04.050501+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986887+09:00"
     },
     {
       "id": "73d976f114d06988",
@@ -338,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261013/",
-      "fetched_at": "2026-09-27T08:19:04.050504+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986889+09:00"
     },
     {
       "id": "0f3b0e19aed81869",
@@ -351,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba_j/20260910_c01.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050507+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986892+09:00"
     },
     {
       "id": "cbaa4545fb39f265",
@@ -364,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002307.000095753.html",
-      "fetched_at": "2026-09-27T08:19:04.050510+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986894+09:00"
     },
     {
       "id": "3a050bb957118484",
@@ -377,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/fukushima_j/20260924_f01.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050513+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986896+09:00"
     },
     {
       "id": "9f65313d0ad3b0d5",
@@ -390,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/event/detail/73732",
-      "fetched_at": "2026-09-27T08:19:04.050516+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986898+09:00"
     },
     {
       "id": "e9f43307419fe665",
@@ -403,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050519+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986901+09:00"
     },
     {
       "id": "0537a0433511787d",
@@ -416,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050522+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986903+09:00"
     },
     {
       "id": "3e4dcfe5825d9639",
@@ -429,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260925HP_26084RK.html",
-      "fetched_at": "2026-09-27T08:19:04.050525+09:00"
+      "fetched_at": "2026-09-28T08:32:20.986906+09:00"
     },
     {
       "id": "fc78f409023ca273",
@@ -442,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045935.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050726+09:00"
+      "fetched_at": "2026-09-28T08:32:20.987084+09:00"
     },
     {
       "id": "6587fa34ed8df781",
@@ -455,7 +403,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/morioka_j/20260917_m01.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050763+09:00"
+      "fetched_at": "2026-09-28T08:32:20.987089+09:00"
     },
     {
       "id": "65873cecedf25b6e",
@@ -468,7 +416,20 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/QAqpY8qc.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050772+09:00"
+      "fetched_at": "2026-09-28T08:32:20.987092+09:00"
+    },
+    {
+      "id": "35ca6dfda10ddb4e",
+      "title": "北総鉄道 7300形 すっぴん撮影会",
+      "date": "2026-10-24",
+      "location": "印西牧の原駅",
+      "description": "北総鉄道は、事前申込制イベント「すっぴん7300形車両撮影会」を開催。開催日時は、2026年10月24日（土）10:00～12:20頃。開催場所は、印旛車両基地。検査によりカラー帯を剥がした「すっぴん状態」の7300形7318編成を展示し、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokuso-railway.co.jp/topics/detail/74570",
+      "fetched_at": "2026-09-28T08:32:20.987095+09:00"
     },
     {
       "id": "b7c6d1d21abe1d09",
@@ -481,7 +442,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.joshin-dentetsu.co.jp/wp/wp-content/uploads/2026/09/569d4d30b5c78f2ec4ed4782d2ae8bc4.pdf",
-      "fetched_at": "2026-09-27T08:19:04.050776+09:00"
+      "fetched_at": "2026-09-28T08:32:20.987097+09:00"
     }
   ]
 }
