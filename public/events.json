@@ -1,97 +1,32 @@
 {
-  "generated_at": "2026-10-01T09:18:28.559463+09:00",
+  "generated_at": "2026-10-02T09:24:26.681789+09:00",
   "count": 41,
   "events": [
     {
-      "id": "1370bdacb99a5bf2",
-      "title": "Suicaのペンギン デジタルスタンプラリー",
-      "date": "2026-10-01",
+      "id": "7b5ffcdafd4bca36",
+      "title": "キハ40形 急行 札幌～網走間",
+      "date": "2026-10-02",
+      "location": "北海道",
+      "description": "JR東日本びゅうツーリズム＆セールスは、JR北海道のキハ40系による団体臨時列車「急行『札幌発 網走行』」「急行『網走発 札幌行』」の乗車ツアーを開催。団体臨時列車の運転日と運転区間は、2026年10月2日（金）が札幌（7:41発）～網走、",
+      "prefecture": "北海道",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0225",
+      "fetched_at": "2026-10-02T09:24:26.681413+09:00"
+    },
+    {
+      "id": "9ae588cd7fa33832",
+      "title": "若桜鉄道 トレインスタンプ デジタルスタンプラリー第3弾",
+      "date": "2026-10-02",
       "location": "",
-      "description": "JR東日本は、「Suicaのペンギン デジタルスタンプラリー」を開催。スマートフォンアプリ「エキタグ」でのデジタルスタンプラリー。開催期間は、2026年10月1日（木）～12月25日（金）。対象スポットは、東京、秋葉原、池袋、高田馬場、新宿",
+      "description": "若桜鉄道は、デジタルスタンプラリー「若桜鉄道トレインスタンプコレクション」の第2弾を開催。開催期間は、2026年10月2日（金）～2027年3月14日（日）。カシオ計算機のアプリ「MEGURUWAY」を使用し、各スポットでスタンプを収集。ス",
       "prefecture": "",
       "city": "",
       "themeId": "train",
       "source": "鉄道コム",
-      "url": "https://www.jeki.co.jp/info/files/upload/20260914/%EF%BC%88HP%E7%94%A8%EF%BC%8920260914_1400_%E3%82%A8%E3%82%AD%E3%82%BF%E3%82%B0Suica%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%97%E3%83%A9%E3%83%AA%E3%83%BC.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559090+09:00"
-    },
-    {
-      "id": "413a7a4da05a1153",
-      "title": "近鉄 ひのとり 近鉄名古屋～賢島間 貸切列車乗車ツアー",
-      "date": "2026-10-01",
-      "location": "",
-      "description": "近畿日本鉄道は、80000系「ひのとり」による貸切列車の乗車ツアーを開催。旅行日は、2026年10月1日（木）の日帰り。貸切列車の運転区間は、近鉄名古屋（10:00頃発）～賢島（12:30頃着）、賢島（16:10頃発）～近鉄名古屋（19:3",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/2601001_hinotori_shima_gourmet.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559101+09:00"
-    },
-    {
-      "id": "9f1ad395b05803d4",
-      "title": "しおかぜ・南風55周年記念 デジタルスタンプラリー第2弾",
-      "date": "2026-10-01",
-      "location": "四国全県",
-      "description": "JR四国は、特急「しおかぜ」「南風」55周年記念キャンペーンの一環として、「四国をつなぐ\"かぜ\"デジタル駅スタンプラリー」の第2弾を開催。開催期間は、2026年10月1日（木）～2027年9月30日（木）。「エキタグ」アプリを使用したデジタ",
-      "prefecture": "四国全県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/08/26/20260826%2002.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559107+09:00"
-    },
-    {
-      "id": "4f7376c9d39bcdec",
-      "title": "上信電鉄 鉄道の日・群馬県民の日 1日フリー乗車券 発売",
-      "date": "2026-10-01",
-      "location": "・群馬県",
-      "description": "上信電鉄は、「鉄道の日」と「群馬県民の日」を記念して、「一日フリー乗車券」を発売。上信線全線が1日乗り放題。発売額は大人1,500円、小児750円で、発売期間は2026年10月1日（木）～31日（土）。利用可能日は、10月中の土休日および1",
-      "prefecture": "・群馬県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.joshin-dentetsu.co.jp/wp/wp-content/uploads/2026/09/23ca2aebecb948d4b04b15aa52ff64f6.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559112+09:00"
-    },
-    {
-      "id": "6ed29c31940fe1ca",
-      "title": "JR東・東武・西武など 開運六社めぐり エキタグスタンプラリー",
-      "date": "2026-10-01",
-      "location": "",
-      "description": "JR東日本など鉄道4社、鉄道博物館、神社6社は、エキタグスタンプラリー「鉄道でつなぐ 開運六社めぐり～六つのご縁を結ぶ 周遊の旅～」を開催。開催期間は、2026年10月1日（木）～11月30日（月）。スマートフォンアプリ「エキタグ」でのデジ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o04.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559116+09:00"
-    },
-    {
-      "id": "4724445731558b8b",
-      "title": "第16回 関東民鉄スタンプラリー",
-      "date": "2026-10-01",
-      "location": "",
-      "description": "関東鉄道協会と同会加盟の39社などは、「第15回かんとうみんてつスタンプラリー＋台湾スタンプラリー」を開催。開催期間は、2026年10月1日（木）～2027年2月14日（日）。参加無料。スマートフォンアプリ「furari」上の企画で、GPS",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kantetsukyo.jp/archives/plaza/plaza-25929",
-      "fetched_at": "2026-10-01T09:18:28.559121+09:00"
-    },
-    {
-      "id": "d4f735a76c904c32",
-      "title": "富山地方鉄道 市内電車1日フリーきっぷ 発売",
-      "date": "2026-10-01",
-      "location": "",
-      "description": "富山地方鉄道は、「市内電車1日フリーきっぷ」を発売。富山地方鉄道の市内電車全線、鉄道線の電鉄富山～南富山間が1日乗り放題。発売額は、大人650円、小児330円。発売開始日は、2026年10月1日（木）。発売箇所は、富山地鉄乗車券センター、西",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.chitetsu.co.jp/?p=84777",
-      "fetched_at": "2026-10-01T09:18:28.559124+09:00"
+      "url": "https://wakatetsu.co.jp/archives/news/%e7%ac%ac3%e5%bc%be%e3%80%80%e3%83%87%e3%82%b8%e3%82%bf%e3%83%ab%e3%82%b9%e3%82%bf%e3%83%b3%e3%83%97%e3%83%a9%e3%83%aa%e3%83%bc%e3%80%8c%e8%8b%a5%e6%a1%9c%e9%89%84%e9%81%93%e3%83%88%e3%83%ac%e3%82%a4",
+      "fetched_at": "2026-10-02T09:24:26.681425+09:00"
     },
     {
       "id": "6edd604c2294177e",
@@ -104,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/kyushu/content/000378082.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559133+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681430+09:00"
     },
     {
       "id": "2cf194b8c4b4c0b0",
@@ -117,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.gakutetsu.jp/event/ed402guidetour2026.html",
-      "fetched_at": "2026-10-01T09:18:28.559137+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681435+09:00"
     },
     {
       "id": "0644c764c6714248",
@@ -130,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/news/e5e80ba77b7fb8de19449f2b3f5f90f0c4d838f5.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559141+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681438+09:00"
     },
     {
       "id": "2d403592ebe49810",
@@ -143,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.shinanorailway.co.jp/tour-info/2026/09/11095.php",
-      "fetched_at": "2026-10-01T09:18:28.559144+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681441+09:00"
     },
     {
       "id": "e683cdc9f04dc986",
@@ -156,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260925HP_26084RK.html",
-      "fetched_at": "2026-10-01T09:18:28.559148+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681446+09:00"
     },
     {
       "id": "0c8c96584d759322",
@@ -169,7 +104,72 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/hokushin/content/000380438.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559151+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681455+09:00"
+    },
+    {
+      "id": "bec58a7b51fb76c9",
+      "title": "大阪メトロ・近鉄 貸切列車乗車体験・撮影会ツアー",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "大阪メトロ、近畿日本鉄道は、相互直通運転開始40周年を記念して、事前申込制企画「Osaka Metro×近鉄貸切列車乗車体験＆撮影会ツアー」を開催。開催日は、2026年10月3日（土）、4日（日）の各日日帰り。3日は、近鉄7000系による団",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/60c4f0c7a3324f9e9e5c1de4aaba8648/20260727rw.pdf",
+      "fetched_at": "2026-10-02T09:24:26.681459+09:00"
+    },
+    {
+      "id": "aa375549fc9b4e83",
+      "title": "ふたつ星4047 博多～武雄温泉間 西九州新幹線開業4周年特別列車ツアー",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "JR九州は、西九州新幹線開業4周年記念プロジェクト「GO WEST 4」の一環として、「ふたつ星4047」の特別運行企画を実施。運転日は、2026年10月3日（土）。運転区間は、博多（8:27発）～武雄温泉（10:16着）。乗車には、旅行商",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2026/08/24/20260824_Nishi-Kyushu_Shinkansen_4th_Anniversary_Project_GO_WEST4.pdf",
+      "fetched_at": "2026-10-02T09:24:26.681463+09:00"
+    },
+    {
+      "id": "e5e4ccdbd2cb91ba",
+      "title": "志国土佐 時代の夜明けのものがたり 6万人達成記念缶バッジ 配布",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "JR四国は、「志国土佐 時代の夜明けのものがたり」の定期運行乗車累計6万人達成を記念して、オリジナル缶バッジを配布。配布日は、2026年10月3日（土）。当日の同列車の乗客などが対象。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/09/18/20260918%2003.pdf",
+      "fetched_at": "2026-10-02T09:24:26.681466+09:00"
+    },
+    {
+      "id": "12c2406d35764707",
+      "title": "盛岡駅まつり2026",
+      "date": "2026-10-03",
+      "location": "のみ12:00～16:30",
+      "description": "JR東日本は、「盛岡駅まつり2026」を開催。開催日時は、2026年10月3日（土）11:00～16:00。開催場所は、盛岡駅2階南側コンコース、同駅前滝の広場、同駅前開運ホコテン（同会場のみ12:00～16:30）。仕事体験イベントとして",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://media.jreast.co.jp/articles/6580",
+      "fetched_at": "2026-10-02T09:24:26.681469+09:00"
+    },
+    {
+      "id": "b6fe56af50b41dd1",
+      "title": "北陸鉄道 子ども運賃キャンペーン",
+      "date": "2026-10-03",
+      "location": "",
+      "description": "北陸鉄道は、会社創立記念日にあわせ、「鉄道線こども無料キャンペーン」を開催。実施日は、2026年10月3日（土）～31日（土）の土休日。小学生が対象で、石川線、浅野川線が全線無料。証明書等の提示は不要。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.hokutetsu.co.jp/news/news-13412/",
+      "fetched_at": "2026-10-02T09:24:26.681472+09:00"
     },
     {
       "id": "6a6b53112b169f54",
@@ -182,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28420",
-      "fetched_at": "2026-10-01T09:18:28.559154+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681475+09:00"
     },
     {
       "id": "3bfd48a37c992d12",
@@ -195,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20260910_o02.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559157+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681478+09:00"
     },
     {
       "id": "879e35dcd40888ba",
@@ -208,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://konantetsudo.jp/2026/08/22/tetsudo-fes20261004/",
-      "fetched_at": "2026-10-01T09:18:28.559160+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681481+09:00"
     },
     {
       "id": "4c7a1c4c4c426501",
@@ -221,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261009/",
-      "fetched_at": "2026-10-01T09:18:28.559163+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681484+09:00"
     },
     {
       "id": "9e65d06f894feed7",
@@ -234,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://fukutetsu.jp/newsDetail.php?num=734",
-      "fetched_at": "2026-10-01T09:18:28.559166+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681487+09:00"
     },
     {
       "id": "d5dc685fe48fa772",
@@ -247,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002280.000095753.html",
-      "fetched_at": "2026-10-01T09:18:28.559169+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681490+09:00"
     },
     {
       "id": "9953cd495133ecd8",
@@ -260,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002305.000095753.html",
-      "fetched_at": "2026-10-01T09:18:28.559172+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681493+09:00"
     },
     {
       "id": "991ddd68173d2fea",
@@ -273,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu.jp/romancecarmuseum/event/tetsudonohi2026_1",
-      "fetched_at": "2026-10-01T09:18:28.559175+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681496+09:00"
     },
     {
       "id": "f622e51602a4fe0f",
@@ -286,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://wwwtb.mlit.go.jp/shikoku/newsrelease/2017/2026-0910-1100-5.html",
-      "fetched_at": "2026-10-01T09:18:28.559178+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681499+09:00"
     },
     {
       "id": "73d976f114d06988",
@@ -299,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261013/",
-      "fetched_at": "2026-10-01T09:18:28.559181+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681502+09:00"
     },
     {
       "id": "0f3b0e19aed81869",
@@ -312,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/chiba_j/20260910_c01.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559184+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681505+09:00"
     },
     {
       "id": "cbaa4545fb39f265",
@@ -325,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002307.000095753.html",
-      "fetched_at": "2026-10-01T09:18:28.559187+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681508+09:00"
     },
     {
       "id": "3a050bb957118484",
@@ -338,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/fukushima_j/20260924_f01.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559190+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681511+09:00"
     },
     {
       "id": "8af1f06532f66b23",
@@ -351,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.signal.co.jp/wordpress/wp-content/uploads/2026/09/2026tetsudoufestival.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559193+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681514+09:00"
     },
     {
       "id": "2b475a48483ce97a",
@@ -364,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/akita_j/20260929_a01.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559196+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681517+09:00"
     },
     {
       "id": "9f65313d0ad3b0d5",
@@ -377,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/event/detail/73732",
-      "fetched_at": "2026-10-01T09:18:28.559199+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681520+09:00"
     },
     {
       "id": "e9f43307419fe665",
@@ -390,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559202+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681523+09:00"
     },
     {
       "id": "0537a0433511787d",
@@ -403,7 +403,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nishitetsu.co.jp/ja/news/news20260910_1/main/0/link/26_040.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559205+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681526+09:00"
     },
     {
       "id": "95e0256f11680411",
@@ -416,7 +416,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jr-shikoku.co.jp/03_news/press/assets/2026/09/29/20260929%20%2003.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559208+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681528+09:00"
     },
     {
       "id": "3e4dcfe5825d9639",
@@ -429,7 +429,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20260925HP_26084RK.html",
-      "fetched_at": "2026-10-01T09:18:28.559211+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681531+09:00"
     },
     {
       "id": "fc78f409023ca273",
@@ -442,7 +442,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000045935.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559432+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681762+09:00"
     },
     {
       "id": "6587fa34ed8df781",
@@ -455,7 +455,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/morioka_j/20260917_m01.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559440+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681769+09:00"
     },
     {
       "id": "65873cecedf25b6e",
@@ -468,7 +468,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.keisei.co.jp//cms/files/keisei/MASTER/0110/QAqpY8qc.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559445+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681772+09:00"
     },
     {
       "id": "35ca6dfda10ddb4e",
@@ -481,7 +481,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/topics/detail/74570",
-      "fetched_at": "2026-10-01T09:18:28.559448+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681775+09:00"
     },
     {
       "id": "24f99aea5fc322fa",
@@ -494,7 +494,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotsu.city.sendai.jp/busubwayfestival2026/",
-      "fetched_at": "2026-10-01T09:18:28.559452+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681778+09:00"
     },
     {
       "id": "16853e549c29f3c9",
@@ -507,7 +507,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28599",
-      "fetched_at": "2026-10-01T09:18:28.559455+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681781+09:00"
     },
     {
       "id": "b357a608a96cea44",
@@ -520,7 +520,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28599",
-      "fetched_at": "2026-10-01T09:18:28.559458+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681784+09:00"
     },
     {
       "id": "b7c6d1d21abe1d09",
@@ -533,7 +533,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.joshin-dentetsu.co.jp/wp/wp-content/uploads/2026/09/569d4d30b5c78f2ec4ed4782d2ae8bc4.pdf",
-      "fetched_at": "2026-10-01T09:18:28.559461+09:00"
+      "fetched_at": "2026-10-02T09:24:26.681787+09:00"
     }
   ]
 }
