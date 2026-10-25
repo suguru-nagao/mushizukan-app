@@ -1,176 +1,7 @@
 {
-  "generated_at": "2026-10-25T07:48:52.087922+09:00",
-  "count": 39,
+  "generated_at": "2026-10-26T07:58:15.060182+09:00",
+  "count": 32,
   "events": [
-    {
-      "id": "b7c6d1d21abe1d09",
-      "title": "上信電鉄 感謝フェア2026",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "上信電鉄は、「上信電鉄感謝フェア2026」を開催。開催日時は、2026年10月25日（日）10:00～15:00。開催場所は、同社本社および車両検修場。入場無料。電気機関車・保守用車両見学会、レールスター乗車体験、500形撮影会、ミニトレイ",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.joshin-dentetsu.co.jp/wp/wp-content/uploads/2026/09/569d4d30b5c78f2ec4ed4782d2ae8bc4.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087292+09:00"
-    },
-    {
-      "id": "4247397a93b55bb4",
-      "title": "高松琴平電気鉄道・JFEスチール コラボNゲージコンテナ 販売",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "高松琴平電気鉄道は、JFEスチールとコラボした、Nゲージサイズのコンテナを販売。1箱1個入りで、販売額は800円。販売日時と販売箇所は、2026年10月25日（日）9:30～15:00が水島臨海鉄道開催の「鉄道の日記念フェスタ2026」（先",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026jfexkotodenkorabo/index.html",
-      "fetched_at": "2026-10-25T07:48:52.087307+09:00"
-    },
-    {
-      "id": "b974183fefd028d5",
-      "title": "黒部峡谷鉄道 創立55周年記念缶バッジ プレゼントイベント",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "黒部峡谷鉄道は、創立55周年記念缶バッジのプレゼント企画を実施。開催日時は、2026年10月25日（日）。9:30～。宇奈月駅前広場特設ブース（雨天時は同駅構内特設ブース）にて、当日の乗車券の提示でクジ引きに参加可。デザインは全6種類。なく",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.kurotetu.co.jp/news-detail/?post=633",
-      "fetched_at": "2026-10-25T07:48:52.087315+09:00"
-    },
-    {
-      "id": "71cf29842372e7f0",
-      "title": "水島臨海鉄道 タグキーホルダーなど 販売",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "水島臨海鉄道は、「鉄道の日記念フェスタ」開催にあわせ、新グッズ11品目を販売。販売品目（価格）は、靴下（キハ20、キハ30、DD200の3種類、カラー3色、各1,300円）、A4コットンバッグ（600円）、タグキーホルダー（10種類ランダム",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mizurin.co.jp/event_detail/index/293.html",
-      "fetched_at": "2026-10-25T07:48:52.087322+09:00"
-    },
-    {
-      "id": "1fae876d760f7eba",
-      "title": "水島臨海鉄道 キハ30-100 製造60周年記念グッズ 販売",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "水島臨海鉄道は、キハ30 100製造60周年記念グッズを販売。金属しおり、A型硬券3枚、台紙のセットで、販売額は1,600円。販売開始日は、2026年10月25日（日）。販売箇所は、倉敷貨物ターミナル駅にて開催の「鉄道の日記念フェスタ」会場",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mizurin.co.jp/event_detail/index/291.html",
-      "fetched_at": "2026-10-25T07:48:52.087329+09:00"
-    },
-    {
-      "id": "ed1fecc3744645ab",
-      "title": "東海道新幹線 首都圏・静岡地区発着 浜松工場見学ツアー",
-      "date": "2026-10-25",
-      "location": "浜松工場",
-      "description": "JR東海は、浜松工場の見学ツアー「JR東海 浜松工場へGO」を開催。首都圏・静岡地区発の旅行日は、2026年10月25日（日）の日帰り。団体専用列車に乗車し移動。専用列車の運転区間は、東京（10:24発）～浜松工場（13:00頃着）、浜松工",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000045966.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087336+09:00"
-    },
-    {
-      "id": "54458d17a8171910",
-      "title": "キハ75形 中央本線など 苗木城築城500年記念列車",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "JR東海は、団体臨時列車「苗木城築城500年記念列車」を運転。運転日は、2026年10月25日（日）。運転区間は、岐阜（9:30頃発）～美濃太田～多治見～中津川（12:00頃着）。キハ75形4両編成で運転。乗車には、旅行商品の申込が必要。乗",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/000046013.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087342+09:00"
-    },
-    {
-      "id": "84c07b7f65a2c812",
-      "title": "水島臨海鉄道 鉄道の日記念フェスタ",
-      "date": "2026-10-25",
-      "location": "入場は列車にて",
-      "description": "水島臨海鉄道は、「2026『鉄道の日記念フェスタ』」を開催。開催日時は、2026年10月25日（日）9:30～15:00。開催場所は、倉敷貨物ターミナル駅。雨天決行。キハ205の乗車体験（12:00まで）および車掌体験（13:00～14:0",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.mizurin.co.jp/event_detail/index/284.html",
-      "fetched_at": "2026-10-25T07:48:52.087354+09:00"
-    },
-    {
-      "id": "f4d4fd9704da4978",
-      "title": "寒河江駅 お客さま感謝DAY",
-      "date": "2026-10-25",
-      "location": "寒河江駅",
-      "description": "JR東日本は、「鉄道の日」イベントとして、寒河江駅で「お客さま感謝DAY」を開催。開催日時は、2026年10月25日（日）10:00～14:00頃。レールスター乗車体験、キハ101系運転台での記念撮影、Nゲージ展示、起床装置体験、子ども駅長",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jreast.co.jp/press/2026/yamagata_j/20260904_y01.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087361+09:00"
-    },
-    {
-      "id": "0eaa71e15326a099",
-      "title": "福岡市 地下鉄フェスタ2026",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "福岡市交通局は、「地下鉄フェスタ2026」を開催。開催日時は、2026年10月25日（日）10:00～16:00。開催場所は、橋本車両基地。入場無料。車両工場公開（特殊車両展示あり）、ステージイベント、ミニ七隈線車両の運転（小学生以下限定）",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://subway.city.fukuoka.lg.jp/topics/detail.php?id=2332",
-      "fetched_at": "2026-10-25T07:48:52.087367+09:00"
-    },
-    {
-      "id": "3ebcfaa5a60f2b4c",
-      "title": "第7回 鉄道フェスタ in さかき",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "坂城町、坂城町169系電車保存会は、第7回「鉄道フェスタ in さかき」を開催。開催日時は、2026年10月25日（日）10:00～16:00。開催場所は、坂城駅、坂城駅前多目的広場 169系電車横など。169系車内外公開・説明見学会、16",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.town.sakaki.nagano.jp/site/169conserve/15820.html",
-      "fetched_at": "2026-10-25T07:48:52.087373+09:00"
-    },
-    {
-      "id": "df4bdb81434b6d43",
-      "title": "京福電気鉄道 モボ301形55周年記念 貸切乗車・撮影会",
-      "date": "2026-10-25",
-      "location": "",
-      "description": "京福電気鉄道は、嵐山線の車両モボ301形の運行開始55周年イベントとして、事前申込制企画「ゴーゴー！！301形！～モボ301形、55年目のちょっと特別な一日～」を開催。開催日時は、2026年10月25日（日）12:00～16:30頃。西院車",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.keifuku.co.jp/cms/%e3%80%90%e3%83%a2%e3%83%9c301%e5%bd%a2301%e5%8f%b7%e8%bb%8a55%e5%91%a8%e5%b9%b4%e4%bc%81%e7%94%bb%e3%80%91-%e3%80%8c%e3%82%b4%e3%83%bc%e3%82%b4%e3%83%bc%ef%bc%81%ef%bc%81301%e5%bd%a2%ef%bc%81/",
-      "fetched_at": "2026-10-25T07:48:52.087379+09:00"
-    },
-    {
-      "id": "d3c0a0689d8e0058",
-      "title": "鹿児島駅 開業125周年記念乗車券 発売",
-      "date": "2026-10-25",
-      "location": "鹿児島駅",
-      "description": "JR九州鹿児島支社は、「鹿児島駅開業125周年記念乗車券」を発売。乗車券2枚、台紙、お守りのセットで、発売額は2,525円（送料別）。発売期間は、2026年10月25日（日）10:00～11月20日（金）23:59。発売箇所は、ECサイト「",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.jrkyushu.co.jp/byarea/kagoshima/info/__icsFiles/afieldfile/2026/10/09/261009_1600.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087385+09:00"
-    },
     {
       "id": "1c736a281ffcc8b5",
       "title": "山電 親子QR1dayチケット 発売",
@@ -182,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.sanyo-railway.co.jp/railway/untin/festival-qr1day.html",
-      "fetched_at": "2026-10-25T07:48:52.087391+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059801+09:00"
     },
     {
       "id": "b917be8cba0c625a",
@@ -195,7 +26,72 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.usuitouge.com/bunkamura/events/3009/",
-      "fetched_at": "2026-10-25T07:48:52.087397+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059813+09:00"
+    },
+    {
+      "id": "65261755f7097ad0",
+      "title": "京都鉄道博物館 JR東所属鉄道クレーン車 特別展示",
+      "date": "2026-10-29",
+      "location": "京都鉄道博物館",
+      "description": "京都鉄道博物館は、 JR東日本所属の鉄道クレーン車（KRC810N）を特別展示。展示期間は、2026年10月29日（木）～11月2日（月）。展示場所は、本館1階「車両のしくみ／車両工場」エリア。11月1日（日）は、JR西日本 大阪工事事務所",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://prtimes.jp/main/html/rd/p/000002360.000095753.html",
+      "fetched_at": "2026-10-26T07:58:15.059818+09:00"
+    },
+    {
+      "id": "30f4b2b88cbf07c4",
+      "title": "IRいしかわ鉄道 目で観る刀の教科書展 記念1日フリーきっぷ 発売",
+      "date": "2026-10-29",
+      "location": "",
+      "description": "IRいしかわ鉄道は、倶利迦羅不動寺での「目で観る刀の教科書展」開催にあわせ、記念デザインの1日フリーきっぷを発売。金沢～倶利伽羅間が1日乗り放題。大人用のみの発売で、発売額は500円。発売期間は2026年10月29日（木）～11月4日（水）",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.ishikawa-railway.jp/news/1281",
+      "fetched_at": "2026-10-26T07:58:15.059823+09:00"
+    },
+    {
+      "id": "0290333f464c4eec",
+      "title": "ドクターイエロー 新大阪～新岩国間乗車・保守基地見学ツアー",
+      "date": "2026-10-30",
+      "location": "",
+      "description": "日本旅行は、事前申込制ツアーとして、「ドクターイエロー 体験乗車 新大阪→新岩国と新幹線線路のヒミツ発見！ 日帰り」を開催。旅行日は、2026年10月30日（金）。923形「ドクターイエロー」T5編成に乗車。乗車区間は、新大阪（13:30集",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261030d/",
+      "fetched_at": "2026-10-26T07:58:15.059827+09:00"
+    },
+    {
+      "id": "99e7f39ec75e82b8",
+      "title": "仙台市 PokemonGOワイルドエリア開催記念 地下鉄24時間券・36時間券 発売",
+      "date": "2026-10-30",
+      "location": "",
+      "description": "仙台市交通局は、「Pokemon GO ワイルドエリア：仙台・東北」開催記念デザインの「地下鉄24時間券」「地下鉄36時間券」を発売。大人用のみ発売のデジタルチケットで、地下鉄全線が乗り放題。発売額は、24時間券が700円、36時間券が1,",
+      "prefecture": "",
+      "city": "",
+      "themeId": "pokemon",
+      "source": "鉄道コム",
+      "url": "https://www.kotsu.city.sendai.jp/waribiki/jikanken/",
+      "fetched_at": "2026-10-26T07:58:15.059830+09:00"
+    },
+    {
+      "id": "b6990df27ef3cde9",
+      "title": "ドクターイエロー 新岩国～岡山間乗車・保守基地見学ツアー",
+      "date": "2026-10-30",
+      "location": "新岩国駅",
+      "description": "日本旅行は、事前申込制ツアーとして、「ドクターイエロー 体験乗車 新岩国→岡山と新幹線線路のヒミツ発見！ 日帰り」を開催。旅行日は、2026年10月30日（金）。集合場所は新岩国駅（16:00頃予定）。新岩国保守基地の見学後、923形「ドク",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.nta.co.jp/jrodekakenet/plan/202605_T520261030u/",
+      "fetched_at": "2026-10-26T07:58:15.059834+09:00"
     },
     {
       "id": "bb665a3bd0135b8c",
@@ -208,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nankai.co.jp/news/261002_2.html",
-      "fetched_at": "2026-10-25T07:48:52.087403+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059843+09:00"
     },
     {
       "id": "29061a9b3462a2b8",
@@ -221,7 +117,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.meitetsu.co.jp/plan/event/detail/1289189_8032.html",
-      "fetched_at": "2026-10-25T07:48:52.087409+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059847+09:00"
+    },
+    {
+      "id": "4f3e2947198f396b",
+      "title": "近鉄 楽 高安～五位堂間 乗車体験ツアー",
+      "date": "2026-10-31",
+      "location": "",
+      "description": "近畿日本鉄道は、「きんてつ鉄道まつり2026 in 五位堂・高安」の開催にあわせ、20000系「楽」による団体専用列車の乗車体験ツアーを開催。開催日は、2026年10月31日（土）、11月1日（日）。「楽」の運転区間は、高安（11:15発、",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://blog2.kintetsu.co.jp/ekichou/files/2026103101.pdf",
+      "fetched_at": "2026-10-26T07:58:15.059851+09:00"
     },
     {
       "id": "e80b4595136acd6f",
@@ -234,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.izukyu.co.jp/guide/event_detail.php?CN=435274",
-      "fetched_at": "2026-10-25T07:48:52.087415+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059855+09:00"
     },
     {
       "id": "e7c75dd3bfaa52a6",
@@ -247,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20261001_o02.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087422+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059858+09:00"
     },
     {
       "id": "66205c27e8f410ed",
@@ -260,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio.co.jp/news/update/news_release/news_release2026/pdf/nr20261009_untentaiken.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087429+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059861+09:00"
     },
     {
       "id": "a76aea0d77bcea7c",
@@ -273,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.osaka-monorail.co.jp/info/detail/935",
-      "fetched_at": "2026-10-25T07:48:52.087435+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059864+09:00"
     },
     {
       "id": "da48fe377104afd8",
@@ -286,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keikyu.co.jp/company/news/2026/20261005HP_26097RK.html",
-      "fetched_at": "2026-10-25T07:48:52.087441+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059867+09:00"
     },
     {
       "id": "dfe41aae18f30e72",
@@ -299,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261013_h01.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087448+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059870+09:00"
     },
     {
       "id": "921467dfa4a57ed6",
@@ -312,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/tochigi_j/20261015_t01.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087454+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059874+09:00"
     },
     {
       "id": "fe161e2fb9dc1d2f",
@@ -325,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.city.kawasaki.jp/saiwai/page/0000189699.html",
-      "fetched_at": "2026-10-25T07:48:52.087459+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059877+09:00"
     },
     {
       "id": "24b0407192d800be",
@@ -338,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261013_h01.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087465+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059880+09:00"
     },
     {
       "id": "ebc81df22ff49058",
@@ -351,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.usuitouge.com/bunkamura/events/2990/",
-      "fetched_at": "2026-10-25T07:48:52.087471+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059883+09:00"
     },
     {
       "id": "4ecd452eb74e48fa",
@@ -364,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://widgets.bokun.io/online-sales/9f45d152-5771-4466-8821-9a964830296c/experience/1321769",
-      "fetched_at": "2026-10-25T07:48:52.087477+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059886+09:00"
     },
     {
       "id": "742dfbd197ac800b",
@@ -377,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://matutetu.com/files/libs/6422/202610051141362297.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087483+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059889+09:00"
     },
     {
       "id": "395320539927989b",
@@ -390,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hankyu-hanshin.co.jp/release/2026/10/13974d2d9dac14373a8d5f638ba19a307b2082d9.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087488+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059892+09:00"
     },
     {
       "id": "f4102227b2c812f4",
@@ -403,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.iyotetsu-group.co.jp/whatsnew/press/2026/1001_r7le.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087495+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059895+09:00"
     },
     {
       "id": "738d46673a6b9243",
@@ -416,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28715",
-      "fetched_at": "2026-10-25T07:48:52.087501+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059898+09:00"
     },
     {
       "id": "4047b1e42fd6bda3",
@@ -429,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/newsrelease/detail/75710",
-      "fetched_at": "2026-10-25T07:48:52.087507+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059901+09:00"
     },
     {
       "id": "1aaea7b0045f6049",
@@ -442,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hokuso-railway.co.jp/newsrelease/detail/75609",
-      "fetched_at": "2026-10-25T07:48:52.087514+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059904+09:00"
     },
     {
       "id": "788b5e36a78a30ee",
@@ -455,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261016_h01%20.pdf",
-      "fetched_at": "2026-10-25T07:48:52.087520+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059907+09:00"
     },
     {
       "id": "bc2e2ed1824e07ed",
@@ -468,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.ishikawa-railway.jp/news/1268",
-      "fetched_at": "2026-10-25T07:48:52.087526+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059910+09:00"
     },
     {
       "id": "c26ff51110dfa70f",
@@ -481,7 +390,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28778",
-      "fetched_at": "2026-10-25T07:48:52.087532+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059913+09:00"
     },
     {
       "id": "9201d015b23e81e8",
@@ -494,7 +403,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/2026/225521.html",
-      "fetched_at": "2026-10-25T07:48:52.087539+09:00"
+      "fetched_at": "2026-10-26T07:58:15.059916+09:00"
     },
     {
       "id": "67d1426076126175",
@@ -507,7 +416,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kinurin.co.jp/topics/79/",
-      "fetched_at": "2026-10-25T07:48:52.087915+09:00"
+      "fetched_at": "2026-10-26T07:58:15.060176+09:00"
     }
   ]
 }
