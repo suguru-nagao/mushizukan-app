@@ -40,3 +40,8 @@ yarn-error.*
 # generated native folders
 /ios
 /android
+
+# jp_backtest data cache (J-Quants データは再配布不可のためコミットしない)
+jp_backtest/cache/
+jp_backtest/fetch.log
+__pycache__/
