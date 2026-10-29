@@ -713,7 +713,7 @@ function renderSignalList() {
   const tfs = ["D", "W", "M", "WL", "ML"].filter(t => SL_FAMS.some(([f]) => (D.mtf[f] || {})[t]));
   seg($("#sl-tf"), tfs.map(t => [t, TFN[t]]), SL.tf, v => { SL.tf = v; renderSignalList(); });
   const hasHold = ["D", "W", "M"].includes(SL.tf) && SL_FAMS.some(([f]) => ((D.mtf[f] || {})[SL.tf] || {}).hold);
-  const hopts = hasHold ? [["A", "次の1本"], ...(SL.tf === "D" ? [5, 10, 20, 30] : SL.tf === "W" ? [1, 2, 4, 6] : [1, 2, 3, 6]).map(h => [h, h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "")])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
+  const hopts = hasHold ? [["A", "次の1本"], ...(SL.tf === "D" ? [5, 10, 20, 30] : SL.tf === "W" ? [1, 2, 4, 6, 12] : [1, 2, 3, 6]).map(h => [h, h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "")])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
   if (!hopts.some(o => o[0] === SL.v)) SL.v = "A";
   seg($("#sl-v"), hopts, SL.v, v => { SL.v = v; renderSignalList(); });
   seg($("#sl-u"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], SL.u, v => { SL.u = v; renderSignalList(); });
