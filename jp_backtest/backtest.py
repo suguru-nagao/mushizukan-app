@@ -177,7 +177,7 @@ def run(P, split_date=None, horizons=HORIZONS, universe=None, pats=None):
     rets = forward_returns(P, horizons)
     liq = liquidity_bucket(P, universe=universe)
     mk = np.broadcast_to(
-        np.array([{"0111": 1, "0112": 2, "0113": 3}[m] for m in P["mkt"]]), P["O"].shape
+        np.array([{"0111": 1, "0112": 2, "0113": 3}.get(m, 0) for m in P["mkt"]]), P["O"].shape
     )
     if universe is not None:
         mk = np.where(universe, mk, 0)

@@ -1,0 +1,22 @@
+対象 4199 銘柄
+200/4199 {'ok': 137, 'none': 23, 'cached': 40, 'other': 0} 10s
+400/4199 {'ok': 314, 'none': 46, 'cached': 40, 'other': 0} 22s
+600/4199 {'ok': 492, 'none': 68, 'cached': 40, 'other': 0} 35s
+800/4199 {'ok': 678, 'none': 82, 'cached': 40, 'other': 0} 45s
+1000/4199 {'ok': 855, 'none': 105, 'cached': 40, 'other': 0} 56s
+1200/4199 {'ok': 1032, 'none': 128, 'cached': 40, 'other': 0} 66s
+1400/4199 {'ok': 1216, 'none': 144, 'cached': 40, 'other': 0} 77s
+1600/4199 {'ok': 1399, 'none': 161, 'cached': 40, 'other': 0} 87s
+1800/4199 {'ok': 1575, 'none': 185, 'cached': 40, 'other': 0} 99s
+2000/4199 {'ok': 1753, 'none': 207, 'cached': 40, 'other': 0} 109s
+2200/4199 {'ok': 1933, 'none': 227, 'cached': 40, 'other': 0} 120s
+2400/4199 {'ok': 2109, 'none': 251, 'cached': 40, 'other': 0} 132s
+2600/4199 {'ok': 2285, 'none': 275, 'cached': 40, 'other': 0} 144s
+2800/4199 {'ok': 2464, 'none': 296, 'cached': 40, 'other': 0} 158s
+3000/4199 {'ok': 2644, 'none': 316, 'cached': 40, 'other': 0} 168s
+3200/4199 {'ok': 2821, 'none': 339, 'cached': 40, 'other': 0} 180s
+3400/4199 {'ok': 3000, 'none': 360, 'cached': 40, 'other': 0} 193s
+3600/4199 {'ok': 3172, 'none': 388, 'cached': 40, 'other': 0} 207s
+3800/4199 {'ok': 3346, 'none': 414, 'cached': 40, 'other': 0} 220s
+4000/4199 {'ok': 3529, 'none': 431, 'cached': 40, 'other': 0} 231s
+done {'ok': 3700, 'none': 459, 'cached': 40, 'other': 0}

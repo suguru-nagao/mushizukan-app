@@ -18,13 +18,13 @@ import timeframe as tfm
 from chart_patterns import detect_charts
 from patterns import detect
 from tech_signals import detect_tech
-from zones import TF_PARAMS, detect_zones
+from zones import SR_PARAMS, TF_PARAMS, detect_zones
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 
-def save(df, fam, tf, kind):
-    df.to_csv(os.path.join(HERE, f"results_{fam}_{tf}_{kind}.csv"), index=False, encoding="utf-8-sig")
+def save(df, fam, tag, kind):
+    df.to_csv(os.path.join(HERE, f"results_{fam}_{tag}_{kind}.csv"), index=False, encoding="utf-8-sig")
 
 
 def signals(P, fam, tf):
@@ -35,23 +35,24 @@ def signals(P, fam, tf):
     if fam == "tech":
         return detect_tech(P["O"], P["H"], P["L"], P["C"])
     if fam == "zone":
-        return detect_zones(P["H"], P["L"], P["C"], P["Vo"], *TF_PARAMS[tf])
+        return detect_zones(P["H"], P["L"], P["C"], P["Vo"], *TF_PARAMS[tf], sr=SR_PARAMS[tf])
     raise ValueError(fam)
 
 
-def evaluate(P, U, sigs, fam, tf, main=True, var=True, matched=True):
+def evaluate(P, U, sigs, fam, tf, main=True, var=True, matched=True, tag=None):
+    tag = tag or tf
     hz, gh, ks = tfm.HORIZONS[tf], tfm.GH[tf], tfm.KS[tf]
     split = len(P["dates"]) // 2
     if main:
         m, _ = bt.run(P, horizons=hz, pats=sigs)
-        save(m, fam, tf, "main")
+        save(m, fam, tag, "main")
         mm, _ = bt.run(P, universe=U, horizons=hz, pats=sigs)
-        save(mm, fam, tf, "margin_main")
+        save(mm, fam, tag, "margin_main")
     if var:
-        save(pd.concat([cc.variants_table(P, None, "全銘柄", sigs, split, gh), cc.variants_table(P, U, "貸借のみ", sigs, split, gh)], ignore_index=True), fam, tf, "variants")
+        save(pd.concat([cc.variants_table(P, None, "全銘柄", sigs, split, gh), cc.variants_table(P, U, "貸借のみ", sigs, split, gh)], ignore_index=True), fam, tag, "variants")
     if matched:
         parts = [cm.matched_table(P, sigs, None, "全銘柄", k, gh) for k in ks] + [cm.matched_table(P, sigs, U, "貸借のみ", k, gh) for k in ks]
-        save(pd.concat(parts, ignore_index=True), fam, tf, "matched")
+        save(pd.concat(parts, ignore_index=True), fam, tag, "matched")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,4 @@
+[zone:WL] bars=1397 stocks=3712 signals=24 events=3283420 detect=475s
+[zone:WL] done in 595s
+[zone:ML] bars=320 stocks=3712 signals=24 events=880554 detect=92s
+[zone:ML] done in 115s

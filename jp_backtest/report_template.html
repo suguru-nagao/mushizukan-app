@@ -437,28 +437,36 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
   <!-- 抵抗帯 -->
   <section id="p-zone" class="panel" hidden>
     <div class="card">
-      <h2>抵抗帯(価格帯別出来高の厚い帯)と新高値・新安値</h2>
-      <p class="lead">過去に出来高が集中した価格帯は、そこで買った人の「戻ったら売りたい」売り物が出る抵抗帯(現在値より下なら支持帯)になる、とされます。日足・週足・月足それぞれで、帯に株価が届いたとき・抜けたとき、および新高値・新安値を更新したときの成績を検証しました。</p>
+      <h2>抵抗帯・サポレジライン・新高値/新安値</h2>
+      <p class="lead">株価が上がりにくい(下がりにくい)価格のめやすを、2つの方法で作って比べました。①<b>価格帯別出来高</b>: 過去に出来高が集中した価格帯は、そこで買った人の「戻ったら売りたい」売り物が出る抵抗帯(現在値より下なら支持帯)になる、という考え方。②<b>サポート・レジスタンスライン</b>: チャート上で、高値・安値の折り返し点が同じ価格に何度も集まった水平線を、抵抗線・支持線とする考え方。そこで、「出来高だけ」「ラインだけ」「両方が重なるとき」の3通りで、帯・線に株価が届いたとき・抜けたとき、および新高値・新安値を更新したときの成績を、日足・週足・月足で検証しました。</p>
       <div class="card verdict" style="gap:8px">
-        <p>抵抗帯でも、<em>コストを引いて安定して利益が残る形は見つかりませんでした</em>。日足では、小型株で抵抗帯に届くと跳ね返される傾向は統計的にありますが(5日で +20bp)、実コストを入れると消えます。上抜けた買いは、小型株で<em>逆に動きます</em>(翌日 -49bp)。新安値の更新(売り)は小型株で +24bp(t=7.8)と最も安定していますが、1ティックのスプレッドで消える大きさです。</p>
+        <p>3つの考え方を比べた結果、<em>効いているのは価格帯別出来高のほうで、サポレジラインだけでは効果が出ません</em>。ラインだけの検定は、日足で140件中、サインどおり1件・逆向き18件でした。特に「抵抗線の上抜け(買い)」は、小型株で翌日 -31bp(t=-14)と逆に動きます(大きく上げた日の反動で、同じ騰落率の日と比べても改善しません)。</p>
+        <p>出来高の帯とラインが<em>重なったときだけ</em>は、日足の小型株で、抵抗帯に届くと跳ね返される(売り +9bp、t=6.1)、支持帯に届くと跳ね返す(買い +7bp、t=6.1)という、両方向の効果が残ります。同じ騰落率の日と比べても +5bp(t=3.6〜4.3)残りますが、<em>1日あたり10bp未満で、往復コスト20bpを引くと消えます</em>。出来高の帯だけ・ラインだけの集合は、これより弱くなります。長期データ(2000年〜)の週足でも、ラインだけは逆向きが6件、重なりは有意が4件(サインどおり2・逆向き2)で、売買に使える形は見つかりませんでした。</p>
       </div>
+      <div class="sec">3つの考え方と、その切り分け</div>
+      <div class="tw"><table class="gt" id="zoneapp"></table></div>
       <div class="sec">どう作ったか(仮定)</div>
       <div class="tw"><table class="gt" id="zonedef"></table></div>
       <ul class="pts">
-        <li>価格帯別出来高は、直近の窓の中の各足の「典型価格(高値+安値+終値の平均)」に、その足の出来高を割り当てて作ります。価格帯は、価格に固定した対数の格子(1本 約1.5%)です。</li>
-        <li>現在値より上で最も出来高が厚い帯(価格が通った範囲の平均の2倍以上)が抵抗帯、下の帯が支持帯です。帯は、新しい帯ができるか、終値で抜けられるまで保ちます。判定は、その時点で分かるデータだけで行います(先読みなし)。</li>
-        <li>名前にマウスを重ねる(スマホは押す)と、帯・価格帯別出来高・シグナル日の模式図が出ます。</li>
+        <li><b>価格帯別出来高</b>: 直近の窓の中の各足の「典型価格(高値+安値+終値の平均)」に、その足の出来高を割り当てて作ります。価格帯は、価格に固定した対数の格子(1本 約1.5%)です。現在値より上で最も出来高が厚い帯(価格が通った範囲の平均の2倍以上)が抵抗帯、下の帯が支持帯です。</li>
+        <li><b>サポレジライン</b>: 折り返し点(前後K本で最も高い・安い足。右側のK本が過ぎてから確定)の価格を、1.5%以内でまとめ、2回以上触れた価格を水平線とします。線は中心価格の±0.75%の細い帯で、現在値より上で最も近いものが抵抗線、下が支持線です。</li>
+        <li><b>重なり</b>: 出来高の厚い帯の中に、サポレジラインがあるとき。両方の根拠がそろった帯です。<b>出来高のみ</b>は、帯があってもラインが重ならないもの、<b>線のみ</b>は、ラインがあっても出来高の帯が重ならないものです。これで、どちらの根拠が効いているかを切り分けます。</li>
+        <li>帯・線は、新しいものができるか、終値で抜けられるまで保ちます。判定は、その時点で分かるデータだけで行います(先読みなし)。名前にマウスを重ねる(スマホは押す)と、模式図が出ます。</li>
       </ul>
 
-      <div class="sec">時間軸ごとの有意な結果の数</div>
-      <div id="zone-tfc"></div>
-      <div class="sec">シグナル別の結果(時間軸を選べます)</div>
-      <div id="zone-heat"></div>
-      <p class="note">各セルは、そのシグナルの向き(買い/売り)で評価した超過リターン(bp)。月足は、帯を作るのに36か月分のデータが要るため、シグナルが出るのは直近の約2年分だけです。独立した期間が数個しかなく、t値は参考値です。</p>
+      <div class="sec">考え方ごとの比較: 有意な結果の数</div>
+      <p class="lead">5つの集合(従来の出来高だけ、ラインだけ、重なり、出来高のみ、線のみ)と、時間軸ごとの、サインどおり/逆向きに有意だった結果の数です。</p>
+      <div id="zone-cmp"></div>
+
+      <div class="sec">考え方を選んで、シグナル別の結果を見る</div>
+      <div class="ctl"><label>考え方</label><div class="seg" id="zsel-app" role="group"></div></div>
+      <div id="zsel-tfc"></div>
+      <div id="zsel-heat"></div>
+      <p class="note">各セルは、そのシグナルの向き(買い/売り)で評価した超過リターン(bp)。月足は、帯・線を作るのに数年分のデータが要るため、5年のデータでは、シグナルが出るのは直近の約2年分だけです。</p>
 
       <div class="sec">同じ騰落率の日(週・月)と比べると</div>
       <p class="lead">抵抗帯の上抜けや新高値は、大きく上昇した日に出ます。シグナルが出た足の騰落率が同じ水準の「全銘柄・全期間」と比べて、帯・新高値に独自の効果が残るかを見ます。</p>
-      <div id="zone-match"></div>
+      <div id="zsel-match"></div>
 
       <div class="sec">ショートの実コストを入れると(日足・貸借)</div>
       <div class="ctl"><label>保有</label><div class="seg" id="zcseg" role="group"></div></div>
@@ -1213,18 +1221,24 @@ function renderTechCost() {
 }
 
 /* ---- 共通: 時間軸(日足・週足・月足)つきの結果表 ---- */
-const TFN = { D: "日足", W: "週足", M: "月足" }, UNIT = { D: "日", W: "週", M: "か月" };
-const HZS = { D: [0, 1, 2, 3, 5, 10, 20], W: [0, 1, 2, 4, 8, 13], M: [0, 1, 2, 3, 6] };
-const GHN = { D: 5, W: 4, M: 3 }, KSN = { D: [1, 5], W: [1, 4], M: [1, 3] };
-const hlab = (h, tf) => h === 0 ? { D: "日中のみ", W: "週内のみ", M: "月内のみ" }[tf] : h + UNIT[tf];
+const TFN = { D: "日足", W: "週足", WL: "週足(長期)", M: "月足", ML: "月足(長期)" }, UNIT = { D: "日", W: "週", WL: "週", M: "か月", ML: "か月" };
+const HZS = { D: [0, 1, 2, 3, 5, 10, 20], W: [0, 1, 2, 4, 8, 13], WL: [0, 1, 2, 4, 8, 13], M: [0, 1, 2, 3, 6], ML: [0, 1, 2, 3, 6] };
+const GHN = { D: 5, W: 4, WL: 4, M: 3, ML: 3 }, KSN = { D: [1, 5], W: [1, 4], WL: [1, 4], M: [1, 3], ML: [1, 3] };
+const hlab = (h, tf) => h === 0 ? { D: "日中のみ", W: "週内のみ", WL: "週内のみ", M: "月内のみ", ML: "月内のみ" }[tf] : h + UNIT[tf];
 const FAMS = {
   candle: { label: "パターン", order: () => ORDER, dirOf: p => dirOf(p), thr: 3.8, tfs: ["D", "W", "M"] },
   chart: { label: "パターン", order: () => CHART_ORDER, dirOf: p => cdirOf(p), thr: 3.8, tfs: ["D", "W"] },
   tech: { label: "シグナル", order: () => TECH_ORDER, dirOf: p => tdirOf(p), thr: 3.9, tfs: ["D", "W", "M"] },
   zone: { label: "シグナル", order: () => ZONE_ORDER, dirOf: p => zdirOf(p), thr: 3.8, tfs: ["D", "W", "M"] },
+  zline: { thr: 3.8 }, zboth: { thr: 3.8 }, zvonly: { thr: 3.8 }, zlonly: { thr: 3.8 },
+  zsel: { label: "シグナル", order: () => ZONE_BY[ZA.fam], dirOf: p => ZDIR[p], thr: 3.8, tfs: ["D", "W", "M"] },
 };
 const ST = {}, SM = {};
-const famData = (fam, tf) => (D.mtf[fam] || {})[tf];
+const ZA = { fam: "zone" };
+const famData = (fam, tf) => (D.mtf[fam === "zsel" ? ZA.fam : fam] || {})[tf];
+const famTfs = fam => ["D", "W", "WL", "M", "ML"].filter(t => famData(fam, t));
+const tfNote = tf => ({ M: "月足は、1銘柄あたり約59本しかなく、移動平均や帯を作る期間を除くと、シグナルが出るのは直近の約2年分です。独立した期間が数個で、t値は参考値です。", W: "週足は約260本(5年)です。日足より1銘柄あたりのシグナル数が少なく、偶然の当たりが混ざりやすくなります。",
+  WL: "長期データ(Yahoo Finance、2000年〜)の週足です。上場廃止になった銘柄が含まれない生存者バイアスがあります。貸借の区分は現在の指定で代用しているため、先読みを含みます(「全銘柄」を主に見てください)。", ML: "長期データ(Yahoo Finance、2000年〜)の月足(約320本)です。上場廃止銘柄が含まれない生存者バイアスがあります。貸借の区分は現在の指定で代用しているため、先読みを含みます(「全銘柄」を主に見てください)。" })[tf] || "";
 function ensureSkeleton(host, fam, kind) {
   if (host.dataset.ready) return;
   host.dataset.ready = "1";
@@ -1237,7 +1251,7 @@ function renderHeat(fam) {
   const F = FAMS[fam], host = $("#" + fam + "-heat"); ensureSkeleton(host, fam, "heat");
   const st = ST[fam] || (ST[fam] = { tf: "D", h: 1, mode: "m", u: "all", sel: null });
   const redo = () => renderHeat(fam);
-  seg($("#" + fam + "-tf"), F.tfs.map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; if (!HZS[v].includes(st.h)) st.h = 1; st.sel = null; redo(); });
+  seg($("#" + fam + "-tf"), famTfs(fam).map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; if (!HZS[v].includes(st.h)) st.h = 1; st.sel = null; redo(); });
   seg($("#" + fam + "-h"), HZS[st.tf].map(h => [h, hlab(h, st.tf)]), st.h, v => { st.h = v; redo(); });
   seg($("#" + fam + "-m"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], st.mode, v => { st.mode = v; redo(); });
   seg($("#" + fam + "-u"), [["all", "全銘柄"], ["mar", "貸借のみ"]], st.u, v => { st.u = v; redo(); });
@@ -1257,7 +1271,7 @@ function renderHeat(fam) {
   $("#" + fam + "-hm").innerHTML = html + "</tbody>";
   $("#" + fam + "-hm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { st.sel = { p: td.dataset.p, q: +td.dataset.q }; redo(); });
   host.querySelectorAll(".tfwarn").forEach(e => e.remove());
-  if (st.tf !== "D") host.insertAdjacentHTML("beforeend", `<p class="note tfwarn">${st.tf === "M" ? "月足は、1銘柄あたり約59本しかなく、移動平均や帯を作る期間を除くと、シグナルが出るのは直近の約2年分です。独立した期間が数個で、t値は参考値です。" : "週足は約260本(5年)です。日足より1銘柄あたりのシグナル数が少なく、偶然の当たりが混ざりやすくなります。"}</p>`);
+  if (st.tf !== "D") host.insertAdjacentHTML("beforeend", `<p class="note tfwarn">${tfNote(st.tf)}</p>`);
   const box = $("#" + fam + "-detail");
   if (!st.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率などが表示されます。${TFN[st.tf]}の1本ごとに、次の足の始値で入ったときの結果です。</p>`; return; }
   const r = idx[st.sel.p + "|" + st.sel.q + "|" + st.h]; if (!r) { box.innerHTML = ""; return; }
@@ -1267,7 +1281,7 @@ function renderMatch(fam) {
   const F = FAMS[fam], host = $("#" + fam + "-match"); ensureSkeleton(host, fam, "match");
   const st = SM[fam] || (SM[fam] = { tf: "D", k: 1, v: "G", z: SIZES[0], u: "全銘柄" });
   const redo = () => renderMatch(fam);
-  seg($("#" + fam + "-mtf"), F.tfs.map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; st.k = KSN[v][0]; redo(); });
+  seg($("#" + fam + "-mtf"), famTfs(fam).map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; st.k = KSN[v][0]; redo(); });
   if (!KSN[st.tf].includes(st.k)) st.k = KSN[st.tf][0];
   seg($("#" + fam + "-mk"), KSN[st.tf].map(k => [k, k + UNIT[st.tf] + "の騰落率"]), st.k, v => { st.k = v; redo(); });
   seg($("#" + fam + "-mv"), [["A", "次の1本"], ["G", GHN[st.tf] + UNIT[st.tf] + "保有"]], st.v, v => { st.v = v; redo(); });
@@ -1282,7 +1296,7 @@ function renderTfc(fam) {
   const F = FAMS[fam];
   const cnt = rows => { const g = rows.filter(r => r.t >= F.thr).length, b = rows.filter(r => r.t <= -F.thr).length, big = rows.filter(r => r.q === 5 && Math.abs(r.t) >= F.thr).length; return { g, b, big, n: rows.length }; };
   let html = `<thead><tr><th>時間軸</th><th>検定数</th><th>全銘柄: サインどおり</th><th>全銘柄: 逆向き</th><th>貸借のみ: サインどおり</th><th>貸借のみ: 逆向き</th><th>最大分位(5)で有意</th></tr></thead><tbody>`;
-  F.tfs.forEach(t => {
+  famTfs(fam).forEach(t => {
     const fd = famData(fam, t); if (!fd) return;
     const a = cnt(fd.main), m = cnt(fd.mm);
     html += `<tr><td class="k">${TFN[t]}</td><td>${a.n}</td><td class="${a.g ? "wp" : "c0"}">${a.g}</td><td class="${a.b ? "wn" : "c0"}">${a.b}</td><td class="${m.g ? "wp" : "c0"}">${m.g}</td><td class="${m.b ? "wn" : "c0"}">${m.b}</td><td class="${a.big ? "wp" : "c0"}">${a.big}</td></tr>`;
@@ -1294,7 +1308,11 @@ function renderTfc(fam) {
 const ZONE_ORDER = ["抵抗帯に到達(跳ね返される)","抵抗帯を上抜け","支持帯に到達(跳ね返す)","支持帯を下抜け","新高値更新(長期)","新高値更新(短期)","新安値更新(長期)","新安値更新(短期)"];
 const ZDIR = { "抵抗帯に到達(跳ね返される)": "売り", "抵抗帯を上抜け": "買い", "支持帯に到達(跳ね返す)": "買い", "支持帯を下抜け": "売り", "新高値更新(長期)": "買い", "新高値更新(短期)": "買い", "新安値更新(長期)": "売り", "新安値更新(短期)": "売り" };
 const zdirOf = p => ZDIR[p];
-function zoneMir(sp) { const m = 200; return { ...sp, pts: sp.pts.map(q => [q[0], m - q[1]]), band: sp.band ? [m - sp.band[1], m - sp.band[0]] : null, line: sp.line != null ? m - sp.line : null, role: sp.role === "抵抗帯" ? "支持帯" : sp.role }; }
+function zoneMir(sp) {
+  const m = 200, f = y => m - y, rl = { "抵抗帯": "支持帯", "抵抗線": "支持線", "抵抗": "支持" };
+  return { ...sp, pts: sp.pts.map(q => [q[0], f(q[1])]), band: sp.band ? [f(sp.band[1]), f(sp.band[0])] : null, line: sp.line != null ? f(sp.line) : null,
+    lineBand: sp.lineBand ? [f(sp.lineBand[1]), f(sp.lineBand[0])] : null, touches: sp.touches ? sp.touches.map(q => [q[0], f(q[1])]) : null, role: rl[sp.role] || sp.role };
+}
 const ZP = [[0,96],[8,100],[16,95],[24,99],[32,94],[40,98.5],[48,101.5]];
 const ZS = {};
 ZS["抵抗帯に到達(跳ね返される)"] = { pts: [...ZP, [56,104.2],[62,101.8],[70,98.8]], band: [103.5,106.5], ev: 7, evl: "到達", role: "抵抗帯" };
@@ -1306,24 +1324,32 @@ ZS["新高値更新(短期)"] = ZS["新高値更新(長期)"];
 ZS["新安値更新(長期)"] = zoneMir(ZS["新高値更新(長期)"]); ZS["新安値更新(短期)"] = ZS["新安値更新(長期)"];
 function zoneSvg(sp) {
   const W = 320, H = 168, px0 = 14, px1 = 228, pr0 = 240, pr1 = 308, top = 14, bot = 26;
-  const xs = sp.pts.map(q => q[0]), ys = sp.pts.map(q => q[1]).concat(sp.band || [], sp.line != null ? [sp.line] : []);
+  const xs = sp.pts.map(q => q[0]), ys = sp.pts.map(q => q[1]).concat(sp.band || [], sp.lineBand || [], sp.line != null ? [sp.line] : []);
   const x0 = Math.min(...xs), x1 = Math.max(...xs), lo = Math.min(...ys) - 1.5, hi = Math.max(...ys) + 1.5;
   const X = x => px0 + (x - x0) / (x1 - x0) * (px1 - px0), Y = y => top + (1 - (y - lo) / (hi - lo)) * (H - top - bot);
   let g = "";
   if (sp.band) {
     g += `<rect x="${px0}" y="${Y(sp.band[1])}" width="${px1 - px0}" height="${Y(sp.band[0]) - Y(sp.band[1])}" fill="var(--warn)" opacity=".2"/><text x="${px0 + 3}" y="${Y(sp.band[1]) - 3}" style="fill:var(--warn);font-weight:700">${sp.role}</text>`;
-    const nb = 20, c = (sp.band[0] + sp.band[1]) / 2, wd = (sp.band[1] - sp.band[0]) / 2 + .3;
-    for (let i = 0; i < nb; i++) {
-      const yl = lo + (hi - lo) * i / nb, yh = lo + (hi - lo) * (i + 1) / nb, ym = (yl + yh) / 2, v = .22 + .12 * Math.sin(ym * 1.7) + 1.5 * Math.exp(-(((ym - c) / wd) ** 2));
-      g += `<rect x="${pr1 - v / 1.9 * (pr1 - pr0)}" y="${Y(yh) + 1}" width="${v / 1.9 * (pr1 - pr0)}" height="${Y(yl) - Y(yh) - 2}" fill="${Math.abs(ym - c) < wd ? "var(--warn)" : "var(--dim)"}" opacity="${Math.abs(ym - c) < wd ? .85 : .4}"/>`;
+    if (sp.prof !== false) {
+      const nb = 20, c = (sp.band[0] + sp.band[1]) / 2, wd = (sp.band[1] - sp.band[0]) / 2 + .3;
+      for (let i = 0; i < nb; i++) {
+        const yl = lo + (hi - lo) * i / nb, yh = lo + (hi - lo) * (i + 1) / nb, ym = (yl + yh) / 2, v = .22 + .12 * Math.sin(ym * 1.7) + 1.5 * Math.exp(-(((ym - c) / wd) ** 2));
+        g += `<rect x="${pr1 - v / 1.9 * (pr1 - pr0)}" y="${Y(yh) + 1}" width="${v / 1.9 * (pr1 - pr0)}" height="${Y(yl) - Y(yh) - 2}" fill="${Math.abs(ym - c) < wd ? "var(--warn)" : "var(--dim)"}" opacity="${Math.abs(ym - c) < wd ? .85 : .4}"/>`;
+      }
+      g += `<text x="${(pr0 + pr1) / 2}" y="${H - 8}" text-anchor="middle">価格帯別出来高</text>`;
     }
-    g += `<text x="${(pr0 + pr1) / 2}" y="${H - 8}" text-anchor="middle">価格帯別出来高</text>`;
   }
+  if (sp.lineBand) {
+    g += `<rect x="${px0}" y="${Y(sp.lineBand[1])}" width="${px1 - px0}" height="${Math.max(2.5, Y(sp.lineBand[0]) - Y(sp.lineBand[1]))}" fill="var(--accent)" opacity=".5"/>`;
+    g += `<text x="${px1 - 3}" y="${Y(sp.lineBand[1]) - 3}" text-anchor="end" style="fill:var(--accent);font-weight:700">${sp.role && sp.role.endsWith("線") ? sp.role : "ライン"}</text>`;
+  }
+  (sp.touches || []).forEach(q => { g += `<circle cx="${X(q[0])}" cy="${Y(q[1])}" r="3.6" fill="none" stroke="var(--accent)" stroke-width="1.8"/>`; });
+  if (sp.touches && sp.touches.length && sp.prof === false) g += `<text x="${(pr0 + pr1) / 2}" y="${H - 8}" text-anchor="middle" style="fill:var(--accent)">○=折り返し点</text>`;
   if (sp.line != null) g += `<line x1="${px0}" x2="${px1}" y1="${Y(sp.line)}" y2="${Y(sp.line)}" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="5 4"/><text x="${px0 + 3}" y="${Y(sp.line) - 3}" style="fill:var(--warn);font-weight:700">直前N本の${sp.line > 100 ? "高値" : "安値"}</text>`;
   g += `<polyline fill="none" stroke="var(--fg)" stroke-width="2.2" stroke-linejoin="round" points="${sp.pts.map(q => X(q[0]) + "," + Y(q[1])).join(" ")}"/>`;
-  const e = sp.pts[sp.ev];
-  g += `<circle cx="${X(e[0])}" cy="${Y(e[1])}" r="4.6" fill="var(--good)"/><text x="${X(e[0]) - 6}" y="${Y(e[1]) + (sp.role === "支持帯" ? 14 : -8)}" text-anchor="end" style="fill:var(--good);font-weight:700">${sp.evl}(シグナル日)</text>`;
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="抵抗帯の模式図">${g}</svg>`;
+  const e = sp.pts[sp.ev], below = (sp.role || "").startsWith("支持");
+  g += `<circle cx="${X(e[0])}" cy="${Y(e[1])}" r="4.6" fill="var(--good)"/><text x="${X(e[0]) - 6}" y="${Y(e[1]) + (below ? 14 : -8)}" text-anchor="end" style="fill:var(--good);font-weight:700">${sp.evl}(シグナル日)</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="抵抗帯・ラインの模式図">${g}</svg>`;
 }
 const ZTXT = {
   "抵抗帯に到達(跳ね返される)": ["過去に出来高が集中した価格帯(抵抗帯)に株価が届き、その上端を超えられずに引けた日。戻り売りが出やすいとされる。", ["価格帯別出来高で、現在値より上で最も厚い帯(平均の2倍以上)=抵抗帯", "高値が抵抗帯の下端に初めて届く", "終値は抵抗帯の上端を超えない"]],
@@ -1343,6 +1369,42 @@ const ZRES = {
   "新高値更新(長期)": "日足・小型株の買いは、素では +0.4bp(t=0.1)。同じ騰落率の日と比べると +14.7bp(t=5.4)上回る",
 };
 const ZTIPS = {}; ZONE_ORDER.forEach(k => { ZTIPS[k] = 1; });
+
+/* ---- サポレジライン・重なり: 模式図と文言 ---- */
+const ZONE_APPS = [["zone", "出来高だけ(従来)"], ["zline", "ラインだけ"], ["zboth", "重なり"], ["zvonly", "出来高のみ"], ["zlonly", "線のみ"]];
+const ZSETS = { zline: ["線: ", "線"], zboth: ["重なり: ", "帯"], zvonly: ["出来高のみ: ", "帯"], zlonly: ["線のみ: ", "線"] };
+const ZEV = ["{}に到達(跳ね返される)", "{}を上抜け", "{}に到達(跳ね返す)", "{}を下抜け"];
+const ZONE_BY = { zone: ZONE_ORDER };
+Object.entries(ZSETS).forEach(([f, [pre, unit]]) => { ZONE_BY[f] = ZEV.map((e, j) => pre + e.replace("{}", (j < 2 ? "抵抗" : "支持") + unit)); });
+const APP_ORDER = ZONE_BY;
+const zdirOf2 = p => /抵抗.*到達/.test(p) ? "売り" : /抵抗.*上抜け/.test(p) ? "買い" : /支持.*到達/.test(p) ? "買い" : /支持.*下抜け/.test(p) ? "売り" : ZDIR[p];
+const LP = [[0,98],[8,105],[16,99],[24,105],[32,98],[40,104.8],[48,100]], TCH = [[8,105],[24,105],[40,104.8]];
+const zsp = {
+  線: [{ pts: [...LP, [56,105],[62,102],[70,99]], lineBand: [104.6,105.4], touches: TCH, ev: 7, evl: "到達", role: "抵抗線", prof: false }, { pts: [...LP, [56,104.5],[64,107.5],[72,110]], lineBand: [104.6,105.4], touches: TCH, ev: 8, evl: "上抜け", role: "抵抗線", prof: false }],
+  重なり: [{ pts: [...LP, [56,105],[62,102],[70,99]], band: [103.5,106.5], lineBand: [104.6,105.4], touches: TCH, ev: 7, evl: "到達", role: "抵抗帯" }, { pts: [...LP, [56,104.5],[64,107.5],[72,110]], band: [103.5,106.5], lineBand: [104.6,105.4], touches: TCH, ev: 8, evl: "上抜け", role: "抵抗帯" }],
+};
+const zdesc = {
+  線: ["チャート上で、高値・安値の折り返し点が同じ価格に2回以上集まった水平線(抵抗線)に株価が届き、上端を超えられずに引けた日。", "終値が抵抗線の上端を超えた日。線を突破したとされる。", "折り返し点が集まった水平線(支持線)に株価が届き、下端を割らずに引けた日。", "終値が支持線の下端を割った日。線を割り込んだとされる。"],
+  重なり: ["出来高の厚い帯の中に、サポレジラインがある抵抗(両方の根拠がそろった抵抗)に株価が届き、上端を超えられずに引けた日。", "終値が、両方の根拠がそろった抵抗帯の上端を超えた日。", "出来高の厚い帯の中にサポレジラインがある支持に株価が届き、下端を割らずに引けた日。", "終値が、両方の根拠がそろった支持帯の下端を割った日。"],
+  出来高のみ: ["出来高の厚い帯はあるが、その中にサポレジラインがない抵抗帯に届いて跳ね返された日。出来高だけが根拠。", "ラインが重ならない出来高の帯の上端を、終値で超えた日。", "出来高の厚い支持帯(ラインは重ならない)に届き、割らずに引けた日。", "ラインが重ならない出来高の支持帯を、終値で割った日。"],
+  線のみ: ["サポレジラインはあるが、そこに出来高の厚い帯が重ならない抵抗線に届いて跳ね返された日。ラインだけが根拠。", "出来高の帯が重ならない抵抗線の上端を、終値で超えた日。", "出来高の帯が重ならない支持線に届き、割らずに引けた日。", "出来高の帯が重ならない支持線の下端を、終値で割った日。"],
+};
+const zcond = {
+  線: [["直近の折り返し点(前後K本の高値・安値)を、1.5%以内でまとめ、2回以上触れた価格をラインとする", "現在値より上で最も近いラインが抵抗線(中心価格の±0.75%の帯)", "高値が帯の下端に初めて届く", "終値は帯の上端を超えない"], ["ラインの作り方は同じ", "終値が抵抗線の帯の上端を初めて超える(前日は超えていない)"], ["ラインの作り方は同じ", "現在値より下で最も近いラインが支持線", "安値が帯の上端に初めて届く", "終値は帯の下端を割らない"], ["ラインの作り方は同じ", "終値が支持線の帯の下端を初めて割る(前日は割っていない)"]],
+  重なり: [["価格帯別出来高の帯(現在値より上で最も厚い)の中に、サポレジラインの帯が重なる", "高値が帯の下端に初めて届く", "終値は帯の上端を超えない"], ["重なる帯の上端を、終値が初めて超える"], ["出来高の帯(現在値より下)の中に、サポレジラインの帯が重なる", "安値が帯の上端に初めて届く", "終値は帯の下端を割らない"], ["重なる帯の下端を、終値が初めて割る"]],
+  出来高のみ: [["価格帯別出来高の厚い帯がある", "サポレジラインが重ならない", "高値が帯の下端に初めて届き、終値は上端を超えない"], ["帯の上端を終値が初めて超える"], ["下側の出来高の帯があり、ラインが重ならない", "安値が帯の上端に初めて届き、終値は下端を割らない"], ["帯の下端を終値が初めて割る"]],
+  線のみ: [["サポレジラインがある", "価格帯別出来高の帯が重ならない", "高値が帯の下端に初めて届き、終値は上端を超えない"], ["帯の上端を終値が初めて超える"], ["下側のサポレジラインがあり、出来高の帯が重ならない", "安値が帯の上端に初めて届き、終値は下端を割らない"], ["帯の下端を終値が初めて割る"]],
+};
+Object.entries(ZSETS).forEach(([f, [pre, unit]]) => {
+  const kind = pre.replace(": ", "");
+  ZONE_BY[f].forEach((name, j) => {
+    const up = j < 2, base = (kind === "線" || kind === "重なり") ? zsp[kind][j % 2] : (kind === "出来高のみ" ? { ...ZS[ZONE_ORDER[j]] } : { ...zsp.線[j % 2], role: "抵抗線" });
+    ZS[name] = j < 2 ? base : zoneMir(base);
+    if (kind === "出来高のみ") ZS[name] = j < 2 ? { ...ZS[ZONE_ORDER[j]] } : { ...ZS[ZONE_ORDER[j]] };
+    ZTXT[name] = [zdesc[kind][j], zcond[kind][j]]; ZDIR[name] = zdirOf2(name); ZTIPS[name] = 1;
+  });
+});
+
 function zoneTip(key) {
   const [sum, cond] = ZTXT[key], d = zdirOf(key), res = ZRES[key];
   const tag = `<span class="tag ${d === "買い" ? "buy" : "sell"}" style="margin:0">教科書: ${d}</span>`;
@@ -1378,15 +1440,32 @@ function renderZoneCost() {
   $("#zcosttab").innerHTML = `<thead><tr><th>シグナル(ショート)</th><th>規模</th><th>件数</th><th>粗利</th><th>1ティックの比率</th><th>① 純損益(20bp固定)</th><th>② 純損益(1ティック+貸株料)</th><th>③ 純損益(2ティック+貸株料)</th></tr></thead><tbody>` +
     D.zcost.filter(r => r.h === ZC_ST.h).map(r => `<tr><td class="k">${nm(normN(r.s))}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">サイン:${r.d}</span></td><td>${r.z}</td><td>${r.n.toLocaleString()}</td><td>${f1(r.g)}</td><td>${r.tk.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2)}</tr>`).join("") + "</tbody>";
 }
-const ZDEF = [["日足", "120本(約半年)", "5本ごと", "250本(約1年) / 60本(約3か月)"], ["週足", "52本(1年)", "1本ごと", "52本 / 13本"], ["月足", "36本(3年)", "1本ごと", "12本 / 6本"]];
+const ZDEF = [["日足", "120本(約半年)", "5本ごと", "前後5本 / 直近250本(約1年)", "250本 / 60本"], ["週足", "52本(1年)", "1本ごと", "前後3本 / 直近104本(2年)", "52本 / 13本"], ["月足", "36本(3年)", "1本ごと", "前後2本 / 直近60本(5年)", "12本 / 6本"]];
 function renderZoneDef() {
-  $("#zonedef").innerHTML = `<thead><tr><th>時間軸</th><th>価格帯別出来高の窓</th><th>帯を作り直す間隔</th><th>新高値・新安値の長期 / 短期</th></tr></thead><tbody>` + ZDEF.map(r => `<tr><td class="k">${r[0]}</td><td style="text-align:left">${r[1]}</td><td style="text-align:left">${r[2]}</td><td style="text-align:left">${r[3]}</td></tr>`).join("") + "</tbody>";
+  $("#zonedef").innerHTML = `<thead><tr><th>時間軸</th><th>価格帯別出来高の窓</th><th>帯を作り直す間隔</th><th>ラインの折り返し点(判定幅 / 対象期間)</th><th>新高値・新安値の長期 / 短期</th></tr></thead><tbody>` + ZDEF.map(r => `<tr><td class="k">${r[0]}</td>${r.slice(1).map(x => `<td style="text-align:left">${x}</td>`).join("")}</tr>`).join("") + "</tbody>";
+}
+const ZAPP_DESC = { zone: ["出来高だけ(従来)", "価格帯別出来高の厚い帯だけで判断。ラインは見ない。", "出来高の帯"], zline: ["ラインだけ", "高値・安値の折り返し点が集まった水平線だけで判断。出来高は見ない。", "サポレジライン"], zboth: ["重なり", "出来高の厚い帯の中にラインがあるときだけ。両方の根拠がそろう。", "帯+ライン"], zvonly: ["出来高のみ", "出来高の帯があり、ラインは重ならないもの(重なりの裏返し)。", "帯−ライン"], zlonly: ["線のみ", "ラインがあり、出来高の帯は重ならないもの(重なりの裏返し)。", "ライン−帯"] };
+function renderZoneApp() {
+  $("#zoneapp").innerHTML = `<thead><tr><th>考え方</th><th>根拠</th><th>使う情報</th></tr></thead><tbody>` + ZONE_APPS.map(([f]) => `<tr><td class="k">${ZAPP_DESC[f][0]}</td><td style="text-align:left">${ZAPP_DESC[f][1]}</td><td style="text-align:left">${ZAPP_DESC[f][2]}</td></tr>`).join("") + "</tbody>";
+}
+function renderZoneCmp() {
+  const thr = 3.8; let html = `<thead><tr><th>考え方</th><th>時間軸</th><th>検定数</th><th>全銘柄: サインどおり</th><th>全銘柄: 逆向き</th><th>貸借のみ: サインどおり</th><th>貸借のみ: 逆向き</th></tr></thead><tbody>`;
+  ZONE_APPS.forEach(([f, lab]) => ["D", "W", "WL", "M", "ML"].forEach(t => {
+    const fd = (D.mtf[f] || {})[t]; if (!fd) return;
+    const cnt = rows => ({ g: rows.filter(r => r.t >= thr).length, b: rows.filter(r => r.t <= -thr).length, n: rows.length }), a = cnt(fd.main), m = cnt(fd.mm);
+    html += `<tr><td class="k">${lab}</td><td>${TFN[t]}</td><td>${a.n}</td><td class="${a.g ? "wp" : "c0"}">${a.g}</td><td class="${a.b ? "wn" : "c0"}">${a.b}</td><td class="${m.g ? "wp" : "c0"}">${m.g}</td><td class="${m.b ? "wn" : "c0"}">${m.b}</td></tr>`;
+  }));
+  $("#zone-cmp").innerHTML = `<div class="tw"><table>${html}</tbody></table></div>`;
+}
+function renderZoneSel() {
+  seg($("#zsel-app"), ZONE_APPS.filter(([f]) => D.mtf[f]).map(([f, l]) => [f, l]), ZA.fam, v => { ZA.fam = v; if (ST.zsel) ST.zsel.sel = null; renderZoneSel(); });
+  renderTfc("zsel"); renderHeat("zsel"); renderMatch("zsel");
 }
 const CF_ST = { tf: "月足", h: 1 };
 function renderTimeAxis() {
-  const fams = [["candle", "ローソク足"], ["chart", "チャートパターン"], ["tech", "テクニカル指標"], ["zone", "抵抗帯"]];
+  const fams = [["candle", "ローソク足"], ["chart", "チャートパターン"], ["tech", "テクニカル指標"], ["zone", "抵抗帯(出来高)"], ["zline", "抵抗帯(ライン)"], ["zboth", "抵抗帯(重なり)"]];
   let html = `<thead><tr><th>分析</th><th>時間軸</th><th>検定数</th><th>全銘柄: サインどおり</th><th>全銘柄: 逆向き</th><th>貸借のみ: サインどおり</th><th>貸借のみ: 逆向き</th></tr></thead><tbody>`;
-  fams.forEach(([f, lab]) => FAMS[f].tfs.forEach(t => {
+  fams.forEach(([f, lab]) => famTfs(f).forEach(t => {
     const fd = famData(f, t); if (!fd) return; const thr = FAMS[f].thr;
     const cnt = rows => ({ g: rows.filter(r => r.t >= thr).length, b: rows.filter(r => r.t <= -thr).length, n: rows.length });
     const a = cnt(fd.main), m = cnt(fd.mm);
@@ -1405,7 +1484,7 @@ function renderTimeAxis() {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderHeat("zone"); renderMatch("zone"); renderTfc("zone"); renderZoneCost(); renderTimeAxis();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderTimeAxis();
   showTab(location.hash.slice(1));
 })();
 </script>

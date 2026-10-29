@@ -136,21 +136,41 @@ def match_rows(df):
                          raw="素の超過bp", rt="素のt", adj="同じ騰落率との差bp", at="差のt"))
 
 
+ZPREF = [("zline", "線: "), ("zboth", "重なり: "), ("zvonly", "出来高のみ: "), ("zlonly", "線のみ: ")]
+
+
+def split_zone(d):
+    """抵抗帯の結果(main / mm / match)を、考え方ごとの分析(zone, zline, zboth, zvonly, zlonly)に、名前の接頭辞で分ける。"""
+    out = {}
+    for fam, pre in ZPREF:
+        out[fam] = {"main": [r for r in d["main"] if r["p"].startswith(pre)], "mm": [r for r in d["mm"] if r["p"].startswith(pre)],
+                    "match": [r for r in d["match"] if r["s"].startswith(pre)]}
+    pres = tuple(x for _, x in ZPREF)
+    out["zone"] = {"main": [r for r in d["main"] if not r["p"].startswith(pres)], "mm": [r for r in d["mm"] if not r["p"].startswith(pres)],
+                   "match": [r for r in d["match"] if not r["s"].startswith(pres)]}
+    return out
+
+
 def build_mtf():
-    """{分析: {時間軸: {main, mm, match}}}。日足の既存結果と、週足・月足(mtf_run.py)の結果をそろえる。"""
+    """{分析: {時間軸: {main, mm, match}}}。日足の既存結果と、週足・月足(mtf_run.py)、長期(WL/ML, long_run.py)の結果をそろえる。"""
     files = {
         ("candle", "D"): ("results_main.csv", "results_margin_main.csv", "results_candle_D_matched.csv"),
         ("chart", "D"): ("results_chart_main.csv", "results_chart_margin_main.csv", "results_chart_matched.csv"),
         ("tech", "D"): ("results_tech_main.csv", "results_tech_margin_main.csv", "results_tech_matched.csv"),
     }
     for fam in ("candle", "chart", "tech", "zone"):
-        for tf in ("D", "W", "M"):
+        for tf in ("D", "W", "M", "WL", "ML"):
             files.setdefault((fam, tf), (f"results_{fam}_{tf}_main.csv", f"results_{fam}_{tf}_margin_main.csv", f"results_{fam}_{tf}_matched.csv"))
     out = {}
     for (fam, tf), (fm, fmm, fx) in files.items():
         if not all(os.path.exists(os.path.join(HERE, x)) for x in (fm, fmm, fx)):
             continue
-        out.setdefault(fam, {})[tf] = {"main": main_rows(csv(fm)), "mm": main_rows(csv(fmm)), "match": match_rows(csv(fx))}
+        d = {"main": main_rows(csv(fm)), "mm": main_rows(csv(fmm)), "match": match_rows(csv(fx))}
+        if fam == "zone":
+            for f2, dd in split_zone(d).items():
+                out.setdefault(f2, {})[tf] = dd
+        else:
+            out.setdefault(fam, {})[tf] = d
     return out
 
 

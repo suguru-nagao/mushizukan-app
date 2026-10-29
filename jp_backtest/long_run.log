@@ -1,0 +1,12 @@
+[chart:WL] bars=1397 stocks=3712 signals=20 events=127544 detect=9s
+[chart:WL] done in 105s
+[chart:ML] bars=320 stocks=3712 signals=20 events=18150 detect=2s
+[chart:ML] done in 20s
+[candle:WL] bars=1397 stocks=3712 signals=18 events=2677181 detect=4s
+[candle:WL] done in 109s
+[candle:ML] bars=320 stocks=3712 signals=18 events=611405 detect=0s
+[candle:ML] done in 20s
+[tech:WL] bars=1397 stocks=3712 signals=30 events=2646153 detect=20s
+[tech:WL] done in 162s
+[tech:ML] bars=320 stocks=3712 signals=30 events=567642 detect=4s
+[tech:ML] done in 31s

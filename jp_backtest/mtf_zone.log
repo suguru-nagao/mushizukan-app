@@ -1,0 +1,6 @@
+[zone:W] bars=260 signals=24 events=665732 detect=104s
+[zone:W] done in 127s
+[zone:M] bars=59 signals=24 events=116357 detect=14s
+[zone:M] done in 21s
+[zone:D] bars=1220 signals=24 events=2230186 detect=127s
+[zone:D] done in 233s
