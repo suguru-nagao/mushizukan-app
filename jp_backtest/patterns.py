@@ -12,6 +12,7 @@ SMALL_BODY = 0.35       # 「小さい実体」= 実体 / レンジ がこの値
 LONG_BODY = 0.6         # 「大きい実体」= 実体 / レンジ がこの値以上
 SHADOW_BODY_MULT = 2.0  # 「長い影」= 影が実体のこの倍数以上
 SHORT_SHADOW = 0.1      # 「ほぼ無い影」= 影 / レンジ がこの値以下
+REQUIRE_TREND = True    # False なら直前トレンドの条件を外す(形だけで判定)
 
 
 def shift(a, k):
@@ -44,6 +45,9 @@ def detect(O, H, L, C):
         up1 = shift(up.astype(float), 1) == 1
         down2 = shift(down.astype(float), 2) == 1
         up2 = shift(up.astype(float), 2) == 1
+
+        if not REQUIRE_TREND:
+            down1 = up1 = down2 = up2 = np.ones_like(valid)
 
         small = valid & (body_r <= SMALL_BODY)
         longb = valid & (body_r >= LONG_BODY)

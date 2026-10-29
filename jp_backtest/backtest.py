@@ -41,7 +41,7 @@ def load_panel():
             frames.append(pd.DataFrame(rows))
     df = pd.concat(frames, ignore_index=True)
     df = df[df["Code"].isin(master.index)]
-    cols = ["AdjO", "AdjH", "AdjL", "AdjC", "Va", "AdjVo"]
+    cols = ["AdjO", "AdjH", "AdjL", "AdjC", "Va", "AdjVo", "C"]
     df[cols] = df[cols].apply(pd.to_numeric, errors="coerce")
     df["limit"] = (df["UL"].astype(str) == "1") | (df["LL"].astype(str) == "1")
     # 出来高 0(取引なし)の日は四本値が信用できないので欠損扱い
@@ -51,13 +51,14 @@ def load_panel():
         return df.pivot(index="Date", columns="Code", values=col).sort_index()
 
     O, H, L, C, Va = (wide(c) for c in ["AdjO", "AdjH", "AdjL", "AdjC", "Va"])
+    Vo, Craw = wide("AdjVo"), wide("C")
     lim = wide("limit").reindex_like(O).fillna(False).astype(bool)
     codes = O.columns
     mkt = master.loc[codes, "Mkt"].to_numpy()
     return {
         "dates": pd.to_datetime(O.index), "codes": codes,
         "O": O.to_numpy(), "H": H.to_numpy(), "L": L.to_numpy(), "C": C.to_numpy(),
-        "Va": Va.to_numpy(), "limit": lim.to_numpy(), "mkt": mkt, "master": master,
+        "Va": Va.to_numpy(), "Vo": Vo.to_numpy(), "Craw": Craw.to_numpy(), "limit": lim.to_numpy(), "mkt": mkt, "master": master,
     }
 
 
