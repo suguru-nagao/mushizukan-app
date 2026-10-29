@@ -81,6 +81,30 @@ def fetch_master():
     print(f"master: {len(data)} rows")
 
 
+def fetch_master_history(start, end):
+    """月初ごとの銘柄マスター(信用区分 Mrgn: 1=信用, 2=貸借, 3=その他)を取得する。
+
+    貸借銘柄かどうかは時期で変わるので、各日付で「その時点の指定」を使うために必要。
+    休場日は空で返るため、最大 6 日先までずらして最初に取れた日を使う。
+    """
+    out_dir = os.path.join(CACHE, "master_hist")
+    os.makedirs(out_dir, exist_ok=True)
+    d = start.replace(day=1)
+    while d <= end:
+        path = os.path.join(out_dir, f"{d.strftime('%Y-%m')}.json.gz")
+        if not os.path.exists(path):
+            for k in range(7):
+                day = max(d + dt.timedelta(days=k), start)
+                data = api_get("/equities/master", {"date": day.isoformat()}).get("data", [])
+                if data:
+                    slim = [{"Code": x["Code"], "Mrgn": x.get("Mrgn"), "Mkt": x.get("Mkt")} for x in data]
+                    with gzip.open(path, "wt", encoding="utf-8") as f:
+                        json.dump({"date": day.isoformat(), "rows": slim}, f, ensure_ascii=False)
+                    print(f"master {day} rows={len(slim)}", flush=True)
+                    break
+        d = (d.replace(day=28) + dt.timedelta(days=4)).replace(day=1)
+
+
 def fetch_topix(start, end):
     data = api_get("/indices/bars/daily/topix", {"from": start, "to": end}).get("data", [])
     with gzip.open(os.path.join(CACHE, "topix.json.gz"), "wt", encoding="utf-8") as f:
@@ -96,5 +120,6 @@ if __name__ == "__main__":
     os.makedirs(CACHE, exist_ok=True)
     fetch_master()
     fetch_topix(a.start, a.end)
+    fetch_master_history(dt.date.fromisoformat(a.start), dt.date.fromisoformat(a.end))
     fetch_bars(dt.date.fromisoformat(a.start), dt.date.fromisoformat(a.end))
     print("done")

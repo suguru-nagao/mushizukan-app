@@ -87,10 +87,15 @@ def forward_returns(P, horizons=HORIZONS):
     return rets
 
 
-def liquidity_bucket(P, n=5, window=20):
-    """直近 window 日の売買代金の中央値を、日ごとに n 分位へ(1=最小, n=最大)。"""
+def liquidity_bucket(P, n=5, window=20, universe=None):
+    """直近 window 日の売買代金の中央値を、日ごとに n 分位へ(1=最小, n=最大)。
+
+    universe(日付×銘柄の bool)を渡すと、その日の対象銘柄の中だけで分位を作る。対象外は 0。
+    """
     va = pd.DataFrame(P["Va"])
     med = va.rolling(window, min_periods=window // 2).median()
+    if universe is not None:
+        med = med.where(universe)
     pct = med.rank(axis=1, pct=True)
     b = np.ceil(pct.to_numpy() * n)
     b[np.isnan(b)] = 0
@@ -137,13 +142,43 @@ def summarize(x, t_idx, h):
     )
 
 
-def run(P, split_date=None, horizons=HORIZONS):
-    """全パターン × 保有期間 × グループ × 期間(全体/前半/後半)の集計表を返す。"""
+def load_margin(P):
+    """各日付の時点で貸借銘柄(Mrgn=2)だったかを (日数, 銘柄数) の bool 配列で返す。
+
+    月初ごとのマスター(cache/master_hist)のうち、その日付以前で最新のものを使う。
+    マスターに載っていない銘柄(新規上場など)は False。
+    """
+    snaps = []
+    for p in sorted(glob.glob(os.path.join(CACHE, "master_hist", "*.json.gz"))):
+        with gzip.open(p, "rt", encoding="utf-8") as f:
+            d = json.load(f)
+        snaps.append((pd.Timestamp(d["date"]), {r["Code"]: r["Mrgn"] for r in d["rows"]}))
+    snaps.sort(key=lambda x: x[0])
+    codes = list(P["codes"])
+    vecs = [np.array([m.get(c) == "2" for c in codes]) for _, m in snaps]
+    dates = P["dates"]
+    out = np.zeros((len(dates), len(codes)), dtype=bool)
+    k = -1
+    for i, d in enumerate(dates):
+        while k + 1 < len(snaps) and snaps[k + 1][0] <= d:
+            k += 1
+        if k >= 0:
+            out[i] = vecs[k]
+    return out
+
+
+def run(P, split_date=None, horizons=HORIZONS, universe=None):
+    """全パターン × 保有期間 × グループ × 期間(全体/前半/後半)の集計表を返す。
+
+    universe を渡すと、その銘柄群の中だけで流動性分位・基準(同日平均)を作って評価する。
+    """
     rets = forward_returns(P, horizons)
-    liq = liquidity_bucket(P)
+    liq = liquidity_bucket(P, universe=universe)
     mk = np.broadcast_to(
         np.array([{"0111": 1, "0112": 2, "0113": 3}[m] for m in P["mkt"]]), P["O"].shape
     )
+    if universe is not None:
+        mk = np.where(universe, mk, 0)
     group_sets = {"流動性分位": liq, "市場": mk}
     bases = {(gs, h): baseline(rets[h], g) for gs, g in group_sets.items() for h in horizons}
 
