@@ -167,10 +167,11 @@ def load_margin(P):
     return out
 
 
-def run(P, split_date=None, horizons=HORIZONS, universe=None):
+def run(P, split_date=None, horizons=HORIZONS, universe=None, pats=None):
     """全パターン × 保有期間 × グループ × 期間(全体/前半/後半)の集計表を返す。
 
     universe を渡すと、その銘柄群の中だけで流動性分位・基準(同日平均)を作って評価する。
+    pats を渡すと、ローソク足パターンの代わりにそのシグナル({名前: (方向, bool 配列)})を評価する。
     """
     rets = forward_returns(P, horizons)
     liq = liquidity_bucket(P, universe=universe)
@@ -182,7 +183,8 @@ def run(P, split_date=None, horizons=HORIZONS, universe=None):
     group_sets = {"流動性分位": liq, "市場": mk}
     bases = {(gs, h): baseline(rets[h], g) for gs, g in group_sets.items() for h in horizons}
 
-    pats = detect(P["O"], P["H"], P["L"], P["C"])
+    if pats is None:
+        pats = detect(P["O"], P["H"], P["L"], P["C"])
     T = len(P["dates"])
     if split_date is None:
         split_date = P["dates"][T // 2]

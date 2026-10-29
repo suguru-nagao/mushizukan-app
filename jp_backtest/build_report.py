@@ -71,6 +71,13 @@ def build_data():
     ms = ms[ms.シグナル.isin(MARGIN_SIGNALS) & ms.変種.isin(["A", "C", "D", "G"])]
     D["mshort"] = rows(ms, dict(u="対象", s="シグナル", z="規模", v="変種", n="n", m="平均bp", t="t", f="前半bp", l="後半bp"))
     D["myear"] = rows(csv("results_margin_year.csv"), dict(s="シグナル", y="年", n="n", m="平均bp"))
+    for key, fname in [("cmain", "results_chart_main.csv"), ("cmm", "results_chart_margin_main.csv")]:
+        cdf = csv(fname)
+        cdf = cdf[(cdf.区分 == "流動性分位") & (cdf.期間 == "全体")]
+        D[key] = rows(cdf, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp", net="net_bp", w="win", t="t"))
+    D["cmatch"] = rows(csv("results_chart_matched.csv"), dict(u="対象", s="シグナル", d="方向", z="規模", v="変種", n="n", r0="シグナル日の平均騰落率pct",
+                                                              raw="素の超過bp", rt="素のt", adj="同じ騰落率との差bp", at="差のt"))
+    D["cvar"] = rows(csv("results_chart_variants.csv"), dict(u="対象", s="シグナル", d="方向", z="規模", v="変種", n="n", m="平均bp", t="t", f="前半bp", l="後半bp"))
     cm = csv("results_cost_model.csv")
     D["cost"] = rows(cm, {"s": "シグナル", "z": "規模", "h": "保有", "n": "n", "g": "粗利bp", "tk": "呼値比率bp", "fee": "貸株料bp",
                           "c20": "コスト20bp固定_bp", "c1": "呼値1枚+貸株料_bp", "t1": "呼値1枚+貸株料_t",
