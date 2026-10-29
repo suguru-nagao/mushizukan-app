@@ -87,13 +87,14 @@ def forward_returns(P, horizons=HORIZONS):
     return rets
 
 
-def liquidity_bucket(P, n=5, window=20, universe=None):
+def liquidity_bucket(P, n=5, window=None, universe=None):
     """直近 window 日の売買代金の中央値を、日ごとに n 分位へ(1=最小, n=最大)。
 
     universe(日付×銘柄の bool)を渡すと、その日の対象銘柄の中だけで分位を作る。対象外は 0。
     """
+    window = window or P.get("liq_window", 20)   # 日足は 20 本。週足・月足は、約 20 営業日に相当する本数(4 / 1)
     va = pd.DataFrame(P["Va"])
-    med = va.rolling(window, min_periods=window // 2).median()
+    med = va.rolling(window, min_periods=max(1, window // 2)).median()
     if universe is not None:
         med = med.where(universe)
     pct = med.rank(axis=1, pct=True)

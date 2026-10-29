@@ -1,0 +1,18 @@
+[zone:W] bars=260 signals=8 events=262029 detect=50s
+[zone:W] done in 64s
+[zone:M] bars=59 signals=8 events=77806 detect=8s
+[zone:M] done in 12s
+[candle:W] bars=260 signals=18 events=640499 detect=0s
+[candle:W] done in 20s
+[candle:M] bars=59 signals=18 events=145206 detect=0s
+[candle:M] done in 6s
+[tech:W] bars=260 signals=30 events=616938 detect=4s
+[tech:W] done in 32s
+[tech:M] bars=59 signals=30 events=88213 detect=2s
+[tech:M] done in 9s
+[chart:W] bars=260 signals=20 events=26485 detect=3s
+[chart:W] done in 19s
+[zone:D] bars=1220 signals=8 events=627173 detect=54s
+[zone:D] done in 118s
+[candle:D] bars=1220 signals=18 events=3093836 detect=1s
+[candle:D] done in 53s

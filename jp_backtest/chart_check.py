@@ -17,17 +17,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SIZES = [("小型(分位1-2)", 1, 2), ("中型(分位3)", 3, 3), ("大型(分位4-5)", 4, 5)]
 
 
-def variants_table(P, universe, label, sigs, split):
+def variants_table(P, universe, label, sigs, split, gh=5):
     liq = bt.liquidity_bucket(P, universe=universe)
     ok = ~bt.ahead(P["limit"].astype(float), 1).astype(bool)
     var = {k[0]: v for k, v in mc.variants(P).items()}
-    var["G"] = bt.forward_returns(P, [5])[5]
+    var["G"] = bt.forward_returns(P, [gh])[gh]
     nolim = ~P["limit"]
     rows = []
     for vname in ["A", "C", "D", "G"]:
         r = np.where(ok, var[vname], np.nan)
         x = r - bt.baseline(r, liq)
-        h = 5 if vname == "G" else 1
+        h = gh if vname == "G" else 1
         for name, (d, S) in sigs.items():
             for size, lo, hi in SIZES:
                 sel = S & nolim & (liq >= lo) & (liq <= hi) & ~np.isnan(x)

@@ -203,7 +203,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 
   <header class="head">
     <h1>ローソク足シグナルは、売買に使えるか</h1>
-    <p>J-Quants Light の日足を使い、ローソク足パターン18種、チャートパターン20種、テクニカル指標30種を、全銘柄で検証した結果をまとめたページです。翌営業日の始値でエントリーし、同日・同じ流動性帯の平均を引いた超過リターンで評価しています。</p>
+    <p>J-Quants Light の日足を使い、ローソク足パターン18種、チャートパターン20種、テクニカル指標30種、抵抗帯・新高値/新安値8種を、日足・週足・月足で、全銘柄について検証した結果をまとめたページです。翌営業日の始値でエントリーし、同日・同じ流動性帯の平均を引いた超過リターンで評価しています。</p>
     <div class="chips">
       <span class="chip">期間 <b>2021-10-29 〜 2026-10-28</b></span>
       <span class="chip">対象 <b class="num">3,699</b> 銘柄(プライム・スタンダード・グロース)</span>
@@ -218,7 +218,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
   <section id="p-summary" class="panel" hidden>
     <div class="card">
       <div class="card verdict">
-        <p>教科書どおりのローソク足シグナルでは、<em>コストを引いて利益が残る形は見つかりませんでした</em>。効いているのは、パターン名ではなく「終値が日中レンジのどこか」と「出来高が急増した日の反転」という短期の反転で、寄付き後に取れる分は <em>10〜30bp</em>。往復コスト20bpと同程度です。</p>
+        <p>教科書どおりのローソク足シグナルでは、<em>コストを引いて利益が残る形は見つかりませんでした</em>。効いているのは、パターン名ではなく「終値が日中レンジのどこか」と「出来高が急増した日の反転」という短期の反転で、寄付き後に取れる分は <em>10〜30bp</em>。往復コスト20bpと同程度です。ただし、週足まで広げると、<em>週足のダブルトップ(売り)</em>だけは、貸借銘柄で、1ティックのスプレッドと貸株料を引いても<em>全規模で +66bp(t=3.1)</em>残りました。小型でも大型でも同じ大きさで、全ての年でプラスでした。逆日歩などを含まず、5年(相場サイクル1つ分)の結果なので、有望な候補にとどまります(「チャートパターン」「時間軸」を参照)。</p>
       </div>
 
       <div class="sec">4つの仮説の結果</div>
@@ -239,6 +239,12 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="sec">テクニカル指標の結果</div>
       <p class="lead">RSI、MACD、ボリンジャーバンド、一目均衡表、パラボリックSARなど30シグナルも、コストを引いて安定して利益が残る形はありませんでした。買われすぎの逆張りは大きな値動きの反転と同じ現象で、買いのトレンド系は小型株で逆に動きます。詳しくは「テクニカル指標」のタブにあります。</p>
 
+      <div class="sec">抵抗帯の結果</div>
+      <p class="lead">価格帯別出来高の厚い帯(抵抗帯・支持帯)と、新高値・新安値の更新も、日足ではコストを引くと残りませんでした。抵抗帯に届くと跳ね返される傾向は小型株で統計的にありますが、大きさは +10〜20bp程度です。詳しくは「抵抗帯」のタブにあります。</p>
+
+      <div class="sec">日足・週足・月足の観点</div>
+      <p class="lead">4つの分析すべてを、日足・週足・月足で評価しました。週足では、ダブルトップ(売り)のように日足より大きな効果が出るものがあります。月足は、1銘柄あたり約59本しかなく、結果の信頼性が低くなります。日足のシグナルを月足のトレンドに合わせた改善の大半は、シグナルと無関係な「勢いの持続」で説明できます。詳しくは「時間軸」のタブにあります。</p>
+
       <div class="sec">取れる分はコストに届くか</div>
       <p class="lead">小型株で比較的よく効いた6つのシグナルについて、翌日始値で入った場合(濃い棒)と、1日遅らせて入った場合(薄い棒)の方向付き超過リターンです。点線は往復コスト20bp。小型株の実際のスプレッドや、信用売りができない銘柄の制約は含めていません。</p>
       <div class="legend"><span><i style="background:var(--accent)"></i>翌日始値でエントリー</span><span><i style="background:var(--accent);opacity:.38"></i>1日遅らせてエントリー</span><span><i style="border-left:2px dashed var(--warn);width:0;height:12px;border-radius:0"></i>往復コスト 20bp</span></div>
@@ -252,21 +258,13 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     <div class="card">
       <h2>パターン別の結果</h2>
       <p class="lead">18パターン × 売買代金の5分位(1=最小 〜 5=最大)の、方向付き超過リターンです。プラスなら、そのパターンの売買サイン(買い or 売り)どおりに動いたことを意味します。セルを押すと詳細が出ます。</p>
-      <div class="ctl">
-        <label>保有日数</label>
-        <div class="seg" id="hseg" role="group" aria-label="保有日数"></div>
-        <label>表示</label>
-        <div class="seg" id="mseg" role="group" aria-label="表示値"></div>
-      </div>
-      <div class="legend">
-        <span><i style="background:var(--good-bg)"></i>有意にプラス(t ≥ 3.8)</span>
-        <span><i style="background:var(--good-soft)"></i>やや有意(2 ≤ t &lt; 3.8)</span>
-        <span><i style="background:var(--bad-soft)"></i>やや有意にマイナス</span>
-        <span><i style="background:var(--bad-bg)"></i>有意にマイナス(t ≤ -3.8)</span>
-      </div>
-      <div class="tw"><table class="hm" id="hm"></table></div>
-      <div id="detailbox"></div>
-      <p class="note">プラス=教科書どおりに動いた、マイナス=逆に動いた(反転)。単位は bp(0.01%)。検定数は630通りなので、偶然の当たりを避けるため |t| ≥ 3.8 を有意の目安にしています。</p>
+      <div id="candle-heat"></div>
+      <p class="note">プラス=教科書どおりに動いた、マイナス=逆に動いた(反転)。単位は bp(0.01%)。日足の検定数は630通りなので、偶然の当たりを避けるため |t| ≥ 3.8 を有意の目安にしています。時間軸を変えると、同じシグナルを週足・月足の1本ごとに評価します(保有は「次の足の始値で入り、n本後の始値で出る」)。</p>
+      <div class="sec">同じ騰落率の日(週・月)と比べると</div>
+      <p class="lead">大陽線や包み足のように、大きく動いた日に出るシグナルは、その値動きだけで結果が決まっている可能性があります。シグナルが出た足の騰落率(または直近数本の騰落率)が同じ水準の「全銘柄・全期間」と比べて、パターンに独自の効果が残るかを見ます。</p>
+      <div id="candle-match"></div>
+      <div class="sec">時間軸ごとの有意な結果の数</div>
+      <div id="candle-tfc"></div>
     </div>
   </section>
 
@@ -359,25 +357,38 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div id="chstack" class="bars"></div>
       <div class="legend"><span><i style="background:var(--good)"></i>サインどおり</span><span><i style="background:var(--bad)"></i>逆向き</span></div>
 
-      <div class="sec">パターン別の結果</div>
-      <div class="ctl"><label>保有日数</label><div class="seg" id="chseg" role="group" aria-label="保有日数"></div><label>表示</label><div class="seg" id="cmseg" role="group" aria-label="表示値"></div><label>対象</label><div class="seg" id="cuseg" role="group" aria-label="対象"></div></div>
-      <div class="tw"><table class="hm" id="chm"></table></div>
-      <div id="chdetail"></div>
+      <div class="sec">時間軸ごとの有意な結果の数</div>
+      <div id="chart-tfc"></div>
+
+      <div class="sec">パターン別の結果(時間軸を選べます)</div>
+      <div id="chart-heat"></div>
       <p class="note">各セルは、そのシグナルの向き(上抜け=買い、下抜け=売り)で評価した超過リターン(bp)。名前にマウスを重ねる(スマホは押す)と、形の模式図が出ます。</p>
 
       <div class="sec">同じ騰落率の日と比べると</div>
       <p class="lead">ネックラインの抜けは、大きく動いた日に起きやすい形です。そこで、シグナル日の騰落率が同じ水準の「全銘柄・全日」と比べて、パターンに独自の効果が残るかを見ました。差が残れば、パターンそのものに意味があることになります。</p>
-      <div class="ctl"><label>保有</label><div class="seg" id="cmhseg" role="group"></div><label>規模</label><div class="seg" id="cmzseg" role="group"></div><label>対象</label><div class="seg" id="cmuseg" role="group"></div></div>
-      <div class="tw"><table id="cmtab"></table></div>
-      <p class="note">「素の超過」はそのままの超過リターン、「差」は同じ騰落率の日との差。240通りのうち、差が有意(|t| ≥ 3.8)だったのは、全銘柄・小型・5日保有のダブルトップ(売り)の1件だけです。</p>
+      <div id="chart-match"></div>
+      <p class="note">「素の超過」はそのままの超過リターン、「差」は同じ騰落率の日との差。日足では、240通りのうち差が有意(|t| ≥ 3.8)だったのは、全銘柄・小型・5日保有のダブルトップ(売り)の1件だけです。月足は、1銘柄あたり約59本しかなく、パターンを作れないため対象外です。</p>
 
-      <div class="sec">唯一残ったダブルトップ(売り)は使えるか</div>
-      <div class="ctl"><label>保有</label><div class="seg" id="dtseg" role="group"></div></div>
+      <div class="sec">ダブルトップ(売り)の確認: 日足と週足</div>
+      <p class="lead">日足でただ1件残ったダブルトップ(売り)を、日足と週足で比べます。週足は、1本が1週間なので、数か月かけて形づくる大きなダブルトップを捉えます。</p>
+      <div class="ctl"><label>時間軸</label><div class="seg" id="dttf" role="group"></div><label>保有</label><div class="seg" id="dtseg" role="group"></div></div>
       <div class="tw"><table id="dttab"></table></div>
       <ul class="pts">
-        <li>全銘柄の小型株では、5日保有で +20.5bp(t=3.1)、同じ騰落率の日との差は +27.0bp(t=4.0)で、前半・後半とも同じ向きでした。</li>
-        <li>ただし、売りができる貸借銘柄だけに絞ると、小型株は +6.1bp(t=0.9)で有意ではありません。中型は +14.0bp(t=1.9)にとどまります。</li>
-        <li>往復コスト20bpを引くと、どの規模でも、有意にプラスで残る組み合わせはありません。</li>
+        <li>日足(全銘柄の小型株)は、5日保有で +20.5bp(t=3.1)ですが、貸借銘柄だけに絞ると +6.1bp(t=0.9)で有意ではありません。</li>
+        <li><b>週足は、貸借銘柄で、4週保有 +91.0bp(全規模、件数1,918、t=4.3)</b>。小型 +94.0bp、中型 +66.6bp、大型 +100.5bp と、規模によらず同じ大きさです。1週遅らせても残り(小型 +25.8bp、中型 +47.6bp)、前半・後半とも同じ向きです。日足の5日保有の約4倍の効果です。</li>
+      </ul>
+
+      <div class="sec">週足のダブルトップ(売り)は、実コストを入れても残るか</div>
+      <p class="lead">4週保有で、ショートした場合の純損益です。①往復コスト20bp固定、②1ティックのスプレッド+貸株料、③2ティック+貸株料。「上位3週を除く」は、シグナルが特に多かった3週を外した粗利で、特定の相場局面への偏りを見ています。</p>
+      <div class="tw"><table id="wktab"></table></div>
+      <div class="sec">年ごとの安定性(粗利)</div>
+      <div class="tw"><table id="wkytab"></table></div>
+      <div class="sec">パターンの閾値を変えても同じか(全規模・4週保有)</div>
+      <div class="tw"><table id="wkstab"></table></div>
+      <ul class="pts">
+        <li>貸借銘柄の全規模で、1ティックのスプレッドと貸株料を引いても <b>+66.3bp(t=3.1)</b>、2ティックでも +50.3bpです。大型株だけでも +81.6bp(t=1.9)で、売買代金が大きい銘柄でも成り立ちます。年ごとでも全ての年でプラスでした(全規模: +42、+130、+40、+121、+106bp)。</li>
+        <li>閾値を14通りに変えても、同じ向きでした(貸借の全規模で +76〜96bp、t=3.2〜4.5)。山の高さの差を5%に広げた場合や、谷の深さを8%以上にした場合は、やや小さくなります。</li>
+        <li>注意点: 粗利のt値は4.3で、検定の多さを考えた基準(約4.2)をわずかに超える程度です。期間は5年(相場サイクル1つ分)で、貸借の件数は1,918件(年に400件前後)です。逆日歩、踏み上げによる損失、約定の滑りは含まれておらず、実際の売買では貸株の在庫や規制の確認も必要です。</li>
       </ul>
     </div>
   </section>
@@ -400,17 +411,17 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div id="tstack" class="bars"></div>
       <div class="legend"><span><i style="background:var(--good)"></i>サインどおり</span><span><i style="background:var(--bad)"></i>逆向き</span></div>
 
-      <div class="sec">シグナル別の結果</div>
-      <div class="ctl"><label>保有日数</label><div class="seg" id="thseg" role="group" aria-label="保有日数"></div><label>表示</label><div class="seg" id="tmseg" role="group" aria-label="表示値"></div><label>対象</label><div class="seg" id="tuseg" role="group" aria-label="対象"></div></div>
-      <div class="tw"><table class="hm" id="thm"></table></div>
-      <div id="tdetail"></div>
+      <div class="sec">時間軸ごとの有意な結果の数</div>
+      <div id="tech-tfc"></div>
+
+      <div class="sec">シグナル別の結果(時間軸を選べます)</div>
+      <div id="tech-heat"></div>
       <p class="note">各セルは、そのシグナルの向き(買い/売り)で評価した超過リターン(bp)。名前にマウスを重ねる(スマホは押す)と、指標の模式図が出ます。</p>
 
       <div class="sec">同じ騰落率の日と比べると</div>
       <p class="lead">買われすぎ・売られすぎのシグナルは、大きく動いた直後に出ます。シグナル日(または直近5日)の騰落率が同じ水準の「全銘柄・全日」と比べて、指標に独自の効果が残るかを見ました。</p>
-      <div class="ctl"><label>基準</label><div class="seg" id="tkseg" role="group"></div><label>保有</label><div class="seg" id="tvseg" role="group"></div><label>規模</label><div class="seg" id="tzseg" role="group"></div><label>対象</label><div class="seg" id="tcuseg" role="group"></div></div>
-      <div class="tw"><table id="tmtab"></table></div>
-      <p class="note">「素の超過」はそのままの超過リターン、「差」は同じ騰落率の日との差。720通りのうち、差が有意(|t| ≥ 3.9)だったのは22件で、そのほとんどは買いのトレンド系が逆に動いたものです。サインどおりに残ったのは、RSI70の下抜け(売り)、RSI30の上抜け(買い)などの +5〜14bp程度の小さなものだけでした。</p>
+      <div id="tech-match"></div>
+      <p class="note">「素の超過」はそのままの超過リターン、「差」は同じ騰落率の日との差。日足では、720通りのうち差が有意(|t| ≥ 3.9)だったのは22件で、そのほとんどは買いのトレンド系が逆に動いたものです。サインどおりに残ったのは、RSI70の下抜け(売り)、RSI30の上抜け(買い)などの +5〜14bp程度の小さなものだけでした。</p>
 
       <div class="sec">ショートの実コストを入れると</div>
       <p class="lead">貸借銘柄で、売りが有利に見えた3つのシグナルと、買いサインが逆に動いた2つのシグナル(一目の雲上抜け、ゴールデンクロス)を、ショートした場合の純損益で比べています。①往復コスト20bp固定、②1ティックのスプレッド+貸株料、③2ティック+貸株料です。</p>
@@ -419,6 +430,68 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <ul class="pts">
         <li>最も良いのは、乖離率+10%以上の5日保有・小型で、②が +9.0bp(t=0.9)です。有意ではなく、③ではマイナスになります。</li>
         <li>逆日歩、踏み上げによる損失、約定の滑りは含まれていません。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 抵抗帯 -->
+  <section id="p-zone" class="panel" hidden>
+    <div class="card">
+      <h2>抵抗帯(価格帯別出来高の厚い帯)と新高値・新安値</h2>
+      <p class="lead">過去に出来高が集中した価格帯は、そこで買った人の「戻ったら売りたい」売り物が出る抵抗帯(現在値より下なら支持帯)になる、とされます。日足・週足・月足それぞれで、帯に株価が届いたとき・抜けたとき、および新高値・新安値を更新したときの成績を検証しました。</p>
+      <div class="card verdict" style="gap:8px">
+        <p>抵抗帯でも、<em>コストを引いて安定して利益が残る形は見つかりませんでした</em>。日足では、小型株で抵抗帯に届くと跳ね返される傾向は統計的にありますが(5日で +20bp)、実コストを入れると消えます。上抜けた買いは、小型株で<em>逆に動きます</em>(翌日 -49bp)。新安値の更新(売り)は小型株で +24bp(t=7.8)と最も安定していますが、1ティックのスプレッドで消える大きさです。</p>
+      </div>
+      <div class="sec">どう作ったか(仮定)</div>
+      <div class="tw"><table class="gt" id="zonedef"></table></div>
+      <ul class="pts">
+        <li>価格帯別出来高は、直近の窓の中の各足の「典型価格(高値+安値+終値の平均)」に、その足の出来高を割り当てて作ります。価格帯は、価格に固定した対数の格子(1本 約1.5%)です。</li>
+        <li>現在値より上で最も出来高が厚い帯(価格が通った範囲の平均の2倍以上)が抵抗帯、下の帯が支持帯です。帯は、新しい帯ができるか、終値で抜けられるまで保ちます。判定は、その時点で分かるデータだけで行います(先読みなし)。</li>
+        <li>名前にマウスを重ねる(スマホは押す)と、帯・価格帯別出来高・シグナル日の模式図が出ます。</li>
+      </ul>
+
+      <div class="sec">時間軸ごとの有意な結果の数</div>
+      <div id="zone-tfc"></div>
+      <div class="sec">シグナル別の結果(時間軸を選べます)</div>
+      <div id="zone-heat"></div>
+      <p class="note">各セルは、そのシグナルの向き(買い/売り)で評価した超過リターン(bp)。月足は、帯を作るのに36か月分のデータが要るため、シグナルが出るのは直近の約2年分だけです。独立した期間が数個しかなく、t値は参考値です。</p>
+
+      <div class="sec">同じ騰落率の日(週・月)と比べると</div>
+      <p class="lead">抵抗帯の上抜けや新高値は、大きく上昇した日に出ます。シグナルが出た足の騰落率が同じ水準の「全銘柄・全期間」と比べて、帯・新高値に独自の効果が残るかを見ます。</p>
+      <div id="zone-match"></div>
+
+      <div class="sec">ショートの実コストを入れると(日足・貸借)</div>
+      <div class="ctl"><label>保有</label><div class="seg" id="zcseg" role="group"></div></div>
+      <div class="tw"><table id="zcosttab"></table></div>
+      <ul class="pts">
+        <li>最も良いのは、250日の新安値更新の5日保有・小型で、1ティック+貸株料の純損益が +13.3bp(t=0.9)です。有意ではありません。</li>
+        <li>週足の52週新安値更新(売り)は、貸借の小型株で粗利 +28.5bp(1週)・+54.9bp(4週)ですが、実コストを入れると4週保有で +15.5bp(t=0.5)です。</li>
+        <li>新高値更新(買い)は、素の成績は逆(直前の上昇の反転)ですが、同じ騰落率の日との比較では +15〜37bp(t=5〜7)上回ります。大きく上昇した銘柄のうち、新高値をつけたものは、そうでないものより強い、という意味です。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 時間軸 -->
+  <section id="p-tf" class="panel" hidden>
+    <div class="card">
+      <h2>時間軸(日足・週足・月足)の比べ方</h2>
+      <p class="lead">日足のデータを、週・月に集約して、同じ検出ロジックと評価で検証しました。1本の足 = 1週(月)で、バーが終わった時点でシグナルを判定し、次の週(月)の最初の営業日の始値で入ります。保有は「n本後の始値で出る」です(週足は1・2・4・8・13週、月足は1・2・3・6か月)。</p>
+      <div class="sec">4つの分析 × 3つの時間軸: 有意な結果の数</div>
+      <div id="tf-tfc"></div>
+      <ul class="pts">
+        <li>週足でも、サインどおりに有意だった結果は少なく、ほとんどが小型株の逆向き(反転)でした。例外が、週足のダブルトップ(売り)で、貸借銘柄の全規模で、実コストを入れても残りました(「チャートパターン」)。</li>
+        <li>月足は、1銘柄あたり約59本しかなく、移動平均や抵抗帯を作る期間を除くと、シグナルが出るのは直近の約2年分です。独立した期間が数個で、t値は大きく出やすいため、参考値として扱ってください。月足のチャートパターンは、本数が足りず対象外です。</li>
+        <li>週足は約260本(5年)で、日足より1銘柄あたりのシグナル数が少ないため、偶然の当たりが混ざりやすくなります。</li>
+      </ul>
+
+      <div class="sec">日足のシグナルを、上位足のトレンドに合わせると良くなるか</div>
+      <p class="lead">日足のシグナルを、直前に終わった週(月)のトレンドと「一致(買いサインで上向き、売りサインで下向き)」「逆行」に分けて、分析ごとに全シグナルをまとめた成績を比べます。トレンドは、週(月)の終値が13本(6本)移動平均より上か下かで判定します。</p>
+      <div class="ctl"><label>上位足</label><div class="seg" id="tf-ctf" role="group"></div><label>保有</label><div class="seg" id="tf-ch" role="group"></div></div>
+      <div class="tw"><table id="tf-ctab"></table></div>
+      <p class="note">「参考: トレンドだけの差」は、シグナルと無関係に、全銘柄・全日で、上向きの銘柄と下向きの銘柄の成績を比べた差です。一致と逆行の差が、この参考値と同程度なら、シグナルに合わせた効果ではなく、トレンドの勢いが続いただけです。</p>
+      <ul class="pts">
+        <li>月足のトレンドに合わせると、小型株では一致が逆行より +4〜27bp(5日保有)良くなりますが、トレンドだけの差(小型・5日で +12.1bp、t=5.9)で大半が説明できます。</li>
+        <li>週足のトレンドは、明確な効果がありません。</li>
       </ul>
     </div>
   </section>
@@ -474,7 +547,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="grid2">
         <div class="sub"><h3>この結果の限界</h3>
           <ul class="pts">
-            <li>期間は約5年で、相場サイクルは1つ分です。</li>
+            <li>期間は約5年で、相場サイクルは1つ分です。週足は約260本、月足は約59本しかなく、特に月足は独立した期間が数個で、t値は参考値です。</li>
             <li>現在の上場銘柄だけを使っているため、上場廃止銘柄が抜ける生存者バイアスがあります。</li>
             <li>小型株の効果は、気配のバウンスなど板の構造による見かけの可能性があります。日足だけでは確かめられません。</li>
             <li>検定は多数回(流動性区分で630通りなど)なので、|t| ≥ 3.8 を基準にしています。保有日数違いの結果は独立ではありません。</li>
@@ -486,7 +559,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
             <li>往復コストは20bpと仮定しました。小型株の実際のスプレッドはこれより大きいはずです。</li>
             <li>売りシグナルは、貸借銘柄でないと信用売りができません。貸借銘柄に絞った結果は専用のタブにあります。貸株料とスプレッドは見積もりを入れましたが、逆日歩は含めていません。</li>
             <li>ストップ高・安に張り付いた日は、翌日に約定できない可能性があります。結果ではその銘柄を除いています。</li>
-            <li>最も頑健な候補でも、寄付き後に取れる分は10〜30bpで、コストと同程度か下回ります。</li>
+            <li>日足では、最も頑健な候補でも、寄付き後に取れる分は10〜30bpで、コストと同程度か下回ります。実コストを入れても残ったのは、週足のダブルトップ(売り)だけです。貸借銘柄の全規模で成り立ちますが、逆日歩などを含まず、5年(相場サイクル1つ分)での結果です。</li>
           </ul></div>
       </div>
       <div class="sub"><h3>未検証・次の候補</h3>
@@ -494,6 +567,8 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
           <li>逆日歩・日々公表銘柄の規制など、予測できない信用売りのコスト(貸株料とスプレッドは日足から見積もり済み)</li>
           <li>気配・板データを使った実約定コストの見積もり(Lightプランでは取得できません)</li>
           <li>分足データによる、寄付き後の実約定に近い価格でのエントリー検証</li>
+          <li>週足のダブルトップ(売り)を、もっと長い期間・別の市場環境で再検証すること(Lightプランの5年では、相場サイクルが1つ分のため)</li>
+          <li>カップウィズハンドル・ソーサー、仕様書にある全パターンの再実装</li>
         </ul>
       </div>
       <p class="note">この資料は過去データの検証結果で、将来の成績を保証するものでも、投資の推奨でもありません。</p>
@@ -521,6 +596,8 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="sub"><h3>前半・後半、貸借銘柄</h3><p class="big">期間を 2024-04-26 で2つに分け、両方で同じ結果になるかを見ています。<b>貸借銘柄</b>は信用売り(ショート)ができる銘柄で、各日付の時点の指定で判定しています。</p></div>
       <div class="sub wide"><h3>テクニカル指標の用語</h3><p class="big"><b>ゴールデンクロス/デッドクロス</b>は、短期の移動平均が長期の移動平均を下から上に(上から下に)抜けることです。<b>RSI</b>は、一定期間の上げ幅と下げ幅の比から、買われすぎ(70以上)・売られすぎ(30以下)を測る指標です。<b>MACD</b>は、短期と長期の指数移動平均の差で、これを平滑化した線(シグナル)との交差を見ます。<b>ボリンジャーバンド</b>は、移動平均±2標準偏差の帯です。<b>乖離率</b>は、株価が移動平均からどれだけ離れているかの割合です。<b>一目均衡表</b>では、先行スパンの2本の間を「雲」、9日と26日の中値の線を「転換線」「基準線」と呼びます。<b>DMI/ADX</b>は、上昇と下降の勢い(+DI・-DI)と、トレンドの強さ(ADX)です。<b>パラボリックSAR</b>は、株価に追随して反転の目印を出す点です。</p></div>
       <div class="sub wide"><h3>チャートパターンの用語</h3><p class="big"><b>折り返し点(スイングポイント)</b>は、前後5日の中で最も高い(安い)日です。<b>ネックライン</b>は、山と山(谷と谷)の間の安値(高値)をつないだ線で、<b>終値でネックラインを抜けた日を「確定」</b>としています。<b>保ち合い</b>は、高値と安値を結んだ2本のラインの間で値動きが狭まる形(三角)や、傾いたまま続く形(ウェッジ・チャネル)です。値幅が狭まれば「収束」、ほぼ変わらなければ「平行」と呼びます。</p></div>
+      <div class="sub wide"><h3>時間軸(日足・週足・月足)</h3><p class="big"><b>日足</b>は1日、<b>週足</b>は1週間(月曜〜金曜)、<b>月足</b>は1か月を1本とした足です。日足のデータから、始値=最初の営業日の始値、終値=最後の営業日の終値、高値・安値=期間内の最大・最小として作っています。足が終わった時点でシグナルを判定し、<b>次の足の最初の始値</b>で入ります。保有の「本」は、その足の数です(週足の4本=4週)。期間が途中の最初と最後の足は使いません。</p></div>
+      <div class="sub wide"><h3>抵抗帯・支持帯</h3><p class="big"><b>抵抗帯</b>は、過去に出来高が集中した、現在値より上の価格帯です。そこで買った人が「戻ったら売りたい」と考えるため、株価が上がりにくいとされます。現在値より下の同様の帯が<b>支持帯</b>です。<b>価格帯別出来高</b>は、価格帯ごとに、その価格で成立した出来高を足し合わせたものです。<b>新高値・新安値</b>は、終値が直前の一定期間の高値(安値)を更新したことをいいます。</p></div>
       <div class="sub"><h3>往復コスト・粗利・純損益</h3><p class="big"><b>往復コスト</b>は、買って売る(売って買い戻す)ときにかかる費用の目安で、手数料やスプレッド(売値と買値の差)などを含みます。<b>粗利</b>はコストを引く前の平均損益、<b>純損益</b>はそこからコストを引いた値です。ショートでは貸株料も引きます。</p></div>
     </div>
   </section>
@@ -529,7 +606,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
+const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["zone","抵抗帯"],["tf","時間軸"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
@@ -601,42 +678,6 @@ function renderSummary() {
 }
 
 /* ---- 2. patterns heat table ---- */
-const PS = { h: 1, mode: "m", sel: null };
-function renderPatterns() {
-  seg($("#hseg"), HS.map(h => [h, h === 0 ? "日中のみ" : h + "日"]), PS.h, v => { PS.h = v; renderPatterns(); });
-  seg($("#mseg"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], PS.mode, v => { PS.mode = v; renderPatterns(); });
-  const idx = {}; D.main.forEach(r => { idx[r.p + "|" + r.q + "|" + r.h] = r; });
-  let html = `<thead><tr><th>パターン</th>${[1,2,3,4,5].map(q => `<th>分位${q}<small>${q === 1 ? "最小" : q === 5 ? "最大" : ""}</small></th>`).join("")}</tr></thead><tbody>`;
-  ORDER.forEach(p => {
-    const d = dirOf(p);
-    html += `<tr><td class="k">${nm(p)}<span class="tag ${d === "買い" ? "buy" : "sell"}">${d}</span></td>`;
-    for (let q = 1; q <= 5; q++) {
-      const r = idx[p + "|" + q + "|" + PS.h];
-      if (!r) { html += `<td class="c0">–</td>`; continue; }
-      const v = PS.mode === "m" ? f1(r.m) : PS.mode === "t" ? tf(r.t) : f1(r.net);
-      const on = PS.sel && PS.sel.p === p && PS.sel.q === q;
-      html += `<td class="cell ${cls(r.t)}${on ? " sel" : ""}" data-p="${p}" data-q="${q}">${v}</td>`;
-    }
-    html += "</tr>";
-  });
-  $("#hm").innerHTML = html + "</tbody>";
-  $("#hm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { PS.sel = { p: td.dataset.p, q: +td.dataset.q }; renderPatterns(); });
-  const box = $("#detailbox");
-  if (!PS.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率・前半と後半の平均が表示されます。</p>`; return; }
-  const r = idx[PS.sel.p + "|" + PS.sel.q + "|" + PS.h];
-  box.innerHTML = `<div class="sec">${PS.sel.p}(${r.d}) · 分位${PS.sel.q} · 保有${PS.h === 0 ? "日中のみ" : PS.h + "日"}</div>
-  <div class="detail">
-    <div><span>件数</span><b>${r.n.toLocaleString()}</b></div>
-    <div><span>平均(bp)</span><b>${f1(r.m)}</b></div>
-    <div><span>中央値(bp)</span><b>${f1(r.md)}</b></div>
-    <div><span>コスト後(bp)</span><b>${f1(r.net)}</b></div>
-    <div><span>勝率</span><b>${(r.w * 100).toFixed(0)}%</b></div>
-    <div><span>t 値</span><b>${tf(r.t)}</b></div>
-    <div><span>前半の平均</span><b>${f1(r.f)}</b></div>
-    <div><span>後半の平均</span><b>${f1(r.l)}</b></div>
-  </div>`;
-}
-
 /* ---- 3. groups ---- */
 function renderStack() {
   const rows = [1,2,3,4,5].map(q => {
@@ -859,6 +900,7 @@ function candleSvg(sp) {
 function tipFor(key) {
   if (CTIPS[key]) return chartTip(key);
   if (ITIPS[key]) return indTip(key);
+  if (ZTIPS[key]) return zoneTip(key);
   let k = key.replace("[探索]", ""), vol = false;
   if (k.endsWith("|出来高急増")) { vol = true; k = k.replace("|出来高急増", ""); }
   if (k.startsWith("終値が高値圏")) k = "終値が高値圏";
@@ -977,57 +1019,12 @@ function chartTip(key) {
 }
 
 /* chart tab renders */
-const CS_ST = { h: 1, mode: "m", u: "all", sel: null };
-function renderChartHeat() {
-  seg($("#chseg"), HS.map(h => [h, h === 0 ? "日中のみ" : h + "日"]), CS_ST.h, v => { CS_ST.h = v; renderChartHeat(); });
-  seg($("#cmseg"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], CS_ST.mode, v => { CS_ST.mode = v; renderChartHeat(); });
-  seg($("#cuseg"), [["all", "全銘柄"], ["mar", "貸借のみ"]], CS_ST.u, v => { CS_ST.u = v; renderChartHeat(); });
-  const data = CS_ST.u === "all" ? D.cmain : D.cmm, idx = {}; data.forEach(r => { idx[r.p + "|" + r.q + "|" + r.h] = r; });
-  let html = `<thead><tr><th>パターン</th>${[1,2,3,4,5].map(q => `<th>分位${q}<small>${q === 1 ? "最小" : q === 5 ? "最大" : ""}</small></th>`).join("")}</tr></thead><tbody>`;
-  CHART_ORDER.forEach(p => {
-    const d = cdirOf(p);
-    html += `<tr><td class="k">${nm(p)}<span class="tag ${d === "買い" ? "buy" : "sell"}">${d}</span></td>`;
-    for (let q = 1; q <= 5; q++) {
-      const r = idx[p + "|" + q + "|" + CS_ST.h];
-      if (!r) { html += `<td class="c0">–</td>`; continue; }
-      const v = CS_ST.mode === "m" ? f1(r.m) : CS_ST.mode === "t" ? tf(r.t) : f1(r.net);
-      const on = CS_ST.sel && CS_ST.sel.p === p && CS_ST.sel.q === q;
-      html += `<td class="cell ${cls(r.t)}${on ? " sel" : ""}" data-p="${p}" data-q="${q}">${v}</td>`;
-    }
-    html += "</tr>";
-  });
-  $("#chm").innerHTML = html + "</tbody>";
-  $("#chm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { CS_ST.sel = { p: td.dataset.p, q: +td.dataset.q }; renderChartHeat(); });
-  const box = $("#chdetail");
-  if (!CS_ST.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率などが表示されます。</p>`; return; }
-  const r = idx[CS_ST.sel.p + "|" + CS_ST.sel.q + "|" + CS_ST.h];
-  box.innerHTML = `<div class="sec">${CS_ST.sel.p}(${r.d}) · 分位${CS_ST.sel.q} · 保有${CS_ST.h === 0 ? "日中のみ" : CS_ST.h + "日"}</div>
-  <div class="detail"><div><span>件数</span><b>${r.n.toLocaleString()}</b></div><div><span>平均(bp)</span><b>${f1(r.m)}</b></div><div><span>中央値(bp)</span><b>${f1(r.md)}</b></div><div><span>コスト後(bp)</span><b>${f1(r.net)}</b></div><div><span>勝率</span><b>${(r.w * 100).toFixed(0)}%</b></div><div><span>t 値</span><b>${tf(r.t)}</b></div></div>`;
-}
 function renderChartStack() {
   const cnt = rows => [1,2,3,4,5].map(q => { const rs = rows.filter(r => r.q === q); return { g: rs.filter(r => r.t >= 3.8).length, b: rs.filter(r => r.t <= -3.8).length, n: rs.length }; });
   const all = cnt(D.cmain), mar = cnt(D.cmm);
   const stack = (c, label) => `<div style="display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center"><span class="note">${label}</span><div class="stack"><i style="width:${c.g / c.n * 100}%;background:var(--good)"></i><i style="width:${c.b / c.n * 100}%;background:var(--bad)"></i></div><span class="note num">${c.g}/${c.b}</span></div>`;
   $("#chstack").innerHTML = [0,1,2,3,4].map(i => `<div class="brow"><div class="lab">分位${i + 1}${i === 0 ? "(売買代金 最小)" : i === 4 ? "(最大)" : ""}<small>サインどおり/逆向きの件数</small></div><div style="display:flex;flex-direction:column;gap:6px">${stack(all[i], "全銘柄")}${stack(mar[i], "貸借のみ")}</div></div>`).join("");
 }
-const CM_ST = { v: "G", z: SIZES[0], u: "全銘柄" };
-function renderChartMatch() {
-  seg($("#cmhseg"), [["A", "1日"], ["G", "5日"]], CM_ST.v, v => { CM_ST.v = v; renderChartMatch(); });
-  seg($("#cmzseg"), SIZES.map(z => [z, z]), CM_ST.z, v => { CM_ST.z = v; renderChartMatch(); });
-  seg($("#cmuseg"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], CM_ST.u, v => { CM_ST.u = v; renderChartMatch(); });
-  const rows = CHART_ORDER.map(p => D.cmatch.find(r => r.s === p && r.u === CM_ST.u && r.z === CM_ST.z && r.v === CM_ST.v)).filter(Boolean);
-  const c = (v, t) => `<td class="${cls(t)}">${f1(v)} <small>t=${tf(t)}</small></td>`;
-  $("#cmtab").innerHTML = `<thead><tr><th>パターン</th><th>件数</th><th>シグナル日の平均騰落率</th><th>素の超過</th><th>同じ騰落率の日との差</th></tr></thead><tbody>` +
-    rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">${r.d}</span></td><td>${r.n.toLocaleString()}</td><td>${r.r0 > 0 ? "+" : ""}${r.r0.toFixed(1)}%</td>${c(r.raw, r.rt)}${c(r.adj, r.at)}</tr>`).join("") + "</tbody>";
-}
-const DT_ST = { v: "G" };
-function renderDouble() {
-  seg($("#dtseg"), [["A", "1日(翌日始値)"], ["C", "1日遅らせる"], ["G", "5日保有"]], DT_ST.v, v => { DT_ST.v = v; renderDouble(); });
-  const g = (u, z) => D.cvar.find(r => r.s === "ダブルトップ" && r.u === u && r.z === z && r.v === DT_ST.v);
-  $("#dttab").innerHTML = `<thead><tr><th>規模</th><th>全銘柄: サイン方向の超過</th><th>前半 / 後半</th><th>貸借のみ</th><th>前半 / 後半</th></tr></thead><tbody>` +
-    SIZES.map(z => { const a = g("全銘柄", z), b = g("貸借のみ", z); const cell = r => r ? `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)}</small></td><td>${f1(r.f)} / ${f1(r.l)}</td>` : `<td>–</td><td>–</td>`; return `<tr><td class="k">${z}</td>${cell(a)}${cell(b)}</tr>`; }).join("") + "</tbody>";
-}
-
 /* ---- technical indicator diagrams (計算して描く) ---- */
 const TECH_ORDER = ["ゴールデンクロス(5日×25日)","デッドクロス(5日×25日)","ゴールデンクロス(25日×75日)","デッドクロス(25日×75日)","上昇パーフェクトオーダー","下降パーフェクトオーダー","RSI 30以下に入る","RSI 70以上に入る","RSI 30を上抜け","RSI 70を下抜け","MACDがシグナルを上抜け","MACDがシグナルを下抜け","MACDがゼロを上抜け","MACDがゼロを下抜け","ボリンジャー -2σ割れ","ボリンジャー +2σ超え","ストキャスティクス 売られすぎでクロス上抜け","ストキャスティクス 買われすぎでクロス下抜け","乖離率 -10%以下に入る","乖離率 +10%以上に入る","一目: 雲を上抜け","一目: 雲を下抜け","一目: 転換線が基準線を上抜け(好転)","一目: 転換線が基準線を下抜け(逆転)","一目: 三役好転","一目: 三役逆転","DMI: +DIが-DIを上抜け(ADX>25)","DMI: +DIが-DIを下抜け(ADX>25)","パラボリックSAR 買い転換","パラボリックSAR 売り転換"];
 const tdirOf = p => (D.tmain.find(r => r.p === p) || {}).d;
@@ -1200,46 +1197,11 @@ const TDEF = [
 function renderTechDef() {
   $("#techdef").innerHTML = `<thead><tr><th>指標</th><th>パラメータ</th><th>買いのサイン</th><th>売りのサイン</th></tr></thead><tbody>` + TDEF.map(r => `<tr><td class="k">${r[0]}</td><td style="text-align:left">${r[1]}</td><td style="text-align:left;white-space:normal">${r[2]}</td><td style="text-align:left;white-space:normal">${r[3]}</td></tr>`).join("") + "</tbody>";
 }
-const TS_ST = { h: 1, mode: "m", u: "all", sel: null };
-function renderTechHeat() {
-  seg($("#thseg"), HS.map(h => [h, h === 0 ? "日中のみ" : h + "日"]), TS_ST.h, v => { TS_ST.h = v; renderTechHeat(); });
-  seg($("#tmseg"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], TS_ST.mode, v => { TS_ST.mode = v; renderTechHeat(); });
-  seg($("#tuseg"), [["all", "全銘柄"], ["mar", "貸借のみ"]], TS_ST.u, v => { TS_ST.u = v; renderTechHeat(); });
-  const data = TS_ST.u === "all" ? D.tmain : D.tmm, idx = {}; data.forEach(r => { idx[r.p + "|" + r.q + "|" + r.h] = r; });
-  let html = `<thead><tr><th>シグナル</th>${[1,2,3,4,5].map(q => `<th>分位${q}<small>${q === 1 ? "最小" : q === 5 ? "最大" : ""}</small></th>`).join("")}</tr></thead><tbody>`;
-  TECH_ORDER.forEach(p => {
-    const d = tdirOf(p);
-    html += `<tr><td class="k">${nm(p)}<span class="tag ${d === "買い" ? "buy" : "sell"}">${d}</span></td>`;
-    for (let q = 1; q <= 5; q++) {
-      const r = idx[p + "|" + q + "|" + TS_ST.h]; if (!r) { html += `<td class="c0">–</td>`; continue; }
-      const v = TS_ST.mode === "m" ? f1(r.m) : TS_ST.mode === "t" ? tf(r.t) : f1(r.net), on = TS_ST.sel && TS_ST.sel.p === p && TS_ST.sel.q === q;
-      html += `<td class="cell ${cls(r.t)}${on ? " sel" : ""}" data-p="${p}" data-q="${q}">${v}</td>`;
-    }
-    html += "</tr>";
-  });
-  $("#thm").innerHTML = html + "</tbody>";
-  $("#thm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { TS_ST.sel = { p: td.dataset.p, q: +td.dataset.q }; renderTechHeat(); });
-  const box = $("#tdetail");
-  if (!TS_ST.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率などが表示されます。</p>`; return; }
-  const r = idx[TS_ST.sel.p + "|" + TS_ST.sel.q + "|" + TS_ST.h];
-  box.innerHTML = `<div class="sec">${TS_ST.sel.p}(${r.d}) · 分位${TS_ST.sel.q} · 保有${TS_ST.h === 0 ? "日中のみ" : TS_ST.h + "日"}</div><div class="detail"><div><span>件数</span><b>${r.n.toLocaleString()}</b></div><div><span>平均(bp)</span><b>${f1(r.m)}</b></div><div><span>中央値(bp)</span><b>${f1(r.md)}</b></div><div><span>コスト後(bp)</span><b>${f1(r.net)}</b></div><div><span>勝率</span><b>${(r.w * 100).toFixed(0)}%</b></div><div><span>t 値</span><b>${tf(r.t)}</b></div></div>`;
-}
 function renderTechStack() {
   const cnt = rows => [1,2,3,4,5].map(q => { const rs = rows.filter(r => r.q === q); return { g: rs.filter(r => r.t >= 3.9).length, b: rs.filter(r => r.t <= -3.9).length, n: rs.length }; });
   const all = cnt(D.tmain), mar = cnt(D.tmm);
   const stack = (c, label) => `<div style="display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center"><span class="note">${label}</span><div class="stack"><i style="width:${c.g / c.n * 100}%;background:var(--good)"></i><i style="width:${c.b / c.n * 100}%;background:var(--bad)"></i></div><span class="note num">${c.g}/${c.b}</span></div>`;
   $("#tstack").innerHTML = [0,1,2,3,4].map(i => `<div class="brow"><div class="lab">分位${i + 1}${i === 0 ? "(売買代金 最小)" : i === 4 ? "(最大)" : ""}<small>サインどおり/逆向きの件数</small></div><div style="display:flex;flex-direction:column;gap:6px">${stack(all[i], "全銘柄")}${stack(mar[i], "貸借のみ")}</div></div>`).join("");
-}
-const TM_ST = { k: 1, v: "G", z: SIZES[0], u: "全銘柄" };
-function renderTechMatch() {
-  seg($("#tkseg"), [[1, "1日の騰落率"], [5, "5日の騰落率"]], TM_ST.k, v => { TM_ST.k = v; renderTechMatch(); });
-  seg($("#tvseg"), [["A", "1日"], ["G", "5日"]], TM_ST.v, v => { TM_ST.v = v; renderTechMatch(); });
-  seg($("#tzseg"), SIZES.map(z => [z, z]), TM_ST.z, v => { TM_ST.z = v; renderTechMatch(); });
-  seg($("#tcuseg"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], TM_ST.u, v => { TM_ST.u = v; renderTechMatch(); });
-  const rows = TECH_ORDER.map(p => D.tmatch.find(r => r.s === p && r.u === TM_ST.u && r.z === TM_ST.z && r.v === TM_ST.v && r.k === TM_ST.k)).filter(Boolean);
-  const c = (v, t) => `<td class="${cls(t)}">${f1(v)} <small>t=${tf(t)}</small></td>`;
-  $("#tmtab").innerHTML = `<thead><tr><th>シグナル</th><th>件数</th><th>基準期間の平均騰落率</th><th>素の超過</th><th>同じ騰落率の日との差</th></tr></thead><tbody>` +
-    rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">${r.d}</span></td><td>${r.n.toLocaleString()}</td><td>${r.r0 > 0 ? "+" : ""}${r.r0.toFixed(1)}%</td>${c(r.raw, r.rt)}${c(r.adj, r.at)}</tr>`).join("") + "</tbody>";
 }
 const TC_ST = { h: "5日保有" };
 function renderTechCost() {
@@ -1250,12 +1212,200 @@ function renderTechCost() {
     rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">サイン:${r.d}</span></td><td>${r.z}</td><td>${r.n.toLocaleString()}</td><td>${f1(r.g)}</td><td>${r.tk.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2)}</tr>`).join("") + "</tbody>";
 }
 
+/* ---- 共通: 時間軸(日足・週足・月足)つきの結果表 ---- */
+const TFN = { D: "日足", W: "週足", M: "月足" }, UNIT = { D: "日", W: "週", M: "か月" };
+const HZS = { D: [0, 1, 2, 3, 5, 10, 20], W: [0, 1, 2, 4, 8, 13], M: [0, 1, 2, 3, 6] };
+const GHN = { D: 5, W: 4, M: 3 }, KSN = { D: [1, 5], W: [1, 4], M: [1, 3] };
+const hlab = (h, tf) => h === 0 ? { D: "日中のみ", W: "週内のみ", M: "月内のみ" }[tf] : h + UNIT[tf];
+const FAMS = {
+  candle: { label: "パターン", order: () => ORDER, dirOf: p => dirOf(p), thr: 3.8, tfs: ["D", "W", "M"] },
+  chart: { label: "パターン", order: () => CHART_ORDER, dirOf: p => cdirOf(p), thr: 3.8, tfs: ["D", "W"] },
+  tech: { label: "シグナル", order: () => TECH_ORDER, dirOf: p => tdirOf(p), thr: 3.9, tfs: ["D", "W", "M"] },
+  zone: { label: "シグナル", order: () => ZONE_ORDER, dirOf: p => zdirOf(p), thr: 3.8, tfs: ["D", "W", "M"] },
+};
+const ST = {}, SM = {};
+const famData = (fam, tf) => (D.mtf[fam] || {})[tf];
+function ensureSkeleton(host, fam, kind) {
+  if (host.dataset.ready) return;
+  host.dataset.ready = "1";
+  if (kind === "heat") host.innerHTML = `<div class="ctl"><label>時間軸</label><div class="seg" id="${fam}-tf"></div><label>保有</label><div class="seg" id="${fam}-h"></div><label>表示</label><div class="seg" id="${fam}-m"></div><label>対象</label><div class="seg" id="${fam}-u"></div></div>
+    <div class="legend"><span><i style="background:var(--good-bg)"></i>有意にプラス</span><span><i style="background:var(--good-soft)"></i>やや有意(2 ≤ t)</span><span><i style="background:var(--bad-soft)"></i>やや有意にマイナス</span><span><i style="background:var(--bad-bg)"></i>有意にマイナス</span></div>
+    <div class="tw"><table class="hm" id="${fam}-hm"></table></div><div id="${fam}-detail"></div>`;
+  else host.innerHTML = `<div class="ctl"><label>時間軸</label><div class="seg" id="${fam}-mtf"></div><label>基準</label><div class="seg" id="${fam}-mk"></div><label>保有</label><div class="seg" id="${fam}-mv"></div><label>規模</label><div class="seg" id="${fam}-mz"></div><label>対象</label><div class="seg" id="${fam}-mu"></div></div><div class="tw"><table id="${fam}-mtab"></table></div>`;
+}
+function renderHeat(fam) {
+  const F = FAMS[fam], host = $("#" + fam + "-heat"); ensureSkeleton(host, fam, "heat");
+  const st = ST[fam] || (ST[fam] = { tf: "D", h: 1, mode: "m", u: "all", sel: null });
+  const redo = () => renderHeat(fam);
+  seg($("#" + fam + "-tf"), F.tfs.map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; if (!HZS[v].includes(st.h)) st.h = 1; st.sel = null; redo(); });
+  seg($("#" + fam + "-h"), HZS[st.tf].map(h => [h, hlab(h, st.tf)]), st.h, v => { st.h = v; redo(); });
+  seg($("#" + fam + "-m"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], st.mode, v => { st.mode = v; redo(); });
+  seg($("#" + fam + "-u"), [["all", "全銘柄"], ["mar", "貸借のみ"]], st.u, v => { st.u = v; redo(); });
+  const fd = famData(fam, st.tf), idx = {}; (st.u === "all" ? fd.main : fd.mm).forEach(r => { idx[r.p + "|" + r.q + "|" + r.h] = r; });
+  let html = `<thead><tr><th>${F.label}</th>${[1,2,3,4,5].map(q => `<th>分位${q}<small>${q === 1 ? "最小" : q === 5 ? "最大" : ""}</small></th>`).join("")}</tr></thead><tbody>`;
+  F.order().forEach(p => {
+    if (!Object.keys(idx).some(k => k.startsWith(p + "|"))) return;
+    const d = F.dirOf(p);
+    html += `<tr><td class="k">${nm(p)}<span class="tag ${d === "買い" ? "buy" : "sell"}">${d}</span></td>`;
+    for (let q = 1; q <= 5; q++) {
+      const r = idx[p + "|" + q + "|" + st.h]; if (!r) { html += `<td class="c0">–</td>`; continue; }
+      const v = st.mode === "m" ? f1(r.m) : st.mode === "t" ? tf(r.t) : f1(r.net), on = st.sel && st.sel.p === p && st.sel.q === q;
+      html += `<td class="cell ${cls(r.t)}${on ? " sel" : ""}" data-p="${p}" data-q="${q}">${v}</td>`;
+    }
+    html += "</tr>";
+  });
+  $("#" + fam + "-hm").innerHTML = html + "</tbody>";
+  $("#" + fam + "-hm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { st.sel = { p: td.dataset.p, q: +td.dataset.q }; redo(); });
+  host.querySelectorAll(".tfwarn").forEach(e => e.remove());
+  if (st.tf !== "D") host.insertAdjacentHTML("beforeend", `<p class="note tfwarn">${st.tf === "M" ? "月足は、1銘柄あたり約59本しかなく、移動平均や帯を作る期間を除くと、シグナルが出るのは直近の約2年分です。独立した期間が数個で、t値は参考値です。" : "週足は約260本(5年)です。日足より1銘柄あたりのシグナル数が少なく、偶然の当たりが混ざりやすくなります。"}</p>`);
+  const box = $("#" + fam + "-detail");
+  if (!st.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率などが表示されます。${TFN[st.tf]}の1本ごとに、次の足の始値で入ったときの結果です。</p>`; return; }
+  const r = idx[st.sel.p + "|" + st.sel.q + "|" + st.h]; if (!r) { box.innerHTML = ""; return; }
+  box.innerHTML = `<div class="sec">${st.sel.p}(${r.d}) · ${TFN[st.tf]} · 分位${st.sel.q} · 保有${hlab(st.h, st.tf)}</div><div class="detail"><div><span>件数</span><b>${r.n.toLocaleString()}</b></div><div><span>平均(bp)</span><b>${f1(r.m)}</b></div><div><span>中央値(bp)</span><b>${f1(r.md)}</b></div><div><span>コスト後(bp)</span><b>${f1(r.net)}</b></div><div><span>勝率</span><b>${(r.w * 100).toFixed(0)}%</b></div><div><span>t 値</span><b>${tf(r.t)}</b></div>${r.f != null ? `<div><span>前半の平均</span><b>${f1(r.f)}</b></div><div><span>後半の平均</span><b>${f1(r.l)}</b></div>` : ""}</div>`;
+}
+function renderMatch(fam) {
+  const F = FAMS[fam], host = $("#" + fam + "-match"); ensureSkeleton(host, fam, "match");
+  const st = SM[fam] || (SM[fam] = { tf: "D", k: 1, v: "G", z: SIZES[0], u: "全銘柄" });
+  const redo = () => renderMatch(fam);
+  seg($("#" + fam + "-mtf"), F.tfs.map(t => [t, TFN[t]]), st.tf, v => { st.tf = v; st.k = KSN[v][0]; redo(); });
+  if (!KSN[st.tf].includes(st.k)) st.k = KSN[st.tf][0];
+  seg($("#" + fam + "-mk"), KSN[st.tf].map(k => [k, k + UNIT[st.tf] + "の騰落率"]), st.k, v => { st.k = v; redo(); });
+  seg($("#" + fam + "-mv"), [["A", "次の1本"], ["G", GHN[st.tf] + UNIT[st.tf] + "保有"]], st.v, v => { st.v = v; redo(); });
+  seg($("#" + fam + "-mz"), SIZES.map(z => [z, z]), st.z, v => { st.z = v; redo(); });
+  seg($("#" + fam + "-mu"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], st.u, v => { st.u = v; redo(); });
+  const fd = famData(fam, st.tf), rows = F.order().map(p => fd.match.find(r => r.s === p && r.u === st.u && r.z === st.z && r.v === st.v && r.k === st.k)).filter(Boolean);
+  const c = (v, t) => `<td class="${cls(t)}">${f1(v)} <small>t=${tf(t)}</small></td>`;
+  $("#" + fam + "-mtab").innerHTML = `<thead><tr><th>${F.label}</th><th>件数</th><th>基準期間の平均騰落率</th><th>素の超過</th><th>同じ騰落率との差</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">${r.d}</span></td><td>${r.n.toLocaleString()}</td><td>${r.r0 > 0 ? "+" : ""}${r.r0.toFixed(1)}%</td>${c(r.raw, r.rt)}${c(r.adj, r.at)}</tr>`).join("") + "</tbody>";
+}
+function renderTfc(fam) {
+  const F = FAMS[fam];
+  const cnt = rows => { const g = rows.filter(r => r.t >= F.thr).length, b = rows.filter(r => r.t <= -F.thr).length, big = rows.filter(r => r.q === 5 && Math.abs(r.t) >= F.thr).length; return { g, b, big, n: rows.length }; };
+  let html = `<thead><tr><th>時間軸</th><th>検定数</th><th>全銘柄: サインどおり</th><th>全銘柄: 逆向き</th><th>貸借のみ: サインどおり</th><th>貸借のみ: 逆向き</th><th>最大分位(5)で有意</th></tr></thead><tbody>`;
+  F.tfs.forEach(t => {
+    const fd = famData(fam, t); if (!fd) return;
+    const a = cnt(fd.main), m = cnt(fd.mm);
+    html += `<tr><td class="k">${TFN[t]}</td><td>${a.n}</td><td class="${a.g ? "wp" : "c0"}">${a.g}</td><td class="${a.b ? "wn" : "c0"}">${a.b}</td><td class="${m.g ? "wp" : "c0"}">${m.g}</td><td class="${m.b ? "wn" : "c0"}">${m.b}</td><td class="${a.big ? "wp" : "c0"}">${a.big}</td></tr>`;
+  });
+  $("#" + fam + "-tfc").innerHTML = `<div class="tw"><table>${html}</tbody></table></div>`;
+}
+
+/* ---- 抵抗帯: 模式図とポップアップ ---- */
+const ZONE_ORDER = ["抵抗帯に到達(跳ね返される)","抵抗帯を上抜け","支持帯に到達(跳ね返す)","支持帯を下抜け","新高値更新(長期)","新高値更新(短期)","新安値更新(長期)","新安値更新(短期)"];
+const ZDIR = { "抵抗帯に到達(跳ね返される)": "売り", "抵抗帯を上抜け": "買い", "支持帯に到達(跳ね返す)": "買い", "支持帯を下抜け": "売り", "新高値更新(長期)": "買い", "新高値更新(短期)": "買い", "新安値更新(長期)": "売り", "新安値更新(短期)": "売り" };
+const zdirOf = p => ZDIR[p];
+function zoneMir(sp) { const m = 200; return { ...sp, pts: sp.pts.map(q => [q[0], m - q[1]]), band: sp.band ? [m - sp.band[1], m - sp.band[0]] : null, line: sp.line != null ? m - sp.line : null, role: sp.role === "抵抗帯" ? "支持帯" : sp.role }; }
+const ZP = [[0,96],[8,100],[16,95],[24,99],[32,94],[40,98.5],[48,101.5]];
+const ZS = {};
+ZS["抵抗帯に到達(跳ね返される)"] = { pts: [...ZP, [56,104.2],[62,101.8],[70,98.8]], band: [103.5,106.5], ev: 7, evl: "到達", role: "抵抗帯" };
+ZS["抵抗帯を上抜け"] = { pts: [...ZP, [56,104],[64,107.5],[72,110]], band: [103.5,106.5], ev: 8, evl: "上抜け", role: "抵抗帯" };
+ZS["支持帯に到達(跳ね返す)"] = zoneMir(ZS["抵抗帯に到達(跳ね返される)"]);
+ZS["支持帯を下抜け"] = zoneMir(ZS["抵抗帯を上抜け"]);
+ZS["新高値更新(長期)"] = { pts: [[0,96],[8,100],[16,97],[24,102],[32,99],[40,104],[48,101],[56,103],[64,106.5]], band: null, line: 104, ev: 8, evl: "更新" };
+ZS["新高値更新(短期)"] = ZS["新高値更新(長期)"];
+ZS["新安値更新(長期)"] = zoneMir(ZS["新高値更新(長期)"]); ZS["新安値更新(短期)"] = ZS["新安値更新(長期)"];
+function zoneSvg(sp) {
+  const W = 320, H = 168, px0 = 14, px1 = 228, pr0 = 240, pr1 = 308, top = 14, bot = 26;
+  const xs = sp.pts.map(q => q[0]), ys = sp.pts.map(q => q[1]).concat(sp.band || [], sp.line != null ? [sp.line] : []);
+  const x0 = Math.min(...xs), x1 = Math.max(...xs), lo = Math.min(...ys) - 1.5, hi = Math.max(...ys) + 1.5;
+  const X = x => px0 + (x - x0) / (x1 - x0) * (px1 - px0), Y = y => top + (1 - (y - lo) / (hi - lo)) * (H - top - bot);
+  let g = "";
+  if (sp.band) {
+    g += `<rect x="${px0}" y="${Y(sp.band[1])}" width="${px1 - px0}" height="${Y(sp.band[0]) - Y(sp.band[1])}" fill="var(--warn)" opacity=".2"/><text x="${px0 + 3}" y="${Y(sp.band[1]) - 3}" style="fill:var(--warn);font-weight:700">${sp.role}</text>`;
+    const nb = 20, c = (sp.band[0] + sp.band[1]) / 2, wd = (sp.band[1] - sp.band[0]) / 2 + .3;
+    for (let i = 0; i < nb; i++) {
+      const yl = lo + (hi - lo) * i / nb, yh = lo + (hi - lo) * (i + 1) / nb, ym = (yl + yh) / 2, v = .22 + .12 * Math.sin(ym * 1.7) + 1.5 * Math.exp(-(((ym - c) / wd) ** 2));
+      g += `<rect x="${pr1 - v / 1.9 * (pr1 - pr0)}" y="${Y(yh) + 1}" width="${v / 1.9 * (pr1 - pr0)}" height="${Y(yl) - Y(yh) - 2}" fill="${Math.abs(ym - c) < wd ? "var(--warn)" : "var(--dim)"}" opacity="${Math.abs(ym - c) < wd ? .85 : .4}"/>`;
+    }
+    g += `<text x="${(pr0 + pr1) / 2}" y="${H - 8}" text-anchor="middle">価格帯別出来高</text>`;
+  }
+  if (sp.line != null) g += `<line x1="${px0}" x2="${px1}" y1="${Y(sp.line)}" y2="${Y(sp.line)}" stroke="var(--warn)" stroke-width="1.6" stroke-dasharray="5 4"/><text x="${px0 + 3}" y="${Y(sp.line) - 3}" style="fill:var(--warn);font-weight:700">直前N本の${sp.line > 100 ? "高値" : "安値"}</text>`;
+  g += `<polyline fill="none" stroke="var(--fg)" stroke-width="2.2" stroke-linejoin="round" points="${sp.pts.map(q => X(q[0]) + "," + Y(q[1])).join(" ")}"/>`;
+  const e = sp.pts[sp.ev];
+  g += `<circle cx="${X(e[0])}" cy="${Y(e[1])}" r="4.6" fill="var(--good)"/><text x="${X(e[0]) - 6}" y="${Y(e[1]) + (sp.role === "支持帯" ? 14 : -8)}" text-anchor="end" style="fill:var(--good);font-weight:700">${sp.evl}(シグナル日)</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="抵抗帯の模式図">${g}</svg>`;
+}
+const ZTXT = {
+  "抵抗帯に到達(跳ね返される)": ["過去に出来高が集中した価格帯(抵抗帯)に株価が届き、その上端を超えられずに引けた日。戻り売りが出やすいとされる。", ["価格帯別出来高で、現在値より上で最も厚い帯(平均の2倍以上)=抵抗帯", "高値が抵抗帯の下端に初めて届く", "終値は抵抗帯の上端を超えない"]],
+  "抵抗帯を上抜け": ["終値が抵抗帯の上端を超えた日。上値の売り物をこなした突破とされる。", ["終値が抵抗帯の上端を初めて超える(前日は超えていない)"]],
+  "支持帯に到達(跳ね返す)": ["過去に出来高が集中した、現在値より下の価格帯(支持帯)に株価が届き、下端を割らずに引けた日。下支えになりやすいとされる。", ["価格帯別出来高で、現在値より下で最も厚い帯=支持帯", "安値が支持帯の上端に初めて届く", "終値は支持帯の下端を割らない"]],
+  "支持帯を下抜け": ["終値が支持帯の下端を割った日。下支えが崩れたとされる。", ["終値が支持帯の下端を初めて割る(前日は割っていない)"]],
+  "新高値更新(長期)": ["終値が、直前の長期間の高値を超えた日(日足250本=約1年、週足52本、月足12本)。上値の抵抗がなくなった状態とされる。", ["終値が、直前N本の高値を超える"]],
+  "新高値更新(短期)": ["終値が、直前の短期間の高値を超えた日(日足60本=約3か月、週足13本、月足6本)。", ["終値が、直前N本の高値を超える"]],
+  "新安値更新(長期)": ["終値が、直前の長期間の安値を割った日(日足250本、週足52本、月足12本)。", ["終値が、直前N本の安値を割る"]],
+  "新安値更新(短期)": ["終値が、直前の短期間の安値を割った日(日足60本、週足13本、月足6本)。", ["終値が、直前N本の安値を割る"]],
+};
+const ZRES = {
+  "抵抗帯に到達(跳ね返される)": "日足・小型株の売りは5日で +20.2bp(t=5.1)。跳ね返されるのは確かだが、実コストを入れるとマイナス",
+  "抵抗帯を上抜け": "日足・小型株の買いは翌日 −48.7bp(t=−10.7)。上抜けは、むしろ失敗(反転)しやすい",
+  "支持帯に到達(跳ね返す)": "日足・小型株の買いは翌日 +7.4bp(t=4.4)。教科書どおりだが小さい",
+  "新安値更新(長期)": "日足・小型株の売りは翌日 +23.9bp(t=7.8)で最も安定。ただし1ティックのスプレッドで消える",
+  "新高値更新(長期)": "日足・小型株の買いは、素では +0.4bp(t=0.1)。同じ騰落率の日と比べると +14.7bp(t=5.4)上回る",
+};
+const ZTIPS = {}; ZONE_ORDER.forEach(k => { ZTIPS[k] = 1; });
+function zoneTip(key) {
+  const [sum, cond] = ZTXT[key], d = zdirOf(key), res = ZRES[key];
+  const tag = `<span class="tag ${d === "買い" ? "buy" : "sell"}" style="margin:0">教科書: ${d}</span>`;
+  return `<h4>${key}${tag}</h4>${zoneSvg(ZS[key])}<p class="sum">${sum}</p><ul>${cond.map(c => `<li>${c}</li>`).join("")}</ul>${res ? `<div class="res">本検証: ${res}</div>` : ""}<p class="fn">模式図です(実際の株価ではありません)。橙の帯=抵抗帯(支持帯)、右の棒=価格帯別出来高、緑の点=シグナル日。</p>`;
+}
+
+/* ---- 週足ダブルトップの確認・抵抗帯のコスト・時間軸 ---- */
+const normN = n => n.replace(/\((長期|短期)・\d+本\)/, "($1)");
+const DT_ST2 = { tf: "W", v: "G" };
+function renderDouble() {
+  seg($("#dttf"), [["D", "日足"], ["W", "週足"]], DT_ST2.tf, v => { DT_ST2.tf = v; renderDouble(); });
+  seg($("#dtseg"), [["A", "次の1本"], ["C", "1本遅らせる"], ["G", GHN[DT_ST2.tf] + UNIT[DT_ST2.tf] + "保有"]], DT_ST2.v, v => { DT_ST2.v = v; renderDouble(); });
+  const src = DT_ST2.tf === "D" ? D.cvar : D.cvarW;
+  const g = (u, z) => src.find(r => r.s === "ダブルトップ" && r.u === u && r.z === z && r.v === DT_ST2.v);
+  $("#dttab").innerHTML = `<thead><tr><th>規模</th><th>全銘柄: サイン方向の超過</th><th>前半 / 後半</th><th>貸借のみ</th><th>前半 / 後半</th></tr></thead><tbody>` +
+    SIZES.map(z => { const a = g("全銘柄", z), b = g("貸借のみ", z); const cell = r => r ? `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)}</small></td><td>${f1(r.f)} / ${f1(r.l)}</td>` : `<td>–</td><td>–</td>`; return `<tr><td class="k">${z}</td>${cell(a)}${cell(b)}</tr>`; }).join("") + "</tbody>";
+}
+function renderWeekly() {
+  const c = (v, t) => `<td class="${t != null ? cls(t) : v > 0 ? "wp" : "wn"}">${f1(v)}${t != null ? ` <small>t=${tf(t)}</small>` : ""}</td>`;
+  $("#wktab").innerHTML = `<thead><tr><th>シグナル(4週保有)</th><th>対象</th><th>規模</th><th>件数</th><th>粗利</th><th>上位3週を除く粗利</th><th>1ティックの比率</th><th>① 純損益(20bp固定)</th><th>② 純損益(1ティック+貸株料)</th><th>③ 純損益(2ティック+貸株料)</th></tr></thead><tbody>` +
+    D.wk.filter(r => r.s === "ダブルトップ").map(r => `<tr><td class="k">${nm("ダブルトップ")}<span class="tag sell">売り</span></td><td>${r.u}</td><td>${r.z}</td><td>${r.n.toLocaleString()}</td>${c(r.g, r.t)}<td>${f1(r.x3)}</td><td>${r.tk.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2)}</tr>`).join("") + "</tbody>";
+  const ys = [2022, 2023, 2024, 2025, 2026];
+  $("#wkytab").innerHTML = `<thead><tr><th>対象</th><th>規模</th>${ys.map(y => `<th>${y}</th>`).join("")}</tr></thead><tbody>` +
+    ["全銘柄", "貸借のみ"].flatMap(u => [...SIZES, "全規模(分位1-5)"].map(z => `<tr><td class="k">${u}</td><td>${z}</td>${ys.map(y => { const r = D.wky.find(r => r.u === u && r.s === "ダブルトップ" && r.z === z && r.y === y); return r ? `<td class="${r.m > 20 ? "gp" : r.m > 0 ? "wp" : "gn"}">${f1(r.m)}</td>` : "<td>–</td>"; }).join("")}</tr>`)).join("") + "</tbody>";
+  const cfgs = [...new Set(D.wsens.map(r => r.c))];
+  $("#wkstab").innerHTML = `<thead><tr><th>設定</th><th>全銘柄</th><th>前半 / 後半</th><th>貸借のみ</th><th>前半 / 後半</th></tr></thead><tbody>` +
+    cfgs.map(k => { const a = D.wsens.find(r => r.c === k && r.u === "全銘柄"), b = D.wsens.find(r => r.c === k && r.u === "貸借のみ"); const cell = r => `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)} · n=${r.n.toLocaleString()}</small></td><td>${f1(r.f)} / ${f1(r.l)}</td>`; return `<tr><td class="k">${k}</td>${cell(a)}${cell(b)}</tr>`; }).join("") + "</tbody>";
+}
+const ZC_ST = { h: "5日保有" };
+function renderZoneCost() {
+  seg($("#zcseg"), [["1日保有", "1日保有"], ["5日保有", "5日保有"]], ZC_ST.h, v => { ZC_ST.h = v; renderZoneCost(); });
+  const c = (v, t) => `<td class="${t != null ? cls(t) : v > 0 ? "wp" : "wn"}">${f1(v)}${t != null ? ` <small>t=${tf(t)}</small>` : ""}</td>`;
+  $("#zcosttab").innerHTML = `<thead><tr><th>シグナル(ショート)</th><th>規模</th><th>件数</th><th>粗利</th><th>1ティックの比率</th><th>① 純損益(20bp固定)</th><th>② 純損益(1ティック+貸株料)</th><th>③ 純損益(2ティック+貸株料)</th></tr></thead><tbody>` +
+    D.zcost.filter(r => r.h === ZC_ST.h).map(r => `<tr><td class="k">${nm(normN(r.s))}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">サイン:${r.d}</span></td><td>${r.z}</td><td>${r.n.toLocaleString()}</td><td>${f1(r.g)}</td><td>${r.tk.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2)}</tr>`).join("") + "</tbody>";
+}
+const ZDEF = [["日足", "120本(約半年)", "5本ごと", "250本(約1年) / 60本(約3か月)"], ["週足", "52本(1年)", "1本ごと", "52本 / 13本"], ["月足", "36本(3年)", "1本ごと", "12本 / 6本"]];
+function renderZoneDef() {
+  $("#zonedef").innerHTML = `<thead><tr><th>時間軸</th><th>価格帯別出来高の窓</th><th>帯を作り直す間隔</th><th>新高値・新安値の長期 / 短期</th></tr></thead><tbody>` + ZDEF.map(r => `<tr><td class="k">${r[0]}</td><td style="text-align:left">${r[1]}</td><td style="text-align:left">${r[2]}</td><td style="text-align:left">${r[3]}</td></tr>`).join("") + "</tbody>";
+}
+const CF_ST = { tf: "月足", h: 1 };
+function renderTimeAxis() {
+  const fams = [["candle", "ローソク足"], ["chart", "チャートパターン"], ["tech", "テクニカル指標"], ["zone", "抵抗帯"]];
+  let html = `<thead><tr><th>分析</th><th>時間軸</th><th>検定数</th><th>全銘柄: サインどおり</th><th>全銘柄: 逆向き</th><th>貸借のみ: サインどおり</th><th>貸借のみ: 逆向き</th></tr></thead><tbody>`;
+  fams.forEach(([f, lab]) => FAMS[f].tfs.forEach(t => {
+    const fd = famData(f, t); if (!fd) return; const thr = FAMS[f].thr;
+    const cnt = rows => ({ g: rows.filter(r => r.t >= thr).length, b: rows.filter(r => r.t <= -thr).length, n: rows.length });
+    const a = cnt(fd.main), m = cnt(fd.mm);
+    html += `<tr><td class="k">${lab}</td><td>${TFN[t]}</td><td>${a.n}</td><td class="${a.g ? "wp" : "c0"}">${a.g}</td><td class="${a.b ? "wn" : "c0"}">${a.b}</td><td class="${m.g ? "wp" : "c0"}">${m.g}</td><td class="${m.b ? "wn" : "c0"}">${m.b}</td></tr>`;
+  }));
+  $("#tf-tfc").innerHTML = `<div class="tw"><table>${html}</tbody></table></div>`;
+  seg($("#tf-ctf"), [["週足", "週足のトレンド"], ["月足", "月足のトレンド"]], CF_ST.tf, v => { CF_ST.tf = v; renderTimeAxis(); });
+  seg($("#tf-ch"), [[1, "1日保有"], [5, "5日保有"]], CF_ST.h, v => { CF_ST.h = v; renderTimeAxis(); });
+  const base = z => D.confb.find(r => r.tf === CF_ST.tf && r.h === CF_ST.h && r.z === z);
+  $("#tf-ctab").innerHTML = `<thead><tr><th>分析</th><th>規模</th><th>一致</th><th>逆行</th><th>差(一致−逆行)</th><th>参考: トレンドだけの差</th></tr></thead><tbody>` +
+    D.conf.filter(r => r.tf === CF_ST.tf && r.h === CF_ST.h).map(r => { const b = base(r.z); return `<tr><td class="k">${r.f}</td><td>${r.z}</td><td>${f1(r.a)}</td><td>${f1(r.b)}</td><td class="${cls(r.t)}">${f1(r.d)} <small>t=${tf(r.t)}</small></td><td class="${cls(b.t)}">${f1(b.diff)} <small>t=${tf(b.t)}</small></td></tr>`; }).join("") + "</tbody>";
+}
+
 /* ---- boot ---- */
 (function () {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
-  renderSummary(); renderPatterns(); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartHeat(); renderChartStack(); renderChartMatch(); renderDouble(); renderTechDef(); renderTechHeat(); renderTechStack(); renderTechMatch(); renderTechCost();
+  renderSummary(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderHeat("zone"); renderMatch("zone"); renderTfc("zone"); renderZoneCost(); renderTimeAxis();
   showTab(location.hash.slice(1));
 })();
 </script>
