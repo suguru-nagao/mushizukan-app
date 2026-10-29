@@ -136,6 +136,12 @@ def match_rows(df):
                          raw="素の超過bp", rt="素のt", adj="同じ騰落率との差bp", at="差のt"))
 
 
+def hold_rows(df):
+    df = df.copy()
+    df["シグナル"] = df["シグナル"].map(zname)
+    return rows(df, dict(u="対象", k="基準日数", s="シグナル", d="方向", z="規模", h="保有", n="n", raw="素の超過bp", rt="素のt", adj="同じ騰落率との差bp", at="差のt"))
+
+
 ZPREF = [("zline", "線: "), ("zboth", "重なり: "), ("zvonly", "出来高のみ: "), ("zlonly", "線のみ: ")]
 
 
@@ -144,10 +150,10 @@ def split_zone(d):
     out = {}
     for fam, pre in ZPREF:
         out[fam] = {"main": [r for r in d["main"] if r["p"].startswith(pre)], "mm": [r for r in d["mm"] if r["p"].startswith(pre)],
-                    "match": [r for r in d["match"] if r["s"].startswith(pre)]}
+                    "match": [r for r in d["match"] if r["s"].startswith(pre)], "hold": [r for r in d.get("hold", []) if r["s"].startswith(pre)]}
     pres = tuple(x for _, x in ZPREF)
     out["zone"] = {"main": [r for r in d["main"] if not r["p"].startswith(pres)], "mm": [r for r in d["mm"] if not r["p"].startswith(pres)],
-                   "match": [r for r in d["match"] if not r["s"].startswith(pres)]}
+                   "match": [r for r in d["match"] if not r["s"].startswith(pres)], "hold": [r for r in d.get("hold", []) if not r["s"].startswith(pres)]}
     return out
 
 
@@ -166,6 +172,9 @@ def build_mtf():
         if not all(os.path.exists(os.path.join(HERE, x)) for x in (fm, fmm, fx)):
             continue
         d = {"main": main_rows(csv(fm)), "mm": main_rows(csv(fmm)), "match": match_rows(csv(fx))}
+        fh = os.path.join(HERE, f"results_{fam}_{tf}_hold.csv")
+        if os.path.exists(fh):
+            d["hold"] = hold_rows(csv(os.path.basename(fh)))
         if fam == "zone":
             for f2, dd in split_zone(d).items():
                 out.setdefault(f2, {})[tf] = dd
