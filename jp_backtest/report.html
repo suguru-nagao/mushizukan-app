@@ -301,30 +301,29 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 
   <section id="p-stock" class="panel" hidden>
     <div class="card">
-      <h2>銘柄別シグナル: この銘柄では、どの買いシグナルが過去に当たったか</h2>
-      <p class="lead">銘柄を選ぶと、その銘柄で出た買いシグナルの過去実績を、信頼度の高い順に並べます。1銘柄では件数が少なく、偶然の当たりが混ざるため、銘柄の平均を、<b>同じ規模(小型・中型・大型)の全銘柄の平均に寄せた「補正後」</b>の値で順位をつけています。数字は、翌日の始値で買い、指定した日数だけ持ったときの、同日・同規模の全銘柄平均との差(bp)です。</p>
+      <h2>銘柄別シグナル(週足): この銘柄では、どの買いシグナルが過去に当たったか</h2>
+      <p class="lead">週足のシグナルで、銘柄ごとに過去の実績を並べます。1銘柄では、週足のシグナルの件数がとても少ないので、<b>値動きの相関が高い同規模の銘柄(上位60銘柄)</b>の同じシグナルの成績を借りて推定します。翌週の始値で買い、指定した週数だけ持ったときの、同週・同規模の全銘柄平均との差(bp)です。データは、長期データ(2000年〜2026年10月23日の週)で、生存者バイアス(上場廃止銘柄を含まない)があります。</p>
       <div class="card verdict" style="gap:8px"><p id="sk-sum"></p></div>
       <div id="sk-ctls" style="display:flex;flex-direction:column;gap:2px">
         <div class="ctl" style="margin:0"><label style="min-width:4.5em">銘柄</label><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><input id="sk-q" type="search" placeholder="コード(例 9759)または会社名" style="padding:6px 12px;border-radius:10px;border:1px solid var(--line,#8886);background:transparent;color:inherit;font:inherit;min-width:16em"><span id="sk-res" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></div>
         <div class="ctl" style="margin:0"><label style="min-width:4.5em">保有</label><div class="seg" id="sk-h"></div></div>
         <div class="ctl" style="margin:0"><label style="min-width:4.5em">表示</label><div class="seg" id="sk-f"></div></div>
       </div>
+      <div id="sk-peers" class="note" style="margin:6px 0"></div>
       <div class="tw"><table class="gt" id="sk-tab"></table></div>
-      <div class="sec">信頼度(★0〜5)の数え方</div>
-      <ol class="pts">
-        <li><b>件数が20以上</b>(間引き後。同じ保有期間に重なる発生は1回と数える)</li>
-        <li><b>この銘柄の平均が有意</b>(t ≥ 2)</li>
-        <li><b>前半・後半とも正</b>(データ期間の前半・後半に分けて、どちらも平均がプラス)</li>
-        <li><b>同じ規模の全銘柄でも有意に正</b>(t ≥ 2)</li>
-        <li><b>補正後がコスト20bpを超える</b></li>
-      </ol>
-      <div class="sec">この選び方は、将来も当たるのか(検証)</div>
+      <div class="sec">推定値と信頼度(★0〜5)の数え方</div>
       <ul class="pts">
-        <li>前半のデータで選んだシグナルが、後半に当たったかを、全銘柄で調べました。<b>大型株では、銘柄固有の実績で選んでも、全銘柄の平均で選んでも、後半の成績との相関はほぼゼロ(0.00〜0.01)</b>でした。</li>
-        <li>小型株では、全銘柄の平均で選ぶ方法が、わずかに有効でした(相関 +0.04、上位3シグナルで後半 +11bp。コスト前)。中型株は、銘柄固有の実績が、わずかに良い結果でした(相関 +0.04)。</li>
-        <li>したがって、銘柄別の順位は、<b>補助情報</b>として使ってください。主な根拠は、「シグナル一覧」の、同じ規模での全銘柄の成績です。</li>
+        <li><b>推定</b>: 値動きの相関が高い、同じ規模の銘柄(上位60銘柄)の、同じシグナルの平均です。相関は、市場全体と規模ごとの平均を引いた週次リターンで計算します。<b>自身</b>は、その銘柄自身の平均(参考)です。</li>
+        <li>★は、次の5条件を満たした数です。①件数が10以上 ②この銘柄の平均が有意(t ≥ 2) ③前半・後半とも正 ④仲間の銘柄でも有意に正(t ≥ 2) ⑤推定がコスト20bpを超える</li>
       </ul>
-      <p class="note">買いシグナルのみ(売りシグナルは対象外)です。「直近の発生」は、最新のデータ日から数えた営業日数で、3営業日以内を「点灯中」と表示します。上場してからの期間が短い銘柄は、件数が不足します。</p>
+      <div class="sec">この推定は、将来も当たるのか(前半で選び、後半で確かめた検証)</div>
+      <div class="tw"><table class="gt" id="sk-val"></table></div>
+      <ul class="pts">
+        <li>2000年〜2026年の週足で、前半60%のデータで推定し、後半40%の実績と比べました(保有4週。検証できた約8万組)。</li>
+        <li><b>どの方法も、予測力はごく小さい</b>(相関 0.00〜0.02)。自身の平均だけで選ぶと、ほぼゼロ(-0.005)で、<b>他の銘柄から借りた推定のほうが、わずかに良い</b>(同規模 0.013、相関の高い銘柄 0.016、相関×規模 0.019)。ただし、同規模と相関×規模の差は、統計的に有意ではありません(差 +0.006、95%区間 -0.009〜+0.019)。</li>
+        <li>保有1週・12週や、期間・仲間の数を変えても、同じ傾向でした(最大でも0.024)。順位は<b>補助情報</b>として使い、主な根拠は、シグナル一覧の全銘柄の成績にしてください。</li>
+      </ul>
+      <p class="note">買いシグナルのみ。「直近の発生」は、最新の確定した週(2026年10月23日の週)からの週数で、2週以内を「点灯中」と表示します。</p>
     </div>
   </section>
 
@@ -855,13 +854,14 @@ async function slStock(tab, note) {
 const _dirCache = {};
 function dirLookup(fam, s) { const k = fam + "|" + s; if (!(k in _dirCache)) { const r = ((D.mtf[fam] || {}).D || (D.mtf[fam] || {}).W || {}).match; const x = r && r.find(q => q.s === s); _dirCache[k] = x ? x.d : "買い"; } return _dirCache[k]; }
 
-/* ---- 銘柄別シグナル ---- */
-const SK = { h: 10, f: "n20", stk: null, q: "" };
+/* ---- 銘柄別シグナル(週足) ---- */
+const SK = { h: 4, f: "n10", stk: null, q: "" };
 const SK_FAM = { candle: "ローソク足", chart: "チャート", tech: "テクニカル", zone: "抵抗帯・ライン" };
+const COST_BP = 20;
 async function renderStockTab() {
   if (SK.stk == null) { const i = D.stocks.findIndex(x => x[0] === "9759"); SK.stk = i >= 0 ? i : 0; }
-  seg($("#sk-h"), [5, 10, 20].map(h => [h, h + "日保有"]), SK.h, v => { SK.h = v; renderStockTab(); });
-  seg($("#sk-f"), [["n20", "件数20以上のみ"], ["all", "件数5以上すべて"]], SK.f, v => { SK.f = v; renderStockTab(); });
+  seg($("#sk-h"), [1, 4, 12].map(h => [h, h + "週保有"]), SK.h, v => { SK.h = v; renderStockTab(); });
+  seg($("#sk-f"), [["n10", "件数10以上のみ"], ["all", "件数3以上すべて"]], SK.f, v => { SK.f = v; renderStockTab(); });
   const q = $("#sk-q"), res = $("#sk-res"), st = D.stocks[SK.stk];
   const drawRes = () => {
     const t = SK.q.trim();
@@ -872,23 +872,28 @@ async function renderStockTab() {
   };
   q.oninput = e => { SK.q = e.target.value; drawRes(); }; drawRes();
   const tab = $("#sk-tab"), sum = $("#sk-sum");
-  tab.innerHTML = `<tbody><tr><td>読み込み中…</td></tr></tbody>`;
-  let meta, sh;
-  try { meta = await slLoad("report_data/rank_meta.json"); sh = await slLoad(`report_data/rank_${SK.h}_${Math.floor(SK.stk / 400)}.json`); }
-  catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
-  const size = ["小型", "中型", "大型"][meta.size[SK.stk]], last = meta.dates.length - 1;
-  let rows = (sh[meta.codes[SK.stk]] || []).filter(r => SK.f === "all" || r[1] >= 20);
-  rows.sort((a, b) => b[10] - a[10] || b[3] - a[3]);
-  const lamp = r => { const d = last - r[9]; return r[9] < 0 ? "–" : d <= 3 ? `<b style="color:var(--good)">点灯中</b>(${meta.dates[r[9]].slice(5)})` : meta.dates[r[9]].slice(5); };
+  tab.innerHTML = `<tbody><tr><td>読み込み中…</td></tr></tbody>`; $("#sk-peers").innerHTML = "";
+  let meta;
+  try { meta = await slLoad("report_data/wrank_meta.json"); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+  const ci = meta.codes.indexOf(st[4]);
+  if (ci < 0 || !meta.keep[ci]) { tab.innerHTML = `<tbody><tr><td>この銘柄は、長期データ(2000年〜)に十分な履歴がないため、推定できません。</td></tr></tbody>`; sum.textContent = `${st[0]} ${st[1]}: 履歴が不足しています(週足で約150週以上必要)。`; return; }
+  let sh;
+  try { sh = await slLoad(`report_data/wrank_${SK.h}_${Math.floor(ci / 400)}.json`); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+  const size = ["小型", "中型", "大型"][meta.size[ci]], last = meta.dates.length - 1;
+  $("#sk-peers").innerHTML = "相関の高い同規模の銘柄(上位5): " + meta.peers[ci].map(j => { const x = D.stocks.find(s => s[4] === meta.codes[j]); return x ? `${x[0]} ${x[1]}` : meta.codes[j].slice(0, 4); }).join("、");
+  let rows = (sh[meta.codes[ci]] || []).filter(r => SK.f === "all" || r[1] >= 10);
+  rows.sort((a, b) => b[11] - a[11] || b[3] - a[3]);
+  const lamp = r => { const d = last - r[10]; return r[10] < 0 ? "–" : d <= 2 ? `<b style="color:var(--good)">点灯中</b>(${meta.dates[r[10]].slice(5)}週)` : meta.dates[r[10]].slice(0, 7); };
   const star = n => `<span style="color:var(--warn);letter-spacing:1px">${"★".repeat(n)}<span style="opacity:.28">${"★".repeat(5 - n)}</span></span>`;
-  tab.innerHTML = `<thead><tr><th>分析</th><th>シグナル</th><th>信頼度</th><th>件数</th><th>平均</th><th>補正後</th><th>同規模の全銘柄<small>(平均 / t値)</small></th><th>勝率</th><th>前半 / 後半</th><th>直近の発生</th></tr></thead><tbody>` +
-    (rows.map(r => `<tr><td>${SK_FAM[meta.sigs[r[0]][1]]}</td><td class="k">${nm(meta.sigs[r[0]][0])}<span class="tag buy">買い</span></td><td>${star(r[10])}</td><td>${r[1]}</td><td class="${r[2] > 0 ? "wp" : "wn"}">${f1(r[2])}</td><td class="${r[3] > COST_BP ? "gp" : r[3] > 0 ? "wp" : "wn"}"><b>${f1(r[3])}</b></td><td>${f1(r[4])} <small>t=${r[5] == null ? "–" : tf(r[5])}</small></td><td>${r[6]}%</td><td>${r[7] == null ? "–" : f1(r[7])} / ${r[8] == null ? "–" : f1(r[8])}</td><td>${lamp(r)}</td></tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
-  const top = rows.filter(r => r[10] >= 3).length, lit = rows.filter(r => last - r[9] <= 3 && r[9] >= 0);
-  sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})は、直近2年の売買代金の分位で<b>${size}</b>です。${SK.h}日保有で、信頼度★3以上の買いシグナルは <b>${top} 件</b>。` +
-    (lit.length ? `最新のデータ日(${meta.dates[last]})から3営業日以内に点灯しているのは、${lit.map(r => nm(meta.sigs[r[0]][0]) + "(★" + r[10] + ")").join("、")}です。` : "直近3営業日に点灯しているシグナルはありません。") +
-    `${size === "大型" ? " <em>大型株は、全銘柄で見ても有意なシグナルが少なく、順位に予測力は確認できていません。</em>" : ""}`;
+  tab.innerHTML = `<thead><tr><th>分析</th><th>シグナル</th><th>信頼度</th><th>件数</th><th>自身<small>(平均 / t値)</small></th><th>推定</th><th>仲間<small>(件数 / t値)</small></th><th>勝率</th><th>前半 / 後半</th><th>直近の発生</th></tr></thead><tbody>` +
+    (rows.map(r => `<tr><td>${SK_FAM[meta.sigs[r[0]][1]]}</td><td class="k">${nm(meta.sigs[r[0]][0])}<span class="tag buy">買い</span></td><td>${star(r[11])}</td><td>${r[1]}</td><td class="${r[2] > 0 ? "wp" : "wn"}">${f1(r[2])} <small>t=${r[12] == null ? "–" : tf(r[12])}</small></td><td class="${r[3] > COST_BP ? "gp" : r[3] > 0 ? "wp" : "wn"}"><b>${f1(r[3])}</b></td><td>${r[5].toLocaleString()} <small>t=${r[6] == null ? "–" : tf(r[6])}</small></td><td>${r[7]}%</td><td>${r[8] == null ? "–" : f1(r[8])} / ${r[9] == null ? "–" : f1(r[9])}</td><td>${lamp(r)}</td></tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
+  const top = rows.filter(r => r[11] >= 3).length, lit = rows.filter(r => r[10] >= 0 && last - r[10] <= 2);
+  sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})は、売買代金の分位で<b>${size}</b>です。${SK.h}週保有で、信頼度★3以上の買いシグナルは <b>${top} 件</b>。` +
+    (lit.length ? `最新の確定週(${meta.dates[last]})から2週以内に点灯しているのは、${lit.map(r => nm(meta.sigs[r[0]][0]) + "(★" + r[11] + ")").join("、")}です。` : "直近2週に点灯しているシグナルはありません。") +
+    " <em>推定の予測力はごく小さいので、補助情報として見てください。</em>";
+  $("#sk-val").innerHTML = `<thead><tr><th>推定の方法</th><th>後半の成績との相関(全ペア)</th><th>95%区間</th><th>銘柄ごとの上位3シグナルの後半平均(bp)</th></tr></thead><tbody>` +
+    [["自身の平均だけ", "-0.005", "-0.016〜+0.004", "+1.1"], ["同規模の全銘柄の平均", "+0.013", "+0.003〜+0.023", "-6.7"], ["相関が高い銘柄(規模を問わない)", "+0.016", "+0.003〜+0.033", "+1.2"], ["相関が高い同規模の銘柄(採用)", "+0.019", "+0.006〜+0.033", "-0.8"], ["無作為に選ぶ", "–", "–", "-12.8"]].map(r => `<tr><td class="k">${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td></tr>`).join("") + "</tbody>";
 }
-const COST_BP = 20;
 
 /* ---- horizontal bars (zero-centred, optional cost line) ---- */
 function hbars(rows, { lo, hi, cost, unit = "bp" }) {
