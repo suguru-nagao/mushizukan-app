@@ -1,6 +1,6 @@
 """週足ベースの銘柄別シグナルタブ用データ(全銘柄・買いシグナル)を report_data/wrank_*.json に書く。
 
-推定値 = 値動きの相関が高い銘柄(上位K=200、規模は問わない)の、同じシグナルの平均(stock_pool2.py の corr200)。銘柄自身の平均は参考として併記する。
+推定値 = 値動きの相関が高い銘柄(上位K=200、規模は問わない)の、同じシグナルの平均(stock_pool3.py の「窓×上げ相場の週」)。銘柄自身の平均は参考として併記する。
 出力の形: {コード: [[シグナル番号, 件数, 自身の平均, 推定, 同規模全銘柄の平均, 仲間の件数, 仲間のt, 勝率%, 前半, 後半, 直近発生の週番号, 信頼度, 自身のt], ...]}
 """
 import json
@@ -9,12 +9,18 @@ import os
 import numpy as np
 
 import stock_pool as sp
+import stock_pool2 as p2
+import stock_pool3 as p3
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report_data")
 os.makedirs(OUT, exist_ok=True)
 K, SHARD, COST = 200, 400, 20.0
 NT, NC, NS = sp.NT, sp.NC, sp.NS
-nn, nn2, zmode, keep, avgcorr = sp.peers(NT, K)
+corr, keep = p3.corr_any(NT, ret="gap", regime="up")   # 窓(前週終値→始値)の連動を、上げ相場の週だけで測る
+_, zmode, _k = p2.corr_matrix(NT)
+nn = np.argsort(-corr, axis=1)[:, :K]
+valid = np.take_along_axis(corr, nn, 1) > -9
+avgcorr = float(np.mean(np.take_along_axis(corr, nn, 1)[valid]))
 peer5 = nn[:, :5]
 # 直近発生(間引く前)
 key = sp.SID.astype(np.int64) * NC + sp.C
@@ -51,7 +57,7 @@ for h in (1, 4, 12):
     np.add.at(gs, (E["sid"][ok], E["z"][ok]), E["x"][ok]); np.add.at(gn, (E["sid"][ok], E["z"][ok]), 1)
     size_mean = (gs / np.maximum(gn, 1))[:, zmode]
     # 仲間(相関が高い同規模の銘柄)
-    pn = n[:, nn].sum(2); ps = s[:, nn].sum(2); pq = q[:, nn].sum(2)
+    pn = (n[:, nn] * valid[None]).sum(2); ps = (s[:, nn] * valid[None]).sum(2); pq = (q[:, nn] * valid[None]).sum(2)
     pm = np.where(pn > 0, ps / np.maximum(pn, 1), np.nan)
     psd = np.sqrt(np.maximum(pq / np.maximum(pn, 1) - pm ** 2, 0))
     # 仲間のt値は、同じ週に複数銘柄が重なる分を考慮して、件数を1/3に割り引いた近似
