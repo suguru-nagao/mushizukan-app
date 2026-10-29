@@ -16,7 +16,7 @@ import numpy as np
 
 import backtest as bt
 
-Z = np.load(os.path.join(bt.CACHE, "stock_events_w.npz"), allow_pickle=True)
+Z = np.load(os.path.join(bt.CACHE, "stock_events_w_sell.npz" if os.environ.get("SELL") == "1" else "stock_events_w.npz"), allow_pickle=True)
 SID, T, C, SZ = Z["sid"].astype(np.int32), Z["t"].astype(np.int32), Z["c"].astype(np.int32), Z["z"].astype(np.int8)
 NAMES, FAMS, DATES, CODES = Z["names"], Z["fams"], Z["dates"], Z["codes"]
 RET, SIZE = Z["ret"], Z["size"]
