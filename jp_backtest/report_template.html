@@ -165,19 +165,9 @@ td small, th small { color: var(--dim); font-weight: 400; font-size: 11.5px; mar
 .stack { display: flex; height: 22px; border-radius: 7px; overflow: hidden; background: var(--surface2); }
 .stack i { display: block; height: 100%; }
 
-.gloss { padding: 0; gap: 0; }
-.gloss > summary { cursor: pointer; padding: 16px 24px; font-weight: 700; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 9px; }
-.gloss > summary::-webkit-details-marker { display: none; }
-.gloss > summary::before { content: ""; width: 4px; height: 15px; border-radius: 2px; background: var(--accent); }
-.gloss > summary::after { content: "▾"; margin-left: auto; color: var(--dim); transition: transform .15s; }
-.gloss:not([open]) > summary::after { transform: rotate(-90deg); }
-.gloss .gl { padding: 0 24px 22px; }
-.gloss .sub h3 { color: var(--accent); }
-.gloss .wide { grid-column: span 2; }
-@media (max-width: 760px) { .gloss .wide { grid-column: auto; } }
+.gl .wide { grid-column: 1 / -1; }
 table.gt { font-size: 12.5px; }
 table.gt th, table.gt td { padding: 5px 10px; }
-@media (max-width: 640px) { .gloss > summary { padding: 14px; } .gloss .gl { padding: 0 14px 16px; } }
 svg text { fill: var(--dim); font-family: var(--font); font-size: 11px; }
 svg .ax { stroke: var(--line); stroke-width: 1; }
 svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
@@ -206,28 +196,9 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <span class="chip"><b class="num">1,220</b> 営業日</span>
       <span class="chip">往復コスト <b>20bp</b>(0.2%)</span>
       <span class="chip">有意の目安 <b>|t| ≥ 3.8</b></span>
+      <a class="chip" href="#terms" style="color:var(--accent);text-decoration:none">bp・分位とは? → 用語</a>
     </div>
   </header>
-
-  <details class="card gloss" open>
-    <summary>用語の説明(bp・分位・超過リターンなど)</summary>
-    <div class="grid gl">
-      <div class="sub"><h3>bp(ベーシスポイント)</h3><p class="big">1bp = 0.01%、100bp = 1% です。<b>+20bp</b> は 0.2% 値上がり(売りなら値下がり)したという意味で、100万円の取引なら 2,000円にあたります。往復コスト 20bp は、100万円あたり 2,000円の手数料・スプレッドを想定しています。</p></div>
-      <div class="sub wide"><h3>分位(売買代金の分位)</h3><p class="big">その日の対象銘柄を、直近20日の売買代金(株価×出来高)の中央値が小さい順に並べて<b>5等分</b>したグループです。<b>分位1 = 最小(下位20%)、分位5 = 最大(上位20%)</b>。数字は大きさではなく順位の区分です。</p>
-        <div class="tw"><table class="gt"><thead><tr><th>分位</th><th>全銘柄の中で</th><th>貸借銘柄の中で</th></tr></thead><tbody>
-          <tr><td>分位1(最小)</td><td>0.02億円</td><td>0.06億円</td></tr>
-          <tr><td>分位2</td><td>0.09億円</td><td>0.56億円</td></tr>
-          <tr><td>分位3</td><td>0.54億円</td><td>2.1億円</td></tr>
-          <tr><td>分位4</td><td>2.7億円</td><td>7.1億円</td></tr>
-          <tr><td>分位5(最大)</td><td>25億円</td><td>50億円</td></tr></tbody></table></div>
-        <p class="note">各分位の「1日の売買代金(20日中央値)」の中央値。直近日の値です。</p>
-        <p class="note">「小型」= 分位1〜2、「中型」= 分位3、「大型」= 分位4〜5。時価総額ではなく、売買代金で分けています。</p></div>
-      <div class="sub"><h3>方向付き超過リターン</h3><p class="big">銘柄のリターンから、<b>同じ日・同じ分位の全銘柄の平均</b>を引いた値です(相場全体の上げ下げを除くため)。売りサインやショートでは符号を反転しているので、<b>プラスは「サインどおりに動いた(売りなら下がった)」</b>ことを表します。</p></div>
-      <div class="sub"><h3>t値と「有意」</h3><p class="big">平均が 0 とどれだけ違うかの目安で、大きいほど偶然の可能性が低くなります。多数の組み合わせを試しているので、偶然の当たりを避けるため <b>|t| ≥ 3.8</b> を「有意」としています。</p></div>
-      <div class="sub"><h3>保有日数・エントリー</h3><p class="big">シグナルが出た日の<b>翌営業日の始値</b>で入り、h日後の始値で出ます。「日中のみ」は翌営業日の始値→終値、「1日遅らせる」はさらに1日後から入る場合です。</p></div>
-      <div class="sub"><h3>前半・後半、貸借銘柄</h3><p class="big">期間を 2024-04-26 で2つに分け、両方で同じ結果になるかを見ています。<b>貸借銘柄</b>は信用売り(ショート)ができる銘柄で、各日付の時点の指定で判定しています。</p></div>
-    </div>
-  </details>
 
   <!-- 1. 結論 -->
   <section id="p-summary" class="panel" hidden>
@@ -423,12 +394,35 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <p class="note">この資料は過去データの検証結果で、将来の成績を保証するものでも、投資の推奨でもありません。</p>
     </div>
   </section>
+  <!-- 8. 用語 -->
+  <section id="p-terms" class="panel" hidden>
+    <div class="card">
+      <h2>用語の説明</h2>
+      <p class="lead">このレポートで使っている単位と言葉の説明です。数字の読み方に迷ったときに見てください。</p>
+      <div class="grid2 gl">
+      <div class="sub"><h3>bp(ベーシスポイント)</h3><p class="big">1bp = 0.01%、100bp = 1% です。<b>+20bp</b> は 0.2% 値上がり(売りなら値下がり)したという意味で、100万円の取引なら 2,000円にあたります。往復コスト 20bp は、100万円あたり 2,000円の手数料・スプレッドを想定しています。</p></div>
+      <div class="sub"><h3>方向付き超過リターン</h3><p class="big">銘柄のリターンから、<b>同じ日・同じ分位の全銘柄の平均</b>を引いた値です(相場全体の上げ下げを除くため)。売りサインやショートでは符号を反転しているので、<b>プラスは「サインどおりに動いた(売りなら下がった)」</b>ことを表します。</p></div>
+      <div class="sub wide"><h3>分位(売買代金の分位)</h3><p class="big">その日の対象銘柄を、直近20日の売買代金(株価×出来高)の中央値が小さい順に並べて<b>5等分</b>したグループです。<b>分位1 = 最小(下位20%)、分位5 = 最大(上位20%)</b>。数字は大きさではなく順位の区分です。</p>
+        <div class="tw"><table class="gt"><thead><tr><th>分位</th><th>全銘柄の中で</th><th>貸借銘柄の中で</th></tr></thead><tbody>
+          <tr><td>分位1(最小)</td><td>0.02億円</td><td>0.06億円</td></tr>
+          <tr><td>分位2</td><td>0.09億円</td><td>0.56億円</td></tr>
+          <tr><td>分位3</td><td>0.54億円</td><td>2.1億円</td></tr>
+          <tr><td>分位4</td><td>2.7億円</td><td>7.1億円</td></tr>
+          <tr><td>分位5(最大)</td><td>25億円</td><td>50億円</td></tr></tbody></table></div>
+        <p class="note">各分位の「1日の売買代金(20日中央値)」の中央値。直近日の値です。</p>
+        <p class="note">「小型」= 分位1〜2、「中型」= 分位3、「大型」= 分位4〜5。時価総額ではなく、売買代金で分けています。</p></div>
+      <div class="sub"><h3>t値と「有意」</h3><p class="big">平均が 0 とどれだけ違うかの目安で、大きいほど偶然の可能性が低くなります。多数の組み合わせを試しているので、偶然の当たりを避けるため <b>|t| ≥ 3.8</b> を「有意」としています。</p></div>
+      <div class="sub"><h3>保有日数・エントリー</h3><p class="big">シグナルが出た日の<b>翌営業日の始値</b>で入り、h日後の始値で出ます。「日中のみ」は翌営業日の始値→終値、「1日遅らせる」はさらに1日後から入る場合です。</p></div>
+      <div class="sub"><h3>前半・後半、貸借銘柄</h3><p class="big">期間を 2024-04-26 で2つに分け、両方で同じ結果になるかを見ています。<b>貸借銘柄</b>は信用売り(ショート)ができる銘柄で、各日付の時点の指定で判定しています。</p></div>
+      <div class="sub"><h3>往復コスト・粗利・純損益</h3><p class="big"><b>往復コスト</b>は、買って売る(売って買い戻す)ときにかかる費用の目安で、手数料やスプレッド(売値と買値の差)などを含みます。<b>粗利</b>はコストを引く前の平均損益、<b>純損益</b>はそこからコストを引いた値です。ショートでは貸株料も引きます。</p></div>
+    </div>
+  </section>
 </div>
 
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["margin","貸借銘柄"],["notes","注意点"]];
+const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
