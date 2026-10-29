@@ -16,7 +16,7 @@ import timeframe as tfm
 from mtf_run import signals
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-HOLDS = {"D": [5, 10, 20, 30], "W": [1, 2, 4, 6]}
+HOLDS = {"D": [5, 10, 20, 30], "W": [1, 2, 4, 6], "M": [1, 2, 3, 6]}
 
 
 def hold_table(P, sigs, holds, universe=None, label="全銘柄", k=1):

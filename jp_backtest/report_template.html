@@ -712,8 +712,8 @@ function slScore(a, b) { // a: 選択した対象、b: もう一方の対象
 function renderSignalList() {
   const tfs = ["D", "W", "M", "WL", "ML"].filter(t => SL_FAMS.some(([f]) => (D.mtf[f] || {})[t]));
   seg($("#sl-tf"), tfs.map(t => [t, TFN[t]]), SL.tf, v => { SL.tf = v; renderSignalList(); });
-  const hasHold = ["D", "W"].includes(SL.tf) && SL_FAMS.some(([f]) => ((D.mtf[f] || {})[SL.tf] || {}).hold);
-  const hopts = hasHold ? [["A", "次の1本"], ...(SL.tf === "D" ? [5, 10, 20, 30] : [1, 2, 4, 6]).map(h => [h, h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "")])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
+  const hasHold = ["D", "W", "M"].includes(SL.tf) && SL_FAMS.some(([f]) => ((D.mtf[f] || {})[SL.tf] || {}).hold);
+  const hopts = hasHold ? [["A", "次の1本"], ...(SL.tf === "D" ? [5, 10, 20, 30] : SL.tf === "W" ? [1, 2, 4, 6] : [1, 2, 3, 6]).map(h => [h, h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "")])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
   if (!hopts.some(o => o[0] === SL.v)) SL.v = "A";
   seg($("#sl-v"), hopts, SL.v, v => { SL.v = v; renderSignalList(); });
   seg($("#sl-u"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], SL.u, v => { SL.u = v; renderSignalList(); });
@@ -739,7 +739,7 @@ function renderSignalList() {
   $("#sl-tab").innerHTML = html + "</tbody>";
   $("#sl-tab").querySelectorAll("tr.slrow").forEach(tr => tr.onclick = e => { if (e.target.closest("a,.nm,[data-tip]")) return; SL.sel = SL.sel === tr.dataset.k ? null : tr.dataset.k; renderSignalList(); });
   const n3 = rows.filter(w => w.best >= 3).length, n4 = rows.filter(w => w.best >= 4).length;
-  $("#sl-sum").innerHTML = `${TFN[SL.tf]}・${SL.u}・${SL.v === "A" ? "次の1本" : typeof SL.v === "number" ? SL.v + UNIT[SL.tf] + "保有" : "延長保有"}の${rows.length}シグナルのうち、いずれかの規模で<b>★3以上は ${n3} 件</b>、<b>★4(全条件)は ${n4} 件</b>です。` + (n4 ? "" : "<em>全条件を満たす形はありません</em>。") + `★が多くても、条件③のコストは固定の往復20bpで、ショートの実コストや、規模ごとの件数の少なさは反映していません。`;
+  $("#sl-sum").innerHTML = `${TFN[SL.tf]}・${SL.u}・${SL.v === "A" ? "次の1本" : typeof SL.v === "number" ? SL.v + UNIT[SL.tf] + "保有" : "延長保有"}の${rows.length}シグナルのうち、いずれかの規模で<b>★3以上は ${n3} 件</b>、<b>★4(全条件)は ${n4} 件</b>です。` + (n4 ? "" : "<em>全条件を満たす形はありません</em>。") + `★が多くても、条件③のコストは固定の往復20bpで、ショートの実コストや、規模ごとの件数の少なさは反映していません。` + (SL.tf === "M" ? "<br><em>月足は、独立した期間が数個しかなく(5年のデータで、シグナルが出るのは直近の約2年分、6か月保有は重なりも大きい)、★が多くてもt値は過大です。参考程度に見てください。</em>" : "");
 }
 
 /* ---- horizontal bars (zero-centred, optional cost line) ---- */
