@@ -33,8 +33,10 @@ def prep(h):
     return dict(sid=SID[idx], c=C[idx], t=T[idx], z=SZ[idx], x=Z[f"x{h}"][idx].astype(np.float64) * 1e4)
 
 
-def fit(E, mask):
+def fit(E, mask, zsel=None):
     """mask の期間のデータで、(シグナル, 銘柄) ごとの推定値を作る。返値: dict[(sid,c)] -> (n, 平均, 縮小推定, 全銘柄平均)。"""
+    if zsel is not None:
+        mask = mask & (E["z"] == zsel)   # 規模(0=小型 1=中型 2=大型)で分けて推定する
     sid, c, z, x = E["sid"][mask], E["c"][mask], E["z"][mask], E["x"][mask]
     ok = ~np.isnan(x); sid, c, z, x = sid[ok], c[ok], z[ok], x[ok]
     # 全銘柄の平均(シグナル×規模)
@@ -64,12 +66,14 @@ def fit(E, mask):
     return dict(keys=uk, sid=s_sid, c=(uk % NC).astype(int), n=n, mean=m, pooled=pooled, est=est, w=w, tau2=tau2)
 
 
-def validate(h):
+def validate(h, zsel=None):
     E = prep(h)
     tr = E["t"] < SPLIT
-    F = fit(E, tr)
+    F = fit(E, tr, zsel)
     # 後半の実績
     te = (~tr) & ~np.isnan(E["x"])
+    if zsel is not None:
+        te = te & (E["z"] == zsel)
     k_te = E["sid"][te].astype(np.int64) * NC + E["c"][te]
     pos = np.searchsorted(F["keys"], k_te)
     pos = np.clip(pos, 0, len(F["keys"]) - 1)
@@ -78,7 +82,7 @@ def validate(h):
     # (シグナル, 銘柄)単位の後半平均
     nte = np.bincount(p, minlength=len(F["keys"])); mte = np.bincount(p, xt, len(F["keys"])) / np.maximum(nte, 1)
     use = (F["n"] >= 5) & (nte >= 3)
-    out = {"対象(シグナル×銘柄)": int(use.sum())}
+    out = {"対象(シグナル×銘柄)": int(use.sum()), "規模": zsel}
     for nm, v in (("銘柄の素の平均", F["mean"]), ("縮小推定", F["est"]), ("全銘柄平均のみ", F["pooled"])):
         out["相関:" + nm] = float(np.corrcoef(v[use], mte[use])[0, 1])
     # 銘柄ごとに、推定上位3シグナルを選んだときの後半実績
@@ -98,46 +102,64 @@ def validate(h):
     return out
 
 
+def stock_size(ci, E):
+    """銘柄の規模: 直近2年のシグナル発生時点の規模の最頻値(なければ全期間)。"""
+    m = (E["c"] == ci) & (E["t"] >= len(DATES) - 500)
+    if m.sum() == 0:
+        m = E["c"] == ci
+    return int(np.bincount(E["z"][m], minlength=3).argmax())
+
+
+def pooled_t(E, zsel, h):
+    """同じ規模の全銘柄での、シグナルごとの平均のt値(同じ日・保有期間の重なりをブロックでまとめた値)。"""
+    out = np.full(NS, np.nan)
+    for i in range(NS):
+        m = (E["sid"] == i) & (E["z"] == zsel) & ~np.isnan(E["x"])
+        if m.sum() > 50:
+            out[i] = bt.cluster_t(E["x"][m] / 1e4, E["t"][m], max(h, 5))
+    return out
+
+
 def report(code, h):
     code5 = code if len(code) == 5 else code + "0"
     ci = list(CODES).index(code5)
     E = prep(h)
-    tr = E["t"] < SPLIT
-    allm = np.ones(len(E["t"]), bool)
-    F = fit(E, allm)
-    F1 = fit(E, tr)
+    zs = stock_size(ci, E)
+    F = fit(E, np.ones(len(E["t"]), bool), zs)
+    pt = pooled_t(E, zs, h)
     sel = F["c"] == ci
     rows = []
     for j in np.flatnonzero(sel):
         i = F["sid"][j]
-        m = (E["sid"] == i) & (E["c"] == ci) & ~np.isnan(E["x"])
+        m = (E["sid"] == i) & (E["c"] == ci) & (E["z"] == zs) & ~np.isnan(E["x"])
         x = E["x"][m]; t = E["t"][m]
         a, b = x[t < SPLIT], x[t >= SPLIT]
-        last = int(t.max()) if len(t) else -1
-        rows.append(dict(sig=NAMES[i], fam=FAMS[i], n=len(x), mean=x.mean(), est=F["est"][j], pooled=F["pooled"][j], w=F["w"][j],
+        last = int(E["t"][(E["sid"] == i) & (E["c"] == ci)].max())
+        rows.append(dict(sig=NAMES[i], fam=FAMS[i], n=len(x), mean=x.mean(), est=F["est"][j], pooled=F["pooled"][j], pt=pt[i], w=F["w"][j],
                          win=(x > 0).mean(), t=x.mean() / (x.std(ddof=1) / np.sqrt(len(x))) if len(x) > 2 and x.std() > 0 else np.nan,
                          f=a.mean() if len(a) else np.nan, l=b.mean() if len(b) else np.nan, na=len(a), nb=len(b),
-                         recent=DATES[last] if last >= 0 else "", tau=F["tau2"][i] ** 0.5))
+                         recent=DATES[last], tau=F["tau2"][i] ** 0.5, size=["小型", "中型", "大型"][zs]))
     return rows
 
 
 def score(r):
-    """信頼度(0〜5)。条件: 件数20以上 / 平均が有意(t≥2) / 前半・後半とも正 / 全銘柄の平均も正 / 補正後がコスト20bpを超える。"""
-    c = [r["n"] >= 20, r["t"] >= 2, r["f"] > 0 and r["l"] > 0, r["pooled"] > 0, r["est"] > COST]
+    """信頼度(0〜5)。条件: 件数20以上 / 平均が有意(t≥2) / 前半・後半とも正 / 同じ規模の全銘柄でも有意に正(t≥2) / 補正後がコスト20bpを超える。"""
+    c = [r["n"] >= 20, r["t"] >= 2, r["f"] > 0 and r["l"] > 0, r["pt"] >= 2, r["est"] > COST]
     return sum(bool(x) for x in c), c
 
 
 if __name__ == "__main__":
     if sys.argv[1] == "--validate":
         for h in (5, 10, 20):
-            print(h, validate(h))
+            for z in (None, 0, 1, 2):
+                print(h, validate(h, z))
     else:
         h = int(sys.argv[2]) if len(sys.argv) > 2 else 10
         rows = report(sys.argv[1], h)
         for r in rows:
             r["score"], r["c"] = score(r)
         big = sorted([r for r in rows if r["n"] >= 20], key=lambda r: (-r["score"], -r["est"]))
-        print(f"{sys.argv[1]} 買いシグナル(翌日始値で買い、{h}日保有、同日・同規模の全銘柄平均との差bp)。件数20未満の{len(rows) - len(big)}シグナルは、件数不足で除外")
-        print(f"{'シグナル':<30}{'信頼度':>6}{'件数':>5}{'平均':>8}{'補正後':>8}{'全銘柄':>8}{'勝率':>6}{'前半':>8}{'後半':>8}  直近の発生")
+        print(f"規模: {rows[0]['size']}。" + f"{sys.argv[1]} 買いシグナル(翌日始値で買い、{h}日保有、同日・同規模の全銘柄平均との差bp)。件数20未満の{len(rows) - len(big)}シグナルは、件数不足で除外")
+        print(f"{'シグナル':<30}{'信頼度':>6}{'件数':>5}{'平均':>8}{'補正後':>8}{'同規模全銘柄':>10}{'勝率':>6}{'前半':>8}{'後半':>8}  直近の発生")
         for r in big:
-            print(f"{r['sig']:<30}{'★' * r['score'] + '☆' * (5 - r['score']):>8}{r['n']:>5}{r['mean']:>8.1f}{r['est']:>8.1f}{r['pooled']:>8.1f}{r['win']:>6.0%}{r['f']:>8.1f}{r['l']:>8.1f}  {r['recent']}")
+            print(f"{r['sig']:<30}{'★' * r['score'] + '☆' * (5 - r['score']):>8}{r['n']:>5}{r['mean']:>8.1f}{r['est']:>8.1f}{r['pooled']:>8.1f}(t={r['pt']:.1f}){r['win']:>6.0%}{r['f']:>8.1f}{r['l']:>8.1f}  {r['recent']}")
