@@ -28,21 +28,26 @@ sec_idx = np.full(NC, -1)
 sec_idx[SEC != ""] = SECID[1]
 
 
-def corr_matrix(t_split):
+def corr_matrix(t_split, window=None, t_start=None):
     """peers() と同じ手順の相関行列(残差の相関)。(corr, zmode, keep)"""
-    r = sp.RET[1:t_split].astype(np.float64); sz = sp.SIZE[1:t_split]
+    a = 1 if window is None else max(1, t_split - window)
+    if t_start is not None:
+        a = t_start
+    r = sp.RET[a:t_split].astype(np.float64); sz = sp.SIZE[a:t_split]
+    minobs = 150 if window is None else min(150, int((t_split - a) * 0.7))
+    minov = 100 if window is None else min(100, int((t_split - a) * 0.5))
     res = np.full_like(r, np.nan)
     for z in range(3):
         m = (sz == z) & ~np.isnan(r)
         s = np.where(m, r, 0).sum(1); c = m.sum(1)
         res = np.where(m, r - np.where(c > 0, s / np.maximum(c, 1), np.nan)[:, None], res)
     res = np.clip(res, -0.3, 0.3)
-    ok = ~np.isnan(res); cnt = ok.sum(0); keep = cnt >= 150
+    ok = ~np.isnan(res); cnt = ok.sum(0); keep = cnt >= minobs
     x = np.where(ok, res, 0.0); sd = np.sqrt((x ** 2).sum(0) / np.maximum(cnt, 1))
     x = np.clip(x / np.where(sd > 0, sd, 1), -4, 4)
     corr = (x.T @ x) / np.maximum(ok.T.astype(np.float32) @ ok.astype(np.float32), 1)
     ov = ok.T.astype(np.float32) @ ok.astype(np.float32)
-    corr[ov < 100] = -9; corr[~keep, :] = -9; corr[:, ~keep] = -9
+    corr[ov < minov] = -9; corr[~keep, :] = -9; corr[:, ~keep] = -9
     np.fill_diagonal(corr, -9)
     zmode = np.array([np.bincount(sz[:, j][sz[:, j] >= 0].astype(int), minlength=3).argmax() if (sz[:, j] >= 0).any() else 1 for j in range(NC)])
     return corr, zmode, keep
@@ -69,8 +74,8 @@ def topk_pool(n, sm, corr, mask, K):
     return np.where(pn >= 10, ps / np.maximum(pn, 1), np.nan)
 
 
-def methods(E, t_split, Ks=(15, 30, 60, 100, 200)):
-    corr, zmode, keep = corr_matrix(t_split)
+def methods(E, t_split, Ks=(15, 30, 60, 100, 200), window=None):
+    corr, zmode, keep = corr_matrix(t_split, window)
     tr = E["t"] < t_split
     n, sm = sp.stock_mats(E, tr)
     est = {"own": np.where(n > 0, sm / np.maximum(n, 1), np.nan)}
@@ -97,9 +102,9 @@ def methods(E, t_split, Ks=(15, 30, 60, 100, 200)):
     return est, n, keep
 
 
-def evaluate(h, frac, boot=0):
+def evaluate(h, frac, boot=0, window=None):
     E = sp.prep(h); ts = int(NT * frac)
-    est, n, keep = methods(E, ts)
+    est, n, keep = methods(E, ts, window=window)
     te = (E["t"] >= ts) & ~np.isnan(E["x"])
     nt = np.zeros((NS, NC)); st = np.zeros((NS, NC))
     np.add.at(nt, (E["sid"][te], E["c"][te]), 1); np.add.at(st, (E["sid"][te], E["c"][te]), E["x"][te])
