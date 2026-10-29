@@ -203,7 +203,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 
   <header class="head">
     <h1>ローソク足シグナルは、売買に使えるか</h1>
-    <p>J-Quants Light の日足を使い、ローソク足パターン18種と、チャートパターン20種を、全銘柄で検証した結果をまとめたページです。翌営業日の始値でエントリーし、同日・同じ流動性帯の平均を引いた超過リターンで評価しています。</p>
+    <p>J-Quants Light の日足を使い、ローソク足パターン18種、チャートパターン20種、テクニカル指標30種を、全銘柄で検証した結果をまとめたページです。翌営業日の始値でエントリーし、同日・同じ流動性帯の平均を引いた超過リターンで評価しています。</p>
     <div class="chips">
       <span class="chip">期間 <b>2021-10-29 〜 2026-10-28</b></span>
       <span class="chip">対象 <b class="num">3,699</b> 銘柄(プライム・スタンダード・グロース)</span>
@@ -235,6 +235,9 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 
       <div class="sec">チャートパターンの結果</div>
       <p class="lead">ダブルトップ・三尊・三角保ち合い・ウェッジ・チャネルの20シグナルも、サインどおりに有意だったものは0件でした。小型株で逆に動いて見えるものは、主に抜けた日の大きな値動きの反転で、同じ騰落率の日と比べると差は消えるか、大きく縮みます。詳しくは「チャートパターン」のタブにあります。</p>
+
+      <div class="sec">テクニカル指標の結果</div>
+      <p class="lead">RSI、MACD、ボリンジャーバンド、一目均衡表、パラボリックSARなど30シグナルも、コストを引いて安定して利益が残る形はありませんでした。買われすぎの逆張りは大きな値動きの反転と同じ現象で、買いのトレンド系は小型株で逆に動きます。詳しくは「テクニカル指標」のタブにあります。</p>
 
       <div class="sec">取れる分はコストに届くか</div>
       <p class="lead">小型株で比較的よく効いた6つのシグナルについて、翌日始値で入った場合(濃い棒)と、1日遅らせて入った場合(薄い棒)の方向付き超過リターンです。点線は往復コスト20bp。小型株の実際のスプレッドや、信用売りができない銘柄の制約は含めていません。</p>
@@ -379,6 +382,47 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     </div>
   </section>
 
+  <!-- テクニカル指標 -->
+  <section id="p-tech" class="panel" hidden>
+    <div class="card">
+      <h2>テクニカル指標(移動平均・RSI・MACD・一目均衡表など)</h2>
+      <p class="lead">移動平均線、RSI、MACD、ボリンジャーバンド、ストキャスティクス、移動平均乖離率、一目均衡表、DMI/ADX、パラボリックSARの9種類の指標から、30のシグナルを作って検証しました。条件は、ローソク足やチャートパターンと同じです(翌営業日の始値で入る・同日同分位の平均を引く・前半と後半で確認)。シグナルは、状態が切り替わった日に1日だけ立てています。</p>
+      <div class="card verdict" style="gap:8px">
+        <p>テクニカル指標も、<em>コストを引いて安定して利益が残る形は見つかりませんでした</em>。買われすぎ・売られすぎの逆張り(RSI、ボリンジャー、乖離率)は、小型株で大きく見えても、<em>大きく動いた日の反転</em>と同じ現象で、同じ騰落率の日と比べると差がほぼ消えます。買いのトレンド系(ゴールデンクロス、MACD、一目の雲上抜け、DMI、パラボリックSAR)は、小型株で<em>逆に動きます</em>。</p>
+      </div>
+
+      <div class="sec">どの指標を、どう使ったか(標準のパラメータ)</div>
+      <div class="tw"><table class="gt" id="techdef"></table></div>
+      <p class="note">パラメータは一般的な標準値で、画面の仕様とは異なる可能性があります。逆張り系は教科書の向き(売られすぎは買い、買われすぎは売り)で評価しています。順張りで使う場合は、結果の符号が逆になります。</p>
+
+      <div class="sec">有意な結果の数</div>
+      <p class="lead">30シグナル × 5分位 × 7保有期間 = 1,050通りのうち、サインどおりに有意だったものと、逆向きに有意だったものの件数です。検定数が多いので、有意の目安は |t| ≥ 3.9 にしています。</p>
+      <div id="tstack" class="bars"></div>
+      <div class="legend"><span><i style="background:var(--good)"></i>サインどおり</span><span><i style="background:var(--bad)"></i>逆向き</span></div>
+
+      <div class="sec">シグナル別の結果</div>
+      <div class="ctl"><label>保有日数</label><div class="seg" id="thseg" role="group" aria-label="保有日数"></div><label>表示</label><div class="seg" id="tmseg" role="group" aria-label="表示値"></div><label>対象</label><div class="seg" id="tuseg" role="group" aria-label="対象"></div></div>
+      <div class="tw"><table class="hm" id="thm"></table></div>
+      <div id="tdetail"></div>
+      <p class="note">各セルは、そのシグナルの向き(買い/売り)で評価した超過リターン(bp)。名前にマウスを重ねる(スマホは押す)と、指標の模式図が出ます。</p>
+
+      <div class="sec">同じ騰落率の日と比べると</div>
+      <p class="lead">買われすぎ・売られすぎのシグナルは、大きく動いた直後に出ます。シグナル日(または直近5日)の騰落率が同じ水準の「全銘柄・全日」と比べて、指標に独自の効果が残るかを見ました。</p>
+      <div class="ctl"><label>基準</label><div class="seg" id="tkseg" role="group"></div><label>保有</label><div class="seg" id="tvseg" role="group"></div><label>規模</label><div class="seg" id="tzseg" role="group"></div><label>対象</label><div class="seg" id="tcuseg" role="group"></div></div>
+      <div class="tw"><table id="tmtab"></table></div>
+      <p class="note">「素の超過」はそのままの超過リターン、「差」は同じ騰落率の日との差。720通りのうち、差が有意(|t| ≥ 3.9)だったのは22件で、そのほとんどは買いのトレンド系が逆に動いたものです。サインどおりに残ったのは、RSI70の下抜け(売り)、RSI30の上抜け(買い)などの +5〜14bp程度の小さなものだけでした。</p>
+
+      <div class="sec">ショートの実コストを入れると</div>
+      <p class="lead">貸借銘柄で、売りが有利に見えた3つのシグナルと、買いサインが逆に動いた2つのシグナル(一目の雲上抜け、ゴールデンクロス)を、ショートした場合の純損益で比べています。①往復コスト20bp固定、②1ティックのスプレッド+貸株料、③2ティック+貸株料です。</p>
+      <div class="ctl"><label>保有</label><div class="seg" id="tcseg" role="group"></div></div>
+      <div class="tw"><table id="tcosttab"></table></div>
+      <ul class="pts">
+        <li>最も良いのは、乖離率+10%以上の5日保有・小型で、②が +9.0bp(t=0.9)です。有意ではなく、③ではマイナスになります。</li>
+        <li>逆日歩、踏み上げによる損失、約定の滑りは含まれていません。</li>
+      </ul>
+    </div>
+  </section>
+
   <!-- 6. 貸借銘柄 -->
   <section id="p-margin" class="panel" hidden>
     <div class="card">
@@ -475,6 +519,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="sub"><h3>t値と「有意」</h3><p class="big">平均が 0 とどれだけ違うかの目安で、大きいほど偶然の可能性が低くなります。多数の組み合わせを試しているので、偶然の当たりを避けるため <b>|t| ≥ 3.8</b> を「有意」としています。</p></div>
       <div class="sub"><h3>保有日数・エントリー</h3><p class="big">シグナルが出た日の<b>翌営業日の始値</b>で入り、h日後の始値で出ます。「日中のみ」は翌営業日の始値→終値、「1日遅らせる」はさらに1日後から入る場合です。</p></div>
       <div class="sub"><h3>前半・後半、貸借銘柄</h3><p class="big">期間を 2024-04-26 で2つに分け、両方で同じ結果になるかを見ています。<b>貸借銘柄</b>は信用売り(ショート)ができる銘柄で、各日付の時点の指定で判定しています。</p></div>
+      <div class="sub wide"><h3>テクニカル指標の用語</h3><p class="big"><b>ゴールデンクロス/デッドクロス</b>は、短期の移動平均が長期の移動平均を下から上に(上から下に)抜けることです。<b>RSI</b>は、一定期間の上げ幅と下げ幅の比から、買われすぎ(70以上)・売られすぎ(30以下)を測る指標です。<b>MACD</b>は、短期と長期の指数移動平均の差で、これを平滑化した線(シグナル)との交差を見ます。<b>ボリンジャーバンド</b>は、移動平均±2標準偏差の帯です。<b>乖離率</b>は、株価が移動平均からどれだけ離れているかの割合です。<b>一目均衡表</b>では、先行スパンの2本の間を「雲」、9日と26日の中値の線を「転換線」「基準線」と呼びます。<b>DMI/ADX</b>は、上昇と下降の勢い(+DI・-DI)と、トレンドの強さ(ADX)です。<b>パラボリックSAR</b>は、株価に追随して反転の目印を出す点です。</p></div>
       <div class="sub wide"><h3>チャートパターンの用語</h3><p class="big"><b>折り返し点(スイングポイント)</b>は、前後5日の中で最も高い(安い)日です。<b>ネックライン</b>は、山と山(谷と谷)の間の安値(高値)をつないだ線で、<b>終値でネックラインを抜けた日を「確定」</b>としています。<b>保ち合い</b>は、高値と安値を結んだ2本のラインの間で値動きが狭まる形(三角)や、傾いたまま続く形(ウェッジ・チャネル)です。値幅が狭まれば「収束」、ほぼ変わらなければ「平行」と呼びます。</p></div>
       <div class="sub"><h3>往復コスト・粗利・純損益</h3><p class="big"><b>往復コスト</b>は、買って売る(売って買い戻す)ときにかかる費用の目安で、手数料やスプレッド(売値と買値の差)などを含みます。<b>粗利</b>はコストを引く前の平均損益、<b>純損益</b>はそこからコストを引いた値です。ショートでは貸株料も引きます。</p></div>
     </div>
@@ -484,7 +529,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
+const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
@@ -813,6 +858,7 @@ function candleSvg(sp) {
 }
 function tipFor(key) {
   if (CTIPS[key]) return chartTip(key);
+  if (ITIPS[key]) return indTip(key);
   let k = key.replace("[探索]", ""), vol = false;
   if (k.endsWith("|出来高急増")) { vol = true; k = k.replace("|出来高急増", ""); }
   if (k.startsWith("終値が高値圏")) k = "終値が高値圏";
@@ -982,12 +1028,234 @@ function renderDouble() {
     SIZES.map(z => { const a = g("全銘柄", z), b = g("貸借のみ", z); const cell = r => r ? `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)}</small></td><td>${f1(r.f)} / ${f1(r.l)}</td>` : `<td>–</td><td>–</td>`; return `<tr><td class="k">${z}</td>${cell(a)}${cell(b)}</tr>`; }).join("") + "</tbody>";
 }
 
+/* ---- technical indicator diagrams (計算して描く) ---- */
+const TECH_ORDER = ["ゴールデンクロス(5日×25日)","デッドクロス(5日×25日)","ゴールデンクロス(25日×75日)","デッドクロス(25日×75日)","上昇パーフェクトオーダー","下降パーフェクトオーダー","RSI 30以下に入る","RSI 70以上に入る","RSI 30を上抜け","RSI 70を下抜け","MACDがシグナルを上抜け","MACDがシグナルを下抜け","MACDがゼロを上抜け","MACDがゼロを下抜け","ボリンジャー -2σ割れ","ボリンジャー +2σ超え","ストキャスティクス 売られすぎでクロス上抜け","ストキャスティクス 買われすぎでクロス下抜け","乖離率 -10%以下に入る","乖離率 +10%以上に入る","一目: 雲を上抜け","一目: 雲を下抜け","一目: 転換線が基準線を上抜け(好転)","一目: 転換線が基準線を下抜け(逆転)","一目: 三役好転","一目: 三役逆転","DMI: +DIが-DIを上抜け(ADX>25)","DMI: +DIが-DIを下抜け(ADX>25)","パラボリックSAR 買い転換","パラボリックSAR 売り転換"];
+const tdirOf = p => (D.tmain.find(r => r.p === p) || {}).d;
+const NaNs = n => Array(n).fill(NaN);
+const sma = (a, n) => a.map((_, i) => i < n - 1 ? NaN : a.slice(i - n + 1, i + 1).reduce((x, y) => x + y, 0) / n);
+const emaA = (a, span, minp) => { const al = 2 / (span + 1), o = NaNs(a.length); let e = a[0]; for (let i = 0; i < a.length; i++) { e = i === 0 ? a[0] : al * a[i] + (1 - al) * e; o[i] = i >= minp - 1 ? e : NaN; } return o; };
+const wild = (a, n) => { const o = NaNs(a.length); let e = NaN; for (let i = 0; i < a.length; i++) { if (isNaN(a[i])) continue; e = isNaN(e) ? a[i] : (1 / n) * a[i] + (1 - 1 / n) * e; o[i] = e; } return o.map((v, i) => i < n ? NaN : v); };
+const rmax = (a, n) => a.map((_, i) => i < n - 1 ? NaN : Math.max(...a.slice(i - n + 1, i + 1))), rmin = (a, n) => a.map((_, i) => i < n - 1 ? NaN : Math.min(...a.slice(i - n + 1, i + 1)));
+const rstd = (a, n) => a.map((_, i) => { if (i < n - 1) return NaN; const w = a.slice(i - n + 1, i + 1), m = w.reduce((x, y) => x + y, 0) / n; return Math.sqrt(w.reduce((x, y) => x + (y - m) ** 2, 0) / n); });
+const shiftA = (a, k) => a.map((_, i) => i - k >= 0 ? a[i - k] : NaN);
+const cUp = (x, y) => x.map((v, i) => i > 0 && v > y[i] && x[i - 1] <= y[i - 1]), cDn = (x, y) => x.map((v, i) => i > 0 && v < y[i] && x[i - 1] >= y[i - 1]);
+const enterLE = (x, th) => x.map((v, i) => i > 0 && v <= th && x[i - 1] > th), enterGE = (x, th) => x.map((v, i) => i > 0 && v >= th && x[i - 1] < th);
+const firstT = c => c.map((v, i) => v && !(i > 0 && c[i - 1]));
+function synth(kind, T) {
+  const o = [];
+  for (let t = 0; t < T; t++) {
+    const u = t / (T - 1); let v;
+    if (kind === "V") v = u < .45 ? 100 - 30 * (u / .45) : 70 + 44 * ((u - .45) / .55);
+    else if (kind === "A") v = u < .45 ? 100 + 30 * (u / .45) : 130 - 44 * ((u - .45) / .55);
+    else if (kind === "DROP") v = u < .72 ? 100 : 100 - 34 * (u - .72) / .28;
+    else if (kind === "SPIKE") v = u < .72 ? 100 : 100 + 34 * (u - .72) / .28;
+    else if (kind === "DROP_REB") v = u < .5 ? 100 : u < .72 ? 100 - 34 * (u - .5) / .22 : 66 + 22 * (u - .72) / .28;
+    else if (kind === "SPIKE_FALL") v = u < .5 ? 100 : u < .72 ? 100 + 34 * (u - .5) / .22 : 134 - 22 * (u - .72) / .28;
+    else if (kind === "UP") v = 100 + 60 * u; else v = 160 - 60 * u;
+    o.push(v + .9 * Math.sin(t * 1.3) + .5 * Math.sin(t * 2.9));
+  }
+  return o;
+}
+function indSpec(name) {
+  const g = (k, T) => { const c = synth(k, T), h = c.map(v => v + 1.2), l = c.map(v => v - 1.2); return { c, h, l, T }; };
+  const base = (k, T) => ({ ...g(k, T), over: [], lower: null, band: null, dots: null, ev: [] });
+  let sp, up = /上抜け|好転|買い転換|-2σ割れ|30以下|売られすぎ|-10%/.test(name);
+  const mk = (kind, T) => { sp = base(kind, T); return sp; };
+  const lastEv = e => { let k = -1; e.forEach((v, i) => { if (v) k = i; }); return k; };
+  if (/ゴールデン|デッド/.test(name)) {
+    const gc = /ゴールデン/.test(name), slow = /25日×75日/.test(name), T = slow ? 150 : 90; mk(gc ? "V" : "A", T);
+    const [a, b] = slow ? [25, 75] : [5, 25], ma = sma(sp.c, a), mb = sma(sp.c, b);
+    sp.over = [{ a: ma, col: "var(--warn)", lab: a + "日" }, { a: mb, col: "var(--accent)", lab: b + "日" }]; sp.ev = gc ? cUp(ma, mb) : cDn(ma, mb);
+  } else if (/パーフェクト/.test(name)) {
+    const u = /上昇/.test(name); mk(u ? "UP" : "DN", 130);
+    const m5 = sma(sp.c, 5), m25 = sma(sp.c, 25), m75 = sma(sp.c, 75);
+    sp.over = [{ a: m5, col: "var(--warn)", lab: "5日" }, { a: m25, col: "var(--accent)", lab: "25日" }, { a: m75, col: "var(--q5)", lab: "75日" }];
+    sp.ev = firstT(sp.c.map((c, i) => u ? c > m5[i] && m5[i] > m25[i] && m25[i] > m75[i] : c < m5[i] && m5[i] < m25[i] && m25[i] < m75[i]));
+  } else if (/^RSI/.test(name)) {
+    const kind = /30以下/.test(name) ? "DROP" : /70以上/.test(name) ? "SPIKE" : /30を上抜け/.test(name) ? "DROP_REB" : "SPIKE_FALL"; mk(kind, 90);
+    const d = sp.c.map((v, i) => i ? v - sp.c[i - 1] : NaN), gn = wild(d.map(v => isNaN(v) ? NaN : Math.max(v, 0)), 14), ls = wild(d.map(v => isNaN(v) ? NaN : Math.max(-v, 0)), 14);
+    const r = gn.map((v, i) => 100 - 100 / (1 + v / ls[i])); sp.lower = { lines: [{ a: r, col: "var(--accent)" }], refs: [30, 70], lo: 0, hi: 100 };
+    sp.ev = /30以下/.test(name) ? enterLE(r, 30) : /70以上/.test(name) ? enterGE(r, 70) : /30を上抜け/.test(name) ? cUp(r, r.map(() => 30)) : cDn(r, r.map(() => 70));
+  } else if (/^MACD/.test(name)) {
+    const zero = /ゼロ/.test(name), up2 = /上抜け/.test(name); mk(up2 ? "V" : "A", 110);
+    const m = emaA(sp.c, 12, 12).map((v, i) => v - emaA(sp.c, 26, 26)[i]), sg = emaA(m.map(v => isNaN(v) ? 0 : v), 9, 9).map((v, i) => isNaN(m[i]) ? NaN : v);
+    sp.lower = { lines: [{ a: m, col: "var(--accent)" }, ...(zero ? [] : [{ a: sg, col: "var(--warn)" }])], refs: [0], lo: null, hi: null };
+    sp.ev = zero ? (up2 ? cUp(m, m.map(() => 0)) : cDn(m, m.map(() => 0))) : (up2 ? cUp(m, sg) : cDn(m, sg));
+  } else if (/ボリンジャー/.test(name)) {
+    const lo = /-2σ/.test(name); mk(lo ? "DROP" : "SPIKE", 70);
+    const m = sma(sp.c, 20), sd = rstd(sp.c, 20), ub = m.map((v, i) => v + 2 * sd[i]), lb = m.map((v, i) => v - 2 * sd[i]);
+    sp.over = [{ a: ub, col: "var(--accent)", lab: "+2σ" }, { a: m, col: "var(--dim)", lab: "20日" }, { a: lb, col: "var(--accent)", lab: "-2σ" }];
+    sp.ev = lo ? sp.c.map((c, i) => i > 0 && c < lb[i] && sp.c[i - 1] >= lb[i - 1]) : sp.c.map((c, i) => i > 0 && c > ub[i] && sp.c[i - 1] <= ub[i - 1]);
+  } else if (/ストキャス/.test(name)) {
+    const buy = /売られすぎ/.test(name); mk(buy ? "V" : "A", 90);
+    const ll = rmin(sp.l, 14), hh = rmax(sp.h, 14), raw = sp.c.map((c, i) => (c - ll[i]) / (hh[i] - ll[i]) * 100), k = sma(raw.map(v => isNaN(v) ? NaN : v), 3).map((v, i) => i < 15 ? NaN : v), d = sma(k.map(v => isNaN(v) ? 0 : v), 3).map((v, i) => i < 17 ? NaN : v);
+    sp.lower = { lines: [{ a: k, col: "var(--accent)" }, { a: d, col: "var(--warn)" }], refs: [20, 80], lo: 0, hi: 100 };
+    sp.ev = buy ? cUp(k, d).map((v, i) => v && d[i] <= 20) : cDn(k, d).map((v, i) => v && d[i] >= 80);
+  } else if (/乖離率/.test(name)) {
+    const lo = /-10/.test(name); mk(lo ? "DROP" : "SPIKE", 80); const m = sma(sp.c, 25), dv = sp.c.map((c, i) => (c / m[i] - 1) * 100);
+    sp.over = [{ a: m, col: "var(--accent)", lab: "25日" }]; sp.lower = { lines: [{ a: dv, col: "var(--accent)" }], refs: [-10, 10], lo: null, hi: null }; sp.ev = lo ? enterLE(dv, -10) : enterGE(dv, 10);
+  } else if (/一目/.test(name)) {
+    const buy = /上抜け|好転/.test(name); mk(buy ? "V" : "A", 150);
+    const ten = sp.h.map((_, i) => (rmax(sp.h, 9)[i] + rmin(sp.l, 9)[i]) / 2), kij = sp.h.map((_, i) => (rmax(sp.h, 26)[i] + rmin(sp.l, 26)[i]) / 2);
+    const sa = shiftA(ten.map((v, i) => (v + kij[i]) / 2), 26), sb = shiftA(sp.h.map((_, i) => (rmax(sp.h, 52)[i] + rmin(sp.l, 52)[i]) / 2), 26);
+    const ct = sa.map((v, i) => Math.max(v, sb[i])), cb = sa.map((v, i) => Math.min(v, sb[i])), c26 = shiftA(sp.c, 26);
+    sp.over = [{ a: ten, col: "var(--warn)", lab: "転換線" }, { a: kij, col: "var(--accent)", lab: "基準線" }]; sp.cloud = { a: ct, b: cb };
+    if (/雲/.test(name)) sp.ev = buy ? sp.c.map((c, i) => i > 0 && c > ct[i] && sp.c[i - 1] <= ct[i - 1]) : sp.c.map((c, i) => i > 0 && c < cb[i] && sp.c[i - 1] >= cb[i - 1]);
+    else if (/転換線/.test(name)) sp.ev = buy ? cUp(ten, kij) : cDn(ten, kij);
+    else sp.ev = firstT(sp.c.map((c, i) => buy ? ten[i] > kij[i] && c > ct[i] && c > c26[i] : ten[i] < kij[i] && c < cb[i] && c < c26[i]));
+  } else if (/DMI/.test(name)) {
+    const buy = /上抜け/.test(name); mk(buy ? "V" : "A", 110);
+    const um = sp.h.map((v, i) => i ? v - sp.h[i - 1] : NaN), dm = sp.l.map((v, i) => i ? sp.l[i - 1] - v : NaN);
+    const pd = um.map((u, i) => isNaN(u) ? NaN : (u > dm[i] && u > 0 ? u : 0)), md = dm.map((d, i) => isNaN(d) ? NaN : (d > um[i] && d > 0 ? d : 0));
+    const tr = sp.c.map((c, i) => i ? Math.max(sp.h[i] - sp.l[i], Math.abs(sp.h[i] - sp.c[i - 1]), Math.abs(sp.l[i] - sp.c[i - 1])) : NaN), at = wild(tr, 14);
+    const pdi = wild(pd, 14).map((v, i) => 100 * v / at[i]), mdi = wild(md, 14).map((v, i) => 100 * v / at[i]);
+    const dx = pdi.map((v, i) => 100 * Math.abs(v - mdi[i]) / (v + mdi[i])), adx = wild(dx.map(v => isNaN(v) ? NaN : v), 14);
+    sp.lower = { lines: [{ a: pdi, col: "var(--cu)" }, { a: mdi, col: "var(--cd)" }, { a: adx, col: "var(--dim)" }], refs: [25], lo: 0, hi: null };
+    sp.ev = (buy ? cUp(pdi, mdi) : cDn(pdi, mdi)).map((v, i) => v && adx[i] > 25);
+  } else { // SAR
+    const buy = /買い/.test(name); mk(buy ? "V" : "A", 90);
+    let trend = sp.c[1] >= sp.c[0] ? 1 : -1, sar = trend > 0 ? sp.l[0] : sp.h[0], ep = trend > 0 ? sp.h[0] : sp.l[0], af = .02; const dots = NaNs(sp.T), ev = Array(sp.T).fill(false);
+    for (let t = 1; t < sp.T; t++) {
+      sar = sar + af * (ep - sar);
+      if (trend > 0) { sar = Math.min(sar, sp.l[t - 1], t > 1 ? sp.l[t - 2] : sar); if (sp.l[t] < sar) { trend = -1; sar = ep; ep = sp.l[t]; af = .02; if (!buy) ev[t] = true; } else if (sp.h[t] > ep) { ep = sp.h[t]; af = Math.min(af + .02, .2); } }
+      else { sar = Math.max(sar, sp.h[t - 1], t > 1 ? sp.h[t - 2] : sar); if (sp.h[t] > sar) { trend = 1; sar = ep; ep = sp.h[t]; af = .02; if (buy) ev[t] = true; } else if (sp.l[t] < ep) { ep = sp.l[t]; af = Math.min(af + .02, .2); } }
+      dots[t] = sar;
+    }
+    sp.dots = dots; sp.ev = ev;
+  }
+  sp.idx = lastEv(sp.ev); return sp;
+}
+function indSvg(sp) {
+  const W = 320, pad = 12, hp = sp.lower ? 104 : 150, hl = sp.lower ? 56 : 0, H = hp + hl + 24, T = sp.T, X = t => pad + t / (T - 1) * (W - 2 * pad);
+  const series = [sp.c, ...sp.over.map(o => o.a), ...(sp.dots ? [sp.dots] : []), ...(sp.cloud ? [sp.cloud.a, sp.cloud.b] : [])];
+  const vals = series.flatMap(a => a.filter(v => !isNaN(v))); const lo = Math.min(...vals), hi = Math.max(...vals), Y = v => 8 + (1 - (v - lo) / (hi - lo)) * (hp - 16);
+  const line = (a, col, w = 1.6, dash = "") => { let d = ""; a.forEach((v, i) => { if (!isNaN(v)) d += (d && !isNaN(a[i - 1]) ? "L" : "M") + X(i).toFixed(1) + " " + Y(v).toFixed(1); }); return `<path d="${d}" fill="none" stroke="${col}" stroke-width="${w}" stroke-dasharray="${dash}" stroke-linejoin="round"/>`; };
+  let g = "";
+  if (sp.cloud) { let d = "", back = ""; sp.cloud.a.forEach((v, i) => { if (!isNaN(v) && !isNaN(sp.cloud.b[i])) { d += (d ? "L" : "M") + X(i).toFixed(1) + " " + Y(sp.cloud.a[i]).toFixed(1); back = "L" + X(i).toFixed(1) + " " + Y(sp.cloud.b[i]).toFixed(1) + back; } }); g += `<path d="${d}${back}Z" fill="var(--accent)" opacity=".16"/>`; }
+  sp.over.forEach(o => { g += line(o.a, o.col, 1.4); });
+  g += line(sp.c, "var(--fg)", 2.1);
+  if (sp.dots) sp.dots.forEach((v, i) => { if (!isNaN(v)) g += `<circle cx="${X(i)}" cy="${Y(v)}" r="1.8" fill="${v > sp.c[i] ? "var(--cd)" : "var(--cu)"}"/>`; });
+  if (sp.idx >= 0) { g += `<line x1="${X(sp.idx)}" x2="${X(sp.idx)}" y1="4" y2="${hp + hl + 4}" stroke="var(--good)" stroke-dasharray="3 3"/><circle cx="${X(sp.idx)}" cy="${Y(sp.c[sp.idx])}" r="4.5" fill="var(--good)"/><text x="${X(sp.idx) > W - 90 ? X(sp.idx) - 6 : X(sp.idx) + 6}" y="14" text-anchor="${X(sp.idx) > W - 90 ? "end" : "start"}" style="fill:var(--good);font-weight:700">シグナル日</text>`; }
+  if (sp.lower) {
+    const L0 = sp.lower, arr = L0.lines.flatMap(l => l.a.filter(v => !isNaN(v))).concat(L0.refs), llo = L0.lo ?? Math.min(...arr), lhi = L0.hi ?? Math.max(...arr), oy = hp + 8, YL = v => oy + (1 - (v - llo) / (lhi - llo)) * (hl - 12);
+    g += `<rect x="${pad - 4}" y="${oy - 4}" width="${W - 2 * pad + 8}" height="${hl}" rx="6" fill="var(--surface2)" opacity=".5"/>`;
+    L0.refs.forEach(r => { g += `<line x1="${pad}" x2="${W - pad}" y1="${YL(r)}" y2="${YL(r)}" stroke="var(--dim)" stroke-dasharray="3 3" opacity=".7"/><text x="${W - pad}" y="${YL(r) - 2}" text-anchor="end">${r}</text>`; });
+    L0.lines.forEach(l => { let d = ""; l.a.forEach((v, i) => { if (!isNaN(v)) d += (d && !isNaN(l.a[i - 1]) ? "L" : "M") + X(i).toFixed(1) + " " + YL(v).toFixed(1); }); g += `<path d="${d}" fill="none" stroke="${l.col}" stroke-width="1.6"/>`; });
+  }
+  const leg = [...sp.over.map(o => [o.col, o.lab]), ...(sp.cloud ? [["var(--accent)", "雲"]] : [])]; let lx = pad;
+  leg.forEach(([c, t]) => { g += `<rect x="${lx}" y="${H - 14}" width="10" height="3" fill="${c}"/><text x="${lx + 13}" y="${H - 9}">${t}</text>`; lx += 20 + t.length * 11; });
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="テクニカル指標の模式図">${g}</svg>`;
+}
+const ITXT = {
+  "ゴールデンクロス(5日×25日)": ["短期の移動平均が、長期の移動平均を下から上に抜けた日。上昇トレンドの始まりとされる。", ["5日移動平均が25日移動平均を上抜け"], "小型株の買いは翌日 −7.5bp(t=−6.5)。同じ騰落率の日との差も −5.4bp(t=−4.8)で、逆に動く"],
+  "デッドクロス(5日×25日)": ["短期の移動平均が、長期の移動平均を上から下に抜けた日。下落トレンドの始まりとされる。", ["5日移動平均が25日移動平均を下抜け"]],
+  "ゴールデンクロス(25日×75日)": ["中期と長期の移動平均のゴールデンクロス。", ["25日移動平均が75日移動平均を上抜け"]],
+  "デッドクロス(25日×75日)": ["中期と長期の移動平均のデッドクロス。", ["25日移動平均が75日移動平均を下抜け"]],
+  "上昇パーフェクトオーダー": ["終値と3本の移動平均が、上から順に並んだ状態になった最初の日。強い上昇トレンドとされる。", ["終値 > 5日 > 25日 > 75日(それまでは満たしていない)"]],
+  "下降パーフェクトオーダー": ["終値と3本の移動平均が、下から順に並んだ状態になった最初の日。強い下落トレンドとされる。", ["終値 < 5日 < 25日 < 75日(それまでは満たしていない)"]],
+  "RSI 30以下に入る": ["RSIが30以下に入った日。売られすぎで、反発しやすいとされる(逆張りの買い)。", ["RSI(14日、ワイルダー平滑)が30以下に入る"]],
+  "RSI 70以上に入る": ["RSIが70以上に入った日。買われすぎで、反落しやすいとされる(逆張りの売り)。", ["RSI(14日)が70以上に入る"], "小型株(5日)で売りが +26.9bp。ただし同じ騰落率の日との差は +4.4bp(t=0.9)でほぼ消える"],
+  "RSI 30を上抜け": ["RSIが30を下から上に抜けた日。売られすぎからの戻りとされる。", ["RSIが30を下から上に抜ける"]],
+  "RSI 70を下抜け": ["RSIが70を上から下に抜けた日。買われすぎからの反落とされる。", ["RSIが70を上から下に抜ける"], "小型株の売りは翌日 +10.9bp。同じ騰落率の日との差も +11.3bp(t=5.8)。貸借銘柄だけでは有意ではない"],
+  "MACDがシグナルを上抜け": ["MACDが、その移動平均(シグナル)を下から上に抜けた日。買いのサインとされる。", ["MACD = 12日EMA − 26日EMA", "シグナル = MACDの9日EMA"]],
+  "MACDがシグナルを下抜け": ["MACDがシグナルを上から下に抜けた日。売りのサインとされる。", ["MACD = 12日EMA − 26日EMA", "シグナル = MACDの9日EMA"]],
+  "MACDがゼロを上抜け": ["MACDがゼロを下から上に抜けた日。短期の勢いが長期を上回ったとされる。", ["MACD(12, 26)がゼロを上抜け"], "小型株の買いは翌日 −11.9bp。同じ騰落率の日との差も −7.7bp(t=−5.3)"],
+  "MACDがゼロを下抜け": ["MACDがゼロを上から下に抜けた日。", ["MACD(12, 26)がゼロを下抜け"]],
+  "ボリンジャー -2σ割れ": ["終値が、移動平均−2σの帯を割った日。売られすぎで、戻りやすいとされる(逆張りの買い)。", ["20日移動平均 − 2σ(標準偏差)を、終値が下回る(前日は下回っていない)"]],
+  "ボリンジャー +2σ超え": ["終値が、移動平均+2σの帯を超えた日。買われすぎで、反落しやすいとされる(逆張りの売り)。", ["20日移動平均 + 2σ を、終値が上回る(前日は上回っていない)"], "小型株(5日)で売りが +20.8bp。同じ騰落率の日との差は +1.4bp(t=0.5)でほぼ消える"],
+  "ストキャスティクス 売られすぎでクロス上抜け": ["%Kが%Dを下から上に抜け、かつ売られすぎの領域にいた日。", ["スロー・ストキャスティクス(14, 3, 3)", "%Kが%Dを上抜け、かつ %D ≤ 20"]],
+  "ストキャスティクス 買われすぎでクロス下抜け": ["%Kが%Dを上から下に抜け、かつ買われすぎの領域にいた日。", ["スロー・ストキャスティクス(14, 3, 3)", "%Kが%Dを下抜け、かつ %D ≥ 80"]],
+  "乖離率 -10%以下に入る": ["終値が25日移動平均より10%以上下に離れた日。売られすぎで、戻りやすいとされる。", ["(終値 ÷ 25日移動平均 − 1)が −10% 以下に入る"]],
+  "乖離率 +10%以上に入る": ["終値が25日移動平均より10%以上上に離れた日。買われすぎで、反落しやすいとされる。", ["(終値 ÷ 25日移動平均 − 1)が +10% 以上に入る"], "小型株(5日)で売りが +54.1bp。同じ騰落率の日との差は +1.5bp(t=0.1)でほぼ消える"],
+  "一目: 雲を上抜け": ["終値が、先行スパン(雲)の上端を下から上に抜けた日。上昇への転換とされる。", ["雲 = 先行スパン1・2(26日先行)", "終値が雲の上端を上抜け"], "小型株の買いは5日で −26.1bp。同じ騰落率の日との差でも −14.5bp(t=−4.5)"],
+  "一目: 雲を下抜け": ["終値が、雲の下端を上から下に抜けた日。下落への転換とされる。", ["終値が雲の下端を下抜け"]],
+  "一目: 転換線が基準線を上抜け(好転)": ["転換線(9日の中値)が基準線(26日の中値)を下から上に抜けた日。", ["転換線 = 9日の高値・安値の中値", "基準線 = 26日の高値・安値の中値"]],
+  "一目: 転換線が基準線を下抜け(逆転)": ["転換線が基準線を上から下に抜けた日。", ["転換線が基準線を下抜け"]],
+  "一目: 三役好転": ["転換線>基準線、終値>雲、遅行スパン>26日前の終値、の3つが初めてそろった日。最も強い買いのサインとされる。", ["転換線 > 基準線", "終値 > 雲の上端", "終値 > 26日前の終値(遅行スパン)"]],
+  "一目: 三役逆転": ["転換線<基準線、終値<雲、遅行スパン<26日前の終値、の3つが初めてそろった日。最も強い売りのサインとされる。", ["転換線 < 基準線", "終値 < 雲の下端", "終値 < 26日前の終値"]],
+  "DMI: +DIが-DIを上抜け(ADX>25)": ["上昇の勢い(+DI)が下降の勢い(-DI)を上抜け、トレンドが強い(ADX>25)とき。", ["DMI/ADX(14日、ワイルダー平滑)", "+DIが-DIを上抜け、かつ ADX > 25"], "小型株の買いは5日で −39.9bp。同じ騰落率の日との差でも −22.9bp(t=−4.5)"],
+  "DMI: +DIが-DIを下抜け(ADX>25)": ["下降の勢いが上昇の勢いを上回り、トレンドが強いとき。", ["+DIが-DIを下抜け、かつ ADX > 25"]],
+  "パラボリックSAR 買い転換": ["SARの点が、株価の下側に切り替わった日。上昇トレンドへの転換とされる。", ["加速係数 0.02(最大 0.2)", "安値がSARを下回る→売り転換、高値がSARを上回る→買い転換"]],
+  "パラボリックSAR 売り転換": ["SARの点が、株価の上側に切り替わった日。下落トレンドへの転換とされる。", ["加速係数 0.02(最大 0.2)"]],
+};
+const ITIPS = {}; TECH_ORDER.forEach(k => { ITIPS[k] = 1; });
+function indTip(key) {
+  const [sum, cond, res] = ITXT[key] || ["", []]; const sp = indSpec(key), d = tdirOf(key);
+  const tag = `<span class="tag ${d === "買い" ? "buy" : "sell"}" style="margin:0">教科書: ${d}</span>`;
+  return `<h4>${key}${tag}</h4>${indSvg(sp)}<p class="sum">${sum}</p><ul>${cond.map(c => `<li>${c}</li>`).join("")}</ul>${res ? `<div class="res">本検証: ${res}</div>` : ""}<p class="fn">模式図です(実際の株価ではありません)。緑の点線=シグナル日。</p>`;
+}
+
+/* tech tab renders */
+const TDEF = [
+  ["移動平均線", "5・25・75日(単純)", "5×25、25×75のゴールデンクロス/終値>5>25>75", "デッドクロス/終値<5<25<75"],
+  ["RSI", "14日(ワイルダー)", "30以下に入る/30を上抜け", "70以上に入る/70を下抜け"],
+  ["MACD", "12・26・9", "シグナルを上抜け/ゼロを上抜け", "シグナルを下抜け/ゼロを下抜け"],
+  ["ボリンジャーバンド", "20日・±2σ", "終値が-2σを割る", "終値が+2σを超える"],
+  ["ストキャスティクス", "14・3・3(スロー)", "%Kが%Dを上抜け(%D≦20)", "%Kが%Dを下抜け(%D≧80)"],
+  ["移動平均乖離率", "25日", "-10%以下に入る", "+10%以上に入る"],
+  ["一目均衡表", "9・26・52", "雲上抜け/転換線×基準線の好転/三役好転", "雲下抜け/逆転/三役逆転"],
+  ["DMI/ADX", "14日(ワイルダー)", "+DIが-DIを上抜け(ADX>25)", "+DIが-DIを下抜け(ADX>25)"],
+  ["パラボリックSAR", "加速0.02・最大0.2", "買い転換", "売り転換"],
+];
+function renderTechDef() {
+  $("#techdef").innerHTML = `<thead><tr><th>指標</th><th>パラメータ</th><th>買いのサイン</th><th>売りのサイン</th></tr></thead><tbody>` + TDEF.map(r => `<tr><td class="k">${r[0]}</td><td style="text-align:left">${r[1]}</td><td style="text-align:left;white-space:normal">${r[2]}</td><td style="text-align:left;white-space:normal">${r[3]}</td></tr>`).join("") + "</tbody>";
+}
+const TS_ST = { h: 1, mode: "m", u: "all", sel: null };
+function renderTechHeat() {
+  seg($("#thseg"), HS.map(h => [h, h === 0 ? "日中のみ" : h + "日"]), TS_ST.h, v => { TS_ST.h = v; renderTechHeat(); });
+  seg($("#tmseg"), [["m", "平均 bp"], ["t", "t 値"], ["net", "コスト後 bp"]], TS_ST.mode, v => { TS_ST.mode = v; renderTechHeat(); });
+  seg($("#tuseg"), [["all", "全銘柄"], ["mar", "貸借のみ"]], TS_ST.u, v => { TS_ST.u = v; renderTechHeat(); });
+  const data = TS_ST.u === "all" ? D.tmain : D.tmm, idx = {}; data.forEach(r => { idx[r.p + "|" + r.q + "|" + r.h] = r; });
+  let html = `<thead><tr><th>シグナル</th>${[1,2,3,4,5].map(q => `<th>分位${q}<small>${q === 1 ? "最小" : q === 5 ? "最大" : ""}</small></th>`).join("")}</tr></thead><tbody>`;
+  TECH_ORDER.forEach(p => {
+    const d = tdirOf(p);
+    html += `<tr><td class="k">${nm(p)}<span class="tag ${d === "買い" ? "buy" : "sell"}">${d}</span></td>`;
+    for (let q = 1; q <= 5; q++) {
+      const r = idx[p + "|" + q + "|" + TS_ST.h]; if (!r) { html += `<td class="c0">–</td>`; continue; }
+      const v = TS_ST.mode === "m" ? f1(r.m) : TS_ST.mode === "t" ? tf(r.t) : f1(r.net), on = TS_ST.sel && TS_ST.sel.p === p && TS_ST.sel.q === q;
+      html += `<td class="cell ${cls(r.t)}${on ? " sel" : ""}" data-p="${p}" data-q="${q}">${v}</td>`;
+    }
+    html += "</tr>";
+  });
+  $("#thm").innerHTML = html + "</tbody>";
+  $("#thm").querySelectorAll("td.cell").forEach(td => td.onclick = () => { TS_ST.sel = { p: td.dataset.p, q: +td.dataset.q }; renderTechHeat(); });
+  const box = $("#tdetail");
+  if (!TS_ST.sel) { box.innerHTML = `<p class="note">セルを押すと、件数・中央値・勝率などが表示されます。</p>`; return; }
+  const r = idx[TS_ST.sel.p + "|" + TS_ST.sel.q + "|" + TS_ST.h];
+  box.innerHTML = `<div class="sec">${TS_ST.sel.p}(${r.d}) · 分位${TS_ST.sel.q} · 保有${TS_ST.h === 0 ? "日中のみ" : TS_ST.h + "日"}</div><div class="detail"><div><span>件数</span><b>${r.n.toLocaleString()}</b></div><div><span>平均(bp)</span><b>${f1(r.m)}</b></div><div><span>中央値(bp)</span><b>${f1(r.md)}</b></div><div><span>コスト後(bp)</span><b>${f1(r.net)}</b></div><div><span>勝率</span><b>${(r.w * 100).toFixed(0)}%</b></div><div><span>t 値</span><b>${tf(r.t)}</b></div></div>`;
+}
+function renderTechStack() {
+  const cnt = rows => [1,2,3,4,5].map(q => { const rs = rows.filter(r => r.q === q); return { g: rs.filter(r => r.t >= 3.9).length, b: rs.filter(r => r.t <= -3.9).length, n: rs.length }; });
+  const all = cnt(D.tmain), mar = cnt(D.tmm);
+  const stack = (c, label) => `<div style="display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center"><span class="note">${label}</span><div class="stack"><i style="width:${c.g / c.n * 100}%;background:var(--good)"></i><i style="width:${c.b / c.n * 100}%;background:var(--bad)"></i></div><span class="note num">${c.g}/${c.b}</span></div>`;
+  $("#tstack").innerHTML = [0,1,2,3,4].map(i => `<div class="brow"><div class="lab">分位${i + 1}${i === 0 ? "(売買代金 最小)" : i === 4 ? "(最大)" : ""}<small>サインどおり/逆向きの件数</small></div><div style="display:flex;flex-direction:column;gap:6px">${stack(all[i], "全銘柄")}${stack(mar[i], "貸借のみ")}</div></div>`).join("");
+}
+const TM_ST = { k: 1, v: "G", z: SIZES[0], u: "全銘柄" };
+function renderTechMatch() {
+  seg($("#tkseg"), [[1, "1日の騰落率"], [5, "5日の騰落率"]], TM_ST.k, v => { TM_ST.k = v; renderTechMatch(); });
+  seg($("#tvseg"), [["A", "1日"], ["G", "5日"]], TM_ST.v, v => { TM_ST.v = v; renderTechMatch(); });
+  seg($("#tzseg"), SIZES.map(z => [z, z]), TM_ST.z, v => { TM_ST.z = v; renderTechMatch(); });
+  seg($("#tcuseg"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], TM_ST.u, v => { TM_ST.u = v; renderTechMatch(); });
+  const rows = TECH_ORDER.map(p => D.tmatch.find(r => r.s === p && r.u === TM_ST.u && r.z === TM_ST.z && r.v === TM_ST.v && r.k === TM_ST.k)).filter(Boolean);
+  const c = (v, t) => `<td class="${cls(t)}">${f1(v)} <small>t=${tf(t)}</small></td>`;
+  $("#tmtab").innerHTML = `<thead><tr><th>シグナル</th><th>件数</th><th>基準期間の平均騰落率</th><th>素の超過</th><th>同じ騰落率の日との差</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">${r.d}</span></td><td>${r.n.toLocaleString()}</td><td>${r.r0 > 0 ? "+" : ""}${r.r0.toFixed(1)}%</td>${c(r.raw, r.rt)}${c(r.adj, r.at)}</tr>`).join("") + "</tbody>";
+}
+const TC_ST = { h: "5日保有" };
+function renderTechCost() {
+  seg($("#tcseg"), [["1日保有", "1日保有"], ["5日保有", "5日保有"]], TC_ST.h, v => { TC_ST.h = v; renderTechCost(); });
+  const rows = D.tcost.filter(r => r.h === TC_ST.h);
+  const c = (v, t) => `<td class="${t != null ? cls(t) : v > 0 ? "wp" : "wn"}">${f1(v)}${t != null ? ` <small>t=${tf(t)}</small>` : ""}</td>`;
+  $("#tcosttab").innerHTML = `<thead><tr><th>シグナル(ショート)</th><th>規模</th><th>件数</th><th>粗利</th><th>1ティックの比率</th><th>① 純損益(20bp固定)</th><th>② 純損益(1ティック+貸株料)</th><th>③ 純損益(2ティック+貸株料)</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">サイン:${r.d}</span></td><td>${r.z}</td><td>${r.n.toLocaleString()}</td><td>${f1(r.g)}</td><td>${r.tk.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2)}</tr>`).join("") + "</tbody>";
+}
+
 /* ---- boot ---- */
 (function () {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderPatterns(); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartHeat(); renderChartStack(); renderChartMatch(); renderDouble();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartHeat(); renderChartStack(); renderChartMatch(); renderDouble(); renderTechDef(); renderTechHeat(); renderTechStack(); renderTechMatch(); renderTechCost();
   showTab(location.hash.slice(1));
 })();
 </script>

@@ -17,11 +17,11 @@ SIZES = [("小型(分位1-2)", 1, 2), ("中型(分位3)", 3, 3), ("大型(分位
 QS = [0, 1, 2, 3, 5, 7.5, 10, 15, 20, 30, 40, 50, 60, 70, 80, 85, 90, 92.5, 95, 96, 97, 98, 99, 99.5, 100]
 
 
-def matched_table(P, sigs, universe=None, label="全銘柄"):
+def matched_table(P, sigs, universe=None, label="全銘柄", k=1):
+    """k=1 はシグナル日の騰落率、k=5 は直近5日の騰落率が同じ水準の日と比べる。"""
     liq = bt.liquidity_bucket(P, universe=universe)
     ok = ~bt.ahead(P["limit"].astype(float), 1).astype(bool)
-    r0 = P["C"] / bt.ahead(P["C"], 0) - 1  # placeholder shape
-    prev = np.vstack([np.full((1, P["C"].shape[1]), np.nan), P["C"][:-1]])
+    prev = np.vstack([np.full((k, P["C"].shape[1]), np.nan), P["C"][:-k]])
     r0 = P["C"] / prev - 1
     var = {k[0]: v for k, v in mc.variants(P).items()}
     var["G"] = bt.forward_returns(P, [5])[5]
@@ -46,7 +46,7 @@ def matched_table(P, sigs, universe=None, label="全銘柄"):
                     continue
                 raw, adj = d * x[t, c], d * xm[t, c]
                 h = 5 if vname == "G" else 1
-                rows.append(dict(対象=label, シグナル=name, 方向="買い" if d > 0 else "売り", 規模=size, 変種=vname, n=len(t),
+                rows.append(dict(対象=label, 基準日数=k, シグナル=name, 方向="買い" if d > 0 else "売り", 規模=size, 変種=vname, n=len(t),
                                  シグナル日の平均騰落率pct=np.nanmean(r0[t, c]) * 100,
                                  素の超過bp=raw.mean() * 1e4, 素のt=bt.cluster_t(raw, t, max(h, 5)),
                                  同じ騰落率との差bp=adj.mean() * 1e4, 差のt=bt.cluster_t(adj, t, max(h, 5))))
