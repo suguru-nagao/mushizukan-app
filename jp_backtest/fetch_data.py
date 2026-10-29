@@ -81,6 +81,13 @@ def fetch_master():
     print(f"master: {len(data)} rows")
 
 
+def fetch_topix(start, end):
+    data = api_get("/indices/bars/daily/topix", {"from": start, "to": end}).get("data", [])
+    with gzip.open(os.path.join(CACHE, "topix.json.gz"), "wt", encoding="utf-8") as f:
+        json.dump(data, f)
+    print(f"topix: {len(data)} rows")
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--from", dest="start", default=LIGHT_START)
@@ -88,5 +95,6 @@ if __name__ == "__main__":
     a = ap.parse_args()
     os.makedirs(CACHE, exist_ok=True)
     fetch_master()
+    fetch_topix(a.start, a.end)
     fetch_bars(dt.date.fromisoformat(a.start), dt.date.fromisoformat(a.end))
     print("done")
