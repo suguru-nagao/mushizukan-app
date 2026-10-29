@@ -632,7 +632,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["zone","抵抗帯"],["tf","時間軸"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"]];
+const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["zone","抵抗帯"],["tf","時間軸"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"],["all","全結果を1ページで"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
@@ -658,7 +658,13 @@ function seg(host, items, current, on) {
 const tabsHost = $("#tabs");
 function showTab(id) {
   if (!TABS.some(t => t[0] === id)) id = "summary";
-  TABS.forEach(([k]) => { $("#p-" + k).hidden = k !== id; });
+  document.querySelectorAll(".allhd").forEach(e => e.remove());
+  TABS.forEach(([k, label]) => {
+    const pn = $("#p-" + k); if (!pn) return;
+    pn.hidden = id === "all" ? false : k !== id;
+    if (id === "all") pn.insertAdjacentHTML("beforebegin", `<h2 class="allhd" id="all-${k}" style="margin:32px 0 8px;padding-top:8px;border-top:2px solid var(--line, #8884)">${label}</h2>`);
+  });
+  if (id === "all") { const toc = document.createElement("div"); toc.className = "allhd"; toc.style.cssText = "display:flex;flex-wrap:wrap;gap:6px 14px;margin:12px 0"; toc.innerHTML = TABS.filter(t => t[0] !== "all").map(([k, l]) => `<a href="#all-${k}" onclick="document.getElementById('all-${k}').scrollIntoView();return false">${l}</a>`).join(""); $("#p-summary").insertAdjacentElement("beforebegin", toc); }
   tabsHost.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.id === id)));
   try { if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } catch (e) {}
 }
