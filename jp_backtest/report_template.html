@@ -271,6 +271,25 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     </div>
   </section>
 
+  <section id="p-list" class="panel" hidden>
+    <div class="card">
+      <h2>シグナル一覧: 買い・売りのサインを1つの表で、信頼度を比べる</h2>
+      <p class="lead">ローソク足・チャートパターン・テクニカル指標・抵抗帯の、すべての買いサイン・売りサインを1つの表にしました。それぞれを、<b>信頼度(★0〜4)</b>で比べられます。サインの向きで取引したときの、規模(売買代金の分位)別の成績で、条件を切り替えると並べ替わります。</p>
+      <div class="card verdict" style="gap:8px"><p id="sl-sum"></p></div>
+      <div class="ctl"><label>時間軸</label><div class="seg" id="sl-tf"></div><label>保有</label><div class="seg" id="sl-v"></div><label>対象</label><div class="seg" id="sl-u"></div></div>
+      <div class="ctl"><label>向き</label><div class="seg" id="sl-d"></div><label>分析</label><div class="seg" id="sl-f"></div><label>並び</label><div class="seg" id="sl-o"></div></div>
+      <div class="legend" style="flex-wrap:wrap"><span><b>★の数え方</b>(規模ごとに、次の4つの条件をいくつ満たすか)</span></div>
+      <ol class="pts" style="margin-top:4px">
+        <li><b>統計的に有意</b>: サインの向きで取引した超過リターンが、プラスで t ≥ 3.8(多数の検定による偶然の当たりを考慮した基準)</li>
+        <li><b>同じ騰落率の日と比べても残る</b>: シグナルが出た足と同じ騰落率の足(全銘柄)との差が、プラスで t ≥ 2。大きく動いた後の反転ではないことの確認</li>
+        <li><b>コスト後もプラス</b>: 往復コスト20bpを引いても、平均がプラス。ショートの実コスト(貸株料・スプレッド)は含まない</li>
+        <li><b>もう一方の対象でも成り立つ</b>: 「全銘柄」で見ているときは貸借のみ、「貸借のみ」で見ているときは全銘柄でも、プラスで t ≥ 2</li>
+      </ol>
+      <div class="tw"><table class="gt" id="sl-tab"></table></div>
+      <p class="note">セルは「★ 平均bp(t値)」。件数が少ない規模は、数字が不安定です(行をクリックすると件数が出ます)。名前にマウスを重ねる(スマホは押す)と模式図が出ます。表の数字は全て、サインの向き(買いは上がった分、売りは下がった分)で、同日・同規模の全銘柄平均を引いた超過リターンです。</p>
+    </div>
+  </section>
+
   <!-- 2. パターン別 -->
   <section id="p-patterns" class="panel" hidden>
     <div class="card">
@@ -632,7 +651,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["zone","抵抗帯"],["tf","時間軸"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"],["all","全結果を1ページで"]];
+const TABS = [["summary","結論"],["list","シグナル一覧"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["chart","チャートパターン"],["tech","テクニカル指標"],["zone","抵抗帯"],["tf","時間軸"],["margin","貸借銘柄"],["notes","注意点"],["terms","用語"],["all","全結果を1ページで"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
@@ -674,6 +693,50 @@ TABS.forEach(([k, label]) => {
   tabsHost.appendChild(b);
 });
 window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+
+/* ---- シグナル一覧 ---- */
+const SL = { tf: "D", v: "A", u: "全銘柄", d: "all", f: "all", o: "score", sel: null };
+const SL_FAMS = [["candle", "ローソク足"], ["chart", "チャート"], ["tech", "テクニカル"], ["zone", "抵抗帯(出来高)"], ["zline", "ライン"], ["zboth", "帯×ライン重なり"], ["zvonly", "出来高のみ"], ["zlonly", "線のみ"]];
+function slCells(fam, tf) {
+  const fd = (D.mtf[fam] || {})[tf]; if (!fd) return [];
+  const out = {};
+  fd.match.filter(r => r.k === 1 && r.v === SL.v).forEach(r => { (out[r.s] = out[r.s] || { s: r.s, d: r.d, fam, z: {} }).z[r.z + "|" + r.u] = r; });
+  return Object.values(out);
+}
+function slScore(a, b) { // a: 選択した対象、b: もう一方の対象
+  if (!a) return null;
+  const c = [a.rt >= 3.8, a.adj > 0 && a.at >= 2, a.raw - 20 > 0, !!b && b.raw > 0 && b.rt >= 2];
+  return { n: c.filter(Boolean).length, c };
+}
+function renderSignalList() {
+  const tfs = ["D", "W", "M", "WL", "ML"].filter(t => SL_FAMS.some(([f]) => (D.mtf[f] || {})[t]));
+  seg($("#sl-tf"), tfs.map(t => [t, TFN[t]]), SL.tf, v => { SL.tf = v; renderSignalList(); });
+  seg($("#sl-v"), [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]], SL.v, v => { SL.v = v; renderSignalList(); });
+  seg($("#sl-u"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], SL.u, v => { SL.u = v; renderSignalList(); });
+  seg($("#sl-d"), [["all", "すべて"], ["買い", "買いサイン"], ["売り", "売りサイン"]], SL.d, v => { SL.d = v; renderSignalList(); });
+  seg($("#sl-f"), [["all", "すべて"], ...SL_FAMS.map(([f, l]) => [f, l])].filter(([f]) => f === "all" || (D.mtf[f] || {})[SL.tf]), SL.f, v => { SL.f = v; renderSignalList(); });
+  seg($("#sl-o"), [["score", "信頼度順"], ["bp", "平均bp順"]], SL.o, v => { SL.o = v; renderSignalList(); });
+  const other = SL.u === "全銘柄" ? "貸借のみ" : "全銘柄";
+  let rows = [];
+  SL_FAMS.forEach(([f, lab]) => { if (SL.f !== "all" && SL.f !== f) return; slCells(f, SL.tf).forEach(r => {
+    if (SL.d !== "all" && r.d !== SL.d) return;
+    const cells = SIZES.map(z => { const a = r.z[z + "|" + SL.u], b = r.z[z + "|" + other]; return a ? { a, sc: slScore(a, b) } : null; });
+    const best = Math.max(...cells.map(c => c ? c.sc.n : -1)), bp = Math.max(...cells.map(c => c ? c.a.raw : -1e9));
+    rows.push({ lab, r, cells, best, bp, tot: cells.reduce((x, c) => x + (c ? c.sc.n : 0), 0) });
+  }); });
+  rows.sort((x, y) => SL.o === "score" ? (y.best - x.best || y.tot - x.tot || y.bp - x.bp) : y.bp - x.bp);
+  const stars = n => "★".repeat(n) + "<span style=\"opacity:.28\">" + "★".repeat(4 - n) + "</span>";
+  let html = `<thead><tr><th>分析</th><th>シグナル</th>${SIZES.map(z => `<th>${z}</th>`).join("")}</tr></thead><tbody>`;
+  rows.forEach(w => {
+    const k = w.r.s;
+    html += `<tr class="slrow" data-k="${k}"><td>${w.lab}</td><td class="k">${nm(k)}<span class="tag ${w.r.d === "買い" ? "buy" : "sell"}">${w.r.d}</span></td>` + w.cells.map(c => !c ? "<td class=\"c0\">–</td>" : `<td class="${cls(c.a.rt)}"><span style="color:var(--warn);letter-spacing:1px">${stars(c.sc.n)}</span> ${f1(c.a.raw)} <small>t=${tf(c.a.rt)}</small></td>`).join("") + "</tr>";
+    if (SL.sel === k) html += `<tr><td colspan="5" style="text-align:left;font-size:.85em">` + SIZES.map((z, i) => { const c = w.cells[i]; return c ? `<b>${z}</b>: 件数 ${c.a.n.toLocaleString()} · 同じ騰落率との差 ${f1(c.a.adj)}bp(t=${tf(c.a.at)}) · コスト20bp後 ${f1(c.a.raw - 20)}bp` : ""; }).filter(Boolean).join("<br>") + "</td></tr>";
+  });
+  $("#sl-tab").innerHTML = html + "</tbody>";
+  $("#sl-tab").querySelectorAll("tr.slrow").forEach(tr => tr.onclick = e => { if (e.target.closest("a,.nm,[data-tip]")) return; SL.sel = SL.sel === tr.dataset.k ? null : tr.dataset.k; renderSignalList(); });
+  const n3 = rows.filter(w => w.best >= 3).length, n4 = rows.filter(w => w.best >= 4).length;
+  $("#sl-sum").innerHTML = `${TFN[SL.tf]}・${SL.u}・${SL.v === "A" ? "次の1本" : "延長保有"}の${rows.length}シグナルのうち、いずれかの規模で<b>★3以上は ${n3} 件</b>、<b>★4(全条件)は ${n4} 件</b>です。` + (n4 ? "" : "<em>全条件を満たす形はありません</em>。") + `★が多くても、条件③のコストは固定の往復20bpで、ショートの実コストや、規模ごとの件数の少なさは反映していません。`;
+}
 
 /* ---- horizontal bars (zero-centred, optional cost line) ---- */
 function hbars(rows, { lo, hi, cost, unit = "bp" }) {
@@ -1507,7 +1570,7 @@ function renderTimeAxis() {
 (function () {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
-  renderSummary(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
+  renderSummary(); renderSignalList(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
   renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderTimeAxis();
   showTab(location.hash.slice(1));
 })();
