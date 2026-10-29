@@ -276,14 +276,16 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <h2>シグナル一覧: 買い・売りのサインを1つの表で、信頼度を比べる</h2>
       <p class="lead">ローソク足・チャートパターン・テクニカル指標・抵抗帯の、すべての買いサイン・売りサインを1つの表にしました。それぞれを、<b>信頼度(★0〜4)</b>で比べられます。サインの向きで取引したときの、規模(売買代金の分位)別の成績で、条件を切り替えると並べ替わります。</p>
       <div class="card verdict" style="gap:8px"><p id="sl-sum"></p></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">時間軸</label><div class="seg" id="sl-tf"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">保有</label><div class="seg" id="sl-v"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">対象</label><div class="seg" id="sl-u"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">向き</label><div class="seg" id="sl-d"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">分析</label><div class="seg" id="sl-f"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">絞り込み</label><div class="seg" id="sl-g"></div></div>
-      <div class="ctl" style="margin:6px 0" id="sl-pickrow" hidden><label style="min-width:4.5em" id="sl-picklab"></label><div id="sl-pick" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"></div></div>
-      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">並び</label><div class="seg" id="sl-o"></div></div>
+      <div id="sl-ctls" style="display:flex;flex-direction:column;gap:2px">
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">時間軸</label><div class="seg" id="sl-tf"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">保有</label><div class="seg" id="sl-v"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">対象</label><div class="seg" id="sl-u"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">向き</label><div class="seg" id="sl-d"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">分析</label><div class="seg" id="sl-f"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">絞り込み</label><div class="seg" id="sl-g"></div></div>
+      <div class="ctl" style="margin:0" id="sl-pickrow" hidden><label style="min-width:4.5em" id="sl-picklab"></label><div id="sl-pick" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">並び</label><div class="seg" id="sl-o"></div></div>
+      </div>
       <p class="note" id="sl-gnote" hidden></p>
       <div class="legend" id="sl-star1" style="flex-wrap:wrap"><span><b>★の数え方</b>(規模ごとに、次の4つの条件をいくつ満たすか)</span></div>
       <ol class="pts" id="sl-star2" style="margin-top:4px">
