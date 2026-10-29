@@ -37,7 +37,7 @@ def api_get(path, params=None, retries=6):
                 time.sleep(2 ** (i + 1))
                 continue
             raise RuntimeError(f"HTTP {e.code} {url}: {e.read()[:200]!r}") from e
-        except (urllib.error.URLError, TimeoutError):
+        except (urllib.error.URLError, OSError):
             if i < retries - 1:
                 time.sleep(2 ** (i + 1))
                 continue
