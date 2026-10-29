@@ -19,12 +19,13 @@ for h, frac in p3.SET:
     mt = np.where(nt > 0, st / np.maximum(nt, 1), np.nan)
     corr, keep = p3.corr_any(ts, ret="gap", regime="up")
     corr0, keep0 = p3.corr_any(ts)
+    zmode = p2.corr_matrix(ts)[1]; same_z = zmode[:, None] == zmode[None, :]
     est = {"自身": np.where(n > 0, sm / np.maximum(n, 1), np.nan),
-           "窓×上げ相場(採用)": p2.topk_pool(n, sm, corr, np.ones((NC, NC), bool), 200),
-           "終値の相関": p2.topk_pool(n, sm, corr0, np.ones((NC, NC), bool), 200)}
+           "窓×上げ相場・同規模200(採用)": p2.topk_pool(n, sm, corr, same_z, 200),
+           "窓×上げ相場・規模問わず200": p2.topk_pool(n, sm, corr, np.ones((NC, NC), bool), 200),
+           "終値の相関・規模問わず200(旧)": p2.topk_pool(n, sm, corr0, np.ones((NC, NC), bool), 200)}
     gs = np.zeros((NS, 3)); gn = np.zeros((NS, 3)); ok = tr & ~np.isnan(E["x"])
     np.add.at(gs, (E["sid"][ok], E["z"][ok]), E["x"][ok]); np.add.at(gn, (E["sid"][ok], E["z"][ok]), 1)
-    zmode = p2.corr_matrix(ts)[1]
     est["同規模の全銘柄"] = (gs / np.maximum(gn, 1))[:, zmode]
     use = (n >= 3) & (nt >= 3) & keep[None, :] & keep0[None, :]
     for v in est.values():
@@ -38,6 +39,6 @@ for h, frac in p3.SET:
             sel[top[j], np.arange(NC)] = True
         sel &= use
         rows.append(dict(h=h, frac=frac, method=m, corr=c, top3=float((mt[sel] * nt[sel]).sum() / nt[sel].sum()), allmean=base, pairs=int(use.sum())))
-    print(h, frac, int(use.sum()), {r["method"]: round(r["corr"], 4) for r in rows[-4:]}, flush=True)
-df = pd.DataFrame(rows); df.to_csv("results_pool_sell.csv", index=False, encoding="utf-8-sig")
+    print(h, frac, int(use.sum()), {r["method"]: round(r["corr"], 4) for r in rows[-5:]}, flush=True)
+df = pd.DataFrame(rows); import os; df.to_csv("results_pool_sell.csv" if os.environ.get("SELL") == "1" else "results_pool_buy.csv", index=False, encoding="utf-8-sig")
 print(df.groupby("method").agg(corr=("corr", "mean"), mn=("corr", "min"), mx=("corr", "max"), top3=("top3", "mean"), allmean=("allmean", "mean")).round(4))

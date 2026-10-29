@@ -1,15 +1,19 @@
 #!/bin/bash
-# 長期データの清掃(clean_long.py)のあと、長期の結果と銘柄別シグナルの検証をすべて作り直す
+# 再開できる再計算。各段階が終わると rerun_done/<名前> を作り、あるものは飛ばす。
 cd /home/user/mushizukan-app/jp_backtest
-echo "[1] long_run" ; python3 long_run.py tech:W zone:W candle:M chart:M tech:M zone:M > rerun_long.log 2>&1
-echo "[2] events" ; python3 build_events_w.py > rerun_ev_buy.log 2>&1 &
-SELL=1 python3 build_events_w.py > rerun_ev_sell.log 2>&1
+step() { n=$1; shift; [ -f rerun_done/$n ] && return; echo "[$n] start $(date +%H:%M)"; "$@" && touch rerun_done/$n; echo "[$n] end $(date +%H:%M)"; }
+bg() { n=$1; shift; ( step $n "$@" ) & }
+bg ev_buy bash -c "python3 build_events_w.py > rerun_ev_buy.log 2>&1"
+step ev_sell bash -c "SELL=1 python3 build_events_w.py > rerun_ev_sell.log 2>&1"
 wait
-echo "[3] pools" ; python3 pool_compare_run.py > rerun_pool2.log 2>&1 &
-python3 stock_pool3.py > rerun_pool3.log 2>&1
+bg pool2 bash -c "python3 pool_compare_run.py > rerun_pool2.log 2>&1"
+step pool3 bash -c "python3 stock_pool3.py > rerun_pool3.log 2>&1"
 wait
-SELL=1 python3 sell_check.py > rerun_sell.log 2>&1 &
-python3 stock_pool4.py > rerun_pool4.log 2>&1
+bg sell bash -c "SELL=1 python3 sell_check.py > rerun_sell.log 2>&1"
+bg rank_buy bash -c "python3 weekly_rank_build.py > rerun_rank_buy.log 2>&1"
+step rank_sell bash -c "SELL=1 python3 weekly_rank_build.py > rerun_rank_sell.log 2>&1"
 wait
-echo "[4] rank" ; python3 weekly_rank_build.py > rerun_rank_buy.log 2>&1 ; SELL=1 python3 weekly_rank_build.py > rerun_rank_sell.log 2>&1
+step long_zoneW python3 long_run.py zone:W > rerun_long2.log 2>&1
+step long_M python3 long_run.py candle:M chart:M tech:M zone:M > rerun_long3.log 2>&1
+step pool4 bash -c "python3 stock_pool4.py > rerun_pool4.log 2>&1"
 echo ALLDONE

@@ -37,7 +37,7 @@ def build_data():
     l = liq[liq.期間 == "後半"].set_index(key)["mean_bp"].rename("l")
     m = a.join(f).join(l).reset_index()
     meta = json.load(open(os.path.join(HERE, "report_data", "meta.json"), encoding="utf-8"))
-    D = {"stocks": meta["stocks"], "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
+    D = {"stocks": meta["stocks"], "pool": build_pool(), "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
                               net="net_bp", w="win", t="t", f="f", l="l"))}
 
     h3 = csv("results_h3.csv")
@@ -155,6 +155,40 @@ def split_zone(d):
     pres = tuple(x for _, x in ZPREF)
     out["zone"] = {"main": [r for r in d["main"] if not r["p"].startswith(pres)], "mm": [r for r in d["mm"] if not r["p"].startswith(pres)],
                    "match": [r for r in d["match"] if not r["s"].startswith(pres)], "hold": [r for r in d.get("hold", []) if not r["s"].startswith(pres)]}
+    return out
+
+
+def build_pool():
+    """銘柄別シグナルタブの、仲間の選び方の検証表(results_pool_*.csv)。各行は [名前, 平均, 最小, 最大, 追加の値...]。"""
+    def agg(df, key, val="corr"):
+        g = df.groupby(key)[val].agg(["mean", "min", "max"])
+        return g
+    out = {}
+    L1 = [("own", "自身の平均だけ"), ("size1", "規模で分けない全銘柄の平均"), ("size2", "規模2分割(大型とそれ以外)の全銘柄の平均"), ("size3", "規模3分割(小型・中型・大型)の全銘柄の平均"),
+          ("sec", "同じ業種(33業種)の銘柄"), ("secz", "同じ業種 × 同じ規模"), ("corr15", "相関上位15銘柄(規模問わず)"), ("corr60", "相関上位60銘柄(規模問わず)"),
+          ("corr200", "相関上位200銘柄(規模問わず)"), ("corrz15", "相関上位15銘柄(同じ規模)"), ("corrz60", "相関上位60銘柄(同じ規模)"), ("corrz100", "相関上位100銘柄(同じ規模)"),
+          ("corrz200", "相関上位200銘柄(同じ規模)"), ("secc15", "同じ業種の中で、相関上位15銘柄")]
+    if os.path.exists(os.path.join(HERE, "results_pool_compare.csv")):
+        g = agg(csv("results_pool_compare.csv"), "method")
+        out["compare"] = [[lab, float(g.loc[k, "mean"]), float(g.loc[k, "min"]), float(g.loc[k, "max"])] for k, lab in L1 if k in g.index]
+    if os.path.exists(os.path.join(HERE, "results_pool_window.csv")):
+        w = csv("results_pool_window.csv"); g = w.groupby(["window", "method"])["corr"].mean().unstack()
+        out["window"] = [[lab, float(g.loc[k, "corr200"]), float(g.loc[k, "corrz200"])] for k, lab in ((0, "学習期間の全体"), (520, "直近10年(520週)"), (260, "直近5年(260週)"), (156, "直近3年(156週)"), (104, "直近2年(104週)")) if k in g.index]
+    if os.path.exists(os.path.join(HERE, "results_pool_corrtype.csv")):
+        c = csv("results_pool_corrtype.csv")
+        out["corrtype"] = [[r.variant, float(r.avg), float(r.mn), float(r.mx)] for r in c.itertuples()]
+    if os.path.exists(os.path.join(HERE, "results_pool_redo.csv")):
+        r = csv("results_pool_redo.csv"); g = r.groupby(["method", "set"])["corr"].agg(["mean", "min", "max"]).unstack()
+        rows_ = [[m, float(g.loc[m, ("mean", "選択")]), float(g.loc[m, ("mean", "未使用")]), float(g.loc[m, ("min", "未使用")]), float(g.loc[m, ("max", "未使用")])] for m in g.index]
+        out["redo"] = sorted(rows_, key=lambda x: -x[2])
+    if os.path.exists(os.path.join(HERE, "results_pool_resp.csv")):
+        r = csv("results_pool_resp.csv"); g = r.groupby("method")["corr"].agg(["mean", "min", "max"])
+        out["resp"] = [[k, float(g.loc[k, "mean"]), float(g.loc[k, "min"]), float(g.loc[k, "max"])] for k in g.index]
+    for side in ("buy", "sell"):
+        f = f"results_pool_{side}.csv"
+        if os.path.exists(os.path.join(HERE, f)):
+            r = csv(f); g = r.groupby("method").agg(corr=("corr", "mean"), mn=("corr", "min"), mx=("corr", "max"), top3=("top3", "mean"), allmean=("allmean", "mean"))
+            out[side] = [[k, float(g.loc[k, "corr"]), float(g.loc[k, "mn"]), float(g.loc[k, "mx"]), float(g.loc[k, "top3"]), float(g.loc[k, "allmean"])] for k in g.index]
     return out
 
 

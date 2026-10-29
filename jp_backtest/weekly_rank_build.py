@@ -1,6 +1,6 @@
 """週足ベースの銘柄別シグナルタブ用データ(全銘柄・買いシグナル)を report_data/wrank_*.json に書く。
 
-推定値 = 値動きの相関が高い銘柄(上位K=200、規模は問わない)の、同じシグナルの平均(stock_pool3.py の「窓×上げ相場の週」)。銘柄自身の平均は参考として併記する。
+推定値 = 値動きの相関が高い銘柄(上位K=200、同じ規模に限る)の、同じシグナルの平均(stock_pool5.py の「窓×上げ相場の週・同規模200」)。銘柄自身の平均は参考として併記する。
 出力の形: {コード: [[シグナル番号, 件数, 自身の平均, 推定, 同規模全銘柄の平均, 仲間の件数, 仲間のt, 勝率%, 前半, 後半, 直近発生の週番号, 信頼度, 自身のt], ...]}
 """
 import json
@@ -20,6 +20,7 @@ K, SHARD, COST = 200, 400, (30.0 if SELL else 20.0)   # 売りは、貸株料な
 NT, NC, NS = sp.NT, sp.NC, sp.NS
 corr, keep = p3.corr_any(NT, ret="gap", regime="up")   # 窓(前週終値→始値)の連動を、上げ相場の週だけで測る
 _, zmode, _k = p2.corr_matrix(NT)
+corr = np.where(zmode[:, None] == zmode[None, :], corr, -9)   # 仲間は、同じ規模の銘柄に限る
 nn = np.argsort(-corr, axis=1)[:, :K]
 valid = np.take_along_axis(corr, nn, 1) > -9
 avgcorr = float(np.mean(np.take_along_axis(corr, nn, 1)[valid]))

@@ -21,8 +21,11 @@ def zrow(m, valid):
     return np.where(valid, (m - mu) / np.where(sd > 0, sd, 1), -9)
 
 
-def estimates(E, ts, K=200):
+def estimates(E, ts, K=200, zr=False):
     corr, keep = p3.corr_any(ts, ret="gap", regime="up")
+    zmode = p2.corr_matrix(ts)[1]
+    same_z = (zmode[:, None] == zmode[None, :]) if zr else np.ones((NC, NC), bool)
+    corr = np.where(same_z, corr, -9)
     tr = E["t"] < ts
     ok = tr & ~np.isnan(E["x"])
     n = np.zeros((NS, NC)); sm = np.zeros((NS, NC)); q = np.zeros((NS, NC))
@@ -42,6 +45,7 @@ def estimates(E, ts, K=200):
         nr = np.sqrt(np.maximum(nrm2 - a ** 2, 1e-6))
         sim = Ns / (nr[:, None] * nr[None, :])
         sim[~keep, :] = -9; sim[:, ~keep] = -9
+        sim = np.where(same_z, sim, -9)
         np.fill_diagonal(sim, -9)
         for name, M in (("resp", sim), ("both", None), ("corr", corr)):
             if name == "both":
@@ -54,9 +58,9 @@ def estimates(E, ts, K=200):
     return est, n, keep
 
 
-def evaluate(h, frac, K=200):
+def evaluate(h, frac, K=200, zr=False):
     E = sp.prep(h); ts = int(NT * frac)
-    est, n, keep = estimates(E, ts, K)
+    est, n, keep = estimates(E, ts, K, zr)
     te = (E["t"] >= ts) & ~np.isnan(E["x"])
     nt = np.zeros((NS, NC)); st = np.zeros((NS, NC))
     np.add.at(nt, (E["sid"][te], E["c"][te]), 1); np.add.at(st, (E["sid"][te], E["c"][te]), E["x"][te])
@@ -73,11 +77,14 @@ def evaluate(h, frac, K=200):
 
 
 if __name__ == "__main__":
+    import sys
+    zr = len(sys.argv) > 1 and sys.argv[1] == "z"
     rows = []
-    for h, f in p3.SET:
-        out, pairs = evaluate(h, f)
-        for m, (c, w) in out.items():
-            rows.append(dict(h=h, frac=f, method=m, corr=c, within=w, pairs=pairs))
-        print(h, f, pairs, {m: round(c, 4) for m, (c, w) in out.items()}, flush=True)
-    df = pd.DataFrame(rows); df.to_csv("results_pool_resp.csv", index=False, encoding="utf-8-sig")
-    print(df.groupby("method")[["corr", "within"]].agg(["mean", "min", "max"]).round(4))
+    for tag, S in (("選択", p3.SET), ("未使用", [(4, 0.8), (4, 0.9), (1, 0.8), (12, 0.8)])):
+        for h, f in S:
+            out, pairs = evaluate(h, f, zr=zr)
+            for m, (c, w) in out.items():
+                rows.append(dict(set=tag, h=h, frac=f, method=m, corr=c, within=w, pairs=pairs))
+            print(tag, h, f, pairs, {m: round(c, 4) for m, (c, w) in out.items()}, flush=True)
+    df = pd.DataFrame(rows); df.to_csv("results_pool_resp_z.csv" if zr else "results_pool_resp.csv", index=False, encoding="utf-8-sig")
+    print(df.groupby(["method", "set"])["corr"].agg(["mean", "min", "max"]).round(4).unstack())
