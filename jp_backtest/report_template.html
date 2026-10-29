@@ -276,10 +276,17 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <h2>シグナル一覧: 買い・売りのサインを1つの表で、信頼度を比べる</h2>
       <p class="lead">ローソク足・チャートパターン・テクニカル指標・抵抗帯の、すべての買いサイン・売りサインを1つの表にしました。それぞれを、<b>信頼度(★0〜4)</b>で比べられます。サインの向きで取引したときの、規模(売買代金の分位)別の成績で、条件を切り替えると並べ替わります。</p>
       <div class="card verdict" style="gap:8px"><p id="sl-sum"></p></div>
-      <div class="ctl"><label>時間軸</label><div class="seg" id="sl-tf"></div><label>保有</label><div class="seg" id="sl-v"></div><label>対象</label><div class="seg" id="sl-u"></div></div>
-      <div class="ctl"><label>向き</label><div class="seg" id="sl-d"></div><label>分析</label><div class="seg" id="sl-f"></div><label>並び</label><div class="seg" id="sl-o"></div></div>
-      <div class="legend" style="flex-wrap:wrap"><span><b>★の数え方</b>(規模ごとに、次の4つの条件をいくつ満たすか)</span></div>
-      <ol class="pts" style="margin-top:4px">
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">時間軸</label><div class="seg" id="sl-tf"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">保有</label><div class="seg" id="sl-v"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">対象</label><div class="seg" id="sl-u"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">向き</label><div class="seg" id="sl-d"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">分析</label><div class="seg" id="sl-f"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">絞り込み</label><div class="seg" id="sl-g"></div></div>
+      <div class="ctl" style="margin:6px 0" id="sl-pickrow" hidden><label style="min-width:4.5em" id="sl-picklab"></label><div id="sl-pick" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"></div></div>
+      <div class="ctl" style="margin:6px 0"><label style="min-width:4.5em">並び</label><div class="seg" id="sl-o"></div></div>
+      <p class="note" id="sl-gnote" hidden></p>
+      <div class="legend" id="sl-star1" style="flex-wrap:wrap"><span><b>★の数え方</b>(規模ごとに、次の4つの条件をいくつ満たすか)</span></div>
+      <ol class="pts" id="sl-star2" style="margin-top:4px">
         <li><b>統計的に有意</b>: サインの向きで取引した超過リターンが、プラスで t ≥ 3.8(多数の検定による偶然の当たりを考慮した基準)</li>
         <li><b>同じ騰落率の日と比べても残る</b>: シグナルが出た足と同じ騰落率の足(全銘柄)との差が、プラスで t ≥ 2。大きく動いた後の反転ではないことの確認</li>
         <li><b>コスト後もプラス</b>: 往復コスト20bpを引いても、平均がプラス。ショートの実コスト(貸株料・スプレッド)は含まない</li>
@@ -695,8 +702,13 @@ TABS.forEach(([k, label]) => {
 window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
 
 /* ---- シグナル一覧 ---- */
-const SL = { tf: "D", v: "A", u: "全銘柄", d: "all", f: "all", o: "score", sel: null };
+const SL = { tf: "D", v: "A", u: "全銘柄", d: "all", f: "all", o: "score", sel: null, g: "all", mk: 0, sec: 0, stk: null, q: "" };
 const SL_FAMS = [["candle", "ローソク足"], ["chart", "チャート"], ["tech", "テクニカル"], ["zone", "抵抗帯(出来高)"], ["zline", "ライン"], ["zboth", "帯×ライン重なり"], ["zvonly", "出来高のみ"], ["zlonly", "線のみ"]];
+const SL_CACHE = {};
+function slLoad(path) {
+  if (!SL_CACHE[path]) SL_CACHE[path] = fetch(path).then(r => { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }).catch(e => { delete SL_CACHE[path]; throw e; });
+  return SL_CACHE[path];
+}
 function slCells(fam, tf) {
   const fd = (D.mtf[fam] || {})[tf]; if (!fd) return [];
   const out = {};
@@ -704,43 +716,112 @@ function slCells(fam, tf) {
   src.forEach(r => { (out[r.s] = out[r.s] || { s: r.s, d: r.d, fam, z: {} }).z[r.z + "|" + r.u] = r; });
   return Object.values(out);
 }
+function slSubCells(sub, fam) { // 市場・業種で絞った行(sub.rows の配列)を、slCells と同じ形にする
+  const kind = SL.g === "mkt" ? 0 : 1, gid = SL.g === "mkt" ? SL.mk : SL.sec, out = {};
+  sub.rows.forEach(a => {
+    if (a[0] !== fam || a[4] !== kind || a[5] !== gid || a[7] !== SL.v) return;
+    const o = out[a[1]] = out[a[1]] || { s: a[1], d: a[2] ? "買い" : "売り", fam, z: {} };
+    o.z[SIZES[a[6]] + "|" + (a[3] ? "貸借のみ" : "全銘柄")] = { n: a[8], raw: a[9], rt: a[10], adj: a[11], at: a[12] };
+  });
+  return Object.values(out);
+}
 function slScore(a, b) { // a: 選択した対象、b: もう一方の対象
   if (!a) return null;
   const c = [a.rt >= 3.8, a.adj > 0 && a.at >= 2, a.raw - 20 > 0, !!b && b.raw > 0 && b.rt >= 2];
   return { n: c.filter(Boolean).length, c };
 }
-function renderSignalList() {
-  const tfs = ["D", "W", "M", "WL", "ML"].filter(t => SL_FAMS.some(([f]) => (D.mtf[f] || {})[t]));
-  seg($("#sl-tf"), tfs.map(t => [t, TFN[t]]), SL.tf, v => { SL.tf = v; renderSignalList(); });
+const stars = n => "★".repeat(n) + "<span style=\"opacity:.28\">" + "★".repeat(4 - n) + "</span>";
+function slHoldOpts() {
   const hasHold = ["D", "W", "M"].includes(SL.tf) && SL_FAMS.some(([f]) => ((D.mtf[f] || {})[SL.tf] || {}).hold);
-  const hopts = hasHold ? [["A", "次の1本"], ...(SL.tf === "D" ? [5, 10, 20, 30] : SL.tf === "W" ? [1, 2, 4, 6, 12] : [1, 2, 3, 6]).map(h => [h, h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "")])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
-  if (!hopts.some(o => o[0] === SL.v)) SL.v = "A";
+  const num = SL.tf === "D" ? [5, 10, 20, 30] : SL.tf === "W" ? [1, 2, 4, 6, 12] : [1, 2, 3, 6];
+  const lab = h => h + UNIT[SL.tf] + "保有" + (SL.tf === "W" ? `(約${h * 5}日)` : "");
+  if (SL.g !== "all") return num.map(h => [h, lab(h)]);   // 絞り込み中は、保有期間を指定した集計だけ
+  return hasHold ? [["A", "次の1本"], ...num.map(h => [h, lab(h)])] : [["A", "次の1本"], ["G", GHN[SL.tf] + UNIT[SL.tf] + "保有"]];
+}
+function slPick() {
+  const row = $("#sl-pickrow"), box = $("#sl-pick"); row.hidden = SL.g === "all";
+  if (SL.g === "all") return;
+  if (SL.g === "mkt") { $("#sl-picklab").textContent = "市場"; box.innerHTML = `<div class="seg" id="sl-pk"></div>`; seg($("#sl-pk"), ["プライム", "スタンダード", "グロース"].map((l, i) => [i, l]), SL.mk, v => { SL.mk = v; renderSignalList(); }); }
+  else if (SL.g === "sec") {
+    $("#sl-picklab").textContent = "業種"; box.innerHTML = `<select id="sl-pk" style="padding:6px 10px;border-radius:10px;border:1px solid var(--line,#8886);background:var(--card,transparent);color:inherit;font:inherit">${D.secs.map((s, i) => `<option value="${i}"${i === SL.sec ? " selected" : ""}>${s}</option>`).join("")}</select>`;
+    $("#sl-pk").onchange = e => { SL.sec = +e.target.value; renderSignalList(); };
+  } else {
+    $("#sl-picklab").textContent = "銘柄";
+    box.innerHTML = `<input id="sl-q" type="search" placeholder="コード(例 7203)または会社名" value="${SL.q}" style="padding:6px 12px;border-radius:10px;border:1px solid var(--line,#8886);background:transparent;color:inherit;font:inherit;min-width:16em"><span id="sl-qres" style="display:flex;gap:6px;flex-wrap:wrap"></span>`;
+    const draw = () => {
+      const q = SL.q.trim(), res = $("#sl-qres"); if (!q) { res.innerHTML = SL.stk != null ? `<b>${D.stocks[SL.stk][0]} ${D.stocks[SL.stk][1]}</b>` : ""; return; }
+      const hit = D.stocks.map((x, i) => [x, i]).filter(([x]) => x[0].startsWith(q) || x[1].includes(q)).slice(0, 12);
+      res.innerHTML = hit.map(([x, i]) => `<button type="button" class="tab" data-i="${i}" style="padding:4px 10px">${x[0]} ${x[1]}</button>`).join("") || "該当なし";
+      res.querySelectorAll("button").forEach(b => b.onclick = () => { SL.stk = +b.dataset.i; SL.q = ""; renderSignalList(); });
+    };
+    $("#sl-q").oninput = e => { SL.q = e.target.value; draw(); }; draw();
+  }
+}
+async function renderSignalList() {
+  const tfs = ["D", "W", "M", "WL", "ML"].filter(t => SL_FAMS.some(([f]) => (D.mtf[f] || {})[t]));
+  const subTf = ["D", "W"].includes(SL.tf);
+  if (!subTf && SL.g !== "all") SL.g = "all";
+  seg($("#sl-tf"), tfs.map(t => [t, TFN[t]]), SL.tf, v => { SL.tf = v; renderSignalList(); });
+  const hopts = slHoldOpts();
+  if (!hopts.some(o => o[0] === SL.v)) SL.v = hopts[0][0];
   seg($("#sl-v"), hopts, SL.v, v => { SL.v = v; renderSignalList(); });
   seg($("#sl-u"), [["全銘柄", "全銘柄"], ["貸借のみ", "貸借のみ"]], SL.u, v => { SL.u = v; renderSignalList(); });
   seg($("#sl-d"), [["all", "すべて"], ["買い", "買いサイン"], ["売り", "売りサイン"]], SL.d, v => { SL.d = v; renderSignalList(); });
   seg($("#sl-f"), [["all", "すべて"], ...SL_FAMS.map(([f, l]) => [f, l])].filter(([f]) => f === "all" || (D.mtf[f] || {})[SL.tf]), SL.f, v => { SL.f = v; renderSignalList(); });
+  seg($("#sl-g"), [["all", "なし(全体)"], ...(subTf ? [["mkt", "市場"], ["sec", "業種"], ["stk", "銘柄"]] : [])], SL.g, v => { SL.g = v; renderSignalList(); });
   seg($("#sl-o"), [["score", "信頼度順"], ["bp", "平均bp順"]], SL.o, v => { SL.o = v; renderSignalList(); });
+  slPick();
+  $("#sl-star1").hidden = $("#sl-star2").hidden = SL.g === "stk";
+  const note = $("#sl-gnote"), tab = $("#sl-tab");
+  note.hidden = SL.g === "all"; 
+  if (SL.g === "stk") return slStock(tab, note);
   const other = SL.u === "全銘柄" ? "貸借のみ" : "全銘柄";
+  let sub = null;
+  if (SL.g !== "all") {
+    note.innerHTML = "市場・業種で絞った結果です。規模(分位)・同日の平均・同じ騰落率の基準は、全銘柄で作ったままで、シグナルが出た銘柄だけを絞って集計しています。件数が少ない組み合わせは、数字が不安定です。保有期間は、5日などの指定したものだけが選べます。";
+    tab.innerHTML = `<tbody><tr><td>読み込み中…</td></tr></tbody>`;
+    try { sub = await slLoad(`report_data/sub_${SL.tf}.json`); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+    if (!hopts.some(o => o[0] === SL.v)) return;
+  }
   let rows = [];
-  SL_FAMS.forEach(([f, lab]) => { if (SL.f !== "all" && SL.f !== f) return; slCells(f, SL.tf).forEach(r => {
+  SL_FAMS.forEach(([f, lab]) => { if (SL.f !== "all" && SL.f !== f) return; (sub ? slSubCells(sub, f) : slCells(f, SL.tf)).forEach(r => {
     if (SL.d !== "all" && r.d !== SL.d) return;
     const cells = SIZES.map(z => { const a = r.z[z + "|" + SL.u], b = r.z[z + "|" + other]; return a ? { a, sc: slScore(a, b) } : null; });
     const best = Math.max(...cells.map(c => c ? c.sc.n : -1)), bp = Math.max(...cells.map(c => c ? c.a.raw : -1e9));
+    if (best < 0) return;
     rows.push({ lab, r, cells, best, bp, tot: cells.reduce((x, c) => x + (c ? c.sc.n : 0), 0) });
   }); });
   rows.sort((x, y) => SL.o === "score" ? (y.best - x.best || y.tot - x.tot || y.bp - x.bp) : y.bp - x.bp);
-  const stars = n => "★".repeat(n) + "<span style=\"opacity:.28\">" + "★".repeat(4 - n) + "</span>";
   let html = `<thead><tr><th>分析</th><th>シグナル</th>${SIZES.map(z => `<th>${z}</th>`).join("")}</tr></thead><tbody>`;
   rows.forEach(w => {
-    const k = w.r.s;
-    html += `<tr class="slrow" data-k="${k}"><td>${w.lab}</td><td class="k">${nm(k)}<span class="tag ${w.r.d === "買い" ? "buy" : "sell"}">${w.r.d}</span></td>` + w.cells.map(c => !c ? "<td class=\"c0\">–</td>" : `<td class="${cls(c.a.rt)}"><span style="color:var(--warn);letter-spacing:1px">${stars(c.sc.n)}</span> ${f1(c.a.raw)} <small>t=${tf(c.a.rt)}</small></td>`).join("") + "</tr>";
+    const k = w.lab + w.r.s;
+    html += `<tr class="slrow" data-k="${k}"><td>${w.lab}</td><td class="k">${nm(w.r.s)}<span class="tag ${w.r.d === "買い" ? "buy" : "sell"}">${w.r.d}</span></td>` + w.cells.map(c => !c ? "<td class=\"c0\">–</td>" : `<td class="${cls(c.a.rt)}"><span style="color:var(--warn);letter-spacing:1px">${stars(c.sc.n)}</span> ${f1(c.a.raw)} <small>t=${tf(c.a.rt)}</small></td>`).join("") + "</tr>";
     if (SL.sel === k) html += `<tr><td colspan="5" style="text-align:left;font-size:.85em">` + SIZES.map((z, i) => { const c = w.cells[i]; return c ? `<b>${z}</b>: 件数 ${c.a.n.toLocaleString()} · 同じ騰落率との差 ${f1(c.a.adj)}bp(t=${tf(c.a.at)}) · コスト20bp後 ${f1(c.a.raw - 20)}bp` : ""; }).filter(Boolean).join("<br>") + "</td></tr>";
   });
-  $("#sl-tab").innerHTML = html + "</tbody>";
-  $("#sl-tab").querySelectorAll("tr.slrow").forEach(tr => tr.onclick = e => { if (e.target.closest("a,.nm,[data-tip]")) return; SL.sel = SL.sel === tr.dataset.k ? null : tr.dataset.k; renderSignalList(); });
+  if (!rows.length) html += `<tr><td colspan="5">該当するシグナルがありません(件数30未満の組み合わせは表示しません)。</td></tr>`;
+  tab.innerHTML = html + "</tbody>";
+  tab.querySelectorAll("tr.slrow").forEach(tr => tr.onclick = e => { if (e.target.closest("a,.nm,[data-tip]")) return; SL.sel = SL.sel === tr.dataset.k ? null : tr.dataset.k; renderSignalList(); });
   const n3 = rows.filter(w => w.best >= 3).length, n4 = rows.filter(w => w.best >= 4).length;
-  $("#sl-sum").innerHTML = `${TFN[SL.tf]}・${SL.u}・${SL.v === "A" ? "次の1本" : typeof SL.v === "number" ? SL.v + UNIT[SL.tf] + "保有" : "延長保有"}の${rows.length}シグナルのうち、いずれかの規模で<b>★3以上は ${n3} 件</b>、<b>★4(全条件)は ${n4} 件</b>です。` + (n4 ? "" : "<em>全条件を満たす形はありません</em>。") + `★が多くても、条件③のコストは固定の往復20bpで、ショートの実コストや、規模ごとの件数の少なさは反映していません。` + (SL.tf === "M" ? "<br><em>月足は、独立した期間が数個しかなく(5年のデータで、シグナルが出るのは直近の約2年分、6か月保有は重なりも大きい)、★が多くてもt値は過大です。参考程度に見てください。</em>" : "");
+  const gl = SL.g === "mkt" ? ["プライム", "スタンダード", "グロース"][SL.mk] + "・" : SL.g === "sec" ? D.secs[SL.sec] + "・" : "";
+  $("#sl-sum").innerHTML = `${TFN[SL.tf]}・${gl}${SL.u}・${SL.v === "A" ? "次の1本" : typeof SL.v === "number" ? SL.v + UNIT[SL.tf] + "保有" : "延長保有"}の${rows.length}シグナルのうち、いずれかの規模で<b>★3以上は ${n3} 件</b>、<b>★4(全条件)は ${n4} 件</b>です。` + (n4 ? "" : "<em>全条件を満たす形はありません</em>。") + `★が多くても、条件③のコストは固定の往復20bpで、ショートの実コストや、規模ごとの件数の少なさは反映していません。` + (SL.tf === "M" ? "<br><em>月足は、独立した期間が数個しかなく(5年のデータで、シグナルが出るのは直近の約2年分、6か月保有は重なりも大きい)、★が多くてもt値は過大です。参考程度に見てください。</em>" : "");
 }
+async function slStock(tab, note) {
+  const sum = $("#sl-sum");
+  if (SL.stk == null) { tab.innerHTML = `<tbody><tr><td>銘柄を検索して選んでください。</td></tr></tbody>`; sum.textContent = "銘柄を選ぶと、その銘柄でシグナルが出たときの成績(次の足の始値で入り、指定の期間保有)が出ます。"; note.innerHTML = ""; return; }
+  const st = D.stocks[SL.stk], si = Math.floor(SL.stk / 400), hi = D.holds[SL.tf].indexOf(SL.v);
+  note.innerHTML = "1銘柄では、シグナルの件数が少なく、偶然の影響が大きくなります。「同じ騰落率との差」は、全銘柄の同規模・同じ騰落率の足との差です。件数5未満は表示しません。数字は参考値で、信頼度(★)は付けていません。";
+  tab.innerHTML = `<tbody><tr><td>読み込み中…</td></tr></tbody>`;
+  let sh; try { sh = await slLoad(`report_data/stk_${SL.tf}_${si}.json`); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+  const ent = sh[st[4]] || {}, fnm = Object.fromEntries(SL_FAMS);
+  let rows = Object.entries(ent).map(([k, v]) => { const [fam, s] = k.split("|"), a = v[hi]; return a && a[0] >= 5 ? { fam, s, n: a[0], raw: a[1], adj: a[2], d: dirLookup(fam, s) } : null; }).filter(Boolean)
+    .filter(r => (SL.d === "all" || r.d === SL.d) && (SL.f === "all" || r.fam === SL.f));
+  rows.sort((x, y) => y.raw - x.raw);
+  tab.innerHTML = `<thead><tr><th>分析</th><th>シグナル</th><th>件数</th><th>平均(bp)</th><th>同じ騰落率との差(bp)</th></tr></thead><tbody>` +
+    (rows.map(r => `<tr><td>${fnm[r.fam]}</td><td class="k">${nm(r.s)}<span class="tag ${r.d === "買い" ? "buy" : "sell"}">${r.d}</span></td><td>${r.n}</td><td class="${r.raw > 0 ? "wp" : "wn"}">${f1(r.raw)}</td><td>${f1(r.adj)}</td></tr>`).join("") || `<tr><td colspan="5">件数5以上のシグナルがありません。</td></tr>`) + "</tbody>";
+  sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})の、${TFN[SL.tf]}・${SL.v + UNIT[SL.tf]}保有の結果です。件数5以上のシグナルは ${rows.length} 件で、平均がプラスのものは ${rows.filter(r => r.raw > 0).length} 件。1銘柄の結果は偶然の影響が大きく、全体の結果と合わせて判断してください。`;
+}
+const _dirCache = {};
+function dirLookup(fam, s) { const k = fam + "|" + s; if (!(k in _dirCache)) { const r = ((D.mtf[fam] || {}).D || (D.mtf[fam] || {}).W || {}).match; const x = r && r.find(q => q.s === s); _dirCache[k] = x ? x.d : "買い"; } return _dirCache[k]; }
 
 /* ---- horizontal bars (zero-centred, optional cost line) ---- */
 function hbars(rows, { lo, hi, cost, unit = "bp" }) {

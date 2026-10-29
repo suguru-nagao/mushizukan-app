@@ -36,7 +36,8 @@ def build_data():
     f = liq[liq.期間 == "前半"].set_index(key)["mean_bp"].rename("f")
     l = liq[liq.期間 == "後半"].set_index(key)["mean_bp"].rename("l")
     m = a.join(f).join(l).reset_index()
-    D = {"main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
+    meta = json.load(open(os.path.join(HERE, "report_data", "meta.json"), encoding="utf-8"))
+    D = {"stocks": meta["stocks"], "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
                               net="net_bp", w="win", t="t", f="f", l="l"))}
 
     h3 = csv("results_h3.csv")
