@@ -63,7 +63,18 @@ def build_data():
 
     D["robust"] = rows(csv("results_robust.csv"), dict(s="シグナル", z="規模", v="変種", c="条件", n="n", m="平均bp", md="中央値bp", t="t"))
     D["robustYear"] = rows(csv("results_robust_year.csv"), dict(s="シグナル", z="規模", y="年", n="n", m="平均bp"))
+
+    mm = csv("results_margin_main.csv")
+    mm = mm[(mm.区分 == "流動性分位") & (mm.期間 == "全体")]
+    D["mmain"] = rows(mm, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", t="t"))
+    ms = csv("results_margin_short.csv")
+    ms = ms[ms.シグナル.isin(MARGIN_SIGNALS) & ms.変種.isin(["A", "C", "D", "G"])]
+    D["mshort"] = rows(ms, dict(u="対象", s="シグナル", z="規模", v="変種", n="n", m="平均bp", t="t", f="前半bp", l="後半bp"))
+    D["myear"] = rows(csv("results_margin_year.csv"), dict(s="シグナル", y="年", n="n", m="平均bp"))
     return D
+
+
+MARGIN_SIGNALS = ["窓下げ2%超", "[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増", "首吊り線", "流れ星"]
 
 
 if __name__ == "__main__":

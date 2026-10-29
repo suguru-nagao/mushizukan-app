@@ -53,6 +53,28 @@ def short_table(P, universe, label, sigs, split):
     return pd.DataFrame(rows)
 
 
+def year_table(P, universe, sigs, names, size=(1, 2)):
+    """貸借銘柄・小型・保有5日ショートの年別平均(当日ストップ高/安を除く)。"""
+    liq = bt.liquidity_bucket(P, universe=universe)
+    ok = ~bt.ahead(P["limit"].astype(float), 1).astype(bool)
+    r = np.where(ok, bt.forward_returns(P, [5])[5], np.nan)
+    x = r - bt.baseline(r, liq)
+    yrs = P["dates"].year.to_numpy()
+    rows = []
+    for name in names:
+        d, S = sigs[name]
+        sel = S & ~P["limit"] & (liq >= size[0]) & (liq <= size[1]) & ~np.isnan(x)
+        t, c = np.nonzero(sel)
+        v = -x[t, c]
+        for y in np.unique(yrs[t]):
+            m = yrs[t] == y
+            rows.append(dict(シグナル=name, 年=int(y), n=int(m.sum()), 平均bp=v[m].mean() * 1e4))
+    return pd.DataFrame(rows)
+
+
+YEAR_SIGNALS = ["窓下げ2%超", "[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増"]
+
+
 if __name__ == "__main__":
     P = bt.load_panel()
     U = bt.load_margin(P)
@@ -66,3 +88,5 @@ if __name__ == "__main__":
     both = pd.concat([short_table(P, None, "全銘柄", sigs, split), short_table(P, U, "貸借のみ", sigs, split)], ignore_index=True)
     both.to_csv(os.path.join(HERE, "results_margin_short.csv"), index=False, encoding="utf-8-sig")
     print("short saved", len(both))
+    year_table(P, U, sigs, YEAR_SIGNALS).to_csv(os.path.join(HERE, "results_margin_year.csv"), index=False, encoding="utf-8-sig")
+    print("year saved")

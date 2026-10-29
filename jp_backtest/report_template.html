@@ -314,7 +314,40 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     </div>
   </section>
 
-  <!-- 6. 注意点 -->
+  <!-- 6. 貸借銘柄 -->
+  <section id="p-margin" class="panel" hidden>
+    <div class="card">
+      <h2>貸借銘柄(信用売りが可能な銘柄)だけで見ると</h2>
+      <p class="lead">売りシグナルを実際に使えるのは、信用売りができる貸借銘柄だけです。貸借かどうかは、各日付の時点の指定(月初のマスター)で判定しました。対象は日平均で約2,150銘柄(プライム 95%、スタンダード 41%、グロース 26%)で、流動性の分位もこの銘柄群の中で作り直しています。</p>
+      <div class="sec">有意な結果は、さらに減った</div>
+      <p class="lead">有意な結果(|t| ≥ 3.8)の件数を、全銘柄と貸借銘柄で比べています。貸借に絞ると、分位2以上でほとんど残りません。</p>
+      <div id="mstack" class="bars"></div>
+      <div class="legend"><span><i style="background:var(--good)"></i>教科書どおり</span><span><i style="background:var(--bad)"></i>逆向き</span></div>
+
+      <div class="sec">ショートで残った候補(貸借・小型)</div>
+      <p class="lead">4つの候補の、ショートした場合の平均損益です。点線は往復コスト20bp。1日遅らせると半分以下に縮み、5日保有でもコストの1.5倍程度にとどまります。</p>
+      <div class="legend"><span><i style="background:var(--accent)"></i>翌日始値 → 保有1日</span><span><i style="background:var(--accent);opacity:.55"></i>5日保有</span><span><i style="background:var(--accent);opacity:.25"></i>1日遅らせて保有1日</span><span><i style="border-left:2px dashed var(--warn);width:0;height:12px;border-radius:0"></i>往復コスト 20bp</span></div>
+      <div id="mbars" class="bars" style="padding-top:20px"></div>
+      <div class="tw"><table id="mtab"></table></div>
+      <p class="note">各セルは「平均bp(t値)」。当日ストップ高/安の銘柄を除いています。全銘柄の列は、貸借に限らない同じ条件の参考値です。</p>
+
+      <div class="sec">年別の安定性(5日保有・貸借・小型)</div>
+      <div class="tw"><table id="myeartab"></table></div>
+
+      <div class="sec">この対象は、どのくらい小さい銘柄か</div>
+      <div class="grid">
+        <div class="sub"><h3>貸借内の「小型」分位</h3><p class="big">20日売買代金の中央値は、分位1で約0.06億円、分位2で約0.56億円(直近日)。1日あたり600万〜5,600万円です。大きな資金は入れられません。</p></div>
+        <div class="sub"><h3>中型・大型の貸借銘柄</h3><p class="big">分位3〜5(約2億〜50億円/日)では、「終値が高値圏」が翌日始値で +8〜9bp(t≈2.5〜3.5)止まりでコスト20bpに届きません。コストを上回るのは「赤三兵+出来高急増」の中型(+21.0bp、t=3.3)だけで、1日遅らせると +9.1bp(有意でない)に縮みます。</p></div>
+      </div>
+      <ul class="pts">
+        <li>往復コスト20bpを引くと、最も良い「終値が高値圏」で、1日保有 +0.8bp、5日保有 +12.7bp。</li>
+        <li>貸株料、逆日歩、小型株のスプレッド、踏み上げ(急な戻り)による損失は含まれていません。</li>
+        <li>「終値が高値圏」は、効いた形を見てから作った探索的な定義です。「赤三兵+出来高急増」と「大陽線+出来高急増」は、2021年だけマイナスでした。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. 注意点 -->
   <section id="p-notes" class="panel" hidden>
     <div class="card">
       <h2>注意点と、未検証の項目</h2>
@@ -331,14 +364,14 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
         <div class="sub"><h3>売買に使うときの現実</h3>
           <ul class="pts">
             <li>往復コストは20bpと仮定しました。小型株の実際のスプレッドはこれより大きいはずです。</li>
-            <li>売りシグナルは、貸借銘柄でないと信用売りができません。貸株料や逆日歩も含めていません。</li>
+            <li>売りシグナルは、貸借銘柄でないと信用売りができません。貸借銘柄に絞った結果は専用のタブにあり、貸株料や逆日歩は含めていません。</li>
             <li>ストップ高・安に張り付いた日は、翌日に約定できない可能性があります。結果ではその銘柄を除いています。</li>
             <li>最も頑健な候補でも、寄付き後に取れる分は10〜30bpで、コストと同程度か下回ります。</li>
           </ul></div>
       </div>
       <div class="sub"><h3>未検証・次の候補</h3>
         <ul class="pts">
-          <li>貸借銘柄(信用売りが可能な銘柄)だけに絞った再検証</li>
+          <li>貸株料・逆日歩・日々公表銘柄の規制など、信用売りの実コストを織り込んだ再計算</li>
           <li>気配・板データを使った実約定コストの見積もり(Lightプランでは取得できません)</li>
           <li>分足データによる、寄付き後の実約定に近い価格でのエントリー検証</li>
         </ul>
@@ -351,7 +384,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 <script>
 const D = /*__DATA__*/{};
 
-const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["notes","注意点"]];
+const TABS = [["summary","結論"],["patterns","パターン別"],["groups","流動性・銘柄・局面"],["micro","板の構造"],["robust","感度・追加シグナル"],["margin","貸借銘柄"],["notes","注意点"]];
 const ORDER = ["逆ハンマー","ハンマー","首吊り線","流れ星","大陽線","大陰線","陽の包み足","陰の包み足","陽のはらみ足","陰のはらみ足","切り込み線","かぶせ線","毛抜き底","毛抜き天井","明けの明星","宵の明星","赤三兵","黒三兵"];
 const HS = [0,1,2,3,5,10,20];
 const SIZES = ["小型(分位1-2)","中型(分位3)","大型(分位4-5)"];
@@ -562,12 +595,41 @@ function renderVol() {
     hbars(rows.map(r => ({ label: r.p, sub: r.d + "サイン · 急増 " + r.a.n.toLocaleString() + " 件", bars: [{ v: r.a.m, color: "var(--warn)" }, { v: r.b.m, color: "var(--dim)", op: .5 }] })), { lo, hi });
 }
 
+/* ---- 6. margin ---- */
+const MNAMES = { "[探索]終値が高値圏(レンジ3%超)": "終値が高値圏(レンジ3%超)" };
+function renderMargin() {
+  const cnt = rows => [1,2,3,4,5].map(q => { const rs = rows.filter(r => r.q === q); return { g: rs.filter(r => r.t >= 3.8).length, b: rs.filter(r => r.t <= -3.8).length, n: rs.length }; });
+  const all = cnt(D.main), mar = cnt(D.mmain);
+  const stack = (c, label) => `<div style="display:grid;grid-template-columns:70px 1fr auto;gap:10px;align-items:center"><span class="note">${label}</span><div class="stack"><i style="width:${c.g / c.n * 100}%;background:var(--good)"></i><i style="width:${c.b / c.n * 100}%;background:var(--bad)"></i></div><span class="note num">${c.g}/${c.b}</span></div>`;
+  $("#mstack").innerHTML = [0,1,2,3,4].map(i => `<div class="brow"><div class="lab">分位${i + 1}${i === 0 ? "(売買代金 最小)" : i === 4 ? "(最大)" : ""}<small>教科書どおり/逆向きの件数</small></div><div style="display:flex;flex-direction:column;gap:6px">${stack(all[i], "全銘柄")}${stack(mar[i], "貸借のみ")}</div></div>`).join("");
+
+  const names = ["[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増", "窓下げ2%超"];
+  const g = (u, s, z, v) => D.mshort.find(r => r.u === u && r.s === s && r.z === z && r.v === v);
+  const rows = names.map((s, i) => ({ label: MNAMES[s] || s.replace("|", "+"), sub: "売り", first: i === 0, bars: [
+    { v: g("貸借のみ", s, SIZES[0], "A").m, color: "var(--accent)" },
+    { v: g("貸借のみ", s, SIZES[0], "G").m, color: "var(--accent)", op: .55 },
+    { v: g("貸借のみ", s, SIZES[0], "C").m, color: "var(--accent)", op: .25 }] }));
+  $("#mbars").innerHTML = hbars(rows, { lo: 0, hi: 44, cost: 20 });
+
+  const cell = (u, s, z, v) => { const r = g(u, s, z, v); return r ? `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)}</small></td>` : `<td class="c0">–</td>`; };
+  const all6 = ["[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増", "窓下げ2%超", "首吊り線", "流れ星"];
+  let html = `<thead><tr><th>シグナル(売り)</th><th>規模(貸借内)</th><th>貸借 1日</th><th>貸借 1日遅らせる</th><th>貸借 5日保有</th><th>全銘柄 1日</th><th>全銘柄 5日保有</th></tr></thead><tbody>`;
+  all6.forEach(s => SIZES.forEach((z, k) => {
+    html += `<tr><td class="k">${k === 0 ? (MNAMES[s] || s.replace("|", "+")) : ""}</td><td>${z}</td>${cell("貸借のみ", s, z, "A")}${cell("貸借のみ", s, z, "C")}${cell("貸借のみ", s, z, "G")}${cell("全銘柄", s, z, "A")}${cell("全銘柄", s, z, "G")}</tr>`;
+  }));
+  $("#mtab").innerHTML = html + "</tbody>";
+
+  const ys = [2021,2022,2023,2024,2025,2026];
+  $("#myeartab").innerHTML = `<thead><tr><th>シグナル(売り)</th>${ys.map(y => `<th>${y}</th>`).join("")}</tr></thead><tbody>` +
+    ["[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増", "窓下げ2%超"].map(s => `<tr><td class="k">${MNAMES[s] || s.replace("|", "+")}</td>${ys.map(y => { const r = D.myear.find(r => r.s === s && r.y === y); return r ? `<td class="${r.m > 20 ? "gp" : r.m > 0 ? "wp" : "gn"}">${f1(r.m)}</td>` : `<td class="c0">–</td>`; }).join("")}</tr>`).join("") + "</tbody>";
+}
+
 /* ---- boot ---- */
 (function () {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderPatterns(); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin();
   showTab(location.hash.slice(1));
 })();
 </script>
