@@ -71,6 +71,10 @@ def build_data():
     ms = ms[ms.シグナル.isin(MARGIN_SIGNALS) & ms.変種.isin(["A", "C", "D", "G"])]
     D["mshort"] = rows(ms, dict(u="対象", s="シグナル", z="規模", v="変種", n="n", m="平均bp", t="t", f="前半bp", l="後半bp"))
     D["myear"] = rows(csv("results_margin_year.csv"), dict(s="シグナル", y="年", n="n", m="平均bp"))
+    cm = csv("results_cost_model.csv")
+    D["cost"] = rows(cm, {"s": "シグナル", "z": "規模", "h": "保有", "n": "n", "g": "粗利bp", "tk": "呼値比率bp", "fee": "貸株料bp",
+                          "c20": "コスト20bp固定_bp", "c1": "呼値1枚+貸株料_bp", "t1": "呼値1枚+貸株料_t",
+                          "c2": "呼値2枚+貸株料_bp", "t2": "呼値2枚+貸株料_t"})
     return D
 
 

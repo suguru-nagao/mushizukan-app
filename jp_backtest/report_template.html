@@ -165,6 +165,19 @@ td small, th small { color: var(--dim); font-weight: 400; font-size: 11.5px; mar
 .stack { display: flex; height: 22px; border-radius: 7px; overflow: hidden; background: var(--surface2); }
 .stack i { display: block; height: 100%; }
 
+.gloss { padding: 0; gap: 0; }
+.gloss > summary { cursor: pointer; padding: 16px 24px; font-weight: 700; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 9px; }
+.gloss > summary::-webkit-details-marker { display: none; }
+.gloss > summary::before { content: ""; width: 4px; height: 15px; border-radius: 2px; background: var(--accent); }
+.gloss > summary::after { content: "▾"; margin-left: auto; color: var(--dim); transition: transform .15s; }
+.gloss:not([open]) > summary::after { transform: rotate(-90deg); }
+.gloss .gl { padding: 0 24px 22px; }
+.gloss .sub h3 { color: var(--accent); }
+.gloss .wide { grid-column: span 2; }
+@media (max-width: 760px) { .gloss .wide { grid-column: auto; } }
+table.gt { font-size: 12.5px; }
+table.gt th, table.gt td { padding: 5px 10px; }
+@media (max-width: 640px) { .gloss > summary { padding: 14px; } .gloss .gl { padding: 0 14px 16px; } }
 svg text { fill: var(--dim); font-family: var(--font); font-size: 11px; }
 svg .ax { stroke: var(--line); stroke-width: 1; }
 svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
@@ -195,6 +208,26 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <span class="chip">有意の目安 <b>|t| ≥ 3.8</b></span>
     </div>
   </header>
+
+  <details class="card gloss" open>
+    <summary>用語の説明(bp・分位・超過リターンなど)</summary>
+    <div class="grid gl">
+      <div class="sub"><h3>bp(ベーシスポイント)</h3><p class="big">1bp = 0.01%、100bp = 1% です。<b>+20bp</b> は 0.2% 値上がり(売りなら値下がり)したという意味で、100万円の取引なら 2,000円にあたります。往復コスト 20bp は、100万円あたり 2,000円の手数料・スプレッドを想定しています。</p></div>
+      <div class="sub wide"><h3>分位(売買代金の分位)</h3><p class="big">その日の対象銘柄を、直近20日の売買代金(株価×出来高)の中央値が小さい順に並べて<b>5等分</b>したグループです。<b>分位1 = 最小(下位20%)、分位5 = 最大(上位20%)</b>。数字は大きさではなく順位の区分です。</p>
+        <div class="tw"><table class="gt"><thead><tr><th>分位</th><th>全銘柄の中で</th><th>貸借銘柄の中で</th></tr></thead><tbody>
+          <tr><td>分位1(最小)</td><td>0.02億円</td><td>0.06億円</td></tr>
+          <tr><td>分位2</td><td>0.09億円</td><td>0.56億円</td></tr>
+          <tr><td>分位3</td><td>0.54億円</td><td>2.1億円</td></tr>
+          <tr><td>分位4</td><td>2.7億円</td><td>7.1億円</td></tr>
+          <tr><td>分位5(最大)</td><td>25億円</td><td>50億円</td></tr></tbody></table></div>
+        <p class="note">各分位の「1日の売買代金(20日中央値)」の中央値。直近日の値です。</p>
+        <p class="note">「小型」= 分位1〜2、「中型」= 分位3、「大型」= 分位4〜5。時価総額ではなく、売買代金で分けています。</p></div>
+      <div class="sub"><h3>方向付き超過リターン</h3><p class="big">銘柄のリターンから、<b>同じ日・同じ分位の全銘柄の平均</b>を引いた値です(相場全体の上げ下げを除くため)。売りサインやショートでは符号を反転しているので、<b>プラスは「サインどおりに動いた(売りなら下がった)」</b>ことを表します。</p></div>
+      <div class="sub"><h3>t値と「有意」</h3><p class="big">平均が 0 とどれだけ違うかの目安で、大きいほど偶然の可能性が低くなります。多数の組み合わせを試しているので、偶然の当たりを避けるため <b>|t| ≥ 3.8</b> を「有意」としています。</p></div>
+      <div class="sub"><h3>保有日数・エントリー</h3><p class="big">シグナルが出た日の<b>翌営業日の始値</b>で入り、h日後の始値で出ます。「日中のみ」は翌営業日の始値→終値、「1日遅らせる」はさらに1日後から入る場合です。</p></div>
+      <div class="sub"><h3>前半・後半、貸借銘柄</h3><p class="big">期間を 2024-04-26 で2つに分け、両方で同じ結果になるかを見ています。<b>貸借銘柄</b>は信用売り(ショート)ができる銘柄で、各日付の時点の指定で判定しています。</p></div>
+    </div>
+  </details>
 
   <!-- 1. 結論 -->
   <section id="p-summary" class="panel" hidden>
@@ -331,6 +364,17 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="tw"><table id="mtab"></table></div>
       <p class="note">各セルは「平均bp(t値)」。当日ストップ高/安の銘柄を除いています。全銘柄の列は、貸借に限らない同じ条件の参考値です。</p>
 
+      <div class="sec">貸株料・スプレッドを織り込むと</div>
+      <p class="lead">信用売りの実コストを、日足から取れる範囲で見積もりました。①往復コスト20bp固定、②1ティック(最小の値幅)分のスプレッド+貸株料、③2ティック分のスプレッド+貸株料の3通りで、コストを引いた後の平均損益を出しています。株価が低い銘柄ほど、1ティックの比率は大きくなります。</p>
+      <div class="ctl"><label>保有</label><div class="seg" id="cseg" role="group"></div><label>規模(貸借内)</label><div class="seg" id="czseg" role="group"></div></div>
+      <div class="tw"><table id="costtab"></table></div>
+      <ul class="pts">
+        <li>貸株料は年1.15%(制度信用の目安)を暦日で按分しており、5日保有でも約2bpと小さい額です。</li>
+        <li><b>逆日歩は含めていません</b>(予測できず、J-Quants Light にもデータがありません)。踏み上げで急に戻される損失や、約定が値幅の外側に滑る分も入っていません。</li>
+        <li>高値・安値から推定した実効スプレッド(Corwin-Schultz 法)は、シグナルが出る値動きの大きい日に過大に出るので、結論には使っていません(CSVには参考値として保存)。</li>
+        <li>呼値は TOPIX100 以外の呼値表で計算しています。TOPIX100 に入る銘柄は、より細かい呼値のため、ここでの比率より小さくなります。</li>
+      </ul>
+
       <div class="sec">年別の安定性(5日保有・貸借・小型)</div>
       <div class="tw"><table id="myeartab"></table></div>
 
@@ -340,8 +384,8 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
         <div class="sub"><h3>中型・大型の貸借銘柄</h3><p class="big">分位3〜5(約2億〜50億円/日)では、「終値が高値圏」が翌日始値で +8〜9bp(t≈2.5〜3.5)止まりでコスト20bpに届きません。コストを上回るのは「赤三兵+出来高急増」の中型(+21.0bp、t=3.3)だけで、1日遅らせると +9.1bp(有意でない)に縮みます。</p></div>
       </div>
       <ul class="pts">
-        <li>往復コスト20bpを引くと、最も良い「終値が高値圏」で、1日保有 +0.8bp、5日保有 +12.7bp。</li>
-        <li>貸株料、逆日歩、小型株のスプレッド、踏み上げ(急な戻り)による損失は含まれていません。</li>
+        <li>往復コスト20bp固定で引くと、最も良い「終値が高値圏」で、1日保有 +0.8bp、5日保有 +12.7bp。</li>
+        <li>ただし、1ティック分のスプレッドと貸株料を引くと、同じ候補は 1日保有 -12.1bp(t=-5.0)、5日保有 -2.1bp(t=-0.4)です。下の表のとおり、実コストを入れて有意にプラスで残る候補はありません。</li>
         <li>「終値が高値圏」は、効いた形を見てから作った探索的な定義です。「赤三兵+出来高急増」と「大陽線+出来高急増」は、2021年だけマイナスでした。</li>
       </ul>
     </div>
@@ -364,14 +408,14 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
         <div class="sub"><h3>売買に使うときの現実</h3>
           <ul class="pts">
             <li>往復コストは20bpと仮定しました。小型株の実際のスプレッドはこれより大きいはずです。</li>
-            <li>売りシグナルは、貸借銘柄でないと信用売りができません。貸借銘柄に絞った結果は専用のタブにあり、貸株料や逆日歩は含めていません。</li>
+            <li>売りシグナルは、貸借銘柄でないと信用売りができません。貸借銘柄に絞った結果は専用のタブにあります。貸株料とスプレッドは見積もりを入れましたが、逆日歩は含めていません。</li>
             <li>ストップ高・安に張り付いた日は、翌日に約定できない可能性があります。結果ではその銘柄を除いています。</li>
             <li>最も頑健な候補でも、寄付き後に取れる分は10〜30bpで、コストと同程度か下回ります。</li>
           </ul></div>
       </div>
       <div class="sub"><h3>未検証・次の候補</h3>
         <ul class="pts">
-          <li>貸株料・逆日歩・日々公表銘柄の規制など、信用売りの実コストを織り込んだ再計算</li>
+          <li>逆日歩・日々公表銘柄の規制など、予測できない信用売りのコスト(貸株料とスプレッドは日足から見積もり済み)</li>
           <li>気配・板データを使った実約定コストの見積もり(Lightプランでは取得できません)</li>
           <li>分足データによる、寄付き後の実約定に近い価格でのエントリー検証</li>
         </ul>
@@ -624,12 +668,22 @@ function renderMargin() {
     ["[探索]終値が高値圏(レンジ3%超)", "大陽線|出来高急増", "赤三兵|出来高急増", "窓下げ2%超"].map(s => `<tr><td class="k">${MNAMES[s] || s.replace("|", "+")}</td>${ys.map(y => { const r = D.myear.find(r => r.s === s && r.y === y); return r ? `<td class="${r.m > 20 ? "gp" : r.m > 0 ? "wp" : "gn"}">${f1(r.m)}</td>` : `<td class="c0">–</td>`; }).join("")}</tr>`).join("") + "</tbody>";
 }
 
+const CS_ = { h: "5日保有", z: SIZES[0] };
+function renderCost() {
+  seg($("#cseg"), [["1日保有", "1日保有"], ["5日保有", "5日保有"]], CS_.h, v => { CS_.h = v; renderCost(); });
+  seg($("#czseg"), SIZES.map(z => [z, z]), CS_.z, v => { CS_.z = v; renderCost(); });
+  const rows = D.cost.filter(r => r.h === CS_.h && r.z === CS_.z);
+  const c = (v, t) => `<td class="${t != null ? cls(t) : v > 0 ? "wp" : "wn"}">${f1(v)}${t != null ? ` <small>t=${tf(t)}</small>` : ""}</td>`;
+  $("#costtab").innerHTML = `<thead><tr><th>シグナル(売り)</th><th>件数</th><th>粗利(コスト前)</th><th>1ティックの比率</th><th>貸株料</th><th>① 純損益(20bp固定)</th><th>② 純損益(1ティック+貸株料)</th><th>③ 純損益(2ティック+貸株料)</th></tr></thead><tbody>` +
+    rows.map(r => `<tr><td class="k">${MNAMES[r.s] || r.s.replace("|", "+")}</td><td>${r.n.toLocaleString()}</td><td>${f1(r.g)}</td><td>${r.tk.toFixed(1)}</td><td>${r.fee.toFixed(1)}</td>${c(r.c20)}${c(r.c1, r.t1)}${c(r.c2, r.t2)}</tr>`).join("") + "</tbody>";
+}
+
 /* ---- boot ---- */
 (function () {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderPatterns(); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost();
   showTab(location.hash.slice(1));
 })();
 </script>
