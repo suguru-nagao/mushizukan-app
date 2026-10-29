@@ -14,7 +14,9 @@ import stock_pool3 as p3
 
 OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report_data")
 os.makedirs(OUT, exist_ok=True)
-K, SHARD, COST = 200, 400, 20.0
+SELL = os.environ.get("SELL") == "1"
+PFX = "wrank_s" if SELL else "wrank"
+K, SHARD, COST = 200, 400, (30.0 if SELL else 20.0)   # 売りは、貸株料などを見込んで30bp
 NT, NC, NS = sp.NT, sp.NC, sp.NS
 corr, keep = p3.corr_any(NT, ret="gap", regime="up")   # 窓(前週終値→始値)の連動を、上げ相場の週だけで測る
 _, zmode, _k = p2.corr_matrix(NT)
@@ -28,7 +30,7 @@ last_t = np.full((NS, NC), -1, np.int16)
 np.maximum.at(last_t, (sp.SID, sp.C), sp.T.astype(np.int16))
 meta = {"sigs": [[str(n), str(f)] for n, f in zip(sp.NAMES, sp.FAMS)], "dates": [str(d) for d in sp.DATES], "codes": [str(c) for c in sp.CODES],
         "size": zmode.tolist(), "peers": peer5.tolist(), "keep": keep.astype(int).tolist(), "holds": [1, 4, 12], "K": K, "avgcorr": round(avgcorr, 3)}
-json.dump(meta, open(os.path.join(OUT, "wrank_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(meta, open(os.path.join(OUT, f"{PFX}_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 
 def sums(E, mask):
@@ -76,5 +78,5 @@ for h in (1, 4, 12):
                     int(last_t[i, c]), int(score[i, c]), None if np.isnan(own_t[i, c]) else round(float(own_t[i, c]), 1)] for i in sel]
     for k in range((NC + SHARD - 1) // SHARD):
         sh = {sp.CODES[c]: rows.get(c, []) for c in range(k * SHARD, min((k + 1) * SHARD, NC))}
-        json.dump(sh, open(os.path.join(OUT, f"wrank_{h}_{k}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+        json.dump(sh, open(os.path.join(OUT, f"{PFX}_{h}_{k}.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     print("h", h, sum(len(v) for v in rows.values()), flush=True)

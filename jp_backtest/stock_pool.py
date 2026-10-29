@@ -65,7 +65,8 @@ def thin(h):
 
 def prep(h):
     idx = thin(h)
-    return dict(sid=SID[idx], c=C[idx], t=T[idx], z=SZ[idx], x=Z[f"x{h}"][idx].astype(np.float64) * 1e4)
+    lim = {1: 5000.0, 4: 10000.0, 12: 20000.0}.get(h, 20000.0)   # 異常値の影響を抑えるため、超過リターンを ±50% / ±100% / ±200% で打ち切る
+    return dict(sid=SID[idx], c=C[idx], t=T[idx], z=SZ[idx], x=np.clip(Z[f"x{h}"][idx].astype(np.float64) * 1e4, -lim, lim))
 
 
 def stock_mats(E, mask):
