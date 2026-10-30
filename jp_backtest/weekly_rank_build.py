@@ -17,9 +17,9 @@ os.makedirs(OUT, exist_ok=True)
 SELL = os.environ.get("SELL") == "1"
 PFX = "wrank_s" if SELL else "wrank"
 K, SHARD = 200, 400
-# 制度信用(楽天証券)の実コスト(bp): スプレッド等 20bp + 金利/貸株料。買い: 買方金利 年2.80%。売り: 貸株料 年1.10% + 配当調整金(配当利回り年2.0%と仮定)。逆日歩は含まない。
+# コスト(bp): 買い = 現物(ゼロコース手数料0円)でスプレッド等 20bp。売り = 楽天証券の制度信用: 20bp + 貸株料 年1.10% + 配当調整金(配当利回り年2.0%と仮定)。逆日歩は含まない。
 def cost_bp(h):
-    return 20.0 + ((0.0110 + 0.020) if SELL else 0.0280) * 7 * h / 365 * 1e4
+    return 20.0 + ((0.0110 + 0.020) if SELL else 0.0) * 7 * h / 365 * 1e4
 
 NT, NC, NS = sp.NT, sp.NC, sp.NS
 corr, keep = p3.corr_any(NT, ret="gap", regime="up")   # 窓(前週終値→始値)の連動を、上げ相場の週だけで測る
