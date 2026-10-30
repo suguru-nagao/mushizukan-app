@@ -569,6 +569,21 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <p class="lead">抵抗帯の上抜けや新高値は、大きく上昇した日に出ます。シグナルが出た足の騰落率が同じ水準の「全銘柄・全期間」と比べて、帯・新高値に独自の効果が残るかを見ます。</p>
       <div id="zsel-match"></div>
 
+      <div class="sec">価格帯別出来高の最多付近で、リバウンドする銘柄としない銘柄の違い</div>
+      <p class="lead">日足(2021年10月〜)の「抵抗帯に到達(跳ね返される)」(売り)と「支持帯に到達(跳ね返す)」(買い)を、銘柄の特徴で分けて、5日保有の超過リターン(同日・同規模の平均と、同じ騰落率の日の平均を引いたもの)を比べました。<b>回転率</b>は、直近60日の売買代金の中央値÷時価総額で、1日にどれだけ入れ替わるかの目安です(回転が遅い=長く持たれている)。<b>信用取引の多さ</b>は、信用残のデータが契約プランにないため、貸借銘柄(制度信用の売買ができ、貸借取引がある銘柄)かどうかで代用しています。</p>
+      <div class="card verdict" style="gap:8px">
+        <p><b>回転が遅い銘柄ほど、跳ね返されやすい</b>という仮説は、<em>おおむね支持されました</em>(特に抵抗帯)。回転が最も遅い五分位は +11.4bp(t=4.0)、最も速い五分位は +0.3bp(t=0.1)です。一方、<b>信用取引が多い銘柄ほど意識される</b>という仮説は、<em>支持されませんでした</em>(貸借銘柄 +0.7bp、貸借以外 +5.8bp。回転率・規模を揃えると差は消える)。</p>
+      </div>
+      <div class="tw"><table class="gt" id="zchar-turn"></table></div>
+      <ul class="pts">
+        <li><b>回転率</b>(5日保有): 抵抗帯(売り)では、回転が遅いほど跳ね返され、五分位で、+14.5bp → +3.0 → -1.3 → -0.8 → -8.1bp と、ほぼ単調に下がります。回転が速い銘柄では、抵抗帯で、むしろ突破されやすい傾向があります(有意ではありません)。支持帯(買い)では、はっきりした傾向はありません(U字型)。</li>
+        <li><b>規模を揃える</b>と、効果は<b>小型株</b>に集中します。小型株で、回転が遅い +13.2bp(t=3.9)、速い +6.6bp(t=1.1)。中型株は +4.8bp と -7.7bp。大型株では、効果はありません(-0.9bp と +6.3bp)。</li>
+        <li><b>信用取引(貸借)</b>: 貸借以外の銘柄のほうが良く見えます(+5.8bp 対 +0.7bp)が、これは、貸借以外の銘柄が、<b>時価総額が小さく(中央値66億円 対 556億円)、回転も遅い(1日0.13% 対 0.24%)</b>ためです。回帰で、回転率・時価総額・変動率・株価を揃えると、貸借の係数は、-1.0bp(t=-0.6)で、有意ではありません。<b>信用取引が多い銘柄が意識される、という仮説は、この代用の指標では、確認できませんでした</b>。信用残を直接使った検証ではない点に、ご注意ください。</li>
+        <li><b>回帰</b>(全体・5日保有、標準化。1標準偏差あたりのbp): 回転率 -5.0bp(t=-2.3)、変動率 +4.3bp(t=2.0)、貸借 -1.0bp(t=-0.6)、時価総額 -0.6bp(t=-0.3)、株価 +1.3bp(t=0.6)。変動率が高いほど、値幅が大きいため、bpの絶対値が大きくなる面があります。</li>
+        <li><b>安定性</b>: 回転が遅い五分位と速い五分位の差は、前半 +8bp、後半 +13bp で、同じ向きです。ただし、年ごとのばらつきが大きく(2022年 +16、2023年 +1、2024年 +21、2025年 +37、2026年 -42bp)、確実とは言えません。</li>
+        <li>考えられる理由: 回転が遅い銘柄は、長く保有する投資家が多く、取得価格に近い水準(価格帯別出来高の最多付近)が、売買の目安として意識されやすい、という仮説と整合します。ただし、小型・低流動の銘柄で、売買の偏りが大きいことなど、他の要因を、完全には区別できていません。実際に売買できるかの制約(売買代金が小さい)にもご注意ください。</li>
+      </ul>
+
       <div class="sec">ショートの実コストを入れると(日足・貸借)</div>
       <div class="ctl"><label>保有</label><div class="seg" id="zcseg" role="group"></div></div>
       <div class="tw"><table id="zcosttab"></table></div>
@@ -1766,6 +1781,10 @@ function renderWeekly() {
     cfgs.map(k => { const a = D.wsens.find(r => r.c === k && r.u === "全銘柄"), b = D.wsens.find(r => r.c === k && r.u === "貸借のみ"); const cell = r => `<td class="${cls(r.t)}">${f1(r.m)} <small>t=${tf(r.t)} · n=${r.n.toLocaleString()}</small></td><td>${f1(r.f)} / ${f1(r.l)}</td>`; return `<tr><td class="k">${k}</td>${cell(a)}${cell(b)}</tr>`; }).join("") + "</tbody>";
 }
 const ZC_ST = { h: "5日保有" };
+function renderZoneChar() {
+  const rows = [["Q1(最も遅い)", "0.05%", "+11.4", "4.0", "+14.5", "3.2", "+8.1", "1.5"], ["Q2", "0.12%", "+1.1", "0.4", "+3.0", "0.7", "-1.5", "-0.3"], ["Q3", "0.21%", "-1.1", "-0.5", "-1.3", "-0.4", "-0.8", "-0.2"], ["Q4", "0.35%", "+0.9", "0.3", "-0.8", "-0.2", "+3.9", "1.0"], ["Q5(最も速い)", "0.79%", "+0.3", "0.1", "-8.1", "-0.9", "+8.3", "0.9"]];
+  $("#zchar-turn").innerHTML = `<thead><tr><th>回転率の五分位</th><th>1日の回転率(中央値)</th><th>全体(bp)</th><th>t値</th><th>抵抗帯・売り(bp)</th><th>t値</th><th>支持帯・買い(bp)</th><th>t値</th></tr></thead><tbody>` + rows.map(r => `<tr><td class="k">${r[0]}</td><td>${r[1]}</td>${[2, 4, 6].map(i => `<td class="${cls(+r[i + 1])}">${r[i]}</td><td>${r[i + 1]}</td>`).join("")}</tr>`).join("") + "</tbody>";
+}
 function renderZoneCost() {
   seg($("#zcseg"), [["1日保有", "1日保有"], ["5日保有", "5日保有"]], ZC_ST.h, v => { ZC_ST.h = v; renderZoneCost(); });
   const c = (v, t) => `<td class="${t != null ? cls(t) : v > 0 ? "wp" : "wn"}">${f1(v)}${t != null ? ` <small>t=${tf(t)}</small>` : ""}</td>`;
@@ -1816,7 +1835,7 @@ function renderTimeAxis() {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderSignalList(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderDtopLong(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderTimeAxis();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderDtopLong(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderZoneChar(); renderTimeAxis();
   showTab(location.hash.slice(1));
 })();
 </script>
