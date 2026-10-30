@@ -11,7 +11,11 @@ import display_check as dc
 
 side = sys.argv[1] if len(sys.argv) > 1 else "buy"
 h = int(sys.argv[2]) if len(sys.argv) > 2 else 4
-cost = 20.0 if side == "buy" else 30.0
+# 制度信用(楽天証券)の実コスト(bp): 売買のスプレッド・約定のズレ 20bp + 金利/貸株料(保有の暦日で按分)
+# 買い: 買方金利 年2.80%(配当調整金の受取は見込まない=保守的)。売り: 貸株料 年1.10% + 配当調整金の支払い(配当利回り年2.0%と仮定)。逆日歩は含まない。
+LONG_RATE, SHORT_FEE, DIV_YIELD, BASE = 0.0280, 0.0110, 0.020, 20.0
+days = 7 * h
+cost = BASE + (LONG_RATE if side == "buy" else SHORT_FEE + DIV_YIELD) * days / 365 * 1e4
 rows = []
 for tag, fr in (("選択60%", 0.6), ("選択50%", 0.5), ("未使用80%", 0.8), ("未使用90%", 0.9)):
     sid, c, t, z, x, est = dc.prepare(h, fr)

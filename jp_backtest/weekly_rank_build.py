@@ -16,7 +16,11 @@ OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "report_data")
 os.makedirs(OUT, exist_ok=True)
 SELL = os.environ.get("SELL") == "1"
 PFX = "wrank_s" if SELL else "wrank"
-K, SHARD, COST = 200, 400, (30.0 if SELL else 20.0)   # 売りは、貸株料などを見込んで30bp
+K, SHARD = 200, 400
+# 制度信用(楽天証券)の実コスト(bp): スプレッド等 20bp + 金利/貸株料。買い: 買方金利 年2.80%。売り: 貸株料 年1.10% + 配当調整金(配当利回り年2.0%と仮定)。逆日歩は含まない。
+def cost_bp(h):
+    return 20.0 + ((0.0110 + 0.020) if SELL else 0.0280) * 7 * h / 365 * 1e4
+
 NT, NC, NS = sp.NT, sp.NC, sp.NS
 corr, keep = p3.corr_any(NT, ret="gap", regime="up")   # 窓(前週終値→始値)の連動を、上げ相場の週だけで測る
 _, zmode, _k = p2.corr_matrix(NT)
@@ -67,7 +71,7 @@ for h in [int(v) for v in os.environ.get("HOLDS_BUILD", "1,4,12").split(",")]:
     pt = np.where((pn >= 30) & (psd > 0), pm / (psd / np.sqrt(np.maximum(pn / 3, 1))), np.nan)
     est = np.where(np.isnan(pm), size_mean, pm)
     fa = np.where(n1 > 0, s1 / np.maximum(n1, 1), np.nan); fb = np.where(n2 > 0, s2 / np.maximum(n2, 1), np.nan)
-    score = ((n >= 10).astype(int) + (own_t >= 2).astype(int) + ((fa > 0) & (fb > 0)).astype(int) + (pt >= 2).astype(int) + (est > COST).astype(int))
+    score = ((n >= 10).astype(int) + (own_t >= 2).astype(int) + ((fa > 0) & (fb > 0)).astype(int) + (pt >= 2).astype(int) + (est > cost_bp(h)).astype(int))
     rows = {}
     for c in range(NC):
         if not keep[c]:

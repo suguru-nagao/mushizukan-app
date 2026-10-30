@@ -318,7 +318,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="sec">推定値と信頼度(★0〜5)の数え方</div>
       <ul class="pts">
         <li><b>推定</b>: 値動きの相関が高い、<b>同じ規模の銘柄(上位200銘柄)</b>の、同じシグナルの平均です。相関は、窓(前週終値→始値のリターン)から、市場全体と規模ごとの平均を引いて、市場が上がった週だけで計算します。<b>自身</b>は、その銘柄自身の平均(参考)です。</li>
-        <li>★は、次の5条件を満たした数です。①件数が10以上 ②この銘柄の平均が有意(t ≥ 2) ③前半・後半とも正 ④仲間の銘柄でも有意に正(t ≥ 2) ⑤推定がコストを超える(買いは往復20bp、売りは貸株料などを見込んで30bp)</li>
+        <li>★は、次の5条件を満たした数です。①件数が10以上 ②この銘柄の平均が有意(t ≥ 2) ③前半・後半とも正 ④仲間の銘柄でも有意に正(t ≥ 2) ⑤推定がコストを超える(制度信用の金利・貸株料を含むコスト。保有ごとに異なる)</li>
       </ul>
       <div class="sec">この推定は、将来も当たるのか(前半で推定し、後半で確かめた検証)</div>
       <div id="sk-pool"></div>
@@ -688,7 +688,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <h2>用語の説明</h2>
       <p class="lead">このレポートで使っている単位と言葉の説明です。数字の読み方に迷ったときに見てください。</p>
       <div class="grid2 gl">
-      <div class="sub"><h3>bp(ベーシスポイント)</h3><p class="big">1bp = 0.01%、100bp = 1% です。<b>+20bp</b> は 0.2% 値上がり(売りなら値下がり)したという意味で、100万円の取引なら 2,000円にあたります。往復コスト 20bp は、100万円あたり 2,000円の手数料・スプレッドを想定しています。</p></div>
+      <div class="sub"><h3>bp(ベーシスポイント)</h3><p class="big">1bp = 0.01%、100bp = 1% です。<b>+20bp</b> は 0.2% 値上がり(売りなら値下がり)したという意味で、100万円の取引なら 2,000円にあたります。往復コスト 20bp は、100万円あたり 2,000円の手数料・スプレッドを想定しています(楽天証券のゼロコースは手数料0円なので、実際は、スプレッドと約定のズレが中心です)。<b>信用取引(制度信用)</b>で持つ場合は、これに、買い方の金利(年2.80%と想定。保有4週で約22bp)、売り方の貸株料(年1.10%)と、権利落ちをまたぐ場合の配当調整金の支払いが加わります。「銘柄別シグナル」タブは、これらを含めたコストで判定しています。逆日歩は含みません。</p></div>
       <div class="sub"><h3>方向付き超過リターン</h3><p class="big">銘柄のリターンから、<b>同じ日・同じ分位の全銘柄の平均</b>を引いた値です(相場全体の上げ下げを除くため)。売りサインやショートでは符号を反転しているので、<b>プラスは「サインどおりに動いた(売りなら下がった)」</b>ことを表します。</p></div>
       <div class="sub wide"><h3>分位(売買代金の分位)</h3><p class="big">その日の対象銘柄を、直近20日の売買代金(株価×出来高)の中央値が小さい順に並べて<b>5等分</b>したグループです。<b>分位1 = 最小(下位20%)、分位5 = 最大(上位20%)</b>。数字は大きさではなく順位の区分です。</p>
         <div class="tw"><table class="gt"><thead><tr><th>分位</th><th>全銘柄の中で</th><th>貸借銘柄の中で</th></tr></thead><tbody>
@@ -926,7 +926,8 @@ async function renderStockTab() {
   catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
   const size = ["小型", "中型", "大型"][meta.size[ci]], last = meta.dates.length - 1, code = meta.codes[ci];
   $("#sk-peers").innerHTML = "相関の高い銘柄(上位5): " + meta.peers[ci].map(j => { const x = D.stocks.find(s => s[4] === meta.codes[j]); return x ? `${x[0]} ${x[1]}` : meta.codes[j].slice(0, 4); }).join("、");
-  const COST = { long: 20, short: 30 };
+  // 制度信用(楽天証券)の実コスト(bp): スプレッド等20bp + 金利/貸株料。買い: 買方金利 年2.80%。売り: 貸株料 年1.10% + 配当調整金(配当利回り年2.0%と仮定)。逆日歩は含まない
+  const COST = { long: 20 + 0.0280 * 7 * SK.h / 365 * 1e4, short: 20 + (0.0110 + 0.020) * 7 * SK.h / 365 * 1e4 };
   // 点灯中(最新の確定週から2週以内)のシグナル。推定が、コストを超えるものの個数で、強さを決める
   const lit = [];
   [["long", LD, meta], ["short", SD, metaS]].forEach(([side, dd, mt]) => {
@@ -938,17 +939,17 @@ async function renderStockTab() {
     const ref = ((D.disp || {})[side] || {})[SK.h] || {}, rr = k >= 3 ? ref["3個以上"] : k === 2 ? ref["2個"] : k === 1 ? ref["1個"] : null;
     const lab = k >= 3 ? "強" : k === 2 ? "中" : k === 1 ? "弱(参考)" : "なし", col = k >= 3 ? "var(--good)" : k === 2 ? "var(--warn)" : "var(--dim)";
     const name = side === "long" ? "ロング(買い)" : "ショート(売り)";
-    return `<div><span>${name}: 点灯 ${xs.length}件、うち推定がコスト(${COST[side]}bp)超 ${k}件</span><b style="color:${col}">${lab}</b>${rr ? `<small style="display:block;color:var(--dim)">過去の、同じ条件(コスト超 ${k >= 3 ? "3個以上" : k + "個"})の${SK.h}週保有の実績(コスト前): ${f1(rr[0])}〜${f1(rr[1])}bp(後半の検証4設定の最小〜最大)</small>` : ""}</div>`;
+    return `<div><span>${name}: 点灯 ${xs.length}件、うち推定がコスト(${COST[side].toFixed(0)}bp)超 ${k}件</span><b style="color:${col}">${lab}</b>${rr ? `<small style="display:block;color:var(--dim)">過去の、同じ条件(コスト超 ${k >= 3 ? "3個以上" : k + "個"})の${SK.h}週保有の実績(後半の検証4設定の最小〜最大): コスト前 ${f1(rr[0])}〜${f1(rr[1])}bp、コスト(${COST[side].toFixed(0)}bp)を引くと ${f1(rr[0] - COST[side])}〜${f1(rr[1] - COST[side])}bp</small>` : ""}</div>`;
   };
   const cell = r => r ? `<td class="${r[3] > 0 ? "wp" : "wn"}">${f1(r[3])}</td>` : "<td>–</td>";
   const trs = ["long", "short"].flatMap(side => lit.filter(x => x.side === side).sort((x, y) => y.r[3] - x.r[3]).map(x => `<tr><td>${side === "long" ? "ロング" : "ショート"}</td><td>${SK_FAM[x.fam]}</td><td class="k">${nm(x.name)}</td><td>${x.wk.slice(5)}週</td><td>${x.r[1]}</td>${cell(x.h2)}${cell(x.h4)}${cell(x.h6)}<td>${x.over ? "<b style=\"color:var(--good)\">○</b>" : "–"}</td><td>${x.r[7]}%</td></tr>`));
   now.innerHTML = `<div class="detail" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">${grade("long")}${grade("short")}</div>` + (lit.length ? `<div class="tw"><table class="gt"><thead><tr><th>売買</th><th>分析</th><th>シグナル</th><th>点灯</th><th>件数</th><th>推定: 2週保有</th><th>4週保有</th><th>6週保有</th><th>${SK.h}週でコスト超</th><th>勝率(${SK.h}週)</th></tr></thead><tbody>${trs.join("")}</tbody></table></div>` : `<p class="note">最新の確定週(${meta.dates[last]})から2週以内に点灯している、件数10以上のシグナルはありません。</p>`) +
-    `<p class="note"><b>表示のロジック</b>: ①最新の確定週から2週以内に点灯したシグナルを候補にする ②各シグナルの推定は、相関が高い同じ規模の上位200銘柄の、同じシグナルの平均 ③推定がコスト(買い20bp、売り30bp)を超えるシグナルの個数で、強さを決める(0個: なし、1個: 弱、2個: 中、3個以上: 強)。過去の検証で、個数が多いほど実績が良く、推定の大きさで順位をつけるより安定していました。ロングは保有が長いほど(4〜6週)、ショートは短いほど(1〜2週)効きます。推定は、市場平均との差(bp)です。複数のシグナルは、同じ値動きを別の見方で捉えていることがあります。</p>`;
+    `<p class="note"><b>表示のロジック</b>: ①最新の確定週から2週以内に点灯したシグナルを候補にする ②各シグナルの推定は、相関が高い同じ規模の上位200銘柄の、同じシグナルの平均 ③推定がコストを超えるシグナルの個数で、強さを決める(0個: なし、1個: 弱、2個: 中、3個以上: 強)。コストは、<b>楽天証券の制度信用</b>を想定し、スプレッド等20bp + 金利・貸株料です(買い: 買方金利 年2.80%。売り: 貸株料 年1.10% + 配当調整金の支払い(配当利回り年2.0%と仮定)。手数料はゼロコースで0円。逆日歩は含まない)。保有が長いほど、金利が重くなります(買いの金利は、2週で約11bp、4週で約22bp、6週で約32bp、12週で約65bp)。過去の検証で、個数が多いほど実績が良く、推定の大きさで順位をつけるより安定していました。ロングは保有が長いほど効き、<b>金利を引いて安定してプラスが残るのは、6週以上(特に12週)</b>です。ショートは短いほど(1〜2週)効きます。推定は、市場平均との差(bp)です。複数のシグナルは、同じ値動きを別の見方で捉えていることがあります。</p>`;
   // シグナル別の表
   const M = SK.side === "long" ? meta : metaS, arr = (SK.side === "long" ? LD : SD)[SK.h];
   let rows = (arr[code] || []).filter(r => SK.f === "all" || r[1] >= 10);
   rows.sort((x, y) => y[11] - x[11] || y[3] - x[3]);
-  const cost = SK.side === "long" ? 20 : 30;
+  const cost = COST[SK.side];
   const lamp = r => { const d = last - r[10]; return r[10] < 0 ? "–" : d <= 2 ? `<b style="color:var(--good)">点灯中</b>(${M.dates[r[10]].slice(5)}週)` : M.dates[r[10]].slice(0, 7); };
   const tg = SK.side === "long" ? "buy" : "sell", tgl = SK.side === "long" ? "買い" : "売り";
   tab.innerHTML = `<thead><tr><th>分析</th><th>シグナル</th><th>信頼度</th><th>件数</th><th>自身<small>(平均 / t値)</small></th><th>推定</th><th>仲間<small>(件数 / t値)</small></th><th>勝率</th><th>前半 / 後半</th><th>直近の発生</th></tr></thead><tbody>` +
