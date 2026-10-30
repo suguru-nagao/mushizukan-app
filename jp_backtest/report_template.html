@@ -219,7 +219,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     <div class="card">
       <div class="card verdict" style="gap:8px">
         <p><b>総括</b>: ローソク足・チャートパターン・テクニカル指標・抵抗帯(出来高の帯とサポレジライン)を、日足・週足・月足で、約2,300通りのシグナルと保有期間で検証しました。<em>コストを引いたあとも安定して利益が残る形は、ほぼ見つかりませんでした</em>。見かけの効果の大半は、「大きく動いた日の翌日の反転」という同じ現象で、同じ騰落率の日と比べると消えるか縮み、残った分も往復コスト(20bp)や、ショートの貸株料・スプレッドで消えます。</p>
-        <p><b>唯一の例外候補</b>は、<em>週足のダブルトップ(売り)</em>です。貸借銘柄で、1ティックのスプレッドと貸株料を引いても<em>全規模で +66bp(t=3.1)</em>残り、小型でも大型でも同じ大きさで、全ての年でプラスでした。ただし、逆日歩を含まず、5年(相場サイクル1つ分)の結果なので、<em>有望な候補にとどまります</em>。</p>
+        <p><b>唯一の例外候補</b>は、<em>週足のダブルトップ(売り)</em>です。貸借銘柄で、1ティックのスプレッドと貸株料を引いても<em>全規模で +66bp(t=3.1)</em>残り、小型でも大型でも同じ大きさで、全ての年でプラスでした。長期データ(2000年〜)でも、1ティック+貸株料を引いて、貸借・全規模・8週保有で <em>+42bp(t=2.2)</em>残り、相場局面による差は小さい一方、<em>26年中7年はマイナス</em>で、確実とは言えません。逆日歩を含まないので、<em>有望な候補にとどまります</em>。</p>
       </div>
 
       <div class="sec">分析ごとの結論</div>
@@ -246,7 +246,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
 
       <div class="sec">今後の候補</div>
       <ul class="pts">
-        <li>週足ダブルトップ(売り)は、長期データ(2000年〜)でも、同じ向きでした(小型(分位2)の8週保有で +112bp、t=4.7。前半は +46bp、後半は +149bp)。相場局面ごとの検証と、逆日歩(貸借の超過需要で売り方が払う費用)を含めた実コストの確認が、次の課題です。</li>
+        <li>週足ダブルトップ(売り)は、長期データ(2000年〜)でも、同じ向きでした(小型(分位2)の8週保有で +112bp、t=4.7。前半は +46bp、後半は +149bp)。相場局面ごとの検証と、1ティック+貸株料を引いた確認は済んでいます(「チャートパターン」)。残る課題は、逆日歩(貸借の超過需要で売り方が払う費用)と、貸株の枠(実際に売れる量)の確認です。</li>
         <li>日足の長期データでの再検証(メモリの制約のため分割実行が必要)。</li>
         <li>実運用に近い形(約定の取りやすさ、貸株の枠)での追加確認。</li>
       </ul>
@@ -467,6 +467,22 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div class="tw"><table id="wktab"></table></div>
       <div class="sec">年ごとの安定性(粗利)</div>
       <div class="tw"><table id="wkytab"></table></div>
+
+      <div class="sec">長期データ(2000年〜2026年)での実コストと、相場局面別の確認</div>
+      <p class="lead">長期の週足データで、ダブルトップ(売り)の、<b>1ティックのスプレッド+貸株料(年1.15%)</b>を引いた純損益を、期間・相場局面ごとに見ます。逆日歩は含みません。株価は分割調整後のため、古い時期のスプレッドはやや多めに見積もっています。相場局面は、全銘柄の等ウェイト指数から、シグナルが出た時点で分かる値で区分しました。生存者バイアス(上場廃止銘柄を含まない)は、売りには不利に働きます。</p>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">対象</label><div class="seg" id="dtl-u"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">規模</label><div class="seg" id="dtl-z"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">保有</label><div class="seg" id="dtl-h"></div></div>
+      <div id="dtl-sum" class="card verdict" style="gap:8px;margin-top:8px"></div>
+      <div class="tw"><table class="gt" id="dtl-tab"></table></div>
+      <div class="sec">年別の純損益(1ティック+貸株料)</div>
+      <div class="tw"><table class="gt" id="dtl-year"></table></div>
+      <ul class="pts" id="dtl-note">
+        <li>貸借銘柄の全規模・8週保有では、1ティック+貸株料を引いても、平均で <b>+42bp(t=2.2)</b>、2ティックでも +23bp です。4週保有は +21bp(t=1.8)、13週保有は +53bp(t=1.7)です。</li>
+        <li><b>相場局面による大きな違いはありません</b>。上昇局面 +31bp、下落局面 +51bp、高値圏 +47bp、調整・下落 +37bp、変動が大きい時 +40bp、小さい時 +45bp と、すべてプラスです。</li>
+        <li><b>時代による差はあります</b>。2000〜2007年 +75bp、2008〜2012年 -3bp、2013〜2019年 +29bp、2020〜2026年 +61bp。<b>年別では、26年中7年がマイナス</b>(2002年、2008年、2011年、2014年、2018年、2021年、2024年)で、最悪は2011年の -113bp です。年ごとのばらつきが大きく、毎年勝てる形ではありません。</li>
+        <li>t値は、全期間で2.2(貸借の全規模・8週)と、多数の検定を考慮した基準(3.8)には届きません。<b>実コストを引いてもプラスだが、確実とは言えない、有望な候補</b>の位置づけです。逆日歩と、貸借銘柄で実際に売れる量(貸株の枠)は、確認できていません。</li>
+      </ul>
       <div class="sec">パターンの閾値を変えても同じか(全規模・4週保有)</div>
       <div class="tw"><table id="wkstab"></table></div>
       <ul class="pts">
@@ -1708,6 +1724,22 @@ function zoneTip(key) {
 /* ---- 週足ダブルトップの確認・抵抗帯のコスト・時間軸 ---- */
 const normN = n => n.replace(/\((長期|短期)・\d+本\)/, "($1)");
 const DT_ST2 = { tf: "W", v: "G" };
+const DTL = { u: "貸借のみ", z: "全規模(分位1-5)", h: 8 };
+function renderDtopLong() {
+  const R = D.dtop || []; if (!R.length) return;
+  seg($("#dtl-u"), [["貸借のみ", "貸借のみ"], ["全銘柄", "全銘柄"]], DTL.u, v => { DTL.u = v; renderDtopLong(); });
+  seg($("#dtl-z"), ["全規模(分位1-5)", "小型(分位1-2)", "中型(分位3)", "大型(分位4-5)"].map(z => [z, z]), DTL.z, v => { DTL.z = v; renderDtopLong(); });
+  seg($("#dtl-h"), [4, 8, 13].map(h => [h, h + "週保有"]), DTL.h, v => { DTL.h = v; renderDtopLong(); });
+  const rows = R.filter(r => r[0] === DTL.u && r[1] === DTL.h && r[2] === DTL.z), g = n => rows.find(r => r[3] === n);
+  const all = g("全期間");
+  $("#dtl-sum").innerHTML = all ? `<p>${DTL.u}・${DTL.z}・${DTL.h}週保有: 件数 ${all[4].toLocaleString()}、粗利 <b>${f1(all[5])}bp</b>(t=${tf(all[6])})、呼値 -${all[7].toFixed(1)}bp、貸株料 -${all[8].toFixed(1)}bp → <b>1ティック+貸株料の純損益 ${f1(all[9])}bp(t=${tf(all[10])})</b>、2ティックでも ${f1(all[11])}bp。</p>` : "";
+  const sel = rows.filter(r => !/^\d{4}年$/.test(r[3]));
+  $("#dtl-tab").innerHTML = `<thead><tr><th>区分</th><th>件数</th><th>粗利(bp)</th><th>粗利のt値</th><th>純損益(1ティック+貸株料)</th><th>t値</th><th>純損益(2ティック+貸株料)</th><th>勝率</th></tr></thead><tbody>` +
+    sel.map(r => `<tr><td class="k">${r[3]}</td><td>${r[4].toLocaleString()}</td><td class="${cls(r[6])}">${f1(r[5])}</td><td>${tf(r[6])}</td><td class="${cls(r[10])}"><b>${f1(r[9])}</b></td><td>${tf(r[10])}</td><td class="${r[11] > 0 ? "wp" : "wn"}">${f1(r[11])}</td><td>${Math.round(r[12] * 100)}%</td></tr>`).join("") + "</tbody>";
+  const ys = rows.filter(r => /^\d{4}年$/.test(r[3]));
+  $("#dtl-year").innerHTML = `<thead><tr><th>年</th><th>件数</th><th>粗利(bp)</th><th>純損益(1ティック+貸株料)</th><th>t値</th></tr></thead><tbody>` +
+    ys.map(r => `<tr><td class="k">${r[3]}</td><td>${r[4]}</td><td>${f1(r[5])}</td><td class="${r[9] > 0 ? "wp" : "wn"}"><b>${f1(r[9])}</b></td><td>${tf(r[10])}</td></tr>`).join("") + "</tbody>";
+}
 function renderDouble() {
   seg($("#dttf"), [["D", "日足"], ["W", "週足"]], DT_ST2.tf, v => { DT_ST2.tf = v; renderDouble(); });
   seg($("#dtseg"), [["A", "次の1本"], ["C", "1本遅らせる"], ["G", GHN[DT_ST2.tf] + UNIT[DT_ST2.tf] + "保有"]], DT_ST2.v, v => { DT_ST2.v = v; renderDouble(); });
@@ -1778,7 +1810,7 @@ function renderTimeAxis() {
   const sel = $("#psel"); ORDER.forEach(p => sel.appendChild(el("option", {}, p))); sel.onchange = renderLine;
   $("#mpsel").onchange = renderMicroTab;
   renderSummary(); renderSignalList(); renderHeat("candle"); renderMatch("candle"); renderTfc("candle"); renderStack(); renderLine(); renderH3(); renderH4();
-  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderTimeAxis();
+  renderMicro(); renderMicroTab(); renderPrice(); renderSens(); renderRob(); renderVol(); renderMargin(); renderCost(); renderChartStack(); renderHeat("chart"); renderMatch("chart"); renderTfc("chart"); renderDouble(); renderDtopLong(); renderTechDef(); renderTechStack(); renderHeat("tech"); renderMatch("tech"); renderTfc("tech"); renderTechCost(); renderWeekly(); renderZoneDef(); renderZoneApp(); renderZoneCmp(); renderZoneSel(); renderZoneCost(); renderTimeAxis();
   showTab(location.hash.slice(1));
 })();
 </script>

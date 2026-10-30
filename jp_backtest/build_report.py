@@ -37,7 +37,7 @@ def build_data():
     l = liq[liq.期間 == "後半"].set_index(key)["mean_bp"].rename("l")
     m = a.join(f).join(l).reset_index()
     meta = json.load(open(os.path.join(HERE, "report_data", "meta.json"), encoding="utf-8"))
-    D = {"stocks": meta["stocks"], "pool": build_pool(), "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
+    D = {"stocks": meta["stocks"], "pool": build_pool(), "dtop": build_dtop(), "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
                               net="net_bp", w="win", t="t", f="f", l="l"))}
 
     h3 = csv("results_h3.csv")
@@ -156,6 +156,15 @@ def split_zone(d):
     out["zone"] = {"main": [r for r in d["main"] if not r["p"].startswith(pres)], "mm": [r for r in d["mm"] if not r["p"].startswith(pres)],
                    "match": [r for r in d["match"] if not r["s"].startswith(pres)], "hold": [r for r in d.get("hold", []) if not r["s"].startswith(pres)]}
     return out
+
+
+def build_dtop():
+    """週足ダブルトップ(売り)の、長期データでの実コストと相場局面別(results_dtop_regime.csv)。行は [対象, 保有週, 規模, 区分, n, 粗利, 粗利t, 呼値, 貸株料, 純1tick, 純1tick_t, 純2tick, 勝率]。"""
+    f = os.path.join(HERE, "results_dtop_regime.csv")
+    if not os.path.exists(f):
+        return []
+    d = csv("results_dtop_regime.csv")
+    return [[r.対象, int(r.保有週), r.規模, r.区分, int(r.n), round(r.粗利bp, 1), round(r.粗利t, 1), round(r.呼値bp, 1), round(r.貸株料bp, 1), round(r.純1tick_bp, 1), round(r.純1tick_t, 1), round(r.純2tick_bp, 1), round(r.勝率, 2)] for r in d.itertuples()]
 
 
 def build_pool():
