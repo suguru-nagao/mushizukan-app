@@ -30,7 +30,7 @@ key = sp.SID.astype(np.int64) * NC + sp.C
 last_t = np.full((NS, NC), -1, np.int16)
 np.maximum.at(last_t, (sp.SID, sp.C), sp.T.astype(np.int16))
 meta = {"sigs": [[str(n), str(f)] for n, f in zip(sp.NAMES, sp.FAMS)], "dates": [str(d) for d in sp.DATES], "codes": [str(c) for c in sp.CODES],
-        "size": zmode.tolist(), "peers": peer5.tolist(), "keep": keep.astype(int).tolist(), "holds": [1, 4, 12], "K": K, "avgcorr": round(avgcorr, 3)}
+        "size": zmode.tolist(), "peers": peer5.tolist(), "keep": keep.astype(int).tolist(), "holds": [1, 2, 4, 6, 12], "K": K, "avgcorr": round(avgcorr, 3)}
 json.dump(meta, open(os.path.join(OUT, f"{PFX}_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 
@@ -45,7 +45,7 @@ def sums(E, mask):
     return n, s, q, w
 
 
-for h in (1, 4, 12):
+for h in [int(v) for v in os.environ.get("HOLDS_BUILD", "1,4,12").split(",")]:
     E = sp.prep(h)
     allm = np.ones(len(E["t"]), bool)
     n, s, q, w = sums(E, allm)

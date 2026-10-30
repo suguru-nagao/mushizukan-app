@@ -37,7 +37,7 @@ def build_data():
     l = liq[liq.期間 == "後半"].set_index(key)["mean_bp"].rename("l")
     m = a.join(f).join(l).reset_index()
     meta = json.load(open(os.path.join(HERE, "report_data", "meta.json"), encoding="utf-8"))
-    D = {"stocks": meta["stocks"], "pool": build_pool(), "dtop": build_dtop(), "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
+    D = {"stocks": meta["stocks"], "pool": build_pool(), "disp": build_disp(), "dtop": build_dtop(), "secs": meta["secs"], "holds": meta["holds"], "main": rows(m, dict(p="パターン", d="方向", q="グループ", h="保有日数", n="n", m="mean_bp", md="median_bp",
                               net="net_bp", w="win", t="t", f="f", l="l"))}
 
     h3 = csv("results_h3.csv")
@@ -155,6 +155,20 @@ def split_zone(d):
     pres = tuple(x for _, x in ZPREF)
     out["zone"] = {"main": [r for r in d["main"] if not r["p"].startswith(pres)], "mm": [r for r in d["mm"] if not r["p"].startswith(pres)],
                    "match": [r for r in d["match"] if not r["s"].startswith(pres)], "hold": [r for r in d.get("hold", []) if not r["s"].startswith(pres)]}
+    return out
+
+
+def build_disp():
+    """表示ロジック(コスト超シグナルの個数)の検証結果。{買い/売り: {保有週: {個数: [最小, 最大, 平均, 件数]}}}"""
+    out = {}
+    for side, key in (("buy", "long"), ("sell", "short")):
+        out[key] = {}
+        for h in (1, 2, 4, 6, 12):
+            f = f"results_display2_{side}_{h}.csv"
+            if not os.path.exists(os.path.join(HERE, f)):
+                continue
+            d = csv(f)
+            out[key][h] = {k: [float(x.実績bp.min()), float(x.実績bp.max()), float(x.実績bp.mean()), int(x.n.mean())] for k, x in ((k, d[d.個数 == k]) for k in ("1個", "2個", "3個以上")) if len(x)}
     return out
 
 

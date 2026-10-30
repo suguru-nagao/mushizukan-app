@@ -302,7 +302,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
   <section id="p-stock" class="panel" hidden>
     <div class="card">
       <h2>銘柄別シグナル(週足): ロング/ショートで入るとき、過去の実績から、今後の動きを見る</h2>
-      <p class="lead">銘柄を選ぶと、<b>いま点灯している買い・売りのシグナル</b>と、そのシグナルが過去に出たあとの動き(1週・4週・12週後の、市場平均との差)を並べます。ロング(買い)やショート(売り)で入るときの、<b>今後の動きの傾向を、過去の実績から把握する</b>ための表示です。週足のシグナルは、1銘柄では件数がとても少ないので、<b>値動きの相関が高い銘柄(上位200銘柄)</b>の同じシグナルの成績を借りて推定します。相関は、<b>窓(前週終値→始値)の値動きを、上げ相場の週だけ</b>で測ります(比較は下の表)。数字は、翌週の始値で入り、指定した週数だけ持ったときの、同週・同規模の全銘柄平均との差(bp)で、売りは、空売りした場合の損益です。データは、長期データ(2000年〜2026年10月23日の週)で、生存者バイアス(上場廃止銘柄を含まない)があります。</p>
+      <p class="lead">銘柄を選ぶと、<b>いま点灯している買い・売りのシグナル</b>と、そのシグナルが過去に出たあとの動き(2週・4週・6週後の、市場平均との差)を並べます。ロング(買い)やショート(売り)で入るときの、<b>今後の動きの傾向を、過去の実績から把握する</b>ための表示です。週足のシグナルは、1銘柄では件数がとても少ないので、<b>値動きの相関が高い銘柄(上位200銘柄)</b>の同じシグナルの成績を借りて推定します。相関は、<b>窓(前週終値→始値)の値動きを、上げ相場の週だけ</b>で測ります(比較は下の表)。数字は、翌週の始値で入り、指定した週数だけ持ったときの、同週・同規模の全銘柄平均との差(bp)で、売りは、空売りした場合の損益です。データは、長期データ(2000年〜2026年10月23日の週)で、生存者バイアス(上場廃止銘柄を含まない)があります。</p>
       <div class="card verdict" style="gap:8px"><p id="sk-sum"></p></div>
       <div id="sk-ctls" style="display:flex;flex-direction:column;gap:2px">
         <div class="ctl" style="margin:0"><label style="min-width:4.5em">銘柄</label><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><input id="sk-q" type="search" placeholder="コード(例 9759)または会社名" style="padding:6px 12px;border-radius:10px;border:1px solid var(--line,#8886);background:transparent;color:inherit;font:inherit;min-width:16em"><span id="sk-res" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></div>
@@ -903,7 +903,7 @@ const skStar = n => `<span style="color:var(--warn);letter-spacing:1px">${"★".
 async function renderStockTab() {
   if (SK.stk == null) { const i = D.stocks.findIndex(x => x[0] === "9759"); SK.stk = i >= 0 ? i : 0; }
   seg($("#sk-side"), [["long", "ロング(買いシグナル)"], ["short", "ショート(売りシグナル)"]], SK.side, v => { SK.side = v; renderStockTab(); });
-  seg($("#sk-h"), [1, 4, 12].map(h => [h, h + "週保有"]), SK.h, v => { SK.h = v; renderStockTab(); });
+  seg($("#sk-h"), [1, 2, 4, 6, 12].map(h => [h, { 1: "1週(約5日)", 2: "2週(約10日)", 4: "4週(約20日)", 6: "6週(約30日)", 12: "12週(約60日)" }[h]]), SK.h, v => { SK.h = v; renderStockTab(); });
   seg($("#sk-f"), [["n10", "件数10以上のみ"], ["all", "件数3以上すべて"]], SK.f, v => { SK.f = v; renderStockTab(); });
   const q = $("#sk-q"), res = $("#sk-res"), st = D.stocks[SK.stk];
   const drawRes = () => {
@@ -921,33 +921,31 @@ async function renderStockTab() {
   try { [meta, metaS] = await Promise.all([slLoad("report_data/wrank_meta.json"), slLoad("report_data/wrank_s_meta.json")]); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
   const ci = meta.codes.indexOf(st[4]);
   if (ci < 0 || !meta.keep[ci]) { tab.innerHTML = `<tbody><tr><td>この銘柄は、長期データ(2000年〜)に十分な履歴がないため、推定できません。</td></tr></tbody>`; sum.textContent = `${st[0]} ${st[1]}: 履歴が不足しています(週足で約150週以上必要)。`; return; }
-  let L, S;
-  try { L = await Promise.all([1, 4, 12].map(h => skLoad("long", h, ci))); S = await Promise.all([1, 4, 12].map(h => skLoad("short", h, ci))); } catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+  const need = [...new Set([2, 4, 6, SK.h])], LD = {}, SD = {};
+  try { const rl = await Promise.all(need.map(h => skLoad("long", h, ci))), rs = await Promise.all(need.map(h => skLoad("short", h, ci))); need.forEach((h, i) => { LD[h] = rl[i]; SD[h] = rs[i]; }); }
+  catch (e) { tab.innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
   const size = ["小型", "中型", "大型"][meta.size[ci]], last = meta.dates.length - 1, code = meta.codes[ci];
   $("#sk-peers").innerHTML = "相関の高い銘柄(上位5): " + meta.peers[ci].map(j => { const x = D.stocks.find(s => s[4] === meta.codes[j]); return x ? `${x[0]} ${x[1]}` : meta.codes[j].slice(0, 4); }).join("、");
-  const HI = { 1: 0, 4: 1, 12: 2 };
-  // 点灯中(最新の確定週から2週以内)のシグナル: 買い・売りとも、1・4・12週の推定を並べる
+  const COST = { long: 20, short: 30 };
+  // 点灯中(最新の確定週から2週以内)のシグナル。推定が、コストを超えるものの個数で、強さを決める
   const lit = [];
-  [["long", L, meta], ["short", S, metaS]].forEach(([side, arr, mt]) => {
-    const r4 = arr[1][code] || [], by = i => { const o = {}; [0, 1, 2].forEach(k => { (arr[k][code] || []).forEach(r => { if (r[0] === i) o[k] = r; }); }); return o; };
-    r4.filter(r => r[10] >= 0 && last - r[10] <= 2 && r[1] >= 10).forEach(r => lit.push({ side, name: mt.sigs[r[0]][0], fam: mt.sigs[r[0]][1], r4: r, by: by(r[0]), wk: mt.dates[r[10]] }));
+  [["long", LD, meta], ["short", SD, metaS]].forEach(([side, dd, mt]) => {
+    const sel = dd[SK.h][code] || [], at = (h, i) => (dd[h][code] || []).find(r => r[0] === i);
+    sel.filter(r => r[10] >= 0 && last - r[10] <= 2 && r[1] >= 10).forEach(r => lit.push({ side, name: mt.sigs[r[0]][0], fam: mt.sigs[r[0]][1], r, h2: at(2, r[0]), h4: at(4, r[0]), h6: at(6, r[0]), wk: mt.dates[r[10]], over: r[3] > COST[side] }));
   });
-  const avg = (side, k) => { const xs = lit.filter(x => x.side === side && x.by[k]).map(x => x.by[k][3]); return xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null; };
-  const cell = r => r ? `<td class="${r[3] > 0 ? "wp" : "wn"}">${f1(r[3])}</td>` : "<td>–</td>";
-  const ln = (side, label) => {
-    const xs = lit.filter(x => x.side === side).sort((a, b) => b.r4[11] - a.r4[11] || b.r4[3] - a.r4[3]);
-    const trs = xs.map(x => `<tr><td>${label}</td><td>${SK_FAM[x.fam]}</td><td class="k">${nm(x.name)}</td><td>${x.wk.slice(5)}週</td><td>${skStar(x.r4[11])}</td><td>${x.r4[1]}</td>${cell(x.by[0])}${cell(x.by[1])}${cell(x.by[2])}<td>${x.r4[7]}%</td></tr>`).join("");
-    const m = [0, 1, 2].map(k => avg(side, k));
-    return { trs, n: xs.length, m };
+  const grade = side => {
+    const xs = lit.filter(x => x.side === side), k = xs.filter(x => x.over).length;
+    const ref = ((D.disp || {})[side] || {})[SK.h] || {}, rr = k >= 3 ? ref["3個以上"] : k === 2 ? ref["2個"] : k === 1 ? ref["1個"] : null;
+    const lab = k >= 3 ? "強" : k === 2 ? "中" : k === 1 ? "弱(参考)" : "なし", col = k >= 3 ? "var(--good)" : k === 2 ? "var(--warn)" : "var(--dim)";
+    const name = side === "long" ? "ロング(買い)" : "ショート(売り)";
+    return `<div><span>${name}: 点灯 ${xs.length}件、うち推定がコスト(${COST[side]}bp)超 ${k}件</span><b style="color:${col}">${lab}</b>${rr ? `<small style="display:block;color:var(--dim)">過去の、同じ条件(コスト超 ${k >= 3 ? "3個以上" : k + "個"})の${SK.h}週保有の実績(コスト前): ${f1(rr[0])}〜${f1(rr[1])}bp(後半の検証4設定の最小〜最大)</small>` : ""}</div>`;
   };
-  const a = ln("long", "ロング"), b = ln("short", "ショート");
-  const fm = v => v == null ? "–" : f1(v);
-  now.innerHTML = lit.length ? `<div class="tw"><table class="gt"><thead><tr><th>売買</th><th>分析</th><th>シグナル</th><th>点灯</th><th>信頼度(4週)</th><th>件数</th><th>推定: 1週後</th><th>4週後</th><th>12週後</th><th>勝率(4週)</th></tr></thead><tbody>${a.trs}${b.trs}</tbody></table></div>
-    <p class="note">推定は、相関が高い銘柄の同じシグナルの平均(市場平均との差、bp)です。ロング・ショートとも、プラスなら、その向きで入ったときに市場平均より良かった、という意味です。件数10未満のシグナルは除いています。複数のシグナルは、同じ値動きを別の見方で捉えているだけのことが多く、足し合わせると過大になります。</p>
-    <div class="detail"><div><span>ロング側の平均(点灯 ${a.n}件)</span><b>${fm(a.m[0])} / ${fm(a.m[1])} / ${fm(a.m[2])}</b></div><div><span>ショート側の平均(点灯 ${b.n}件)</span><b>${fm(b.m[0])} / ${fm(b.m[1])} / ${fm(b.m[2])}</b></div></div><p class="note">平均は、1週後 / 4週後 / 12週後(bp)。シグナルごとの単純平均です。</p>`
-    : `<p class="note">最新の確定週(${meta.dates[last]})から2週以内に点灯している、件数10以上のシグナルはありません。</p>`;
+  const cell = r => r ? `<td class="${r[3] > 0 ? "wp" : "wn"}">${f1(r[3])}</td>` : "<td>–</td>";
+  const trs = ["long", "short"].flatMap(side => lit.filter(x => x.side === side).sort((x, y) => y.r[3] - x.r[3]).map(x => `<tr><td>${side === "long" ? "ロング" : "ショート"}</td><td>${SK_FAM[x.fam]}</td><td class="k">${nm(x.name)}</td><td>${x.wk.slice(5)}週</td><td>${x.r[1]}</td>${cell(x.h2)}${cell(x.h4)}${cell(x.h6)}<td>${x.over ? "<b style=\"color:var(--good)\">○</b>" : "–"}</td><td>${x.r[7]}%</td></tr>`));
+  now.innerHTML = `<div class="detail" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))">${grade("long")}${grade("short")}</div>` + (lit.length ? `<div class="tw"><table class="gt"><thead><tr><th>売買</th><th>分析</th><th>シグナル</th><th>点灯</th><th>件数</th><th>推定: 2週保有</th><th>4週保有</th><th>6週保有</th><th>${SK.h}週でコスト超</th><th>勝率(${SK.h}週)</th></tr></thead><tbody>${trs.join("")}</tbody></table></div>` : `<p class="note">最新の確定週(${meta.dates[last]})から2週以内に点灯している、件数10以上のシグナルはありません。</p>`) +
+    `<p class="note"><b>表示のロジック</b>: ①最新の確定週から2週以内に点灯したシグナルを候補にする ②各シグナルの推定は、相関が高い同じ規模の上位200銘柄の、同じシグナルの平均 ③推定がコスト(買い20bp、売り30bp)を超えるシグナルの個数で、強さを決める(0個: なし、1個: 弱、2個: 中、3個以上: 強)。過去の検証で、個数が多いほど実績が良く、推定の大きさで順位をつけるより安定していました。ロングは保有が長いほど(4〜6週)、ショートは短いほど(1〜2週)効きます。推定は、市場平均との差(bp)です。複数のシグナルは、同じ値動きを別の見方で捉えていることがあります。</p>`;
   // シグナル別の表
-  const M = SK.side === "long" ? meta : metaS, arr = (SK.side === "long" ? L : S)[HI[SK.h]];
+  const M = SK.side === "long" ? meta : metaS, arr = (SK.side === "long" ? LD : SD)[SK.h];
   let rows = (arr[code] || []).filter(r => SK.f === "all" || r[1] >= 10);
   rows.sort((x, y) => y[11] - x[11] || y[3] - x[3]);
   const cost = SK.side === "long" ? 20 : 30;
@@ -956,8 +954,8 @@ async function renderStockTab() {
   tab.innerHTML = `<thead><tr><th>分析</th><th>シグナル</th><th>信頼度</th><th>件数</th><th>自身<small>(平均 / t値)</small></th><th>推定</th><th>仲間<small>(件数 / t値)</small></th><th>勝率</th><th>前半 / 後半</th><th>直近の発生</th></tr></thead><tbody>` +
     (rows.map(r => `<tr><td>${SK_FAM[M.sigs[r[0]][1]]}</td><td class="k">${nm(M.sigs[r[0]][0])}<span class="tag ${tg}">${tgl}</span></td><td>${skStar(r[11])}</td><td>${r[1]}</td><td class="${r[2] > 0 ? "wp" : "wn"}">${f1(r[2])} <small>t=${r[12] == null ? "–" : tf(r[12])}</small></td><td class="${r[3] > cost ? "gp" : r[3] > 0 ? "wp" : "wn"}"><b>${f1(r[3])}</b></td><td>${r[5].toLocaleString()} <small>t=${r[6] == null ? "–" : tf(r[6])}</small></td><td>${r[7]}%</td><td>${r[8] == null ? "–" : f1(r[8])} / ${r[9] == null ? "–" : f1(r[9])}</td><td>${lamp(r)}</td></tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
   const top = rows.filter(r => r[11] >= 3).length;
-  sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})は、売買代金の分位で<b>${size}</b>です。いま点灯中のシグナルは、ロング側 ${a.n} 件、ショート側 ${b.n} 件(4週保有で件数10以上)。` +
-    `${SK.h}週保有で、信頼度★3以上の${SK.side === "long" ? "買い" : "売り"}シグナルは <b>${top} 件</b>です。 <em>推定の予測力はごく小さく、コストも差し引く必要があるので、補助情報として見てください。</em>`;
+  sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})は、売買代金の分位で<b>${size}</b>です。${SK.h}週保有で、いま点灯中のシグナルのうち、推定がコストを超えるのは、ロング側 ${lit.filter(x => x.side === "long" && x.over).length} 件、ショート側 ${lit.filter(x => x.side === "short" && x.over).length} 件です。` +
+    ` 下の表の${SK.side === "long" ? "買い" : "売り"}シグナルで、信頼度★3以上は <b>${top} 件</b>。 <em>推定の予測力はごく小さく、コストも差し引く必要があるので、補助情報として見てください。</em>`;
   renderPool();
 }
 
