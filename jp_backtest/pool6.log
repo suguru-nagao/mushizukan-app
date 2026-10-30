@@ -1,4 +1,0 @@
-/home/user/mushizukan-app/jp_backtest/stock_pool4.py:20: RuntimeWarning: Mean of empty slice
-  mu = np.nanmean(mm, axis=1, keepdims=True); sd = np.nanstd(mm, axis=1, keepdims=True)
-/usr/local/lib/python3.13/dist-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
-  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,

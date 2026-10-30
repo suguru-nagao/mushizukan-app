@@ -181,9 +181,9 @@ def build_pool():
         r = csv("results_pool_redo.csv"); g = r.groupby(["method", "set"])["corr"].agg(["mean", "min", "max"]).unstack()
         rows_ = [[m, float(g.loc[m, ("mean", "選択")]), float(g.loc[m, ("mean", "未使用")]), float(g.loc[m, ("min", "未使用")]), float(g.loc[m, ("max", "未使用")])] for m in g.index]
         out["redo"] = sorted(rows_, key=lambda x: -x[2])
-    if os.path.exists(os.path.join(HERE, "results_pool_resp.csv")):
-        r = csv("results_pool_resp.csv"); g = r.groupby("method")["corr"].agg(["mean", "min", "max"])
-        out["resp"] = [[k, float(g.loc[k, "mean"]), float(g.loc[k, "min"]), float(g.loc[k, "max"])] for k in g.index]
+    if os.path.exists(os.path.join(HERE, "results_pool_resp_z.csv")):
+        r = csv("results_pool_resp_z.csv"); g = r.groupby(["method", "set"])["corr"].agg(["mean", "min", "max"]).unstack()
+        out["resp"] = [[k, float(g.loc[k, ("mean", "選択")]), float(g.loc[k, ("mean", "未使用")]), float(g.loc[k, ("min", "未使用")]), float(g.loc[k, ("max", "未使用")])] for k in ("corr", "resp", "both")]
     for side in ("buy", "sell"):
         f = f"results_pool_{side}.csv"
         if os.path.exists(os.path.join(HERE, f)):
