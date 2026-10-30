@@ -33,8 +33,10 @@ peer5 = nn[:, :5]
 key = sp.SID.astype(np.int64) * NC + sp.C
 last_t = np.full((NS, NC), -1, np.int16)
 np.maximum.at(last_t, (sp.SID, sp.C), sp.T.astype(np.int16))
+has_events = np.zeros(NC, bool); has_events[np.unique(sp.C)] = True   # 長期データに、シグナルの発生履歴がある銘柄
+peer5 = np.where(keep[:, None], peer5, -1)
 meta = {"sigs": [[str(n), str(f)] for n, f in zip(sp.NAMES, sp.FAMS)], "dates": [str(d) for d in sp.DATES], "codes": [str(c) for c in sp.CODES],
-        "size": zmode.tolist(), "peers": peer5.tolist(), "keep": keep.astype(int).tolist(), "holds": [1, 2, 4, 6, 12], "K": K, "avgcorr": round(avgcorr, 3)}
+        "size": zmode.tolist(), "peers": peer5.tolist(), "keep": keep.astype(int).tolist(), "fb": ((~keep) & has_events).astype(int).tolist(), "holds": [1, 2, 4, 6, 12], "K": K, "avgcorr": round(avgcorr, 3)}
 json.dump(meta, open(os.path.join(OUT, f"{PFX}_meta.json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 
 
@@ -59,10 +61,11 @@ for h in [int(v) for v in os.environ.get("HOLDS_BUILD", "1,4,12").split(",")]:
     sd = np.sqrt(np.maximum(q / np.maximum(n, 1) - own ** 2, 0) * n / np.maximum(n - 1, 1))
     own_t = np.where((n >= 3) & (sd > 0), own / (sd / np.sqrt(np.maximum(n, 1))), np.nan)
     # 規模ごとの全銘柄平均
-    gs = np.zeros((NS, 3)); gn = np.zeros((NS, 3))
+    gs = np.zeros((NS, 3)); gn = np.zeros((NS, 3)); gq = np.zeros((NS, 3))
     ok = ~np.isnan(E["x"])
-    np.add.at(gs, (E["sid"][ok], E["z"][ok]), E["x"][ok]); np.add.at(gn, (E["sid"][ok], E["z"][ok]), 1)
-    size_mean = (gs / np.maximum(gn, 1))[:, zmode]
+    np.add.at(gs, (E["sid"][ok], E["z"][ok]), E["x"][ok]); np.add.at(gn, (E["sid"][ok], E["z"][ok]), 1); np.add.at(gq, (E["sid"][ok], E["z"][ok]), E["x"][ok] ** 2)
+    gm = gs / np.maximum(gn, 1); gsd = np.sqrt(np.maximum(gq / np.maximum(gn, 1) - gm ** 2, 0)); gt = np.where(gsd > 0, gm / (gsd / np.sqrt(np.maximum(gn / 3, 1))), np.nan)
+    size_mean = gm[:, zmode]; size_n = gn[:, zmode]; size_t = gt[:, zmode]
     # 仲間(相関が高い同規模の銘柄)
     pn = (n[:, nn] * valid[None]).sum(2); ps = (s[:, nn] * valid[None]).sum(2); pq = (q[:, nn] * valid[None]).sum(2)
     pm = np.where(pn > 0, ps / np.maximum(pn, 1), np.nan)
@@ -70,11 +73,13 @@ for h in [int(v) for v in os.environ.get("HOLDS_BUILD", "1,4,12").split(",")]:
     # 仲間のt値は、同じ週に複数銘柄が重なる分を考慮して、件数を1/3に割り引いた近似
     pt = np.where((pn >= 30) & (psd > 0), pm / (psd / np.sqrt(np.maximum(pn / 3, 1))), np.nan)
     est = np.where(np.isnan(pm), size_mean, pm)
+    # 仲間で推定できない銘柄(履歴が短い)は、同じ規模の全銘柄の平均で代用する
+    est = np.where(keep[None, :], est, size_mean); pn = np.where(keep[None, :], pn, size_n); pt = np.where(keep[None, :], pt, size_t)
     fa = np.where(n1 > 0, s1 / np.maximum(n1, 1), np.nan); fb = np.where(n2 > 0, s2 / np.maximum(n2, 1), np.nan)
     score = ((n >= 10).astype(int) + (own_t >= 2).astype(int) + ((fa > 0) & (fb > 0)).astype(int) + (pt >= 2).astype(int) + (est > cost_bp(h)).astype(int))
     rows = {}
     for c in range(NC):
-        if not keep[c]:
+        if not (keep[c] or has_events[c]):
             continue
         sel = np.flatnonzero(n[:, c] >= 3)
         rows[c] = [[int(i), int(n[i, c]), round(float(own[i, c]), 1), round(float(est[i, c]), 1), round(float(size_mean[i, c]), 1), int(pn[i, c]),

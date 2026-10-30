@@ -207,6 +207,9 @@ def build_pool():
     if os.path.exists(os.path.join(HERE, "results_pool_resp_z.csv")):
         r = csv("results_pool_resp_z.csv"); g = r.groupby(["method", "set"])["corr"].agg(["mean", "min", "max"]).unstack()
         out["resp"] = [[k, float(g.loc[k, ("mean", "選択")]), float(g.loc[k, ("mean", "未使用")]), float(g.loc[k, ("min", "未使用")]), float(g.loc[k, ("max", "未使用")])] for k in ("corr", "resp", "both")]
+    if os.path.exists(os.path.join(HERE, "results_pool_short.csv")):
+        r = csv("results_pool_short.csv"); g = r.groupby(["group", "method", "set"])["corr"].mean().unstack(); st_ = r.groupby("group")["stocks"].mean()
+        out["short"] = [[a, b, float(g.loc[(a, b), "選択"]), float(g.loc[(a, b), "未使用"]), int(st_[a])] for a, b in g.index]
     for side in ("buy", "sell"):
         f = f"results_pool_{side}.csv"
         if os.path.exists(os.path.join(HERE, f)):

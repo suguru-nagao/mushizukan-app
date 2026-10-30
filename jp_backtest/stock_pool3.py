@@ -47,7 +47,7 @@ def demean(R, a, b, how):
     raise ValueError(how)
 
 
-def corr_variant(t_split, ret="cc", how="size", hl=None, rank=False, regime=None, window=None, step=1):
+def corr_variant(t_split, ret="cc", how="size", hl=None, rank=False, regime=None, window=None, step=1, min_up=None):
     R = {"cc": R_CC, "oc": R_OC, "gap": R_GAP, "rng": R_RNG, "4w": R_4W}[ret]
     a = 1 if window is None else max(1, t_split - window)
     r = demean(R, a, t_split, how)
@@ -73,7 +73,7 @@ def corr_variant(t_split, ret="cc", how="size", hl=None, rank=False, regime=None
     corr = (xw.T @ xw) / np.maximum(okw.T @ okw, 1e-9)
     ov = ok.T.astype(np.float32) @ ok.astype(np.float32)
     nsel = int((~np.isnan(r)).any(1).sum()) if regime else nt
-    minobs = int(0.6 * nsel) if regime else min(150 // step, int(0.7 * nt))
+    minobs = (int(0.6 * nsel) if min_up is None else min_up) if regime else min(150 // step, int(0.7 * nt))
     keep = cnt >= max(minobs, 30)
     corr[ov < max(min(100 // step, int(0.5 * nt)), 20)] = -9
     corr[~keep, :] = -9; corr[:, ~keep] = -9
