@@ -67,6 +67,7 @@ def make_zones(tp, v, close):
     i1 = min(int(np.searchsorted(edges, tp.max())), NB - 1)
     thr = PEAK_MULT * hs[i0:i1 + 1].mean()
     out = []
+    make_zones.last = [np.nan] * 4     # 帯の強さ(平均の何倍か)と、帯の出来高の古さ(平均の何本前か)。抵抗帯・支持帯の順
     for above in (True, False):
         if above:
             ok = np.nonzero(edges[:-1] >= close * (1 + GAP))[0]
@@ -86,6 +87,11 @@ def make_zones(tp, v, close):
         while b + 1 < NB and b - j < EXT_N and hs[b + 1] >= EXT * hs[j] and (b + 1) in ok:
             b += 1
         out += [edges[a], edges[b + 1]]
+        m = (tp >= edges[a]) & (tp < edges[b + 1])
+        w = v * m
+        age = float((w * (len(tp) - 1 - np.arange(len(tp)))).sum() / w.sum()) if w.sum() > 0 else np.nan
+        k = 0 if above else 2
+        make_zones.last[k] = float(hs[j] / (thr / PEAK_MULT)); make_zones.last[k + 1] = age
     return tuple(out)
 
 
@@ -141,7 +147,7 @@ def events_from(h, l, cc, rlo, rhi, slo, shi):
 SET_NAMES = {"出来高": ("", "帯"), "線": ("線: ", "線"), "重なり": ("重なり: ", "帯"), "出来高のみ": ("出来高のみ: ", "帯"), "線のみ": ("線のみ: ", "線")}
 
 
-def detect_zones(H, L, C, V, W, R, hi_long, hi_short, sr=None):
+def detect_zones(H, L, C, V, W, R, hi_long, hi_short, sr=None, meta=None):
     """(バー数, 銘柄数) の配列から、抵抗帯・支持帯・新高値/新安値のシグナルを返す。
 
     sr=(K, Wsr) を渡すと、サポート・レジスタンスライン(折り返し点の前後 K 本、直近 Wsr 本)も作り、
@@ -174,6 +180,7 @@ def detect_zones(H, L, C, V, W, R, hi_long, hi_short, sr=None):
         tp = (h + l + cc) / 3
         arrs = {k: [np.full(n, np.nan) for _ in range(4)] for k in sets}
         cur = {k: [np.nan] * 4 for k in sets}
+        curm = [np.nan] * 4
         if sr:
             Ks, Wsr = sr
             hp, lp = pivot_idx(h, Ks), pivot_idx(-l, Ks)
@@ -186,6 +193,14 @@ def detect_zones(H, L, C, V, W, R, hi_long, hi_short, sr=None):
             else:
                 zs = {"出来高": vz}
             e = min(tau + R, n - 1)
+            if meta is not None:   # 出来高の帯の強さ・古さ(帯が保たれる間、前の値を保つ)
+                lm = make_zones.last
+                if not np.isnan(vz[0]):
+                    curm[0], curm[1] = lm[0], lm[1]
+                if not np.isnan(vz[2]):
+                    curm[2], curm[3] = lm[2], lm[3]
+                for q, key in enumerate(("str_r", "age_r", "str_s", "age_s")):
+                    meta[key][tau + 1 + first:e + 1 + first, c] = curm[q]
             for k in sets:
                 z, cu = zs[k], cur[k]
                 # 抵抗帯は、新しい帯ができるか、終値で上抜けられるまで保つ(支持帯は下抜けられるまで)
