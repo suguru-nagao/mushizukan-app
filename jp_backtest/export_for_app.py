@@ -7,6 +7,7 @@
   zone_touch.json     直近で抵抗帯・支持帯に到達した銘柄(貸借・信用倍率つき)
   research.json       リバウンドする銘柄の違いなど、報告書作成中の調査結果(表)
   summary.json        検証結果の要約(結論・コスト・注意点)
+  zone_levels.json    銘柄ごとの、出来高最多の抵抗帯・支持帯(支持線・抵抗線のように)と、跳ね返された回数(zone_levels.py で作る)
 """
 import datetime, glob, gzip, json, os, sys
 import numpy as np
@@ -131,10 +132,12 @@ def summary():
 def main():
     ss, last = stock_signals()
     sizes = {"stock_signals.json": dump("stock_signals.json", ss), "zone_touch.json": dump("zone_touch.json", zone_touch()),
-             "research.json": dump("research.json", research()), "summary.json": dump("summary.json", summary())}
+             "research.json": dump("research.json", research()), "summary.json": dump("summary.json", summary()),
+             "zone_levels.json": dump("zone_levels.json", json.load(open(os.path.join(HERE, "cache", "zone_levels.json"), encoding="utf-8")))}
     dump("manifest.json", dict(generated_at=datetime.datetime.now().isoformat(timespec="seconds"), last_confirmed_week=last, holds_weeks=HOLDS, files=sizes,
                                schema=dict(stock_signals="{code4: {name, sector, size, short_history, long|short: {hold_weeks: {grade, k, cost_bp, lit:[{signal,family,week,n,estimate_bp,own_mean_bp,win_pct,over_cost}]}}}}。grade は short_history=true の銘柄では null(判定なし)",
                                            zone_touch="items[{code,name,zone,direction_hint,date,margin_stock,price,turnover_jpy,margin_long_k,margin_short_k,margin_ratio,margin_asof}]",
+                                           zone_levels="stocks{code4: {close, resistance|support: {low, high, mid, dist_pct, touches, rejected_from_below, broken_up, held_from_above, broken_down, pending, last_bounce} | null}}。低・高は帯の下端・上端(円)、dist_pctは現在値からの距離(%)",
                                            units="estimate_bp / own_mean_bp / cost_bp は bp(1bp=0.01%)")))
     print("書き出し:", sizes, "最新の確定週", last)
 

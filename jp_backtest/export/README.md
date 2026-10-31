@@ -9,6 +9,7 @@
 | `stock_signals.json.gz` | 銘柄別シグナル(約3,700銘柄×買い/売り×保有1・2・4・6・12週)。展開: `gunzip -k stock_signals.json.gz` |
 | `zone_touch.json` | 直近で抵抗帯・支持帯に到達した銘柄(信用倍率つき) |
 | `research.json` | 報告書作成中の調査結果の表 |
+| `zone_levels.json` | 銘柄ごとの、出来高最多の抵抗帯・支持帯(支持線・抵抗線のように)と、過去250日に触れた回数・跳ね返された回数。`zone_levels.py` で作る |
 | `summary.json` | 検証結果の要約(結論・コスト・注意点) |
 
 読み込み例(JavaScript / Node):
