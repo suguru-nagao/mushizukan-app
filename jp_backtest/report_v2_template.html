@@ -224,10 +224,10 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
   </section>
 
   <section id="p-stock" class="panel" hidden>
-    <div class="card verdict" style="gap:8px"><p id="sk-sum"></p></div>
     <div class="card" style="gap:6px">
       <div class="ctl" style="margin:0"><label style="min-width:4.5em">銘柄</label><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><input id="sk-q" type="search" placeholder="コード(例 9759)または会社名" style="padding:6px 12px;border-radius:10px;border:1px solid var(--line,#8886);background:transparent;color:inherit;font:inherit;min-width:16em"><span id="sk-res" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></div>
     </div>
+    <div class="card verdict" style="gap:8px"><p id="sk-sum"></p></div>
     <div class="card" id="sk-a"></div>
     <div class="card" id="sk-b"></div>
     <div class="card" id="sk-c"></div>
@@ -390,7 +390,7 @@ async function renderStock() {
   const tot = f => { const c = trs.filter(r => !r.open && (f == null || r.f === f)), o = trs.filter(r => r.open && (f == null || r.f === f)); return { n: c.length, w: c.filter(r => r.t[6] > 0).length, c: c.reduce((a, r) => a + r.y, 0), no: o.length, o: o.reduce((a, r) => a + r.y, 0) }; };
   const trow = (lab, x) => `<tr><td class="k">${lab}</td><td>${x.n}件(勝 ${x.w})</td><td class="${sgn(x.c)}">${yen(x.c)}</td><td>${x.no}件</td><td class="${sgn(x.o)}">${yen(x.o)}</td><td class="${sgn(x.c + x.o)}"><b>${yen(x.c + x.o)}</b></td></tr>`;
   $("#sk-b").innerHTML = `<div class="sec">入りと出をシグナルで決める売買(直近1年・100株ずつ)</div>
-    <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。</p>
+    <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。<b>チャートパターンは、逆向きのパターンがなかなか出ないので、保有が長くなります</b>(全銘柄の中央値: 週足で約42週、日足で約40日)。</p>
     <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
     (trs.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map(r => { const t = r.t; return `<tr><td>${FAM[r.f]}</td><td class="k">${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])} ${Math.round(t[3]).toLocaleString()}円</td><td>${r.open ? "<b>保有中</b>(最新終値)" : fmtDate(M, t[2])} ${Math.round(t[4]).toLocaleString()}円</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
 

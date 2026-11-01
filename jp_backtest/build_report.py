@@ -252,7 +252,7 @@ if __name__ == "__main__":
     tpl = tpl.replace('["list","シグナル一覧"],["stock","銘柄別シグナル"],', "", 1)
     tpl = tpl.replace('<div class="brand">ローソク足 検証<small>日本株バックテスト</small></div>', '<div class="brand">旧版レポート<small><a href="report.html" style="color:inherit">← 新しいダッシュボードへ</a></small></div>', 1)
     out = os.path.join(HERE, "legacy.html")
-    open(out, "w", encoding="utf-8").write(tpl.replace("/*__DATA__*/{}", data))
+    open(out, "w", encoding="utf-8").write('<!doctype html>\n<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n' + tpl.replace("/*__DATA__*/{}", data))
     print(f"wrote {out} ({os.path.getsize(out) / 1024:.0f} KB)")
     # 新しいダッシュボード(report.html): データは report_data/v2/ から読み込む
     out = os.path.join(HERE, "report.html")
