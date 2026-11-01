@@ -55,6 +55,7 @@ for sid, (nm, fam, d, S, OPP) in enumerate(sigs):
             r = float(np.clip(r, -0.9, 3.0)); gross = d * r; cost = (20 if d > 0 else 20 + 0.031 * 7 * max(w, 1) / 365 * 1e4) / 1e4
             rows.append((sid, c, t, e, -1 if openp else x, w, pe, px, gross - cost, d * (r - m) - cost, size[t, c]))
 D = pd.DataFrame(rows, columns=["sid", "c", "t", "e", "x", "w", "pe", "px", "net", "netex", "z"])
+D = D[np.isfinite(D.px) & np.isfinite(D.net) & np.isfinite(D.pe)].copy()   # 上場廃止などで最新終値がない保有中を除く
 D["closed"] = D.x >= 0; print("取引", len(D), "うち保有中", (~D.closed).sum(), flush=True)
 D.to_pickle("cache/rt_trades.pkl")
 cl = D[D.closed]
@@ -73,10 +74,9 @@ for (sid, c), g in D.groupby(["sid", "c"]):
     rec = g[(g.x >= LASTY) | (~g.closed)]
     tr = [[int(sid), int(r.e), int(r.x), round(float(r.pe), 1), round(float(r.px), 1), int(r.w), round(float(r.net * 1e4), 1)] for r in rec.itertuples()]
     o = out.setdefault(c, {"s": [], "tr": []}); o["s"].append(st); o["tr"] += tr
-for k in range((N + SHARD - 1) // SHARD * 0 + SHARD):
-    lo = k * ((N + SHARD - 1) // SHARD); hi = min(N, lo + (N + SHARD - 1) // SHARD)
-    json.dump({codes[c]: out[c] for c in range(lo, hi) if c in out}, open(f"{OUT}/rt_{k}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
-json.dump(dict(sigs=[[s[0], s[1], s[2]] for s in sigs], dates=[d.strftime("%Y-%m-%d") for d in dates], codes=codes, shard=(N + SHARD - 1) // SHARD, nshard=SHARD,
+for k in range((N + 399) // 400):
+    json.dump({codes[c]: out[c] for c in range(k * 400, min(N, (k + 1) * 400)) if c in out}, open(f"{OUT}/rt_{k}.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+json.dump(dict(sigs=[[s[0], s[1], s[2]] for s in sigs], dates=[d.strftime("%Y-%m-%d") for d in dates], codes=codes, shard=400,
                cols_s=["sid", "n", "win", "mean_bp", "median_bp", "mean_excess_bp", "median_weeks", "size_win", "size_mean_bp", "size_excess_bp", "size_median_weeks"], cols_tr=["sid", "entry_t", "exit_t(-1=保有中)", "entry_price", "exit_or_last_price", "weeks", "net_bp"]),
           open(f"{OUT}/rt_meta.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
 print("done", len(out))

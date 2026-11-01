@@ -314,6 +314,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
       <div id="sk-peers" class="note" style="margin:6px 0"></div>
       <div class="sec">いま点灯しているシグナルと、過去の実績から見た今後の動き</div>
       <div id="sk-now"></div>
+      <div id="sk-rt"></div>
       <div class="sec" id="sk-tabtitle">シグナル別の過去の実績</div>
       <div class="tw"><table class="gt" id="sk-tab"></table></div>
       <div class="sec">推定値と信頼度(★0〜5)の数え方</div>
@@ -988,6 +989,39 @@ async function renderStockTab() {
     (fb ? " <em>この銘柄は履歴が短いため、判定は出していません。" : ` 下の表の${SK.side === "long" ? "買い" : "売り"}シグナルで、信頼度★3以上は <b>${top} 件</b>。 <em>`) + "推定の予測力はごく小さく、コストも差し引く必要があるので、補助情報として見てください。</em>";
   if (fb) sum.innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})は、売買代金の分位で<b>${size}</b>ですが、履歴が短いため、${useOwn ? "<b>その銘柄自身の過去の実績</b>で、参考の判定を出しています(件数5以上のシグナルが対象)。" : `<b>判定(強・中・弱)は出していません</b>。いま点灯しているシグナル(ロング ${lit.filter(x => x.side === "long").length} 件、ショート ${lit.filter(x => x.side === "short").length} 件)と、同じ規模の全銘柄の平均を、参考として表示します。`} <em>この代用の予測力は、検証で確認できていません。</em>`;
   renderPool();
+  renderRoundTrip(ci, st);
+}
+
+/* 入りと出をシグナルで決める売買(SAR・ローソク足): 銘柄別シグナルタブの下に表示 */
+async function renderRoundTrip(ci, st) {
+  const box = $("#sk-rt"); if (!box) return;
+  let RM, RD;
+  try { RM = await slLoad("report_data/rt_meta.json"); RD = await slLoad(`report_data/rt_${Math.floor(ci / 400)}.json`); } catch (e) { box.innerHTML = ""; return; }
+  const d = RD[RM.codes[ci]] || { s: [], tr: [] }, yen = (r, bp) => bp / 1e4 * r * 100;
+  const fam = i => RM.sigs[i][1] === "tech" ? "SAR" : "ローソク足", sd = i => RM.sigs[i][2] > 0 ? "買い" : "売り", fmt = v => Math.round(v).toLocaleString();
+  // 直近1年の取引
+  // 1銘柄・1系統(SAR / ローソク足)・1方向につき、同時に持つのは1ポジションとする: 保有中に同じ向きの別のシグナルが出ても、買い増しはしない。同じ週に入る複数のシグナルは、1つにまとめる。
+  const trs = d.tr.slice().sort((a, b) => a[1] - b[1] || a[0] - b[0]), cur = {}, trRows = [];
+  trs.forEach(t => {
+    const key = fam(t[0]) + sd(t[0]), c = cur[key];
+    if (c && (c.t[2] < 0 || t[1] < c.t[2])) { if (t[1] === c.t[1]) c.names.push(RM.sigs[t[0]][0]); return; }
+    const open = t[2] < 0, r = { t, open, y: yen(t[3], t[6]), names: [RM.sigs[t[0]][0]] }; cur[key] = r; trRows.push(r);
+  });
+  const sum = rows => rows.reduce((a, r) => a + r.y, 0), closed = trRows.filter(r => !r.open), opened = trRows.filter(r => r.open);
+  const bySet = f => { const c = closed.filter(r => f(r.t[0])), o = opened.filter(r => f(r.t[0])); return { n: c.length, w: c.filter(r => r.t[6] > 0).length, c: sum(c), o: sum(o), no: o.length }; };
+  const A = bySet(i => fam(i) === "SAR"), B = bySet(i => fam(i) === "ローソク足");
+  const line = (lab, x) => `<tr><td class="k">${lab}</td><td>${x.n}件(勝 ${x.w})</td><td class="${x.c > 0 ? "wp" : "wn"}">${fmt(x.c)}円</td><td>${x.no}件</td><td class="${x.o > 0 ? "wp" : "wn"}">${fmt(x.o)}円</td><td class="${x.c + x.o > 0 ? "wp" : "wn"}"><b>${fmt(x.c + x.o)}円</b></td></tr>`;
+  const trTab = trRows.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>入り</th><th>出</th><th>週</th><th>損益(100株)</th><th>損益率(コスト後)</th></tr></thead><tbody>` + trRows.map(r => { const t = r.t; return `<tr><td>${fam(t[0])}</td><td class="k">${r.names.map(x => nm(x)).join("・")}<span class="tag ${RM.sigs[t[0]][2] > 0 ? "buy" : "sell"}">${sd(t[0])}</span></td><td>${RM.dates[t[1]].slice(2)} ${fmt(t[3])}円</td><td>${r.open ? "<b>保有中</b>(最新終値)" : RM.dates[t[2]].slice(2)} ${fmt(t[4])}円</td><td>${t[5]}</td><td class="${r.y > 0 ? "wp" : "wn"}">${fmt(r.y)}円</td><td class="${t[6] > 0 ? "wp" : "wn"}">${f1(t[6])}bp</td></tr>`; }).join("") + `</tbody></table></div>` : `<p class="note">直近1年に、この銘柄で、SAR・ローソク足の売買は、ありませんでした。</p>`;
+  // 全期間のシグナル別
+  const rows = d.s.filter(x => RM.sigs[x[0]][2] === (SK.side === "long" ? 1 : -1) && x[1] >= 3).sort((a, b) => b[3] - a[3]);
+  const sTab = `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均<small>(コスト後bp)</small></th><th>中央値</th><th>市場超過<small>(平均bp)</small></th><th>保有<small>(中央値・週)</small></th><th>同規模の全銘柄: 勝率 / 平均</th></tr></thead><tbody>` +
+    (rows.map(x => `<tr><td>${fam(x[0])}</td><td class="k">${nm(RM.sigs[x[0]][0])}</td><td>${x[1]}</td><td>${x[2]}%</td><td class="${x[3] > 0 ? "wp" : "wn"}">${f1(x[3])}</td><td>${f1(x[4])}</td><td class="${x[5] > 0 ? "wp" : "wn"}">${f1(x[5])}</td><td>${x[6]}</td><td>${x[7] == null ? "–" : x[7] + "% / " + f1(x[8])}</td></tr>`).join("") || `<tr><td colspan="9">件数3以上のシグナルがありません。</td></tr>`) + "</tbody></table></div>";
+  box.innerHTML = `<div class="sec">入りと出をシグナルで決める売買(SAR・ローソク足): ${st[0]} ${st[1]}</div>
+    <p class="note" style="margin:4px 0 8px"><b>ルール</b>: 入りは、シグナルの次の週の始値。出は、<b>反対のシグナルが出た次の週の始値</b>です(SAR: 買い転換で入り、売り転換で出る。ローソク足: 買いのローソク足(9種)で入り、売りのローソク足(9種のどれか)が出たら出る。売りは逆)。保有中のものは、最新終値で評価します。直近1年の表は、1銘柄・1系統・1方向につき、<b>同時に持つのは1ポジション</b>として(保有中に同じ向きのシグナルが出ても、買い増しはしない)、100株ずつで計算しています。下の「全期間のシグナル別」は、シグナルごとに独立して数えています。<b>勝率</b>は、コスト後の損益がプラスだった取引の割合です。コストは、買い20bp、売りは20bpに貸株料等(年3.1%)。</p>
+    <div class="tw"><table class="gt"><thead><tr><th>直近1年(100株ずつ)</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${line("SAR", A)}${line("ローソク足", B)}${line("合計", { n: A.n + B.n, w: A.w + B.w, c: A.c + B.c, o: A.o + B.o, no: A.no + B.no })}</tbody></table></div>
+    ${trTab}
+    <div class="sec" style="margin-top:14px">全期間(2000年〜)の、この銘柄の${SK.side === "long" ? "買い" : "売り"}シグナル別の成績</div>${sTab}
+    <p class="note">同規模の全銘柄は、決済済みの取引の平均です。取引は、保有中に同じシグナルがもう一度出ても、重複して数えていません。生存者バイアスがあります。</p>`;
 }
 
 /* ---- horizontal bars (zero-centred, optional cost line) ---- */
