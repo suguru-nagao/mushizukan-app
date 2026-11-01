@@ -246,8 +246,15 @@ def build_mtf():
 
 if __name__ == "__main__":
     D = build_data()
+    data = json.dumps(D, ensure_ascii=False, allow_nan=False, separators=(",", ":"))
+    # 旧版(legacy.html): 銘柄別シグナル・シグナル一覧は、新しいダッシュボード(report.html)に移したので、外す
     tpl = open(os.path.join(HERE, "report_template.html"), encoding="utf-8").read()
-    html = tpl.replace("/*__DATA__*/{}", json.dumps(D, ensure_ascii=False, allow_nan=False, separators=(",", ":")))
+    tpl = tpl.replace('["list","シグナル一覧"],["stock","銘柄別シグナル"],', "", 1)
+    tpl = tpl.replace('<div class="brand">ローソク足 検証<small>日本株バックテスト</small></div>', '<div class="brand">旧版レポート<small><a href="report.html" style="color:inherit">← 新しいダッシュボードへ</a></small></div>', 1)
+    out = os.path.join(HERE, "legacy.html")
+    open(out, "w", encoding="utf-8").write(tpl.replace("/*__DATA__*/{}", data))
+    print(f"wrote {out} ({os.path.getsize(out) / 1024:.0f} KB)")
+    # 新しいダッシュボード(report.html): データは report_data/v2/ から読み込む
     out = os.path.join(HERE, "report.html")
-    open(out, "w", encoding="utf-8").write(html)
-    print(f"wrote {out} ({len(html) / 1024:.0f} KB)")
+    open(out, "w", encoding="utf-8").write(open(os.path.join(HERE, "report_v2_template.html"), encoding="utf-8").read())
+    print(f"wrote {out} ({os.path.getsize(out) / 1024:.0f} KB)")

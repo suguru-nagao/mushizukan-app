@@ -1,0 +1,447 @@
+<title>株価シグナル 検証ダッシュボード</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<style>
+/* layout: 上部に角丸のタブナビ、本文は半透明のカードを縦に積む。参考画像の暗い紫〜赤の光彩の背景に合わせる */
+:root {
+  --bg: #090a14;
+  --glow1: rgba(88, 66, 196, .42);
+  --glow2: rgba(158, 42, 84, .32);
+  --glow3: rgba(24, 120, 140, .20);
+  --surface: rgba(255, 255, 255, .045);
+  --surface2: rgba(255, 255, 255, .085);
+  --line: rgba(255, 255, 255, .11);
+  --fg: #e9eaf4;
+  --dim: #9a9eb8;
+  --accent: #62a8ff;
+  --accent-bg: rgba(98, 168, 255, .16);
+  --good: #3fd9a0;
+  --good-bg: rgba(63, 217, 160, .22);
+  --good-soft: rgba(63, 217, 160, .09);
+  --bad: #ff6f86;
+  --bad-bg: rgba(255, 111, 134, .22);
+  --bad-soft: rgba(255, 111, 134, .09);
+  --warn: #f2b84b;
+  --warn-bg: rgba(242, 184, 75, .18);
+  --q1: #ff7a90; --q2: #f2b84b; --q3: #8fd36a; --q4: #4fb6ff; --q5: #a58bff;
+  --cu: #ff6f86; --cd: #5aa2ff; --tipbg: #171a2d;
+  --shadow: 0 10px 40px rgba(0, 0, 0, .35);
+  --font: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", system-ui, sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f2f3fa; --glow1: rgba(120, 98, 230, .20); --glow2: rgba(230, 110, 140, .16); --glow3: rgba(60, 170, 190, .14);
+    --surface: rgba(255, 255, 255, .72); --surface2: rgba(255, 255, 255, .95); --line: rgba(30, 34, 70, .13);
+    --fg: #1b1d33; --dim: #5d6180; --accent: #1f6fe0; --accent-bg: rgba(31, 111, 224, .11);
+    --good: #0e8a60; --good-bg: rgba(14, 138, 96, .20); --good-soft: rgba(14, 138, 96, .08);
+    --bad: #c8334f; --bad-bg: rgba(200, 51, 79, .18); --bad-soft: rgba(200, 51, 79, .07);
+    --warn: #a86c00; --warn-bg: rgba(168, 108, 0, .15);
+    --q1: #d6384f; --q2: #b97a00; --q3: #3f8f1d; --q4: #1b78c4; --q5: #6e4fd0;
+    --cu: #d6384f; --cd: #1b6fd6; --tipbg: #ffffff;
+    --shadow: 0 10px 30px rgba(40, 44, 90, .10); color-scheme: light;
+  }
+}
+:root[data-theme="light"] {
+  --bg: #f2f3fa; --glow1: rgba(120, 98, 230, .20); --glow2: rgba(230, 110, 140, .16); --glow3: rgba(60, 170, 190, .14);
+  --surface: rgba(255, 255, 255, .72); --surface2: rgba(255, 255, 255, .95); --line: rgba(30, 34, 70, .13);
+  --fg: #1b1d33; --dim: #5d6180; --accent: #1f6fe0; --accent-bg: rgba(31, 111, 224, .11);
+  --good: #0e8a60; --good-bg: rgba(14, 138, 96, .20); --good-soft: rgba(14, 138, 96, .08);
+  --bad: #c8334f; --bad-bg: rgba(200, 51, 79, .18); --bad-soft: rgba(200, 51, 79, .07);
+  --warn: #a86c00; --warn-bg: rgba(168, 108, 0, .15);
+  --q1: #d6384f; --q2: #b97a00; --q3: #3f8f1d; --q4: #1b78c4; --q5: #6e4fd0;
+  --cu: #d6384f; --cd: #1b6fd6; --tipbg: #ffffff;
+  --shadow: 0 10px 30px rgba(40, 44, 90, .10); color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: var(--font); font-size: 15px; line-height: 1.75; color: var(--fg);
+  background:
+    radial-gradient(900px 520px at 8% -6%, var(--glow1), transparent 70%),
+    radial-gradient(900px 520px at 96% -4%, var(--glow2), transparent 70%),
+    radial-gradient(800px 500px at 50% 108%, var(--glow3), transparent 70%),
+    var(--bg);
+  background-attachment: fixed;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 18px 56px;
+}
+.wrap { max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; font-weight: 700; line-height: 1.4; }
+p { margin: 0; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* nav */
+.nav { display: flex; align-items: center; gap: 10px 22px; flex-wrap: wrap; padding: 12px 16px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+.brand { font-weight: 700; font-size: 17px; letter-spacing: .02em; white-space: nowrap; }
+.brand small { font-weight: 400; color: var(--dim); font-size: 11px; margin-left: 8px; letter-spacing: .06em; }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; min-width: 0; }
+.tab { appearance: none; border: 1px solid transparent; background: transparent; color: var(--dim); font: inherit; font-size: 14px;
+  padding: 7px 16px; border-radius: 999px; cursor: pointer; transition: color .15s, background .15s, border-color .15s; }
+.tab:hover { color: var(--fg); }
+.tab[aria-selected="true"] { color: var(--fg); background: var(--surface2); border-color: var(--line); font-weight: 500; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* header */
+.head h1 { font-size: 30px; letter-spacing: .02em; }
+.head p { color: var(--dim); margin-top: 8px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.chip { font-size: 12.5px; padding: 3px 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--dim); }
+.chip b { color: var(--fg); font-weight: 500; }
+
+/* cards */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px 24px; box-shadow: var(--shadow);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.card h2 { font-size: 20px; }
+.sec { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 700; color: var(--fg); margin-top: 6px; }
+.sec::before { content: ""; width: 4px; height: 15px; border-radius: 2px; background: var(--accent); }
+.lead { color: var(--dim); font-size: 14px; }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid2 { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); }
+.sub { padding: 16px 18px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.sub h3 { font-size: 15px; }
+.sub .big { font-size: 14px; color: var(--dim); }
+.badge { align-self: flex-start; font-size: 12px; font-weight: 700; padding: 2px 11px; border-radius: 999px; letter-spacing: .03em; }
+.b-bad { background: var(--bad-bg); color: var(--bad); }
+.b-good { background: var(--good-bg); color: var(--good); }
+.b-warn { background: var(--warn-bg); color: var(--warn); }
+.verdict { border-color: var(--line); background: linear-gradient(135deg, var(--accent-bg), transparent 70%), var(--surface); }
+.verdict p { font-size: 17px; line-height: 1.85; }
+.verdict em { font-style: normal; color: var(--accent); font-weight: 700; }
+ul.pts { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 7px; font-size: 14px; }
+ul.pts li::marker { color: var(--accent); }
+.note { font-size: 12.5px; color: var(--dim); }
+code, .mono { font-family: var(--mono); font-size: .92em; }
+
+/* controls */
+.ctl { display: flex; gap: 8px 14px; flex-wrap: wrap; align-items: center; }
+.ctl label { font-size: 13px; color: var(--dim); }
+.seg { display: inline-flex; flex-wrap: wrap; gap: 3px; padding: 3px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.seg button { appearance: none; border: 0; background: transparent; color: var(--dim); font: inherit; font-size: 13px; padding: 4px 13px; border-radius: 999px; cursor: pointer; }
+.seg button[aria-pressed="true"] { background: var(--accent-bg); color: var(--accent); font-weight: 700; }
+select { font: inherit; font-size: 13.5px; color: var(--fg); background: var(--surface2); border: 1px solid var(--line); border-radius: 10px; padding: 5px 10px; }
+
+/* tables */
+.tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; font-variant-numeric: tabular-nums; }
+th, td { padding: 8px 12px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--line); }
+th { color: var(--dim); font-weight: 500; font-size: 12.5px; background: var(--surface); }
+th:first-child, td:first-child { text-align: left; }
+tr:last-child td { border-bottom: 0; }
+td.k { color: var(--fg); font-weight: 500; }
+td small, th small { color: var(--dim); font-weight: 400; font-size: 11.5px; margin-left: 5px; }
+.hm td.cell { cursor: pointer; min-width: 92px; }
+.hm td.cell:hover { outline: 1px solid var(--accent); outline-offset: -1px; }
+.hm td.sel { outline: 2px solid var(--accent); outline-offset: -2px; }
+.c0 { color: var(--dim); }
+.gp { background: var(--good-bg); color: var(--good); font-weight: 700; }
+.gn { background: var(--bad-bg); color: var(--bad); font-weight: 700; }
+.wp { background: var(--good-soft); color: var(--good); }
+.wn { background: var(--bad-soft); color: var(--bad); }
+.tag { font-size: 11px; padding: 1px 8px; border-radius: 999px; margin-left: 8px; }
+.tag.buy { background: var(--bad-bg); color: var(--bad); }
+.tag.sell { background: var(--accent-bg); color: var(--accent); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12.5px; color: var(--dim); align-items: center; }
+.legend i { display: inline-block; width: 22px; height: 12px; border-radius: 4px; vertical-align: -1px; margin-right: 5px; }
+.detail { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; }
+.detail div { padding: 10px 12px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.detail span { display: block; font-size: 11.5px; color: var(--dim); }
+.detail b { font-size: 17px; font-variant-numeric: tabular-nums; }
+
+/* bars */
+.bars { display: flex; flex-direction: column; gap: 14px; }
+.brow { display: grid; grid-template-columns: minmax(120px, 210px) 1fr; gap: 10px 14px; align-items: center; }
+.brow .lab { font-size: 13.5px; line-height: 1.5; }
+.brow .lab small { display: block; color: var(--dim); font-size: 11.5px; }
+.track { position: relative; display: flex; flex-direction: column; gap: 5px; padding: 2px 0; min-width: 0; }
+.bar { position: relative; height: 20px; }
+.bar i { position: absolute; top: 0; bottom: 0; border-radius: 5px; min-width: 2px; }
+.bar span { position: absolute; top: 50%; transform: translateY(-50%); font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.zero { position: absolute; top: 0; bottom: 0; width: 1px; background: var(--dim); opacity: .55; }
+.costline { position: absolute; top: -4px; bottom: -4px; width: 0; border-left: 2px dashed var(--warn); }
+.costtag { position: absolute; top: -22px; transform: translateX(-50%); font-size: 11px; color: var(--warn); white-space: nowrap; }
+.sw { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.stack { display: flex; height: 22px; border-radius: 7px; overflow: hidden; background: var(--surface2); }
+.stack i { display: block; height: 100%; }
+
+.gl .wide { grid-column: 1 / -1; }
+table.gt { font-size: 12.5px; }
+table.gt th, table.gt td { padding: 5px 10px; }
+.tipname { border-bottom: 1px dotted var(--dim); cursor: help; }
+.tipname:hover, .tipname:focus-visible { color: var(--accent); border-bottom-color: var(--accent); }
+#tip { position: fixed; z-index: 60; width: min(340px, calc(100vw - 24px)); padding: 14px 16px 14px; border-radius: 16px; background: var(--tipbg);
+  border: 1px solid var(--line); box-shadow: 0 18px 50px rgba(0, 0, 0, .45); font-size: 13px; line-height: 1.65; color: var(--fg); pointer-events: none; }
+#tip h4 { font-size: 15px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+#tip svg { display: block; width: 100%; height: auto; margin: 8px 0 4px; background: var(--surface); border-radius: 10px; }
+#tip ul { margin: 6px 0 0; padding-left: 1.15em; display: flex; flex-direction: column; gap: 3px; font-size: 12.5px; }
+#tip ul li::marker { color: var(--accent); }
+#tip .sum { color: var(--dim); font-size: 12.5px; margin-top: 4px; }
+#tip .res { margin-top: 8px; padding: 6px 10px; border-radius: 10px; background: var(--accent-bg); font-size: 12.5px; }
+#tip .fn { color: var(--dim); font-size: 11px; margin-top: 6px; }
+svg text { fill: var(--dim); font-family: var(--font); font-size: 11px; }
+svg .ax { stroke: var(--line); stroke-width: 1; }
+svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
+.hidden { display: none !important; }
+@media (max-width: 640px) {
+  .head h1 { font-size: 23px; }
+  .card { padding: 16px 14px; border-radius: 16px; }
+  .brow { grid-template-columns: 1fr; gap: 4px; }
+  .tab { padding: 6px 12px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <nav class="nav" aria-label="セクション">
+    <div class="brand">シグナル検証<small>日本株バックテスト</small></div>
+    <div class="tabs" role="tablist" id="tabs"></div>
+  </nav>
+
+  <header class="head">
+    <h1>株価シグナルは、売買に使えるか</h1>
+    <p>ローソク足・チャートパターン・テクニカル指標・抵抗帯の全シグナルを、<b>「利益が出たか」</b>の勝率で検証したダッシュボードです。見方は2つ(下の切り替え)。<b>① 保有期間を決める</b>(シグナルの次のバーの始値で入り、決めた期間後の始値で出る)、<b>② 反対のシグナルで出る</b>(同じ種類の逆向きのシグナルが出たら出る)。週足(2000年〜)と日足(2021年〜)で見られます。</p>
+  </header>
+
+  <div class="card" id="gbar" style="gap:8px;position:sticky;top:6px;z-index:5;padding:12px 18px">
+    <div class="ctl" style="margin:0"><label style="min-width:4.5em">見方</label><div class="seg" id="g-mode"></div></div>
+    <div class="ctl" style="margin:0"><label style="min-width:4.5em">時間軸</label><div class="seg" id="g-tf"></div></div>
+    <div class="ctl" style="margin:0" id="g-hrow"><label style="min-width:4.5em">保有期間</label><div class="seg" id="g-h"></div></div>
+    <div class="note" id="g-note"></div>
+  </div>
+
+  <section id="p-summary" class="panel" hidden>
+    <div class="card verdict"><p id="sm-lead"></p></div>
+    <div class="card"><div class="sec">種類 × 売買の全体成績</div><p class="note">全銘柄・全シグナルの合計です(規模は全体)。勝率 = コスト後の損益がプラスだった取引の割合。</p><div class="tw"><table class="gt" id="sm-fam"></table></div></div>
+    <div class="grid2">
+      <div class="card"><div class="sec">平均が高かったシグナル(件数 300 以上)</div><div class="tw"><table class="gt" id="sm-top"></table></div></div>
+      <div class="card"><div class="sec">平均が低かったシグナル(件数 300 以上)</div><div class="tw"><table class="gt" id="sm-bot"></table></div></div>
+    </div>
+    <div class="card"><div class="sec">読み方</div><ul class="pts" id="sm-pts"></ul></div>
+  </section>
+
+  <section id="p-stock" class="panel" hidden>
+    <div class="card verdict" style="gap:8px"><p id="sk-sum"></p></div>
+    <div class="card" style="gap:6px">
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">銘柄</label><div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><input id="sk-q" type="search" placeholder="コード(例 9759)または会社名" style="padding:6px 12px;border-radius:10px;border:1px solid var(--line,#8886);background:transparent;color:inherit;font:inherit;min-width:16em"><span id="sk-res" style="display:flex;gap:6px;flex-wrap:wrap"></span></div></div>
+    </div>
+    <div class="card" id="sk-a"></div>
+    <div class="card" id="sk-b"></div>
+    <div class="card" id="sk-c"></div>
+  </section>
+
+  <section id="p-sig" class="panel" hidden>
+    <div class="card" style="gap:8px">
+      <div class="sec">シグナル別の成績(全銘柄)</div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">種類</label><div class="seg" id="sg-fam"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">売買</label><div class="seg" id="sg-side"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">規模</label><div class="seg" id="sg-z"></div></div>
+      <div class="ctl" style="margin:0"><label style="min-width:4.5em">並び順</label><div class="seg" id="sg-o"></div></div>
+      <div class="tw"><table class="gt" id="sg-tab"></table></div>
+      <p class="note">市場超過 = 同じ期間の市場(全銘柄の等ウェイト)の値動きを引いた平均。前半/後半は、期間を半分に分けた平均で、同じ向きなら安定していると見ます。生存者バイアスがあります(上場廃止の銘柄が少ない)。</p>
+    </div>
+  </section>
+
+  <section id="p-detail" class="panel" hidden>
+    <div class="card verdict"><p>これまでの追加検証の要点です。詳しい表・グラフは、<a href="legacy.html" style="color:var(--accent)">旧版のレポート(legacy.html)</a>にあります。旧版は、勝率を「同じ日・同じ流動性の平均を引いた超過リターンがプラスの割合」で計算していて、この新しいダッシュボードの「利益が出たか」の勝率とは定義が違います。</p></div>
+    <div id="dt-body"></div>
+  </section>
+
+  <section id="p-terms" class="panel" hidden>
+    <div class="card"><div class="sec">用語と計算方法</div><div id="tm-body"></div></div>
+  </section>
+</div>
+
+<script>
+const TABS = [["summary","結論"],["stock","銘柄別シグナル"],["sig","シグナル別の成績"],["detail","検証の詳細"],["terms","用語・方法"]];
+const $ = (s, el = document) => el.querySelector(s);
+const el = (tag, attrs = {}, html = "") => { const e = document.createElement(tag); Object.entries(attrs).forEach(([k, v]) => e.setAttribute(k, v)); e.innerHTML = html; return e; };
+const f1 = v => v == null ? "–" : (v > 0 ? "+" : v < 0 ? "−" : "") + Math.abs(v).toFixed(1);
+const pc = v => v == null ? "–" : v.toFixed(1) + "%";
+const yen = v => (v < 0 ? "−" : "") + Math.abs(Math.round(v)).toLocaleString() + "円";
+const sgn = v => v == null ? "" : v > 0 ? "wp" : v < 0 ? "wn" : "";
+function seg(host, items, current, on) {
+  host.innerHTML = "";
+  items.forEach(([v, label]) => { const b = el("button", { type: "button", "aria-pressed": String(v === current) }, label); b.onclick = () => { on(v); seg(host, items, v, on); }; host.appendChild(b); });
+}
+const CACHE = {};
+function V(path) { if (!CACHE[path]) CACHE[path] = fetch("report_data/v2/" + path).then(r => { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }).catch(e => { delete CACHE[path]; throw e; }); return CACHE[path]; }
+
+const G = { tf: "W", mode: "h", h: { W: 4, D: 10 }, side: "long", fam: "all", z: 3, o: "mean", stk: null, q: "" };
+const FAM = { candle: "ローソク足", chart: "チャート", tech: "テクニカル", zone: "抵抗帯" };
+const HL = { W: { 1: "1週", 2: "2週", 4: "4週", 6: "6週", 12: "12週" }, D: { 5: "5日", 10: "10日", 20: "20日", 30: "30日" } };
+const HOLDS = { W: [1, 2, 4, 6, 12], D: [5, 10, 20, 30] };
+const mname = () => G.mode === "o" ? "o" : "h" + G.h[G.tf];
+const fmtDate = (M, i) => M.dates[i].slice(2);
+const COSTNOTE = "コスト: 買い 20bp(現物)、売り 20bp + 貸株料等(年3.1%)。逆日歩は含みません。";
+
+/* ---- tabs ---- */
+const tabsHost = $("#tabs");
+function showTab(id) {
+  if (!TABS.some(t => t[0] === id)) id = "summary";
+  TABS.forEach(([k]) => { const pn = $("#p-" + k); if (pn) pn.hidden = k !== id; });
+  tabsHost.querySelectorAll(".tab").forEach(b => b.setAttribute("aria-selected", String(b.dataset.id === id)));
+  try { if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id); } catch (e) {}
+  render();
+}
+TABS.forEach(([k, label]) => { const b = el("button", { type: "button", class: "tab", role: "tab", "data-id": k }, label); b.onclick = () => showTab(k); tabsHost.appendChild(b); });
+window.addEventListener("hashchange", () => showTab(location.hash.slice(1)));
+const curTab = () => (TABS.find(t => !$("#p-" + t[0]).hidden) || TABS[0])[0];
+
+/* ---- 共通の切り替え ---- */
+function drawGlobal() {
+  seg($("#g-mode"), [["h", "① 保有期間を決める"], ["o", "② 反対のシグナルで出る"]], G.mode, v => { G.mode = v; drawGlobal(); render(); });
+  seg($("#g-tf"), [["W", "週足(2000年〜)"], ["D", "日足(2021年〜)"]], G.tf, v => { G.tf = v; drawGlobal(); render(); });
+  $("#g-hrow").hidden = G.mode === "o";
+  seg($("#g-h"), HOLDS[G.tf].map(h => [h, HL[G.tf][h]]), G.h[G.tf], v => { G.h[G.tf] = v; render(); });
+  $("#g-note").textContent = (G.mode === "h" ? `①: シグナルの次の${G.tf === "W" ? "週" : "日"}の始値で入り、${HL[G.tf][G.h[G.tf]]}後の始値で出る。` : `②: シグナルの次の${G.tf === "W" ? "週" : "日"}の始値で入り、同じ種類の逆向きのシグナルが出た次の${G.tf === "W" ? "週" : "日"}の始値で出る。`) + COSTNOTE;
+}
+
+/* ---- 全銘柄の成績の集計(結論・シグナル別の成績) ---- */
+async function loadAll() { const [M, B] = await Promise.all([V(G.tf + "_meta.json"), V(G.tf + "_base.json")]); return { M, b: B[mname()] || {} }; }
+function rowsAll(M, b, z) {
+  return M.sigs.map((s, sid) => { const r = (b[sid] || {})[z]; return r ? { sid, name: s[0], fam: s[1], d: s[2], n: r[0], win: r[1], mean: r[2], med: r[3], ex: r[4], h1: r[5], h2: r[6], bars: r[7] } : null; }).filter(Boolean);
+}
+const wavg = (rs, k) => rs.reduce((a, r) => a + r[k] * r.n, 0) / Math.max(1, rs.reduce((a, r) => a + r.n, 0));
+
+async function renderSummary() {
+  let A; try { A = await loadAll(); } catch (e) { $("#sm-lead").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
+  const rs = rowsAll(A.M, A.b, 3), big = rs.filter(r => r.n >= 300), unit = G.tf === "W" ? "週" : "日";
+  const tot = rs.reduce((a, r) => a + r.n, 0), pos = big.filter(r => r.mean > 0).length, posx = big.filter(r => r.ex > 0).length;
+  const winMed = big.map(r => r.win).sort((a, b) => a - b)[Math.floor(big.length / 2)];
+  $("#sm-lead").innerHTML = `${G.tf === "W" ? "週足(2000〜2026)" : "日足(2021〜2026)"}、${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"}で、<b>全${rs.length}シグナル・${tot.toLocaleString()}件</b>の取引を、コスト後の損益で見ました。件数300以上の${big.length}シグナルのうち、<em>平均がプラスなのは ${pos} 個</em>、<em>市場の上昇を引いてもプラスなのは ${posx} 個</em>。勝率(利益が出た割合)の中央値は <em>${winMed == null ? "–" : winMed.toFixed(1)}%</em> です。`;
+  const rows = [];
+  ["candle", "chart", "tech", "zone"].forEach(f => [1, -1].forEach(d => { const g = rs.filter(r => r.fam === f && r.d === d); if (g.length) rows.push(`<tr><td>${FAM[f]}</td><td>${d > 0 ? "買い" : "売り"}</td><td>${g.length}</td><td>${g.reduce((a, r) => a + r.n, 0).toLocaleString()}</td><td>${wavg(g, "win").toFixed(1)}%</td><td class="${sgn(wavg(g, "mean"))}">${f1(wavg(g, "mean"))}</td><td class="${sgn(wavg(g, "ex"))}">${f1(wavg(g, "ex"))}</td></tr>`); }));
+  $("#sm-fam").innerHTML = `<thead><tr><th>種類</th><th>売買</th><th>シグナル数</th><th>件数</th><th>勝率</th><th>平均<small>(コスト後bp)</small></th><th>市場超過<small>(bp)</small></th></tr></thead><tbody>${rows.join("")}</tbody>`;
+  const line = r => `<tr><td>${FAM[r.fam]}</td><td class="k">${r.name}<span class="tag ${r.d > 0 ? "buy" : "sell"}">${r.d > 0 ? "買い" : "売り"}</span></td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}">${f1(r.mean)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td></tr>`;
+  const head = "<thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均</th><th>市場超過</th></tr></thead>";
+  const srt = big.slice().sort((a, b) => b.mean - a.mean);
+  $("#sm-top").innerHTML = head + `<tbody>${srt.slice(0, 8).map(line).join("")}</tbody>`;
+  $("#sm-bot").innerHTML = head + `<tbody>${srt.slice(-8).reverse().map(line).join("")}</tbody>`;
+  $("#sm-pts").innerHTML = [
+    "<b>勝率が5割を超える取引は、ほとんどありません。</b>売買コストと、買いなら上昇が続かないこと、売りなら上昇相場の中で逆行することが重なるためです。勝率が低くても、勝つときの利益が大きければ、平均はプラスになります(SARなどの順張り)。",
+    "<b>平均が大きく見えても、市場の上昇を引くと消える</b>ことが多いです。「市場超過」の列を見てください。長期の週足は、上昇相場の期間が長く、買いの平均が良く見えやすいです。",
+    "<b>同じ取引が複数のシグナルに重なります</b>(例: 大陽線と赤三兵が同じ週に出る)。シグナルごとの件数を足し合わせないでください。",
+    "<b>銘柄ごとの結果は、件数が少ないとぶれます</b>。「銘柄別シグナル」では、自身の件数・仲間(値動きが似た銘柄)・同規模の全銘柄を並べて見られます。",
+    "生存者バイアス(上場廃止の銘柄が少ない)と、取引の単位(売買代金・板)の制約は、考慮していません。"].map(t => `<li>${t}</li>`).join("");
+}
+
+async function renderSig() {
+  let A; try { A = await loadAll(); } catch (e) { $("#sg-tab").innerHTML = `<tbody><tr><td>データを読み込めませんでした(${e.message})</td></tr></tbody>`; return; }
+  seg($("#sg-fam"), [["all", "すべて"], ...Object.entries(FAM)], G.fam, v => { G.fam = v; renderSig(); });
+  seg($("#sg-side"), [["long", "買い"], ["short", "売り"]], G.side, v => { G.side = v; renderSig(); });
+  seg($("#sg-z"), [[3, "全体"], [0, "小型"], [1, "中型"], [2, "大型"]], G.z, v => { G.z = v; renderSig(); });
+  seg($("#sg-o"), [["mean", "平均"], ["win", "勝率"], ["ex", "市場超過"], ["n", "件数"]], G.o, v => { G.o = v; renderSig(); });
+  const d = G.side === "long" ? 1 : -1;
+  const rs = rowsAll(A.M, A.b, G.z).filter(r => r.d === d && (G.fam === "all" || r.fam === G.fam)).sort((a, b) => b[G.o] - a[G.o]);
+  const stab = r => r.h1 == null || r.h2 == null ? "–" : (r.h1 > 0) === (r.h2 > 0) ? `<span style="color:var(--good)">同じ向き</span>` : `<span style="color:var(--bad)">逆</span>`;
+  $("#sg-tab").innerHTML = `<thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均<small>(コスト後bp)</small></th><th>中央値</th><th>市場超過</th><th>前半 / 後半</th><th>安定</th>${G.mode === "o" ? "<th>保有<small>(中央値)</small></th>" : ""}</tr></thead><tbody>` +
+    (rs.map(r => `<tr><td>${FAM[r.fam]}</td><td class="k">${r.name}</td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}"><b>${f1(r.mean)}</b></td><td>${f1(r.med)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td><td>${f1(r.h1)} / ${f1(r.h2)}</td><td>${stab(r)}</td>${G.mode === "o" ? `<td>${r.bars ?? "–"}</td>` : ""}</tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
+}
+
+/* ---- 銘柄別シグナル ---- */
+let STOCKS = null;
+async function loadStocks() { if (!STOCKS) STOCKS = await V("stocks.json"); return STOCKS; }
+async function renderStock() {
+  const S = await loadStocks();
+  if (G.stk == null) G.stk = Math.max(0, S.findIndex(x => x[0] === "9759"));
+  const st = S[G.stk], q = $("#sk-q"), res = $("#sk-res");
+  const draw = () => {
+    const t = G.q.trim();
+    if (!t) { res.innerHTML = `<b>${st[0]} ${st[1]}</b>`; return; }
+    const m = S.map((x, i) => [x, i]).filter(([x]) => x[0].startsWith(t) || x[1].includes(t)).slice(0, 8);
+    res.innerHTML = m.length ? "" : "該当なし";
+    m.forEach(([x, i]) => { const b = el("button", { type: "button", class: "tab" }, `${x[0]} ${x[1]}`); b.onclick = () => { G.stk = i; G.q = ""; q.value = ""; renderStock(); }; res.appendChild(b); });
+  };
+  q.oninput = () => { G.q = q.value; draw(); }; draw();
+  let M, LIT, SH;
+  try { [M, LIT] = await Promise.all([V(G.tf + "_meta.json"), V(G.tf + "_lit.json")]); } catch (e) { $("#sk-sum").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
+  const ci = M.codes.indexOf(st[4]);
+  if (ci < 0) { $("#sk-sum").innerHTML = `<b>${st[0]} ${st[1]}</b>は、${G.tf === "W" ? "長期の週足データ(2000年〜)" : "日足データ(2021年〜)"}に履歴がありません。`; ["#sk-a", "#sk-b", "#sk-c"].forEach(s => $(s).innerHTML = ""); return; }
+  const k = Math.floor(ci / M.shard), code = st[4], unit = G.tf === "W" ? "週" : "日";
+  const mfile = m => V(`${G.tf}_${m}_${k}.json`);
+  let cur, allh, TR, BASE;
+  try { [cur, TR, BASE] = await Promise.all([mfile(mname()), V(`${G.tf}_tr_${k}.json`), V(G.tf + "_base.json")]); allh = await Promise.all(HOLDS[G.tf].map(h => mfile("h" + h))); } catch (e) { $("#sk-sum").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
+  const sz = M.size ? M.size[ci] : 3, own = {}; (cur[code] || []).forEach(r => own[r[0]] = r);
+  const byH = {}; HOLDS[G.tf].forEach((h, i) => { byH[h] = {}; (allh[i][code] || []).forEach(r => byH[h][r[0]] = r); });
+  const bz = (m, sid) => ((BASE[m] || {})[sid] || {})[sz] || ((BASE[m] || {})[sid] || {})[3];
+  const nm = sid => M.sigs[sid][0], fam = sid => FAM[M.sigs[sid][1]], dir = sid => M.sigs[sid][2];
+  const tag = sid => `<span class="tag ${dir(sid) > 0 ? "buy" : "sell"}">${dir(sid) > 0 ? "買い" : "売り"}</span>`;
+  const lit = (LIT[code] || []);
+
+  /* A. 点灯中のシグナルと、過去の実績から見た今後の動き */
+  const est = (h, sid) => { const r = (byH[h] || {})[sid], b = bz("h" + h, sid); if (r && r[5] >= 30 && r[7] != null) return [r[7], "仲間"]; if (r && r[1] >= 10) return [r[3], "自身"]; return b ? [b[2], "規模"] : [null, ""]; };
+  const rowsA = lit.map(([sid, t]) => { const r = own[sid], b = bz(mname(), sid), e = est(G.h[G.tf] || HOLDS[G.tf][0], sid)[0]; return { sid, t, r, b, e }; }).sort((x, y) => dir(y.sid) - dir(x.sid) || (y.e ?? -1e9) - (x.e ?? -1e9));
+  const peerCols = G.tf === "W";
+  const cellA = r => `${r ? r[1] : 0}</td><td>${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}">${r && r[3] != null ? f1(r[3]) : "–"}`;
+  const fut = sid => HOLDS[G.tf].map(h => { const [v, src] = est(h, sid); return `<td class="${sgn(v)}">${v == null ? "–" : f1(v)}<small style="color:var(--dim)"> ${src}</small></td>`; }).join("");
+  $("#sk-a").innerHTML = `<div class="sec">いま点灯しているシグナルと、過去の実績から見た今後の動き</div>
+    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。「今後の動き」は、同じシグナルが出た後の、保有期間別の平均(コスト後bp)で、自身の件数が10以上なら<b>自身</b>、仲間(値動きが似た銘柄)の件数が30以上なら<b>仲間</b>、どちらも足りないときは<b>同規模の全銘柄</b>の平均です。</p>` +
+    (rowsA.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>点灯</th><th>自身: 件数</th><th>勝率</th><th>平均</th>${peerCols ? "<th>仲間: 件数</th><th>勝率</th><th>平均</th>" : ""}<th>同規模: 勝率</th><th>平均</th>${HOLDS[G.tf].map(h => `<th>${HL[G.tf][h]}後</th>`).join("")}</tr></thead><tbody>` +
+      rowsA.map(({ sid, t, r, b }) => `<tr><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${cellA(r)}</td>${peerCols ? `<td>${r ? r[5] : "–"}</td><td>${r && r[6] != null ? r[6].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[7])}">${r && r[7] != null ? f1(r[7]) : "–"}</td>` : ""}<td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td>${fut(sid)}</tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
+    `<p class="note">表の「自身・仲間・同規模」の列は、上の切り替え(${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"})の成績です。右の「今後の動き」は、保有期間別の平均です。件数が少ない値は、ぶれが大きいので、参考として見てください。</p>`;
+
+  /* B. 入りと出をシグナルで決める売買(直近1年・全シグナル) */
+  const T = ((TR[code] || [])).slice().sort((a, b) => a[1] - b[1]);
+  const trs = T.map(t => ({ t, open: t[2] < 0, y: t[6] / 1e4 * t[3] * 100, sids: t[0], f: M.sigs[t[0][0]][1], d: dir(t[0][0]) }));
+  const tot = f => { const c = trs.filter(r => !r.open && (f == null || r.f === f)), o = trs.filter(r => r.open && (f == null || r.f === f)); return { n: c.length, w: c.filter(r => r.t[6] > 0).length, c: c.reduce((a, r) => a + r.y, 0), no: o.length, o: o.reduce((a, r) => a + r.y, 0) }; };
+  const trow = (lab, x) => `<tr><td class="k">${lab}</td><td>${x.n}件(勝 ${x.w})</td><td class="${sgn(x.c)}">${yen(x.c)}</td><td>${x.no}件</td><td class="${sgn(x.o)}">${yen(x.o)}</td><td class="${sgn(x.c + x.o)}"><b>${yen(x.c + x.o)}</b></td></tr>`;
+  $("#sk-b").innerHTML = `<div class="sec">入りと出をシグナルで決める売買(直近1年・100株ずつ)</div>
+    <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。</p>
+    <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
+    (trs.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map(r => { const t = r.t; return `<tr><td>${FAM[r.f]}</td><td class="k">${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])} ${Math.round(t[3]).toLocaleString()}円</td><td>${r.open ? "<b>保有中</b>(最新終値)" : fmtDate(M, t[2])} ${Math.round(t[4]).toLocaleString()}円</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
+
+  /* C. 全期間の、この銘柄のシグナル別の成績 */
+  let oAll; try { oAll = (await mfile(mname()))[code] || []; } catch (e) { oAll = []; }
+  const dsel = G.side === "long" ? 1 : -1;
+  const rowsC = oAll.filter(r => dir(r[0]) === dsel && r[1] >= 3).sort((a, b) => b[3] - a[3]);
+  $("#sk-c").innerHTML = `<div class="sec">全期間(${G.tf === "W" ? "2000年〜" : "2021年〜"})の、この銘柄のシグナル別の成績</div>
+    <div class="ctl" style="margin:0"><label style="min-width:4.5em">売買</label><div class="seg" id="sk-side"></div></div>
+    <p class="note">${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"}の成績です(コスト後)。件数3以上のシグナルだけを表示します。同規模の全銘柄は、${M.size ? ["小型", "中型", "大型"][sz] : "全銘柄"}の平均です。</p>
+    <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均<small>(bp)</small></th><th>中央値</th>${peerCols ? "<th>仲間: 件数</th><th>勝率</th><th>平均</th>" : ""}<th>同規模: 勝率</th><th>平均</th></tr></thead><tbody>` +
+    (rowsC.map(r => { const b = bz(mname(), r[0]); return `<tr><td>${fam(r[0])}</td><td class="k">${nm(r[0])}</td><td>${r[1]}</td><td>${r[2].toFixed(1)}%</td><td class="${sgn(r[3])}"><b>${f1(r[3])}</b></td><td>${f1(r[4])}</td>${peerCols ? `<td>${r[5]}</td><td>${r[6] != null ? r[6].toFixed(1) + "%" : "–"}</td><td class="${sgn(r[7])}">${r[7] != null ? f1(r[7]) : "–"}</td>` : ""}<td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td></tr>`; }).join("") || `<tr><td colspan="10">件数3以上のシグナルがありません。</td></tr>`) + "</tbody></table></div>";
+  seg($("#sk-side"), [["long", "買いシグナル"], ["short", "売りシグナル"]], G.side, v => { G.side = v; renderStock(); });
+  const nl = rowsA.filter(r => dir(r.sid) > 0).length, ns = rowsA.length - nl;
+  $("#sk-sum").innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})。いま点灯中のシグナルは、買い ${nl} 件・売り ${ns} 件。直近1年の②の売買(100株ずつ)は、決済済み ${yen(tot(null).c)}、保有中の含み ${yen(tot(null).o)}、合計 <b>${yen(tot(null).c + tot(null).o)}</b> です。<em>過去の統計で、将来を保証しません。</em>`;
+}
+
+/* ---- 検証の詳細・用語 ---- */
+function renderDetail() {
+  if ($("#dt-body").dataset.done) return; $("#dt-body").dataset.done = 1;
+  const items = [
+    ["ローソク足・チャートパターン・テクニカル指標・抵抗帯", "どのシグナルも、コストを引いて、同じ日の平均や市場の上昇を引いても安定して利益が残る形は、ほとんど見つかっていません。日足では、小型株の逆張りが大きく見えても、「大きく動いた日の反転」と同じ現象で、同じ騰落率の日と比べると差が消えます。"],
+    ["銘柄ごとの推定(仲間の平均)", "1銘柄だとサンプルが少ないので、値動きが似た同規模の上位200銘柄(仲間)の、同じシグナルの平均で推定すると、自身の平均・規模の平均・業種よりも、後半の成績をよく当てられました(それでも予測力は小さい)。週足(2000年〜)でだけ使えます。"],
+    ["買いと売り・保有期間", "買いは保有が長いほど(4〜12週)効き、売りは短いほど(1〜2週)効きます。売りは、制度信用の貸株料・配当調整金・逆日歩で、保有が長いほど重くなります。"],
+    ["週足パラボリックSAR(②のルール)", "全銘柄で、勝率は買い約41%・売り約34%。買いは平均で+267bp(コスト後)ですが、市場の上昇を引くと−31bp(小型だけ弱いプラス)。売りは上昇相場の中でマイナスでした。"],
+    ["週足ダブルトップ(売り)", "8週保有で、粗利+79bp(t 4.1)、1ティックと貸株料を引くと+42bp(t 2.2)。26年中7年はマイナス。相場局面には依存しません。"],
+    ["価格帯別出来高の最多付近(抵抗帯・支持帯)", "抵抗帯(売り)は、5日後で勝率約55%。支持帯(買い)は勝率約46%で優位性なし。過去に跳ね返された回数が多くても、次に跳ね返されやすいとは言えません(0回と3回以上で差なし)。回転率との関係は、外れ値を抑えると消えます。信用倍率が高い銘柄では、抵抗帯で跳ね返されやすい傾向(+38bp)があるが、現在値による近似で、確定ではありません。"],
+    ["売りの実コスト", "売りは制度信用(6か月)。20bp + 貸株料(年1.10%)+ 配当調整金(利回り年2.0%と仮定)。1週で約26bp、4週で約44bp、12週で約91bp。逆日歩・貸株枠は含みません。"],
+    ["データの限界", "週足は、Yahooの週足(2000〜2026、3,712銘柄)で、生存者バイアスがあります。外れ値は除去・クリップ済み。日足は、J-Quantsの5年。信用残の履歴は取得できていません(直近5週だけ)。"]];
+  $("#dt-body").innerHTML = items.map(([h, p]) => `<div class="card"><div class="sec">${h}</div><p style="font-size:14px;line-height:1.8">${p}</p></div>`).join("");
+}
+function renderTerms() {
+  if ($("#tm-body").dataset.done) return; $("#tm-body").dataset.done = 1;
+  $("#tm-body").innerHTML = `<ul class="pts">
+  <li><b>勝率</b>: 1回の取引の、コスト後の損益がプラスだった割合。「同じ日の平均より良かった割合」ではありません。</li>
+  <li><b>① 保有期間を決める</b>: シグナルが出た次のバーの始値で入り、決めた期間(週足: 1・2・4・6・12週、日足: 5・10・20・30日)後の始値で出る。同じ銘柄でシグナルが続けて出ても、毎回独立に数えます。</li>
+  <li><b>② 反対のシグナルで出る</b>: シグナルが出た次のバーの始値で入り、同じ種類(ローソク足・チャート・テクニカル・抵抗帯)の逆向きのシグナルのどれかが出た次のバーの始値で出る。保有中に出た同じシグナルは数えません。まだ出ていない取引は、集計から除き、「直近1年の売買」では「保有中」(最新終値で評価)とします。</li>
+  <li><b>平均 / 中央値</b>: コスト後の損益率の平均/中央値(bp。1bp = 0.01%)。極端な値は、−90%〜+300%で打ち切っています。</li>
+  <li><b>市場超過</b>: 同じ期間の市場(全銘柄の等ウェイトの始値から始値のリターン)を引いた平均。買いも売りも、市場の上昇を引くと、売りは有利に、買いは不利になります。</li>
+  <li><b>仲間</b>: 値動き(上げ相場の週の、前週終値から始値への窓)の相関が高い、同じ規模の上位200銘柄。仲間の成績は、仲間全体の取引を合計した勝率・平均です(週足のみ)。</li>
+  <li><b>規模</b>: 売買代金(直近13週/60日の中央値)の同じ時点の分位。小型は分位1〜2、中型は3、大型は4〜5。</li>
+  <li><b>コスト</b>: 買いは現物で、スプレッド等の20bp。売りは制度信用で、20bp + 貸株料(年1.10%)+ 配当調整金(利回り年2.0%と仮定)を保有日数で按分(年3.1%)。逆日歩・税金・金利は含みません。</li>
+  <li><b>損益(円)</b>: 100株ずつの、入りの始値と出の始値(または最新終値)の差から、コストを引いた金額。株価は、分割などの調整を戻した、実際の価格に近い値です。</li>
+  <li><b>データ</b>: 週足は、Yahoo Financeの週足(2000年〜2026年10月、3,712銘柄)。日足は、J-Quants Lightの日足(2021年10月〜2026年10月)。<b>生存者バイアス</b>: 上場廃止になった銘柄が少なく、買いの成績がよく見えます。</li>
+  </ul>`;
+}
+
+function render() {
+  const id = curTab();
+  if (id === "summary") renderSummary(); else if (id === "stock") renderStock(); else if (id === "sig") renderSig(); else if (id === "detail") renderDetail(); else if (id === "terms") renderTerms();
+}
+drawGlobal();
+showTab(location.hash.slice(1));
+</script>
