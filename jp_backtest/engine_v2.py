@@ -3,7 +3,7 @@
  ② 反対のシグナルで出る: シグナルの次のバーの始値で入り、同じ種類(ローソク足/チャート/テクニカル/抵抗帯)の逆向きのシグナルのどれかが出た次のバーの始値で出る。保有中に出た同じシグナルは数えない。
 損益 = 向き×(出た始値/入った始値−1) − コスト。買いは20bp、売りは20bp+貸株料等(年3.1%×保有日数/365)。勝率 = コスト後の損益がプラスの割合。
 出力: cache/v2_{tf}_H.pkl, v2_{tf}_O.pkl, v2_{tf}_meta.pkl
-  python3 engine_v2.py W|D
+  python3 engine_v2.py W|D|M
 """
 import os, pickle, sys
 import numpy as np, pandas as pd
@@ -12,11 +12,11 @@ from build_report import zname
 from mtf_run import signals
 
 TF = sys.argv[1] if len(sys.argv) > 1 else "W"
-HOLDS = {"W": [1, 2, 4, 6, 12], "D": [5, 10, 20, 30]}[TF]
-DAYS = {"W": 7.0, "D": 7.0 / 5}[TF]       # 1バーあたりの日数
-if TF == "W":
+HOLDS = {"W": [1, 2, 4, 6, 12], "D": [5, 10, 20, 30], "M": [1, 2, 3, 6]}[TF]
+DAYS = {"W": 7.0, "D": 7.0 / 5, "M": 30.4}[TF]       # 1バーあたりの日数
+if TF in ("W", "M"):
     from long_run import load
-    P, _ = load("W")
+    P, _ = load(TF)
 else:
     P = bt.load_panel()
 O = P["O"].astype(float); C = P["C"].astype(float); Cr = P["Craw"].astype(float); T, N = O.shape
