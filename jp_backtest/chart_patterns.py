@@ -65,7 +65,7 @@ def first_break(C, line, start, stop, fresh_from, H=None, cap=None):
     return p
 
 
-def tops(H, L, C, hi):
+def tops(H, L, C, hi, rec=None):
     """山の形(ダブルトップ・トリプルトップ・三尊)の、ネックライン下抜けの日を返す。"""
     n = len(H)
     out = {"double": set(), "triple": set(), "hs": set()}
@@ -89,6 +89,8 @@ def tops(H, L, C, hi):
             t = first_break(C, nl, h2 + K, h2 + K + BREAK_WINDOW, h2 + 1, H, max(P1, P2) * 1.03)
             if t is not None:
                 out["double"].add(t)
+                if rec is not None:
+                    rec[("double", t)] = dict(pts=[(h1, P1), (h2, P2)], lines=[(h1, nl, t, nl, "ネックライン")])
         # --- トリプルトップ
         if j >= 2:
             h1, hm, h3 = hi[j - 2], hi[j - 1], h2
@@ -103,6 +105,8 @@ def tops(H, L, C, hi):
                             t = first_break(C, nl, h3 + K, h3 + K + BREAK_WINDOW, h3 + 1, H, ps.max() * 1.03)
                             if t is not None:
                                 out["triple"].add(t)
+                                if rec is not None:
+                                    rec[("triple", t)] = dict(pts=[(h1, H[h1]), (hm, H[hm]), (h3, H[h3])], lines=[(h1, nl, t, nl, "ネックライン")])
             # --- 三尊(左肩 h1, 頭 hm, 右肩 h3)
             a, b, c = h1, hm, h3
             Pa, Pb, Pc = H[a], H[b], H[c]
@@ -117,10 +121,12 @@ def tops(H, L, C, hi):
                         t = first_break(C, line, c + K, c + K + BREAK_WINDOW, c + 1, H, Pb * 1.01)
                         if t is not None:
                             out["hs"].add(t)
+                            if rec is not None:
+                                rec[("hs", t)] = dict(pts=[(a, Pa), (b, Pb), (c, Pc), (i1, l1), (i2, l2)], lines=[(i1, l1, t, float(line[t]), "ネックライン")])
     return out
 
 
-def channels(H, L, C, hi, lo):
+def channels(H, L, C, hi, lo, rec=None):
     """保ち合い系(三角・ウェッジ・チャネル)。(日, 名前, 方向) の集合を返す。"""
     n = len(H)
     ev = set()
@@ -174,9 +180,15 @@ def channels(H, L, C, hi, lo):
         nxt = piv[k + 1][0] + K if k + 1 < len(piv) else n
         for t in range(tau + 1, min(tau + SCAN, nxt, n - 1) + 1):
             if C[t] > up(t):
-                ev.add((t, name, 1)); break
+                ev.add((t, name, 1))
+                if rec is not None:
+                    rec[(t, name, 1)] = dict(pts=[(a1, H[a1]), (a2, H[a2]), (b1, L[b1]), (b2, L[b2])], lines=[(a1, H[a1], t, up(t), "上のライン"), (b1, L[b1], t, lw(t), "下のライン")])
+                break
             if C[t] < lw(t):
-                ev.add((t, name, -1)); break
+                ev.add((t, name, -1))
+                if rec is not None:
+                    rec[(t, name, -1)] = dict(pts=[(a1, H[a1]), (a2, H[a2]), (b1, L[b1]), (b2, L[b2])], lines=[(a1, H[a1], t, up(t), "上のライン"), (b1, L[b1], t, lw(t), "下のライン")])
+                break
     return ev
 
 

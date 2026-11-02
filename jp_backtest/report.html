@@ -975,61 +975,184 @@ function zoneTip(key) {
 const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" data-tip="${name}">${name}</span>` : name;
 
 
-/* ---- 取引のチャート(シグナル・入り・出) ---- */
+/* ---- 取引・シグナルのチャート(日足/週足/月足の切り替え、表示期間の変更、シグナルの位置を表示) ---- */
 (function () {
   const st = document.createElement("style");
   st.textContent = `table.fit { width: 100%; } table.fit th, table.fit td { padding: 6px 8px; white-space: normal; vertical-align: top; } table.fit td.sg { text-align: left; min-width: 11em; } table.fit small { color: var(--dim); }
   .trrow { cursor: pointer; } .trrow:hover, .trrow:focus-visible { background: var(--accent-bg); outline: none; }
-  #trmodal { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 24px 12px; }
-  #trmodal[hidden] { display: none; } #trmodal .box { width: min(860px, 100%); background: var(--bg, #fff); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px 18px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  #trmodal { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 16px 10px; }
+  #trmodal[hidden] { display: none; } #trmodal .box { width: min(1000px, 100%); background: var(--bg, #fff); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
   #trmodal .hd { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; } #trmodal button.x { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 4px 14px; font: inherit; cursor: pointer; }
-  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 8px; } #trmodal svg text { fill: var(--dim); font-size: 11px; } #trmodal svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
-  #trmodal .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } #trmodal .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }`;
+  #trmodal .ctrl { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 2px; align-items: center; } #trmodal .ctrl label { font-size: 12px; color: var(--dim); margin-right: 4px; }
+  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 6px; touch-action: none; cursor: grab; user-select: none; } #trmodal svg text { fill: var(--dim); font-size: 11px; } #trmodal svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
+  #trmodal .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } #trmodal .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
+  #trmodal .lg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--dim); margin-top: 6px; } #trmodal .lg i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 4px; }`;
   document.head.appendChild(st);
   const box = document.createElement("div"); box.id = "trmodal"; box.hidden = true; box.innerHTML = '<div class="box"></div>'; document.body.appendChild(box);
   const close = () => { box.hidden = true; };
   box.addEventListener("click", e => { if (e.target === box || e.target.closest("button.x")) close(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
-  window.openTradeChart = async ({ M, k, code, tr, dir, nm, tag }) => {
+
+  /* 指標(価格から、画面側で計算) */
+  const NaNs = n => new Array(n).fill(null);
+  const sma = (a, n) => a.map((_, i) => { if (i < n - 1) return null; let s = 0; for (let j = i - n + 1; j <= i; j++) { if (a[j] == null) return null; s += a[j]; } return s / n; });
+  const ema = (a, n) => { const k = 2 / (n + 1), o = NaNs(a.length); let p = null; a.forEach((v, i) => { if (v == null) return; p = p == null ? v : v * k + p * (1 - k); o[i] = p; }); return o; };
+  const wild = (a, n) => { const o = NaNs(a.length); let p = null; for (let i = 0; i < a.length; i++) { if (a[i] == null) continue; p = p == null ? a[i] : (p * (n - 1) + a[i]) / n; o[i] = p; } return o; };
+  const rmax = (a, n) => a.map((_, i) => i < n - 1 ? null : Math.max(...a.slice(i - n + 1, i + 1))), rmin = (a, n) => a.map((_, i) => i < n - 1 ? null : Math.min(...a.slice(i - n + 1, i + 1)));
+  function indicators(d) {
+    const o = d.o, h = d.h, l = d.l, c = d.c, n = c.length, I = {};
+    I.sma5 = sma(c, 5); I.sma25 = sma(c, 25); I.sma75 = sma(c, 75);
+    const ch = c.map((v, i) => i && v != null && c[i - 1] != null ? v - c[i - 1] : null);
+    const rsi = wild(ch.map(v => v == null ? null : Math.max(v, 0)), 14).map((u, i) => { const dn = wild(ch.map(v => v == null ? null : Math.max(-v, 0)), 14)[i]; return u == null || dn == null ? null : dn === 0 ? 100 : 100 - 100 / (1 + u / dn); });
+    { const up = wild(ch.map(v => v == null ? null : Math.max(v, 0)), 14), dn = wild(ch.map(v => v == null ? null : Math.max(-v, 0)), 14); I.rsi = up.map((u, i) => u == null || dn[i] == null ? null : dn[i] === 0 ? 100 : 100 - 100 / (1 + u / dn[i])); }
+    const e12 = ema(c, 12), e26 = ema(c, 26); I.macd = e12.map((v, i) => v == null || e26[i] == null ? null : v - e26[i]); I.msig = ema(I.macd.map(v => v), 9);
+    const m20 = sma(c, 20); I.bbm = m20; I.bbu = m20.map((m, i) => { if (m == null) return null; let s = 0; for (let j = i - 19; j <= i; j++) s += (c[j] - m) ** 2; return m + 2 * Math.sqrt(s / 20); }); I.bbl = m20.map((m, i) => m == null || I.bbu[i] == null ? null : 2 * m - I.bbu[i]);
+    const hh = rmax(h, 14), ll = rmin(l, 14), k0 = c.map((v, i) => hh[i] == null || hh[i] === ll[i] ? null : (v - ll[i]) / (hh[i] - ll[i]) * 100); I.stk = sma(k0, 3); I.std = sma(I.stk, 3);
+    I.dev = c.map((v, i) => I.sma25[i] == null ? null : (v / I.sma25[i] - 1) * 100);
+    const mid = (a, b) => a.map((_, i) => a[i] == null ? null : (a[i] + b[i]) / 2);
+    const ten = mid(rmax(h, 9), rmin(l, 9)), kij = mid(rmax(h, 26), rmin(l, 26)); I.ten = ten; I.kij = kij;
+    const sa = ten.map((v, i) => v == null || kij[i] == null ? null : (v + kij[i]) / 2), sb = mid(rmax(h, 52), rmin(l, 52));
+    I.sa = sa; I.sb = sb;   // 先行スパン(26本先に描く。画面側でずらす)
+    const tr = h.map((v, i) => i ? Math.max(v - l[i], Math.abs(v - c[i - 1]), Math.abs(l[i] - c[i - 1])) : null), pdm = h.map((v, i) => i ? (v - h[i - 1] > l[i - 1] - l[i] && v - h[i - 1] > 0 ? v - h[i - 1] : 0) : null), mdm = h.map((v, i) => i ? (l[i - 1] - l[i] > v - h[i - 1] && l[i - 1] - l[i] > 0 ? l[i - 1] - l[i] : 0) : null);
+    const atr = wild(tr, 14), sp = wild(pdm, 14), sm = wild(mdm, 14); I.pdi = sp.map((v, i) => v == null || !atr[i] ? null : v / atr[i] * 100); I.mdi = sm.map((v, i) => v == null || !atr[i] ? null : v / atr[i] * 100);
+    const dx = I.pdi.map((v, i) => v == null || I.mdi[i] == null || v + I.mdi[i] === 0 ? null : Math.abs(v - I.mdi[i]) / (v + I.mdi[i]) * 100); I.adx = wild(dx, 14);
+    // パラボリックSAR(加速0.02、最大0.2)
+    const sar = NaNs(n); { let tr_ = 1, s = l[0], ep = h[0], af = .02; for (let i = 1; i < n; i++) { s = s + af * (ep - s); if (tr_ === 1) { s = Math.min(s, l[i - 1], i > 1 ? l[i - 2] : l[i - 1]); if (l[i] < s) { tr_ = -1; s = ep; ep = l[i]; af = .02; } else if (h[i] > ep) { ep = h[i]; af = Math.min(af + .02, .2); } } else { s = Math.max(s, h[i - 1], i > 1 ? h[i - 2] : h[i - 1]); if (h[i] > s) { tr_ = 1; s = ep; ep = h[i]; af = .02; } else if (l[i] < ep) { ep = l[i]; af = Math.min(af + .02, .2); } } sar[i] = s; } } I.sar = sar;
+    return I;
+  }
+  const NH = { W: [52, 13], D: [250, 60], M: [12, 6] };
+  // シグナル名 → 描くもの
+  function spec(name, tf) {
+    const s = { main: [], panel: null, bars: 0, hline: null, ichi: false, sar: false, bb: false };
+    if (/ゴールデンクロス\(5日×25日\)|デッドクロス\(5日×25日\)/.test(name)) s.main = [["sma5", "5本平均", "#e0a030"], ["sma25", "25本平均", "#4f8cf0"]];
+    else if (/25日×75日/.test(name)) s.main = [["sma25", "25本平均", "#4f8cf0"], ["sma75", "75本平均", "#b05cd0"]];
+    else if (/パーフェクトオーダー/.test(name)) s.main = [["sma5", "5本平均", "#e0a030"], ["sma25", "25本平均", "#4f8cf0"], ["sma75", "75本平均", "#b05cd0"]];
+    else if (/^RSI/.test(name)) s.panel = "rsi"; else if (/^MACD/.test(name)) s.panel = "macd"; else if (/^ストキャス/.test(name)) s.panel = "stoch"; else if (/^乖離率/.test(name)) s.panel = "dev"; else if (/^DMI/.test(name)) s.panel = "dmi";
+    else if (/^ボリンジャー/.test(name)) s.bb = true; else if (/^一目/.test(name)) s.ichi = true; else if (/パラボリック/.test(name)) s.sar = true;
+    else if (/^新(高|安)値更新/.test(name)) { const long = /長期/.test(name); s.hline = { n: NH[tf][long ? 0 : 1], hi: /高値/.test(name) }; }
+    else { const nb = { "ハンマー": 1, "首吊り線": 1, "逆ハンマー": 1, "流れ星": 1, "大陽線": 1, "大陰線": 1, "陽の包み足": 2, "陰の包み足": 2, "陽のはらみ足": 2, "陰のはらみ足": 2, "切り込み線": 2, "かぶせ線": 2, "毛抜き底": 2, "毛抜き天井": 2, "明けの明星": 3, "宵の明星": 3, "赤三兵": 3, "黒三兵": 3 }[name]; if (nb) s.bars = nb; }
+    return s;
+  }
+  const PANELS = { rsi: ["RSI(14)", [30, 70], 0, 100], macd: ["MACD(12,26,9)", [0], null, null], stoch: ["ストキャスティクス(14,3,3)", [20, 80], 0, 100], dev: ["25本平均からの乖離率(%)", [-10, 0, 10], null, null], dmi: ["DMI(14)・ADX", [25], 0, null] };
+
+  const TFN_ = { D: "日足", W: "週足", M: "月足" }, PRE = { D: [21, 63, 126, 250, 500, 0], W: [13, 26, 52, 156, 260, 0], M: [12, 36, 60, 120, 0] };
+  const PRELAB = { D: ["1か月", "3か月", "6か月", "1年", "2年", "全期間"], W: ["3か月", "6か月", "1年", "3年", "5年", "全期間"], M: ["1年", "3年", "5年", "10年", "全期間"] };
+  const DATA = {};
+  async function ensure(tf, code) {
+    const M = await V(tf + "_meta.json"); const ci = M.codes.indexOf(code); if (ci < 0) return null;
+    const k = Math.floor(ci / M.shard); const PX = await V(`${tf}_px_${k}.json`); const d = PX.d[code]; if (!d) return null;
+    const key = tf + code; if (!DATA[key]) DATA[key] = { M, s: PX.s, d, I: indicators(d), k };
+    return DATA[key];
+  }
+  const barOf = (dates, ds) => { let a = 0, b = dates.length; while (a < b) { const m = (a + b) >> 1; if (dates[m] >= ds) b = m; else a = m + 1; } return a; };
+
+  window.openChart = async function (opt) {
+    // opt: { tf, code, trade: {e, x, pe, px, net, y, open, entry:[sid], exit:[sid]} | null, lit: [[sid, t]] | null, M(取引の時間軸のメタ), nm, tag, dir, FAMN, yen, sgn, f1, COSTNOTE }
     const inner = box.firstElementChild; box.hidden = false; inner.innerHTML = '<p class="note">読み込み中…</p>';
-    let PX; try { PX = await V(`${G.tf}_px_${k}.json`); } catch (e) { inner.innerHTML = `<p class="note">価格データを読み込めませんでした(${e.message})</p><button class="x">閉じる</button>`; return; }
-    const d = PX.d[code]; if (!d) { inner.innerHTML = '<p class="note">この銘柄の価格データがありません。</p><button class="x">閉じる</button>'; return; }
-    const t = tr.t, e = t[1], x = t[2] < 0 ? M.dates.length - 1 : t[2], s0 = PX.s, T = M.dates.length, open = t[2] < 0, buy = dir(t[0][0]) > 0;
-    const pre = { W: 20, D: 30, M: 6 }[G.tf], post = { W: 10, D: 15, M: 3 }[G.tf];
-    const i0 = Math.max(s0, e - pre), i1 = Math.min(T - 1, x + post);
-    const at = (a, i) => a[i - s0];
-    const idx = []; for (let i = i0; i <= i1; i++) idx.push(i);
-    const hs = idx.map(i => at(d.h, i)).filter(v => v != null), ls = idx.map(i => at(d.l, i)).filter(v => v != null);
-    let hi = Math.max(...hs, t[3], t[4]), lo = Math.min(...ls, t[3], t[4]); const pad = (hi - lo) * .06 || 1; hi += pad; lo -= pad;
-    const W = 820, H = 380, L = 56, R = 16, Tp = 26, Bt = 34, pw = W - L - R, ph = H - Tp - Bt, n = idx.length, step = pw / n, cw = Math.max(2, Math.min(14, step * .62));
-    const X = i => L + (i - i0 + .5) * step, Y = v => Tp + (1 - (v - lo) / (hi - lo)) * ph;
-    let g = "";
-    // 目盛り
-    const nt = 5; for (let j = 0; j <= nt; j++) { const v = lo + (hi - lo) * j / nt, y = Y(v); g += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-dasharray="2 4"/><text x="${L - 6}" y="${y + 4}" text-anchor="end">${Math.round(v).toLocaleString()}</text>`; }
-    const lab = Math.max(1, Math.round(n / 8)); idx.forEach((i, j) => { if (j % lab === 0) g += `<text x="${X(i)}" y="${H - 12}" text-anchor="middle">${M.dates[i].slice(G.tf === "M" ? 2 : 2, G.tf === "M" ? 7 : 10)}</text>`; });
-    // 保有期間の帯
-    const xa = X(e) - step / 2, xb = X(x) + step / 2, win = t[6] > 0;
-    g += `<rect x="${xa}" y="${Tp}" width="${Math.max(2, xb - xa)}" height="${ph}" fill="${win ? "var(--good-soft)" : "var(--bad-soft)"}" opacity=".7"/>`;
-    // ローソク足
-    idx.forEach(i => { const o = at(d.o, i), h = at(d.h, i), l = at(d.l, i), c = at(d.c, i); if ([o, h, l, c].some(v => v == null)) return; const col = c >= o ? "var(--cu)" : "var(--cd)", y1 = Y(Math.max(o, c)), y2 = Y(Math.min(o, c));
-      g += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(h)}" y2="${Y(l)}" stroke="${col}" stroke-width="1.4"/><rect x="${X(i) - cw / 2}" y="${y1}" width="${cw}" height="${Math.max(1.5, y2 - y1)}" fill="${col}"/>`; });
-    // シグナルの日(入りの1本前)
-    const ts = e - 1, ex = t[7] || [];
-    if (ts >= i0) g += `<line x1="${X(ts)}" x2="${X(ts)}" y1="${Tp}" y2="${Tp + ph}" stroke="var(--accent)" stroke-dasharray="4 3"/><text class="hl" x="${X(ts)}" y="${Tp - 8}" text-anchor="middle" style="fill:var(--accent);font-weight:700">シグナル</text>`;
-    // 入り・出
-    const ya = Y(t[3]), yb = Y(t[4]); const mk = (xx, yy, up, col) => `<path d="M${xx} ${yy + (up ? -2 : 2)} l-7 ${up ? -12 : 12} h14 z" fill="${col}"/>`;
-    g += `<line x1="${X(e)}" x2="${X(x)}" y1="${ya}" y2="${yb}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2" stroke-dasharray="5 3"/>`;
-    g += mk(X(e), ya, buy, "var(--accent)") + `<text class="hl" x="${X(e)}" y="${ya + (buy ? 26 : -20)}" text-anchor="middle" style="fill:var(--accent);font-weight:700">入り ${Math.round(t[3]).toLocaleString()}</text>`;
-    g += `<circle cx="${X(x)}" cy="${yb}" r="6" fill="${open ? "none" : win ? "var(--good)" : "var(--bad)"}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2"/><text class="hl" x="${X(x)}" y="${yb + (yb > Tp + 30 ? -14 : 24)}" text-anchor="middle" style="fill:${win ? "var(--good)" : "var(--bad)"};font-weight:700">${open ? "保有中" : "出"} ${Math.round(t[4]).toLocaleString()}</text>`;
-    const names = a => a.map(i => nm(i)).join("・") || "–";
-    const sg = f => (arr, i) => arr.map(f);
-    inner.innerHTML = `<div class="hd"><div><div class="note">${FAM[M.sigs[t[0][0]][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN[G.tf]}</div><div style="font-size:17px;font-weight:700">${code.slice(0, 4)} の取引: ${t[0].map(i => M.sigs[i][0]).join("・")}</div></div><button class="x" type="button">閉じる</button></div>
-      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="ローソク足と、シグナル・入り・出">${g}</svg>
-      <div class="inf"><div><b style="color:var(--accent)">シグナル</b>(${M.dates[ts].slice(2)}の引け後)<br>${names(t[0])}${tag(t[0][0])}</div>
-      <div><b>入り</b>: ${M.dates[e].slice(2)}の始値 ${Math.round(t[3]).toLocaleString()}円で${buy ? "買い" : "ショート"}</div>
-      <div><b>${open ? "保有中" : "出"}</b>: ${open ? "最新終値 " : M.dates[x].slice(2) + "の始値 "}${Math.round(t[4]).toLocaleString()}円${open ? "" : "で" + (buy ? "売り" : "買い戻し")}<br>${open ? "反対のシグナルは、まだ出ていません。" : "きっかけ(" + M.dates[x - 1].slice(2) + "の引け後): " + names(ex)}</div>
-      <div><b>損益(100株)</b>: <span class="${sgn(tr.y)}" style="padding:0 6px;border-radius:6px">${yen(tr.y)}</span>(${f1(t[6])}bp、コスト後)<br>保有 ${t[5]}${UNIT[G.tf]}</div></div>
-      <p class="note" style="margin-top:8px">ローソク足は、調整前の実際の価格です。縦の点線 = シグナルが出た日(引け後に確定)、▲/▼ = 入り(次の足の始値)、● = 出(反対のシグナルが出た次の足の始値)、帯 = 保有期間(緑 = 利益、赤 = 損失)。${COSTNOTE}</p>`;
+    const S = { tf: opt.tf, a: 0, b: 0, pre: 2 };
+    const base = await ensure(opt.tf, opt.code).catch(() => null);
+    if (!base) { inner.innerHTML = '<p class="note">この銘柄の価格データがありません。</p><button class="x">閉じる</button>'; return; }
+    let AN = {}; try { const an = await V(`${opt.tf}_an_${base.k}.json`); (an[opt.code] || []).forEach(([sid, t, g]) => AN[sid + "|" + t] = g); } catch (e) {}
+    const M0 = base.M, tr = opt.trade, T0 = M0.dates.length;
+    // 注目するシグナル: [{sid, t(取引の時間軸のバー), role}]
+    const SG = [];
+    if (tr) { tr.entry.forEach(sid => SG.push({ sid, t: tr.e - 1, role: "入り" })); if (!tr.open) (tr.exit || []).forEach(sid => SG.push({ sid, t: tr.x - 1, role: "出" })); }
+    else (opt.lit || []).forEach(([sid, t]) => SG.push({ sid, t, role: "点灯" }));
+    const sigDate = t => M0.dates[Math.max(0, Math.min(T0 - 1, t))];
+    const buy = opt.dir(SG[0].sid) > 0;
+    // 初期の表示範囲: 取引全体(または最新)が見えるよう、前後に余白をつける
+    const focus = (D) => {
+      const dts = D.M.dates, n = dts.length, s = D.s;
+      const pos = ds => Math.min(n - 1, barOf(dts, ds));
+      const a0 = tr ? pos(sigDate(tr.e - 1)) : pos(sigDate(SG[0].t)), b0 = tr ? (tr.open ? n - 1 : pos(sigDate(tr.x))) : n - 1;
+      const len = b0 - a0 + 1, pad = Math.max(8, Math.round(len * .25));
+      return [Math.max(s, a0 - pad), Math.min(n - 1, b0 + Math.max(6, Math.round(pad * .6)))];
+    };
+    [S.a, S.b] = focus(base);
+    const toX = (D, tradeBar) => Math.min(D.M.dates.length - 1, barOf(D.M.dates, M0.dates[Math.max(0, Math.min(T0 - 1, tradeBar))]));
+    let drawing = null;
+
+    async function render() {
+      const D = DATA[S.tf + opt.code] || await ensure(S.tf, opt.code);
+      const n = D.M.dates.length, s0 = D.s, W = 960, mainH = 330, subH = 96, L = 58, R = 18, Tp = 24;
+      S.a = Math.max(s0, Math.min(S.a, n - 2)); S.b = Math.min(n - 1, Math.max(S.b, S.a + 4));
+      const a = S.a, b = S.b, N = b - a + 1, pw = W - L - R, step = pw / N, cw = Math.max(1.5, Math.min(14, step * .62));
+      const X = i => L + (i - a + .5) * step, at = (arr, i) => arr[i - s0];
+      // 注目するシグナルの、この時間軸での位置と、描くもの
+      const items = SG.map(g => ({ ...g, name: M0.sigs[g.sid][0], fam: M0.sigs[g.sid][1], i: toX(D, g.t), sp: spec(M0.sigs[g.sid][0], S.tf), geo: AN[g.sid + "|" + g.t] })).filter((v, j, arr) => arr.findIndex(u => u.sid === v.sid && u.role === v.role) === j);
+      const sameTf = S.tf === opt.tf;
+      const eI = tr ? toX(D, tr.e - 1) + (sameTf ? 1 : (D.M.dates[toX(D, tr.e - 1)] >= sigDate(tr.e - 1) && S.tf === "M" ? 0 : 1)) : null;
+      const xI = tr ? (tr.open ? n - 1 : Math.min(n - 1, toX(D, tr.x - 1) + (sameTf ? 1 : (S.tf === "M" ? 0 : 1)))) : null;
+      // 副パネル
+      const panels = []; items.forEach(it => { if (it.sp.panel && !panels.includes(it.sp.panel)) panels.push(it.sp.panel); });
+      const H = Tp + mainH + panels.length * (subH + 14) + 28;
+      // y範囲
+      let hi = -Infinity, lo = Infinity; for (let i = a; i <= b; i++) { const h = at(D.d.h, i), l = at(D.d.l, i); if (h != null) hi = Math.max(hi, h); if (l != null) lo = Math.min(lo, l); }
+      const consider = v => { if (v != null && isFinite(v)) { hi = Math.max(hi, v); lo = Math.min(lo, v); } };
+      if (tr) { consider(tr.pe); consider(tr.px); }
+      items.forEach(it => { if (it.geo && it.geo.z) it.geo.z.forEach(([x1, x2]) => { consider(x1); consider(x2); }); if (it.geo && it.geo.lines) it.geo.lines.forEach(l => { const bi = toX(D, l[0]), bj = toX(D, l[2]); if (bj >= a && bi <= b) { consider(l[1]); consider(l[3]); } }); });
+      const pad = (hi - lo) * .05 || 1; hi += pad; lo -= pad; const Y = v => Tp + (1 - (v - lo) / (hi - lo)) * mainH;
+      let g = "";
+      for (let j = 0; j <= 5; j++) { const v = lo + (hi - lo) * j / 5, y = Y(v); g += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-dasharray="2 4"/><text x="${L - 6}" y="${y + 4}" text-anchor="end">${Math.round(v).toLocaleString()}</text>`; }
+      const lab = Math.max(1, Math.round(N / 8)); for (let i = a; i <= b; i++) if ((i - a) % lab === 0) g += `<text x="${X(i)}" y="${Tp + mainH + panels.length * (subH + 14) + 16}" text-anchor="middle">${D.M.dates[i].slice(2, S.tf === "M" ? 7 : 10)}</text>`;
+      // 保有期間の帯
+      if (tr) { const xa = X(eI) - step / 2, xb = X(xI) + step / 2; g += `<rect x="${xa}" y="${Tp}" width="${Math.max(2, xb - xa)}" height="${mainH}" fill="${tr.net > 0 ? "var(--good-soft)" : "var(--bad-soft)"}" opacity=".55"/>`; }
+      // 抵抗帯・支持帯・ライン(帯)
+      const legend = [];
+      items.forEach(it => { if (it.geo && it.geo.z) it.geo.z.forEach(([z1, z2, kind]) => { const x0 = Math.max(L, X(Math.max(a, it.i - (S.tf === "D" ? 60 : 20)))), x1 = Math.min(W - R, X(Math.min(b, it.i + (S.tf === "D" ? 10 : 4)))); if (x1 <= x0) return; const col = kind === "v" ? "#e0a030" : "#4f8cf0"; g += `<rect x="${x0}" y="${Y(z2)}" width="${x1 - x0}" height="${Math.max(2, Y(z1) - Y(z2))}" fill="${col}" opacity=".28" stroke="${col}"/><text class="hl" x="${x0 + 4}" y="${Y(z2) - 4}" style="fill:${col};font-weight:700">${it.name.includes("抵抗") ? "抵抗" : "支持"}${kind === "v" ? "帯(出来高)" : "線"} ${Math.round(z1).toLocaleString()}〜${Math.round(z2).toLocaleString()}${it.role === "出" ? "(出)" : ""}</text>`; }); });
+      // 指標(価格に重ねるもの)
+      const I = D.I, line = (arr, col, w = 1.4, dash = "") => { let p = "", on = false; for (let i = a; i <= b; i++) { const v = at(arr, i); if (v == null) { on = false; continue; } p += `${on ? "L" : "M"}${X(i)} ${Y(v)} `; on = true; } return p ? `<path d="${p}" fill="none" stroke="${col}" stroke-width="${w}" ${dash ? `stroke-dasharray="${dash}"` : ""}/>` : ""; };
+      const used = new Set();
+      items.forEach(it => { it.sp.main.forEach(([k, lb, col]) => { if (!used.has(k)) { used.add(k); g += line(I[k], col); legend.push([col, lb]); } });
+        if (it.sp.bb && !used.has("bb")) { used.add("bb"); g += line(I.bbu, "#9a9a9a", 1.2, "4 3") + line(I.bbl, "#9a9a9a", 1.2, "4 3") + line(I.bbm, "#e0a030", 1.2); legend.push(["#9a9a9a", "ボリンジャー ±2σ"], ["#e0a030", "20本平均"]); }
+        if (it.sp.ichi && !used.has("ichi")) { used.add("ichi"); g += line(I.ten, "#e0a030") + line(I.kij, "#4f8cf0"); legend.push(["#e0a030", "転換線"], ["#4f8cf0", "基準線"]);
+          // 雲(先行スパンを26本先へ)
+          let top = "", bot = []; for (let i = a; i <= b; i++) { const j = i - 26, sa = j >= s0 ? at(I.sa, j) : null, sb = j >= s0 ? at(I.sb, j) : null; if (sa != null && sb != null) { top += `${top ? "L" : "M"}${X(i)} ${Y(Math.max(sa, sb))} `; bot.push(`L${X(i)} ${Y(Math.min(sa, sb))}`); } }
+          if (top) g += `<path d="${top}${bot.reverse().join(" ")} Z" fill="#8a7cf0" opacity=".22"/>`; legend.push(["#8a7cf0", "雲"]); }
+        if (it.sp.sar && !used.has("sar")) { used.add("sar"); for (let i = a; i <= b; i++) { const v = at(I.sar, i); if (v != null) g += `<circle cx="${X(i)}" cy="${Y(v)}" r="2.4" fill="${v < at(D.d.c, i) ? "var(--cu)" : "var(--cd)"}"/>`; } legend.push(["var(--accent)", "パラボリックSAR(点)"]); }
+        if (it.sp.hline) { const n2 = it.sp.hline.n, vals = []; for (let j = Math.max(s0, it.i - n2); j < it.i; j++) { const v = it.sp.hline.hi ? at(D.d.h, j) : at(D.d.l, j); if (v != null) vals.push(v); } if (vals.length) { const v = it.sp.hline.hi ? Math.max(...vals) : Math.min(...vals), x0 = X(Math.max(a, it.i - n2)); g += `<line x1="${Math.max(L, x0)}" x2="${X(it.i)}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--accent)" stroke-dasharray="6 3" stroke-width="1.6"/><text class="hl" x="${Math.max(L, x0) + 4}" y="${Y(v) - 5}" style="fill:var(--accent);font-weight:700">直前${n2}本の${it.sp.hline.hi ? "高値" : "安値"} ${Math.round(v).toLocaleString()}</text>`; } } });
+      // ローソク足
+      for (let i = a; i <= b; i++) { const o = at(D.d.o, i), h = at(D.d.h, i), l = at(D.d.l, i), c = at(D.d.c, i); if ([o, h, l, c].some(v => v == null)) continue; const col = c >= o ? "var(--cu)" : "var(--cd)", y1 = Y(Math.max(o, c)), y2 = Y(Math.min(o, c)); g += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(h)}" y2="${Y(l)}" stroke="${col}" stroke-width="1.3"/><rect x="${X(i) - cw / 2}" y="${y1}" width="${cw}" height="${Math.max(1.4, y2 - y1)}" fill="${col}"/>`; }
+      // チャートパターンの山・谷・ライン(取引の時間軸のバーを、日付で、この時間軸に変換)
+      items.forEach(it => { if (it.geo && it.geo.lines) it.geo.lines.forEach(([b1, p1, b2, p2, lb]) => { const i1 = toX(D, b1), i2 = toX(D, b2); g += `<line x1="${X(i1)}" y1="${Y(p1)}" x2="${X(i2)}" y2="${Y(p2)}" stroke="#e0a030" stroke-width="2" stroke-dasharray="6 3"/>`; if (i2 >= a && i2 <= b) g += `<text class="hl" x="${X(i2) - 4}" y="${Y(p2) - 6}" text-anchor="end" style="fill:#e0a030;font-weight:700">${lb}</text>`; });
+        if (it.geo && it.geo.pts) it.geo.pts.forEach(([bb, p, lb]) => { const i = toX(D, bb); if (i < a || i > b) return; g += `<circle cx="${X(i)}" cy="${Y(p)}" r="5" fill="none" stroke="#e0a030" stroke-width="2"/><text class="hl" x="${X(i)}" y="${Y(p) + (/谷|安値/.test(lb) ? 18 : -9)}" text-anchor="middle" style="fill:#e0a030;font-weight:700">${lb}</text>`; }); });
+      // ローソク足のパターンの強調
+      items.forEach(it => { if (it.sp.bars) { const i1 = Math.max(a, it.i - it.sp.bars + 1), i2 = Math.min(b, it.i); if (i2 < a || it.i < a) return; let h = -Infinity, l = Infinity; for (let i = it.i - it.sp.bars + 1; i <= it.i; i++) { const hh = at(D.d.h, i), ll = at(D.d.l, i); if (hh != null) { h = Math.max(h, hh); l = Math.min(l, ll); } } g += `<rect x="${X(i1) - step * .45}" y="${Y(h) - 4}" width="${X(i2) - X(i1) + step * .9}" height="${Y(l) - Y(h) + 8}" rx="6" fill="none" stroke="var(--accent)" stroke-width="2"/><text class="hl" x="${X(i1) - step * .45}" y="${Y(l) + 20}" style="fill:var(--accent);font-weight:700">${it.name}</text>`; } });
+      // シグナルの日(縦線)と、入り・出
+      const seen = new Set(); items.forEach(it => { if (it.i < a || it.i > b) return; const key = it.i + it.role; if (seen.has(key)) return; seen.add(key); const nmx = items.filter(u => u.i === it.i && u.role === it.role).map(u => u.name).join("・"); g += `<line x1="${X(it.i)}" x2="${X(it.i)}" y1="${Tp}" y2="${Tp + mainH + panels.length * (subH + 14)}" stroke="${it.role === "出" ? "var(--bad)" : "var(--accent)"}" stroke-dasharray="4 3"/><text class="hl" x="${X(it.i) + (it.role === "出" ? 4 : -4)}" y="${Tp - 8}" text-anchor="${it.role === "出" ? (X(it.i) > W - R - 220 ? "end" : "start") : (X(it.i) < L + 220 ? "start" : "end")}" style="fill:${it.role === "出" ? "var(--bad)" : "var(--accent)"};font-weight:700">${it.role === "出" ? "出のきっかけ" : "シグナル"}: ${nmx.length > 26 ? nmx.slice(0, 25) + "…" : nmx}</text>`; });
+      if (tr) { const ya = Y(tr.pe), yb = Y(tr.px), win = tr.net > 0; const xe = X(eI), xx = X(xI);
+        if (eI >= a - 1 && eI <= b + 1 || xI >= a) g += `<line x1="${xe}" x2="${xx}" y1="${ya}" y2="${yb}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2" stroke-dasharray="5 3"/>`;
+        if (eI >= a && eI <= b) g += `<path d="M${xe} ${ya + (buy ? 3 : -3)} l-7 ${buy ? 13 : -13} h14 z" fill="var(--accent)"/><text class="hl" x="${xe}" y="${ya + (buy ? 30 : -20)}" text-anchor="middle" style="fill:var(--accent);font-weight:700">入り ${Math.round(tr.pe).toLocaleString()}</text>`;
+        if (xI >= a && xI <= b) g += `<circle cx="${xx}" cy="${yb}" r="6" fill="${tr.open ? "none" : win ? "var(--good)" : "var(--bad)"}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2"/><text class="hl" x="${xx}" y="${yb + (yb > Tp + 36 ? -14 : 26)}" text-anchor="middle" style="fill:${win ? "var(--good)" : "var(--bad)"};font-weight:700">${tr.open ? "保有中" : "出"} ${Math.round(tr.px).toLocaleString()}</text>`; }
+      // 副パネル(RSIなど)
+      panels.forEach((pn, pi) => { const [ttl, refs, fmin, fmax] = PANELS[pn], y0 = Tp + mainH + 14 + pi * (subH + 14); const series = pn === "rsi" ? [["rsi", "#4f8cf0"]] : pn === "macd" ? [["macd", "#4f8cf0"], ["msig", "#e0a030"]] : pn === "stoch" ? [["stk", "#4f8cf0"], ["std", "#e0a030"]] : pn === "dev" ? [["dev", "#4f8cf0"]] : [["pdi", "#d05050"], ["mdi", "#4f8cf0"], ["adx", "#9a9a9a"]];
+        let pmin = fmin, pmax = fmax, vals = []; series.forEach(([k]) => { for (let i = a; i <= b; i++) { const v = at(I[k], i); if (v != null) vals.push(v); } }); refs.forEach(v => vals.push(v)); if (pmin == null) pmin = Math.min(...vals); if (pmax == null) pmax = Math.max(...vals); const pp = (pmax - pmin) * .08 || 1; pmin -= pp; pmax += pp; const PY = v => y0 + (1 - (v - pmin) / (pmax - pmin)) * subH;
+        g += `<rect x="${L}" y="${y0}" width="${pw}" height="${subH}" fill="none" stroke="var(--line)"/><text x="${L + 6}" y="${y0 + 13}">${ttl}</text>`; refs.forEach(v => { g += `<line x1="${L}" x2="${W - R}" y1="${PY(v)}" y2="${PY(v)}" stroke="var(--dim)" stroke-dasharray="3 3" opacity=".6"/><text x="${L - 6}" y="${PY(v) + 4}" text-anchor="end">${v}</text>`; });
+        series.forEach(([k, col]) => { let p = "", on = false; for (let i = a; i <= b; i++) { const v = at(I[k], i); if (v == null) { on = false; continue; } p += `${on ? "L" : "M"}${X(i)} ${PY(v)} `; on = true; } if (p) g += `<path d="${p}" fill="none" stroke="${col}" stroke-width="1.5"/>`; });
+        if (pn === "macd") for (let i = a; i <= b; i++) { const m = at(I.macd, i), sg = at(I.msig, i); if (m != null && sg != null) g += `<rect x="${X(i) - cw / 3}" y="${Math.min(PY(0), PY(m - sg))}" width="${cw * .66}" height="${Math.abs(PY(m - sg) - PY(0))}" fill="${m - sg >= 0 ? "var(--cu)" : "var(--cd)"}" opacity=".4"/>`; }
+        items.filter(u => u.sp.panel === pn).forEach(it => { if (it.i >= a && it.i <= b) { const v = at(I[series[0][0]], it.i); if (v != null) g += `<circle cx="${X(it.i)}" cy="${PY(v)}" r="5" fill="${it.role === "出" ? "var(--bad)" : "var(--accent)"}"/>`; } }); });
+      // 画面
+      const ctrl = `<div class="ctrl"><div><label>時間軸</label><div class="seg" id="ch-tf"></div></div><div><label>表示期間</label><div class="seg" id="ch-pre"></div></div><div><label>移動・拡大</label><div class="seg" id="ch-mv"></div></div></div>`;
+      const nmL = ids => ids.map(i => opt.nm(i)).join("・") || "–";
+      const info = tr ? `<div class="inf"><div><b style="color:var(--accent)">シグナル</b>(${sigDate(tr.e - 1).slice(2)}の引け後)<br>${nmL(tr.entry)}${opt.tag(tr.entry[0])}</div><div><b>入り</b>: ${M0.dates[tr.e].slice(2)}の始値 ${Math.round(tr.pe).toLocaleString()}円で${buy ? "買い" : "ショート"}</div><div><b>${tr.open ? "保有中" : "出"}</b>: ${tr.open ? "最新終値 " : M0.dates[tr.x].slice(2) + "の始値 "}${Math.round(tr.px).toLocaleString()}円${tr.open ? "" : "で" + (buy ? "売り" : "買い戻し")}<br>${tr.open ? "反対のシグナルは、まだ出ていません。" : "きっかけ(" + sigDate(tr.x - 1).slice(2) + "の引け後): " + nmL(tr.exit || [])}</div><div><b>損益(100株)</b>: <span class="${opt.sgn(tr.y)}" style="padding:0 6px;border-radius:6px">${opt.yen(tr.y)}</span>(${opt.f1(tr.net)}bp、コスト後)<br>保有 ${tr.w}${{ W: "週", D: "日", M: "か月" }[opt.tf]}</div></div>` : `<div class="inf"><div><b style="color:var(--accent)">点灯中のシグナル</b>(${M0.dates[SG[0].t].slice(2)}の引け後)<br>${nmL([...new Set(SG.map(u => u.sid))])}</div></div>`;
+      const lg = legend.length ? `<div class="lg">${[...new Map(legend.map(l => [l[1], l])).values()].map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")}</div>` : "";
+      const note = !sameTf ? `<p class="note">${TFN_[opt.tf]}で出たシグナルです。この${TFN_[S.tf]}では、同じ日付に位置を合わせて表示しています(指標は、この${TFN_[S.tf]}の価格で計算し直すので、シグナルが出た形と一致しない場合があります)。</p>` : "";
+      inner.innerHTML = `<div class="hd"><div><div class="note">${opt.FAMN[M0.sigs[SG[0].sid][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN_[opt.tf]}で出たシグナル</div><div style="font-size:17px;font-weight:700">${opt.code.slice(0, 4)}${opt.stkname ? " " + opt.stkname : ""}: ${[...new Set(SG.filter(u => u.role !== "出").map(u => M0.sigs[u.sid][0]))].join("・")}</div></div><button class="x" type="button">閉じる</button></div>${ctrl}
+        <svg id="ch-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="ローソク足と、シグナル・入り・出">${g}</svg>${lg}${info}${note}
+        <p class="note" style="margin-top:8px">ローソク足は、調整前の実際の価格です。ドラッグで移動、ホイール(ピンチ)で拡大・縮小できます。縦の点線 = シグナルが出た日(引け後に確定)、▲/▼ = 入り(次の足の始値)、● = 出(反対のシグナルが出た次の足の始値)、帯 = 保有期間(緑 = 利益、赤 = 損失)。橙・青の帯や線 = シグナルが注目した場所。${opt.COSTNOTE}</p>`;
+      seg($("#ch-tf"), ["D", "W", "M"].map(t => [t, TFN_[t]]), S.tf, async v => { if (v === S.tf) return; const ref = [D.M.dates[S.a], D.M.dates[S.b]]; const ok = await ensure(v, opt.code).catch(() => null); if (!ok) { alert("この時間軸の価格データがありません"); return; } S.tf = v; S.a = Math.max(ok.s, barOf(ok.M.dates, ref[0])); S.b = Math.min(ok.M.dates.length - 1, barOf(ok.M.dates, ref[1])); if (S.b - S.a < 8) [S.a, S.b] = focus(ok); render(); });
+      seg($("#ch-pre"), PRE[S.tf].map((nb, j) => [j, PRELAB[S.tf][j]]), -1, v => { const nb = PRE[S.tf][v], [fa, fb] = focus(D); if (nb === 0) { S.a = s0; S.b = n - 1; } else { const mid = Math.round((fa + fb) / 2); S.a = Math.max(s0, mid - Math.round(nb * .6)); S.b = Math.min(n - 1, S.a + nb - 1); S.a = Math.max(s0, S.b - nb + 1); } render(); });
+      const shift = k => { const w = S.b - S.a + 1, d = Math.round(w * k); S.a += d; S.b += d; if (S.a < s0) { S.b += s0 - S.a; S.a = s0; } if (S.b > n - 1) { S.a -= S.b - (n - 1); S.b = n - 1; S.a = Math.max(s0, S.a); } render(); };
+      const zoom = (k, cx) => { const w = S.b - S.a + 1, nw = Math.max(8, Math.min(n - s0, Math.round(w * k))), c = cx == null ? (S.a + S.b) / 2 : cx; S.a = Math.round(c - (c - S.a) * nw / w); S.b = S.a + nw - 1; if (S.a < s0) { S.b += s0 - S.a; S.a = s0; } if (S.b > n - 1) { S.a = Math.max(s0, S.a - (S.b - (n - 1))); S.b = n - 1; } render(); };
+      seg($("#ch-mv"), [["l", "◀"], ["r", "▶"], ["in", "拡大 ＋"], ["out", "縮小 －"], ["f", "取引・シグナルに戻る"]], "", v => { if (v === "l") shift(-.35); else if (v === "r") shift(.35); else if (v === "in") zoom(.7); else if (v === "out") zoom(1.4); else { [S.a, S.b] = focus(D); render(); } });
+      const svg = $("#ch-svg"); let drag = null;
+      const px2bar = ev => { const r = svg.getBoundingClientRect(); return S.a + ((ev.clientX - r.left) / r.width * W - L) / step - .5; };
+      svg.addEventListener("wheel", ev => { ev.preventDefault(); zoom(ev.deltaY > 0 ? 1.15 : .87, px2bar(ev)); }, { passive: false });
+      svg.addEventListener("pointerdown", ev => { drag = { x: ev.clientX, a: S.a, b: S.b }; svg.setPointerCapture(ev.pointerId); svg.style.cursor = "grabbing"; });
+      svg.addEventListener("pointermove", ev => { if (!drag) return; const r = svg.getBoundingClientRect(), db = Math.round((ev.clientX - drag.x) / r.width * W / step); let a2 = drag.a - db, b2 = drag.b - db; if (a2 < s0) { b2 += s0 - a2; a2 = s0; } if (b2 > n - 1) { a2 -= b2 - (n - 1); b2 = n - 1; } if (a2 !== S.a) { S.a = a2; S.b = b2; if (!drawing) drawing = requestAnimationFrame(() => { drawing = null; render(); }); } });
+      const end = () => { drag = null; svg.style.cursor = "grab"; }; svg.addEventListener("pointerup", end); svg.addEventListener("pointercancel", end);
+    }
+    render();
   };
 })();
 
@@ -1157,10 +1280,12 @@ async function renderStock() {
   const rowsA = lit.map(([sid, t]) => ({ sid, t, r: own[sid], a: bAll(mname(), sid), e: (bAll("h" + hsel, sid) || [])[2] })).sort((x, y) => dir(y.sid) - dir(x.sid) || (y.e ?? -1e9) - (x.e ?? -1e9));
   const fut = sid => HOLDS[G.tf].map(h => { const b = bAll("h" + h, sid), v = b ? b[2] : null; return `<td class="${sgn(v)}">${v == null ? "–" : f1(v)}</td>`; }).join("");
   $("#sk-a").innerHTML = `<div class="sec">いま点灯しているシグナルと、過去の実績から見た今後の動き</div>
-    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。<b>基準は、そのシグナルの、全銘柄での過去の成績</b>です(検証で、同規模・同業種・値動きが似た銘柄群・銘柄自身のどれよりも、同等以上に後の成績を当てられたため。下の注を参照)。この銘柄自身の成績は、<b>参考</b>として最後に置いています。「今後の動き」は、同じシグナルが出た後の、全銘柄の、保有期間別の平均(コスト後bp)です。</p>` +
+    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。<b>基準は、そのシグナルの、全銘柄での過去の成績</b>です(検証で、同規模・同業種・値動きが似た銘柄群・銘柄自身のどれよりも、同等以上に後の成績を当てられたため。下の注を参照)。この銘柄自身の成績は、<b>参考</b>として最後に置いています。「今後の動き」は、同じシグナルが出た後の、全銘柄の、保有期間別の平均(コスト後bp)です。<b>行をタップ(クリック)すると、チャート上で、シグナルが出ている場所を確認できます。</b></p>` +
     (rowsA.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>点灯</th><th>全銘柄: 件数</th><th>勝率</th><th>平均</th>${HOLDS[G.tf].map(h => `<th>${HL[G.tf][h]}後</th>`).join("")}<th>(参考)自身: 件数</th><th>勝率</th><th>平均</th></tr></thead><tbody>` +
-      rowsA.map(({ sid, t, r, a }) => `<tr><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${a ? a[0].toLocaleString() : "–"}</td><td>${a ? a[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(a && a[2])}"><b>${a ? f1(a[2]) : "–"}</b></td>${fut(sid)}<td style="color:var(--dim)">${r ? r[1] : 0}</td><td style="color:var(--dim)">${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}" style="color:var(--dim)">${r && r[3] != null ? f1(r[3]) : "–"}</td></tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
+      rowsA.map(({ sid, t, r, a }) => `<tr class="trrow" data-sid="${sid}" data-t="${t}" tabindex="0"><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${a ? a[0].toLocaleString() : "–"}</td><td>${a ? a[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(a && a[2])}"><b>${a ? f1(a[2]) : "–"}</b></td>${fut(sid)}<td style="color:var(--dim)">${r ? r[1] : 0}</td><td style="color:var(--dim)">${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}" style="color:var(--dim)">${r && r[3] != null ? f1(r[3]) : "–"}</td></tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
     `<p class="note"><b>なぜ全銘柄を基準にするか</b>(週足・4週保有・コスト後で、2008〜2026年の各年について、その年より前のデータだけで予測し、その年の実際の平均との相関を見た結果): 全銘柄 0.181、同規模 0.181、市場区分 0.180、値動きが似た銘柄群 0.18、同業種 0.17、同規模×同業種 0.16、<b>銘柄自身 0.07</b>。銘柄ごとの「効きやすいシグナル」は、前半から後半に続きませんでした(相関 0.01)。成績を見る期間は、全期間が最良で、直近に絞ると悪化します(5年 0.12)。表は、上の切り替え(${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"})の成績です。${G.tf !== "W" ? "※この検証は週足で行いました。日足・月足では未検証です。" : ""}</p>`;
+
+  $("#sk-a").querySelectorAll("tr.trrow").forEach(tr => { const op = () => openChart({ tf: G.tf, code, stkname: st[1], M, nm, tag, dir, FAMN: FAM, yen, sgn, f1, COSTNOTE, lit: [[+tr.dataset.sid, +tr.dataset.t]] }); tr.onclick = op; tr.onkeydown = e => { if (e.key === "Enter") op(); }; });
 
   /* B. 入りと出をシグナルで決める売買(直近1年・全シグナル) */
   const T = ((TR[code] || [])).slice().sort((a, b) => a[1] - b[1]);
@@ -1171,7 +1296,8 @@ async function renderStock() {
     <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。<b>チャートパターンは、逆向きのパターンがなかなか出ないので、保有が長くなります</b>(全銘柄の中央値: 週足で約42週、日足で約40日)。</p>
     <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
     (trs.length ? `<p class="note">行をタップ(クリック)すると、その銘柄のチャート上で、シグナルの日・エントリー・イグジットを見られます。</p><div class="tw"><table class="gt fit"><thead><tr><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map((r, i) => { const t = r.t; return `<tr class="trrow" data-i="${i}" tabindex="0"><td class="sg"><small>${FAM[r.f]}</small><br>${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])}<br><small>${Math.round(t[3]).toLocaleString()}円</small></td><td>${r.open ? "<b>保有中</b><br><small>最新終値 " + Math.round(t[4]).toLocaleString() + "円</small>" : fmtDate(M, t[2]) + "<br><small>" + Math.round(t[4]).toLocaleString() + "円</small>"}</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
-  const openRow = i => openTradeChart({ M, k, code, tr: trs[i], dir, nm, tag });
+  const chartOpt = extra => ({ tf: G.tf, code, stkname: st[1], M, nm, tag, dir, FAMN: FAM, yen, sgn, f1, COSTNOTE, ...extra });
+  const openRow = i => { const r = trs[i], t = r.t; openChart(chartOpt({ trade: { e: t[1], x: t[2], pe: t[3], px: t[4], w: t[5], net: t[6], y: r.y, open: r.open, entry: t[0], exit: t[7] || [] } })); };
   $("#sk-b").querySelectorAll("tr.trrow").forEach(tr => { tr.onclick = () => openRow(+tr.dataset.i); tr.onkeydown = e => { if (e.key === "Enter") openRow(+tr.dataset.i); }; });
 
   /* C. 全期間の、シグナル別の成績: 並び順は、基準(全銘柄)の平均。自身は参考 */
