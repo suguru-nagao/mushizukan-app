@@ -974,6 +974,65 @@ function zoneTip(key) {
 
 const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" data-tip="${name}">${name}</span>` : name;
 
+
+/* ---- 取引のチャート(シグナル・入り・出) ---- */
+(function () {
+  const st = document.createElement("style");
+  st.textContent = `table.fit { width: 100%; } table.fit th, table.fit td { padding: 6px 8px; white-space: normal; vertical-align: top; } table.fit td.sg { text-align: left; min-width: 11em; } table.fit small { color: var(--dim); }
+  .trrow { cursor: pointer; } .trrow:hover, .trrow:focus-visible { background: var(--accent-bg); outline: none; }
+  #trmodal { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 24px 12px; }
+  #trmodal[hidden] { display: none; } #trmodal .box { width: min(860px, 100%); background: var(--bg, #fff); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px 18px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+  #trmodal .hd { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; } #trmodal button.x { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 4px 14px; font: inherit; cursor: pointer; }
+  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 8px; } #trmodal svg text { fill: var(--dim); font-size: 11px; } #trmodal svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
+  #trmodal .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } #trmodal .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }`;
+  document.head.appendChild(st);
+  const box = document.createElement("div"); box.id = "trmodal"; box.hidden = true; box.innerHTML = '<div class="box"></div>'; document.body.appendChild(box);
+  const close = () => { box.hidden = true; };
+  box.addEventListener("click", e => { if (e.target === box || e.target.closest("button.x")) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
+  window.openTradeChart = async ({ M, k, code, tr, dir, nm, tag }) => {
+    const inner = box.firstElementChild; box.hidden = false; inner.innerHTML = '<p class="note">読み込み中…</p>';
+    let PX; try { PX = await V(`${G.tf}_px_${k}.json`); } catch (e) { inner.innerHTML = `<p class="note">価格データを読み込めませんでした(${e.message})</p><button class="x">閉じる</button>`; return; }
+    const d = PX.d[code]; if (!d) { inner.innerHTML = '<p class="note">この銘柄の価格データがありません。</p><button class="x">閉じる</button>'; return; }
+    const t = tr.t, e = t[1], x = t[2] < 0 ? M.dates.length - 1 : t[2], s0 = PX.s, T = M.dates.length, open = t[2] < 0, buy = dir(t[0][0]) > 0;
+    const pre = { W: 20, D: 30, M: 6 }[G.tf], post = { W: 10, D: 15, M: 3 }[G.tf];
+    const i0 = Math.max(s0, e - pre), i1 = Math.min(T - 1, x + post);
+    const at = (a, i) => a[i - s0];
+    const idx = []; for (let i = i0; i <= i1; i++) idx.push(i);
+    const hs = idx.map(i => at(d.h, i)).filter(v => v != null), ls = idx.map(i => at(d.l, i)).filter(v => v != null);
+    let hi = Math.max(...hs, t[3], t[4]), lo = Math.min(...ls, t[3], t[4]); const pad = (hi - lo) * .06 || 1; hi += pad; lo -= pad;
+    const W = 820, H = 380, L = 56, R = 16, Tp = 26, Bt = 34, pw = W - L - R, ph = H - Tp - Bt, n = idx.length, step = pw / n, cw = Math.max(2, Math.min(14, step * .62));
+    const X = i => L + (i - i0 + .5) * step, Y = v => Tp + (1 - (v - lo) / (hi - lo)) * ph;
+    let g = "";
+    // 目盛り
+    const nt = 5; for (let j = 0; j <= nt; j++) { const v = lo + (hi - lo) * j / nt, y = Y(v); g += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="var(--line)" stroke-dasharray="2 4"/><text x="${L - 6}" y="${y + 4}" text-anchor="end">${Math.round(v).toLocaleString()}</text>`; }
+    const lab = Math.max(1, Math.round(n / 8)); idx.forEach((i, j) => { if (j % lab === 0) g += `<text x="${X(i)}" y="${H - 12}" text-anchor="middle">${M.dates[i].slice(G.tf === "M" ? 2 : 2, G.tf === "M" ? 7 : 10)}</text>`; });
+    // 保有期間の帯
+    const xa = X(e) - step / 2, xb = X(x) + step / 2, win = t[6] > 0;
+    g += `<rect x="${xa}" y="${Tp}" width="${Math.max(2, xb - xa)}" height="${ph}" fill="${win ? "var(--good-soft)" : "var(--bad-soft)"}" opacity=".7"/>`;
+    // ローソク足
+    idx.forEach(i => { const o = at(d.o, i), h = at(d.h, i), l = at(d.l, i), c = at(d.c, i); if ([o, h, l, c].some(v => v == null)) return; const col = c >= o ? "var(--cu)" : "var(--cd)", y1 = Y(Math.max(o, c)), y2 = Y(Math.min(o, c));
+      g += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(h)}" y2="${Y(l)}" stroke="${col}" stroke-width="1.4"/><rect x="${X(i) - cw / 2}" y="${y1}" width="${cw}" height="${Math.max(1.5, y2 - y1)}" fill="${col}"/>`; });
+    // シグナルの日(入りの1本前)
+    const ts = e - 1, ex = t[7] || [];
+    if (ts >= i0) g += `<line x1="${X(ts)}" x2="${X(ts)}" y1="${Tp}" y2="${Tp + ph}" stroke="var(--accent)" stroke-dasharray="4 3"/><text class="hl" x="${X(ts)}" y="${Tp - 8}" text-anchor="middle" style="fill:var(--accent);font-weight:700">シグナル</text>`;
+    // 入り・出
+    const ya = Y(t[3]), yb = Y(t[4]); const mk = (xx, yy, up, col) => `<path d="M${xx} ${yy + (up ? -2 : 2)} l-7 ${up ? -12 : 12} h14 z" fill="${col}"/>`;
+    g += `<line x1="${X(e)}" x2="${X(x)}" y1="${ya}" y2="${yb}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2" stroke-dasharray="5 3"/>`;
+    g += mk(X(e), ya, buy, "var(--accent)") + `<text class="hl" x="${X(e)}" y="${ya + (buy ? 26 : -20)}" text-anchor="middle" style="fill:var(--accent);font-weight:700">入り ${Math.round(t[3]).toLocaleString()}</text>`;
+    g += `<circle cx="${X(x)}" cy="${yb}" r="6" fill="${open ? "none" : win ? "var(--good)" : "var(--bad)"}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2"/><text class="hl" x="${X(x)}" y="${yb + (yb > Tp + 30 ? -14 : 24)}" text-anchor="middle" style="fill:${win ? "var(--good)" : "var(--bad)"};font-weight:700">${open ? "保有中" : "出"} ${Math.round(t[4]).toLocaleString()}</text>`;
+    const names = a => a.map(i => nm(i)).join("・") || "–";
+    const sg = f => (arr, i) => arr.map(f);
+    inner.innerHTML = `<div class="hd"><div><div class="note">${FAM[M.sigs[t[0][0]][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN[G.tf]}</div><div style="font-size:17px;font-weight:700">${code.slice(0, 4)} の取引: ${t[0].map(i => M.sigs[i][0]).join("・")}</div></div><button class="x" type="button">閉じる</button></div>
+      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="ローソク足と、シグナル・入り・出">${g}</svg>
+      <div class="inf"><div><b style="color:var(--accent)">シグナル</b>(${M.dates[ts].slice(2)}の引け後)<br>${names(t[0])}${tag(t[0][0])}</div>
+      <div><b>入り</b>: ${M.dates[e].slice(2)}の始値 ${Math.round(t[3]).toLocaleString()}円で${buy ? "買い" : "ショート"}</div>
+      <div><b>${open ? "保有中" : "出"}</b>: ${open ? "最新終値 " : M.dates[x].slice(2) + "の始値 "}${Math.round(t[4]).toLocaleString()}円${open ? "" : "で" + (buy ? "売り" : "買い戻し")}<br>${open ? "反対のシグナルは、まだ出ていません。" : "きっかけ(" + M.dates[x - 1].slice(2) + "の引け後): " + names(ex)}</div>
+      <div><b>損益(100株)</b>: <span class="${sgn(tr.y)}" style="padding:0 6px;border-radius:6px">${yen(tr.y)}</span>(${f1(t[6])}bp、コスト後)<br>保有 ${t[5]}${UNIT[G.tf]}</div></div>
+      <p class="note" style="margin-top:8px">ローソク足は、調整前の実際の価格です。縦の点線 = シグナルが出た日(引け後に確定)、▲/▼ = 入り(次の足の始値)、● = 出(反対のシグナルが出た次の足の始値)、帯 = 保有期間(緑 = 利益、赤 = 損失)。${COSTNOTE}</p>`;
+  };
+})();
+
 const CACHE = {};
 function V(path) { if (!CACHE[path]) CACHE[path] = fetch("report_data/v2/" + path).then(r => { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }).catch(e => { delete CACHE[path]; throw e; }); return CACHE[path]; }
 
@@ -1111,7 +1170,9 @@ async function renderStock() {
   $("#sk-b").innerHTML = `<div class="sec">入りと出をシグナルで決める売買(直近1年・100株ずつ)</div>
     <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。<b>チャートパターンは、逆向きのパターンがなかなか出ないので、保有が長くなります</b>(全銘柄の中央値: 週足で約42週、日足で約40日)。</p>
     <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
-    (trs.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map(r => { const t = r.t; return `<tr><td>${FAM[r.f]}</td><td class="k">${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])} ${Math.round(t[3]).toLocaleString()}円</td><td>${r.open ? "<b>保有中</b>(最新終値)" : fmtDate(M, t[2])} ${Math.round(t[4]).toLocaleString()}円</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
+    (trs.length ? `<p class="note">行をタップ(クリック)すると、その銘柄のチャート上で、シグナルの日・エントリー・イグジットを見られます。</p><div class="tw"><table class="gt fit"><thead><tr><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map((r, i) => { const t = r.t; return `<tr class="trrow" data-i="${i}" tabindex="0"><td class="sg"><small>${FAM[r.f]}</small><br>${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])}<br><small>${Math.round(t[3]).toLocaleString()}円</small></td><td>${r.open ? "<b>保有中</b><br><small>最新終値 " + Math.round(t[4]).toLocaleString() + "円</small>" : fmtDate(M, t[2]) + "<br><small>" + Math.round(t[4]).toLocaleString() + "円</small>"}</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
+  const openRow = i => openTradeChart({ M, k, code, tr: trs[i], dir, nm, tag });
+  $("#sk-b").querySelectorAll("tr.trrow").forEach(tr => { tr.onclick = () => openRow(+tr.dataset.i); tr.onkeydown = e => { if (e.key === "Enter") openRow(+tr.dataset.i); }; });
 
   /* C. 全期間の、シグナル別の成績: 並び順は、基準(全銘柄)の平均。自身は参考 */
   let oAll; try { oAll = (await mfile(mname()))[code] || []; } catch (e) { oAll = []; }

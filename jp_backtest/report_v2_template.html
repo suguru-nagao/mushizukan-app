@@ -983,7 +983,7 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
   #trmodal { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 24px 12px; }
   #trmodal[hidden] { display: none; } #trmodal .box { width: min(860px, 100%); background: var(--bg, #fff); border: 1px solid var(--line); border-radius: 18px; padding: 16px 18px 18px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
   #trmodal .hd { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; } #trmodal button.x { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 4px 14px; font: inherit; cursor: pointer; }
-  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 8px; } #trmodal svg text { fill: var(--dim); font-size: 11px; }
+  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 8px; } #trmodal svg text { fill: var(--dim); font-size: 11px; } #trmodal svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
   #trmodal .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } #trmodal .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }`;
   document.head.appendChild(st);
   const box = document.createElement("div"); box.id = "trmodal"; box.hidden = true; box.innerHTML = '<div class="box"></div>'; document.body.appendChild(box);
@@ -1015,12 +1015,12 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       g += `<line x1="${X(i)}" x2="${X(i)}" y1="${Y(h)}" y2="${Y(l)}" stroke="${col}" stroke-width="1.4"/><rect x="${X(i) - cw / 2}" y="${y1}" width="${cw}" height="${Math.max(1.5, y2 - y1)}" fill="${col}"/>`; });
     // シグナルの日(入りの1本前)
     const ts = e - 1, ex = t[7] || [];
-    if (ts >= i0) g += `<line x1="${X(ts)}" x2="${X(ts)}" y1="${Tp}" y2="${Tp + ph}" stroke="var(--accent)" stroke-dasharray="4 3"/><text x="${X(ts)}" y="${Tp - 8}" text-anchor="middle" style="fill:var(--accent);font-weight:700">シグナル</text>`;
+    if (ts >= i0) g += `<line x1="${X(ts)}" x2="${X(ts)}" y1="${Tp}" y2="${Tp + ph}" stroke="var(--accent)" stroke-dasharray="4 3"/><text class="hl" x="${X(ts)}" y="${Tp - 8}" text-anchor="middle" style="fill:var(--accent);font-weight:700">シグナル</text>`;
     // 入り・出
     const ya = Y(t[3]), yb = Y(t[4]); const mk = (xx, yy, up, col) => `<path d="M${xx} ${yy + (up ? -2 : 2)} l-7 ${up ? -12 : 12} h14 z" fill="${col}"/>`;
     g += `<line x1="${X(e)}" x2="${X(x)}" y1="${ya}" y2="${yb}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2" stroke-dasharray="5 3"/>`;
-    g += mk(X(e), ya, buy, "var(--accent)") + `<text x="${X(e)}" y="${ya + (buy ? 26 : -20)}" text-anchor="middle" style="fill:var(--accent);font-weight:700">入り ${Math.round(t[3]).toLocaleString()}</text>`;
-    g += `<circle cx="${X(x)}" cy="${yb}" r="6" fill="${open ? "none" : win ? "var(--good)" : "var(--bad)"}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2"/><text x="${X(x)}" y="${yb + (yb > Tp + 30 ? -14 : 24)}" text-anchor="middle" style="fill:${win ? "var(--good)" : "var(--bad)"};font-weight:700">${open ? "保有中" : "出"} ${Math.round(t[4]).toLocaleString()}</text>`;
+    g += mk(X(e), ya, buy, "var(--accent)") + `<text class="hl" x="${X(e)}" y="${ya + (buy ? 26 : -20)}" text-anchor="middle" style="fill:var(--accent);font-weight:700">入り ${Math.round(t[3]).toLocaleString()}</text>`;
+    g += `<circle cx="${X(x)}" cy="${yb}" r="6" fill="${open ? "none" : win ? "var(--good)" : "var(--bad)"}" stroke="${win ? "var(--good)" : "var(--bad)"}" stroke-width="2"/><text class="hl" x="${X(x)}" y="${yb + (yb > Tp + 30 ? -14 : 24)}" text-anchor="middle" style="fill:${win ? "var(--good)" : "var(--bad)"};font-weight:700">${open ? "保有中" : "出"} ${Math.round(t[4]).toLocaleString()}</text>`;
     const names = a => a.map(i => nm(i)).join("・") || "–";
     const sg = f => (arr, i) => arr.map(f);
     inner.innerHTML = `<div class="hd"><div><div class="note">${FAM[M.sigs[t[0][0]][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN[G.tf]}</div><div style="font-size:17px;font-weight:700">${code.slice(0, 4)} の取引: ${t[0].map(i => M.sigs[i][0]).join("・")}</div></div><button class="x" type="button">閉じる</button></div>
