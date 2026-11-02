@@ -5,7 +5,7 @@
   v2/{tf}_{m}_{k}.json         銘柄別・シグナル別の成績。m = h{保有本数}(①) または o(②)。k = 銘柄番号÷400
                                {コード: [[sid, 件数, 勝率%, 平均bp, 中央値bp], ...]}(その銘柄自身の成績。基準は全銘柄=_base.json)
   v2/{tf}_lit.json             いま点灯中(最新から2本以内)のシグナル {コード: [[sid, 直近の発生のバー番号], ...]}
-  v2/{tf}_tr_{k}.json          ②の、直近1年の取引(同じ種類・同じ向きは1ポジション) {コード: [[[sid,...], 入りバー, 出バー(-1=保有中), 入り値, 出値, 本数, 損益bp], ...]}
+  v2/{tf}_tr_{k}.json          ②の、直近1年の取引(同じ種類・同じ向きは1ポジション) {コード: [[[sid,...], 入りバー, 出バー(-1=保有中), 入り値, 出値, 本数, 損益bp, [出のきっかけのsid,...]], ...]}
   v2/{tf}_base.json            全銘柄の、シグナル別・規模別の成績 {m: {sid: {z: [件数, 勝率, 平均bp, 中央値bp, 市場超過bp, 前半の平均, 後半の平均, 保有本数の中央値]}}}  z: 0小型 1中型 2大型 3全体
 """
 import json, os, pickle, sys
@@ -32,7 +32,8 @@ def stats(df, col):
 
 base = {}
 modes = [(f"h{h}", HH, f"n{h}", f"x{h}") for h in holds] + [("o", OO[OO.closed], "net", "netex")]
-for m, df, col, xcol in modes:
+TRONLY = os.environ.get("TRONLY") == "1"      # 取引(tr)のファイルだけを作り直す
+for m, df, col, xcol in ([] if TRONLY else modes):
     df = df[np.isfinite(df[col])]
     st = stats(df, col)
     litset = {(s, c) for c, v in ((codes.index(k), v) for k, v in lit.items()) for s, _ in v}
@@ -58,19 +59,21 @@ for m, df, col, xcol in modes:
                               None if m != "o" else float(g.w.median())]
     base[m] = b
     print(m, len(rows), flush=True)
-dump(f"{TF}_base.json", base)
+if not TRONLY:
+    dump(f"{TF}_base.json", base)
 # ②の直近1年の取引: 同じ種類・同じ向きは同時に1ポジション。同じバーで入る複数のシグナルは1つにまとめる
 fam = [s[1] for s in sigs]; d_ = [s[2] for s in sigs]
 rec = OO[(OO.x >= T - 1 - LAST) | (~OO.closed)].sort_values(["c", "e", "sid"])
 out = {}
 cur = {}
+exits = pickle.load(open(f"cache/v2_{TF}_exits.pkl", "rb")) if os.path.exists(f"cache/v2_{TF}_exits.pkl") else {}
 for r in rec.itertuples():
     key = (r.c, fam[r.sid], d_[r.sid]); c0 = cur.get(key)
     if c0 is not None and (c0[2] < 0 or r.e < c0[2]):
         if r.e == c0[1]:
             c0[0].append(int(r.sid))
         continue
-    t = [[int(r.sid)], int(r.e), int(r.x), round(float(r.pe), 1), round(float(r.px), 1), int(r.w), round(float(r.net * 1e4), 1)]
+    t = [[int(r.sid)], int(r.e), int(r.x), round(float(r.pe), 1), round(float(r.px), 1), int(r.w), round(float(r.net * 1e4), 1), exits.get((int(r.sid), int(r.c), int(r.e)), [])]
     cur[key] = t; out.setdefault(r.c, []).append(t)
 for k in range((NC + SH - 1) // SH):
     dump(f"{TF}_tr_{k}.json", {codes[c]: out[c] for c in range(k * SH, min(NC, (k + 1) * SH)) if c in out})
