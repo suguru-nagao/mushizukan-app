@@ -43,6 +43,16 @@ def wcorr(a, b, w):
     a = a - np.average(a, weights=w); b = b - np.average(b, weights=w)
     d = np.sqrt((w * a * a).sum() * (w * b * b).sum()); return (w * a * b).sum() / d if d > 0 else np.nan
 
+import json
+_m = json.load(open("report_data/meta.json"))["stocks"]; _sec = {x[4]: x[3] for x in _m}
+_names = sorted(set(_sec.values())); sec_id = np.array([_names.index(_sec[c]) if c in _sec else -1 for c in meta["codes"]])
+def group_pred(N, S, labels, minn=30):
+    """labels(銘柄ごとの群の番号、-1=なし)ごとの、シグナル別の平均を、銘柄に割り当てる。群の件数が minn 未満なら NaN。"""
+    ids = np.unique(labels[labels >= 0]); out = np.full((NS, NC), np.nan)
+    for g in ids:
+        m = (labels == g) & kp; n = N[:, m].sum(1); v = S[:, m].sum(1)
+        out[:, labels == g] = np.where(n >= minn, v / np.maximum(n, 1), np.nan)[:, None]
+    return out
 PERF = {"全期間": None, "5年": 5, "2年": 2, "1年": 1}
 CORR = {"全期間": None, "104週": 104, "52週": 52, "26週": 26}
 rows = {}   # (基準, 見る期間) -> list of (pred, actual, w, year, n)
@@ -60,6 +70,8 @@ for Y in range(2008, 2027):
         for zz in range(3):
             m = (zmode == zz) & kp; sizem[:, zmode == zz] = ((S[:, m].sum(1)) / np.maximum(N[:, m].sum(1), 1))[:, None]
         preds = {"全銘柄": sigm, "同規模": sizem, "自身": np.where(N >= 5, S / np.maximum(N, 1), np.nan)}
+        preds["同業種"] = group_pred(N, S, sec_id)
+        preds["同規模×同業種"] = group_pred(N, S, np.where(sec_id >= 0, zmode * 100 + sec_id, -1))
         for ck, (nn, vd) in PE.items():
             PN, PS = pool(N, S, nn, vd); preds["仲間(相関" + ck + ")"] = np.where(PN >= 30, PS / np.maximum(PN, 1), np.nan)
         for bk, P in preds.items():
@@ -74,5 +86,5 @@ for (bk, pk), L in rows.items():
         pc = p - np.average(p, weights=w); ac = a - np.average(a, weights=w)
         num += (w * pc * ac).sum(); den1 += (w * pc * pc).sum(); den2 += (w * ac * ac).sum(); ycs.append(wcorr(p, a, w))
     out.append(dict(基準=bk, 見る期間=pk, 相関=num / np.sqrt(den1 * den2), 年ごとの相関の平均=np.nanmean(ycs), 年ごとの相関が正の年数=int(np.sum(np.array(ycs) > 0)), 年数=len(ycs)))
-R = pd.DataFrame(out).round(3); R.to_csv("results_reference_group.csv", index=False, encoding="utf-8-sig")
+R = pd.DataFrame(out).round(3); R.to_csv("results_reference_group2.csv", index=False, encoding="utf-8-sig")
 pd.set_option("display.width", 200); print(R.pivot(index="基準", columns="見る期間", values="相関")[["全期間", "5年", "2年", "1年"]].to_string()); print(R.pivot(index="基準", columns="見る期間", values="年ごとの相関が正の年数")[["全期間", "5年", "2年", "1年"]].to_string())
