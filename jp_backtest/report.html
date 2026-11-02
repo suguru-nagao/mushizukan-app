@@ -206,7 +206,7 @@ svg .zl { stroke: var(--dim); stroke-width: 1; opacity: .6; }
     <p>ローソク足・チャートパターン・テクニカル指標・抵抗帯の全シグナルを、<b>「利益が出たか」</b>の勝率で検証したダッシュボードです。見方は2つ(下の切り替え)。<b>① 保有期間を決める</b>(シグナルの次のバーの始値で入り、決めた期間後の始値で出る)、<b>② 反対のシグナルで出る</b>(同じ種類の逆向きのシグナルが出たら出る)。日足(2021年〜)・週足(2000年〜)・月足(2000年〜)のそれぞれで、勝率と損益を見られます。</p>
   </header>
 
-  <div class="card" id="gbar" style="gap:8px;position:sticky;top:6px;z-index:5;padding:12px 18px">
+  <div class="card" id="gbar" style="gap:8px;padding:12px 18px">
     <div class="ctl" style="margin:0"><label style="min-width:4.5em">見方</label><div class="seg" id="g-mode"></div></div>
     <div class="ctl" style="margin:0"><label style="min-width:4.5em">時間軸</label><div class="seg" id="g-tf"></div></div>
     <div class="ctl" style="margin:0" id="g-hrow"><label style="min-width:4.5em">保有期間</label><div class="seg" id="g-h"></div></div>
@@ -979,20 +979,12 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
 (function () {
   const st = document.createElement("style");
   st.textContent = `table.fit { width: 100%; } table.fit th, table.fit td { padding: 6px 8px; white-space: normal; vertical-align: top; } table.fit td.sg { text-align: left; min-width: 11em; } table.fit small { color: var(--dim); }
-  .trrow { cursor: pointer; } .trrow:hover, .trrow:focus-visible { background: var(--accent-bg); outline: none; }
-  #trmodal { position: fixed; inset: 0; z-index: 80; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center; overflow-y: auto; padding: 16px 10px; }
-  #trmodal[hidden] { display: none; } #trmodal .box { width: min(1000px, 100%); background: var(--bg, #fff); border: 1px solid var(--line); border-radius: 18px; padding: 14px 16px 16px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
-  #trmodal .hd { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; } #trmodal button.x { appearance: none; border: 1px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 999px; padding: 4px 14px; font: inherit; cursor: pointer; }
-  #trmodal .ctrl { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 2px; align-items: center; } #trmodal .ctrl label { font-size: 12px; color: var(--dim); margin-right: 4px; }
-  #trmodal svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 6px; touch-action: none; cursor: grab; user-select: none; } #trmodal svg text { fill: var(--dim); font-size: 11px; } #trmodal svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
-  #trmodal .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } #trmodal .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
-  #trmodal .lg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--dim); margin-top: 6px; } #trmodal .lg i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 4px; }`;
+  .trrow { cursor: pointer; } .trrow:hover, .trrow:focus-visible, .trrow.sel { background: var(--accent-bg); outline: none; } .trscroll { max-height: 46vh; overflow: auto; } .trscroll thead th { position: sticky; top: 0; background: var(--bg, #fff); z-index: 1; }
+  div.chartbox .ctrl { display: flex; flex-wrap: wrap; gap: 6px 14px; margin: 8px 0 2px; align-items: center; } div.chartbox .ctrl label { font-size: 12px; color: var(--dim); margin-right: 4px; }
+  div.chartbox svg { width: 100%; height: auto; display: block; background: var(--surface); border-radius: 12px; margin-top: 6px; touch-action: none; cursor: grab; user-select: none; } div.chartbox svg text { fill: var(--dim); font-size: 11px; } div.chartbox svg text.hl { paint-order: stroke; stroke: var(--bg, #fff); stroke-width: 4px; stroke-linejoin: round; font-size: 12px; }
+  div.chartbox .inf { display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 10px; font-size: 13px; } div.chartbox .inf > div { border: 1px solid var(--line); border-radius: 12px; padding: 8px 12px; }
+  div.chartbox .lg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--dim); margin-top: 6px; } div.chartbox .lg i { display: inline-block; width: 14px; height: 3px; vertical-align: middle; margin-right: 4px; }`;
   document.head.appendChild(st);
-  const box = document.createElement("div"); box.id = "trmodal"; box.hidden = true; box.innerHTML = '<div class="box"></div>'; document.body.appendChild(box);
-  const close = () => { box.hidden = true; };
-  box.addEventListener("click", e => { if (e.target === box || e.target.closest("button.x")) close(); });
-  document.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
-
   /* 指標(価格から、画面側で計算) */
   const NaNs = n => new Array(n).fill(null);
   const sma = (a, n) => a.map((_, i) => { if (i < n - 1) return null; let s = 0; for (let j = i - n + 1; j <= i; j++) { if (a[j] == null) return null; s += a[j]; } return s / n; });
@@ -1046,34 +1038,33 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
   }
   const barOf = (dates, ds) => { let a = 0, b = dates.length; while (a < b) { const m = (a + b) >> 1; if (dates[m] >= ds) b = m; else a = m + 1; } return a; };
 
-  window.openChart = async function (opt) {
-    // opt: { tf, code, trade: {e, x, pe, px, net, y, open, entry:[sid], exit:[sid]} | null, lit: [[sid, t]] | null, M(取引の時間軸のメタ), nm, tag, dir, FAMN, yen, sgn, f1, COSTNOTE }
-    const inner = box.firstElementChild; box.hidden = false; inner.innerHTML = '<p class="note">読み込み中…</p>';
-    const S = { tf: opt.tf, a: 0, b: 0, pre: 2 };
+  window.mountChart = async function (inner, opt) {
+    // opt: { tf, code, stkname, M, nm, tag, dir, FAMN, yen, sgn, f1, COSTNOTE, items: [{ trade: {...} } | { lit: [sid, t] }], sel }
+    inner.classList.add("chartbox"); inner.innerHTML = '<p class="note">読み込み中…</p>';
+    const S = { tf: opt.tf, a: 0, b: 0, sel: opt.sel || 0 };
     const base = await ensure(opt.tf, opt.code).catch(() => null);
-    if (!base) { inner.innerHTML = '<p class="note">この銘柄の価格データがありません。</p><button class="x">閉じる</button>'; return; }
+    if (!base) { inner.innerHTML = '<p class="note">この銘柄の価格データがありません。</p>'; return null; }
     let AN = {}; try { const an = await V(`${opt.tf}_an_${base.k}.json`); (an[opt.code] || []).forEach(([sid, t, g]) => AN[sid + "|" + t] = g); } catch (e) {}
-    const M0 = base.M, tr = opt.trade, T0 = M0.dates.length;
-    // 注目するシグナル: [{sid, t(取引の時間軸のバー), role}]
-    const SG = [];
-    if (tr) { tr.entry.forEach(sid => SG.push({ sid, t: tr.e - 1, role: "入り" })); if (!tr.open) (tr.exit || []).forEach(sid => SG.push({ sid, t: tr.x - 1, role: "出" })); }
-    else (opt.lit || []).forEach(([sid, t]) => SG.push({ sid, t, role: "点灯" }));
+    const M0 = base.M, T0 = M0.dates.length;
+    const cur = () => opt.items[S.sel];
+    const sgOf = it => { const SG = [], tr = it.trade; if (tr) { tr.entry.forEach(sid => SG.push({ sid, t: tr.e - 1, role: "入り" })); if (!tr.open) (tr.exit || []).forEach(sid => SG.push({ sid, t: tr.x - 1, role: "出" })); } else SG.push({ sid: it.lit[0], t: it.lit[1], role: "点灯" }); return SG; };
     const sigDate = t => M0.dates[Math.max(0, Math.min(T0 - 1, t))];
-    const buy = opt.dir(SG[0].sid) > 0;
-    // 初期の表示範囲: 取引全体(または最新)が見えるよう、前後に余白をつける
-    const focus = (D) => {
-      const dts = D.M.dates, n = dts.length, s = D.s;
-      const pos = ds => Math.min(n - 1, barOf(dts, ds));
-      const a0 = tr ? pos(sigDate(tr.e - 1)) : pos(sigDate(SG[0].t)), b0 = tr ? (tr.open ? n - 1 : pos(sigDate(tr.x))) : n - 1;
+    const toX = (D, tradeBar) => Math.min(D.M.dates.length - 1, barOf(D.M.dates, M0.dates[Math.max(0, Math.min(T0 - 1, tradeBar))]));
+    // 取引の入り・出の位置(この時間軸での)
+    const posTr = (D, tr) => { const sameTf = S.tf === opt.tf, n = D.M.dates.length; const e = Math.min(n - 1, toX(D, tr.e - 1) + (sameTf ? 1 : (S.tf === "M" ? 0 : 1))), x = tr.open ? n - 1 : Math.min(n - 1, toX(D, tr.x - 1) + (sameTf ? 1 : (S.tf === "M" ? 0 : 1))); return [e, x]; };
+    const focus = D => {
+      const it = cur(), SG = sgOf(it), tr = it.trade, n = D.M.dates.length, s = D.s;
+      const a0 = tr ? toX(D, tr.e - 1) : toX(D, SG[0].t), b0 = tr ? (tr.open ? n - 1 : toX(D, tr.x)) : n - 1;
       const len = b0 - a0 + 1, pad = Math.max(8, Math.round(len * .25));
       return [Math.max(s, a0 - pad), Math.min(n - 1, b0 + Math.max(6, Math.round(pad * .6)))];
     };
     [S.a, S.b] = focus(base);
-    const toX = (D, tradeBar) => Math.min(D.M.dates.length - 1, barOf(D.M.dates, M0.dates[Math.max(0, Math.min(T0 - 1, tradeBar))]));
     let drawing = null;
+    const focusIfNeeded = D => { const it = cur(); let lo2, hi2; if (it.trade) { const [e2, x2] = posTr(D, it.trade); lo2 = e2; hi2 = x2; } else lo2 = hi2 = toX(D, it.lit[1]); if (lo2 < S.a + 1 || hi2 > S.b - 1) [S.a, S.b] = focus(D); };
 
     async function render() {
       const D = DATA[S.tf + opt.code] || await ensure(S.tf, opt.code);
+      const it0 = cur(), SG = sgOf(it0), tr = it0.trade || null, buy = opt.dir(SG[0].sid) > 0;
       const n = D.M.dates.length, s0 = D.s, W = 960, mainH = 330, subH = 96, L = 58, R = 18, Tp = 24;
       S.a = Math.max(s0, Math.min(S.a, n - 2)); S.b = Math.min(n - 1, Math.max(S.b, S.a + 4));
       const a = S.a, b = S.b, N = b - a + 1, pw = W - L - R, step = pw / N, cw = Math.max(1.5, Math.min(14, step * .62));
@@ -1081,8 +1072,7 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       // 注目するシグナルの、この時間軸での位置と、描くもの
       const items = SG.map(g => ({ ...g, name: M0.sigs[g.sid][0], fam: M0.sigs[g.sid][1], i: toX(D, g.t), sp: spec(M0.sigs[g.sid][0], S.tf), geo: AN[g.sid + "|" + g.t] })).filter((v, j, arr) => arr.findIndex(u => u.sid === v.sid && u.role === v.role) === j);
       const sameTf = S.tf === opt.tf;
-      const eI = tr ? toX(D, tr.e - 1) + (sameTf ? 1 : (D.M.dates[toX(D, tr.e - 1)] >= sigDate(tr.e - 1) && S.tf === "M" ? 0 : 1)) : null;
-      const xI = tr ? (tr.open ? n - 1 : Math.min(n - 1, toX(D, tr.x - 1) + (sameTf ? 1 : (S.tf === "M" ? 0 : 1)))) : null;
+      const [eI, xI] = tr ? posTr(D, tr) : [null, null];
       // 副パネル
       const panels = []; items.forEach(it => { if (it.sp.panel && !panels.includes(it.sp.panel)) panels.push(it.sp.panel); });
       const H = Tp + mainH + panels.length * (subH + 14) + 28;
@@ -1097,6 +1087,10 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       const lab = Math.max(1, Math.round(N / 8)); for (let i = a; i <= b; i++) if ((i - a) % lab === 0) g += `<text x="${X(i)}" y="${Tp + mainH + panels.length * (subH + 14) + 16}" text-anchor="middle">${D.M.dates[i].slice(2, S.tf === "M" ? 7 : 10)}</text>`;
       // 保有期間の帯
       if (tr) { const xa = X(eI) - step / 2, xb = X(xI) + step / 2; g += `<rect x="${xa}" y="${Tp}" width="${Math.max(2, xb - xa)}" height="${mainH}" fill="${tr.net > 0 ? "var(--good-soft)" : "var(--bad-soft)"}" opacity=".55"/>`; }
+      // 選んでいない取引・シグナルの、小さな印(クリックで選択)
+      opt.items.forEach((o, j) => { if (j === S.sel) return; if (o.trade) { const [e2, x2] = posTr(D, o.trade); if (x2 < a || e2 > b) return; const col = o.trade.net > 0 ? "var(--good)" : "var(--bad)", ye = Y(o.trade.pe), yx = Y(o.trade.px), by = opt.dir(o.trade.entry[0]) > 0;
+          g += `<g data-i="${j}" style="cursor:pointer" opacity=".6"><path d="M${X(e2)} ${ye + (by ? 2 : -2)} l-5 ${by ? 9 : -9} h10 z" fill="${col}"/><circle cx="${X(x2)}" cy="${yx}" r="4" fill="${col}"/><rect x="${X(e2) - 8}" y="${Math.min(ye, yx) - 10}" width="${Math.max(16, X(x2) - X(e2) + 8)}" height="${Math.abs(ye - yx) + 20}" fill="transparent"/></g>`; }
+        else { const i2 = toX(D, o.lit[1]); if (i2 < a || i2 > b) return; const yy = Y(at(D.d.l, i2) ?? lo); g += `<g data-i="${j}" style="cursor:pointer" opacity=".7"><path d="M${X(i2)} ${yy + 4} l-5 9 h10 z" fill="var(--accent)"/><rect x="${X(i2) - 8}" y="${yy}" width="16" height="16" fill="transparent"/></g>`; } });
       // 抵抗帯・支持帯・ライン(帯)
       const legend = [];
       items.forEach(it => { if (it.geo && it.geo.z) it.geo.z.forEach(([z1, z2, kind]) => { const x0 = Math.max(L, X(Math.max(a, it.i - (S.tf === "D" ? 60 : 20)))), x1 = Math.min(W - R, X(Math.min(b, it.i + (S.tf === "D" ? 10 : 4)))); if (x1 <= x0) return; const col = kind === "v" ? "#e0a030" : "#4f8cf0"; g += `<rect x="${x0}" y="${Y(z2)}" width="${x1 - x0}" height="${Math.max(2, Y(z1) - Y(z2))}" fill="${col}" opacity=".28" stroke="${col}"/><text class="hl" x="${x0 + 4}" y="${Y(z2) - 4}" style="fill:${col};font-weight:700">${it.name.includes("抵抗") ? "抵抗" : "支持"}${kind === "v" ? "帯(出来高)" : "線"} ${Math.round(z1).toLocaleString()}〜${Math.round(z2).toLocaleString()}${it.role === "出" ? "(出)" : ""}</text>`; }); });
@@ -1137,22 +1131,26 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       const info = tr ? `<div class="inf"><div><b style="color:var(--accent)">シグナル</b>(${sigDate(tr.e - 1).slice(2)}の引け後)<br>${nmL(tr.entry)}${opt.tag(tr.entry[0])}</div><div><b>入り</b>: ${M0.dates[tr.e].slice(2)}の始値 ${Math.round(tr.pe).toLocaleString()}円で${buy ? "買い" : "ショート"}</div><div><b>${tr.open ? "保有中" : "出"}</b>: ${tr.open ? "最新終値 " : M0.dates[tr.x].slice(2) + "の始値 "}${Math.round(tr.px).toLocaleString()}円${tr.open ? "" : "で" + (buy ? "売り" : "買い戻し")}<br>${tr.open ? "反対のシグナルは、まだ出ていません。" : "きっかけ(" + sigDate(tr.x - 1).slice(2) + "の引け後): " + nmL(tr.exit || [])}</div><div><b>損益(100株)</b>: <span class="${opt.sgn(tr.y)}" style="padding:0 6px;border-radius:6px">${opt.yen(tr.y)}</span>(${opt.f1(tr.net)}bp、コスト後)<br>保有 ${tr.w}${{ W: "週", D: "日", M: "か月" }[opt.tf]}</div></div>` : `<div class="inf"><div><b style="color:var(--accent)">点灯中のシグナル</b>(${M0.dates[SG[0].t].slice(2)}の引け後)<br>${nmL([...new Set(SG.map(u => u.sid))])}</div></div>`;
       const lg = legend.length ? `<div class="lg">${[...new Map(legend.map(l => [l[1], l])).values()].map(([c, t]) => `<span><i style="background:${c}"></i>${t}</span>`).join("")}</div>` : "";
       const note = !sameTf ? `<p class="note">${TFN_[opt.tf]}で出たシグナルです。この${TFN_[S.tf]}では、同じ日付に位置を合わせて表示しています(指標は、この${TFN_[S.tf]}の価格で計算し直すので、シグナルが出た形と一致しない場合があります)。</p>` : "";
-      inner.innerHTML = `<div class="hd"><div><div class="note">${opt.FAMN[M0.sigs[SG[0].sid][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN_[opt.tf]}で出たシグナル</div><div style="font-size:17px;font-weight:700">${opt.code.slice(0, 4)}${opt.stkname ? " " + opt.stkname : ""}: ${[...new Set(SG.filter(u => u.role !== "出").map(u => M0.sigs[u.sid][0]))].join("・")}</div></div><button class="x" type="button">閉じる</button></div>${ctrl}
+      inner.innerHTML = `<div class="hd"><div><div class="note">${opt.FAMN[M0.sigs[SG[0].sid][1]]}・${buy ? "買い(ロング)" : "売り(ショート)"} / ${TFN_[opt.tf]}で出たシグナル(表の行をクリックすると、ここに表示されます)</div><div style="font-size:16px;font-weight:700">${opt.code.slice(0, 4)}${opt.stkname ? " " + opt.stkname : ""}: ${[...new Set(SG.filter(u => u.role !== "出").map(u => M0.sigs[u.sid][0]))].join("・")}</div></div></div>${ctrl}
         <svg id="ch-svg" viewBox="0 0 ${W} ${H}" role="img" aria-label="ローソク足と、シグナル・入り・出">${g}</svg>${lg}${info}${note}
-        <p class="note" style="margin-top:8px">ローソク足は、調整前の実際の価格です。ドラッグで移動、ホイール(ピンチ)で拡大・縮小できます。縦の点線 = シグナルが出た日(引け後に確定)、▲/▼ = 入り(次の足の始値)、● = 出(反対のシグナルが出た次の足の始値)、帯 = 保有期間(緑 = 利益、赤 = 損失)。橙・青の帯や線 = シグナルが注目した場所。${opt.COSTNOTE}</p>`;
-      seg($("#ch-tf"), ["D", "W", "M"].map(t => [t, TFN_[t]]), S.tf, async v => { if (v === S.tf) return; const ref = [D.M.dates[S.a], D.M.dates[S.b]]; const ok = await ensure(v, opt.code).catch(() => null); if (!ok) { alert("この時間軸の価格データがありません"); return; } S.tf = v; S.a = Math.max(ok.s, barOf(ok.M.dates, ref[0])); S.b = Math.min(ok.M.dates.length - 1, barOf(ok.M.dates, ref[1])); if (S.b - S.a < 8) [S.a, S.b] = focus(ok); render(); });
-      seg($("#ch-pre"), PRE[S.tf].map((nb, j) => [j, PRELAB[S.tf][j]]), -1, v => { const nb = PRE[S.tf][v], [fa, fb] = focus(D); if (nb === 0) { S.a = s0; S.b = n - 1; } else { const mid = Math.round((fa + fb) / 2); S.a = Math.max(s0, mid - Math.round(nb * .6)); S.b = Math.min(n - 1, S.a + nb - 1); S.a = Math.max(s0, S.b - nb + 1); } render(); });
+        <p class="note" style="margin-top:8px">ローソク足は、調整前の実際の価格です。ドラッグで移動、ホイール(ピンチ)で拡大・縮小できます。縦の点線 = シグナルが出た日(引け後に確定)、▲/▼ = 入り(次の足の始値)、● = 出(反対のシグナルが出た次の足の始値)、帯 = 保有期間(緑 = 利益、赤 = 損失)。橙・青の帯や線 = シグナルが注目した場所。薄い印 = ほかの取引・シグナル(クリックで選択)。${opt.COSTNOTE}</p>`;
+      seg($("#ch-tf", inner), ["D", "W", "M"].map(t => [t, TFN_[t]]), S.tf, async v => { if (v === S.tf) return; const ref = [D.M.dates[S.a], D.M.dates[S.b]]; const ok = await ensure(v, opt.code).catch(() => null); if (!ok) { alert("この時間軸の価格データがありません"); return; } S.tf = v; S.a = Math.max(ok.s, barOf(ok.M.dates, ref[0])); S.b = Math.min(ok.M.dates.length - 1, barOf(ok.M.dates, ref[1])); if (S.b - S.a < 8) [S.a, S.b] = focus(ok); render(); });
+      seg($("#ch-pre", inner), PRE[S.tf].map((nb, j) => [j, PRELAB[S.tf][j]]), -1, v => { const nb = PRE[S.tf][v], [fa, fb] = focus(D); if (nb === 0) { S.a = s0; S.b = n - 1; } else { const mid = Math.round((fa + fb) / 2); S.a = Math.max(s0, mid - Math.round(nb * .6)); S.b = Math.min(n - 1, S.a + nb - 1); S.a = Math.max(s0, S.b - nb + 1); } render(); });
       const shift = k => { const w = S.b - S.a + 1, d = Math.round(w * k); S.a += d; S.b += d; if (S.a < s0) { S.b += s0 - S.a; S.a = s0; } if (S.b > n - 1) { S.a -= S.b - (n - 1); S.b = n - 1; S.a = Math.max(s0, S.a); } render(); };
       const zoom = (k, cx) => { const w = S.b - S.a + 1, nw = Math.max(8, Math.min(n - s0, Math.round(w * k))), c = cx == null ? (S.a + S.b) / 2 : cx; S.a = Math.round(c - (c - S.a) * nw / w); S.b = S.a + nw - 1; if (S.a < s0) { S.b += s0 - S.a; S.a = s0; } if (S.b > n - 1) { S.a = Math.max(s0, S.a - (S.b - (n - 1))); S.b = n - 1; } render(); };
-      seg($("#ch-mv"), [["l", "◀"], ["r", "▶"], ["in", "拡大 ＋"], ["out", "縮小 －"], ["f", "取引・シグナルに戻る"]], "", v => { if (v === "l") shift(-.35); else if (v === "r") shift(.35); else if (v === "in") zoom(.7); else if (v === "out") zoom(1.4); else { [S.a, S.b] = focus(D); render(); } });
-      const svg = $("#ch-svg"); let drag = null;
+      seg($("#ch-mv", inner), [["l", "◀"], ["r", "▶"], ["in", "拡大 ＋"], ["out", "縮小 －"], ["f", "取引・シグナルに戻る"]], "", v => { if (v === "l") shift(-.35); else if (v === "r") shift(.35); else if (v === "in") zoom(.7); else if (v === "out") zoom(1.4); else { [S.a, S.b] = focus(D); render(); } });
+      const svg = $("#ch-svg", inner); let drag = null;
       const px2bar = ev => { const r = svg.getBoundingClientRect(); return S.a + ((ev.clientX - r.left) / r.width * W - L) / step - .5; };
       svg.addEventListener("wheel", ev => { ev.preventDefault(); zoom(ev.deltaY > 0 ? 1.15 : .87, px2bar(ev)); }, { passive: false });
       svg.addEventListener("pointerdown", ev => { drag = { x: ev.clientX, a: S.a, b: S.b }; svg.setPointerCapture(ev.pointerId); svg.style.cursor = "grabbing"; });
       svg.addEventListener("pointermove", ev => { if (!drag) return; const r = svg.getBoundingClientRect(), db = Math.round((ev.clientX - drag.x) / r.width * W / step); let a2 = drag.a - db, b2 = drag.b - db; if (a2 < s0) { b2 += s0 - a2; a2 = s0; } if (b2 > n - 1) { a2 -= b2 - (n - 1); b2 = n - 1; } if (a2 !== S.a) { S.a = a2; S.b = b2; if (!drawing) drawing = requestAnimationFrame(() => { drawing = null; render(); }); } });
+      svg.addEventListener("click", ev => { const gi = ev.target.closest && ev.target.closest("[data-i]"); if (gi && (!drag || true) && Math.abs((ev.clientX) - (svg._dx ?? ev.clientX)) < 5) { S.sel = +gi.dataset.i; opt.onselect && opt.onselect(S.sel); const D = DATA[S.tf + opt.code]; focusIfNeeded(D); render(); } });
+      svg.addEventListener("pointerdown", ev => { svg._dx = ev.clientX; }, true);
       const end = () => { drag = null; svg.style.cursor = "grab"; }; svg.addEventListener("pointerup", end); svg.addEventListener("pointercancel", end);
     }
-    render();
+    await render();
+    const svgEl = () => $("#ch-svg", inner);
+    return { select(i) { S.sel = i; const D = DATA[S.tf + opt.code], it = cur(); let lo2, hi2; if (it.trade) { const [e2, x2] = posTr(D, it.trade); lo2 = e2; hi2 = x2; } else lo2 = hi2 = toX(D, it.lit[1]); if (lo2 < S.a + 1 || hi2 > S.b - 1) [S.a, S.b] = focus(D); render(); } };
   };
 })();
 
@@ -1280,12 +1278,13 @@ async function renderStock() {
   const rowsA = lit.map(([sid, t]) => ({ sid, t, r: own[sid], a: bAll(mname(), sid), e: (bAll("h" + hsel, sid) || [])[2] })).sort((x, y) => dir(y.sid) - dir(x.sid) || (y.e ?? -1e9) - (x.e ?? -1e9));
   const fut = sid => HOLDS[G.tf].map(h => { const b = bAll("h" + h, sid), v = b ? b[2] : null; return `<td class="${sgn(v)}">${v == null ? "–" : f1(v)}</td>`; }).join("");
   $("#sk-a").innerHTML = `<div class="sec">いま点灯しているシグナルと、過去の実績から見た今後の動き</div>
-    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。<b>基準は、そのシグナルの、全銘柄での過去の成績</b>です(検証で、同規模・同業種・値動きが似た銘柄群・銘柄自身のどれよりも、同等以上に後の成績を当てられたため。下の注を参照)。この銘柄自身の成績は、<b>参考</b>として最後に置いています。「今後の動き」は、同じシグナルが出た後の、全銘柄の、保有期間別の平均(コスト後bp)です。<b>行をタップ(クリック)すると、チャート上で、シグナルが出ている場所を確認できます。</b></p>` +
+    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。<b>基準は、そのシグナルの、全銘柄での過去の成績</b>です(検証で、同規模・同業種・値動きが似た銘柄群・銘柄自身のどれよりも、同等以上に後の成績を当てられたため。下の注を参照)。この銘柄自身の成績は、<b>参考</b>として最後に置いています。「今後の動き」は、同じシグナルが出た後の、全銘柄の、保有期間別の平均(コスト後bp)です。<b>表の行(またはチャート上の印)をクリックすると、チャート上で、そのシグナルが出ている場所を確認できます。</b></p><div id="sk-chart-a" style="margin:8px 0"></div>` +
     (rowsA.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>点灯</th><th>全銘柄: 件数</th><th>勝率</th><th>平均</th>${HOLDS[G.tf].map(h => `<th>${HL[G.tf][h]}後</th>`).join("")}<th>(参考)自身: 件数</th><th>勝率</th><th>平均</th></tr></thead><tbody>` +
       rowsA.map(({ sid, t, r, a }) => `<tr class="trrow" data-sid="${sid}" data-t="${t}" tabindex="0"><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${a ? a[0].toLocaleString() : "–"}</td><td>${a ? a[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(a && a[2])}"><b>${a ? f1(a[2]) : "–"}</b></td>${fut(sid)}<td style="color:var(--dim)">${r ? r[1] : 0}</td><td style="color:var(--dim)">${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}" style="color:var(--dim)">${r && r[3] != null ? f1(r[3]) : "–"}</td></tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
     `<p class="note"><b>なぜ全銘柄を基準にするか</b>(週足・4週保有・コスト後で、2008〜2026年の各年について、その年より前のデータだけで予測し、その年の実際の平均との相関を見た結果): 全銘柄 0.181、同規模 0.181、市場区分 0.180、値動きが似た銘柄群 0.18、同業種 0.17、同規模×同業種 0.16、<b>銘柄自身 0.07</b>。銘柄ごとの「効きやすいシグナル」は、前半から後半に続きませんでした(相関 0.01)。成績を見る期間は、全期間が最良で、直近に絞ると悪化します(5年 0.12)。表は、上の切り替え(${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"})の成績です。${G.tf !== "W" ? "※この検証は週足で行いました。日足・月足では未検証です。" : ""}</p>`;
 
-  $("#sk-a").querySelectorAll("tr.trrow").forEach(tr => { const op = () => openChart({ tf: G.tf, code, stkname: st[1], M, nm, tag, dir, FAMN: FAM, yen, sgn, f1, COSTNOTE, lit: [[+tr.dataset.sid, +tr.dataset.t]] }); tr.onclick = op; tr.onkeydown = e => { if (e.key === "Enter") op(); }; });
+  { const rowsEl = [...$("#sk-a").querySelectorAll("tr.trrow")]; if (rowsEl.length) { const opts = ({ tf: G.tf, code, stkname: st[1], M, nm, tag, dir, FAMN: FAM, yen, sgn, f1, COSTNOTE }); const mark = i => rowsEl.forEach((tr, j) => tr.classList.toggle("sel", j === i));
+      mountChart($("#sk-chart-a"), { ...opts, items: rowsEl.map(tr => ({ lit: [+tr.dataset.sid, +tr.dataset.t] })), sel: 0, onselect: i => { mark(i); rowsEl[i].scrollIntoView({ block: "nearest" }); } }).then(ctl => { if (!ctl) return; mark(0); rowsEl.forEach((tr, j) => { const go = () => { mark(j); ctl.select(j); }; tr.onclick = go; tr.onkeydown = e => { if (e.key === "Enter") go(); }; }); }); } }
 
   /* B. 入りと出をシグナルで決める売買(直近1年・全シグナル) */
   const T = ((TR[code] || [])).slice().sort((a, b) => a[1] - b[1]);
@@ -1295,10 +1294,18 @@ async function renderStock() {
   $("#sk-b").innerHTML = `<div class="sec">入りと出をシグナルで決める売買(直近1年・100株ずつ)</div>
     <p class="note"><b>②のルール</b>で、全シグナル(ローソク足・チャート・テクニカル・抵抗帯)を、1銘柄・1種類・1方向につき、同時に持つのは1ポジションとして計算しています(保有中に同じ向きのシグナルが出ても買い増ししない。同じバーで入る複数のシグナルは1行にまとめる)。出は、同じ種類の逆向きのシグナルが出た次のバーの始値、まだ出ていないものは「保有中」で最新終値です。${COSTNOTE}この表は、上の「見方」の切り替えに関係なく、②のルールです。<b>チャートパターンは、逆向きのパターンがなかなか出ないので、保有が長くなります</b>(全銘柄の中央値: 週足で約42週、日足で約40日)。</p>
     <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
-    (trs.length ? `<p class="note">行をタップ(クリック)すると、その銘柄のチャート上で、シグナルの日・エントリー・イグジットを見られます。</p><div class="tw"><table class="gt fit"><thead><tr><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map((r, i) => { const t = r.t; return `<tr class="trrow" data-i="${i}" tabindex="0"><td class="sg"><small>${FAM[r.f]}</small><br>${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])}<br><small>${Math.round(t[3]).toLocaleString()}円</small></td><td>${r.open ? "<b>保有中</b><br><small>最新終値 " + Math.round(t[4]).toLocaleString() + "円</small>" : fmtDate(M, t[2]) + "<br><small>" + Math.round(t[4]).toLocaleString() + "円</small>"}</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
+    (trs.length ? `<p class="note">表の行(またはチャート上の印)をクリックすると、その取引が、チャート上に表示されます。</p><div id="sk-chart-b" style="margin:8px 0"></div><div class="tw trscroll"><table class="gt fit"><thead><tr><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map((r, i) => { const t = r.t; return `<tr class="trrow" data-i="${i}" tabindex="0"><td class="sg"><small>${FAM[r.f]}</small><br>${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])}<br><small>${Math.round(t[3]).toLocaleString()}円</small></td><td>${r.open ? "<b>保有中</b><br><small>最新終値 " + Math.round(t[4]).toLocaleString() + "円</small>" : fmtDate(M, t[2]) + "<br><small>" + Math.round(t[4]).toLocaleString() + "円</small>"}</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
   const chartOpt = extra => ({ tf: G.tf, code, stkname: st[1], M, nm, tag, dir, FAMN: FAM, yen, sgn, f1, COSTNOTE, ...extra });
-  const openRow = i => { const r = trs[i], t = r.t; openChart(chartOpt({ trade: { e: t[1], x: t[2], pe: t[3], px: t[4], w: t[5], net: t[6], y: r.y, open: r.open, entry: t[0], exit: t[7] || [] } })); };
-  $("#sk-b").querySelectorAll("tr.trrow").forEach(tr => { tr.onclick = () => openRow(+tr.dataset.i); tr.onkeydown = e => { if (e.key === "Enter") openRow(+tr.dataset.i); }; });
+  const hook = (host, rows, sel0, mk) => {
+    if (!rows.length) return;
+    const mark = i => rows.forEach((tr, j) => tr.classList.toggle("sel", j === i));
+    mountChart(host, chartOpt({ items: mk, sel: sel0, onselect: i => { mark(i); rows[i].scrollIntoView({ block: "nearest" }); } })).then(ctl => {
+      if (!ctl) return; mark(sel0);
+      rows.forEach((tr, j) => { const go = () => { mark(j); ctl.select(j); }; tr.onclick = go; tr.onkeydown = e => { if (e.key === "Enter") go(); }; });
+      const sc = rows[sel0].closest(".trscroll"); if (sc) sc.scrollTop = rows[sel0].offsetTop - sc.clientHeight / 2;
+    });
+  };
+  hook($("#sk-chart-b"), [...$("#sk-b").querySelectorAll("tr.trrow")], trs.length - 1, trs.map(r => { const t = r.t; return { trade: { e: t[1], x: t[2], pe: t[3], px: t[4], w: t[5], net: t[6], y: r.y, open: r.open, entry: t[0], exit: t[7] || [] } }; }));
 
   /* C. 全期間の、シグナル別の成績: 並び順は、基準(全銘柄)の平均。自身は参考 */
   let oAll; try { oAll = (await mfile(mname()))[code] || []; } catch (e) { oAll = []; }
