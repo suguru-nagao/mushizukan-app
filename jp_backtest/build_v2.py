@@ -15,7 +15,7 @@ TF = sys.argv[1] if len(sys.argv) > 1 else "W"
 OUT = "report_data/v2"; os.makedirs(OUT, exist_ok=True)
 meta = pickle.load(open(f"cache/v2_{TF}_meta.pkl", "rb")); HH = pd.read_pickle(f"cache/v2_{TF}_H.pkl"); OO = pd.read_pickle(f"cache/v2_{TF}_O.pkl")
 sigs, codes, holds, T = meta["sigs"], meta["codes"], meta["holds"], len(meta["dates"]); NS, NC = len(sigs), len(codes)
-LAST = {"W": 52, "D": 250, "M": 12}[TF]; LIT = 2; SH = 400
+LAST = {"W": 52, "D": 250, "M": 12}[TF]; LIT = {"W": 2, "D": 2, "M": 1}[TF]; SH = 400
 def dump(name, obj):
     json.dump(obj, open(f"{OUT}/{name}", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"), allow_nan=False)
 
