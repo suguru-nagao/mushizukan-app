@@ -268,6 +268,129 @@ function seg(host, items, current, on) {
   host.innerHTML = "";
   items.forEach(([v, label]) => { const b = el("button", { type: "button", "aria-pressed": String(v === current) }, label); b.onclick = () => { on(v); seg(host, items, v, on); }; host.appendChild(b); });
 }
+/* ---- シグナル名のポップアップ説明 ---- */
+const SIG_CANDLE = {
+  "ハンマー": ["買い", "下落の後に出る、下ヒゲが長く、実体が小さい足。売りが出尽くして反発する形。", "実体が値幅の35%以下、下ヒゲが実体の2倍以上、上ヒゲが値幅の10%以下。直前5本で下落していること。"],
+  "首吊り線": ["売り", "上昇の後に出る、ハンマーと同じ形の足。天井圏での反落のサイン。", "ハンマーと同じ形で、直前5本で上昇していること。"],
+  "逆ハンマー": ["買い", "下落の後に出る、上ヒゲが長く、実体が小さい足。底での反発を試す形。", "実体が値幅の35%以下、上ヒゲが実体の2倍以上、下ヒゲが値幅の10%以下。直前5本で下落していること。"],
+  "流れ星": ["売り", "上昇の後に出る、逆ハンマーと同じ形の足。高値を試して押し戻された形。", "逆ハンマーと同じ形で、直前5本で上昇していること。"],
+  "大陽線": ["買い", "始値から終値まで大きく上げた、強い陽線。", "終値が始値より高く、実体が値幅の60%以上。"],
+  "大陰線": ["売り", "始値から終値まで大きく下げた、強い陰線。", "終値が始値より低く、実体が値幅の60%以上。"],
+  "陽の包み足": ["買い", "下落の後、前の陰線の実体を、次の陽線が完全に包む形。売りから買いへの転換。", "前の足が陰線、当日が陽線で、始値が前の終値以下、終値が前の始値以上、実体が前の実体より大きい。直前は下落。"],
+  "陰の包み足": ["売り", "上昇の後、前の陽線の実体を、次の陰線が完全に包む形。買いから売りへの転換。", "前の足が陽線、当日が陰線で、実体が前の実体を包む。直前は上昇。"],
+  "陽のはらみ足": ["買い", "下落の後、大きな陰線の実体の内側に、小さな陽線が収まる形。下げの勢いが止まったサイン。", "前の足が大きな陰線(実体が値幅の60%以上)、当日が小さな陽線で、前の実体の内側に収まる。直前は下落。"],
+  "陰のはらみ足": ["売り", "上昇の後、大きな陽線の実体の内側に、小さな陰線が収まる形。上げの勢いが止まったサイン。", "前の足が大きな陽線、当日が小さな陰線で、前の実体の内側に収まる。直前は上昇。"],
+  "切り込み線": ["買い", "下落の後、大陰線の翌日に、安値を割って始まりながら、陰線の実体の半分以上まで戻して引ける陽線。", "前の足が大陰線、当日が陽線で、始値が前の安値より下、終値が前の実体の中心より上で、前の始値より下。直前は下落。"],
+  "かぶせ線": ["売り", "上昇の後、大陽線の翌日に、高値を超えて始まりながら、陽線の実体の半分以下まで押し戻されて引ける陰線。", "前の足が大陽線、当日が陰線で、始値が前の高値より上、終値が前の実体の中心より下で、前の始値より上。直前は上昇。"],
+  "毛抜き底": ["買い", "下落の後、陰線の翌日に、ほぼ同じ安値をつけて陽線で引ける形。安値が2回支えられた形。", "前の足が陰線、当日が陽線で、安値の差が0.1%以内。直前は下落。"],
+  "毛抜き天井": ["売り", "上昇の後、陽線の翌日に、ほぼ同じ高値をつけて陰線で引ける形。高値が2回抑えられた形。", "前の足が陽線、当日が陰線で、高値の差が0.1%以内。直前は上昇。"],
+  "明けの明星": ["買い", "下落の後に出る、大陰線→小さな足(星)→大陽線の3本。底打ちから反転する形。", "1本目が大陰線、2本目が小さな実体で、1本目の終値より下、3本目が陽線で、1本目の実体の中心より上で引ける。"],
+  "宵の明星": ["売り", "上昇の後に出る、大陽線→小さな足(星)→大陰線の3本。天井から反転する形。", "1本目が大陽線、2本目が小さな実体で、1本目の終値より上、3本目が陰線で、1本目の実体の中心より下で引ける。"],
+  "赤三兵": ["買い", "陽線が3本続き、始値・終値ともに切り上がる形。買いの勢いが続くサイン。", "3本連続の陽線で、終値が前の終値より高く、始値も前の始値より高い。"],
+  "黒三兵": ["売り", "陰線が3本続き、始値・終値ともに切り下がる形。売りの勢いが続くサイン。", "3本連続の陰線で、終値が前の終値より低く、始値も前の始値より低い。"]
+};
+const SIG_TECH = {
+  "ゴールデンクロス(5日×25日)": ["買い", "短期(5日)の移動平均が、長期(25日)の移動平均を、下から上に抜けた日。", "5日単純移動平均が25日を上抜け。"],
+  "デッドクロス(5日×25日)": ["売り", "短期(5日)の移動平均が、長期(25日)の移動平均を、上から下に抜けた日。", "5日単純移動平均が25日を下抜け。"],
+  "ゴールデンクロス(25日×75日)": ["買い", "25日の移動平均が、75日の移動平均を、下から上に抜けた日。中期のトレンド転換。", "25日単純移動平均が75日を上抜け。"],
+  "デッドクロス(25日×75日)": ["売り", "25日の移動平均が、75日の移動平均を、上から下に抜けた日。", "25日単純移動平均が75日を下抜け。"],
+  "上昇パーフェクトオーダー": ["買い", "終値>5日>25日>75日の順に並んだ(上昇トレンドが整った)最初の日。", "終値 > 5日線 > 25日線 > 75日線 になった最初の日。"],
+  "下降パーフェクトオーダー": ["売り", "終値<5日<25日<75日の順に並んだ(下降トレンドが整った)最初の日。", "終値 < 5日線 < 25日線 < 75日線 になった最初の日。"],
+  "RSI 30以下に入る": ["買い", "RSI(14)が、売られすぎの30以下に入った日(逆張り)。", "RSI(14, ワイルダー)が、前日は30超、当日は30以下。"],
+  "RSI 70以上に入る": ["売り", "RSI(14)が、買われすぎの70以上に入った日(逆張り)。", "RSI(14, ワイルダー)が、前日は70未満、当日は70以上。"],
+  "RSI 30を上抜け": ["買い", "RSI(14)が、30を下から上に抜けた日(売られすぎからの回復)。", "RSI(14)が、前日は30以下、当日は30超。"],
+  "RSI 70を下抜け": ["売り", "RSI(14)が、70を上から下に抜けた日(買われすぎからの反落)。", "RSI(14)が、前日は70以上、当日は70未満。"],
+  "MACDがシグナルを上抜け": ["買い", "MACD(12,26)が、その移動平均(シグナル、9)を、下から上に抜けた日。", "MACDがシグナル線を上抜け。"],
+  "MACDがシグナルを下抜け": ["売り", "MACD(12,26)が、シグナル線を、上から下に抜けた日。", "MACDがシグナル線を下抜け。"],
+  "MACDがゼロを上抜け": ["買い", "MACDが、ゼロを下から上に抜けた日(短期の平均が長期を上回った)。", "MACDが0を上抜け。"],
+  "MACDがゼロを下抜け": ["売り", "MACDが、ゼロを上から下に抜けた日。", "MACDが0を下抜け。"],
+  "ボリンジャー -2σ割れ": ["買い", "終値が、ボリンジャーバンドの下限(−2σ)を割った日(売られすぎ、逆張り)。", "20本の移動平均 − 2標準偏差を、終値が割り込んだ日。"],
+  "ボリンジャー +2σ超え": ["売り", "終値が、ボリンジャーバンドの上限(+2σ)を超えた日(買われすぎ、逆張り)。", "20本の移動平均 + 2標準偏差を、終値が超えた日。"],
+  "ストキャスティクス 売られすぎでクロス上抜け": ["買い", "%Kが%Dを下から上に抜け、かつ%Dが20以下(売られすぎ圏)にある日。", "スローストキャスティクス(14,3,3)で、%Kが%Dを上抜け、%D ≤ 20。"],
+  "ストキャスティクス 買われすぎでクロス下抜け": ["売り", "%Kが%Dを上から下に抜け、かつ%Dが80以上(買われすぎ圏)にある日。", "スローストキャスティクス(14,3,3)で、%Kが%Dを下抜け、%D ≥ 80。"],
+  "乖離率 -10%以下に入る": ["買い", "株価が、25日移動平均より10%以上下に離れた日(売られすぎ、逆張り)。", "25本移動平均からの乖離率が、前日は−10%超、当日は−10%以下。"],
+  "乖離率 +10%以上に入る": ["売り", "株価が、25日移動平均より10%以上上に離れた日(買われすぎ、逆張り)。", "25本移動平均からの乖離率が、前日は+10%未満、当日は+10%以上。"],
+  "一目: 雲を上抜け": ["買い", "終値が、一目均衡表の雲(先行スパン1・2の間)の上限を、下から上に抜けた日。", "終値が雲の上限を上抜け(9, 26, 52)。"],
+  "一目: 雲を下抜け": ["売り", "終値が、一目均衡表の雲の下限を、上から下に抜けた日。", "終値が雲の下限を下抜け。"],
+  "一目: 転換線が基準線を上抜け(好転)": ["買い", "一目均衡表で、転換線(9本の中値)が、基準線(26本の中値)を、下から上に抜けた日(好転)。", "転換線が基準線を上抜け。"],
+  "一目: 転換線が基準線を下抜け(逆転)": ["売り", "一目均衡表で、転換線が、基準線を、上から下に抜けた日(逆転)。", "転換線が基準線を下抜け。"],
+  "一目: 三役好転": ["買い", "一目均衡表の3つの買い条件(転換線>基準線、終値が雲の上、遅行スパンが26本前の株価の上)が、そろった最初の日。", "三役の条件がそろった最初の日。"],
+  "一目: 三役逆転": ["売り", "一目均衡表の3つの売り条件が、そろった最初の日。", "三役逆転の条件がそろった最初の日。"],
+  "DMI: +DIが-DIを上抜け(ADX>25)": ["買い", "上昇の勢い(+DI)が下降の勢い(−DI)を上抜け、かつトレンドの強さ(ADX)が25を超える日。", "DMI/ADX(14, ワイルダー)で、+DIが−DIを上抜け、ADX > 25。"],
+  "DMI: +DIが-DIを下抜け(ADX>25)": ["売り", "上昇の勢い(+DI)が下降の勢い(−DI)を下抜け、かつトレンドの強さ(ADX)が25を超える日。", "+DIが−DIを下抜け、ADX > 25。"],
+  "パラボリックSAR 買い転換": ["買い", "パラボリックSAR(株価に追随する反転の目印の点)が、株価の下に移った(下降から上昇へ転換した)日。", "加速0.02、最大0.2。下降中に、高値がSAR(株価の上にある点)を上回った日。"],
+  "パラボリックSAR 売り転換": ["売り", "パラボリックSARが、株価の上に移った(上昇から下降へ転換した)日。", "加速0.02、最大0.2。上昇中に、安値がSAR(株価の下にある点)を下回った日。"],
+  "新高値更新(長期)": ["買い", "終値が、直前の長期間(日足250日・週足52週・月足12か月)の高値を、更新した日。", "終値が直前の長期間の高値を上回る。"],
+  "新安値更新(長期)": ["売り", "終値が、直前の長期間(日足250日・週足52週・月足12か月)の安値を、更新した日。", "終値が直前の長期間の安値を下回る。"],
+  "新高値更新(短期)": ["買い", "終値が、直前の短期間(日足60日・週足13週・月足6か月)の高値を、更新した日。", "終値が直前の短期間の高値を上回る。"],
+  "新安値更新(短期)": ["売り", "終値が、直前の短期間(日足60日・週足13週・月足6か月)の安値を、更新した日。", "終値が直前の短期間の安値を下回る。"]
+};
+const CH_FORM = {
+  "ダブルトップ": ["売り", "同じ高さの山が2つできた後、間の谷(ネックライン)を、終値で下に抜けた日。天井の形。"],
+  "トリプルトップ": ["売り", "同じ高さの山が3つできた後、谷を結んだネックラインを、終値で下に抜けた日。"],
+  "三尊": ["売り", "中央の山(頭)が左右の肩より高い、3つの山の後、ネックラインを終値で下に抜けた日。"],
+  "ダブルボトム": ["買い", "同じ深さの谷が2つできた後、間の山(ネックライン)を、終値で上に抜けた日。底の形。"],
+  "トリプルボトム": ["買い", "同じ深さの谷が3つできた後、山を結んだネックラインを、終値で上に抜けた日。"],
+  "逆三尊": ["買い", "中央の谷(頭)が左右の肩より深い、3つの谷の後、ネックラインを終値で上に抜けた日。"]
+};
+const CH_SHAPE = {
+  "上昇三角": "高値がほぼ水平で、安値が切り上がる(上値が重いが、下値が上がる)保ち合い",
+  "下降三角": "安値がほぼ水平で、高値が切り下がる保ち合い",
+  "対称三角": "高値が切り下がり、安値が切り上がる、収束する保ち合い",
+  "上昇ウェッジ": "高値も安値も切り上がりながら、幅が狭まる保ち合い",
+  "下降ウェッジ": "高値も安値も切り下がりながら、幅が狭まる保ち合い",
+  "上昇チャネル": "高値も安値も、ほぼ平行に切り上がる保ち合い",
+  "下降チャネル": "高値も安値も、ほぼ平行に切り下がる保ち合い"
+};
+const ZEV = {
+  "抵抗帯に到達(跳ね返される)": ["売り", "{z}(上にある、価格帯別出来高が厚い価格帯)に、高値が初めて届いたが、終値は帯の上端を超えられなかった(跳ね返された)日。"],
+  "抵抗帯を上抜け": ["買い", "終値が、{z}の上端を、初めて超えた日。"],
+  "支持帯に到達(跳ね返す)": ["買い", "{z}(下にある、価格帯別出来高が厚い価格帯)に、安値が初めて届いたが、終値は帯の下端を割らなかった(跳ね返した)日。"],
+  "支持帯を下抜け": ["売り", "終値が、{z}の下端を、初めて割った日。"],
+  "抵抗線に到達(跳ね返される)": ["売り", "{z}(過去の折り返し点を2回以上結んだ水平線)に、高値が初めて届いたが、終値は上抜けられなかった日。"],
+  "抵抗線を上抜け": ["買い", "終値が、{z}の上端を、初めて超えた日。"],
+  "支持線に到達(跳ね返す)": ["買い", "{z}(過去の折り返し点を2回以上結んだ水平線)に、安値が初めて届いたが、終値は割らなかった日。"],
+  "支持線を下抜け": ["売り", "終値が、{z}の下端を、初めて割った日。"]
+};
+function sigInfo(name) {
+  let m;
+  if (SIG_CANDLE[name]) { const [d, s, c] = SIG_CANDLE[name]; return { kind: "ローソク足", d, s, c }; }
+  if (SIG_TECH[name]) { const [d, s, c] = SIG_TECH[name]; return { kind: name.startsWith("新") ? "抵抗帯・新高値/新安値" : "テクニカル", d, s, c }; }
+  if (CH_FORM[name]) { const [d, s] = CH_FORM[name]; return { kind: "チャートパターン", d, s, c: "シグナルは、ネックラインを終値で抜けた日(形が確定してから)。直前に、5%以上のトレンドがあることが条件。" }; }
+  if ((m = name.match(/^(.+)・(上抜け|下抜け)$/)) && CH_SHAPE[m[1]]) return { kind: "チャートパターン", d: m[2] === "上抜け" ? "買い" : "売り", s: `${CH_SHAPE[m[1]]}を、終値で${m[2] === "上抜け" ? "上" : "下"}に抜けた日。`, c: "直近の2つずつの高値・安値を結んだ2本のラインで、値幅の変化率が0.75未満なら収束(三角・ウェッジ)、0.75〜1.25なら平行(チャネル)。ここでは、" + (m[2] === "上抜け" ? "上抜けを買い" : "下抜けを売り") + "として評価。" };
+  // 抵抗帯・支持帯・ライン
+  const pre = { "線のみ: ": ["線のみ", "価格帯別出来高の帯と重ならない水平線(折り返し点を結んだ線)"], "出来高のみ: ": ["出来高のみ", "水平線と重ならない、価格帯別出来高の帯"], "重なり: ": ["重なり", "価格帯別出来高の帯と、水平線(折り返し点を結んだ線)が重なる価格帯"], "線: ": ["線", "水平線(折り返し点を結んだ線)"] };
+  let key = name, zd = "価格帯別出来高の帯(抵抗帯・支持帯)", tagName = "";
+  for (const [p, [t, dsc]] of Object.entries(pre)) if (name.startsWith(p)) { key = name.slice(p.length); zd = dsc; tagName = t; break; }
+  const ev = ZEV[key] || ZEV[key.replace("帯", "線")];
+  if (ev) {
+    const z = key.includes("抵抗") ? (key.includes("線") ? "抵抗線" : "抵抗帯") : (key.includes("線") ? "支持線" : "支持帯");
+    return { kind: "抵抗帯・支持帯・ライン" + (tagName ? "(" + tagName + ")" : ""), d: ev[0], s: ev[1].replace("{z}", tagName === "線のみ" || tagName === "線" ? z : z + "(" + zd + ")"), c: "価格帯別出来高の帯は、直近の窓(日足120本・週足52本・月足36本)の出来高で、現在値の上下で最も厚い価格帯(平均の2倍以上)。水平線は、前後K本で最も高い(安い)足を折り返し点とし、近い価格どうしを2回以上まとめた線(±0.75%)。" };
+  }
+  return null;
+}
+const tipBox = (() => {
+  const d = document.createElement("div"); d.id = "sigtip"; d.hidden = true;
+  d.style.cssText = "position:fixed;z-index:50;max-width:340px;padding:10px 13px;border-radius:12px;border:1px solid var(--line);background:var(--bg,#fff);color:var(--fg);box-shadow:0 8px 30px rgba(0,0,0,.25);font-size:12.5px;line-height:1.65;pointer-events:none";
+  document.body.appendChild(d); return d;
+})();
+function showTip(t) {
+  const i = sigInfo(t.dataset.sig); if (!i) return;
+  tipBox.innerHTML = `<div style="font-size:11px;color:var(--dim)">${i.kind}</div><div style="font-weight:700;margin:2px 0 4px">${t.dataset.sig}<span class="tag ${i.d === "買い" ? "buy" : "sell"}">${i.d}</span></div><div>${i.s}</div><div style="color:var(--dim);margin-top:5px"><b>判定</b>: ${i.c}</div><div style="color:var(--dim);margin-top:5px">シグナルは、その足の引け後に確定し、<b>次の足の始値</b>で${i.d === "買い" ? "買い(ロング)" : "売り(ショート、空売り)"}でエントリーした場合を、集計しています。</div>`;
+  tipBox.hidden = false;
+  const r = t.getBoundingClientRect(), w = tipBox.offsetWidth, h = tipBox.offsetHeight;
+  let x = Math.min(Math.max(8, r.left), innerWidth - w - 8), y = r.bottom + 8; if (y + h > innerHeight - 8) y = Math.max(8, r.top - h - 8);
+  tipBox.style.left = x + "px"; tipBox.style.top = y + "px";
+}
+const hideTip = () => { tipBox.hidden = true; };
+document.addEventListener("mouseover", e => { const t = e.target.closest && e.target.closest("[data-sig]"); if (t) showTip(t); });
+document.addEventListener("mouseout", e => { const t = e.target.closest && e.target.closest("[data-sig]"); if (t && !(e.relatedTarget && t.contains(e.relatedTarget))) hideTip(); });
+document.addEventListener("focusin", e => { const t = e.target.closest && e.target.closest("[data-sig]"); if (t) showTip(t); });
+document.addEventListener("focusout", hideTip);
+document.addEventListener("click", e => { const t = e.target.closest && e.target.closest("[data-sig]"); if (t) { tipBox.hidden ? showTip(t) : hideTip(); } else hideTip(); });
+window.addEventListener("scroll", hideTip, { passive: true });
+const SN = name => sigInfo(name) ? `<span class="tipname" tabindex="0" data-sig="${name}">${name}</span>` : name;
+
 const CACHE = {};
 function V(path) { if (!CACHE[path]) CACHE[path] = fetch("report_data/v2/" + path).then(r => { if (!r.ok) throw new Error(path + " " + r.status); return r.json(); }).catch(e => { delete CACHE[path]; throw e; }); return CACHE[path]; }
 
@@ -332,7 +455,7 @@ async function renderSummary() {
   const rows = [];
   ["candle", "chart", "tech", "zone"].forEach(f => [1, -1].forEach(d => { const g = rs.filter(r => r.fam === f && r.d === d); if (g.length) rows.push(`<tr><td>${FAM[f]}</td><td>${d > 0 ? "買い" : "売り"}</td><td>${g.length}</td><td>${g.reduce((a, r) => a + r.n, 0).toLocaleString()}</td><td>${wavg(g, "win").toFixed(1)}%</td><td class="${sgn(wavg(g, "mean"))}">${f1(wavg(g, "mean"))}</td><td class="${sgn(wavg(g, "ex"))}">${f1(wavg(g, "ex"))}</td></tr>`); }));
   $("#sm-fam").innerHTML = `<thead><tr><th>種類</th><th>売買</th><th>シグナル数</th><th>件数</th><th>勝率</th><th>平均<small>(コスト後bp)</small></th><th>市場超過<small>(bp)</small></th></tr></thead><tbody>${rows.join("")}</tbody>`;
-  const line = r => `<tr><td>${FAM[r.fam]}</td><td class="k">${r.name}<span class="tag ${r.d > 0 ? "buy" : "sell"}">${r.d > 0 ? "買い" : "売り"}</span></td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}">${f1(r.mean)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td></tr>`;
+  const line = r => `<tr><td>${FAM[r.fam]}</td><td class="k">${SN(r.name)}<span class="tag ${r.d > 0 ? "buy" : "sell"}">${r.d > 0 ? "買い" : "売り"}</span></td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}">${f1(r.mean)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td></tr>`;
   const head = "<thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均</th><th>市場超過</th></tr></thead>";
   const srt = big.slice().sort((a, b) => b.mean - a.mean);
   $("#sm-top").innerHTML = head + `<tbody>${srt.slice(0, 8).map(line).join("")}</tbody>`;
@@ -355,7 +478,7 @@ async function renderSig() {
   const rs = rowsAll(A.M, A.b, G.z).filter(r => r.d === d && (G.fam === "all" || r.fam === G.fam)).sort((a, b) => b[G.o] - a[G.o]);
   const stab = r => r.h1 == null || r.h2 == null ? "–" : (r.h1 > 0) === (r.h2 > 0) ? `<span style="color:var(--good)">同じ向き</span>` : `<span style="color:var(--bad)">逆</span>`;
   $("#sg-tab").innerHTML = `<thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均<small>(コスト後bp)</small></th><th>中央値</th><th>市場超過</th><th>前半 / 後半</th><th>安定</th>${G.mode === "o" ? "<th>保有<small>(中央値)</small></th>" : ""}</tr></thead><tbody>` +
-    (rs.map(r => `<tr><td>${FAM[r.fam]}</td><td class="k">${r.name}</td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}"><b>${f1(r.mean)}</b></td><td>${f1(r.med)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td><td>${f1(r.h1)} / ${f1(r.h2)}</td><td>${stab(r)}</td>${G.mode === "o" ? `<td>${r.bars ?? "–"}</td>` : ""}</tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
+    (rs.map(r => `<tr><td>${FAM[r.fam]}</td><td class="k">${SN(r.name)}</td><td>${r.n.toLocaleString()}</td><td>${r.win.toFixed(1)}%</td><td class="${sgn(r.mean)}"><b>${f1(r.mean)}</b></td><td>${f1(r.med)}</td><td class="${sgn(r.ex)}">${f1(r.ex)}</td><td>${f1(r.h1)} / ${f1(r.h2)}</td><td>${stab(r)}</td>${G.mode === "o" ? `<td>${r.bars ?? "–"}</td>` : ""}</tr>`).join("") || `<tr><td colspan="10">該当するシグナルがありません。</td></tr>`) + "</tbody>";
 }
 
 /* ---- 銘柄別シグナル ---- */
@@ -382,7 +505,7 @@ async function renderStock() {
   let cur, TR, BASE;
   try { [cur, TR, BASE] = await Promise.all([mfile(mname()), V(`${G.tf}_tr_${k}.json`), V(G.tf + "_base.json")]); } catch (e) { $("#sk-sum").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
   const own = {}; (cur[code] || []).forEach(r => own[r[0]] = r);
-  const nm = sid => M.sigs[sid][0], fam = sid => FAM[M.sigs[sid][1]], dir = sid => M.sigs[sid][2];
+  const nm = sid => SN(M.sigs[sid][0]), fam = sid => FAM[M.sigs[sid][1]], dir = sid => M.sigs[sid][2];
   const tag = sid => `<span class="tag ${dir(sid) > 0 ? "buy" : "sell"}">${dir(sid) > 0 ? "買い" : "売り"}</span>`;
   const lit = (LIT[code] || []);
 
