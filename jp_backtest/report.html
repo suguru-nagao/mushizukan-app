@@ -325,7 +325,7 @@ async function renderSummary() {
     "<b>勝率が5割を超える取引は、ほとんどありません。</b>売買コストと、買いなら上昇が続かないこと、売りなら上昇相場の中で逆行することが重なるためです。勝率が低くても、勝つときの利益が大きければ、平均はプラスになります(SARなどの順張り)。",
     "<b>平均が大きく見えても、市場の上昇を引くと消える</b>ことが多いです。「市場超過」の列を見てください。長期の週足は、上昇相場の期間が長く、買いの平均が良く見えやすいです。",
     "<b>同じ取引が複数のシグナルに重なります</b>(例: 大陽線と赤三兵が同じ週に出る)。シグナルごとの件数を足し合わせないでください。",
-    "<b>銘柄ごとの結果は、件数が少ないとぶれます</b>。「銘柄別シグナル」では、自身の件数・仲間(値動きが似た銘柄)・同規模の全銘柄を並べて見られます。",
+    "<b>銘柄ごとの結果は、件数が少ないとぶれます</b>。検証では、銘柄自身の過去の実績や、値動きが似た銘柄群・同業種を基準にしても、全銘柄(または同規模)の成績より当たりませんでした。「銘柄別シグナル」は、全銘柄の成績を基準に置き、同規模と自身は参考として併記しています。",
     "生存者バイアス(上場廃止の銘柄が少ない)と、取引の単位(売買代金・板)の制約は、考慮していません。"].map(t => `<li>${t}</li>`).join("");
 }
 
@@ -363,26 +363,25 @@ async function renderStock() {
   if (ci < 0) { $("#sk-sum").innerHTML = `<b>${st[0]} ${st[1]}</b>は、${G.tf === "W" ? "長期の週足データ(2000年〜)" : "日足データ(2021年〜)"}に履歴がありません。`; ["#sk-a", "#sk-b", "#sk-c"].forEach(s => $(s).innerHTML = ""); return; }
   const k = Math.floor(ci / M.shard), code = st[4], unit = G.tf === "W" ? "週" : "日";
   const mfile = m => V(`${G.tf}_${m}_${k}.json`);
-  let cur, allh, TR, BASE;
-  try { [cur, TR, BASE] = await Promise.all([mfile(mname()), V(`${G.tf}_tr_${k}.json`), V(G.tf + "_base.json")]); allh = await Promise.all(HOLDS[G.tf].map(h => mfile("h" + h))); } catch (e) { $("#sk-sum").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
+  let cur, TR, BASE;
+  try { [cur, TR, BASE] = await Promise.all([mfile(mname()), V(`${G.tf}_tr_${k}.json`), V(G.tf + "_base.json")]); } catch (e) { $("#sk-sum").textContent = "データを読み込めませんでした(" + e.message + ")"; return; }
   const sz = M.size ? M.size[ci] : 3, own = {}; (cur[code] || []).forEach(r => own[r[0]] = r);
-  const byH = {}; HOLDS[G.tf].forEach((h, i) => { byH[h] = {}; (allh[i][code] || []).forEach(r => byH[h][r[0]] = r); });
   const bz = (m, sid) => ((BASE[m] || {})[sid] || {})[sz] || ((BASE[m] || {})[sid] || {})[3];
   const nm = sid => M.sigs[sid][0], fam = sid => FAM[M.sigs[sid][1]], dir = sid => M.sigs[sid][2];
   const tag = sid => `<span class="tag ${dir(sid) > 0 ? "buy" : "sell"}">${dir(sid) > 0 ? "買い" : "売り"}</span>`;
   const lit = (LIT[code] || []);
 
-  /* A. 点灯中のシグナルと、過去の実績から見た今後の動き */
-  const est = (h, sid) => { const r = (byH[h] || {})[sid], b = bz("h" + h, sid); if (r && r[5] >= 30 && r[7] != null) return [r[7], "仲間"]; if (r && r[1] >= 10) return [r[3], "自身"]; return b ? [b[2], "規模"] : [null, ""]; };
-  const rowsA = lit.map(([sid, t]) => { const r = own[sid], b = bz(mname(), sid), e = est(G.h[G.tf] || HOLDS[G.tf][0], sid)[0]; return { sid, t, r, b, e }; }).sort((x, y) => dir(y.sid) - dir(x.sid) || (y.e ?? -1e9) - (x.e ?? -1e9));
-  const peerCols = G.tf === "W";
-  const cellA = r => `${r ? r[1] : 0}</td><td>${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}">${r && r[3] != null ? f1(r[3]) : "–"}`;
-  const fut = sid => HOLDS[G.tf].map(h => { const [v, src] = est(h, sid); return `<td class="${sgn(v)}">${v == null ? "–" : f1(v)}<small style="color:var(--dim)"> ${src}</small></td>`; }).join("");
+  /* A. 点灯中のシグナルと、過去の実績から見た今後の動き: 基準 = 全銘柄(同規模を併記)。自身は参考 */
+  const bAll = (m, sid) => ((BASE[m] || {})[sid] || {})[3];
+  const hsel = G.h[G.tf];
+  const rowsA = lit.map(([sid, t]) => ({ sid, t, r: own[sid], a: bAll(mname(), sid), b: bz(mname(), sid), e: (bAll("h" + hsel, sid) || [])[2] })).sort((x, y) => dir(y.sid) - dir(x.sid) || (y.e ?? -1e9) - (x.e ?? -1e9));
+  const fut = sid => HOLDS[G.tf].map(h => { const b = bz("h" + h, sid), v = b ? b[2] : null; return `<td class="${sgn(v)}">${v == null ? "–" : f1(v)}</td>`; }).join("");
+  const szLab = M.size ? ["小型", "中型", "大型"][sz] : "全体";
   $("#sk-a").innerHTML = `<div class="sec">いま点灯しているシグナルと、過去の実績から見た今後の動き</div>
-    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。「今後の動き」は、同じシグナルが出た後の、保有期間別の平均(コスト後bp)で、自身の件数が10以上なら<b>自身</b>、仲間(値動きが似た銘柄)の件数が30以上なら<b>仲間</b>、どちらも足りないときは<b>同規模の全銘柄</b>の平均です。</p>` +
-    (rowsA.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>点灯</th><th>自身: 件数</th><th>勝率</th><th>平均</th>${peerCols ? "<th>仲間: 件数</th><th>勝率</th><th>平均</th>" : ""}<th>同規模: 勝率</th><th>平均</th>${HOLDS[G.tf].map(h => `<th>${HL[G.tf][h]}後</th>`).join("")}</tr></thead><tbody>` +
-      rowsA.map(({ sid, t, r, b }) => `<tr><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${cellA(r)}</td>${peerCols ? `<td>${r ? r[5] : "–"}</td><td>${r && r[6] != null ? r[6].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[7])}">${r && r[7] != null ? f1(r[7]) : "–"}</td>` : ""}<td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td>${fut(sid)}</tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
-    `<p class="note">表の「自身・仲間・同規模」の列は、上の切り替え(${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"})の成績です。右の「今後の動き」は、保有期間別の平均です。件数が少ない値は、ぶれが大きいので、参考として見てください。</p>`;
+    <p class="note">最新のバーから${M.lit_bars}本以内に出たシグナルです(最新: ${M.dates[M.dates.length - 1]})。<b>基準は、そのシグナルの、全銘柄での過去の成績</b>です(検証で、銘柄自身の過去の実績や、値動きが似た銘柄群よりも、後の成績をよく当てられたため。下の注を参照)。同規模(${szLab})の成績を併記し、この銘柄自身の成績は、<b>参考</b>として最後に置いています。「今後の動き」は、同規模の全銘柄の、保有期間別の平均(コスト後bp)です。</p>` +
+    (rowsA.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>点灯</th><th>全銘柄: 件数</th><th>勝率</th><th>平均</th><th>同規模(${szLab}): 勝率</th><th>平均</th>${HOLDS[G.tf].map(h => `<th>${HL[G.tf][h]}後</th>`).join("")}<th>(参考)自身: 件数</th><th>勝率</th><th>平均</th></tr></thead><tbody>` +
+      rowsA.map(({ sid, t, r, a, b }) => `<tr><td>${fam(sid)}</td><td class="k">${nm(sid)}${tag(sid)}</td><td>${fmtDate(M, t)}</td><td>${a ? a[0].toLocaleString() : "–"}</td><td>${a ? a[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(a && a[2])}"><b>${a ? f1(a[2]) : "–"}</b></td><td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td>${fut(sid)}<td style="color:var(--dim)">${r ? r[1] : 0}</td><td style="color:var(--dim)">${r && r[2] != null ? r[2].toFixed(1) + "%" : "–"}</td><td class="${sgn(r && r[3])}" style="color:var(--dim)">${r && r[3] != null ? f1(r[3]) : "–"}</td></tr>`).join("") + "</tbody></table></div>" : `<p class="note">最新から${M.lit_bars}本以内に点灯しているシグナルは、ありません。</p>`) +
+    `<p class="note"><b>なぜ全銘柄を基準にするか</b>(週足・4週保有・コスト後で、2008〜2026年の各年について、その年より前のデータだけで予測し、その年の実際の平均との相関を見た結果): 全銘柄 0.181、同規模 0.181、値動きが似た銘柄群 0.18、同業種 0.17、同規模×同業種 0.16、<b>銘柄自身 0.07</b>。銘柄ごとの「効きやすいシグナル」は、前半から後半に続きませんでした(相関 0.01)。成績を見る期間は、全期間が最良で、直近に絞ると悪化します(5年 0.12)。上の切り替え(${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"})の成績です。${G.tf === "D" ? "※この検証は週足で行いました。日足では未検証です。" : ""}</p>`;
 
   /* B. 入りと出をシグナルで決める売買(直近1年・全シグナル) */
   const T = ((TR[code] || [])).slice().sort((a, b) => a[1] - b[1]);
@@ -394,15 +393,15 @@ async function renderStock() {
     <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>決済済み</th><th>決済済みの損益</th><th>保有中</th><th>保有中の含み</th><th>合計</th></tr></thead><tbody>${Object.entries(FAM).map(([f, l]) => trow(l, tot(f))).join("")}${trow("合計", tot(null))}</tbody></table></div>` +
     (trs.length ? `<div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>入り</th><th>出</th><th>${unit}</th><th>損益(100株)</th><th>損益率</th></tr></thead><tbody>` + trs.map(r => { const t = r.t; return `<tr><td>${FAM[r.f]}</td><td class="k">${t[0].map(nm).join("・")}${tag(t[0][0])}</td><td>${fmtDate(M, t[1])} ${Math.round(t[3]).toLocaleString()}円</td><td>${r.open ? "<b>保有中</b>(最新終値)" : fmtDate(M, t[2])} ${Math.round(t[4]).toLocaleString()}円</td><td>${t[5]}</td><td class="${sgn(r.y)}">${yen(r.y)}</td><td class="${sgn(t[6])}">${f1(t[6])}bp</td></tr>`; }).join("") + "</tbody></table></div>" : `<p class="note">直近1年に、この銘柄で、シグナルの売買は、ありませんでした。</p>`);
 
-  /* C. 全期間の、この銘柄のシグナル別の成績 */
+  /* C. 全期間の、この銘柄のシグナル別の成績: 並び順は、基準(全銘柄)の平均。自身は参考 */
   let oAll; try { oAll = (await mfile(mname()))[code] || []; } catch (e) { oAll = []; }
-  const dsel = G.side === "long" ? 1 : -1;
-  const rowsC = oAll.filter(r => dir(r[0]) === dsel && r[1] >= 3).sort((a, b) => b[3] - a[3]);
-  $("#sk-c").innerHTML = `<div class="sec">全期間(${G.tf === "W" ? "2000年〜" : "2021年〜"})の、この銘柄のシグナル別の成績</div>
+  const dsel = G.side === "long" ? 1 : -1, ownC = {}; oAll.forEach(r => ownC[r[0]] = r);
+  const rowsC = M.sigs.map((s, sid) => ({ sid, a: bAll(mname(), sid), b: bz(mname(), sid), r: ownC[sid] })).filter(x => dir(x.sid) === dsel && x.a).sort((x, y) => y.a[2] - x.a[2]);
+  $("#sk-c").innerHTML = `<div class="sec">全期間(${G.tf === "W" ? "2000年〜" : "2021年〜"})の、シグナル別の成績</div>
     <div class="ctl" style="margin:0"><label style="min-width:4.5em">売買</label><div class="seg" id="sk-side"></div></div>
-    <p class="note">${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"}の成績です(コスト後)。件数3以上のシグナルだけを表示します。同規模の全銘柄は、${M.size ? ["小型", "中型", "大型"][sz] : "全銘柄"}の平均です。</p>
-    <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>件数</th><th>勝率</th><th>平均<small>(bp)</small></th><th>中央値</th>${peerCols ? "<th>仲間: 件数</th><th>勝率</th><th>平均</th>" : ""}<th>同規模: 勝率</th><th>平均</th></tr></thead><tbody>` +
-    (rowsC.map(r => { const b = bz(mname(), r[0]); return `<tr><td>${fam(r[0])}</td><td class="k">${nm(r[0])}</td><td>${r[1]}</td><td>${r[2].toFixed(1)}%</td><td class="${sgn(r[3])}"><b>${f1(r[3])}</b></td><td>${f1(r[4])}</td>${peerCols ? `<td>${r[5]}</td><td>${r[6] != null ? r[6].toFixed(1) + "%" : "–"}</td><td class="${sgn(r[7])}">${r[7] != null ? f1(r[7]) : "–"}</td>` : ""}<td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td></tr>`; }).join("") || `<tr><td colspan="10">件数3以上のシグナルがありません。</td></tr>`) + "</tbody></table></div>";
+    <p class="note">${G.mode === "h" ? HL[G.tf][G.h[G.tf]] + "保有" : "反対のシグナルで出る"}の成績(コスト後)です。<b>基準は全銘柄の成績で、その平均の高い順</b>に並べています。同規模は${szLab}の平均、(参考)自身は、この銘柄だけの成績(件数が少ないとぶれます。件数3以上のみ表示)。</p>
+    <div class="tw"><table class="gt"><thead><tr><th>種類</th><th>シグナル</th><th>全銘柄: 件数</th><th>勝率</th><th>平均<small>(bp)</small></th><th>中央値</th><th>同規模: 勝率</th><th>平均</th><th>(参考)自身: 件数</th><th>勝率</th><th>平均</th><th>中央値</th></tr></thead><tbody>` +
+    (rowsC.map(({ sid, a, b, r }) => `<tr><td>${fam(sid)}</td><td class="k">${nm(sid)}</td><td>${a[0].toLocaleString()}</td><td>${a[1].toFixed(1)}%</td><td class="${sgn(a[2])}"><b>${f1(a[2])}</b></td><td>${f1(a[3])}</td><td>${b ? b[1].toFixed(1) + "%" : "–"}</td><td class="${sgn(b && b[2])}">${b ? f1(b[2]) : "–"}</td>${r && r[1] >= 3 ? `<td style="color:var(--dim)">${r[1]}</td><td style="color:var(--dim)">${r[2].toFixed(1)}%</td><td class="${sgn(r[3])}" style="color:var(--dim)">${f1(r[3])}</td><td style="color:var(--dim)">${f1(r[4])}</td>` : `<td colspan="4" style="color:var(--dim)">件数3未満</td>`}</tr>`).join("") || `<tr><td colspan="12">該当するシグナルがありません。</td></tr>`) + "</tbody></table></div>";
   seg($("#sk-side"), [["long", "買いシグナル"], ["short", "売りシグナル"]], G.side, v => { G.side = v; renderStock(); });
   const nl = rowsA.filter(r => dir(r.sid) > 0).length, ns = rowsA.length - nl;
   $("#sk-sum").innerHTML = `<b>${st[0]} ${st[1]}</b>(${["プライム", "スタンダード", "グロース"][st[2]] || ""}・${st[3]})。いま点灯中のシグナルは、買い ${nl} 件・売り ${ns} 件。直近1年の②の売買(100株ずつ)は、決済済み ${yen(tot(null).c)}、保有中の含み ${yen(tot(null).o)}、合計 <b>${yen(tot(null).c + tot(null).o)}</b> です。<em>過去の統計で、将来を保証しません。</em>`;
@@ -413,7 +412,7 @@ function renderDetail() {
   if ($("#dt-body").dataset.done) return; $("#dt-body").dataset.done = 1;
   const items = [
     ["ローソク足・チャートパターン・テクニカル指標・抵抗帯", "どのシグナルも、コストを引いて、同じ日の平均や市場の上昇を引いても安定して利益が残る形は、ほとんど見つかっていません。日足では、小型株の逆張りが大きく見えても、「大きく動いた日の反転」と同じ現象で、同じ騰落率の日と比べると差が消えます。"],
-    ["銘柄ごとの推定(仲間の平均)", "1銘柄だとサンプルが少ないので、値動きが似た同規模の上位200銘柄(仲間)の、同じシグナルの平均で推定すると、自身の平均・規模の平均・業種よりも、後半の成績をよく当てられました(それでも予測力は小さい)。週足(2000年〜)でだけ使えます。"],
+    ["銘柄別シグナルの基準(全銘柄・同規模・仲間・同業種・自身)", "週足・4週保有で、各年より前のデータだけで予測して、その年の実際の平均との相関を見ました(2008〜2026年)。全銘柄 0.181、同規模 0.181、値動きが似た銘柄群 0.18、同業種 0.17、同規模×同業種 0.16、銘柄自身 0.07。銘柄ごとの「効きやすいシグナル」は、前半から後半に続きません(相関 0.01)。成績を見る期間は、全期間が最良(直近5年 0.12)。規模は、売買代金でも時価総額でも、3区分でも5区分でも、差はありません。出やすいシグナルは、銘柄ごとに弱く存在します(相関 0.16)。"],
     ["買いと売り・保有期間", "買いは保有が長いほど(4〜12週)効き、売りは短いほど(1〜2週)効きます。売りは、制度信用の貸株料・配当調整金・逆日歩で、保有が長いほど重くなります。"],
     ["週足パラボリックSAR(②のルール)", "全銘柄で、勝率は買い約41%・売り約34%。買いは平均で+267bp(コスト後)ですが、市場の上昇を引くと−31bp(小型だけ弱いプラス)。売りは上昇相場の中でマイナスでした。"],
     ["週足ダブルトップ(売り)", "8週保有で、粗利+79bp(t 4.1)、1ティックと貸株料を引くと+42bp(t 2.2)。26年中7年はマイナス。相場局面には依存しません。"],
@@ -430,8 +429,8 @@ function renderTerms() {
   <li><b>② 反対のシグナルで出る</b>: シグナルが出た次のバーの始値で入り、同じ種類(ローソク足・チャート・テクニカル・抵抗帯)の逆向きのシグナルのどれかが出た次のバーの始値で出る。保有中に出た同じシグナルは数えません。まだ出ていない取引は、集計から除き、「直近1年の売買」では「保有中」(最新終値で評価)とします。</li>
   <li><b>平均 / 中央値</b>: コスト後の損益率の平均/中央値(bp。1bp = 0.01%)。極端な値は、−90%〜+300%で打ち切っています。</li>
   <li><b>市場超過</b>: 同じ期間の市場(全銘柄の等ウェイトの始値から始値のリターン)を引いた平均。買いも売りも、市場の上昇を引くと、売りは有利に、買いは不利になります。</li>
-  <li><b>仲間</b>: 値動き(上げ相場の週の、前週終値から始値への窓)の相関が高い、同じ規模の上位200銘柄。仲間の成績は、仲間全体の取引を合計した勝率・平均です(週足のみ)。</li>
-  <li><b>規模</b>: 売買代金(直近13週/60日の中央値)の同じ時点の分位。小型は分位1〜2、中型は3、大型は4〜5。</li>
+  
+  <li><b>規模(同規模)</b>: 毎週、全銘柄を、直近4週(日足は20日)の売買代金の中央値で5等分(分位1〜5)。小型は分位1〜2、中型は3、大型は4〜5(全銘柄の約40%・20%・40%)。「銘柄別シグナル」の同規模は、その銘柄が最も多く属した区分で固定。時価総額で分けても、成績の当たり方は変わりません。</li>
   <li><b>コスト</b>: 買いは現物で、スプレッド等の20bp。売りは制度信用で、20bp + 貸株料(年1.10%)+ 配当調整金(利回り年2.0%と仮定)を保有日数で按分(年3.1%)。逆日歩・税金・金利は含みません。</li>
   <li><b>損益(円)</b>: 100株ずつの、入りの始値と出の始値(または最新終値)の差から、コストを引いた金額。株価は、分割などの調整を戻した、実際の価格に近い値です。</li>
   <li><b>データ</b>: 週足は、Yahoo Financeの週足(2000年〜2026年10月、3,712銘柄)。日足は、J-Quants Lightの日足(2021年10月〜2026年10月)。<b>生存者バイアス</b>: 上場廃止になった銘柄が少なく、買いの成績がよく見えます。</li>
