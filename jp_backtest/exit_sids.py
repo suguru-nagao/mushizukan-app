@@ -44,7 +44,9 @@ for fam in ("candle", "chart", "tech", "zone"):
         s = signals(P, fam, TF)
     for nm, (d, S) in s.items():
         sigs.append((zname(nm), fam, int(d), np.asarray(S, bool)))
-assert [s[0] for s in sigs] == names
+byname = {s[0]: s for s in sigs}
+assert set(byname) == set(names), (len(byname), len(names))
+sigs = [byname[n] for n in names]     # 検出の順番は、実行ごとに変わることがあるので、集計時の並び(sid)に合わせる
 res = {}
 fam_of = np.array([s[1] for s in sigs]); d_of = np.array([s[2] for s in sigs])
 for sid2, (nm, fam, d, S) in enumerate(sigs):
