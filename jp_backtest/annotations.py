@@ -110,8 +110,8 @@ for c, rq in sorted(reqs.items()):
             if z:
                 g = {"z": [[round(a * fa, 1), round(b * fa, 1), k] for a, b, k in z]}
                 if pv:
-                    g["pv"] = [[int(b_ + first), round(p_ * fa, 1), kd_] for b_, p_, kd_ in sorted(pv)]
-                    g["win"] = [int(max(0, t_rel - SRP[1]) + first), int(t_rel - SRP[0] + first)]   # 折り返し点を探した範囲(バー)
+                    # 折り返し点: [信号のバーからの相対位置(負)、価格、0=高値/1=安値]。探した範囲は、信号の前 SRP[1]本〜SRP[0]本(画面側で計算)
+                    g["pv"] = [[int(b_ + first) - t, int(round(p_ * fa)) if abs(p_ * fa) >= 1000 else round(p_ * fa, 1), 0 if kd_ == "h" else 1] for b_, p_, kd_ in sorted(pv)]
         elif fam[sid] == "chart":
             if cch is None:
                 cc_ = cp._clean(H[:, c], L[:, c], C[:, c])
