@@ -993,6 +993,7 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
   const rmax = (a, n) => a.map((_, i) => i < n - 1 ? null : Math.max(...a.slice(i - n + 1, i + 1))), rmin = (a, n) => a.map((_, i) => i < n - 1 ? null : Math.min(...a.slice(i - n + 1, i + 1)));
   function indicators(d) {
     const o = d.o, h = d.h, l = d.l, c = d.c, n = c.length, I = {};
+    I.vavg = d.v ? sma(d.v, 20) : null;
     I.sma5 = sma(c, 5); I.sma25 = sma(c, 25); I.sma75 = sma(c, 75);
     const ch = c.map((v, i) => i && v != null && c[i - 1] != null ? v - c[i - 1] : null);
     const rsi = wild(ch.map(v => v == null ? null : Math.max(v, 0)), 14).map((u, i) => { const dn = wild(ch.map(v => v == null ? null : Math.max(-v, 0)), 14)[i]; return u == null || dn == null ? null : dn === 0 ? 100 : 100 - 100 / (1 + u / dn); });
@@ -1079,7 +1080,7 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       const sameTf = S.tf === opt.tf;
       const [eI, xI] = tr ? posTr(D, tr) : [null, null];
       // 副パネル
-      const panels = []; items.forEach(it => { if (it.sp.panel && !panels.includes(it.sp.panel)) panels.push(it.sp.panel); });
+      const panels = []; items.forEach(it => { if (it.sp.panel && !panels.includes(it.sp.panel)) panels.push(it.sp.panel); }); if (D.d.v) panels.unshift("vol");
       const H = Tp + mainH + panels.length * (subH + 14) + 28;
       // y範囲
       let hi = -Infinity, lo = Infinity; for (let i = a; i <= b; i++) { const h = at(D.d.h, i), l = at(D.d.l, i); if (h != null) hi = Math.max(hi, h); if (l != null) lo = Math.min(lo, l); }
@@ -1099,6 +1100,15 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
       // 抵抗帯・支持帯・ライン(帯)
       const legend = [], rtags = [];
       const zseen = new Set(); items.forEach(it => { if (it.geo && it.geo.z) it.geo.z.forEach(([z1, z2, kind]) => { const zk = it.role + kind + Math.round(z1) + "|" + Math.round(z2) + (it.name.includes("抵抗") ? "R" : "S"); if (zseen.has(zk)) return; zseen.add(zk); const x0 = Math.max(L, X(Math.max(a, it.i - (S.tf === "D" ? 60 : 20)))), x1 = Math.min(W - R, X(Math.min(b, it.i + (S.tf === "D" ? 10 : 4)))); if (x1 <= x0) return; const col = kind === "v" ? "#e0a030" : "#4f8cf0"; const side = it.name.includes("抵抗") ? "抵抗" : "支持", nmz = side + (kind === "v" ? "帯(出来高)" : "線"); g += `<rect x="${x0}" y="${Y(z2)}" width="${x1 - x0}" height="${Math.max(2, Y(z1) - Y(z2))}" fill="${col}" opacity=".28" stroke="${col}"/>`; rtags.push({ y: (Y(z1) + Y(z2)) / 2, txt: nmz + (it.role === "出" ? "(出)" : ""), col }); legend.push([col, `${nmz}${it.role === "出" ? "(出のきっかけ)" : ""} ${Math.round(z1).toLocaleString()}〜${Math.round(z2).toLocaleString()}円`]); }); });
+      // 価格帯別出来高(出来高の帯のシグナル): シグナルの1本前までの窓(日足120・週足52・月足36本)の出来高を、価格帯ごとに集めて、左に横棒で描く
+      let pf = null;
+      { const it = items.find(u => u.geo && u.geo.z && u.geo.z.some(q => q[2] === "v") && u.role !== "出") || items.find(u => u.geo && u.geo.z && u.geo.z.some(q => q[2] === "v"));
+        if (it && sameTf && D.d.v) { const Wn = { D: 120, W: 52, M: 36 }[S.tf], tau = it.i - 1, i1 = tau, i0 = Math.max(s0, tau - Wn + 1);
+          if (i0 < i1 - 5) { const band = it.geo.z.find(q => q[2] === "v"), cl = at(D.d.c, tau), step2 = .7 / 46, k0 = Math.floor((Math.log(cl) - .35) / step2), ed = []; for (let k = 0; k <= 46; k++) ed.push(Math.exp((k0 + k) * step2));
+            const hb = new Array(46).fill(0); for (let i = i0; i <= i1; i++) { const h = at(D.d.h, i), l = at(D.d.l, i), c = at(D.d.c, i), v = at(D.d.v, i); if (h == null || l == null || c == null || v == null) continue; const tp = (h + l + c) / 3; for (let k = 0; k < 46; k++) if (tp >= ed[k] && tp < ed[k + 1]) { hb[k] += v; break; } }
+            const hm = Math.max(...hb, 1), maxw = pw * .26; pf = { i0, i1 };
+            for (let k = 0; k < 46; k++) { if (hb[k] <= 0) continue; const ya = Y(ed[k + 1]), yb = Y(ed[k]); if (yb < Tp || ya > Tp + mainH) continue; const inb = ed[k + 1] > band[0] && ed[k] < band[1]; g += `<rect x="${L}" y="${ya}" width="${hb[k] / hm * maxw}" height="${Math.max(1, yb - ya - 1)}" fill="${inb ? "#e0a030" : "#8a8a8a"}" opacity="${inb ? .7 : .35}"/>`; }
+            legend.push(["#8a8a8a", `左の横棒 = 価格帯別出来高(シグナルの前の${Wn}本)`], ["#e0a030", "橙 = 出来高の帯"]); } } }
       // 指標(価格に重ねるもの)
       const I = D.I, line = (arr, col, w = 1.4, dash = "") => { let p = "", on = false; for (let i = a; i <= b; i++) { const v = at(arr, i); if (v == null) { on = false; continue; } p += `${on ? "L" : "M"}${X(i)} ${Y(v)} `; on = true; } return p ? `<path d="${p}" fill="none" stroke="${col}" stroke-width="${w}" ${dash ? `stroke-dasharray="${dash}"` : ""}/>` : ""; };
       const used = new Set();
@@ -1130,7 +1140,14 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
         ts.forEach(t => { if (t.y < Tp - 4 || t.y > Tp + mainH + 4) return; g += `<g><line x1="${W - R}" x2="${W - R + 4}" y1="${t.y}" y2="${t.yy}" stroke="${t.col}" stroke-width="1"/><rect x="${W - R + 4}" y="${t.yy - 8}" width="${R - 6}" height="16" rx="4" fill="${t.col}" ${t.solid ? "" : 'opacity=".85"'}/><text x="${W - R + 4 + (R - 6) / 2}" y="${t.yy + 4}" text-anchor="middle" style="fill:#fff;font-weight:700;font-size:10.5px">${t.txt}</text></g>`; }); }
       // 副パネル(RSIなど)
       const panelMeta = [];
-      panels.forEach((pn, pi) => { const [ttl, refs, fmin, fmax] = PANELS[pn], y0 = Tp + mainH + 14 + pi * (subH + 14); const series = pn === "rsi" ? [["rsi", "#4f8cf0"]] : pn === "macd" ? [["macd", "#4f8cf0"], ["msig", "#e0a030"]] : pn === "stoch" ? [["stk", "#4f8cf0"], ["std", "#e0a030"]] : pn === "dev" ? [["dev", "#4f8cf0"]] : [["pdi", "#d05050"], ["mdi", "#4f8cf0"], ["adx", "#9a9a9a"]];
+      panels.forEach((pn, pi) => {
+        if (pn === "vol") { const y0 = Tp + mainH + 14 + pi * (subH + 14), vs = D.d.v; let vmax = 1; for (let i = a; i <= b; i++) { const v = at(vs, i); if (v != null) vmax = Math.max(vmax, v); } const VY = v => y0 + (1 - v / (vmax * 1.05)) * subH;
+          panelMeta.push({ y0, pmin: 0, pmax: vmax * 1.05, ttl: "出来高" });
+          g += `<rect x="${L}" y="${y0}" width="${pw}" height="${subH}" fill="none" stroke="var(--line)"/><text x="${L + 6}" y="${y0 + 13}">出来高(百株)${pf ? "　橙の枠 = 価格帯別出来高を集めた期間" : ""}</text><text x="${L - 6}" y="${y0 + 10}" text-anchor="end">${Math.round(vmax).toLocaleString()}</text>`;
+          if (pf) { const xa2 = X(Math.max(a, pf.i0)) - step / 2, xb2 = X(Math.min(b, pf.i1)) + step / 2; g += `<rect x="${xa2}" y="${y0}" width="${Math.max(2, xb2 - xa2)}" height="${subH}" fill="#e0a030" opacity=".12" stroke="#e0a030" stroke-dasharray="4 3"/>`; }
+          for (let i = a; i <= b; i++) { const v = at(vs, i), o = at(D.d.o, i), c = at(D.d.c, i); if (v == null) continue; g += `<rect x="${X(i) - cw / 2}" y="${VY(v)}" width="${cw}" height="${Math.max(1, y0 + subH - VY(v))}" fill="${c != null && o != null && c >= o ? "var(--cu)" : "var(--cd)"}" opacity=".75"/>`; }
+          { let pth = "", on = false; for (let i = a; i <= b; i++) { const v = at(I.vavg, i); if (v == null) { on = false; continue; } pth += `${on ? "L" : "M"}${X(i)} ${VY(v)} `; on = true; } if (pth) g += `<path d="${pth}" fill="none" stroke="#e0a030" stroke-width="1.3"/>`; }
+          return; } const [ttl, refs, fmin, fmax] = PANELS[pn], y0 = Tp + mainH + 14 + pi * (subH + 14); const series = pn === "rsi" ? [["rsi", "#4f8cf0"]] : pn === "macd" ? [["macd", "#4f8cf0"], ["msig", "#e0a030"]] : pn === "stoch" ? [["stk", "#4f8cf0"], ["std", "#e0a030"]] : pn === "dev" ? [["dev", "#4f8cf0"]] : [["pdi", "#d05050"], ["mdi", "#4f8cf0"], ["adx", "#9a9a9a"]];
         let pmin = fmin, pmax = fmax, vals = []; series.forEach(([k]) => { for (let i = a; i <= b; i++) { const v = at(I[k], i); if (v != null) vals.push(v); } }); refs.forEach(v => vals.push(v)); if (pmin == null) pmin = Math.min(...vals); if (pmax == null) pmax = Math.max(...vals); const pp = (pmax - pmin) * .08 || 1; pmin -= pp; pmax += pp; const PY = v => y0 + (1 - (v - pmin) / (pmax - pmin)) * subH; panelMeta.push({ y0, pmin, pmax, ttl });
         g += `<rect x="${L}" y="${y0}" width="${pw}" height="${subH}" fill="none" stroke="var(--line)"/><text x="${L + 6}" y="${y0 + 13}">${ttl}</text>`; refs.forEach(v => { g += `<line x1="${L}" x2="${W - R}" y1="${PY(v)}" y2="${PY(v)}" stroke="var(--dim)" stroke-dasharray="3 3" opacity=".6"/><text x="${L - 6}" y="${PY(v) + 4}" text-anchor="end">${v}</text>`; });
         series.forEach(([k, col]) => { let p = "", on = false; for (let i = a; i <= b; i++) { const v = at(I[k], i); if (v == null) { on = false; continue; } p += `${on ? "L" : "M"}${X(i)} ${PY(v)} `; on = true; } if (p) g += `<path d="${p}" fill="none" stroke="${col}" stroke-width="1.5"/>`; });
@@ -1165,8 +1182,8 @@ const SN = name => window.__tipFor(name) ? `<span class="tipname" tabindex="0" d
         if (yv != null) h += `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" stroke="var(--dim)" stroke-dasharray="3 3"/><rect x="${L - 62}" y="${yy - 9}" width="60" height="18" rx="4" fill="var(--dim)"/><text x="${L - 32}" y="${yy + 4}" text-anchor="middle" style="fill:var(--bg,#fff);font-weight:700;font-size:11px">${lab}</text>`;
         const ds = D.M.dates[i]; h += `<rect x="${xi - 42}" y="${yBot + 4}" width="84" height="18" rx="4" fill="var(--dim)"/><text x="${xi}" y="${yBot + 17}" text-anchor="middle" style="fill:var(--bg,#fff);font-weight:700;font-size:11px">${ds}</text>`;
         cross.innerHTML = h;
-        const o = at(D.d.o, i), hh = at(D.d.h, i), ll = at(D.d.l, i), cc = at(D.d.c, i), pc = i > s0 ? at(D.d.c, i - 1) : null, f = v => v == null ? "–" : Math.round(v).toLocaleString();
-        if (o != null) ro.innerHTML = `<b>${ds}</b>　始 ${f(o)}　高 ${f(hh)}　安 ${f(ll)}　終 ${f(cc)}${pc ? `　前の足比 <span class="${cc >= pc ? "wp" : "wn"}" style="padding:0 5px;border-radius:5px">${((cc / pc - 1) * 100).toFixed(2)}%</span>` : ""}${yv != null && y <= Tp + mainH ? `　カーソル ${lab}円` : ""}`;
+        const o = at(D.d.o, i), hh = at(D.d.h, i), ll = at(D.d.l, i), cc = at(D.d.c, i), pc = i > s0 ? at(D.d.c, i - 1) : null, vv = D.d.v ? at(D.d.v, i) : null, f = v => v == null ? "–" : Math.round(v).toLocaleString();
+        if (o != null) ro.innerHTML = `<b>${ds}</b>　始 ${f(o)}　高 ${f(hh)}　安 ${f(ll)}　終 ${f(cc)}${vv != null ? `　出来高 ${f(vv)}百株` : ""}${pc ? `　前の足比 <span class="${cc >= pc ? "wp" : "wn"}" style="padding:0 5px;border-radius:5px">${((cc / pc - 1) * 100).toFixed(2)}%</span>` : ""}${yv != null && y <= Tp + mainH ? `　カーソル ${lab}円` : ""}`;
       };
       svg.addEventListener("pointermove", ev => { if (drag) { cross.innerHTML = ""; return; } showCross(ev); });
       svg.addEventListener("pointerleave", () => { cross.innerHTML = ""; });
