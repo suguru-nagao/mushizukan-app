@@ -9,7 +9,7 @@ import json, os, pickle, sys
 import numpy as np, pandas as pd
 import backtest as bt
 import chart_patterns as cp
-from zones import SR_PARAMS, TF_PARAMS, _clean as zclean, make_zones, sr_lines, zone_sets, pivot_idx
+from zones import SR_PARAMS, TF_PARAMS, SR_MIN, SR_TOL, SR_HALF, _clean as zclean, make_zones, sr_lines, zone_sets, pivot_idx
 
 TF = sys.argv[1] if len(sys.argv) > 1 else "W"
 LAST = {"W": 52, "D": 250, "M": 12}[TF]; LIT = {"W": 2, "D": 2, "M": 1}[TF]; SH = 400
@@ -53,21 +53,34 @@ def zone_geom(cl, t_rel, setname, key):
     q = side_of(key)
     for _ in range(14):
         if tau < W_ - 1 or tau >= n - 1:
-            return None
+            return None, []
         vz = make_zones(tp[tau - W_ + 1:tau + 1], v[tau - W_ + 1:tau + 1], cc[tau])
         a0, a1 = np.searchsorted(hp, tau - Wsr), np.searchsorted(hp, tau - Ks, side="right")
         b0, b1 = np.searchsorted(lp, tau - Wsr), np.searchsorted(lp, tau - Ks, side="right")
         zs = zone_sets(vz, sr_lines(np.concatenate([h[hp[a0:a1]], l[lp[b0:b1]]])), cc[tau])
-        out = []
+        out = []; pvs = []
         vband = (vz[q], vz[q + 1]); lband = (zs["線"][q], zs["線"][q + 1])
         if setname in ("出来高", "出来高のみ", "重なり") and not np.isnan(vband[0]): out.append([float(vband[0]), float(vband[1]), "v"])
-        if setname in ("線", "線のみ", "重なり") and not np.isnan(lband[0]): out.append([float(lband[0]), float(lband[1]), "l"])
+        if setname in ("線", "線のみ", "重なり") and not np.isnan(lband[0]):
+            out.append([float(lband[0]), float(lband[1]), "l"])
+            # この線(帯)を作った折り返し点を探す: 窓内の折り返し点を、価格順に、近いものどうしでまとめ直し、帯の中心が一致するまとまりを選ぶ
+            lv = np.concatenate([h[hp[a0:a1]], l[lp[b0:b1]]]); bb = np.concatenate([hp[a0:a1], lp[b0:b1]]); kd = np.array(["h"] * (a1 - a0) + ["l"] * (b1 - b0))
+            od = np.argsort(lv); lv, bb, kd = lv[od], bb[od], kd[od]; st = 0; best = None
+            for ii in range(1, len(lv) + 1):
+                if ii == len(lv) or lv[ii] > lv[st] * (1 + SR_TOL):
+                    if ii - st >= SR_MIN:
+                        m = float(lv[st:ii].mean()); dist = abs(m * (1 - SR_HALF) - lband[0])
+                        if best is None or dist < best[0]: best = (dist, st, ii)
+                    st = ii
+            if best is not None and best[0] < 1e-6 * max(1.0, lband[0]) * 100:
+                pvs = [(int(bb[j]), float(lv[j]), str(kd[j])) for j in range(best[1], best[2])]
+        if setname in ("出来高のみ",) : pass
         if setname == "出来高のみ":
             pass
         if out:
-            return out
+            return out, pvs
         tau -= R_
-    return None
+    return None, []
 
 def chart_geoms(cl, wanted):
     """wanted: {(キー, 信号のバー(相対))...} → {(名前, バー相対): 位置情報}"""
@@ -93,9 +106,12 @@ for c, rq in sorted(reqs.items()):
         fa = f_adj[t, c] if np.isfinite(f_adj[t, c]) else 1.0
         if fam[sid] == "zone" and not nm.startswith("新"):
             st, key = zone_info(nm)
-            z = zone_geom(zc, t_rel, st, key)
+            z, pv = zone_geom(zc, t_rel, st, key)
             if z:
                 g = {"z": [[round(a * fa, 1), round(b * fa, 1), k] for a, b, k in z]}
+                if pv:
+                    g["pv"] = [[int(b_ + first), round(p_ * fa, 1), kd_] for b_, p_, kd_ in sorted(pv)]
+                    g["win"] = [int(max(0, t_rel - SRP[1]) + first), int(t_rel - SRP[0] + first)]   # 折り返し点を探した範囲(バー)
         elif fam[sid] == "chart":
             if cch is None:
                 cc_ = cp._clean(H[:, c], L[:, c], C[:, c])
