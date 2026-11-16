@@ -1,136 +1,19 @@
 {
-  "generated_at": "2026-11-15T09:36:03.293483+09:00",
-  "count": 29,
+  "generated_at": "2026-11-16T09:36:03.905365+09:00",
+  "count": 21,
   "events": [
     {
-      "id": "bc2e2ed1824e07ed",
-      "title": "IRいしかわ鉄道 521系 運転体験イベント",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "IRいしかわ鉄道は、事前申込制イベント「運転体験会」を開催。開催日は2026年11月15日（日）で、午前の部（8:50～12:10）、午後の部（12:50～16:10）の2回開催。開催場所は、同社本社、車両センター第3ヤード。机上教育、シミ",
+      "id": "a83f7d30eb2d8a93",
+      "title": "京都鉄道博物館 南海2200系天空 特別展示",
+      "date": "2026-11-19",
+      "location": "京都鉄道博物館",
+      "description": "京都鉄道博物館は、同館の「車両のしくみ／車両工場」エリア（本館1階）にて、南海電気鉄道2200系「天空」の特別展示を実施。展示期間は、2026年11月19日（木）～30日（月）。初日は11:00より入線セレモニーを開催。また、各日10:00",
       "prefecture": "",
       "city": "",
       "themeId": "train",
       "source": "鉄道コム",
-      "url": "https://www.ishikawa-railway.jp/news/1268",
-      "fetched_at": "2026-11-15T09:36:03.293116+09:00"
-    },
-    {
-      "id": "6cf2e3de6d40a460",
-      "title": "鶴見駅など わくわく電車まつり2026",
-      "date": "2026-11-15",
-      "location": "鶴見駅",
-      "description": "JR東日本は、「つるみわくわく電車まつり2026」を開催。開催日時は、2026年11月15日（日）11:00～15:00。開催場所は、鶴見駅4番線ホーム、シァル鶴見4階イベントスペース。鶴見駅では、ペーパークラフト展示、列車非常停止ボタン体",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://media.jreast.co.jp/articles/5012",
-      "fetched_at": "2026-11-15T09:36:03.293140+09:00"
-    },
-    {
-      "id": "a291313c931ec7c2",
-      "title": "500系 カンセンジャーと行く 博多総合車両所ツアー",
-      "date": "2026-11-15",
-      "location": "博多総合車両所",
-      "description": "日本旅行は、事前申込制ツアー「～まもなく引退を迎える500系車両で博多総合車両所に入線！！～カンセンジャーと行く500系大満喫の旅日帰り」を開催。旅行日は、2026年11月15日（日）。500系による団体臨時列車に乗車。運転区間は、新大阪（",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.nta.co.jp/jrodekakenet/plan/202609_500_hakaso/",
-      "fetched_at": "2026-11-15T09:36:03.293147+09:00"
-    },
-    {
-      "id": "ebae0c2bd7fd58fd",
-      "title": "近鉄 特急列車乗り継ぎツアー",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "近畿日本鉄道は、事前申込制ツアー「特急列車乗り継ぎの旅2026パートII」を開催。旅行日は、2026年11月15日（日）の日帰り。近鉄特急の定期列車7列車に乗車。乗車列車と乗車区間は、「ひのとり」が大阪難波（9:00発）～津（10:22着）",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://blog2.kintetsu.co.jp/ekichou/files/20261115002.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293152+09:00"
-    },
-    {
-      "id": "590f2f7ad4bbfda5",
-      "title": "東京メトロ ファミリーパーク in AYASE 2026",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "東京メトロは、事前申込制イベント「メトロファミリーパーク in AYASE 2026」を開催。開催日時は、2026年11月15日（日）10:00～15:00（最終入場は14:30）。開催場所は、綾瀬車両基地。参加無料。車両綱引き体験、子ども",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tokyometro.jp/news/2026/225376.html",
-      "fetched_at": "2026-11-15T09:36:03.293157+09:00"
-    },
-    {
-      "id": "8a83841c0dd84ac2",
-      "title": "埼玉新都市交通 丸山車両基地まつり",
-      "date": "2026-11-15",
-      "location": " 埼玉県 外への直通臨時列車として運転",
-      "description": "埼玉新都市交通は、「2026丸山車両基地まつり」を開催。開催日時は、2026年11月15日（日）10:00～15:00。開催場所は、丸山車両基地。入場無料。2020系26編成・2000系03編成の車両展示、車両部品展示、鉄道模型展示、子ども",
-      "prefecture": " 埼玉県",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "http://www.new-shuttle.jp/topics/2026/10/post_363.html",
-      "fetched_at": "2026-11-15T09:36:03.293406+09:00"
-    },
-    {
-      "id": "ab0c6a4d8731df2e",
-      "title": "長崎電気軌道 路面電車まつり",
-      "date": "2026-11-15",
-      "location": "案内図",
-      "description": "長崎電気軌道は、「第24回路面電車まつり」を開催。開催日時は、2026年11月15日（日）10:00～16:00。開催場所は、浦上車庫。入場無料。車両工場見学ツアー、運転操作体験、仕事体験（5回開催、各回10人）、310号遊覧電車運転（6便",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://wwwtb.mlit.go.jp/kyushu/content/000380993.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293413+09:00"
-    },
-    {
-      "id": "8336028b37d01aa7",
-      "title": "近鉄 伊勢神宮初詣デジタルきっぷ 発売",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "近畿日本鉄道は、「伊勢神宮初詣デジタルきっぷ」を発売。発駅～松阪間の割引往復乗車券で、松阪～賢島間のフリー区間つき。発駅からの往復特急券引換券、フリー区間内の特急券引換券2枚、伊勢神宮での参拝記念品（干支置物）の引換券、伊勢志摩特産品が賞品",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/a4e50500edaa4303bd84c67a4b0f4644/20261106rw.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293421+09:00"
-    },
-    {
-      "id": "5334fd0bce7e4fb0",
-      "title": "近鉄 伊勢神宮初詣割引きっぷ 発売",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "近畿日本鉄道は、「伊勢神宮初詣割引きっぷ」を発売。発駅～松阪間の割引往復乗車券で、松阪～賢島間のフリー区間つき。フリー区間内の特急券引換券2枚、伊勢神宮での参拝記念品（干支置物）の引換券、伊勢志摩特産品が賞品の応募コードが付属。発売期間は、",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/a4e50500edaa4303bd84c67a4b0f4644/20261106rw.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293424+09:00"
-    },
-    {
-      "id": "e8ddb9f0ef4d959e",
-      "title": "近鉄 せいか祭り2026開催記念入場券セット 発売",
-      "date": "2026-11-15",
-      "location": "",
-      "description": "近畿日本鉄道は、「せいか祭り2026開催記念入場券セット」を発売。入場券3枚と台紙のセットで、発売額は540円。発売日時は、2026年11月15日（日）11:00～16:00。発売箇所は、けいはんなプラザ。グッズ販売も実施。記念入場券の発売",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/daf5c33bee4241e69876e828c89f5620/oshirase_261106-1123.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293428+09:00"
+      "url": "https://prtimes.jp/main/html/rd/p/000002449.000095753.html",
+      "fetched_at": "2026-11-16T09:36:03.905082+09:00"
     },
     {
       "id": "c26ff51110dfa70f",
@@ -143,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28778",
-      "fetched_at": "2026-11-15T09:36:03.293431+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905092+09:00"
     },
     {
       "id": "73fda54c4646696a",
@@ -156,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/500color/",
-      "fetched_at": "2026-11-15T09:36:03.293433+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905098+09:00"
     },
     {
       "id": "eb87c276e7de7560",
@@ -169,7 +52,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-15T09:36:03.293436+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905103+09:00"
+    },
+    {
+      "id": "f14b34008244344a",
+      "title": "富士山麓電気鉄道 チョコっとスタンプラリー",
+      "date": "2026-11-21",
+      "location": "",
+      "description": "富士山麓電気鉄道は、「祝100周年 富士急行×『明治ミルクチョコレート』 ミルチがもらえる『チョコっとスタンプラリー』」を開催。開催日時は、2026年11月21日（土）～29日（日）の各日10:00～16:00。河口湖駅、富士急ハイランド駅",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1223",
+      "fetched_at": "2026-11-16T09:36:03.905107+09:00"
     },
     {
       "id": "a03b2531dc530734",
@@ -182,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index3.html",
-      "fetched_at": "2026-11-15T09:36:03.293439+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905111+09:00"
     },
     {
       "id": "68fffdae298f4ea8",
@@ -195,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index3.html",
-      "fetched_at": "2026-11-15T09:36:03.293441+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905116+09:00"
     },
     {
       "id": "9201d015b23e81e8",
@@ -208,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/2026/225521.html",
-      "fetched_at": "2026-11-15T09:36:03.293444+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905124+09:00"
     },
     {
       "id": "6c3b99e2d28d24ec",
@@ -221,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.railway-museum.jp/news/pdf/20261106_1.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293446+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905129+09:00"
     },
     {
       "id": "67d1426076126175",
@@ -234,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kinurin.co.jp/topics/79/",
-      "fetched_at": "2026-11-15T09:36:03.293454+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905330+09:00"
     },
     {
       "id": "d1180c16260fad35",
@@ -247,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/10/29/20261029_autumn_family_festa_2026_2.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293457+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905336+09:00"
     },
     {
       "id": "029949f797558ca6",
@@ -260,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://event.jreast.co.jp/activity/detail/a131/a131-005",
-      "fetched_at": "2026-11-15T09:36:03.293460+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905339+09:00"
     },
     {
       "id": "cc5b78514132f6e1",
@@ -273,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261104_h01.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293462+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905342+09:00"
     },
     {
       "id": "814b58e5b2acf757",
@@ -286,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2683",
-      "fetched_at": "2026-11-15T09:36:03.293464+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905345+09:00"
     },
     {
       "id": "3bc2636cc98514a2",
@@ -299,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.knt-liner.co.jp/xn05/wp-content/uploads/2026/10/7e32e5831e9efbfd2c1d83cce0714b99.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293467+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905348+09:00"
     },
     {
       "id": "05fd82e00d202208",
@@ -312,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20261029_o01.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293469+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905350+09:00"
     },
     {
       "id": "379335b4f1cbdf99",
@@ -325,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/11/11/items/261111_00_press_westexpressginga.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293472+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905353+09:00"
     },
     {
       "id": "d1ec2d2cfc3d05b6",
@@ -338,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-15T09:36:03.293475+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905356+09:00"
     },
     {
       "id": "668436ad8f9bac37",
@@ -351,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20261106101240tZ8YMi-63TjUw97XYOk2LQ.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293477+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905358+09:00"
     },
     {
       "id": "297c9dd3708e1645",
@@ -364,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202612_v9last/",
-      "fetched_at": "2026-11-15T09:36:03.293479+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905361+09:00"
     },
     {
       "id": "1ba5d1b0c3d9b3de",
@@ -377,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/tochigi_j/20261104_t01.pdf",
-      "fetched_at": "2026-11-15T09:36:03.293482+09:00"
+      "fetched_at": "2026-11-16T09:36:03.905363+09:00"
     }
   ]
 }
