@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-11-18T11:41:17.056407+09:00",
-  "count": 28,
+  "generated_at": "2026-11-19T11:10:16.078846+09:00",
+  "count": 29,
   "events": [
-    {
-      "id": "b1dbc5354a7f15bd",
-      "title": "2026年11月18日の鉄道イベント",
-      "date": "2026-11-18",
-      "location": "",
-      "description": "南海の観光列車「天空」、京都鉄道博物館の特別展示が中止に 「車両の回送が困難となったため」",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://www.tetsudo.com/event/calendar/20261118/",
-      "fetched_at": "2026-11-18T11:41:17.056156+09:00"
-    },
     {
       "id": "a83f7d30eb2d8a93",
       "title": "京都鉄道博物館 南海2200系天空 特別展示",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002449.000095753.html",
-      "fetched_at": "2026-11-18T11:41:17.056165+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078506+09:00"
     },
     {
       "id": "ddd1d09c28b0f31b",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002449.000095753.html",
-      "fetched_at": "2026-11-18T11:41:17.056169+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078516+09:00"
     },
     {
       "id": "5014fa036d2ccafa",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20261119/",
-      "fetched_at": "2026-11-18T11:41:17.056173+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078522+09:00"
     },
     {
       "id": "27bd657c2e6a77b7",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.hakonenavi.jp/_wp/wp-content/uploads/2026/11/a5b1ab05538dd693f8de3d871f685ffe.pdfb",
-      "fetched_at": "2026-11-18T11:41:17.056176+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078526+09:00"
     },
     {
       "id": "71db261be6b50a2c",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tetsudo.com/event/calendar/20261120/",
-      "fetched_at": "2026-11-18T11:41:17.056179+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078530+09:00"
     },
     {
       "id": "c26ff51110dfa70f",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28778",
-      "fetched_at": "2026-11-18T11:41:17.056183+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078534+09:00"
     },
     {
       "id": "73fda54c4646696a",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.chichibu-railway.co.jp/blog/news/500color/",
-      "fetched_at": "2026-11-18T11:41:17.056190+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078538+09:00"
     },
     {
       "id": "eb87c276e7de7560",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-18T11:41:17.056193+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078546+09:00"
     },
     {
       "id": "f14b34008244344a",
@@ -130,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1223",
-      "fetched_at": "2026-11-18T11:41:17.056197+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078551+09:00"
     },
     {
       "id": "13d9ca414366b2e9",
@@ -143,7 +130,33 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://blog2.kintetsu.co.jp/ekichou/files/20261121003.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056200+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078555+09:00"
+    },
+    {
+      "id": "b1666c48309c114a",
+      "title": "高松琴平電気鉄道 1070形引退記念グラス 販売",
+      "date": "2026-11-21",
+      "location": "",
+      "description": "高松琴平電気鉄道は、「1070形引退記念グラス」を販売。販売額は2,000円。2026年11月21日（土）、23日（月・祝）開催の「1073×1074号引退記念イベント」（撮影会、おかわり撮影会）にて販売。",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/kotodengoods20261118/index.html",
+      "fetched_at": "2026-11-19T11:10:16.078558+09:00"
+    },
+    {
+      "id": "16d9ae18b77472d7",
+      "title": "流鉄 子ども向け 鉄道の日イベント",
+      "date": "2026-11-21",
+      "location": "",
+      "description": "流鉄は、「流鉄の鉄道の日」を開催。開催日時は、2026年11月21日（土）10:30～15:00。開催場所は、流山駅構内。子ども向けイベントで、乗務員室での記念撮影（先着50人、整理券制）、ドア開閉体験（小学生以下と同伴者限定）、ミニSL運",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "http://www.ryutetsu.jp/info/new/__trashed-3/",
+      "fetched_at": "2026-11-19T11:10:16.078561+09:00"
     },
     {
       "id": "a03b2531dc530734",
@@ -156,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index3.html",
-      "fetched_at": "2026-11-18T11:41:17.056203+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078564+09:00"
     },
     {
       "id": "68fffdae298f4ea8",
@@ -169,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kotoden.co.jp/publichtm/kotoden/new/2026/2026sayonara1073/index3.html",
-      "fetched_at": "2026-11-18T11:41:17.056205+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078567+09:00"
     },
     {
       "id": "9201d015b23e81e8",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tokyometro.jp/news/2026/225521.html",
-      "fetched_at": "2026-11-18T11:41:17.056208+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078570+09:00"
     },
     {
       "id": "6c3b99e2d28d24ec",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.railway-museum.jp/news/pdf/20261106_1.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056210+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078573+09:00"
     },
     {
       "id": "67d1426076126175",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.kinurin.co.jp/topics/79/",
-      "fetched_at": "2026-11-18T11:41:17.056372+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078797+09:00"
     },
     {
       "id": "d1180c16260fad35",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/10/29/20261029_autumn_family_festa_2026_2.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056377+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078806+09:00"
     },
     {
       "id": "029949f797558ca6",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://event.jreast.co.jp/activity/detail/a131/a131-005",
-      "fetched_at": "2026-11-18T11:41:17.056380+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078811+09:00"
     },
     {
       "id": "cc5b78514132f6e1",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261104_h01.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056383+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078815+09:00"
     },
     {
       "id": "814b58e5b2acf757",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2683",
-      "fetched_at": "2026-11-18T11:41:17.056386+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078818+09:00"
     },
     {
       "id": "3bc2636cc98514a2",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.knt-liner.co.jp/xn05/wp-content/uploads/2026/10/7e32e5831e9efbfd2c1d83cce0714b99.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056389+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078821+09:00"
     },
     {
       "id": "106342f1101901af",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/5c7c3434e3fa45bd90d7a0f5455106db/oshirase_261116-1129.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056391+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078825+09:00"
     },
     {
       "id": "05fd82e00d202208",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20261029_o01.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056393+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078828+09:00"
     },
     {
       "id": "379335b4f1cbdf99",
@@ -312,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/11/11/items/261111_00_press_westexpressginga.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056396+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078831+09:00"
     },
     {
       "id": "d1ec2d2cfc3d05b6",
@@ -325,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-18T11:41:17.056399+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078835+09:00"
     },
     {
       "id": "668436ad8f9bac37",
@@ -338,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20261106101240tZ8YMi-63TjUw97XYOk2LQ.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056401+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078838+09:00"
     },
     {
       "id": "297c9dd3708e1645",
@@ -351,7 +364,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202612_v9last/",
-      "fetched_at": "2026-11-18T11:41:17.056403+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078841+09:00"
     },
     {
       "id": "1ba5d1b0c3d9b3de",
@@ -364,7 +377,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/tochigi_j/20261104_t01.pdf",
-      "fetched_at": "2026-11-18T11:41:17.056406+09:00"
+      "fetched_at": "2026-11-19T11:10:16.078844+09:00"
     }
   ]
 }
