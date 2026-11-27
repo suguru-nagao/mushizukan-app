@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-26T12:19:40.773148+09:00",
-  "count": 24,
+  "generated_at": "2026-11-27T12:25:21.671852+09:00",
+  "count": 25,
   "events": [
     {
       "id": "4dee70f5c7743e6b",
@@ -13,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://jr-central.co.jp/news/release/_pdf/000046211.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773035+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671763+09:00"
     },
     {
       "id": "d1180c16260fad35",
@@ -26,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/10/29/20261029_autumn_family_festa_2026_2.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773048+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671776+09:00"
     },
     {
       "id": "029949f797558ca6",
@@ -39,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://event.jreast.co.jp/activity/detail/a131/a131-005",
-      "fetched_at": "2026-11-26T12:19:40.773056+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671780+09:00"
     },
     {
       "id": "cc5b78514132f6e1",
@@ -52,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261104_h01.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773062+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671784+09:00"
     },
     {
       "id": "814b58e5b2acf757",
@@ -65,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2683",
-      "fetched_at": "2026-11-26T12:19:40.773068+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671787+09:00"
     },
     {
       "id": "cace20401b6fb68f",
@@ -78,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.osaka-monorail.co.jp/info/detail/877",
-      "fetched_at": "2026-11-26T12:19:40.773075+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671791+09:00"
     },
     {
       "id": "31d05fc7cb24074a",
@@ -91,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://media.jreast.co.jp/articles/6844",
-      "fetched_at": "2026-11-26T12:19:40.773083+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671795+09:00"
     },
     {
       "id": "717fe584ece6f9dd",
@@ -104,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.osaka-monorail.co.jp/info/detail/956",
-      "fetched_at": "2026-11-26T12:19:40.773094+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671804+09:00"
     },
     {
       "id": "5609c391dc03c026",
@@ -117,7 +117,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0204",
-      "fetched_at": "2026-11-26T12:19:40.773098+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671808+09:00"
     },
     {
       "id": "1e6b394edf877465",
@@ -130,7 +130,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.vehicle.city.hiroshima.jp/event/detail?id=51430",
-      "fetched_at": "2026-11-26T12:19:40.773102+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671811+09:00"
     },
     {
       "id": "605929a7113b6bc1",
@@ -143,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/09/29/items/260929_00_press_hakusansougousyaryousyo.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773106+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671814+09:00"
     },
     {
       "id": "e72e74efda2593f8",
@@ -156,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/oono_202611.html",
-      "fetched_at": "2026-11-26T12:19:40.773109+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671816+09:00"
     },
     {
       "id": "49098dafd4750b80",
@@ -169,7 +169,20 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/news/info.php?no=1225",
-      "fetched_at": "2026-11-26T12:19:40.773113+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671819+09:00"
+    },
+    {
+      "id": "b10f26c6300b89fd",
+      "title": "富士山麓電気鉄道 茅原実里さんコラボ 電車まつり記念フリーきっぷ 発売",
+      "date": "2026-11-28",
+      "location": "",
+      "description": "富士山麓電気鉄道は、「富士急電車まつり2026」の開催を記念して、富士急行線公式アンバサダー・茅原実里さんとのコラボ記念硬券1日フリーきっぷを発売。2026年11月28日（土）に限り、富士急行線全線が1日乗り放題。デザインは当日発表。発売額",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.fujikyu-railway.jp/event/info.php?no=1246",
+      "fetched_at": "2026-11-27T12:25:21.671822+09:00"
     },
     {
       "id": "3bc2636cc98514a2",
@@ -182,7 +195,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.knt-liner.co.jp/xn05/wp-content/uploads/2026/10/7e32e5831e9efbfd2c1d83cce0714b99.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773116+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671824+09:00"
     },
     {
       "id": "106342f1101901af",
@@ -195,7 +208,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/5c7c3434e3fa45bd90d7a0f5455106db/oshirase_261116-1129.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773119+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671827+09:00"
     },
     {
       "id": "885447456794537d",
@@ -208,7 +221,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28970",
-      "fetched_at": "2026-11-26T12:19:40.773122+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671829+09:00"
     },
     {
       "id": "05fd82e00d202208",
@@ -221,7 +234,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20261029_o01.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773125+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671832+09:00"
     },
     {
       "id": "379335b4f1cbdf99",
@@ -234,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/11/11/items/261111_00_press_westexpressginga.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773129+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671835+09:00"
     },
     {
       "id": "d1ec2d2cfc3d05b6",
@@ -247,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-26T12:19:40.773132+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671838+09:00"
     },
     {
       "id": "668436ad8f9bac37",
@@ -260,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20261106101240tZ8YMi-63TjUw97XYOk2LQ.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773135+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671841+09:00"
     },
     {
       "id": "297c9dd3708e1645",
@@ -273,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202612_v9last/",
-      "fetched_at": "2026-11-26T12:19:40.773138+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671844+09:00"
     },
     {
       "id": "12256103ce51eeae",
@@ -286,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002479.000095753.html",
-      "fetched_at": "2026-11-26T12:19:40.773141+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671846+09:00"
     },
     {
       "id": "1ba5d1b0c3d9b3de",
@@ -299,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/tochigi_j/20261104_t01.pdf",
-      "fetched_at": "2026-11-26T12:19:40.773144+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671849+09:00"
     },
     {
       "id": "4f7e7ec1f04f4c98",
@@ -312,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio-kanko.co.jp/topics/news/20261120.html",
-      "fetched_at": "2026-11-26T12:19:40.773147+09:00"
+      "fetched_at": "2026-11-27T12:25:21.671851+09:00"
     }
   ]
 }
