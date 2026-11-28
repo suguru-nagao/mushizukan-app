@@ -1,20 +1,7 @@
 {
-  "generated_at": "2026-11-27T12:25:21.671852+09:00",
-  "count": 25,
+  "generated_at": "2026-11-28T12:01:24.750297+09:00",
+  "count": 27,
   "events": [
-    {
-      "id": "4dee70f5c7743e6b",
-      "title": "JR東海 冬の乗り放題きっぷ 発売",
-      "date": "2026-11-27",
-      "location": "",
-      "description": "JR東海は、「JR東海☆冬の乗り放題きっぷ」を発売。JR東海の在来線全線が2日間乗り放題。新幹線、特急列車、急行列車は利用不可。発売額は、大人3,900円、子ども1,900円。新幹線予約サービス「EXサービス」で、熱海～米原間のいずれかの駅",
-      "prefecture": "",
-      "city": "",
-      "themeId": "train",
-      "source": "鉄道コム",
-      "url": "https://jr-central.co.jp/news/release/_pdf/000046211.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671763+09:00"
-    },
     {
       "id": "d1180c16260fad35",
       "title": "九州鉄道記念館 秋のファミリーフェスタ",
@@ -26,7 +13,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/10/29/20261029_autumn_family_festa_2026_2.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671776+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750209+09:00"
     },
     {
       "id": "029949f797558ca6",
@@ -39,7 +26,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://event.jreast.co.jp/activity/detail/a131/a131-005",
-      "fetched_at": "2026-11-27T12:25:21.671780+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750218+09:00"
     },
     {
       "id": "cc5b78514132f6e1",
@@ -52,7 +39,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/hachioji_j/20261104_h01.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671784+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750222+09:00"
     },
     {
       "id": "814b58e5b2acf757",
@@ -65,7 +52,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.echigo-tokimeki.co.jp/information/detail?id=2683",
-      "fetched_at": "2026-11-27T12:25:21.671787+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750225+09:00"
     },
     {
       "id": "cace20401b6fb68f",
@@ -78,7 +65,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.osaka-monorail.co.jp/info/detail/877",
-      "fetched_at": "2026-11-27T12:25:21.671791+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750229+09:00"
     },
     {
       "id": "31d05fc7cb24074a",
@@ -91,7 +78,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://media.jreast.co.jp/articles/6844",
-      "fetched_at": "2026-11-27T12:25:21.671795+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750232+09:00"
     },
     {
       "id": "717fe584ece6f9dd",
@@ -104,7 +91,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "http://www.osaka-monorail.co.jp/info/detail/956",
-      "fetched_at": "2026-11-27T12:25:21.671804+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750235+09:00"
     },
     {
       "id": "5609c391dc03c026",
@@ -117,7 +104,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jrview-travel.com/reserve/travelItem/detail?courseNo=26B0204",
-      "fetched_at": "2026-11-27T12:25:21.671808+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750242+09:00"
     },
     {
       "id": "1e6b394edf877465",
@@ -130,7 +117,7 @@
       "themeId": "creature",
       "source": "鉄道コム",
       "url": "https://www.vehicle.city.hiroshima.jp/event/detail?id=51430",
-      "fetched_at": "2026-11-27T12:25:21.671811+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750245+09:00"
     },
     {
       "id": "605929a7113b6bc1",
@@ -143,7 +130,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/09/29/items/260929_00_press_hakusansougousyaryousyo.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671814+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750248+09:00"
     },
     {
       "id": "e72e74efda2593f8",
@@ -156,7 +143,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.odakyu-travel.co.jp/special/oer/oono_202611.html",
-      "fetched_at": "2026-11-27T12:25:21.671816+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750251+09:00"
     },
     {
       "id": "49098dafd4750b80",
@@ -169,7 +156,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/news/info.php?no=1225",
-      "fetched_at": "2026-11-27T12:25:21.671819+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750253+09:00"
     },
     {
       "id": "b10f26c6300b89fd",
@@ -182,7 +169,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.fujikyu-railway.jp/event/info.php?no=1246",
-      "fetched_at": "2026-11-27T12:25:21.671822+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750256+09:00"
     },
     {
       "id": "3bc2636cc98514a2",
@@ -195,7 +182,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.knt-liner.co.jp/xn05/wp-content/uploads/2026/10/7e32e5831e9efbfd2c1d83cce0714b99.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671824+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750258+09:00"
     },
     {
       "id": "106342f1101901af",
@@ -208,7 +195,46 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://files.microcms-assets.io/assets/f76cb3f097104533921f6d6262a336ee/5c7c3434e3fa45bd90d7a0f5455106db/oshirase_261116-1129.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671827+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750260+09:00"
+    },
+    {
+      "id": "d41fefd4d213a78a",
+      "title": "銚子駅 ナイトな撮影会",
+      "date": "2026-11-29",
+      "location": "銚子駅",
+      "description": "JR東日本千葉事業本部は、事前申込制イベント「銚子でナイトな撮影会」を開催。開催日時は、2026年11月29日（日）1:00～3:00。開催場所は銚子駅。209系（予定）7本が留置中の構内で、1番線での運転台・車内公開（1号車のみ）、運転席",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://media.jreast.co.jp/articles/6927",
+      "fetched_at": "2026-11-28T12:01:24.750262+09:00"
+    },
+    {
+      "id": "02d58e6eefe93c4b",
+      "title": "辻堂駅 開業110周年記念イベント",
+      "date": "2026-11-29",
+      "location": "辻堂駅",
+      "description": "JR東日本は、「辻堂駅開業110周年記念イベント」を開催。開催日時は、2026年11月29日（日）10:30～16:00。開催場所は、テラスモール湘南 ゲートスクエア（雨天時は辻堂駅南北自由通路で開催）。駅長制服なりきり体験、缶バッジ制作体",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jreast.co.jp/info/2026/yokohama_j/20261120_y01.pdf",
+      "fetched_at": "2026-11-28T12:01:24.750265+09:00"
+    },
+    {
+      "id": "d11cb1495e0b6a50",
+      "title": "新大牟田駅・保守基地 子ども向け 新幹線仕事体験イベント",
+      "date": "2026-11-29",
+      "location": "新大牟田駅",
+      "description": "JR九州は、事前申込制企画「新幹線のお仕事チャレンジ！新大牟田駅と保守基地潜入イベント」を開催。開催日時は、2026年11月29日（日）13:00～16:30。新大牟田駅にて、きっぷ発券、改札業務、出発合図などの体験、こども用制服着用記念撮",
+      "prefecture": "",
+      "city": "",
+      "themeId": "train",
+      "source": "鉄道コム",
+      "url": "https://www.jrkyushu.co.jp/byarea/fukuoka_saga/info/__icsFiles/afieldfile/2026/10/09/20261009_Shinkansen_Maintenance_Crew_and_Station_Staff_Job_Challenge_ShinOmuta_Station.pdf",
+      "fetched_at": "2026-11-28T12:01:24.750267+09:00"
     },
     {
       "id": "885447456794537d",
@@ -221,7 +247,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.seiburailway.jp/file.jsp?id=28970",
-      "fetched_at": "2026-11-27T12:25:21.671829+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750269+09:00"
     },
     {
       "id": "05fd82e00d202208",
@@ -234,7 +260,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/omiya_j/20261029_o01.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671832+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750272+09:00"
     },
     {
       "id": "379335b4f1cbdf99",
@@ -247,7 +273,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.westjr.co.jp/press/article/2026/11/11/items/261111_00_press_westexpressginga.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671835+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750274+09:00"
     },
     {
       "id": "d1ec2d2cfc3d05b6",
@@ -260,7 +286,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.toyotetsu.com/news/000670.html",
-      "fetched_at": "2026-11-27T12:25:21.671838+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750285+09:00"
     },
     {
       "id": "668436ad8f9bac37",
@@ -273,7 +299,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.tobu.co.jp/cms-pdf/news/20261106101240tZ8YMi-63TjUw97XYOk2LQ.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671841+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750287+09:00"
     },
     {
       "id": "297c9dd3708e1645",
@@ -286,7 +312,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.nta.co.jp/jrodekakenet/plan/202612_v9last/",
-      "fetched_at": "2026-11-27T12:25:21.671844+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750289+09:00"
     },
     {
       "id": "12256103ce51eeae",
@@ -299,7 +325,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://prtimes.jp/main/html/rd/p/000002479.000095753.html",
-      "fetched_at": "2026-11-27T12:25:21.671846+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750292+09:00"
     },
     {
       "id": "1ba5d1b0c3d9b3de",
@@ -312,7 +338,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.jreast.co.jp/press/2026/tochigi_j/20261104_t01.pdf",
-      "fetched_at": "2026-11-27T12:25:21.671849+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750294+09:00"
     },
     {
       "id": "4f7e7ec1f04f4c98",
@@ -325,7 +351,7 @@
       "themeId": "train",
       "source": "鉄道コム",
       "url": "https://www.keio-kanko.co.jp/topics/news/20261120.html",
-      "fetched_at": "2026-11-27T12:25:21.671851+09:00"
+      "fetched_at": "2026-11-28T12:01:24.750296+09:00"
     }
   ]
 }
